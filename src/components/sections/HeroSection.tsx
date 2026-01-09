@@ -4,13 +4,6 @@ import { motion } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
 import Link from "next/link"
 
-const stats = [
-  { value: "500+", label: "Projects Delivered" },
-  { value: "50+", label: "Global Clients" },
-  { value: "24/7", label: "Support" },
-  { value: "11", label: "Service Lines" },
-]
-
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-12">
@@ -117,29 +110,6 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-12"
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
-                className="group p-4 rounded-xl glass-card hover:glow-border transition-all duration-500"
-              >
-                <div className="text-lg sm:text-xl md:text-2xl font-bold text-gradient mb-0.5 tracking-tight">
-                  {stat.value}
-                </div>
-                <div className="text-[9px] tracking-wider uppercase text-muted-foreground">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
         </motion.div>
       </div>
     </section>

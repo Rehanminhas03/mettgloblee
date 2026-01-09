@@ -21,7 +21,7 @@ const caseStudies = [
     description: "Complete real estate website with property listings, advanced search, and integrated lead management system.",
     image: "/case-study-propertyhub.jpg",
     metrics: [
-      { label: "Project Value", value: "PKR 125K" },
+      { label: "Platform", value: "Full-Stack" },
       { label: "Integrations", value: "3+" },
       { label: "Lead Capture", value: "100%" },
     ],
@@ -35,9 +35,9 @@ const caseStudies = [
     description: "Custom web application enabling users to generate professional AI-powered videos with intuitive controls.",
     image: "/case-study-hammerpath.jpg",
     metrics: [
-      { label: "Project Value", value: "PKR 215K" },
       { label: "Platform", value: "Web App" },
       { label: "AI Models", value: "Integrated" },
+      { label: "Users", value: "Scalable" },
     ],
   },
   {
@@ -63,9 +63,9 @@ const caseStudies = [
     description: "Comprehensive AI-powered content generation workflow for professional production company.",
     image: "/case-study-cobra.jpg",
     metrics: [
-      { label: "Project Value", value: "~PKR 240K" },
+      { label: "Workflow", value: "Automated" },
       { label: "Type", value: "AI Content" },
-      { label: "Automation", value: "Full" },
+      { label: "Scale", value: "Enterprise" },
     ],
   },
   {
@@ -79,7 +79,7 @@ const caseStudies = [
     metrics: [
       { label: "Titles", value: "151" },
       { label: "Designs", value: "3,020" },
-      { label: "Value", value: "$500" },
+      { label: "Per Title", value: "20 Each" },
     ],
   },
   {
@@ -91,9 +91,9 @@ const caseStudies = [
     description: "Ongoing AI-generated educational video content for Arabic learning platform.",
     image: "/case-study-smartlearning.jpg",
     metrics: [
-      { label: "Per Video", value: "$100" },
       { label: "Type", value: "Educational" },
       { label: "Language", value: "Arabic" },
+      { label: "Status", value: "Ongoing" },
     ],
   },
 ]

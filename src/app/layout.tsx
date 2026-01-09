@@ -1,15 +1,15 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Michroma, JetBrains_Mono } from "next/font/google"
+import { Inter, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Toaster } from "sonner"
 import { BackToTop } from "@/components/common"
 import "@/styles/globals.css"
 
-const michroma = Michroma({
-  weight: "400",
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-michroma",
+  variable: "--font-inter",
+  display: "swap",
 })
 
 const jetbrainsMono = JetBrains_Mono({
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#050510",
+  themeColor: "#09090B",
   width: "device-width",
   initialScale: 1,
 }
@@ -45,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${michroma.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
         {children}
         <BackToTop />
         <Toaster

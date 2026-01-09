@@ -8,6 +8,7 @@ import {
   CaseStudiesPreview,
   TrustSection,
   TestimonialsSection,
+  TrustSignals,
 } from "@/components/sections"
 
 export default function HomePage() {
@@ -16,6 +17,7 @@ export default function HomePage() {
       <AnimatedBackground />
       <Navigation />
       <HeroSection />
+      <TrustSignals />
       <TrustSection />
       <ServicesSection />
       <WhyChooseUs />

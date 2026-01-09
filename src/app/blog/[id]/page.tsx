@@ -188,9 +188,9 @@ Our AI-powered approach delivered:
 - Significant cost savings for the publisher
 - Genuine variety across all 20 variations per title
 
-### The $500 Project
+### Scaling with AI
 
-We completed this entire project at $500 total value—demonstrating how AI enables creative solutions that were previously economically unfeasible.
+We completed this entire project efficiently—demonstrating how AI enables creative solutions that were previously unfeasible at this scale.
 
 ## Lessons Learned
 
@@ -295,7 +295,7 @@ Based on our experience, effective real estate forms:
 
 ### Payment Gateway Preparation
 
-While the initial phase focused on the website, we architected for future payment integration (PKR 25-30K phase):
+While the initial phase focused on the website, we architected for future payment integration:
 
 - Abstracted payment interfaces
 - Secure handling patterns for financial data
@@ -304,7 +304,7 @@ While the initial phase focused on the website, we architected for future paymen
 
 ### CRM Connectivity
 
-GoHighLevel integration (PKR 25-30K phase) requires:
+GoHighLevel integration requires:
 
 - Lead data synchronization
 - Automated follow-up triggers
@@ -332,7 +332,7 @@ We designed the data layer to accommodate these future requirements without requ
 
 ## The Results
 
-PropertyHub received a complete platform valued at PKR 125,000 that:
+PropertyHub received a complete platform that:
 
 - Showcases properties professionally
 - Captures leads throughout the journey
@@ -527,7 +527,7 @@ Don't let AI make your content generic:
 
 AI content generation isn't about replacing creative teams—it's about amplifying their capabilities. The production companies that thrive will be those that find the right balance: using AI to handle volume and routine tasks while preserving human creativity for strategy, storytelling, and quality assurance.
 
-The approximately PKR 240K project with Cobra Production demonstrated that with the right workflow design, AI integration can transform production capacity while maintaining the quality that clients expect.
+The project with Cobra Production demonstrated that with the right workflow design, AI integration can transform production capacity while maintaining the quality that clients expect.
     `,
   },
   {
@@ -543,7 +543,7 @@ The approximately PKR 240K project with Cobra Production demonstrated that with 
     content: `
 ## The Challenge of Democratizing AI
 
-When HammerPath approached us to build an AI video generation platform, they had an ambitious goal: make powerful AI video creation accessible to non-technical users. This PKR 215K project taught us valuable lessons about bridging the gap between complex AI technology and everyday users.
+When HammerPath approached us to build an AI video generation platform, they had an ambitious goal: make powerful AI video creation accessible to non-technical users. This project taught us valuable lessons about bridging the gap between complex AI technology and everyday users.
 
 ## Understanding User Needs
 
@@ -834,7 +834,7 @@ International feedback loops require patience:
 
 Our best international relationships become ongoing partnerships:
 
-- Smart Learning Arabia: Continuous video production at $100/video
+- Smart Learning Arabia: Continuous video production partnership
 - Repeat clients in multiple markets
 - Referrals to other international businesses
 

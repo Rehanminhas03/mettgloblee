@@ -44,7 +44,7 @@ export function Navigation() {
           >
             {/* Logo */}
             <Link href="/" className="relative group flex items-center">
-              <span className="text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase">
+              <span className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase">
                 <span className="text-gradient">mett</span>
                 <span className="text-foreground/80 ml-1">Global</span>
               </span>
@@ -59,7 +59,7 @@ export function Navigation() {
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                       className={cn(
-                        "flex items-center gap-1 px-2.5 py-1.5 text-[11px] tracking-[0.08em] uppercase transition-all duration-300 rounded-lg font-medium",
+                        "flex items-center gap-1 px-3 py-2 text-xs tracking-[0.08em] uppercase transition-all duration-300 rounded-lg font-medium",
                         pathname.startsWith("/services")
                           ? "text-primary"
                           : "text-foreground/70 hover:text-foreground hover:bg-white/[0.03]"
@@ -67,14 +67,14 @@ export function Navigation() {
                     >
                       {link.name}
                       <ChevronDown
-                        className={cn("w-3 h-3 transition-transform duration-300", isServicesOpen && "rotate-180")}
+                        className={cn("w-3.5 h-3.5 transition-transform duration-300", isServicesOpen && "rotate-180")}
                       />
                     </button>
                   ) : (
                     <Link
                       href={link.href}
                       className={cn(
-                        "px-2.5 py-1.5 text-[11px] tracking-[0.08em] uppercase transition-all duration-300 rounded-lg block font-medium",
+                        "px-3 py-2 text-xs tracking-[0.08em] uppercase transition-all duration-300 rounded-lg block font-medium",
                         pathname === link.href
                           ? "text-primary"
                           : "text-foreground/70 hover:text-foreground hover:bg-white/[0.03]"
@@ -102,10 +102,10 @@ export function Navigation() {
                               key={service.name}
                               href={service.href}
                               onClick={() => setIsServicesOpen(false)}
-                              className="flex items-center justify-between px-2.5 py-2 text-[11px] tracking-wider uppercase text-foreground/70 hover:text-foreground hover:bg-white/[0.05] rounded-lg transition-all duration-200 group/item"
+                              className="flex items-center justify-between px-3 py-2.5 text-xs tracking-wider uppercase text-foreground/70 hover:text-foreground hover:bg-white/[0.05] rounded-lg transition-all duration-200 group/item"
                             >
                               <span>{service.name}</span>
-                              <ArrowUpRight className="w-3 h-3 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200" />
+                              <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200" />
                             </Link>
                           ))}
                         </motion.div>
@@ -120,11 +120,11 @@ export function Navigation() {
             <div className="hidden lg:flex items-center">
               <Link
                 href="/contact"
-                className="group relative px-3.5 py-1.5 overflow-hidden rounded-lg glass-card hover:glow-primary transition-all duration-300"
+                className="group relative px-4 py-2 overflow-hidden rounded-lg glass-card hover:glow-primary transition-all duration-300"
               >
-                <span className="relative z-10 flex items-center gap-1.5 text-[11px] tracking-[0.08em] uppercase font-medium">
+                <span className="relative z-10 flex items-center gap-2 text-xs tracking-[0.08em] uppercase font-medium">
                   Start Project
-                  <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+                  <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
                 </span>
                 <div className="absolute inset-0 bg-linear-to-r from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
@@ -173,12 +173,12 @@ export function Navigation() {
                       href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={cn(
-                        "flex items-center justify-between py-2.5 text-xs tracking-wider uppercase transition-colors",
+                        "flex items-center justify-between py-3 text-sm tracking-wider uppercase transition-colors",
                         pathname === link.href ? "text-primary" : "text-foreground/60 hover:text-foreground"
                       )}
                     >
                       {link.name}
-                      <ArrowUpRight className="w-3.5 h-3.5" />
+                      <ArrowUpRight className="w-4 h-4" />
                     </Link>
                     {index < navLinks.length - 1 && <div className="h-px bg-border/30" />}
                   </motion.div>
@@ -189,17 +189,17 @@ export function Navigation() {
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full py-2.5 px-3 text-center text-[10px] tracking-[0.1em] uppercase rounded-lg bg-primary text-primary-foreground"
+                  className="block w-full py-3 px-4 text-center text-xs tracking-[0.1em] uppercase rounded-lg bg-primary text-primary-foreground"
                 >
                   Start Project
                 </Link>
               </div>
 
               <div className="mt-8 pt-6 border-t border-border/30">
-                <p className="text-[9px] tracking-wider uppercase text-muted-foreground mb-2">Get in touch</p>
+                <p className="text-xs tracking-wider uppercase text-muted-foreground mb-2">Get in touch</p>
                 <a
                   href="mailto:hello@mettglobal.com"
-                  className="text-xs text-foreground hover:text-primary transition-colors"
+                  className="text-sm text-foreground hover:text-primary transition-colors"
                 >
                   hello@mettglobal.com
                 </a>

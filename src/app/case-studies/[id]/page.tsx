@@ -15,18 +15,18 @@ const caseStudies = [
     description: "Complete real estate website with property listings, advanced search, and integrated lead management system.",
     image: "/case-study-propertyhub.jpg",
     metrics: [
-      { label: "Project Value", value: "PKR 125K" },
+      { label: "Platform", value: "Full-Stack" },
       { label: "Integrations", value: "3+" },
       { label: "Lead Capture", value: "100%" },
     ],
     challenge: "PropertyHub needed a modern, professional real estate platform to showcase property listings and capture leads effectively. They required payment integration capabilities and CRM connectivity through GoHighLevel (GHL) for lead management, but lacked the technical expertise to build a cohesive system.",
     solution: "We developed a comprehensive real estate website with advanced property search and filtering, beautiful listing pages with image galleries, integrated contact forms for lead capture, and prepared architecture for payment gateway and GHL CRM integration. The platform was built with scalability in mind to accommodate future growth.",
     results: [
-      "Delivered complete website valued at PKR 125,000",
+      "Delivered complete full-stack real estate platform",
       "Built property listing system with advanced search",
       "Integrated lead capture forms throughout the site",
-      "Prepared payment integration architecture (PKR 25-30K phase)",
-      "Designed GHL CRM integration framework (PKR 25-30K phase)"
+      "Prepared payment integration architecture",
+      "Designed GHL CRM integration framework"
     ],
     testimonial: {
       quote: "METT Global delivered exactly what we envisioned. The platform is professional, fast, and our lead capture has improved dramatically.",
@@ -43,9 +43,9 @@ const caseStudies = [
     description: "Custom web application enabling users to generate professional AI-powered videos with intuitive controls.",
     image: "/case-study-hammerpath.jpg",
     metrics: [
-      { label: "Project Value", value: "PKR 215K" },
       { label: "Platform", value: "Web App" },
       { label: "AI Models", value: "Integrated" },
+      { label: "Users", value: "Scalable" },
     ],
     challenge: "HammerPath wanted to democratize AI video creation by building a web application that allows users to generate professional-quality videos using artificial intelligence. The challenge was creating an intuitive interface that abstracts complex AI processes while delivering high-quality output.",
     solution: "We built a full-stack web application with AI video generation capabilities, featuring an intuitive user interface for video creation, backend integration with AI models, video processing and rendering pipelines, and user account management. The platform makes AI video creation accessible to non-technical users.",
@@ -99,9 +99,9 @@ const caseStudies = [
     description: "Comprehensive AI-powered content generation workflow for professional production company.",
     image: "/case-study-cobra.jpg",
     metrics: [
-      { label: "Project Value", value: "~PKR 240K" },
+      { label: "Workflow", value: "Automated" },
       { label: "Type", value: "AI Content" },
-      { label: "Automation", value: "Full" },
+      { label: "Scale", value: "Enterprise" },
     ],
     challenge: "Cobra Production, a content production company, needed to scale their content output while maintaining quality. They required an AI-powered system that could generate various types of content efficiently, reducing production time and costs without sacrificing the creative quality their clients expect.",
     solution: "We implemented a comprehensive AI content generation workflow tailored to Cobra Production's needs. The system automates content ideation, script generation, visual asset creation, and post-production workflows. Quality control checkpoints ensure all AI-generated content meets professional standards before delivery.",
@@ -129,7 +129,7 @@ const caseStudies = [
     metrics: [
       { label: "Titles", value: "151" },
       { label: "Designs", value: "3,020" },
-      { label: "Value", value: "$500" },
+      { label: "Per Title", value: "20 Each" },
     ],
     challenge: "An audiobook publisher needed 20+ unique cover design inspirations for each of 151 audiobook titles—a total of 3,020 designs. Each cover had to follow ACX quality standards: square format, clear title text, single standout design element, classic aesthetic with color contrasts, and distinctly different from existing designs.",
     solution: "We developed an AI-powered design workflow to generate audiobook covers at scale. Each design features a square format optimized for audiobook platforms, prominently displayed title text, single focal design element to avoid busy compositions, classic look with intentional color contrasts. All 151 titles received 20 unique variations.",
@@ -138,7 +138,7 @@ const caseStudies = [
       "Met all ACX audiobook cover quality standards",
       "Created distinct variations for each of 151 titles",
       "Maintained consistent classic aesthetic throughout",
-      "Completed project efficiently at $500 total value"
+      "Completed project efficiently with rapid turnaround"
     ],
     testimonial: {
       quote: "The quality and variety exceeded our expectations. Having 20 options per title made selecting final covers easy.",
@@ -155,15 +155,15 @@ const caseStudies = [
     description: "Ongoing AI-generated educational video content for Arabic learning platform.",
     image: "/case-study-smartlearning.jpg",
     metrics: [
-      { label: "Per Video", value: "$100" },
       { label: "Type", value: "Educational" },
       { label: "Language", value: "Arabic" },
+      { label: "Status", value: "Ongoing" },
     ],
     challenge: "Smart Learning Arabia, an educational platform, needed a steady stream of AI-generated teaching videos to support their Arabic-language learning content. The videos had to be educational, engaging, and culturally appropriate for their target audience while being produced efficiently at scale.",
-    solution: "We established an ongoing production partnership for AI-generated educational videos. Each video is crafted to be informative and engaging, with clear explanations suitable for learning contexts. The AI generation process allows for consistent quality and efficient production at $100 per video.",
+    solution: "We established an ongoing production partnership for AI-generated educational videos. Each video is crafted to be informative and engaging, with clear explanations suitable for learning contexts. The AI generation process allows for consistent quality and efficient production.",
     results: [
       "Established ongoing AI video production workflow",
-      "Delivering educational content at $100 per video",
+      "Delivering educational content consistently",
       "Created culturally appropriate Arabic content",
       "Maintained educational quality and engagement",
       "Built scalable production process for ongoing needs"
