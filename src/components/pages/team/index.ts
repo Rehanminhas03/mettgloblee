@@ -1,5 +1,0 @@
-export { TeamHero } from "./TeamHero"
-export { LeadershipSection } from "./LeadershipSection"
-export { TeamGrid } from "./TeamGrid"
-export { ValuesSection } from "./ValuesSection"
-export { TeamMemberModal } from "./TeamMemberModal"

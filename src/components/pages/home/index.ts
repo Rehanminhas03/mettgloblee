@@ -1,6 +1,0 @@
-export { HeroSection } from "./HeroSection"
-export { ServicesSection } from "./ServicesSection"
-export { WhyChooseUs } from "./WhyChooseUs"
-export { IndustriesSection } from "./IndustriesSection"
-export { CaseStudiesPreview } from "./CaseStudiesPreview"
-export { TrustSection } from "./TrustSection"
