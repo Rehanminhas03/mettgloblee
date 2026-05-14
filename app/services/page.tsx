@@ -6,19 +6,15 @@ import { AnimatedBackground } from "@/components/animated-background"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
+import { Card3D } from "@/components/card-3d"
 import {
   ArrowUpRight,
   ShoppingCart,
   Code,
   Shield,
-  Factory,
-  Truck,
   Users,
   Palette,
   Brain,
-  Headphones,
-  Monitor,
-  FileText,
 } from "lucide-react"
 
 const services = [
@@ -51,24 +47,6 @@ const services = [
   },
   {
     number: "04",
-    title: "Procurement & Manufacturing",
-    description:
-      "Global sourcing from Pakistan's manufacturing hubs. Textile sourcing, quality control, vendor management, and supply chain optimization.",
-    icon: Factory,
-    href: "/services/procurement",
-    features: ["Vendor Sourcing", "Quality Control", "Cost Negotiation", "Supply Chain Management"],
-  },
-  {
-    number: "05",
-    title: "Supply Chain & Logistics",
-    description:
-      "End-to-end inventory, warehouse, and shipping solutions. FBA prep, 3PL coordination, customs clearance, and logistics optimization.",
-    icon: Truck,
-    href: "/services/supply-chain",
-    features: ["FBA Prep", "Warehouse Management", "Shipping Coordination", "Customs Clearance"],
-  },
-  {
-    number: "06",
     title: "B2B Lead Generation",
     description:
       "Data-driven lead generation, sales pipelines, CRM management, and appointment setting for B2B businesses.",
@@ -77,7 +55,7 @@ const services = [
     features: ["Lead Research", "Email Outreach", "CRM Management", "Appointment Setting"],
   },
   {
-    number: "07",
+    number: "05",
     title: "Branding & Marketing",
     description: "Creative design, social media management, content marketing, and AI-powered advertising campaigns.",
     icon: Palette,
@@ -85,36 +63,12 @@ const services = [
     features: ["Brand Identity", "Social Media", "Content Marketing", "Ad Campaigns"],
   },
   {
-    number: "08",
+    number: "06",
     title: "AI & Automation",
     description: "Intelligent workflows, chatbots, predictive analytics, and AI-powered business process automation.",
     icon: Brain,
     href: "/services/ai-automation",
     features: ["AI Chatbots", "Workflow Automation", "Predictive Analytics", "Process Optimization"],
-  },
-  {
-    number: "09",
-    title: "Customer Support",
-    description: "24/7 multi-channel customer support for retail, eCommerce, and technology businesses.",
-    icon: Headphones,
-    href: "/services/customer-support",
-    features: ["24/7 Support", "Multi-channel", "Ticket Management", "Quality Assurance"],
-  },
-  {
-    number: "10",
-    title: "IT Help Desk",
-    description: "Remote troubleshooting, IT management, system administration, and technical support services.",
-    icon: Monitor,
-    href: "/services/it-helpdesk",
-    features: ["Remote Support", "System Admin", "Network Management", "Security Monitoring"],
-  },
-  {
-    number: "11",
-    title: "Data Entry & Virtual Assistants",
-    description: "Administrative excellence, data processing, research, and comprehensive virtual assistant services.",
-    icon: FileText,
-    href: "/services/data-entry",
-    features: ["Data Processing", "Research", "Admin Tasks", "Documentation"],
   },
 ]
 
@@ -168,8 +122,8 @@ export default function ServicesPage() {
               <span className="text-gradient">digital solutions</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl">
-              From eCommerce to cybersecurity, from AI automation to customer support. We offer 11 comprehensive service
-              lines to power your business growth.
+              From eCommerce to cybersecurity, from AI automation to branding. We offer comprehensive digital solutions
+              to power your business growth.
             </p>
           </motion.div>
         </div>
@@ -188,7 +142,7 @@ export default function ServicesPage() {
                 transition={{ duration: 0.6, delay: index * 0.05 }}
               >
                 <Link href={service.href} className="group block h-full">
-                  <div className="h-full p-8 rounded-3xl glass hover:glass-strong transition-all duration-500 hover:glow-primary">
+                  <Card3D intensity={6} hoverLift={6} className="h-full p-8 rounded-3xl glass hover:glass-strong transition-all duration-500 hover:glow-primary block">
                     {/* Header */}
                     <div className="flex items-start justify-between mb-6">
                       <div className="flex items-center gap-4">
@@ -215,7 +169,7 @@ export default function ServicesPage() {
                         </span>
                       ))}
                     </div>
-                  </div>
+                  </Card3D>
                 </Link>
               </motion.div>
             ))}
@@ -257,10 +211,10 @@ export default function ServicesPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative group"
               >
-                <div className="p-6 rounded-2xl glass hover:glass-strong transition-all duration-500 text-center">
+                <Card3D intensity={4} hoverLift={3} className="p-6 rounded-2xl glass hover:glass-strong transition-all duration-500 text-center block">
                   <h3 className="text-lg font-semibold text-foreground/90 mb-2">{step.title}</h3>
                   <p className="text-sm text-muted-foreground">{step.description}</p>
-                </div>
+                </Card3D>
                 {index < process.length - 1 && (
                   <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-px bg-border" />
                 )}

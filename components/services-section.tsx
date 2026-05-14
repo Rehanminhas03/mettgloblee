@@ -2,20 +2,17 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
 import {
   ArrowUpRight,
   ShoppingCart,
   Code,
   Shield,
-  Factory,
-  Truck,
   Users,
   Palette,
   Brain,
-  Headphones,
-  Monitor,
-  FileText,
 } from "lucide-react"
+import { Card3D } from "@/components/card-3d"
 
 const services = [
   {
@@ -24,7 +21,7 @@ const services = [
     description: "Multi-channel eCommerce management",
     icon: ShoppingCart,
     href: "/services/ecommerce",
-    size: "large", // large, medium, small
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&h=600&q=80",
   },
   {
     number: "02",
@@ -32,7 +29,7 @@ const services = [
     description: "Modern, scalable web applications",
     icon: Code,
     href: "/services/web-development",
-    size: "medium",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&h=600&q=80",
   },
   {
     number: "03",
@@ -40,71 +37,31 @@ const services = [
     description: "Enterprise-grade security solutions",
     icon: Shield,
     href: "/services/cybersecurity",
-    size: "medium",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&h=600&q=80",
   },
   {
     number: "04",
-    title: "Procurement",
-    description: "Global sourcing from Pakistan",
-    icon: Factory,
-    href: "/services/procurement",
-    size: "small",
-  },
-  {
-    number: "05",
-    title: "Supply Chain",
-    description: "End-to-end logistics solutions",
-    icon: Truck,
-    href: "/services/supply-chain",
-    size: "large",
-  },
-  {
-    number: "06",
     title: "Lead Generation",
     description: "Data-driven B2B pipelines",
     icon: Users,
     href: "/services/lead-generation",
-    size: "small",
+    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&h=600&q=80",
   },
   {
-    number: "07",
+    number: "05",
     title: "Branding",
     description: "Creative design & marketing",
     icon: Palette,
     href: "/services/branding",
-    size: "medium",
+    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&h=600&q=80",
   },
   {
-    number: "08",
+    number: "06",
     title: "AI & Automation",
     description: "Intelligent workflows & chatbots",
     icon: Brain,
     href: "/services/ai-automation",
-    size: "large",
-  },
-  {
-    number: "09",
-    title: "Customer Support",
-    description: "24/7 multi-channel support",
-    icon: Headphones,
-    href: "/services/customer-support",
-    size: "small",
-  },
-  {
-    number: "10",
-    title: "IT Help Desk",
-    description: "Remote troubleshooting & IT",
-    icon: Monitor,
-    href: "/services/it-helpdesk",
-    size: "medium",
-  },
-  {
-    number: "11",
-    title: "Data Entry & VA",
-    description: "Administrative excellence",
-    icon: FileText,
-    href: "/services/data-entry",
-    size: "small",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&h=600&q=80",
   },
 ]
 
@@ -140,21 +97,13 @@ export function ServicesSection() {
           </h2>
         </motion.div>
 
-        {/* Services List - Uniform Square Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
+        {/* Services List - 3 Cards Per Row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.number}
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              whileHover={{ 
-                y: -12, 
-                scale: 1.05,
-                transition: { 
-                  duration: 0.4, 
-                  ease: [0.34, 1.56, 0.64, 1]
-                }
-              }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{
                 duration: 0.5,
@@ -164,16 +113,22 @@ export function ServicesSection() {
               className="aspect-square p-2 sm:p-2.5 md:p-3"
             >
               <Link href={service.href} className="group block h-full w-full">
-                <motion.div
-                  whileHover={{
-                    scale: 1.08,
-                    transition: { 
-                      duration: 0.4, 
-                      ease: [0.34, 1.56, 0.64, 1]
-                    }
-                  }}
-                  className="h-full w-full p-6 sm:p-7 md:p-8 rounded-2xl sm:rounded-3xl glass-card group-hover:glass-strong border border-border/30 group-hover:border-primary/60 group-hover:glow-primary transition-all duration-500 relative overflow-hidden shadow-lg group-hover:shadow-2xl group-hover:shadow-primary/20"
-                >
+                <Card3D intensity={10} hoverLift={8} className="h-full w-full">
+                  <div
+                    className="h-full w-full p-6 sm:p-7 md:p-8 rounded-2xl sm:rounded-3xl glass-card group-hover:glass-strong border border-border/30 group-hover:border-primary/60 group-hover:glow-primary transition-all duration-500 relative overflow-hidden shadow-lg group-hover:shadow-2xl group-hover:shadow-primary/20"
+                  >
+                  {/* Service-themed background image */}
+                  <div className="absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt=""
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover opacity-30 group-hover:opacity-55 group-hover:scale-110 transition-all duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/55 to-background/40 group-hover:from-background/55 group-hover:via-background/40 group-hover:to-background/30 transition-all duration-500" />
+                  </div>
+
                   {/* Animated background gradient on hover */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -285,7 +240,8 @@ export function ServicesSection() {
                     transition={{ duration: 0.5, ease: "easeOut" }}
                     className="absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-primary/15 to-transparent rounded-bl-full"
                   />
-                </motion.div>
+                  </div>
+                </Card3D>
               </Link>
             </motion.div>
           ))}

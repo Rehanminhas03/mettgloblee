@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Linkedin, Twitter, Instagram, Facebook } from "lucide-react"
+import { Linkedin, Instagram } from "lucide-react"
 
 const footerLinks = {
   company: [
@@ -31,10 +31,8 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com" },
-  { name: "Twitter", icon: Twitter, href: "https://twitter.com" },
-  { name: "Instagram", icon: Instagram, href: "https://instagram.com" },
-  { name: "Facebook", icon: Facebook, href: "https://facebook.com" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/company/mettglobal" },
+  { name: "Instagram", icon: Instagram, href: "https://instagram.com/mettglobal.pk" },
 ]
 
 export function Footer() {
@@ -100,7 +98,7 @@ export function Footer() {
         <div className="pt-6 sm:pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           <p className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left">2025 mett Global. All rights reserved.</p>
           <div className="flex items-center gap-4 sm:gap-6">
-            <span className="text-xs sm:text-sm text-muted-foreground">Pakistan HQ</span>
+            <span className="text-xs sm:text-sm text-muted-foreground">Islamabad, Pakistan</span>
             <span className="text-xs sm:text-sm text-primary">Serving Globally</span>
           </div>
         </div>

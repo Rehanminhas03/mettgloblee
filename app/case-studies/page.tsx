@@ -9,92 +9,163 @@ import Image from "next/image"
 import { useState } from "react"
 import { ArrowUpRight, TrendingUp } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { Card3D } from "@/components/card-3d"
 
-const categories = ["All", "eCommerce", "Web Development", "Cybersecurity", "AI & Automation", "Marketing"]
+const categories = ["All", "eCommerce", "Web Development", "AI & Automation"]
 
 const caseStudies = [
   {
     id: 1,
-    title: "Global Retailer Revenue Transformation",
-    category: "eCommerce",
-    client: "Fashion Brand",
-    result: "320% revenue increase",
-    description: "Complete marketplace optimization and expansion across Amazon, Walmart, and Shopify.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+    title: "Yuaia Haircare - AI Video Campaign",
+    category: "AI & Automation",
+    client: "Yuaia Haircare (Netherlands)",
+    result: "Professional AI video content",
+    description: "90-day hair transformation AI video showing realistic, gradual results for Grow & Glow Formula+. Calm, educational storytelling approach.",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=600&fit=crop",
     metrics: [
-      { label: "Revenue Growth", value: "320%" },
-      { label: "Markets Expanded", value: "5" },
-      { label: "ROI", value: "12x" },
+      { label: "Duration", value: "90-day" },
+      { label: "Format", value: "AI Video" },
+      { label: "Style", value: "Educational" },
     ],
   },
   {
     id: 2,
-    title: "Enterprise Security Overhaul",
-    category: "Cybersecurity",
-    client: "FinTech Startup",
-    result: "Zero breaches post-implementation",
-    description: "Comprehensive security audit, penetration testing, and infrastructure hardening.",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop",
+    title: "HammerPath - AI Video Generator",
+    category: "Web Development",
+    client: "HammerPath",
+    result: "Full-stack AI platform",
+    description: "Full-stack web application for AI-powered video generation with automated content creation pipeline.",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
     metrics: [
-      { label: "Vulnerabilities Fixed", value: "147" },
-      { label: "Compliance", value: "100%" },
-      { label: "Downtime", value: "0" },
+      { label: "Tech Stack", value: "Next.js" },
+      { label: "Backend", value: "Python" },
+      { label: "Type", value: "SaaS" },
     ],
   },
   {
     id: 3,
-    title: "AI-Powered Customer Service",
-    category: "AI & Automation",
-    client: "SaaS Company",
-    result: "75% reduction in response time",
-    description: "Implementation of AI chatbots and automated workflow systems.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
+    title: "PropertyHub Real Estate Platform",
+    category: "Web Development",
+    client: "PropertyHub",
+    result: "Complete platform with CRM",
+    description: "Real estate website with payment integration and GoHighLevel CRM integration for lead management.",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
     metrics: [
-      { label: "Response Time", value: "-75%" },
-      { label: "Satisfaction", value: "94%" },
-      { label: "Cost Saved", value: "$2.3M" },
+      { label: "Integration", value: "GHL CRM" },
+      { label: "Payments", value: "Integrated" },
+      { label: "Type", value: "Real Estate" },
     ],
   },
   {
     id: 4,
-    title: "Brand Launch Campaign",
-    category: "Marketing",
-    client: "Consumer Goods",
-    result: "1M+ impressions in 30 days",
-    description: "Full-scale brand identity design and multi-channel marketing campaign.",
+    title: "Smart Learning Arabia - AI Teaching",
+    category: "AI & Automation",
+    client: "Smart Learning Arabia",
+    result: "AI educational content",
+    description: "AI-generated educational videos for e-learning platform with professional AI avatars.",
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop",
+    metrics: [
+      { label: "Platform", value: "E-Learning" },
+      { label: "Tech", value: "HeyGen" },
+      { label: "Type", value: "Educational" },
+    ],
+  },
+  {
+    id: 7,
+    title: "Marketlyn - AI Marketing Platform",
+    category: "Web Development",
+    client: "Marketlyn",
+    result: "10K+ active users",
+    description: "AI-powered marketing platform for automated campaign management with real-time analytics and multi-channel optimization.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
     metrics: [
-      { label: "Impressions", value: "1M+" },
-      { label: "Engagement", value: "8.5%" },
-      { label: "Leads", value: "12K" },
+      { label: "Users", value: "10K+" },
+      { label: "Tech", value: "Next.js" },
+      { label: "Type", value: "SaaS" },
     ],
   },
   {
-    id: 5,
-    title: "E-commerce Platform Rebuild",
-    category: "Web Development",
-    client: "B2B Wholesale",
-    result: "200% improvement in performance",
-    description: "Custom Next.js e-commerce platform with advanced inventory management.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
-    metrics: [
-      { label: "Load Time", value: "-70%" },
-      { label: "Conversions", value: "+45%" },
-      { label: "Orders/Day", value: "3x" },
-    ],
-  },
-  {
-    id: 6,
-    title: "Multi-Marketplace Expansion",
+    id: 8,
+    title: "AZ Remote Books - Digital Library",
     category: "eCommerce",
-    client: "Electronics Brand",
-    result: "Expanded to 8 new markets",
-    description: "Strategic expansion across Amazon EU, UK, and emerging marketplaces.",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+    client: "AZ Remote Books",
+    result: "50K+ books available",
+    description: "Digital library platform with advanced search, personalized recommendations, and multi-device reading experience.",
+    image: "https://images.unsplash.com/photo-1507842217343-583f20270419?w=800&h=600&fit=crop",
     metrics: [
-      { label: "New Markets", value: "8" },
-      { label: "Revenue", value: "+180%" },
-      { label: "SKUs Listed", value: "5K+" },
+      { label: "Books", value: "50K+" },
+      { label: "Users", value: "25K+" },
+      { label: "Type", value: "E-Learning" },
+    ],
+  },
+  {
+    id: 9,
+    title: "Codminal - Enterprise Dashboard",
+    category: "Web Development",
+    client: "Codminal",
+    result: "Enterprise-grade admin dashboard",
+    description: "Sophisticated admin dashboard with RBAC, real-time monitoring, analytics, and comprehensive security features.",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop",
+    metrics: [
+      { label: "Enterprise Users", value: "500+" },
+      { label: "Uptime", value: "99.99%" },
+      { label: "Type", value: "Admin Platform" },
+    ],
+  },
+  {
+    id: 10,
+    title: "Sfykea - E-Commerce & Admin Suite",
+    category: "eCommerce",
+    client: "Sfykea",
+    result: "$2.5M Year 1 revenue",
+    description: "Full-stack e-commerce platform with sophisticated admin dashboard for inventory, orders, and customer management.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=600&fit=crop",
+    metrics: [
+      { label: "Revenue", value: "$2.5M" },
+      { label: "Products", value: "5K+" },
+      { label: "Growth", value: "+45%" },
+    ],
+  },
+  {
+    id: 11,
+    title: "Ittehad - Corporate Website",
+    category: "Web Development",
+    client: "Ittehad Corp",
+    result: "8K+ monthly visitors",
+    description: "Professional corporate website with service showcases, case studies, blog, and optimized lead capture.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    metrics: [
+      { label: "Monthly Visitors", value: "8K+" },
+      { label: "Leads/Month", value: "200+" },
+      { label: "Conversion", value: "2.5%" },
+    ],
+  },
+  {
+    id: 12,
+    title: "Hyundai Islamabad - Automotive Portal",
+    category: "eCommerce",
+    client: "Hyundai Islamabad",
+    result: "+150% showroom visits",
+    description: "Automotive platform with vehicle catalogs, financing calculator, dealer locator, and service booking.",
+    image: "https://images.unsplash.com/photo-1533473359331-35e646e0db4d?w=800&h=600&fit=crop",
+    metrics: [
+      { label: "Showroom Visits", value: "+150%" },
+      { label: "Bookings/Month", value: "800+" },
+      { label: "Mobile Users", value: "70%" },
+    ],
+  },
+  {
+    id: 13,
+    title: "Jetourittehad - Digital Transformation",
+    category: "Web Development",
+    client: "Jetourittehad",
+    result: "Full digital transformation",
+    description: "Complete web infrastructure redesign with modern architecture, performance optimization, and integrated digital marketing.",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop",
+    metrics: [
+      { label: "Performance", value: "+80%" },
+      { label: "Traffic", value: "+120%" },
+      { label: "Conversions", value: "+65%" },
     ],
   },
 ]
@@ -194,7 +265,7 @@ export default function CaseStudiesPage() {
                 layout
               >
                 <Link href={`/case-studies/${study.id}`} className="group block">
-                  <div className="rounded-3xl overflow-hidden glass hover:glass-strong transition-all duration-500 hover:glow-primary">
+                  <Card3D intensity={5} hoverLift={5} className="rounded-3xl overflow-hidden glass hover:glass-strong transition-all duration-500 hover:glow-primary block">
                     {/* Image */}
                     <div className="relative h-72 overflow-hidden">
                       <Image
@@ -236,7 +307,7 @@ export default function CaseStudiesPage() {
                         ))}
                       </div>
                     </div>
-                  </div>
+                  </Card3D>
                 </Link>
               </motion.div>
             ))}

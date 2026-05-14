@@ -9,8 +9,9 @@ import Image from "next/image"
 import { useState } from "react"
 import { ArrowUpRight } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { Card3D } from "@/components/card-3d"
 
-const categories = ["All", "Web Development", "eCommerce", "Branding", "Mobile Apps", "AI Solutions", "AI Video & Ads", "E-books & Content"]
+const categories = ["All", "Web Development", "AI Solutions", "AI Video & Ads", "E-books & Content"]
 
 const portfolioItems = [
   // FEATURED - Real Client Projects
@@ -100,139 +101,6 @@ const portfolioItems = [
     description: "Hourly AI teaching video production service. Creating engaging educational content with AI presenters and animations.",
     image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&h=600&q=80",
     technologies: ["Synthesia", "D-ID", "Video Editing"],
-    link: "#",
-    featured: false,
-  },
-  // Additional Portfolio Projects
-  {
-    id: 9,
-    title: "Fashion E-commerce Platform",
-    category: "eCommerce",
-    client: "StyleHub",
-    description: "High-converting fashion marketplace with advanced filtering, AI-powered recommendations, and seamless checkout.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&h=600&q=80",
-    technologies: ["Next.js", "Shopify", "Tailwind CSS"],
-    link: "#",
-    featured: false,
-  },
-  {
-    id: 10,
-    title: "FinTech Analytics Dashboard",
-    category: "Web Development",
-    client: "SecureBank",
-    description: "Real-time financial analytics dashboard with advanced charting, portfolio management, and secure transactions.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600&q=80",
-    technologies: ["React", "Node.js", "PostgreSQL"],
-    link: "#",
-    featured: false,
-  },
-  {
-    id: 11,
-    title: "Healthcare Mobile App",
-    category: "Mobile Apps",
-    client: "MediCare+",
-    description: "Patient management mobile app with appointment scheduling, telemedicine, and health tracking features.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&h=600&q=80",
-    technologies: ["React Native", "Firebase", "Node.js"],
-    link: "#",
-    featured: false,
-  },
-  {
-    id: 12,
-    title: "AI Product Video Generator",
-    category: "AI Video & Ads",
-    client: "eComm Solutions",
-    description: "Automated AI system generating professional product showcase videos for Amazon and Shopify listings.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&h=600&q=80",
-    technologies: ["Synthesia", "D-ID", "Python"],
-    link: "#",
-    featured: false,
-  },
-  {
-    id: 13,
-    title: "AI Customer Support Bot",
-    category: "AI Solutions",
-    client: "TechCorp",
-    description: "Intelligent chatbot handling 10,000+ daily queries with 94% accuracy and seamless human escalation.",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=600&q=80",
-    technologies: ["OpenAI", "Python", "React"],
-    link: "#",
-    featured: false,
-  },
-  {
-    id: 14,
-    title: "AI Avatar Training Videos",
-    category: "AI Video & Ads",
-    client: "Global Training Inc.",
-    description: "Created 50+ AI avatar training videos in multiple languages for corporate training platform.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600&q=80",
-    technologies: ["HeyGen", "ElevenLabs", "Premiere Pro"],
-    link: "#",
-    featured: false,
-  },
-  {
-    id: 15,
-    title: "Multi-Vendor Marketplace",
-    category: "eCommerce",
-    client: "GlobalMart",
-    description: "Scalable multi-vendor platform with seller dashboards, inventory sync, and automated payouts.",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=600&q=80",
-    technologies: ["Next.js", "Stripe", "MongoDB"],
-    link: "#",
-    featured: false,
-  },
-  {
-    id: 16,
-    title: "AI Social Media Creatives",
-    category: "AI Video & Ads",
-    client: "Fashion Forward",
-    description: "AI-powered ad creative generation for Instagram and TikTok, producing 200+ unique variations monthly.",
-    image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=800&h=600&q=80",
-    technologies: ["Midjourney", "DALL-E", "Canva AI"],
-    link: "#",
-    featured: false,
-  },
-  {
-    id: 17,
-    title: "SaaS Marketing Website",
-    category: "Branding",
-    client: "CloudSync",
-    description: "Complete brand identity and marketing website for a B2B SaaS platform with interactive demos.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=600&q=80",
-    technologies: ["Next.js", "Framer Motion", "Figma"],
-    link: "#",
-    featured: false,
-  },
-  {
-    id: 18,
-    title: "Fitness Brand Identity",
-    category: "Branding",
-    client: "FitLife",
-    description: "Complete brand identity including logo, packaging, website, and social media presence.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&h=600&q=80",
-    technologies: ["Figma", "Adobe CC", "Webflow"],
-    link: "#",
-    featured: false,
-  },
-  {
-    id: 19,
-    title: "AI Voice-Over Production",
-    category: "AI Video & Ads",
-    client: "MediaHouse",
-    description: "AI-generated voice-overs in 20+ languages for documentary and commercial video production.",
-    image: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=800&h=600&q=80",
-    technologies: ["ElevenLabs", "Murf AI", "Pro Tools"],
-    link: "#",
-    featured: false,
-  },
-  {
-    id: 20,
-    title: "Inventory Prediction AI",
-    category: "AI Solutions",
-    client: "SupplyMax",
-    description: "Machine learning system predicting inventory needs with 95% accuracy, reducing stockouts by 60%.",
-    image: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800&h=600&q=80",
-    technologies: ["Python", "TensorFlow", "AWS"],
     link: "#",
     featured: false,
   },
@@ -407,7 +275,7 @@ export default function PortfolioPage() {
                   layout
                   className="group"
                 >
-                  <div className="h-full rounded-2xl overflow-hidden glass hover:glass-strong transition-all duration-500 hover:glow-primary">
+                  <Card3D intensity={6} hoverLift={5} className="h-full rounded-2xl overflow-hidden glass hover:glass-strong transition-all duration-500 hover:glow-primary block">
                     <div className="relative h-48 overflow-hidden">
                       <Image
                         src={item.image}
@@ -447,7 +315,7 @@ export default function PortfolioPage() {
                         <span className="text-xs text-primary">{item.client}</span>
                       </div>
                     </div>
-                  </div>
+                  </Card3D>
                 </motion.div>
               ))}
           </div>
@@ -459,10 +327,10 @@ export default function PortfolioPage() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { value: "500+", label: "Projects Completed" },
-              { value: "50+", label: "Happy Clients" },
-              { value: "15+", label: "Countries Served" },
-              { value: "98%", label: "Client Satisfaction" },
+              { value: "50+", label: "Projects Completed" },
+              { value: "20+", label: "Happy Clients" },
+              { value: "5+", label: "Countries Served" },
+              { value: "100%", label: "Commitment" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

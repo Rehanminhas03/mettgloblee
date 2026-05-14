@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Globe, Layers, BarChart3, CheckCircle } from "lucide-react"
 import Image from "next/image"
+import { Card3D } from "@/components/card-3d"
 
 const features = [
   {
@@ -68,9 +69,8 @@ export function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: index * 0.05, ease: [0.4, 0, 0.2, 1] }}
-              whileHover={{ scale: 1.02, y: -5 }}
-              className="group relative overflow-hidden rounded-2xl sm:rounded-3xl glass hover:glass-strong transition-all duration-300 hover:glow-primary"
             >
+              <Card3D intensity={5} hoverLift={4} className="group relative overflow-hidden rounded-2xl sm:rounded-3xl glass hover:glass-strong transition-all duration-300 hover:glow-primary">
               {/* Background Image */}
               <div className="absolute inset-0 z-0">
                 <Image
@@ -114,6 +114,7 @@ export function WhyChooseUs() {
                   </div>
                 </div>
               </div>
+              </Card3D>
             </motion.div>
           ))}
         </div>

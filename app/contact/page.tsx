@@ -17,14 +17,9 @@ const services = [
   "Amazon & eCommerce",
   "Web Development",
   "Cybersecurity Services",
-  "Procurement & Manufacturing",
-  "Supply Chain & Logistics",
   "B2B Lead Generation",
   "Branding & Marketing",
   "AI & Automation",
-  "Customer Support",
-  "IT Help Desk",
-  "Data Entry & VA",
 ]
 
 const budgetRanges = [
@@ -79,16 +74,31 @@ export default function ContactPage() {
     return Object.keys(newErrors).length === 0
   }
 
+  const [submitError, setSubmitError] = useState<string>("")
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     if (!validateForm()) return
 
     setIsSubmitting(true)
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    setSubmitError("")
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formState),
+      })
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok) {
+        throw new Error(data?.error || "Something went wrong. Please try again.")
+      }
+      setIsSubmitted(true)
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : "Something went wrong. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (field: string, value: string) => {
@@ -262,6 +272,12 @@ export default function ContactPage() {
                       />
                     </div>
 
+                    {submitError && (
+                      <div className="p-4 rounded-xl border border-destructive/40 bg-destructive/10 text-sm text-destructive-foreground">
+                        {submitError}
+                      </div>
+                    )}
+
                     <Button
                       type="submit"
                       disabled={isSubmitting}
@@ -305,14 +321,31 @@ export default function ContactPage() {
                   <div className="p-3 rounded-xl glass-subtle">
                     <Mail className="w-6 h-6 text-primary" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Email</h3>
-                    <a
-                      href="mailto:hello@mettglobal.com"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      hello@mettglobal.com
-                    </a>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-semibold mb-2">Email</h3>
+                    <div className="space-y-1">
+                      <a
+                        href="mailto:hamadayub64@gmail.com"
+                        className="block text-sm text-muted-foreground hover:text-primary transition-colors break-all"
+                      >
+                        <span className="text-xs text-foreground/60 mr-2">Hammad</span>
+                        hamadayub64@gmail.com
+                      </a>
+                      <a
+                        href="mailto:minhasrehan96@gmail.com"
+                        className="block text-sm text-muted-foreground hover:text-primary transition-colors break-all"
+                      >
+                        <span className="text-xs text-foreground/60 mr-2">Rehan</span>
+                        minhasrehan96@gmail.com
+                      </a>
+                      <a
+                        href="mailto:muhammadrafey.pk@gmail.com"
+                        className="block text-sm text-muted-foreground hover:text-primary transition-colors break-all"
+                      >
+                        <span className="text-xs text-foreground/60 mr-2">Rafey</span>
+                        muhammadrafey.pk@gmail.com
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -320,10 +353,22 @@ export default function ContactPage() {
                   <div className="p-3 rounded-xl glass-subtle">
                     <Phone className="w-6 h-6 text-primary" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Phone / WhatsApp</h3>
-                    <a href="tel:+923001234567" className="text-muted-foreground hover:text-primary transition-colors">
-                      +92 300 123 4567
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-semibold mb-2">Phone / WhatsApp</h3>
+                    <a
+                      href="tel:+923005193214"
+                      className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      +92 300 519 3214
+                    </a>
+                    <a
+                      href={`https://wa.me/923005193214?text=${encodeURIComponent("Hi Mett Global, I'm interested in your services.")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 mt-2 text-sm text-[#25D366] hover:opacity-90 transition-opacity"
+                    >
+                      Chat on WhatsApp
+                      <span aria-hidden>→</span>
                     </a>
                   </div>
                 </div>
@@ -335,7 +380,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold mb-1">Headquarters</h3>
                     <p className="text-muted-foreground">
-                      Lahore, Pakistan
+                      Islamabad, Pakistan
                       <br />
                       <span className="text-primary text-sm">Serving clients globally</span>
                     </p>
@@ -365,17 +410,20 @@ export default function ContactPage() {
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="flex -space-x-2">
-                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-xs font-bold">
-                      AK
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-xs font-bold ring-2 ring-background">
+                      HA
                     </div>
-                    <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-xs font-bold">
-                      SM
+                    <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-xs font-bold ring-2 ring-background">
+                      MJ
                     </div>
-                    <div className="w-10 h-10 rounded-full bg-chart-3/20 flex items-center justify-center text-xs font-bold">
-                      OR
+                    <div className="w-10 h-10 rounded-full bg-chart-3/20 flex items-center justify-center text-xs font-bold ring-2 ring-background">
+                      RM
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-chart-4/20 flex items-center justify-center text-xs font-bold ring-2 ring-background">
+                      MR
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground">Our team is ready to help</p>
+                  <p className="text-sm text-muted-foreground">Our leadership is ready to help</p>
                 </div>
               </div>
             </motion.div>

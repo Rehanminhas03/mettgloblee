@@ -7,84 +7,77 @@ import { motion } from "framer-motion"
 import { Linkedin, Twitter, Mail, ArrowUpRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { Card3D } from "@/components/card-3d"
 
 const leadership = [
   {
     name: "Hammad Ayub",
-    role: "Founder & Head of Project Management",
+    role: "Founder",
     bio: "As the Founder of Mett Global, Hammad's goal is to grow the company into an international software house providing complete digital solutions worldwide. Expert in Social Media Marketing, Branding, Canva Design, Product Photography, Video Editing & AI Video Production.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=500&fit=crop&crop=face",
-    linkedin: "#",
-    twitter: "#",
+    image: "/team/hammad.jpg.jpeg",
+    linkedin: "https://www.linkedin.com/in/hammad-ayub-62244922b/",
+    twitter: "",
+    email: "hamadayub64@gmail.com",
   },
   {
     name: "Muhammad Junaid",
     role: "Chief Executive Officer (CEO)",
     bio: "As the CEO of Mett Global, Muhammad Junaid leads the company's strategic vision and growth initiatives. With extensive experience in business development and technology, he drives the company towards becoming a leading international software house delivering innovative digital solutions worldwide.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
-    linkedin: "#",
-    twitter: "#",
-  },
-  {
-    name: "Ali Hassan",
-    role: "Co-Founder & Managing Director",
-    bio: "Ali bridges the gap between creative design and technical e-commerce strategy. He specializes in scaling businesses globally on Amazon & eBay, graphic design, visual storytelling, AI video production, and strategic social media marketing.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=500&fit=crop&crop=face",
-    linkedin: "#",
-    twitter: "#",
+    image: "/team/junaid.png",
+    linkedin: "",
+    twitter: "",
+    email: "",
   },
   {
     name: "Rehan Hussain Minhas",
+    role: "Co-Founder & Managing Director",
+    bio: "As Co-Founder and Managing Director, Rehan combines technical full-stack expertise with strategic financial planning to direct day-to-day operations. BSCS holder pursuing a Masters in Data Science, with experience in AI-animated video projects, full-stack platforms, budgeting, and cost control.",
+    image: "/team/rehan.jpg.jpeg",
+    linkedin: "https://www.linkedin.com/in/rehan-hussain-minhas-3055a1238/",
+    twitter: "",
+    email: "minhasrehan96@gmail.com",
+  },
+  {
+    name: "Muhammad Rafey",
     role: "Chairman & Head of Project Management",
-    bio: "A results-driven IT professional combining technical full-stack expertise with strategic financial planning. BSCS holder pursuing Masters in Data Science, with experience in AI-animated video projects, full-stack platforms, budgeting and cost control.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face",
-    linkedin: "#",
-    twitter: "#",
+    bio: "As Chairman and Head of Project Management, Rafey leads end-to-end delivery across our engineering and security work. A full-stack engineer and cybersecurity specialist, his hands-on expertise spans React, Django, penetration testing, and AI-driven automation — bringing a builder's perspective to project planning, scope, and quality.",
+    image: "/team/rafey.jpg.jpeg",
+    linkedin: "https://www.linkedin.com/in/muhammad-rafey-25601b280/",
+    twitter: "",
+    email: "muhammadrafey.pk@gmail.com",
   },
 ]
 
 const team = [
   {
+    name: "Ali Hassan",
+    role: "E-commerce Strategy & Brand Lead",
+    bio: "Ali bridges the gap between creative design and technical e-commerce strategy. He specializes in scaling businesses globally on Amazon & eBay, graphic design, visual storytelling, AI video production, and strategic social media marketing.",
+  },
+  {
     name: "Muhammad Ahmad Aamir",
     role: "Chief Operating Officer (COO)",
     bio: "Muhammad specializes in scaling operational, logistical, and execution frameworks. With international experience across North America and Europe, he focuses on Global Logistics, Supply Chain Management, and Process Automation.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop&crop=face",
   },
   {
     name: "Muhammad Ayaan Sultan",
     role: "Head of Business Management & Operations",
     bio: "Ayaan oversees business performance and service delivery excellence. He focuses on building operational frameworks that support sustainable growth and client satisfaction with experience at Hyundai Islamabad.",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop&crop=face",
   },
   {
     name: "Ramzan Ali Bhatti",
     role: "Operations & Project Manager",
     bio: "Ramzan bridges the gap between financial integrity and project acquisition. He manages cash flow and leads bidding strategies to secure high-value contracts with a background in Business Operations and Finance.",
-    image: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=400&h=500&fit=crop&crop=face",
   },
   {
     name: "Shahrukh Butt",
     role: "HR Manager",
     bio: "Shahrukh manages talent and internal operations while contributing to business development. He focuses on building efficient teams and driving revenue through strategic client acquisition.",
-    image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=400&h=500&fit=crop&crop=face",
-  },
-  {
-    name: "Muhammad Rafey",
-    role: "Full Stack Developer & Cybersecurity Specialist",
-    bio: "Rafey combines full-stack web development with a strong background in cybersecurity. He builds scalable, secure systems with expertise in React, Django, penetration testing, and AI-driven automation.",
-    image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=500&fit=crop&crop=face",
   },
   {
     name: "Umair Ahmed",
     role: "Full Stack Developer",
     bio: "Umair focuses on designing and maintaining scalable web applications. He ensures that digital solutions are reliable, secure, and performance-driven with expertise in end-to-end application development.",
-    image: "https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=400&h=500&fit=crop&crop=face",
-  },
-  {
-    name: "Abdul Wasay",
-    role: "Python Programmer",
-    bio: "Abdul is a programmer with a background in content moderation and compliance, now focused on AI and automation. Expert in Python programming, web development, and AI chatbot solutions.",
-    image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=400&h=500&fit=crop&crop=face",
   },
 ]
 
@@ -180,7 +173,7 @@ export default function TeamPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="rounded-2xl overflow-hidden glass-card hover:glow-border transition-all duration-500">
+                <Card3D intensity={4} hoverLift={5} className="rounded-2xl overflow-hidden glass-card hover:glow-border transition-all duration-500 block">
                   <div className="grid md:grid-cols-5">
                     {/* Image */}
                     <div className="md:col-span-2 relative h-56 md:h-full min-h-[200px] overflow-hidden">
@@ -203,28 +196,42 @@ export default function TeamPage() {
                       <p className="text-sm text-muted-foreground leading-relaxed mb-6">{member.bio}</p>
 
                       <div className="flex items-center gap-2">
-                        <a
-                          href={member.linkedin}
-                          className="p-2.5 rounded-lg glass-subtle hover:bg-primary/10 transition-colors duration-300"
-                        >
-                          <Linkedin className="w-4 h-4" />
-                        </a>
-                        <a
-                          href={member.twitter}
-                          className="p-2.5 rounded-lg glass-subtle hover:bg-primary/10 transition-colors duration-300"
-                        >
-                          <Twitter className="w-4 h-4" />
-                        </a>
-                        <a
-                          href="#"
-                          className="p-2.5 rounded-lg glass-subtle hover:bg-primary/10 transition-colors duration-300"
-                        >
-                          <Mail className="w-4 h-4" />
-                        </a>
+                        {member.linkedin && (
+                          <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2.5 rounded-lg glass-subtle hover:bg-primary/10 transition-colors duration-300"
+                            aria-label={`${member.name} on LinkedIn`}
+                          >
+                            <Linkedin className="w-4 h-4" />
+                          </a>
+                        )}
+                        {member.twitter && (
+                          <a
+                            href={member.twitter}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2.5 rounded-lg glass-subtle hover:bg-primary/10 transition-colors duration-300"
+                            aria-label={`${member.name} on Twitter`}
+                          >
+                            <Twitter className="w-4 h-4" />
+                          </a>
+                        )}
+                        {member.email && (
+                          <a
+                            href={`mailto:${member.email}`}
+                            className="p-2.5 rounded-lg glass-subtle hover:bg-primary/10 transition-colors duration-300"
+                            aria-label={`Email ${member.name}`}
+                            title={member.email}
+                          >
+                            <Mail className="w-4 h-4" />
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>
-                </div>
+                </Card3D>
               </motion.div>
             ))}
           </div>
@@ -258,34 +265,36 @@ export default function TeamPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="group"
-              >
-                <div className="rounded-xl overflow-hidden glass-card hover:glow-border transition-all duration-500 h-full">
-                  <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src={member.image || "/placeholder.svg"}
-                      alt={member.name}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-                  </div>
-                  <div className="p-5 -mt-10 relative">
-                    <h3 className="text-base font-semibold text-foreground mb-0.5">{member.name}</h3>
-                    <p className="text-xs text-primary mb-3">{member.role}</p>
+            {team.map((member, index) => {
+              const initials = member.name
+                .split(" ")
+                .map((n) => n[0])
+                .slice(0, 2)
+                .join("")
+              return (
+                <motion.div
+                  key={member.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  className="group"
+                >
+                  <Card3D intensity={6} hoverLift={5} className="rounded-xl glass-card hover:glow-border transition-all duration-500 h-full block p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 flex items-center justify-center text-foreground font-semibold text-sm flex-shrink-0">
+                        {initials}
+                      </div>
+                      <div className="min-w-0">
+                        <h3 className="text-base font-semibold text-foreground leading-tight">{member.name}</h3>
+                        <p className="text-xs text-primary mt-0.5">{member.role}</p>
+                      </div>
+                    </div>
                     <p className="text-xs text-muted-foreground leading-relaxed">{member.bio}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                  </Card3D>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -319,10 +328,11 @@ export default function TeamPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-6 rounded-xl glass-card hover:glow-border transition-all duration-500 text-center"
               >
-                <h3 className="text-base font-semibold text-gradient mb-2">{value.title}</h3>
-                <p className="text-sm text-muted-foreground">{value.description}</p>
+                <Card3D intensity={6} hoverLift={4} className="p-6 rounded-xl glass-card hover:glow-border transition-all duration-500 text-center block">
+                  <h3 className="text-base font-semibold text-gradient mb-2">{value.title}</h3>
+                  <p className="text-sm text-muted-foreground">{value.description}</p>
+                </Card3D>
               </motion.div>
             ))}
           </div>

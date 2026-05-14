@@ -1,15 +1,29 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { useRef } from "react"
+import { AnimatedCounter } from "@/components/animated-counter"
 
 export function HeroSection() {
+  const heroRef = useRef<HTMLElement>(null)
+  const reduced = useReducedMotion()
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  })
+
+  const headlineY = useTransform(scrollYProgress, [0, 1], [0, 60])
+  const headlineOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.3])
+  const headlineScale = useTransform(scrollYProgress, [0, 1], [1, 0.95])
+  const bgY = useTransform(scrollYProgress, [0, 1], [0, 150])
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+    <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20">
+      {/* Background Image with parallax */}
+      <motion.div style={reduced ? undefined : { y: bgY }} className="absolute inset-0 z-0">
         <Image
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&h=1080&q=80"
           alt="Modern office workspace"
@@ -20,7 +34,7 @@ export function HeroSection() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
-      </div>
+      </motion.div>
 
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-1">
         <motion.div
@@ -81,6 +95,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.4 }}
+            style={reduced ? undefined : { y: headlineY, opacity: headlineOpacity, scale: headlineScale }}
             className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-normal tracking-tight leading-[0.85] sm:leading-[0.85] mb-8 sm:mb-10 md:mb-12"
           >
             <span className="block text-gradient-subtle">WE CRAFT</span>
@@ -130,10 +145,10 @@ export function HeroSection() {
             className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-16 sm:mt-24 md:mt-32"
           >
             {[
-              { value: "500+", label: "Projects Delivered" },
-              { value: "50+", label: "Global Clients" },
-              { value: "24/7", label: "Support" },
-              { value: "11", label: "Service Lines" },
+              { value: 120, suffix: "+", label: "Projects Delivered" },
+              { value: 40, suffix: "+", label: "Global Clients" },
+              { value: 5, suffix: "", label: "Regions Served" },
+              { value: null, raw: "24/7", label: "Support" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -142,7 +157,13 @@ export function HeroSection() {
                 transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
                 className="group p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl glass-card hover:glow-border transition-all duration-700"
               >
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-gradient mb-2 sm:mb-3 tracking-tight">{stat.value}</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-gradient mb-2 sm:mb-3 tracking-tight">
+                  {stat.value !== null ? (
+                    <AnimatedCounter value={stat.value} suffix={stat.suffix ?? ""} />
+                  ) : (
+                    stat.raw
+                  )}
+                </div>
                 <div className="text-[10px] sm:text-xs tracking-wider uppercase text-muted-foreground leading-tight">{stat.label}</div>
               </motion.div>
             ))}

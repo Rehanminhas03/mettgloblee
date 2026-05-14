@@ -2,6 +2,8 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Inter, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { LenisProvider } from "@/components/lenis-provider"
+import { ScrollProgress } from "@/components/scroll-progress"
 import "./globals.css"
 
 const inter = Inter({
@@ -26,7 +28,6 @@ export const metadata: Metadata = {
       "Premium multi-service agency delivering eCommerce, Web Development, Cybersecurity, AI Automation, and Business Solutions globally.",
     type: "website",
   },
-  generator: 'v0.app'
 }
 
 export const viewport: Viewport = {
@@ -43,7 +44,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
-        {children}
+        <LenisProvider>
+          <ScrollProgress />
+          {children}
+        </LenisProvider>
         <Analytics />
       </body>
     </html>

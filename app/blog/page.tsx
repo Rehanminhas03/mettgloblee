@@ -11,16 +11,17 @@ import { ArrowUpRight, Calendar, Clock, User } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { Card3D } from "@/components/card-3d"
 
-const categories = ["All", "eCommerce", "Technology", "Cybersecurity", "AI", "Marketing", "Business"]
+const categories = ["All", "eCommerce", "Technology", "AI", "Marketing"]
 
 const blogPosts = [
   {
     id: 1,
-    title: "The Future of AI in E-commerce: 2025 Trends",
+    title: "The Future of AI in E-commerce",
     category: "AI",
-    author: "Hammad Ayub",
-    date: "Nov 20, 2025",
+    author: "Mett Global Team",
+    date: "Coming Soon",
     readTime: "8 min read",
     excerpt:
       "Discover how artificial intelligence is revolutionizing the e-commerce landscape and what it means for your business.",
@@ -30,9 +31,9 @@ const blogPosts = [
   {
     id: 2,
     title: "Essential Cybersecurity Practices for Small Businesses",
-    category: "Cybersecurity",
-    author: "Muhammad Rafey",
-    date: "Nov 18, 2025",
+    category: "Technology",
+    author: "Mett Global Team",
+    date: "Coming Soon",
     readTime: "6 min read",
     excerpt:
       "Protect your business from cyber threats with these essential security practices that every small business should implement.",
@@ -41,49 +42,26 @@ const blogPosts = [
   },
   {
     id: 3,
-    title: "Amazon FBA in 2025: Complete Guide",
+    title: "Amazon Marketplace: Getting Started Guide",
     category: "eCommerce",
-    author: "Ali Hassan",
-    date: "Nov 15, 2025",
+    author: "Mett Global Team",
+    date: "Coming Soon",
     readTime: "12 min read",
     excerpt:
-      "Everything you need to know about selling on Amazon FBA in 2025, from product selection to scaling your business.",
+      "Everything you need to know about selling on Amazon, from product selection to scaling your business.",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
     featured: false,
   },
   {
     id: 4,
-    title: "Building Scalable Web Applications with Next.js",
+    title: "Building Modern Web Applications",
     category: "Technology",
-    author: "Umair Ahmed",
-    date: "Nov 12, 2025",
+    author: "Mett Global Team",
+    date: "Coming Soon",
     readTime: "10 min read",
     excerpt:
-      "Learn how to build performant, scalable web applications using Next.js and modern web development practices.",
+      "Learn how to build performant, scalable web applications using modern web development practices.",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "Digital Marketing Strategies That Actually Work",
-    category: "Marketing",
-    author: "Hammad Ayub",
-    date: "Nov 10, 2025",
-    readTime: "7 min read",
-    excerpt:
-      "Cut through the noise with proven digital marketing strategies that drive real results for your business.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "Supply Chain Optimization: A Complete Guide",
-    category: "Business",
-    author: "Muhammad Ahmad Aamir",
-    date: "Nov 8, 2025",
-    readTime: "9 min read",
-    excerpt: "Optimize your supply chain operations with these proven strategies for efficiency and cost reduction.",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop",
     featured: false,
   },
 ]
@@ -268,7 +246,7 @@ export default function BlogPage() {
                 layout
               >
                 <Link href={`/blog/${post.id}`} className="group block h-full">
-                  <div className="h-full rounded-3xl overflow-hidden glass hover:glass-strong transition-all duration-500 hover:glow-primary">
+                  <Card3D intensity={6} hoverLift={5} className="h-full rounded-3xl overflow-hidden glass hover:glass-strong transition-all duration-500 hover:glow-primary block">
                     <div className="relative h-48 overflow-hidden">
                       <Image
                         src={post.image || "/placeholder.svg"}
@@ -298,7 +276,7 @@ export default function BlogPage() {
                         </span>
                       </div>
                     </div>
-                  </div>
+                  </Card3D>
                 </Link>
               </motion.div>
             ))}

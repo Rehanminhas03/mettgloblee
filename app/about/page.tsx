@@ -4,9 +4,10 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { AnimatedBackground } from "@/components/animated-background"
 import { motion } from "framer-motion"
-import { Globe, Lightbulb, Target, Users, ArrowUpRight, Linkedin, Twitter } from "lucide-react"
+import { Globe, Lightbulb, Target, Users, ArrowUpRight, Linkedin } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { Card3D } from "@/components/card-3d"
 
 const values = [
   {
@@ -34,38 +35,36 @@ const values = [
 const team = [
   {
     name: "Hammad Ayub",
-    role: "Founder & Head of Project Management",
+    role: "Founder",
     bio: "Building Mett Global into an international software house with digital solutions worldwide.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=500&fit=crop&crop=face",
+    image: "/team/hammad.jpg.jpeg",
   },
   {
     name: "Muhammad Junaid",
     role: "Chief Executive Officer",
     bio: "Leading the company's strategic vision and growth initiatives.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
-  },
-  {
-    name: "Ali Hassan",
-    role: "Co-Founder & Managing Director",
-    bio: "E-commerce strategy expert specializing in global marketplace scaling.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=500&fit=crop&crop=face",
+    image: "/team/junaid.png",
   },
   {
     name: "Rehan Hussain Minhas",
+    role: "Co-Founder & Managing Director",
+    bio: "Full-stack expertise combined with strategic financial planning, directing day-to-day operations.",
+    image: "/team/rehan.jpg.jpeg",
+  },
+  {
+    name: "Muhammad Rafey",
     role: "Chairman & Head of Project Management",
-    bio: "Full-stack expertise combined with strategic financial planning.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face",
+    bio: "Full-stack engineer and cybersecurity specialist leading end-to-end delivery across engineering and security.",
+    image: "/team/rafey.jpg.jpeg",
   },
 ]
 
 const milestones = [
-  { year: "2018", event: "Founded as Amazon specialists" },
-  { year: "2019", event: "Expanded to full-service digital agency" },
-  { year: "2020", event: "Launched cybersecurity division" },
-  { year: "2021", event: "Reached 100+ global clients" },
-  { year: "2022", event: "Introduced AI & automation services" },
-  { year: "2023", event: "Expanded to 11 service lines" },
-  { year: "2024", event: "500+ projects delivered worldwide" },
+  { year: "2020", event: "Founded as digital services agency" },
+  { year: "2021", event: "Expanded eCommerce services" },
+  { year: "2022", event: "Launched web development division" },
+  { year: "2023", event: "Added AI & automation services" },
+  { year: "2024", event: "Growing global client base" },
 ]
 
 export default function AboutPage() {
@@ -135,8 +134,9 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, type: "spring" }}
-              whileHover={{ scale: 1.02, y: -5 }}
-              className="group p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl sm:rounded-3xl glass-card hover:glass-strong hover:glow-border transition-all duration-700"
+            >
+            <Card3D intensity={5} hoverLift={5}
+              className="group p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl sm:rounded-3xl glass-card hover:glass-strong hover:glow-border transition-all duration-700 block"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -164,14 +164,16 @@ export default function AboutPage() {
                 To be the global bridge connecting Pakistani excellence with international markets, setting new
                 standards in digital services.
               </motion.p>
+            </Card3D>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 50, scale: 0.95 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.15, type: "spring" }}
-              whileHover={{ scale: 1.02, y: -5 }}
-              className="group p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl sm:rounded-3xl glass-card hover:glass-strong hover:glow-border transition-all duration-700"
+            >
+            <Card3D intensity={5} hoverLift={5}
+              className="group p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl sm:rounded-3xl glass-card hover:glass-strong hover:glow-border transition-all duration-700 block"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -199,6 +201,7 @@ export default function AboutPage() {
                 To empower businesses worldwide with comprehensive digital solutions that drive growth, security, and
                 operational excellence.
               </motion.p>
+            </Card3D>
             </motion.div>
           </div>
         </div>
@@ -379,8 +382,9 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1, type: "spring" }}
-                whileHover={{ scale: 1.02, y: -5 }}
-                className="group p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl glass-card hover:glass-strong hover:glow-border transition-all duration-700"
+              >
+              <Card3D intensity={6} hoverLift={5}
+                className="group p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl glass-card hover:glass-strong hover:glow-border transition-all duration-700 block"
               >
                 <div className="flex items-start gap-4 sm:gap-6 md:gap-8">
                   <motion.div
@@ -411,6 +415,7 @@ export default function AboutPage() {
                     </motion.p>
                   </div>
                 </div>
+              </Card3D>
               </motion.div>
             ))}
           </div>
@@ -515,14 +520,6 @@ export default function AboutPage() {
                         className="p-1.5 sm:p-2 rounded-lg glass-subtle hover:bg-primary/20 hover:glow-primary transition-all duration-300"
                       >
                         <Linkedin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                      </motion.a>
-                      <motion.a
-                        href="#"
-                        whileHover={{ scale: 1.2, y: -2 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="p-1.5 sm:p-2 rounded-lg glass-subtle hover:bg-primary/20 hover:glow-primary transition-all duration-300"
-                      >
-                        <Twitter className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                       </motion.a>
                     </motion.div>
                   </motion.div>

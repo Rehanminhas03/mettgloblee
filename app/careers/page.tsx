@@ -7,6 +7,7 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowUpRight, MapPin, Clock, Briefcase, Users, Heart, Zap, Globe } from "lucide-react"
+import { Card3D } from "@/components/card-3d"
 
 const benefits = [
   {
@@ -34,14 +35,14 @@ const benefits = [
 const openPositions = [
   {
     id: 1,
-    title: "Senior Full Stack Developer",
+    title: "Full Stack Developer",
     department: "Engineering",
-    location: "Remote / Islamabad",
+    location: "Remote / Pakistan",
     type: "Full-time",
     description:
       "We're looking for an experienced Full Stack Developer to build scalable web applications using Next.js, React, and Node.js.",
     requirements: [
-      "5+ years of experience in web development",
+      "3+ years of experience in web development",
       "Proficiency in React, Next.js, TypeScript",
       "Experience with Node.js and databases",
       "Strong problem-solving skills",
@@ -49,77 +50,32 @@ const openPositions = [
   },
   {
     id: 2,
-    title: "Amazon PPC Specialist",
+    title: "Amazon Marketplace Specialist",
     department: "eCommerce",
     location: "Remote",
     type: "Full-time",
     description:
-      "Join our eCommerce team to manage and optimize Amazon advertising campaigns for our clients across multiple marketplaces.",
+      "Join our eCommerce team to manage and optimize Amazon accounts and advertising campaigns for our clients.",
     requirements: [
-      "3+ years of Amazon PPC experience",
+      "2+ years of Amazon experience",
       "Strong analytical skills",
       "Experience with Seller Central",
-      "Knowledge of Amazon SEO",
+      "Knowledge of Amazon PPC",
     ],
   },
   {
     id: 3,
-    title: "Cybersecurity Analyst",
-    department: "Security",
-    location: "Islamabad / Remote",
-    type: "Full-time",
-    description:
-      "Help protect our clients' digital assets by conducting security audits, penetration testing, and implementing security measures.",
-    requirements: [
-      "3+ years in cybersecurity",
-      "Security certifications (CEH, OSCP preferred)",
-      "Experience with penetration testing tools",
-      "Knowledge of compliance frameworks",
-    ],
-  },
-  {
-    id: 4,
-    title: "UI/UX Designer",
-    department: "Design",
+    title: "AI Content Creator",
+    department: "Creative",
     location: "Remote",
-    type: "Full-time",
+    type: "Full-time / Contract",
     description:
-      "Create beautiful, user-centered designs for web applications, mobile apps, and brand identities.",
+      "Create AI-powered video content, educational materials, and marketing assets using the latest AI tools.",
     requirements: [
-      "3+ years of UI/UX experience",
-      "Proficiency in Figma",
-      "Strong portfolio",
-      "Understanding of design systems",
-    ],
-  },
-  {
-    id: 5,
-    title: "Digital Marketing Manager",
-    department: "Marketing",
-    location: "Remote",
-    type: "Full-time",
-    description:
-      "Lead digital marketing campaigns across multiple channels including social media, email, and paid advertising.",
-    requirements: [
-      "4+ years in digital marketing",
-      "Experience with marketing automation",
-      "Strong analytical skills",
-      "Leadership experience",
-    ],
-  },
-  {
-    id: 6,
-    title: "Customer Support Specialist",
-    department: "Support",
-    location: "Islamabad",
-    type: "Full-time",
-    description:
-      "Provide exceptional customer support across multiple channels and help resolve client issues efficiently.",
-    requirements: [
-      "2+ years in customer support",
-      "Excellent communication skills",
-      "Experience with ticketing systems",
-      "Problem-solving mindset",
+      "Experience with AI video tools (HeyGen, Synthesia, D-ID)",
+      "Video editing skills",
+      "Creative mindset",
+      "Strong attention to detail",
     ],
   },
 ]
@@ -210,13 +166,14 @@ export default function CareersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="p-6 rounded-2xl glass hover:glass-strong transition-all duration-300 text-center"
               >
-                <div className="w-14 h-14 mx-auto mb-4 rounded-2xl glass-subtle flex items-center justify-center">
-                  <benefit.icon className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
-                <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                <Card3D intensity={6} hoverLift={5} className="p-6 rounded-2xl glass hover:glass-strong transition-all duration-300 text-center block">
+                  <div className="w-14 h-14 mx-auto mb-4 rounded-2xl glass-subtle flex items-center justify-center">
+                    <benefit.icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
+                  <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                </Card3D>
               </motion.div>
             ))}
           </div>
@@ -246,10 +203,11 @@ export default function CareersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="p-6 rounded-2xl glass hover:glass-strong transition-all duration-300"
               >
-                <h3 className="text-xl font-semibold text-gradient mb-2">{value.title}</h3>
-                <p className="text-muted-foreground">{value.description}</p>
+                <Card3D intensity={5} hoverLift={4} className="p-6 rounded-2xl glass hover:glass-strong transition-all duration-300 block">
+                  <h3 className="text-xl font-semibold text-gradient mb-2">{value.title}</h3>
+                  <p className="text-muted-foreground">{value.description}</p>
+                </Card3D>
               </motion.div>
             ))}
           </div>
@@ -284,8 +242,10 @@ export default function CareersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group p-6 rounded-2xl glass hover:glass-strong transition-all duration-300 hover:glow-primary"
               >
+                <Card3D intensity={3} hoverLift={4}
+                  className="group p-6 rounded-2xl glass hover:glass-strong transition-all duration-300 hover:glow-primary block"
+                >
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
                   <div>
                     <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
@@ -325,6 +285,7 @@ export default function CareersPage() {
                   Apply Now
                   <ArrowUpRight className="w-4 h-4" />
                 </Link>
+                </Card3D>
               </motion.div>
             ))}
           </div>

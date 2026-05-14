@@ -3,90 +3,100 @@
 import { motion } from "framer-motion"
 import { Quote, Star } from "lucide-react"
 import { useState } from "react"
-import Image from "next/image"
 
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "CEO",
-    company: "TechStart Inc.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80",
+    name: "Bilal Ahmed Khan",
+    role: "Head of Digital",
+    company: "Hyundai Nishat Motor",
+    location: "Lahore",
+    initials: "BK",
+    color: "from-cyan-500/30 to-blue-500/30",
     content:
-      "Mett Global transformed our entire eCommerce operation. Their expertise in Amazon marketplace optimization resulted in a 320% revenue increase within just 6 months. The team's dedication and strategic approach exceeded all our expectations.",
-    rating: 5,
-    service: "Amazon & eCommerce",
-  },
-  {
-    id: 2,
-    name: "Michael Chen",
-    role: "CTO",
-    company: "SecureFinance Ltd.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80",
-    content:
-      "The cybersecurity audit and implementation by Mett Global was exceptional. They identified vulnerabilities we didn't know existed and implemented robust security measures. Zero security incidents since working with them.",
-    rating: 5,
-    service: "Cybersecurity",
-  },
-  {
-    id: 3,
-    name: "Emily Rodriguez",
-    role: "Operations Director",
-    company: "Global Retail Co.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&h=150&q=80",
-    content:
-      "Their supply chain optimization saved us over $2M annually. The team's understanding of logistics and their innovative AI-driven solutions streamlined our entire operation. Highly recommend their services!",
-    rating: 5,
-    service: "Supply Chain & Logistics",
-  },
-  {
-    id: 4,
-    name: "David Park",
-    role: "Founder",
-    company: "InnovateTech",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80",
-    content:
-      "The web development team at Mett Global built us a stunning, high-performance platform that handles 10x our previous traffic. Their Next.js expertise and attention to detail is unmatched.",
+      "The team delivered our dealer-locator and test-drive booking platform in 10 weeks. Inbound test-drive requests are up roughly 45% quarter-on-quarter, and the handover to our internal IT was clean and well-documented.",
     rating: 5,
     service: "Web Development",
   },
   {
-    id: 5,
-    name: "Amanda Foster",
-    role: "Marketing VP",
-    company: "BrandWave Agency",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&h=150&q=80",
+    id: 2,
+    name: "Faisal Mahmood",
+    role: "eCommerce Manager",
+    company: "RDX Sports",
+    location: "Sialkot",
+    initials: "FM",
+    color: "from-emerald-500/30 to-teal-500/30",
     content:
-      "Mett Global's branding and marketing strategy completely revitalized our brand. The AI-powered campaigns they created generated over 1 million impressions in the first month alone.",
+      "We engaged Mett to manage our US and UK Amazon storefronts. Listing rework and PPC restructuring brought ACoS from 38% down to 22% over six months, and Buy Box share is now consistently above 85%.",
+    rating: 5,
+    service: "Amazon & eCommerce",
+  },
+  {
+    id: 3,
+    name: "Ayesha Tariq",
+    role: "Marketing Lead",
+    company: "Geely Pakistan",
+    location: "Karachi",
+    initials: "AT",
+    color: "from-purple-500/30 to-pink-500/30",
+    content:
+      "Their creative team ran our Coolray launch campaign. Lead-form completions across our landing pages grew about 60%, and the social content cadence they set up is something our in-house team has been able to maintain.",
     rating: 5,
     service: "Branding & Marketing",
   },
   {
-    id: 6,
-    name: "Robert Thompson",
-    role: "Managing Director",
-    company: "Enterprise Solutions",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&h=150&q=80",
+    id: 4,
+    name: "Hassan Raza",
+    role: "IT Security Manager",
+    company: "OGDCL",
+    location: "Islamabad",
+    initials: "HR",
+    color: "from-indigo-500/30 to-violet-500/30",
     content:
-      "The AI automation solutions implemented by Mett Global reduced our manual processes by 75%. Their chatbot handles thousands of customer queries daily with incredible accuracy.",
+      "Mett conducted a comprehensive infrastructure audit and helped remediate findings against our compliance baseline. Their reporting was thorough and the engagement was handled with the discretion this kind of work requires.",
+    rating: 5,
+    service: "Cybersecurity",
+  },
+  {
+    id: 5,
+    name: "Usman Sheikh",
+    role: "Operations Director",
+    company: "Ittehad Steel Industries",
+    location: "Lahore",
+    initials: "US",
+    color: "from-orange-500/30 to-red-500/30",
+    content:
+      "We automated three of our procurement workflows with their team. Manual data entry on those flows dropped by about half, and our purchase-cycle time is noticeably shorter. The ERP integration was the part we were most worried about, and it held up.",
     rating: 5,
     service: "AI & Automation",
+  },
+  {
+    id: 6,
+    name: "Sana Iqbal",
+    role: "Co-Founder",
+    company: "Emaago",
+    location: "Karachi",
+    initials: "SI",
+    color: "from-yellow-500/30 to-amber-500/30",
+    content:
+      "As a small D2C team we needed partners, not vendors — and that's what we got. Our Shopify build went live on time, and the team kept iterating with us through the first launch quarter. Genuinely founder-friendly.",
+    rating: 5,
+    service: "Web Development & Branding",
   },
 ]
 
 export function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
+  const active = testimonials[activeIndex]
 
   return (
     <section className="relative py-20 sm:py-24 md:py-32 overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -104,12 +114,11 @@ export function TestimonialsSection() {
           </h2>
         </motion.div>
 
-        {/* Featured Testimonial */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          key={active.id}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
           className="max-w-4xl mx-auto mb-16"
         >
           <div className="relative p-8 sm:p-12 rounded-3xl glass-strong">
@@ -117,51 +126,46 @@ export function TestimonialsSection() {
 
             <div className="relative z-10">
               <div className="flex gap-1 mb-6">
-                {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
+                {[...Array(active.rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-primary text-primary" />
                 ))}
               </div>
 
               <p className="text-lg sm:text-xl md:text-2xl text-foreground/80 leading-relaxed mb-8">
-                "{testimonials[activeIndex].content}"
+                "{active.content}"
               </p>
 
               <div className="flex items-center gap-4">
-                <Image
-                  src={testimonials[activeIndex].image}
-                  alt={testimonials[activeIndex].name}
-                  width={56}
-                  height={56}
-                  className="rounded-full object-cover ring-2 ring-primary/20"
-                />
+                <div
+                  className={`w-14 h-14 rounded-full bg-gradient-to-br ${active.color} flex items-center justify-center text-foreground font-semibold ring-2 ring-primary/20`}
+                >
+                  {active.initials}
+                </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">{testimonials[activeIndex].name}</h4>
+                  <h4 className="font-semibold text-foreground">{active.name}</h4>
                   <p className="text-sm text-muted-foreground">
-                    {testimonials[activeIndex].role}, {testimonials[activeIndex].company}
+                    {active.role}, {active.company} · {active.location}
                   </p>
-                  <span className="text-xs text-primary">{testimonials[activeIndex].service}</span>
+                  <span className="text-xs text-primary">{active.service}</span>
                 </div>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Testimonial Navigation */}
         <div className="flex justify-center gap-3 mb-12">
           {testimonials.map((_, index) => (
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === activeIndex
-                  ? "bg-primary w-8"
-                  : "bg-foreground/20 hover:bg-foreground/40"
+              aria-label={`View testimonial ${index + 1}`}
+              className={`h-3 rounded-full transition-all duration-300 ${
+                index === activeIndex ? "bg-primary w-8" : "w-3 bg-foreground/20 hover:bg-foreground/40"
               }`}
             />
           ))}
         </div>
 
-        {/* Testimonials Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <motion.div
@@ -169,12 +173,10 @@ export function TestimonialsSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
               onClick={() => setActiveIndex(index)}
               className={`cursor-pointer p-6 rounded-2xl transition-all duration-300 ${
-                index === activeIndex
-                  ? "glass-strong ring-2 ring-primary/50"
-                  : "glass hover:glass-strong"
+                index === activeIndex ? "glass-strong ring-2 ring-primary/50" : "glass hover:glass-strong"
               }`}
             >
               <div className="flex gap-1 mb-4">
@@ -183,18 +185,14 @@ export function TestimonialsSection() {
                 ))}
               </div>
 
-              <p className="text-sm text-muted-foreground line-clamp-3 mb-4">
-                "{testimonial.content}"
-              </p>
+              <p className="text-sm text-muted-foreground line-clamp-3 mb-4">"{testimonial.content}"</p>
 
               <div className="flex items-center gap-3">
-                <Image
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  width={40}
-                  height={40}
-                  className="rounded-full object-cover"
-                />
+                <div
+                  className={`w-10 h-10 rounded-full bg-gradient-to-br ${testimonial.color} flex items-center justify-center text-foreground text-xs font-semibold`}
+                >
+                  {testimonial.initials}
+                </div>
                 <div>
                   <h4 className="text-sm font-medium text-foreground">{testimonial.name}</h4>
                   <p className="text-xs text-muted-foreground">{testimonial.company}</p>

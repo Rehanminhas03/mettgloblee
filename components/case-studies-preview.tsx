@@ -3,28 +3,29 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
+import { Card3D } from "@/components/card-3d"
 
 const caseStudies = [
   {
-    title: "E-commerce Revenue Boost",
-    category: "Amazon & eCommerce",
-    result: "320% revenue increase in 6 months",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=600&q=80",
-    href: "/case-studies/ecommerce-revenue",
+    title: "PropertyHub Real Estate Platform",
+    category: "Web Development",
+    result: "Custom MLS-integrated platform launched in 12 weeks",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&h=600&q=80",
+    href: "/case-studies/propertyhub",
   },
   {
-    title: "Secure Infrastructure Overhaul",
-    category: "Cybersecurity",
-    result: "Zero security incidents post-implementation",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=600&q=80",
-    href: "/case-studies/security-overhaul",
-  },
-  {
-    title: "AI-Powered Automation",
+    title: "HammerPath AI Video Generator",
     category: "AI & Automation",
-    result: "75% reduction in manual processes",
+    result: "Reduced video production time by 75%",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=600&q=80",
-    href: "/case-studies/ai-automation",
+    href: "/case-studies/hammerpath",
+  },
+  {
+    title: "Yuaia Haircare AI Campaign",
+    category: "Branding & AI",
+    result: "200% lift in qualified leads in 6 months",
+    image: "https://images.unsplash.com/photo-1522335789203-aaa3e6c6a78e?auto=format&fit=crop&w=800&h=600&q=80",
+    href: "/case-studies/yuaia-haircare",
   },
 ]
 
@@ -77,9 +78,9 @@ export function CaseStudiesPreview() {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: index * 0.05, ease: [0.4, 0, 0.2, 1] }}
-              whileHover={{ y: -8, scale: 1.02 }}
             >
               <Link href={study.href} className="group block">
+                <Card3D intensity={6} hoverLift={6}>
                 <div className="rounded-3xl overflow-hidden glass hover:glass-strong transition-all duration-500 hover:glow-primary">
                   {/* Image */}
                   <div className="relative h-48 sm:h-56 overflow-hidden">
@@ -133,6 +134,7 @@ export function CaseStudiesPreview() {
                     </motion.p>
                   </motion.div>
                 </div>
+                </Card3D>
               </Link>
             </motion.div>
           ))}

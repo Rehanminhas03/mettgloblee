@@ -6,6 +6,7 @@ import { AnimatedBackground } from "@/components/animated-background"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowUpRight, Shield, Lock, Eye, FileCheck, AlertTriangle, CheckCircle2 } from "lucide-react"
+import { Card3D } from "@/components/card-3d"
 
 const services = [
   {
@@ -212,13 +213,14 @@ export default function CybersecurityServicePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-8 rounded-2xl glass hover:glass-strong transition-all duration-500 hover:glow-border"
               >
-                <div className="p-4 rounded-xl glass-subtle w-fit mb-6">
-                  <service.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground/90 mb-3">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                <Card3D intensity={6} hoverLift={5} className="p-8 rounded-2xl glass hover:glass-strong transition-all duration-500 hover:glow-border block">
+                  <div className="p-4 rounded-xl glass-subtle w-fit mb-6">
+                    <service.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground/90 mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                </Card3D>
               </motion.div>
             ))}
           </div>
