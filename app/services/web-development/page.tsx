@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer"
 import { AnimatedBackground } from "@/components/animated-background"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowUpRight, Code, Globe, Smartphone, Zap, Shield, Layers, CheckCircle2 } from "lucide-react"
 import { Card3D } from "@/components/card-3d"
 
@@ -56,6 +57,51 @@ const technologies = [
   "PostgreSQL & MongoDB",
   "AWS & Cloud Infrastructure",
   "Docker & CI/CD",
+]
+
+const recentProjects = [
+  {
+    id: 12,
+    title: "Hyundai Islamabad",
+    summary: "Automotive portal with vehicle catalog, financing calculator, and service booking.",
+    image: "/casestudy/hyundai.jfif",
+    stack: ["Next.js", "Firebase", "Google Maps API"],
+  },
+  {
+    id: 2,
+    title: "HammerPath",
+    summary: "Full-stack AI video generator SaaS with queued render pipeline.",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&h=600&q=80",
+    stack: ["Next.js", "Python / FastAPI", "Redis"],
+  },
+  {
+    id: 7,
+    title: "Marketlyn",
+    summary: "AI marketing platform with real-time analytics and campaign automation.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600&q=80",
+    stack: ["Next.js", "Python", "AWS"],
+  },
+  {
+    id: 9,
+    title: "Codminal",
+    summary: "Service-business website with per-service enquiry forms that pre-qualify leads.",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&h=600&q=80",
+    stack: ["Next.js", "Tailwind", "Mailgun"],
+  },
+  {
+    id: 10,
+    title: "Sfykea",
+    summary: "At-home car wash booking platform with technician dispatch dashboard.",
+    image: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=800&h=600&q=80",
+    stack: ["Next.js", "Stripe", "Twilio"],
+  },
+  {
+    id: 11,
+    title: "Ittehad Steel",
+    summary: "Corporate site + product catalog with structured RFQ flow for B2B sales.",
+    image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=800&h=600&q=80",
+    stack: ["Next.js", "Tailwind", "Mailgun"],
+  },
 ]
 
 const process = [
@@ -232,6 +278,96 @@ export default function WebDevelopmentServicePage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Recent Projects */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-px w-12 bg-primary" />
+              <span className="text-sm font-mono text-primary tracking-wider uppercase">Recent Projects</span>
+              <div className="h-px w-12 bg-primary" />
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
+              <span className="text-foreground/90">Selected web</span> <span className="text-gradient">work</span>
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
+              A snapshot of recent platforms we&apos;ve shipped — from real-estate marketplaces to AI SaaS and enterprise dashboards.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {recentProjects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+              >
+                <Link href={`/case-studies/${project.id}`} className="group block h-full">
+                  <Card3D intensity={5} hoverLift={5} className="block h-full rounded-2xl overflow-hidden glass hover:glass-strong transition-all duration-500 hover:glow-primary">
+                    <div className="relative h-44 overflow-hidden">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-start justify-between mb-3">
+                        <h3 className="text-xl font-bold text-foreground/90 group-hover:text-primary transition-colors">
+                          {project.title}
+                        </h3>
+                        <ArrowUpRight className="w-5 h-5 text-foreground/40 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 flex-shrink-0 mt-1" />
+                      </div>
+                      <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                        {project.summary}
+                      </p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {project.stack.map((tech) => (
+                          <span key={tech} className="px-2.5 py-1 text-xs rounded-full glass-subtle text-foreground/70">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </Card3D>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-center mt-12"
+          >
+            <Link
+              href="/case-studies"
+              className="group inline-flex items-center gap-3 px-6 py-3 text-sm tracking-wider uppercase rounded-2xl glass-card hover:glow-primary transition-all duration-500"
+            >
+              View All Case Studies
+              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+            </Link>
+          </motion.div>
         </div>
       </section>
 

@@ -37,17 +37,6 @@ const portfolioItems = [
     link: "#",
     featured: true,
   },
-  {
-    id: 3,
-    title: "PropertyHub Real Estate Platform",
-    category: "Web Development",
-    client: "PropertyHub",
-    description: "Complete real estate website with payment integration and GHL (GoHighLevel) CRM integration for lead management.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&h=600&q=80",
-    technologies: ["Next.js", "Payment Gateway", "GHL Integration"],
-    link: "#",
-    featured: true,
-  },
   // Real Client Projects
   {
     id: 4,

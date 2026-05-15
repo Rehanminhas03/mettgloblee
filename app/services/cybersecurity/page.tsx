@@ -42,11 +42,11 @@ const services = [
 ]
 
 const benefits = [
-  "Zero security incidents post-implementation",
+  "Detailed remediation plans tied to your compliance baseline",
   "24/7 threat monitoring and response",
-  "Compliance with major regulations",
-  "Expert team with security certifications",
-  "Proactive threat prevention",
+  "Reporting aligned with ISO, SOC 2, and PCI-DSS frameworks",
+  "Pen-test team with OSCP, CEH, and CISSP certifications",
+  "Proactive threat prevention, not just reactive cleanup",
 ]
 
 const process = [
@@ -166,10 +166,10 @@ export default function CybersecurityServicePage() {
               className="grid grid-cols-2 gap-4"
             >
               {[
-                { value: "0", label: "Security Incidents" },
-                { value: "24/7", label: "Monitoring" },
-                { value: "100%", label: "Compliance Rate" },
-                { value: "<5min", label: "Response Time" },
+                { value: "24/7", label: "Monitoring & Response" },
+                { value: "OSCP", label: "Certified Pen-Testers" },
+                { value: "ISO-aligned", label: "Compliance Reporting" },
+                { value: "< 1 hr", label: "Critical Incident SLA" },
               ].map((stat, index) => (
                 <div key={stat.label} className="p-6 rounded-2xl glass-card">
                   <div className="text-3xl font-bold text-gradient mb-2">{stat.value}</div>
@@ -242,7 +242,7 @@ export default function CybersecurityServicePage() {
                 <span className="text-sm font-mono text-primary tracking-wider uppercase">Why Choose Us</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
-                <span className="text-gradient">Zero incidents</span> <span className="text-foreground/90">guarantee</span>
+                <span className="text-gradient">Quiet systems,</span> <span className="text-foreground/90">audited defenses</span>
               </h2>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -267,11 +267,11 @@ export default function CybersecurityServicePage() {
               transition={{ duration: 0.8 }}
               className="p-10 rounded-3xl glass-strong"
             >
-              <div className="text-6xl font-bold text-gradient mb-4">0</div>
-              <p className="text-xl text-foreground/90 mb-6">Security Incidents</p>
+              <div className="text-6xl font-bold text-gradient mb-4">24/7</div>
+              <p className="text-xl text-foreground/90 mb-6">Monitoring &amp; Response</p>
               <p className="text-muted-foreground leading-relaxed">
-                Our clients experience zero security incidents post-implementation. Our proactive approach, comprehensive
-                security measures, and 24/7 monitoring ensure your business stays protected.
+                Our clients get continuous monitoring, OSCP-certified pen-testing, and clear remediation reports.
+                We focus on hardening your systems and staying ahead of threats — not on guarantees no honest team can make.
               </p>
             </motion.div>
           </div>

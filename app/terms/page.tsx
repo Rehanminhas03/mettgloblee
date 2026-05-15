@@ -137,7 +137,9 @@ export default function TermsOfServicePage() {
                 <p className="text-muted-foreground leading-relaxed">
                   For questions about these Terms of Service, please contact us at:
                 </p>
-                <p className="text-primary mt-2">legal@mettglobal.com</p>
+                <a href="mailto:minhasrehan96@gmail.com" className="text-primary mt-2 inline-block hover:underline">
+                  minhasrehan96@gmail.com
+                </a>
               </section>
             </div>
           </motion.div>

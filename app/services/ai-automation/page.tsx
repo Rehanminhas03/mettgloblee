@@ -42,7 +42,7 @@ const services = [
 ]
 
 const benefits = [
-  "75% reduction in manual processes",
+  "30–60% reduction in manual processes",
   "24/7 automated operations",
   "Faster response times",
   "Cost-effective automation",
@@ -79,7 +79,7 @@ const faqs = [
   },
   {
     question: "How much time can automation save?",
-    answer: "Our clients typically see 75% reduction in manual processes, freeing up teams to focus on strategic work. Time savings vary by process complexity and volume.",
+    answer: "Our clients typically see 30–60% reduction in manual processes, freeing up teams to focus on strategic work. Time savings vary by process complexity and volume.",
   },
   {
     question: "Do I need technical expertise?",
@@ -153,7 +153,7 @@ export default function AIAutomationServicePage() {
                 operations without proportional increases in headcount.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our clients typically see 75% reduction in manual processes, freeing teams to focus on strategic work.
+                Our clients typically see 30–60% reduction in manual processes, freeing teams to focus on strategic work.
                 From customer service chatbots to workflow automation and predictive analytics, we deliver AI solutions
                 that drive real business value.
               </p>
@@ -242,7 +242,7 @@ export default function AIAutomationServicePage() {
                 <span className="text-sm font-mono text-primary tracking-wider uppercase">Why Choose Us</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
-                <span className="text-gradient">75% reduction</span> <span className="text-foreground/90">in manual work</span>
+                <span className="text-gradient">30–60% reduction</span> <span className="text-foreground/90">in manual work</span>
               </h2>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (

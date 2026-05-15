@@ -42,7 +42,7 @@ const services = [
 ]
 
 const benefits = [
-  "320% average revenue increase in 6 months",
+  "40%+ revenue lift typical within the first 6 months",
   "50% reduction in advertising costs",
   "24/7 marketplace monitoring and optimization",
   "Multi-channel expansion support",
@@ -166,7 +166,7 @@ export default function EcommerceServicePage() {
               className="grid grid-cols-2 gap-4"
             >
               {[
-                { value: "320%", label: "Avg Revenue Increase" },
+                { value: "40%+", label: "Avg Revenue Increase" },
                 { value: "50%", label: "Cost Reduction" },
                 { value: "500+", label: "Products Managed" },
                 { value: "24/7", label: "Support" },
@@ -267,10 +267,10 @@ export default function EcommerceServicePage() {
               transition={{ duration: 0.8 }}
               className="p-10 rounded-3xl glass-strong"
             >
-              <div className="text-6xl font-bold text-gradient mb-4">320%</div>
+              <div className="text-6xl font-bold text-gradient mb-4">40%+</div>
               <p className="text-xl text-foreground/90 mb-6">Average Revenue Increase</p>
               <p className="text-muted-foreground leading-relaxed">
-                Our clients typically see a 320% increase in revenue within 6 months of working with us. This comes from
+                Our typical clients see a 40%+ revenue lift within the first 6 months of working with us. This comes from
                 optimized listings, strategic advertising, and comprehensive marketplace management.
               </p>
             </motion.div>

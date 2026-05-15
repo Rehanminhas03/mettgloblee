@@ -16,17 +16,17 @@ const faqCategories = [
       {
         question: "What services does Mett Global offer?",
         answer:
-          "Mett Global offers 11 comprehensive service lines including Amazon & eCommerce management, Web Development, Cybersecurity Services, Procurement & Manufacturing, Supply Chain & Logistics, B2B Lead Generation, Branding & Marketing, AI & Automation, Customer Support, IT Help Desk, and Data Entry & Virtual Assistants.",
+          "Mett Global offers six core service lines: Amazon & eCommerce, Web Development, Cybersecurity, B2B Lead Generation, Branding & Marketing, and AI & Automation. Most engagements combine two or more of these depending on the goal.",
       },
       {
         question: "Where is Mett Global located?",
         answer:
-          "Our headquarters is in Pakistan, but we serve clients globally across the USA, UK, Europe, Australia, and Middle East. We operate as a remote-first company with team members worldwide.",
+          "Our headquarters is in Islamabad, Pakistan. We serve clients across the USA, UK, Europe, Australia, and the Middle East, and we operate as a remote-first team with people working from multiple cities.",
       },
       {
         question: "How long has Mett Global been in business?",
         answer:
-          "Mett Global was founded in 2018 as Amazon specialists. Since then, we've grown into a full-service digital agency with 11 service lines and have successfully delivered over 500 projects for clients worldwide.",
+          "Mett Global was founded in 2020 and has grown into a full-service digital agency working with brands across automotive, eCommerce, real estate, and enterprise sectors.",
       },
     ],
   },

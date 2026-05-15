@@ -25,10 +25,10 @@ export function HeroSection() {
       {/* Background Image with parallax */}
       <motion.div style={reduced ? undefined : { y: bgY }} className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&h=1080&q=80"
-          alt="Modern office workspace"
+          src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1920&h=1080&q=80"
+          alt="Digital agency team collaborating on laptops"
           fill
-          className="object-cover opacity-20"
+          className="object-cover opacity-25"
           priority
           sizes="100vw"
         />

@@ -1,17 +1,17 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Our Services | Mett Global - 11 Comprehensive Digital Solutions",
+  title: "Our Services | Mett Global - Digital Solutions That Scale",
   description:
-    "Explore Mett Global's 11 service lines: eCommerce, Web Development, Cybersecurity, Procurement, Supply Chain, Lead Generation, Branding, AI Automation, Customer Support, IT Help Desk, and Data Entry.",
+    "Mett Global's six service lines: Amazon & eCommerce, Web Development, Cybersecurity, B2B Lead Generation, Branding & Marketing, and AI & Automation.",
   keywords: [
     "digital services",
     "ecommerce",
     "web development",
     "cybersecurity",
     "AI automation",
-    "customer support",
-    "IT services",
+    "lead generation",
+    "branding",
   ],
   openGraph: {
     title: "Our Services | Mett Global",

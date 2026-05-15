@@ -16,14 +16,38 @@ const services = [
   { name: "AI & Automation", href: "/services/ai-automation" },
 ]
 
-const navLinks = [
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services", hasDropdown: true },
+const aboutLinks = [
+  { name: "About Us", href: "/about" },
+  { name: "Our Team", href: "/team" },
+  { name: "Careers", href: "/careers" },
+  { name: "FAQ", href: "/faq" },
+]
+
+type DropdownKey = "services" | "about"
+
+type NavLink = {
+  name: string
+  href: string
+  dropdownKey?: DropdownKey
+}
+
+const navLinks: NavLink[] = [
+  { name: "About", href: "/about", dropdownKey: "about" },
+  { name: "Services", href: "/services", dropdownKey: "services" },
   { name: "Case Studies", href: "/case-studies" },
   { name: "Blog", href: "/blog" },
-  { name: "Careers", href: "/careers" },
   { name: "Contact", href: "/contact" },
 ]
+
+const dropdownItems: Record<DropdownKey, { name: string; href: string }[]> = {
+  services,
+  about: aboutLinks,
+}
+
+const aboutPaths = ["/about", "/team", "/careers", "/faq"]
+function isAboutActive(pathname: string) {
+  return aboutPaths.some((p) => pathname === p || pathname.startsWith(`${p}/`))
+}
 
 const WHATSAPP_NUMBER = "923005193214"
 const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -46,10 +70,10 @@ function WhatsAppIcon({ className }: { className?: string }) {
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
-  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<DropdownKey | null>(null)
+  const [openMobileDropdown, setOpenMobileDropdown] = useState<DropdownKey | null>(null)
   const pathname = usePathname()
-  const desktopServicesRef = useRef<HTMLDivElement>(null)
+  const desktopNavRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,13 +84,13 @@ export function Navigation() {
   }, [])
 
   useEffect(() => {
-    if (!isServicesOpen) return
+    if (!openDropdown) return
     function handleKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setIsServicesOpen(false)
+      if (e.key === "Escape") setOpenDropdown(null)
     }
     function handleClickOutside(e: MouseEvent) {
-      if (desktopServicesRef.current && !desktopServicesRef.current.contains(e.target as Node)) {
-        setIsServicesOpen(false)
+      if (desktopNavRef.current && !desktopNavRef.current.contains(e.target as Node)) {
+        setOpenDropdown(null)
       }
     }
     document.addEventListener("keydown", handleKey)
@@ -75,13 +99,19 @@ export function Navigation() {
       document.removeEventListener("keydown", handleKey)
       document.removeEventListener("mousedown", handleClickOutside)
     }
-  }, [isServicesOpen])
+  }, [openDropdown])
 
   useEffect(() => {
     setIsMobileMenuOpen(false)
-    setIsServicesOpen(false)
-    setIsMobileServicesOpen(false)
+    setOpenDropdown(null)
+    setOpenMobileDropdown(null)
   }, [pathname])
+
+  const isLinkActive = (link: NavLink) => {
+    if (link.dropdownKey === "services") return pathname.startsWith("/services")
+    if (link.dropdownKey === "about") return isAboutActive(pathname)
+    return pathname === link.href
+  }
 
   return (
     <>
@@ -111,80 +141,89 @@ export function Navigation() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-1">
-              {navLinks.map((link) => (
-                <div
-                  key={link.name}
-                  className="relative"
-                  ref={link.hasDropdown ? desktopServicesRef : undefined}
-                  onMouseEnter={link.hasDropdown ? () => setIsServicesOpen(true) : undefined}
-                  onMouseLeave={link.hasDropdown ? () => setIsServicesOpen(false) : undefined}
-                >
-                  {link.hasDropdown ? (
-                    <button
-                      type="button"
-                      aria-expanded={isServicesOpen}
-                      aria-haspopup="menu"
-                      onClick={() => setIsServicesOpen((v) => !v)}
-                      className={cn(
-                        "flex items-center gap-1.5 px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full",
-                        pathname.startsWith("/services")
-                          ? "text-primary"
-                          : "text-foreground/70 hover:text-foreground hover:bg-white/5"
-                      )}
-                    >
-                      {link.name}
-                      <ChevronDown
+            <div ref={desktopNavRef} className="hidden lg:flex items-center gap-1">
+              {navLinks.map((link) => {
+                const active = isLinkActive(link)
+                const isOpen = openDropdown === link.dropdownKey
+                return (
+                  <div
+                    key={link.name}
+                    className="relative"
+                    onMouseEnter={link.dropdownKey ? () => setOpenDropdown(link.dropdownKey!) : undefined}
+                    onMouseLeave={link.dropdownKey ? () => setOpenDropdown(null) : undefined}
+                  >
+                    {link.dropdownKey ? (
+                      <button
+                        type="button"
+                        aria-expanded={isOpen}
+                        aria-haspopup="menu"
+                        onClick={() =>
+                          setOpenDropdown((prev) => (prev === link.dropdownKey ? null : link.dropdownKey!))
+                        }
                         className={cn(
-                          "w-4 h-4 transition-transform duration-200",
-                          isServicesOpen && "rotate-180"
+                          "flex items-center gap-1.5 px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full",
+                          active
+                            ? "text-primary"
+                            : "text-foreground/70 hover:text-foreground hover:bg-white/5"
                         )}
-                      />
-                    </button>
-                  ) : (
-                    <Link
-                      href={link.href}
-                      className={cn(
-                        "px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full block",
-                        pathname === link.href
-                          ? "text-primary"
-                          : "text-foreground/70 hover:text-foreground hover:bg-white/5"
-                      )}
-                    >
-                      {link.name}
-                    </Link>
-                  )}
+                      >
+                        {link.name}
+                        <ChevronDown
+                          className={cn(
+                            "w-4 h-4 transition-transform duration-200",
+                            isOpen && "rotate-180"
+                          )}
+                        />
+                      </button>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className={cn(
+                          "px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full block",
+                          active
+                            ? "text-primary"
+                            : "text-foreground/70 hover:text-foreground hover:bg-white/5"
+                        )}
+                      >
+                        {link.name}
+                      </Link>
+                    )}
 
-                  {/* Services Dropdown */}
-                  {link.hasDropdown && (
-                    <AnimatePresence>
-                      {isServicesOpen && (
-                        <motion.div
-                          role="menu"
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 10 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-64 rounded-2xl p-2 overflow-hidden z-50 bg-background/95 backdrop-blur-xl border border-white/10 shadow-xl shadow-black/20"
-                        >
-                          {services.map((service) => (
-                            <Link
-                              key={service.name}
-                              href={service.href}
-                              role="menuitem"
-                              onClick={() => setIsServicesOpen(false)}
-                              className="flex items-center justify-between px-4 py-2.5 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5 rounded-xl transition-colors duration-200 group/item"
-                            >
-                              <span>{service.name}</span>
-                              <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-200" />
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  )}
-                </div>
-              ))}
+                    {link.dropdownKey && (
+                      <AnimatePresence>
+                        {isOpen && (
+                          <motion.div
+                            role="menu"
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 10 }}
+                            transition={{ duration: 0.2 }}
+                            className="absolute top-full left-0 mt-2 w-64 rounded-2xl p-2 overflow-hidden z-50 bg-background/95 backdrop-blur-xl border border-white/10 shadow-xl shadow-black/20"
+                          >
+                            {dropdownItems[link.dropdownKey].map((item) => (
+                              <Link
+                                key={item.name}
+                                href={item.href}
+                                role="menuitem"
+                                onClick={() => setOpenDropdown(null)}
+                                className={cn(
+                                  "flex items-center justify-between px-4 py-2.5 text-sm rounded-xl transition-colors duration-200 group/item",
+                                  pathname === item.href
+                                    ? "text-primary bg-white/5"
+                                    : "text-foreground/70 hover:text-foreground hover:bg-white/5"
+                                )}
+                              >
+                                <span>{item.name}</span>
+                                <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-200" />
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    )}
+                  </div>
+                )
+              })}
             </div>
 
             {/* CTA Cluster */}
@@ -243,89 +282,86 @@ export function Navigation() {
               className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-background/95 backdrop-blur-xl border-l border-white/10 p-6 pt-24 overflow-y-auto"
             >
               <div className="space-y-1">
-                {navLinks.map((link, index) => (
-                  <motion.div
-                    key={link.name}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                  >
-                    {link.hasDropdown ? (
-                      <>
-                        <button
-                          type="button"
-                          aria-expanded={isMobileServicesOpen}
-                          onClick={() => setIsMobileServicesOpen((v) => !v)}
+                {navLinks.map((link, index) => {
+                  const active = isLinkActive(link)
+                  const isMobileOpen = openMobileDropdown === link.dropdownKey
+                  return (
+                    <motion.div
+                      key={link.name}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                    >
+                      {link.dropdownKey ? (
+                        <>
+                          <button
+                            type="button"
+                            aria-expanded={isMobileOpen}
+                            onClick={() =>
+                              setOpenMobileDropdown((prev) =>
+                                prev === link.dropdownKey ? null : link.dropdownKey!
+                              )
+                            }
+                            className={cn(
+                              "flex items-center justify-between w-full py-3 text-lg font-medium transition-colors",
+                              active ? "text-primary" : "text-foreground/70 hover:text-foreground"
+                            )}
+                          >
+                            {link.name}
+                            <ChevronDown
+                              className={cn(
+                                "w-5 h-5 transition-transform duration-200",
+                                isMobileOpen && "rotate-180"
+                              )}
+                            />
+                          </button>
+                          <AnimatePresence initial={false}>
+                            {isMobileOpen && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "auto", opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                                className="overflow-hidden"
+                              >
+                                <div className="pl-4 py-1 space-y-1 border-l border-white/10 ml-1 mb-2">
+                                  {dropdownItems[link.dropdownKey].map((item) => (
+                                    <Link
+                                      key={item.name}
+                                      href={item.href}
+                                      onClick={() => setIsMobileMenuOpen(false)}
+                                      className={cn(
+                                        "block py-2 text-sm transition-colors",
+                                        pathname === item.href
+                                          ? "text-primary"
+                                          : "text-foreground/60 hover:text-foreground"
+                                      )}
+                                    >
+                                      {item.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
                           className={cn(
-                            "flex items-center justify-between w-full py-3 text-lg font-medium transition-colors",
-                            pathname.startsWith("/services")
-                              ? "text-primary"
-                              : "text-foreground/70 hover:text-foreground"
+                            "flex items-center justify-between py-3 text-lg font-medium transition-colors",
+                            active ? "text-primary" : "text-foreground/70 hover:text-foreground"
                           )}
                         >
                           {link.name}
-                          <ChevronDown
-                            className={cn(
-                              "w-5 h-5 transition-transform duration-200",
-                              isMobileServicesOpen && "rotate-180"
-                            )}
-                          />
-                        </button>
-                        <AnimatePresence initial={false}>
-                          {isMobileServicesOpen && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: "auto", opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                              className="overflow-hidden"
-                            >
-                              <div className="pl-4 py-1 space-y-1 border-l border-white/10 ml-1 mb-2">
-                                <Link
-                                  href={link.href}
-                                  onClick={() => setIsMobileMenuOpen(false)}
-                                  className="block py-2 text-sm text-foreground/60 hover:text-primary transition-colors"
-                                >
-                                  All Services
-                                </Link>
-                                {services.map((service) => (
-                                  <Link
-                                    key={service.name}
-                                    href={service.href}
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                    className={cn(
-                                      "block py-2 text-sm transition-colors",
-                                      pathname === service.href
-                                        ? "text-primary"
-                                        : "text-foreground/60 hover:text-foreground"
-                                    )}
-                                  >
-                                    {service.name}
-                                  </Link>
-                                ))}
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </>
-                    ) : (
-                      <Link
-                        href={link.href}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className={cn(
-                          "flex items-center justify-between py-3 text-lg font-medium transition-colors",
-                          pathname === link.href
-                            ? "text-primary"
-                            : "text-foreground/70 hover:text-foreground"
-                        )}
-                      >
-                        {link.name}
-                        <ArrowUpRight className="w-4 h-4" />
-                      </Link>
-                    )}
-                    {index < navLinks.length - 1 && <div className="h-px bg-white/5" />}
-                  </motion.div>
-                ))}
+                          <ArrowUpRight className="w-4 h-4" />
+                        </Link>
+                      )}
+                      {index < navLinks.length - 1 && <div className="h-px bg-white/5" />}
+                    </motion.div>
+                  )
+                })}
               </div>
 
               <div className="mt-8 space-y-3">

@@ -11,14 +11,9 @@ import {
   ShoppingCart,
   Code,
   Shield,
-  Factory,
-  Truck,
   Users,
   Palette,
   Brain,
-  Headphones,
-  Monitor,
-  FileText,
   CheckCircle,
   ArrowRight,
 } from "lucide-react"
@@ -70,8 +65,8 @@ const servicesData: Record<string, {
       },
     ],
     benefits: [
-      "Average 320% revenue increase for clients",
-      "Reduced ACoS by up to 40%",
+      "40%+ revenue lift typical within 6 months",
+      "ACoS reductions of 30–50% on managed accounts",
       "Multi-marketplace expansion support",
       "24/7 account monitoring",
       "Dedicated account managers",
@@ -96,7 +91,7 @@ const servicesData: Record<string, {
         answer: "Yes, we provide white-label eCommerce management for agencies.",
       },
     ],
-    relatedServices: ["web-development", "branding", "supply-chain"],
+    relatedServices: ["web-development", "branding", "ai-automation"],
   },
   "web-development": {
     title: "Web Development",
@@ -220,131 +215,7 @@ const servicesData: Record<string, {
         answer: "Yes, we provide 24/7 managed security operations for continuous protection.",
       },
     ],
-    relatedServices: ["web-development", "it-helpdesk", "ai-automation"],
-  },
-  procurement: {
-    title: "Procurement & Manufacturing",
-    subtitle: "Global Sourcing from Pakistan",
-    description:
-      "Access Pakistan's manufacturing excellence for textiles, apparel, and more. We handle vendor sourcing, quality control, and supply chain optimization.",
-    icon: Factory,
-    heroImage: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1920&h=1080&q=80",
-    features: [
-      {
-        title: "Vendor Sourcing",
-        description: "Access to verified manufacturers across Pakistan.",
-      },
-      {
-        title: "Quality Control",
-        description: "On-site inspections and quality assurance.",
-      },
-      {
-        title: "Cost Negotiation",
-        description: "Competitive pricing through expert negotiation.",
-      },
-      {
-        title: "Sample Development",
-        description: "Prototype and sample management.",
-      },
-      {
-        title: "Compliance",
-        description: "Ethical sourcing and compliance verification.",
-      },
-      {
-        title: "Logistics Coordination",
-        description: "Seamless shipping and customs clearance.",
-      },
-    ],
-    benefits: [
-      "Access to 500+ verified manufacturers",
-      "Average 30% cost savings",
-      "On-ground quality control team",
-      "End-to-end supply chain management",
-      "Ethical and sustainable sourcing",
-    ],
-    process: [
-      { step: "01", title: "Requirements", description: "Define product specifications and quantities." },
-      { step: "02", title: "Sourcing", description: "Identify and vet potential manufacturers." },
-      { step: "03", title: "Sampling", description: "Develop and approve product samples." },
-      { step: "04", title: "Production", description: "Manage production with quality oversight." },
-    ],
-    faqs: [
-      {
-        question: "What products can you source?",
-        answer: "Textiles, apparel, home goods, leather products, sports goods, and more.",
-      },
-      {
-        question: "What are the minimum order quantities?",
-        answer: "MOQs vary by product and manufacturer - we can accommodate various order sizes.",
-      },
-      {
-        question: "How do you ensure quality?",
-        answer: "Our team conducts on-site inspections at every stage of production.",
-      },
-    ],
-    relatedServices: ["supply-chain", "ecommerce", "branding"],
-  },
-  "supply-chain": {
-    title: "Supply Chain & Logistics",
-    subtitle: "End-to-End Logistics Solutions",
-    description:
-      "Streamline your supply chain with our comprehensive logistics services. From FBA prep to international shipping, we optimize every step of your fulfillment process.",
-    icon: Truck,
-    heroImage: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1920&h=1080&q=80",
-    features: [
-      {
-        title: "FBA Prep Services",
-        description: "Amazon-compliant preparation and labeling.",
-      },
-      {
-        title: "Warehouse Management",
-        description: "Efficient inventory storage and management.",
-      },
-      {
-        title: "Shipping Coordination",
-        description: "Optimized shipping routes and carrier selection.",
-      },
-      {
-        title: "Customs Clearance",
-        description: "Hassle-free international customs handling.",
-      },
-      {
-        title: "3PL Integration",
-        description: "Seamless integration with third-party logistics.",
-      },
-      {
-        title: "Returns Management",
-        description: "Efficient returns processing and restocking.",
-      },
-    ],
-    benefits: [
-      "99.9% on-time delivery rate",
-      "Average 25% reduction in shipping costs",
-      "Real-time inventory tracking",
-      "Multi-warehouse fulfillment",
-      "Scalable for peak seasons",
-    ],
-    process: [
-      { step: "01", title: "Analysis", description: "Evaluate current supply chain performance." },
-      { step: "02", title: "Optimize", description: "Identify and implement improvements." },
-      { step: "03", title: "Integrate", description: "Connect systems for seamless operations." },
-      { step: "04", title: "Scale", description: "Expand capabilities as you grow." },
-    ],
-    faqs: [
-      {
-        question: "Which countries do you ship to?",
-        answer: "We ship globally with optimized routes for major markets including US, UK, EU, and Australia.",
-      },
-      {
-        question: "Do you handle hazmat products?",
-        answer: "Yes, we have certified handling for various hazmat categories.",
-      },
-      {
-        question: "Can you integrate with my existing systems?",
-        answer: "We integrate with major platforms including Shopify, Amazon, and custom ERPs.",
-      },
-    ],
-    relatedServices: ["ecommerce", "procurement", "customer-support"],
+    relatedServices: ["web-development", "ai-automation"],
   },
   "lead-generation": {
     title: "B2B Lead Generation",
@@ -380,8 +251,8 @@ const servicesData: Record<string, {
       },
     ],
     benefits: [
-      "Average 12,000 leads generated monthly",
-      "40% average meeting booking rate",
+      "Hundreds of qualified leads sourced per month per active account",
+      "Meeting booking rates typically in the 25–40% range",
       "Full CRM integration",
       "Dedicated SDR teams",
       "Multi-channel outreach",
@@ -406,7 +277,7 @@ const servicesData: Record<string, {
         answer: "Salesforce, HubSpot, Pipedrive, and most major CRM platforms.",
       },
     ],
-    relatedServices: ["branding", "ai-automation", "customer-support"],
+    relatedServices: ["branding", "ai-automation", "ecommerce"],
   },
   branding: {
     title: "Branding & Marketing",
@@ -442,7 +313,7 @@ const servicesData: Record<string, {
       },
     ],
     benefits: [
-      "Average 1M+ impressions per campaign",
+      "Strong organic and paid reach across launch campaigns",
       "8.5% average engagement rate",
       "Full creative team in-house",
       "AI-powered campaign optimization",
@@ -504,9 +375,9 @@ const servicesData: Record<string, {
       },
     ],
     benefits: [
-      "75% reduction in manual processes",
-      "94% customer satisfaction with AI support",
-      "$2.3M average cost savings",
+      "30–60% reduction in manual workload on automated workflows",
+      "Higher first-response satisfaction on AI-handled queries",
+      "Meaningful operational cost savings within months of deployment",
       "24/7 automated operations",
       "Scalable AI infrastructure",
     ],
@@ -530,193 +401,7 @@ const servicesData: Record<string, {
         answer: "AI augments your team, handling routine tasks so employees can focus on high-value work.",
       },
     ],
-    relatedServices: ["web-development", "customer-support", "lead-generation"],
-  },
-  "customer-support": {
-    title: "Customer Support",
-    subtitle: "24/7 Multi-Channel Support",
-    description:
-      "Deliver exceptional customer experiences with our dedicated support teams. From email to live chat, we handle your customers with care.",
-    icon: Headphones,
-    heroImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1920&h=1080&q=80",
-    features: [
-      {
-        title: "24/7 Support",
-        description: "Round-the-clock coverage for your customers.",
-      },
-      {
-        title: "Multi-Channel",
-        description: "Email, chat, phone, and social media support.",
-      },
-      {
-        title: "Ticket Management",
-        description: "Efficient handling and resolution tracking.",
-      },
-      {
-        title: "Quality Assurance",
-        description: "Regular monitoring and quality reviews.",
-      },
-      {
-        title: "Knowledge Base",
-        description: "Self-service resources for common queries.",
-      },
-      {
-        title: "Escalation Handling",
-        description: "Professional handling of complex issues.",
-      },
-    ],
-    benefits: [
-      "95% customer satisfaction rating",
-      "Average 2-minute response time",
-      "Trained support specialists",
-      "Seamless brand representation",
-      "Scalable during peak times",
-    ],
-    process: [
-      { step: "01", title: "Onboarding", description: "Learn your products and brand voice." },
-      { step: "02", title: "Setup", description: "Configure support systems and workflows." },
-      { step: "03", title: "Launch", description: "Go live with dedicated support team." },
-      { step: "04", title: "Improve", description: "Continuous training and optimization." },
-    ],
-    faqs: [
-      {
-        question: "What languages do you support?",
-        answer: "English, Spanish, French, German, Arabic, and more upon request.",
-      },
-      {
-        question: "Can you use our existing tools?",
-        answer: "We integrate with Zendesk, Freshdesk, Intercom, and most support platforms.",
-      },
-      {
-        question: "How quickly can you scale up?",
-        answer: "We can scale teams up or down within 48-72 hours.",
-      },
-    ],
-    relatedServices: ["ai-automation", "ecommerce", "it-helpdesk"],
-  },
-  "it-helpdesk": {
-    title: "IT Help Desk",
-    subtitle: "Remote IT Support & Management",
-    description:
-      "Keep your technology running smoothly with our IT help desk services. From troubleshooting to system administration, we've got you covered.",
-    icon: Monitor,
-    heroImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&h=1080&q=80",
-    features: [
-      {
-        title: "Remote Support",
-        description: "Quick resolution of technical issues.",
-      },
-      {
-        title: "System Administration",
-        description: "Server and network management.",
-      },
-      {
-        title: "Network Management",
-        description: "Monitoring and optimization.",
-      },
-      {
-        title: "Security Monitoring",
-        description: "Threat detection and response.",
-      },
-      {
-        title: "Software Management",
-        description: "Installation, updates, and licensing.",
-      },
-      {
-        title: "User Management",
-        description: "Account provisioning and access control.",
-      },
-    ],
-    benefits: [
-      "99.9% system uptime",
-      "Average 15-minute response time",
-      "Certified IT professionals",
-      "Proactive monitoring",
-      "Cost-effective support",
-    ],
-    process: [
-      { step: "01", title: "Assessment", description: "Evaluate your IT infrastructure." },
-      { step: "02", title: "Setup", description: "Configure monitoring and access." },
-      { step: "03", title: "Support", description: "Provide ongoing technical support." },
-      { step: "04", title: "Report", description: "Regular reporting and recommendations." },
-    ],
-    faqs: [
-      {
-        question: "What systems do you support?",
-        answer: "Windows, macOS, Linux, cloud platforms, and most enterprise software.",
-      },
-      {
-        question: "Do you offer on-site support?",
-        answer: "We primarily offer remote support but can arrange on-site visits when needed.",
-      },
-      {
-        question: "What are your support hours?",
-        answer: "24/7 support is available for critical issues.",
-      },
-    ],
-    relatedServices: ["cybersecurity", "ai-automation", "customer-support"],
-  },
-  "data-entry": {
-    title: "Data Entry & Virtual Assistants",
-    subtitle: "Administrative Excellence",
-    description:
-      "Focus on what matters most while we handle the rest. Our virtual assistants and data entry specialists deliver accurate, efficient administrative support.",
-    icon: FileText,
-    heroImage: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1920&h=1080&q=80",
-    features: [
-      {
-        title: "Data Processing",
-        description: "Accurate data entry and management.",
-      },
-      {
-        title: "Research",
-        description: "Market research and data gathering.",
-      },
-      {
-        title: "Administrative Tasks",
-        description: "Email, calendar, and task management.",
-      },
-      {
-        title: "Documentation",
-        description: "Document creation and formatting.",
-      },
-      {
-        title: "CRM Updates",
-        description: "Keep your CRM data current.",
-      },
-      {
-        title: "Reporting",
-        description: "Regular reports and summaries.",
-      },
-    ],
-    benefits: [
-      "99.9% accuracy rate",
-      "Flexible engagement models",
-      "Trained professionals",
-      "Confidentiality guaranteed",
-      "Scalable resources",
-    ],
-    process: [
-      { step: "01", title: "Scope", description: "Define tasks and requirements." },
-      { step: "02", title: "Match", description: "Assign the right specialist." },
-      { step: "03", title: "Execute", description: "Complete tasks efficiently." },
-      { step: "04", title: "Review", description: "Quality check and delivery." },
-    ],
-    faqs: [
-      {
-        question: "How do you ensure data security?",
-        answer: "Strict NDAs, secure systems, and regular security training for all staff.",
-      },
-      {
-        question: "What is the minimum engagement?",
-        answer: "We offer flexible options from hourly to full-time dedicated resources.",
-      },
-      {
-        question: "What tools do your VAs use?",
-        answer: "Proficient in Google Workspace, Microsoft 365, project management tools, and more.",
-      },
-    ],
-    relatedServices: ["lead-generation", "customer-support", "ecommerce"],
+    relatedServices: ["web-development", "lead-generation", "branding"],
   },
 }
 

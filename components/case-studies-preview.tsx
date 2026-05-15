@@ -7,25 +7,25 @@ import { Card3D } from "@/components/card-3d"
 
 const caseStudies = [
   {
-    title: "PropertyHub Real Estate Platform",
+    title: "Hyundai Islamabad — Automotive Portal",
     category: "Web Development",
-    result: "Custom MLS-integrated platform launched in 12 weeks",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&h=600&q=80",
-    href: "/case-studies/propertyhub",
+    result: "Vehicle catalog, financing calculator & service booking — live",
+    image: "/casestudy/hyundai.jfif",
+    href: "/case-studies/12",
   },
   {
-    title: "HammerPath AI Video Generator",
+    title: "HammerPath — AI Video Generator",
+    category: "Web Development",
+    result: "Full-stack SaaS with queued AI render pipeline",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&h=600&q=80",
+    href: "/case-studies/2",
+  },
+  {
+    title: "Yuaia Haircare — AI Video Campaign",
     category: "AI & Automation",
-    result: "Reduced video production time by 75%",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=600&q=80",
-    href: "/case-studies/hammerpath",
-  },
-  {
-    title: "Yuaia Haircare AI Campaign",
-    category: "Branding & AI",
-    result: "200% lift in qualified leads in 6 months",
-    image: "https://images.unsplash.com/photo-1522335789203-aaa3e6c6a78e?auto=format&fit=crop&w=800&h=600&q=80",
-    href: "/case-studies/yuaia-haircare",
+    result: "Educational AI campaign delivered in 8 weeks",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&h=600&q=80",
+    href: "/case-studies/1",
   },
 ]
 

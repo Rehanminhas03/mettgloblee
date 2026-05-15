@@ -149,31 +149,6 @@ const blogPosts: Record<string, {
       "Combine organic and paid strategies for maximum reach. Use retargeting to capture warm leads and continuously test and optimize your campaigns.",
     ],
   },
-  "6": {
-    id: 6,
-    title: "Supply Chain Optimization: A Complete Guide",
-    category: "Business",
-    author: "Muhammad Ahmad Aamir",
-    authorImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80",
-    authorBio: "Supply Chain Specialist at Mett Global",
-    date: "Nov 8, 2025",
-    readTime: "9 min read",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&h=1080&q=80",
-    tags: ["Supply Chain", "Logistics", "Operations", "Efficiency"],
-    content: [
-      "An optimized supply chain can be your competitive advantage. Here's how to streamline operations and reduce costs while improving customer satisfaction.",
-      "## Demand Forecasting",
-      "Accurate demand forecasting prevents stockouts and overstock situations. Use historical data, market trends, and AI-powered tools for better predictions.",
-      "## Supplier Relationships",
-      "Build strong relationships with key suppliers. Consider dual-sourcing strategies to reduce risk and maintain negotiating leverage.",
-      "## Inventory Management",
-      "Implement just-in-time inventory where possible. Use ABC analysis to focus resources on high-value items and automate reorder points.",
-      "## Technology Integration",
-      "Invest in supply chain management software that provides real-time visibility. IoT sensors and blockchain technology can enhance traceability and transparency.",
-      "## Continuous Improvement",
-      "Regularly audit your supply chain processes. Identify bottlenecks, measure key metrics, and implement improvements iteratively.",
-    ],
-  },
 }
 
 export default function BlogPostPage() {

@@ -37,34 +37,36 @@ const team = [
     name: "Hammad Ayub",
     role: "Founder",
     bio: "Building Mett Global into an international software house with digital solutions worldwide.",
-    image: "/team/hammad.jpg.jpeg",
-  },
-  {
-    name: "Muhammad Junaid",
-    role: "Chief Executive Officer",
-    bio: "Leading the company's strategic vision and growth initiatives.",
-    image: "/team/junaid.png",
+    image: "/team/hammad.PNG",
   },
   {
     name: "Rehan Hussain Minhas",
+    role: "Chief Executive Officer (CEO)",
+    bio: "Sets the company's strategic direction and growth plan, combining a technical background with strategic financial planning.",
+    image: "/team/rehan.PNG",
+  },
+  {
+    name: "Ali Hassan",
     role: "Co-Founder & Managing Director",
-    bio: "Full-stack expertise combined with strategic financial planning, directing day-to-day operations.",
-    image: "/team/rehan.jpg.jpeg",
+    bio: "Runs day-to-day operations and our eCommerce and brand-side delivery, scaling brands globally on Amazon & eBay.",
+    image: "/team/ali.jpeg",
   },
   {
     name: "Muhammad Rafey",
     role: "Chairman & Head of Project Management",
     bio: "Full-stack engineer and cybersecurity specialist leading end-to-end delivery across engineering and security.",
-    image: "/team/rafey.jpg.jpeg",
+    image: "/team/rafey.jpeg",
   },
 ]
 
 const milestones = [
-  { year: "2020", event: "Founded as digital services agency" },
-  { year: "2021", event: "Expanded eCommerce services" },
-  { year: "2022", event: "Launched web development division" },
-  { year: "2023", event: "Added AI & automation services" },
-  { year: "2024", event: "Growing global client base" },
+  { year: "2020", event: "Founded as a digital services agency in Islamabad" },
+  { year: "2021", event: "Scaled Amazon & multi-channel eCommerce practice" },
+  { year: "2022", event: "Launched web development division with first enterprise clients" },
+  { year: "2023", event: "Added AI & automation and brought on cybersecurity specialists" },
+  { year: "2024", event: "Crossed 100+ delivered projects across 5 regions" },
+  { year: "2025", event: "Expanded leadership and onboarded automotive & enterprise clients" },
+  { year: "2026", event: "Scaling globally — new partnerships across UK, EU, and the Middle East" },
 ]
 
 export default function AboutPage() {

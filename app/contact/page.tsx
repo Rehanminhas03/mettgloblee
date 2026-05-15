@@ -414,10 +414,10 @@ export default function ContactPage() {
                       HA
                     </div>
                     <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-xs font-bold ring-2 ring-background">
-                      MJ
+                      RM
                     </div>
                     <div className="w-10 h-10 rounded-full bg-chart-3/20 flex items-center justify-center text-xs font-bold ring-2 ring-background">
-                      RM
+                      AH
                     </div>
                     <div className="w-10 h-10 rounded-full bg-chart-4/20 flex items-center justify-center text-xs font-bold ring-2 ring-background">
                       MR

@@ -128,7 +128,9 @@ export default function PrivacyPolicyPage() {
                 <p className="text-muted-foreground leading-relaxed">
                   If you have questions about this Privacy Policy, please contact us at:
                 </p>
-                <p className="text-primary mt-2">privacy@mettglobal.com</p>
+                <a href="mailto:minhasrehan96@gmail.com" className="text-primary mt-2 inline-block hover:underline">
+                  minhasrehan96@gmail.com
+                </a>
               </section>
             </div>
           </motion.div>
