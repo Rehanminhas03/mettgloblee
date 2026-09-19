@@ -164,6 +164,7 @@ nav .cta { background: var(--ink); color: #fff; padding: 13px 17px; border-radiu
 body { overflow-x: hidden; }
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 button, input, textarea { font: inherit; }
+.honey-field { display: none !important; }
 .booking-hero { padding: 72px 8vw 48px; max-width: 1180px; }
 .booking-hero h1 { font-size: clamp(52px,7.5vw,96px); line-height: .92; letter-spacing: -.065em; margin: 20px 0 26px; }
 .booking-hero h1 span { color: var(--gold); }
