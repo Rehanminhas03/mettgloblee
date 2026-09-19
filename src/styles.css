@@ -48,17 +48,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   transform: translate(-50%, -50%);
   z-index: 2;
 }
-.top-wa { display:flex; align-items:center; gap:8px; color:#fff; text-transform:none; letter-spacing:0; }
-.top-wa .wa-icon { width:22px; height:22px; }
-.top-wa b { font-size:10px; letter-spacing:.08em; text-transform:uppercase; }
-.top-wa strong { color:var(--gold2); font-size:11px; }
+.top-wa { width:30px; height:30px; display:grid; place-items:center; color:#fff; }
+.top-wa .wa-icon { width:24px; height:24px; }
 .topline {
   height: 36px;
   background: var(--black);
   color: #b8b3a8;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 0 var(--pad);
   font-size: 10px;
   letter-spacing: 0.18em;
