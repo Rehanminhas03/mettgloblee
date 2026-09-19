@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Navigate the complete public site and sitemap",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": ["homepage navigation", "services hub", "blog hub", "appointment page", "privacy page", "website terms", "skip navigation", "human-readable sitemap", "multi-page build output"],
+    "description": "Verifies the primary public routes and SEO sitemap index are deployable and connected.",
+    "steps": ["Open the homepage", "Open Services and use the keyboard skip link", "Open Blog", "Open Book a meeting", "Open Privacy and Terms from the footer or sitemap", "Open Sitemap from the homepage footer", "Open one service from Sitemap"],
+    "expected": "All destinations load as branded pages without AccessDenied, Privacy and Terms are reachable, and the sitemap exposes the current public page structure."
+  },
+  {
+    "name": "Complete the calendar-first meeting flow",
+    "viewport": "desktop",
+    "covers": ["calendar booking UI", "meeting-format chips", "duration chips", "topic chips", "date selection", "time-slot selection", "progressive details form", "Google Calendar hold", "ICS calendar export", "email-routed meeting request"],
+    "description": "Verifies visitors can choose a slot, continue to the compact details stage and place the tentative meeting on their own calendar.",
+    "steps": ["Open Book a meeting", "Choose a meeting format and duration", "Select a date", "Select a time", "Choose Continue", "Inspect Google Calendar and Apple / Outlook calendar actions"],
+    "expected": "The details stage appears with a Google Calendar link and ICS download for the selected tentative slot while final confirmation remains email-based."
+  },
+  {
+    "name": "Prevent continuation without a meeting slot",
+    "viewport": "mobile",
+    "covers": ["meeting scheduler guardrail", "disabled continue control", "responsive booking UI"],
+    "description": "Verifies visitors cannot reach the details stage before choosing both a date and a time.",
+    "steps": ["Open Book a meeting on mobile", "Do not select a date or time", "Inspect the Continue control", "Select a date but not a time"],
+    "expected": "Continue remains disabled until a time slot is selected, and the scheduler stays usable without horizontal overflow."
+  },
+  {
+    "name": "Review partners and Google review channel",
+    "viewport": "desktop",
+    "covers": ["balanced partner grid", "MyTrackee Pakistan", "Jetour Ittehad", "Google-only review channel", "official Google review link"],
+    "description": "Verifies the partner layout no longer crops names and the duplicate first-party review form has been removed.",
+    "steps": ["Open the homepage", "Navigate to Selected Service Partners", "Confirm all five partner cards are fully readable", "Navigate to Google Reviews", "Inspect the public review action"],
+    "expected": "Partners render in a balanced three-plus-two layout, no names are clipped, and reviews use only the official Google channel."
+  },
+  {
+    "name": "Check updated contact, founder and social details",
+    "viewport": "mobile",
+    "covers": ["contact actions", "contact@mettglobal.com", "founder email links", "Usman email link", "Facebook page link", "Instagram showcase removal", "meeting CTA", "FAQ accordion", "responsive homepage"],
+    "description": "Verifies the updated company contact details and founder emails are visible, the Facebook destination is current, and the removed Instagram showcase does not remain on the homepage.",
+    "steps": ["Open the homepage on mobile", "Navigate to Core Team and inspect Hammad, Ahmad and Usman email links", "Navigate to FAQ and Start a Conversation and inspect the contact email", "Open the Facebook social link and verify its destination", "Confirm there is no standalone Instagram showcase between Google Reviews and Global Delivery"],
+    "expected": "Hammad links to hammad@mettglobal.com, Ahmad links to ahmad@mettglobal.com, Usman links to usman@mettglobal.com, general contact and meeting references use contact@mettglobal.com, Facebook uses the new page link, and the standalone Instagram showcase is absent."
+  }
+]

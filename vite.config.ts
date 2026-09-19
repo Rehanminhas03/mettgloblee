@@ -1,0 +1,44 @@
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  base: './',
+  build: {
+    outDir: process.env.APPDEPLOY_VITE_OUT_DIR || 'dist',
+    sourcemap:
+      process.env.APPDEPLOY_VITE_SOURCEMAP === 'hidden' ? 'hidden' : false,
+    rollupOptions: {
+      maxParallelFileOps: 128,
+      input: [
+        'index.html',
+        'services.html',
+        'about.html',
+        'blog.html',
+        'contact.html',
+        'appointment.html',
+        'privacy.html',
+        'sitemap.html',
+        'ecommerce-growth.html',
+        'web-development.html',
+        'ai-automation.html',
+        'digital-marketing.html',
+        'operations-supply-chain.html',
+        'lead-generation-sales.html',
+        'ai-content-production.html',
+        'audits-diagnostics.html',
+        'insight-ecommerce-operations.html',
+        'insight-conversion-audit.html',
+        'insight-ai-automation.html',
+        'insight-growth-system.html',
+        'insight-supply-chain-control.html',
+        'insight-lead-generation-system.html',
+        'insight-ai-video-brief.html',
+        'insight-audit-framework.html',
+        'update-amazon-fba-fees-2026.html',
+        'update-eu-ai-act-transparency-2026.html',
+        'update-google-ads-consent-2026.html',
+        'update-eu-ics2-2026.html',
+        'update-google-search-2026.html',
+      ],
+    },
+  },
+});
