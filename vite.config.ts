@@ -11,7 +11,8 @@ export default defineConfig({
           const title = html.match(/<title>([^<]*)<\/title>/i)?.[1]?.trim() || 'MettGlobal';
           const description = html.match(/<meta\s+name=["']description["']\s+content=["']([^"']*)["']/i)?.[1]?.trim() ||
             'MettGlobal connects growth, eCommerce, technology and operations for ambitious businesses.';
-          const pagePath = ctx?.path && ctx.path !== '/index.html' ? ctx.path : '/';
+          const sourcePagePath = ctx?.path && ctx.path !== '/index.html' ? ctx.path : '/';
+          const pagePath = sourcePagePath.replace(/\.html$/, '');
           const pageUrl = `https://www.mettglobal.com${pagePath}`;
           const hasMeta = (pattern) => pattern.test(html);
           const metadata = [
@@ -55,7 +56,11 @@ export default defineConfig({
       }, true);
     </script>`;
 
-          const enrichedHtml = html
+          const cleanUrlHtml = html
+            .replace(/href=["'](?:\.\/)?index\.html["']/gi, 'href="/"')
+            .replace(/href=["'](?:\.\/)?([a-z0-9-]+)\.html["']/gi, 'href="/$1"')
+            .replace(/https:\/\/www\.mettglobal\.com\/([a-z0-9-]+)\.html/gi, 'https://www.mettglobal.com/$1');
+          const enrichedHtml = cleanUrlHtml
             .replace('</head>', `${metadata ? `\n    ${metadata}` : ''}${breadcrumb}\n  </head>`)
             .replace('</head>', `${html.includes('G-PCBE7G3NXQ') ? '' : `${googleAnalyticsTag}\n`}  </head>`);
           return enrichedHtml;
