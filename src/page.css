@@ -77,6 +77,11 @@ nav .cta { background: var(--ink); color: #fff; padding: 13px 17px; border-radiu
 .blog-art.sales { background: linear-gradient(150deg,#1b1811,#6e5220); }
 .blog-art.video { background: radial-gradient(circle at 50% 50%,rgba(223,186,100,.22),transparent 30%),#0a0a09; }
 .blog-art.audit { background: linear-gradient(135deg,#0d0d0c,#3b3120); }
+.blog-art.measurement { background: linear-gradient(145deg,#11110f 0 42%,#6f5421 42% 49%,#191710 49%); }
+.blog-art.catalog { background: radial-gradient(circle at 68% 30%,rgba(223,186,100,.3),transparent 20%),linear-gradient(145deg,#0b0b0a,#3b3223); }
+.blog-art.landed { background: linear-gradient(160deg,#dfba64 0 18%,#a8833c 18% 39%,#5e4a2b 39% 62%,#242018 62%); }
+.blog-art.scorecard { background: linear-gradient(135deg,#10100f,#51401f); }
+.blog-art.passport { background: radial-gradient(circle at 50% 48%,rgba(223,186,100,.35),transparent 17%),linear-gradient(145deg,#0b0b0a,#262117); }
 .blog-card .copy { padding: 26px; display: flex; flex-direction: column; flex: 1; }
 .blog-card small { color: var(--gold); font-size: 10px; font-weight: 900; letter-spacing: .14em; }
 .blog-card h2 { font-size: 25px; letter-spacing: -.04em; line-height: 1.08; }

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>UTMs That Survive Reporting | MettGlobal Blog</title>
+  <meta name="description" content="A practical UTM governance system for consistent campaign naming, cleaner reporting and fewer attribution surprises.">
+  <link rel="canonical" href="https://www.mettglobal.com/insight-utm-governance.html">
+  <link rel="stylesheet" href="./src/article.css">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <meta property="og:site_name" content="MettGlobal">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="UTMs That Survive Reporting">
+  <meta property="og:description" content="A practical UTM governance system for consistent campaign naming, cleaner reporting and fewer attribution surprises.">
+  <meta property="og:image" content="https://www.mettglobal.com/social-card.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.mettglobal.com/social-card.svg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"UTMs that survive reporting: a practical campaign naming system","datePublished":"2026-09-20","dateModified":"2026-09-20","author":{"@type":"Organization","name":"MettGlobal","url":"https://www.mettglobal.com/"},"publisher":{"@type":"Organization","name":"MettGlobal","url":"https://www.mettglobal.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mettglobal.com/insight-utm-governance.html"},"image":"https://www.mettglobal.com/social-card.svg"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header><a href="index.html"><b>Mett Global</b><small>The Art of Digital Excellence</small></a><nav><a href="blog.html">All Blog Guides</a><a href="appointment.html">Book a meeting</a></nav></header>
+  <main id="main-content">
+    <a class="back" href="blog.html">BLOG / MARKETING MEASUREMENT</a>
+    <h1>UTMs that survive reporting: a practical campaign naming system</h1>
+    <p class="dek">Attribution breaks quietly. One person types “Meta,” another types “facebook,” and a third leaves the campaign field blank. The ads still run, but the reporting starts telling several incompatible stories.</p>
+    <div class="meta">METTGLOBAL OPERATOR PLAYBOOK · CAMPAIGN MEASUREMENT · 8 MIN READ</div>
+    <div class="graphic data-graphic utm-graphic" role="img" aria-label="UTM naming architecture showing source, medium, campaign, content and term as separate reporting controls">
+      <div class="data-title"><span>CAMPAIGN URL</span><strong>One naming contract. Cleaner reporting.</strong></div>
+      <div class="utm-flow">
+        <div class="utm-field"><b>utm_source</b><strong>meta</strong><small>where traffic began</small></div>
+        <div class="utm-field"><b>utm_medium</b><strong>paid_social</strong><small>how it arrived</small></div>
+        <div class="utm-field accent"><b>utm_campaign</b><strong>ev3-isb-launch</strong><small>business initiative</small></div>
+        <div class="utm-field"><b>utm_content</b><strong>reel-01</strong><small>creative variation</small></div>
+        <div class="utm-field"><b>utm_term</b><strong>family-suv</strong><small>keyword or audience</small></div>
+      </div>
+    </div>
+    <article>
+      <h2>UTM tags are a data contract</h2>
+      <p>UTM parameters are not a substitute for analytics design, but they are a small and powerful contract between the person launching a campaign and the people reading the results. Google Analytics describes them as custom URL parameters that identify the campaigns and referrals sending traffic to a property. The operational implication is simple: the values need to be consistent enough to group together and specific enough to answer a decision.</p>
+      <p>Use <strong>source</strong> for the platform or referrer, <strong>medium</strong> for the channel type, and <strong>campaign</strong> for the business initiative. Add <strong>content</strong> when several ads share the same campaign and <strong>term</strong> when keyword or audience detail matters. Treat the extra fields as a controlled vocabulary, not as free-form notes.</p>
+
+      <h2>Choose a naming grammar before you need the report</h2>
+      <p>A useful grammar is short, lowercase and readable by someone who did not build the campaign. For example:</p>
+      <p><strong>utm_source=meta&amp;utm_medium=paid_social&amp;utm_campaign=ev3-isb-launch&amp;utm_content=reel-01</strong></p>
+      <p>The example carries four decisions: the source is Meta, the medium is paid social, the campaign is an Islamabad EV3 launch and the creative is the first reel. The exact vocabulary will vary by business. The important part is that the vocabulary is documented and reused.</p>
+      <ul>
+        <li>Pick one spelling for every source and medium. Keep values lowercase.</li>
+        <li>Use a predictable campaign pattern such as <em>offer-market-period</em>.</li>
+        <li>Keep creative labels stable enough to compare formats, hooks or variants.</li>
+        <li>Never put customer names, email addresses or other personal information in a URL parameter.</li>
+      </ul>
+
+      <h2>Build the control around the link, not around memory</h2>
+      <p>Most UTM errors happen before the URL reaches the ad platform. Give the team one campaign builder or spreadsheet with dropdowns for source and medium, a required campaign field, an owner, a launch date and the final destination URL. A generated URL should be reviewed like a small piece of production data: does the destination load, does the naming match the brief, and will the value appear in the intended report?</p>
+      <p>Keep a short dictionary beside the builder. Define whether “paid_social” or “paid-social” is valid, whether market is encoded as “pk” or “pakistan,” and which campaign components are mandatory. Google notes that UTM values are case-sensitive, so inconsistent capitalization can split what looks like one campaign into multiple rows.</p>
+
+      <h2>Audit the report for three failure modes</h2>
+      <p><strong>Unclassified traffic:</strong> a required parameter is missing and the report shows “(not set).” <strong>Fragmented traffic:</strong> capitalization or spelling creates several buckets for one channel. <strong>Misleading detail:</strong> a campaign name changes halfway through the flight, so the trend looks like performance changed when only the label changed.</p>
+      <p>Run a weekly exception report for missing source, missing medium, new values and sudden volume from an unexpected value. Assign a person to close the exceptions. Governance only works when somebody owns the cleanup loop.</p>
+
+      <h2>A 30-minute rollout</h2>
+      <ol>
+        <li>List the channels, markets and campaign types the business actually uses.</li>
+        <li>Approve a small vocabulary and write two or three valid examples.</li>
+        <li>Put those choices into a controlled builder with an owner and review date.</li>
+        <li>Update dashboard filters so the new values map to the decisions leadership makes.</li>
+        <li>Review the first week of links and fix the process, not just the individual URL.</li>
+      </ol>
+      <blockquote>Clean attribution is not a reporting trick. It is the trail that connects a campaign decision to a business outcome.</blockquote>
+      <section class="source-box">
+        <small>PRIMARY SOURCE</small>
+        <a href="https://support.google.com/analytics/answer/10917952?hl=en" target="_blank" rel="noopener">Google Analytics: URL builders and custom campaign URLs</a>
+        <p>Google’s guidance covers the standard UTM parameters, consistent naming, case sensitivity and the Campaign URL Builder. Platform interfaces and reporting rules can change, so verify the current documentation before changing a live measurement setup.</p>
+      </section>
+    </article>
+    <section class="end"><b>Need a measurement system that the team can trust?</b><a href="digital-marketing.html">Explore digital marketing</a></section>
+  </main>
+  <footer>© MettGlobal · Practical thinking for digital businesses</footer>
+</body>
+</html>

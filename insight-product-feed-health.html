@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The Product Feed Is Part of the Storefront | MettGlobal Blog</title>
+  <meta name="description" content="A practical Merchant Center product-feed health check for stable IDs, accurate titles, strong images, price parity and better eligibility.">
+  <link rel="canonical" href="https://www.mettglobal.com/insight-product-feed-health.html">
+  <link rel="stylesheet" href="./src/article.css">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <meta property="og:site_name" content="MettGlobal">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Product Feed Is Part of the Storefront">
+  <meta property="og:description" content="A practical Merchant Center product-feed health check for stable IDs, accurate titles, strong images, price parity and better eligibility.">
+  <meta property="og:image" content="https://www.mettglobal.com/social-card.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.mettglobal.com/social-card.svg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"The product feed is part of the storefront: a practical Merchant Center health check","datePublished":"2026-09-20","dateModified":"2026-09-20","author":{"@type":"Organization","name":"MettGlobal","url":"https://www.mettglobal.com/"},"publisher":{"@type":"Organization","name":"MettGlobal","url":"https://www.mettglobal.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mettglobal.com/insight-product-feed-health.html"},"image":"https://www.mettglobal.com/social-card.svg"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header><a href="index.html"><b>Mett Global</b><small>The Art of Digital Excellence</small></a><nav><a href="blog.html">All Blog Guides</a><a href="appointment.html">Book a meeting</a></nav></header>
+  <main id="main-content">
+    <a class="back" href="blog.html">BLOG / COMMERCE SYSTEMS</a>
+    <h1>The product feed is part of the storefront: a Merchant Center health check</h1>
+    <p class="dek">A shopper may never see the feed, but the feed decides how a product can be discovered, classified and displayed. When catalog data disagrees with the landing page, growth becomes an eligibility problem before it becomes a creative problem.</p>
+    <div class="meta">METTGLOBAL OPERATOR PLAYBOOK · PRODUCT DATA QUALITY · 9 MIN READ</div>
+    <div class="graphic data-graphic feed-graphic" role="img" aria-label="Five product feed control points: stable identity, truthful title, product-only description, crawlable image, and price and availability parity">
+      <div class="data-title"><span>FEED HEALTH / FIVE CONTROL POINTS</span><strong>Eligibility is a data-quality problem.</strong></div>
+      <div class="feed-grid">
+        <div class="feed-cell"><i>01</i><b>Stable ID</b><span>SKU or variant key</span></div>
+        <div class="feed-cell accent"><i>02</i><b>Truthful title</b><span>matches the landing page</span></div>
+        <div class="feed-cell"><i>03</i><b>Clear description</b><span>product facts only</span></div>
+        <div class="feed-cell"><i>04</i><b>Useful image</b><span>crawlable main asset</span></div>
+        <div class="feed-cell"><i>05</i><b>Price + stock</b><span>same at every checkpoint</span></div>
+      </div>
+    </div>
+    <article>
+      <h2>Think of the feed as a product data layer</h2>
+      <p>Google’s Merchant Center product data specification describes accurate, correctly formatted product data as essential for ads and free listings. Missing or incorrect information can lead to disapprovals, limited eligibility or a product being displayed incorrectly. That makes the feed part of the storefront architecture, not a one-time marketing upload.</p>
+      <p>The fastest way to improve it is to trace one SKU from the master catalog to the feed, the product page, structured data and checkout. If the title, variant, price or availability changes between those checkpoints, the customer and the platform are receiving different versions of the same product.</p>
+
+      <h2>Start with identity and variants</h2>
+      <p>A product ID should be unique and stable. Use the SKU where it is the durable business key, and do not recycle an ID for a completely different product. For variants, preserve the relationship between the parent item and the variant attributes such as size, color or pack count. A stable identity makes it possible to diagnose history instead of treating every feed refresh as a new object.</p>
+      <p>Make the title specific without turning it into ad copy. The title should match what appears on the landing page and include the feature that distinguishes a variant. Keep promotional language, discount claims and gimmicky punctuation out of the product title; put the offer in the appropriate promotion or pricing field instead.</p>
+
+      <h2>Quality-check the visible fields</h2>
+      <ul>
+        <li><strong>Description:</strong> describe the product itself, in language that agrees with the product page. Remove links, unrelated products and promotional slogans.</li>
+        <li><strong>Main image:</strong> use a crawlable, high-quality image that represents the product. Avoid placeholders, watermarks, borders and images that have been scaled up beyond their source quality.</li>
+        <li><strong>Link:</strong> send the shopper to a verified, working product URL over HTTP or HTTPS. Do not route a variant to a generic category page.</li>
+        <li><strong>Price and availability:</strong> reconcile the feed, landing page, checkout and structured data. A product that says “in stock” in one place and “unavailable” in another creates both trust and eligibility risk.</li>
+      </ul>
+
+      <h2>Run a feed health loop, not a monthly scramble</h2>
+      <p>Divide issues into three queues. <strong>Blocking</strong> issues affect eligibility or checkout truth, such as missing IDs, broken links or price mismatch. <strong>Quality</strong> issues reduce clarity, such as weak titles, thin descriptions or poor images. <strong>Enhancement</strong> issues improve discovery, such as richer attributes or better variant grouping.</p>
+      <p>Give each queue an owner and a freshness target. A price or availability mismatch should be investigated the same day; a title or image improvement can sit in a planned catalog sprint. Record the first detected date, affected SKU count, root cause and verification result so the team can see whether the system is getting healthier.</p>
+
+      <h2>The five-minute SKU trace</h2>
+      <p>Pick the product with the highest commercial importance and ask five questions: Is the ID stable? Does the title match the page? Does the image represent the exact item? Do price and stock agree across feed, page and checkout? If a customer saw only the feed content, would they understand what they are buying?</p>
+      <p>If the answer is no, fix the source-of-truth workflow before adding more ad spend. A feed that is accurate, complete and refreshed on time gives every downstream channel a better starting point.</p>
+      <blockquote>A catalog is not clean because it exported successfully. It is clean when the product record tells the same truth everywhere a customer or platform can see it.</blockquote>
+      <section class="source-box">
+        <small>PRIMARY SOURCE</small>
+        <a href="https://support.google.com/merchants/answer/7052112?hl=en" target="_blank" rel="noopener">Google Merchant Center: product data specification</a>
+        <p>The specification covers IDs, titles, descriptions, links, images, price and availability, plus common causes of disapprovals and limited eligibility. Requirements vary by destination and product category; confirm the current specification before changing a production feed.</p>
+      </section>
+    </article>
+    <section class="end"><b>Need a stronger commerce foundation?</b><a href="ecommerce-growth.html">Explore eCommerce growth</a></section>
+  </main>
+  <footer>© MettGlobal · Practical thinking for digital businesses</footer>
+</body>
+</html>
