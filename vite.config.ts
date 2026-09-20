@@ -78,6 +78,7 @@ export default defineConfig({
         'contact.html',
         'appointment.html',
         'privacy.html',
+        'terms.html',
         'sitemap.html',
         'case-studies.html',
         'case-study-jetour-ittehad.html',
