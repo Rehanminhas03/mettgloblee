@@ -7,8 +7,32 @@ export default defineConfig({
       name: 'google-analytics',
       transformIndexHtml: {
         order: 'post',
-        handler(html) {
+        handler(html, ctx) {
+          const title = html.match(/<title>([^<]*)<\/title>/i)?.[1]?.trim() || 'MettGlobal';
+          const description = html.match(/<meta\s+name=["']description["']\s+content=["']([^"']*)["']/i)?.[1]?.trim() ||
+            'MettGlobal connects growth, eCommerce, technology and operations for ambitious businesses.';
+          const pagePath = ctx?.path && ctx.path !== '/index.html' ? ctx.path : '/';
+          const pageUrl = `https://www.mettglobal.com${pagePath}`;
+          const hasMeta = (pattern) => pattern.test(html);
+          const metadata = [
+            !hasMeta(/property=["']og:title["']/i) && `<meta property="og:title" content="${title.replace(/"/g, '&quot;')}">`,
+            !hasMeta(/property=["']og:description["']/i) && `<meta property="og:description" content="${description.replace(/"/g, '&quot;')}">`,
+            !hasMeta(/property=["']og:url["']/i) && `<meta property="og:url" content="${pageUrl}">`,
+            !hasMeta(/name=["']twitter:title["']/i) && `<meta name="twitter:title" content="${title.replace(/"/g, '&quot;')}">`,
+            !hasMeta(/name=["']twitter:description["']/i) && `<meta name="twitter:description" content="${description.replace(/"/g, '&quot;')}">`,
+          ].filter(Boolean).join('\n    ');
+          const breadcrumbLabel = pagePath === '/' ? 'Home' : title.split('|')[0].split(' | ')[0].trim();
+          const breadcrumb = pagePath === '/' ? '' : `
+    <script type="application/ld+json">${JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.mettglobal.com/' },
+        { '@type': 'ListItem', position: 2, name: breadcrumbLabel, item: pageUrl },
+      ],
+    })}</script>`;
           const googleAnalyticsTag = `
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCBE7G3NXQ"></script>
     <script>
@@ -16,11 +40,25 @@ export default defineConfig({
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-PCBE7G3NXQ');
+      document.addEventListener('click', function(event) {
+        const link = event.target.closest('a');
+        if (!link || typeof gtag !== 'function') return;
+        const href = link.href || '';
+        const eventName = href.includes('wa.me') ? 'whatsapp_click' :
+          href.startsWith('tel:') ? 'phone_click' :
+          href.startsWith('mailto:') ? 'email_click' :
+          href.includes('appointment.html') ? 'booking_click' : null;
+        if (eventName) gtag('event', eventName, { link_url: href, page_location: location.href });
+      });
+      document.addEventListener('submit', function(event) {
+        if (typeof gtag === 'function') gtag('event', 'form_submit', { form_id: event.target.id || 'website_form', page_location: location.href });
+      }, true);
     </script>`;
 
-          return html.includes('G-PCBE7G3NXQ')
-            ? html
-            : html.replace('</head>', `${googleAnalyticsTag}\n  </head>`);
+          const enrichedHtml = html
+            .replace('</head>', `${metadata ? `\n    ${metadata}` : ''}${breadcrumb}\n  </head>`)
+            .replace('</head>', `${html.includes('G-PCBE7G3NXQ') ? '' : `${googleAnalyticsTag}\n`}  </head>`);
+          return enrichedHtml;
         },
       },
     },
@@ -32,6 +70,7 @@ export default defineConfig({
     rollupOptions: {
       maxParallelFileOps: 128,
       input: [
+        '404.html',
         'index.html',
         'services.html',
         'about.html',
