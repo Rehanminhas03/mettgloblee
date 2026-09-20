@@ -1,19 +1,12 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found | MettGlobal</title>
-    <meta name="description" content="The requested MettGlobal page could not be found. Return to the homepage or explore our services and case studies.">
-    <link rel="stylesheet" href="./src/page.css">
-    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header><a class="brand" href="index.html"><i class="mark"></i><span><strong>Mett Global</strong><small>The Art of Digital Excellence</small></span></a><nav><a href="services.html">Services</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a class="cta" href="contact.html">Contact</a></nav></header>
-    <main id="main-content">
-      <section class="hero"><span class="kicker">404 / PAGE NOT FOUND</span><h1>This page took<br><span>a wrong turn.</span></h1><p>The link may be outdated or the page may have moved. Start again from the homepage or explore the work below.</p><p><a class="btn dark" href="index.html">Return home</a> <a class="btn" href="case-studies.html">View case studies</a></p></section>
-    </main>
-    <footer class="footer"><span>© MettGlobal</span><nav><a href="index.html">Home</a><a href="services.html">Services</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav></footer>
-  </body>
-</html>
+[eval]:1
+process.stdout.write(require('fs').readFileSync(404.html,'utf8'))
+                                                ^^^^
+Identifier cannot follow number
+
+SyntaxError: Invalid or unexpected token
+    at makeContextifyScript (node:internal/vm:194:14)
+    at compileScript (node:internal/process/execution:388:10)
+    at evalTypeScript (node:internal/process/execution:260:22)
+    at node:internal/main/eval_string:71:3
+
+Node.js v24.19.0
