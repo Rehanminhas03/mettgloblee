@@ -76,7 +76,6 @@ h1 { font-size: clamp(46px,7vw,88px); line-height: .96; letter-spacing: -.065em;
 .passport-node { min-height: 110px; padding: 16px 13px; border: 1px solid #413b30; background: rgba(255,255,255,.03); display: flex; flex-direction: column; justify-content: space-between; }
 .passport-node b { color: var(--gold2); font-size: 9px; letter-spacing: .1em; }
 .passport-node span { color: #aaa69d; font-size: 13px; line-height: 1.25; }
-.passport-node::after { content: '→'; color: var(--gold); font-size: 20px; align-self: flex-end; }
 article { max-width: 760px; margin: auto; }
 article h2 { font-size: 34px; letter-spacing: -.045em; margin: 55px 0 14px; }
 article p, article li { font-size: 17px; line-height: 1.85; color: #514d46; }
