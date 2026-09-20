@@ -311,7 +311,7 @@ button, input, textarea { font: inherit; }
 .pipeline-row b { text-align:right; color:#fff; font-size:10px; }
 .case-data-note { margin:18px 0 0; color:#8f8a81; font-size:10px; line-height:1.65; }
 
-.workflow { display:grid; grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr; gap:12px; align-items:center; }
+.workflow { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; align-items:center; }
 .workflow > div { min-height:130px; border:1px solid var(--line); border-radius:20px; padding:20px; background:#fff; display:flex; flex-direction:column; justify-content:space-between; }
 .workflow > div b { color:var(--gold); font-size:11px; } .workflow > div span { font-weight:900; line-height:1.35; }
 .workflow > i { color:var(--gold); font-style:normal; font-size:20px; }
