@@ -2,6 +2,29 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   base: './',
+  plugins: [
+    {
+      name: 'google-analytics',
+      transformIndexHtml: {
+        order: 'post',
+        handler(html) {
+          const googleAnalyticsTag = `
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCBE7G3NXQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PCBE7G3NXQ');
+    </script>`;
+
+          return html.includes('G-PCBE7G3NXQ')
+            ? html
+            : html.replace('</head>', `${googleAnalyticsTag}\\n  </head>`);
+        },
+      },
+    },
+  ],
   build: {
     outDir: process.env.APPDEPLOY_VITE_OUT_DIR || 'dist',
     sourcemap:
