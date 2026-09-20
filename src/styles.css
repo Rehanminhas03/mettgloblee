@@ -1628,3 +1628,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .case-studies-all strong { font-size:13px; } .case-studies-all span { color:var(--muted); font-size:12px; }
 @media (max-width:900px){ .case-studies-head,.case-home-grid{grid-template-columns:1fr}.case-home-card{min-height:430px}.case-studies-all{align-items:flex-start;flex-direction:column}.nav nav{gap:20px} }
 @media (max-width:620px){ .case-studies-home{padding:78px 24px}.case-home-card{padding:26px;border-radius:24px}.case-home-metrics{grid-template-columns:1fr 1fr}.case-home-metrics div:last-child{grid-column:1/-1}.case-home-brand{margin-top:50px} }
+
+/* Three-case homepage layout */
+.case-home-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.case-home-card { min-height:470px; }
+.case-home-card h3 { font-size:clamp(27px,2.4vw,43px); }
+.csm-case { background:linear-gradient(145deg,#f7f1e5,#fff); color:var(--ink); }
+.csm-case .case-home-top,.csm-case p,.csm-case .case-home-metrics small { color:var(--muted); }
+.csm-case .case-home-brand,.csm-case .case-home-metrics strong { color:var(--gold); }
+@media (max-width:1100px){ .case-home-grid{grid-template-columns:1fr 1fr}.csm-case{grid-column:1/-1;min-height:400px} }
+@media (max-width:900px){ .case-home-grid{grid-template-columns:1fr}.csm-case{grid-column:auto} }
