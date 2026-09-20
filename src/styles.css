@@ -1592,3 +1592,39 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     height: 28px;
   }
 }
+
+
+/* Case studies — homepage proof section */
+.case-studies-home { padding: 105px var(--pad); background: linear-gradient(180deg,#f6f1e7 0%,#fbfaf6 100%); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.case-studies-head { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr); gap:54px; align-items:end; margin:32px 0 38px; }
+.case-studies-head h2 { margin:7px 0 0; font-size:clamp(44px,6vw,86px); line-height:.94; letter-spacing:-.065em; }
+.case-studies-head h2 span { color:var(--gold); }
+.case-studies-head p { margin:0; color:var(--muted); line-height:1.75; max-width:620px; }
+.proof-kicker { display:block; color:var(--gold); font-size:9px; font-weight:900; letter-spacing:.18em; }
+.case-home-grid { display:grid; grid-template-columns:1.08fr .92fr; gap:18px; }
+.case-home-card { min-height:480px; border:1px solid var(--line); border-radius:30px; padding:34px; display:flex; flex-direction:column; position:relative; overflow:hidden; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.case-home-card:hover { transform:translateY(-5px); box-shadow:0 28px 70px rgba(38,29,13,.12); border-color:#c8af7e; }
+.case-home-card::after { content:''; position:absolute; width:280px; height:280px; border:1px solid rgba(184,137,45,.24); border-radius:50%; right:-120px; top:-100px; box-shadow:0 0 0 48px rgba(184,137,45,.035); }
+.case-home-card.jetour-case { background:#11110f; color:#fff; border-color:#26231e; }
+.case-home-card.hyundai-case { background:#fff; color:var(--ink); }
+.case-home-top { display:flex; justify-content:space-between; align-items:center; position:relative; z-index:1; font-size:9px; font-weight:900; letter-spacing:.15em; }
+.jetour-case .case-home-top { color:#bdb6a9; } .hyundai-case .case-home-top { color:var(--muted); }
+.case-home-top b { width:36px; height:36px; border:1px solid currentColor; border-radius:50%; display:grid; place-items:center; font-size:10px; }
+.case-home-brand { margin-top:72px; color:var(--gold2); font-size:12px; font-weight:900; letter-spacing:.18em; position:relative; z-index:1; }
+.hyundai-case .case-home-brand { color:var(--gold); }
+.case-home-card h3 { margin:14px 0 12px; max-width:700px; font-size:clamp(30px,3.2vw,52px); line-height:1; letter-spacing:-.055em; position:relative; z-index:1; }
+.case-home-card p { margin:0; max-width:680px; line-height:1.7; position:relative; z-index:1; }
+.jetour-case p { color:#b9b4aa; } .hyundai-case p { color:var(--muted); }
+.case-home-metrics { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:auto; padding-top:36px; position:relative; z-index:1; }
+.case-home-metrics div { border-top:1px solid rgba(184,137,45,.34); padding-top:14px; }
+.case-home-metrics strong { display:block; font-size:30px; line-height:1; letter-spacing:-.04em; color:var(--gold2); }
+.hyundai-case .case-home-metrics strong { color:var(--gold); }
+.case-home-metrics small { display:block; margin-top:6px; font-size:9px; text-transform:uppercase; letter-spacing:.11em; }
+.jetour-case .case-home-metrics small { color:#aaa59b; } .hyundai-case .case-home-metrics small { color:var(--muted); }
+.case-link { margin-top:24px; font-size:11px; font-weight:900; letter-spacing:.05em; position:relative; z-index:1; }
+.case-link i { color:var(--gold2); font-style:normal; margin-left:5px; }
+.case-studies-all { margin-top:18px; border:1px solid var(--line); border-radius:22px; padding:22px 24px; display:flex; justify-content:space-between; gap:24px; align-items:center; background:rgba(255,255,255,.6); }
+.case-studies-all div { display:flex; gap:10px; flex-wrap:wrap; align-items:baseline; }
+.case-studies-all strong { font-size:13px; } .case-studies-all span { color:var(--muted); font-size:12px; }
+@media (max-width:900px){ .case-studies-head,.case-home-grid{grid-template-columns:1fr}.case-home-card{min-height:430px}.case-studies-all{align-items:flex-start;flex-direction:column}.nav nav{gap:20px} }
+@media (max-width:620px){ .case-studies-home{padding:78px 24px}.case-home-card{padding:26px;border-radius:24px}.case-home-metrics{grid-template-columns:1fr 1fr}.case-home-metrics div:last-child{grid-column:1/-1}.case-home-brand{margin-top:50px} }
