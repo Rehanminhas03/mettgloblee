@@ -84,12 +84,13 @@ export default defineConfig({
     <script>
       window.dataLayer = window.dataLayer || [];
       window.mettAnalyticsReady = false;
-      window.mettLoadAnalytics = function() {
+      window.mettLoadAnalytics = function(grantAnalytics) {
         if (window.mettAnalyticsReady) return;
         window.mettAnalyticsReady = true;
         window.gtag = window.gtag || function(){dataLayer.push(arguments);};
         gtag('js', new Date());
         gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', wait_for_update: 500 });
+        if (grantAnalytics) gtag('consent', 'update', { analytics_storage: 'granted' });
         gtag('config', 'G-PCBE7G3NXQ');
         const script = document.createElement('script');
         script.async = true;
@@ -97,7 +98,7 @@ export default defineConfig({
         document.head.appendChild(script);
       };
       try {
-        if (localStorage.getItem('mett_cookie_consent') === 'accepted') window.mettLoadAnalytics();
+        if (localStorage.getItem('mett_cookie_consent') === 'accepted') window.mettLoadAnalytics(true);
       } catch (error) {}
       document.addEventListener('click', function(event) {
         const link = event.target instanceof Element ? event.target.closest('a') : null;
@@ -106,7 +107,7 @@ export default defineConfig({
         const eventName = href.includes('wa.me') ? 'whatsapp_click' :
           href.startsWith('tel:') ? 'phone_click' :
           href.startsWith('mailto:') ? 'email_click' :
-          /\/appointment(?:\.html)?(?:[/?#]|$)/.test(href) ? 'booking_click' : null;
+          href.includes('/appointment') ? 'booking_click' : null;
         if (eventName) gtag('event', eventName, { link_url: href, page_location: location.href });
       });
       document.addEventListener('submit', function(event) {
@@ -169,8 +170,7 @@ export default defineConfig({
         if (!choice) banner.hidden = false;
         banner.querySelector('[data-consent="accept"]').addEventListener('click', function() {
           try { localStorage.setItem('mett_cookie_consent', 'accepted'); } catch (error) {}
-          if (typeof window.mettLoadAnalytics === 'function') window.mettLoadAnalytics();
-          if (typeof gtag === 'function') gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
+          if (typeof window.mettLoadAnalytics === 'function') window.mettLoadAnalytics(true);
           banner.hidden = true;
         });
         banner.querySelector('[data-consent="decline"]').addEventListener('click', function() {
@@ -184,6 +184,8 @@ export default defineConfig({
             .replace(/href=["'](?:\.\/)?index\.html["']/gi, 'href="/"')
             .replace(/href=["'](?:\.\/)?([a-z0-9-]+)\.html["']/gi, 'href="/$1"')
             .replace(/https:\/\/www\.mettglobal\.com\/([a-z0-9-]+)\.html/gi, 'https://www.mettglobal.com/$1')
+            .replace(/<link\s+rel=["']icon["'][^>]*>/i, '<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">\n    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">\n    <link rel="manifest" href="/site.webmanifest">')
+            .replace(/https:\/\/www\.mettglobal\.com\/social-card\.svg/gi, 'https://www.mettglobal.com/social-card.png')
             .replace(/<title>[^<]*<\/title>/i, `<title>${pageTitle}</title>`)
             .replace(/(<meta\s+name=["']description["']\s+content=["'])[^"']*(["'])/i, `$1${pageDescription.replace(/&/g, '&amp;').replace(/"/g, '&quot;')}$2`)
             .replace(/<meta\s+property=["']og:title["']\s+content=["'][^"']*["']\s*\/?>(?=\s|<)/i, `<meta property="og:title" content="${pageTitle.replace(/&/g, '&amp;').replace(/"/g, '&quot;')}">`)
