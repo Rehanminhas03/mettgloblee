@@ -20,7 +20,7 @@ export default defineConfig({
 
           return html.includes('G-PCBE7G3NXQ')
             ? html
-            : html.replace('</head>', `${googleAnalyticsTag}\\n  </head>`);
+            : html.replace('</head>', `${googleAnalyticsTag}\n  </head>`);
         },
       },
     },
