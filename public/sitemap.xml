@@ -1,15 +1,42 @@
-[eval]:1
-process.stdout.write(require('fs').readFileSync(public/sitemap.xml,'utf8'))
-                                                ^
-
-ReferenceError: public is not defined
-    at [eval]:1:49
-    at runScriptInThisContext (node:internal/vm:219:10)
-    at node:internal/process/execution:451:12
-    at [eval]-wrapper:6:24
-    at runScriptInContext (node:internal/process/execution:449:60)
-    at evalFunction (node:internal/process/execution:283:30)
-    at evalTypeScript (node:internal/process/execution:295:3)
-    at node:internal/main/eval_string:71:3
-
-Node.js v24.19.0
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.mettglobal.com/</loc><lastmod>2026-09-17</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.mettglobal.com/services</loc><lastmod>2026-09-17</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.mettglobal.com/case-studies</loc><lastmod>2026-09-20</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.mettglobal.com/case-study-jetour-ittehad</loc><lastmod>2026-09-20</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/case-study-hyundai-islamabad</loc><lastmod>2026-09-20</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/case-study-csm-ittehad</loc><lastmod>2026-09-20</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/about</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/blog</loc><lastmod>2026-09-20</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.mettglobal.com/contact</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/appointment</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/sitemap</loc><lastmod>2026-09-17</lastmod><priority>0.4</priority></url>
+  <url><loc>https://www.mettglobal.com/privacy</loc><lastmod>2026-09-20</lastmod><priority>0.3</priority></url>
+  <url><loc>https://www.mettglobal.com/terms</loc><lastmod>2026-09-20</lastmod><priority>0.3</priority></url>
+  <url><loc>https://www.mettglobal.com/ecommerce-growth</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/web-development</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/ai-automation</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/digital-marketing</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/operations-supply-chain</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/lead-generation-sales</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/ai-content-production</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/audits-diagnostics</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/update-amazon-fba-fees-2026</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/update-eu-ai-act-transparency-2026</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/update-google-ads-consent-2026</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/update-eu-ics2-2026</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/update-google-search-2026</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.mettglobal.com/insight-ecommerce-operations</loc><lastmod>2026-09-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.mettglobal.com/insight-conversion-audit</loc><lastmod>2026-09-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.mettglobal.com/insight-ai-automation</loc><lastmod>2026-09-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.mettglobal.com/insight-growth-system</loc><lastmod>2026-09-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.mettglobal.com/insight-supply-chain-control</loc><lastmod>2026-09-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.mettglobal.com/insight-lead-generation-system</loc><lastmod>2026-09-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.mettglobal.com/insight-ai-video-brief</loc><lastmod>2026-09-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.mettglobal.com/insight-audit-framework</loc><lastmod>2026-09-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.mettglobal.com/insight-utm-governance</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.mettglobal.com/insight-product-feed-health</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.mettglobal.com/insight-landed-cost-model</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.mettglobal.com/insight-3pl-scorecard</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.mettglobal.com/insight-digital-product-passport</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
+</urlset>
