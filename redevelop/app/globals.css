@@ -1,0 +1,143 @@
+@import 'tailwindcss';
+
+/*
+  Design tokens ported 1:1 from the original stylesheets.
+  - `styles.css`  -> homepage palette (gold / gold2 / ink / paper ...)
+  - `page.css`    -> standard page palette (p-*)
+  - `article.css` -> insight & update article palette (a-*, shares p-gold / p-ink)
+*/
+@theme {
+  /* ---- Homepage palette (src/styles.css :root) ---- */
+  --color-black: #090908;
+  --color-ink: #121210;
+  --color-cream: #f3f0e8;
+  --color-paper: #fbfaf6;
+  --color-gold: #b8892d;
+  --color-gold2: #e0bc68;
+  --color-muted: #777268;
+  --color-line: #dcd5c8;
+
+  /* ---- Standard page palette (src/page.css :root) ---- */
+  --color-p-paper: #f4efe5;
+  --color-p-ink: #11110f;
+  --color-p-gold: #c9982c;
+  --color-p-gold2: #dfba64;
+  --color-p-muted: #69645c;
+  --color-p-line: #d8cfbf;
+  --color-p-dark: #090908;
+
+  /* ---- Article palette (src/article.css :root) ---- */
+  --color-a-ivory: #f5f0e6;
+  --color-a-muted: #6d685f;
+  --color-a-line: #d9d0c0;
+
+  /* ---- Typography ---- */
+  --font-sans: Inter, Arial, Helvetica, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-dm: 'DM Sans', sans-serif;
+
+  /* ---- Section gutter: `--pad: clamp(24px, 5vw, 78px)` ---- */
+  --spacing-pad: clamp(24px, 5vw, 78px);
+  --spacing-casepad: max(24px, 6vw);
+
+  /*
+    Breakpoints are declared one pixel above the original `max-width` values so
+    that Tailwind's `max-*` variants (`width < N`) reproduce the source
+    `@media (max-width: N)` queries exactly.
+  */
+  --breakpoint-b430: 431px;
+  --breakpoint-b480: 481px;
+  --breakpoint-b560: 561px;
+  --breakpoint-b620: 621px;
+  --breakpoint-b650: 651px;
+  --breakpoint-b700: 701px;
+  --breakpoint-b760: 761px;
+  --breakpoint-b900: 901px;
+  --breakpoint-b1000: 1001px;
+  --breakpoint-b1050: 1051px;
+  --breakpoint-b1100: 1101px;
+  --breakpoint-b1120: 1121px;
+
+  /* ---- Animations ---- */
+  --animate-spin-ring: spin 22s linear infinite;
+  --animate-spin-ring-rev: spin 16s linear infinite reverse;
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-ticker: ticker 26s linear infinite;
+  --animate-signal: signalPulse 3.2s ease-in-out infinite;
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes float {
+    50% {
+      transform: translateY(-16px) rotate(1deg);
+    }
+  }
+  @keyframes ticker {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes signalPulse {
+    0%,
+    100% {
+      transform: scaleY(0.75);
+      opacity: 0.55;
+    }
+    50% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+}
+
+/*
+  The only non-utility rules in the project. Tailwind cannot express these:
+  document-level defaults, the `prefers-reduced-motion` blanket reset and the
+  native `<summary>` marker removal.
+*/
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /*
+    Document-level focus ring. The homepage stylesheet used `--gold2` and the
+    page/article stylesheets used `--gold`, so the surface decides the colour.
+  */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible {
+    outline: 3px solid var(--color-gold2);
+    outline-offset: 3px;
+  }
+
+  [data-surface='page']
+    :is(a, button, input, select, textarea, summary):focus-visible,
+  [data-surface='article']
+    :is(a, button, input, select, textarea, summary):focus-visible {
+    outline-color: var(--color-p-gold);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
