@@ -52,8 +52,8 @@ export default function SupplyChainControlGuide() {
         />
       }
       endHeading={'Need the inventory-control layer reviewed?'}
-      endHref={'/operations-supply-chain'}
-      endLabel={'Explore supply chain support'}
+      endHref={'/ecommerce-supply-chain'}
+      endLabel={'Explore eCommerce & supply chain'}
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

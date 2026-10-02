@@ -128,8 +128,8 @@ export default function ProductFeedHealthGuide() {
       meta="METTGLOBAL OPERATOR PLAYBOOK · PRODUCT DATA QUALITY · 9 MIN READ"
       graphic={<FeedGraphic cells={CELLS} />}
       endHeading="Need a stronger commerce foundation?"
-      endHref="/ecommerce-growth"
-      endLabel="Explore eCommerce growth"
+      endHref="/ecommerce-supply-chain"
+      endLabel="Explore eCommerce & supply chain"
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

@@ -14,7 +14,7 @@ export function ContactBand({
 }) {
   return (
     <section className="max-b620:px-6 bg-[linear-gradient(135deg,#c89528,#e1bc67)] px-[8vw] py-[90px]">
-      <h2 className="mt-0 mb-6 text-[clamp(42px,6vw,82px)] leading-[.95] tracking-[-.06em]">
+      <h2 className="mt-0 mb-6 text-[clamp(34px,4.2vw,58px)] leading-[1.02] tracking-[-.045em]">
         {heading}
       </h2>
       <p className="my-[1em] max-w-[700px] leading-[1.7]">{copy}</p>

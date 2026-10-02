@@ -1,15 +1,9 @@
+import { SERVICES } from '@/lib/services';
 import { FORM_ENDPOINT, FORM_SUCCESS_URL } from '@/lib/site';
 
-const SERVICES = [
+const SERVICE_OPTIONS = [
   'Not sure yet',
-  'eCommerce',
-  'Web Development',
-  'AI Automation',
-  'Digital Marketing',
-  'Supply Chain / Operations',
-  'Lead Generation / Sales Systems',
-  'AI Video / Content',
-  'Audit / Diagnostic',
+  ...SERVICES.map(service => service.formLabel),
 ];
 
 const LABEL =
@@ -65,8 +59,8 @@ export function ContactForm() {
       <label className={LABEL}>
         Service
         <select name="service" className={FIELD}>
-          {SERVICES.map(service => (
-            <option key={service}>{service}</option>
+          {SERVICE_OPTIONS.map(option => (
+            <option key={option}>{option}</option>
           ))}
         </select>
       </label>

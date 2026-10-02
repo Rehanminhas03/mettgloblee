@@ -67,13 +67,7 @@ const BLOCKS = [
 
 export default function TermsPage() {
   return (
-    <PageShell
-      footerLinks={[
-        { href: '/', label: 'Home' },
-        { href: '/privacy', label: 'Privacy' },
-        { href: '/sitemap', label: 'Sitemap' },
-      ]}
-    >
+    <PageShell>
       <JsonLd data={breadcrumbJsonLd('/terms')} />
 
       <PageHero

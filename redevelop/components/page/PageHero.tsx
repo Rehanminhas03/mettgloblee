@@ -20,11 +20,11 @@ export function PageHero({
     'my-[1em] max-w-[780px] text-[18px] leading-[1.75] text-p-muted max-b620:text-[16px]';
 
   return (
-    <section className="max-b620:px-6 max-w-[1320px] px-[8vw] pt-[110px] pb-[90px]">
+    <section className="max-b620:px-6 max-b620:pt-14 max-b620:pb-12 max-w-[1320px] px-[8vw] pt-20 pb-16">
       <span className="text-p-gold text-[10px] font-black tracking-[.2em]">
         {kicker}
       </span>
-      <h1 className="mt-6 mb-[34px] text-[clamp(52px,8vw,110px)] leading-[.9] tracking-[-.07em]">
+      <h1 className="mt-6 mb-[34px] text-[clamp(40px,5.2vw,72px)] leading-[1.02] tracking-[-.045em]">
         {title}
       </h1>
       {children ? <p className={paragraph}>{children}</p> : null}

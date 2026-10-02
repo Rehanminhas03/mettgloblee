@@ -12,7 +12,6 @@ import {
   type PolicyArt,
 } from '@/components/page/blog';
 import { breadcrumbJsonLd, pageMetadata } from '@/lib/seo';
-import { GLOBAL_FOOTER_NOTE } from '@/lib/navigation';
 
 export const metadata = pageMetadata('/blog');
 
@@ -233,17 +232,7 @@ const PLAYBOOKS: {
 
 export default function BlogPage() {
   return (
-    <PageShell
-      footerNote={GLOBAL_FOOTER_NOTE}
-      footerLinks={[
-        { href: '/', label: 'Home' },
-        { href: '/services', label: 'Services' },
-        { href: '/about', label: 'About' },
-        { href: '/appointment', label: 'Book a meeting' },
-        { href: '/contact', label: 'Contact' },
-        { href: '/privacy', label: 'Privacy' },
-      ]}
-    >
+    <PageShell>
       <JsonLd data={breadcrumbJsonLd('/blog')} />
 
       <PageHero

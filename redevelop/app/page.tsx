@@ -1,22 +1,14 @@
 import { CaseStudies } from '@/components/home/CaseStudies';
 import { Contact } from '@/components/home/Contact';
-import { CursorGlow } from '@/components/home/CursorGlow';
 import { Faq } from '@/components/home/Faq';
-import { FloatingContact } from '@/components/home/FloatingContact';
-import { GlobalDelivery } from '@/components/home/GlobalDelivery';
 import { Hero } from '@/components/home/Hero';
-import { HomeFooter } from '@/components/home/HomeFooter';
-import { HomeNav } from '@/components/home/HomeNav';
 import { HomeTracking } from '@/components/home/HomeTracking';
-import { Manifesto } from '@/components/home/Manifesto';
-import { Method } from '@/components/home/Method';
 import { Partners } from '@/components/home/Partners';
-import { Reviews } from '@/components/home/Reviews';
 import { Services } from '@/components/home/Services';
-import { Team } from '@/components/home/Team';
-import { Ticker } from '@/components/home/Ticker';
-import { WhyMett } from '@/components/home/WhyMett';
+import { SiteFooter } from '@/components/site/SiteFooter';
+import { SiteHeader } from '@/components/site/SiteHeader';
 import { pageMetadata } from '@/lib/seo';
+import { SERVICES } from '@/lib/services';
 import { SITE_URL } from '@/lib/site';
 
 export const metadata = pageMetadata('/');
@@ -38,7 +30,7 @@ const ORGANIZATION_JSON_LD = {
   url: `${SITE_URL}/`,
   logo: `${SITE_URL}/logo-512.png`,
   description:
-    'MettGlobal is a Pakistan-based global digital and operations partner for eCommerce, marketing, AI automation, web development, supply chain and sales support.',
+    'MettGlobal is a Pakistan-based global partner for eCommerce and supply chain, performance marketing and social media, web and software development, and AI automation.',
   email: 'contact@mettglobal.com',
   telephone: '+92-304-6551553',
   contactPoint: {
@@ -75,15 +67,7 @@ const PROFESSIONAL_SERVICE_JSON_LD = {
     addressLocality: 'Islamabad',
     addressCountry: 'PK',
   },
-  serviceType: [
-    'eCommerce Operations',
-    'Paid Media',
-    'AI Automation',
-    'Web Design and Development',
-    'Supply Chain and Sourcing',
-    'Sales Support and Business Development',
-    'Digital Marketing and Creative',
-  ],
+  serviceType: SERVICES.map(service => service.title),
   areaServed: 'Worldwide',
 };
 
@@ -110,28 +94,18 @@ export default function HomePage() {
       </a>
 
       <div className="text-ink">
-        <CursorGlow />
         <HomeTracking />
-        <HomeNav />
+        <SiteHeader />
 
         <main id="main-content">
           <Hero />
-          <Ticker />
-          <Manifesto />
           <Services />
           <CaseStudies />
           <Partners />
-          <WhyMett />
-          <Method />
-          <Team />
-          <Reviews />
-          <GlobalDelivery />
           <Faq />
           <Contact />
         </main>
-
-        <FloatingContact />
-        <HomeFooter />
+        <SiteFooter />
       </div>
     </>
   );

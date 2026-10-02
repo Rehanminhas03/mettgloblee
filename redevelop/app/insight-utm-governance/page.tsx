@@ -147,8 +147,8 @@ export default function UtmGovernanceGuide() {
       meta="METTGLOBAL OPERATOR PLAYBOOK · CAMPAIGN MEASUREMENT · 8 MIN READ"
       graphic={<UtmGraphic fields={FIELDS} />}
       endHeading="Need a measurement system that the team can trust?"
-      endHref="/digital-marketing"
-      endLabel="Explore digital marketing"
+      endHref="/performance-marketing"
+      endLabel="Explore performance marketing"
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

@@ -8,6 +8,7 @@ import { SITE_URL } from '@/lib/site';
 const ENTRIES = [
   { path: '/', lastModified: '2026-09-17', priority: 1.0 },
   { path: '/services', lastModified: '2026-09-17', priority: 0.9 },
+  { path: '/portfolio', lastModified: '2026-10-02', priority: 0.9 },
   { path: '/case-studies', lastModified: '2026-09-20', priority: 0.9 },
   {
     path: '/case-study-jetour-ittehad',
@@ -31,18 +32,14 @@ const ENTRIES = [
   { path: '/sitemap', lastModified: '2026-09-17', priority: 0.4 },
   { path: '/privacy', lastModified: '2026-09-20', priority: 0.3 },
   { path: '/terms', lastModified: '2026-09-20', priority: 0.3 },
-  { path: '/ecommerce-growth', lastModified: '2026-09-17', priority: 0.8 },
-  { path: '/web-development', lastModified: '2026-09-17', priority: 0.8 },
-  { path: '/ai-automation', lastModified: '2026-09-17', priority: 0.8 },
-  { path: '/digital-marketing', lastModified: '2026-09-17', priority: 0.8 },
   {
-    path: '/operations-supply-chain',
-    lastModified: '2026-09-17',
-    priority: 0.8,
+    path: '/ecommerce-supply-chain',
+    lastModified: '2026-10-02',
+    priority: 0.9,
   },
-  { path: '/lead-generation-sales', lastModified: '2026-09-17', priority: 0.8 },
-  { path: '/ai-content-production', lastModified: '2026-09-17', priority: 0.8 },
-  { path: '/audits-diagnostics', lastModified: '2026-09-17', priority: 0.8 },
+  { path: '/performance-marketing', lastModified: '2026-10-02', priority: 0.9 },
+  { path: '/software-development', lastModified: '2026-10-02', priority: 0.9 },
+  { path: '/ai-automation', lastModified: '2026-09-17', priority: 0.8 },
   {
     path: '/update-amazon-fba-fees-2026',
     lastModified: '2026-09-17',

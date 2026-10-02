@@ -49,7 +49,7 @@ export default function AiAutomationGuide() {
       graphic={<ChipGraphic steps={['INPUT', 'DECIDE', 'ACT', 'VERIFY']} />}
       endHeading={'Have a repetitive workflow?'}
       endHref={'/ai-automation'}
-      endLabel={'Explore AI automation'}
+      endLabel={'Explore AI automation & content'}
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

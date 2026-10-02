@@ -2,13 +2,14 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { Analytics } from '@/components/Analytics';
 import { ConsentBanner } from '@/components/ConsentBanner';
+import { FloatingContact } from '@/components/home/FloatingContact';
 import { SITE_URL } from '@/lib/site';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: 'MettGlobal | Growth, eCommerce, AI & Operations',
   description:
-    'MettGlobal helps ambitious businesses improve eCommerce, marketing, websites, AI automation, supply chain and sales operations.',
+    'MettGlobal helps businesses grow with eCommerce and supply chain operations, performance marketing, web and software development, and AI automation.',
   applicationName: 'MettGlobal',
   authors: [{ name: 'MettGlobal' }],
   manifest: '/site.webmanifest',
@@ -47,6 +48,7 @@ export default function RootLayout({
       <body className="bg-paper has-[[data-surface=page]]:bg-p-paper has-[[data-surface=article]]:bg-a-ivory font-sans">
         <Analytics />
         {children}
+        <FloatingContact />
         <ConsentBanner />
       </body>
     </html>

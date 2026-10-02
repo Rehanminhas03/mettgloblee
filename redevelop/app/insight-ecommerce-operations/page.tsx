@@ -57,8 +57,8 @@ export default function EcommerceOperationsGuide() {
         <ChipGraphic steps={['CLICK', 'STOCK', 'FULFILL', 'RETURN', 'LEARN']} />
       }
       endHeading={'Need the operational layer audited?'}
-      endHref={'/ecommerce-growth'}
-      endLabel={'Explore eCommerce support'}
+      endHref={'/ecommerce-supply-chain'}
+      endLabel={'Explore eCommerce & supply chain'}
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

@@ -152,8 +152,8 @@ export default function ThreePlScorecardGuide() {
         />
       }
       endHeading="Need to turn warehouse activity into a controlled system?"
-      endHref="/operations-supply-chain"
-      endLabel="Explore supply chain operations"
+      endHref="/ecommerce-supply-chain"
+      endLabel="Explore eCommerce & supply chain"
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

@@ -8,14 +8,7 @@ export const metadata = pageMetadata('/contact-success');
 
 export default function ContactSuccessPage() {
   return (
-    <PageShell
-      footerLinks={[
-        { href: '/', label: 'Home' },
-        { href: '/contact', label: 'Contact' },
-        { href: '/privacy', label: 'Privacy' },
-        { href: '/terms', label: 'Terms' },
-      ]}
-    >
+    <PageShell>
       <JsonLd data={breadcrumbJsonLd('/contact-success')} />
 
       <PageHero

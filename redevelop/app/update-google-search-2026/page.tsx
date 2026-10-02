@@ -89,10 +89,9 @@ export default function GoogleSearch2026Brief() {
         'CURRENT BRIEF · SOURCE CHECKED 17 SEP 2026 · GOOGLE SEARCH CENTRAL'
       }
       graphic={<PolicyGraphic facts={FACTS} />}
-      footerNote={'Current search brief'}
       endHeading={'Need your website’s technical foundation reviewed?'}
-      endHref={'/web-development'}
-      endLabel={'Explore web development'}
+      endHref={'/software-development'}
+      endLabel={'Explore web & software development'}
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

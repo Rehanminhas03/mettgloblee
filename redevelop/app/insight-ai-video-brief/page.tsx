@@ -52,8 +52,8 @@ export default function AiVideoBriefGuide() {
         />
       }
       endHeading={'Need a repeatable content workflow?'}
-      endHref={'/ai-content-production'}
-      endLabel={'Explore AI content production'}
+      endHref={'/ai-automation'}
+      endLabel={'Explore AI automation & content'}
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>
