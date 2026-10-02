@@ -52,8 +52,8 @@ export default function ConversionAuditGuide() {
         <ChipGraphic steps={['MESSAGE', 'TRUST', 'FRICTION', 'ACTION']} />
       }
       endHeading={'Want an independent diagnosis?'}
-      endHref={'/web-development'}
-      endLabel={'Explore web & conversion'}
+      endHref={'/software-development'}
+      endLabel={'Explore web & software development'}
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

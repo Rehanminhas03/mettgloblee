@@ -85,10 +85,9 @@ export default function GoogleAdsConsent2026Brief() {
       }
       meta={'CURRENT BRIEF · SOURCE CHECKED 17 SEP 2026 · GOOGLE ADS HELP'}
       graphic={<PolicyGraphic facts={FACTS} />}
-      footerNote={'Current policy brief'}
       endHeading={'Need the acquisition and measurement stack reviewed?'}
-      endHref={'/digital-marketing'}
-      endLabel={'Explore digital marketing'}
+      endHref={'/performance-marketing'}
+      endLabel={'Explore performance marketing'}
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

@@ -89,10 +89,9 @@ export default function EuAiActTransparency2026Brief() {
       }
       meta={'CURRENT BRIEF · SOURCE CHECKED 17 SEP 2026 · EUROPEAN COMMISSION'}
       graphic={<PolicyGraphic facts={FACTS} />}
-      footerNote={'Current policy brief'}
       endHeading={'Need an AI workflow mapped with human checkpoints?'}
       endHref={'/ai-automation'}
-      endLabel={'Explore AI automation'}
+      endLabel={'Explore AI automation & content'}
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

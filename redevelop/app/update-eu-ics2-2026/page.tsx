@@ -87,10 +87,9 @@ export default function EuIcs22026Brief() {
       }
       meta={'CURRENT BRIEF · SOURCE CHECKED 17 SEP 2026 · EUROPEAN COMMISSION'}
       graphic={<PolicyGraphic facts={FACTS} />}
-      footerNote={'Current compliance brief'}
       endHeading={'Need shipment and data handoffs mapped?'}
-      endHref={'/operations-supply-chain'}
-      endLabel={'Explore supply chain support'}
+      endHref={'/ecommerce-supply-chain'}
+      endLabel={'Explore eCommerce & supply chain'}
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

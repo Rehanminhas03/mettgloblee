@@ -8,13 +8,13 @@ import Link from 'next/link';
 /** `.policy-art.<variant>` backgrounds. */
 const POLICY_ART = {
   amazon:
-    'bg-[radial-gradient(circle_at_70%_18%,rgba(223,186,100,.2),transparent_28%),#0b0b0a]',
+    'bg-[#0b0b0a] bg-[image:radial-gradient(circle_at_70%_18%,rgba(223,186,100,.2),transparent_28%)]',
   'ai-act': 'bg-[linear-gradient(145deg,#15120b,#71541b)]',
   consent:
-    'bg-[radial-gradient(circle_at_30%_20%,rgba(223,186,100,.18),transparent_30%),#11110f]',
+    'bg-[#11110f] bg-[image:radial-gradient(circle_at_30%_20%,rgba(223,186,100,.18),transparent_30%)]',
   ics: 'bg-[linear-gradient(155deg,#090908,#3d3423)]',
   search:
-    'bg-[radial-gradient(circle_at_70%_20%,rgba(223,186,100,.22),transparent_24%),#13110d]',
+    'bg-[#13110d] bg-[image:radial-gradient(circle_at_70%_20%,rgba(223,186,100,.22),transparent_24%)]',
 } as const;
 
 export type PolicyArt = keyof typeof POLICY_ART;
@@ -49,7 +49,7 @@ export function UpdateCard({
         <span className="text-p-gold2 relative z-[1] mb-auto text-[9px] font-black tracking-[.17em]">
           {artLabel}
         </span>
-        <strong className="relative z-[1] text-[clamp(38px,4vw,66px)] leading-[.9] tracking-[-.06em]">
+        <strong className="relative z-[1] text-[clamp(30px,3.6vw,48px)] leading-[.9] tracking-[-.06em]">
           {artFigure}
         </strong>
         <small className="relative z-[1] mt-[10px] text-[10px] leading-[1.45] tracking-[.08em] text-[#c4beb1] uppercase">
@@ -78,14 +78,14 @@ const BLOG_ART = {
   default:
     'bg-[radial-gradient(circle_at_75%_20%,rgba(222,186,100,.35),transparent_25%),linear-gradient(145deg,#0c0c0b,#292317)]',
   web: 'bg-[linear-gradient(145deg,#10100f,#4a3b1d)]',
-  ai: 'bg-[radial-gradient(circle_at_25%_20%,rgba(202,152,44,.25),transparent_28%),#111]',
+  ai: 'bg-[#111] bg-[image:radial-gradient(circle_at_25%_20%,rgba(202,152,44,.25),transparent_28%)]',
   growth: 'bg-[linear-gradient(135deg,#ae7f20,#171510)]',
   supply: 'bg-[linear-gradient(145deg,#0b0b0a,#2b2a24)]',
   cyber:
     'bg-[radial-gradient(circle_at_70%_35%,rgba(223,186,100,.2),transparent_24%),linear-gradient(135deg,#050505,#20201d)]',
   sales: 'bg-[linear-gradient(150deg,#1b1811,#6e5220)]',
   video:
-    'bg-[radial-gradient(circle_at_50%_50%,rgba(223,186,100,.22),transparent_30%),#0a0a09]',
+    'bg-[#0a0a09] bg-[image:radial-gradient(circle_at_50%_50%,rgba(223,186,100,.22),transparent_30%)]',
   audit: 'bg-[linear-gradient(135deg,#0d0d0c,#3b3120)]',
   measurement:
     'bg-[linear-gradient(145deg,#11110f_0_42%,#6f5421_42%_49%,#191710_49%)]',

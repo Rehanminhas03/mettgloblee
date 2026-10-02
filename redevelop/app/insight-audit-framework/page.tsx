@@ -52,8 +52,8 @@ export default function AuditFrameworkGuide() {
         />
       }
       endHeading={'Need an independent diagnosis?'}
-      endHref={'/audits-diagnostics'}
-      endLabel={'Explore audits & diagnostics'}
+      endHref={'/services'}
+      endLabel={'Explore our services'}
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

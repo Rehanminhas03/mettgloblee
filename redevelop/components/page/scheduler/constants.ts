@@ -21,14 +21,13 @@ export const DURATIONS = [
 
 export const TOPICS = [
   { value: 'General / multi-service discussion', label: 'General' },
-  { value: 'eCommerce growth & operations', label: 'eCommerce' },
-  { value: 'Web development & conversion', label: 'Web & CRO' },
-  { value: 'AI automation', label: 'AI automation' },
-  { value: 'Digital marketing & creative', label: 'Growth & creative' },
+  { value: 'eCommerce & Supply Chain', label: 'eCommerce & supply chain' },
   {
-    value: 'Supply chain, operations or sales systems',
-    label: 'Operations & sales',
+    value: 'Performance Marketing & Social Media',
+    label: 'Marketing & social',
   },
+  { value: 'Web & Software Development', label: 'Web & software' },
+  { value: 'AI Automation & Content', label: 'AI automation' },
 ];
 
 export const KICKER = 'text-[10px] font-black tracking-[.18em] text-p-gold';

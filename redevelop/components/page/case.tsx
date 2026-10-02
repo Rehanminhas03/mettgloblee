@@ -7,9 +7,9 @@ import Link from 'next/link';
 export type CaseTone = 'dark' | 'light' | 'csm';
 
 const HERO_TONE = {
-  dark: 'bg-[radial-gradient(circle_at_80%_20%,rgba(224,188,104,.12),transparent_28%),#0b0b0a] text-white',
+  dark: 'bg-[#0b0b0a] bg-[image:radial-gradient(circle_at_80%_20%,rgba(224,188,104,.12),transparent_28%)] text-white',
   light:
-    'bg-[radial-gradient(circle_at_82%_18%,rgba(184,137,45,.12),transparent_27%),#f7f1e5] text-p-ink',
+    'bg-[#f7f1e5] bg-[image:radial-gradient(circle_at_82%_18%,rgba(184,137,45,.12),transparent_27%)] text-p-ink',
   csm: 'bg-[radial-gradient(circle_at_82%_20%,rgba(224,188,104,.13),transparent_28%),linear-gradient(145deg,#10100f,#201a10)] text-white',
 } as const;
 
@@ -58,7 +58,7 @@ export function CaseHero({
           <span className="text-p-gold text-[10px] font-black tracking-[.2em]">
             {kicker}
           </span>
-          <h1 className="mt-[10px] mb-[22px] text-[clamp(52px,7vw,106px)] leading-[.9] tracking-[-.075em]">
+          <h1 className="mt-[10px] mb-[22px] text-[clamp(40px,5.2vw,72px)] leading-[1.02] tracking-[-.045em]">
             {titleTop}
             <br />
             <span className={light ? 'text-p-gold' : 'text-p-gold2'}>
@@ -418,7 +418,7 @@ export function IntegrityCard({
         <span className="text-p-gold2 text-[9px] font-black tracking-[.16em]">
           {label}
         </span>
-        <h2 className="my-[18px] max-w-[950px] text-[clamp(36px,5vw,66px)] leading-[.98] tracking-[-.055em]">
+        <h2 className="my-[18px] max-w-[950px] text-[clamp(30px,3.6vw,48px)] leading-[.98] tracking-[-.055em]">
           {heading}
         </h2>
         <p className="relative z-[1] my-[1em] max-w-[900px] leading-[1.75] text-[#aaa59b]">

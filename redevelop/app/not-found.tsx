@@ -5,20 +5,7 @@ import { Btn } from '@/components/page/ui';
 /** Port of 404.html — App Router serves this for any unmatched route. */
 export default function NotFound() {
   return (
-    <PageShell
-      navLinks={[
-        { href: '/services', label: 'Services' },
-        { href: '/case-studies', label: 'Case Studies' },
-        { href: '/blog', label: 'Blog' },
-      ]}
-      navCta={{ href: '/contact', label: 'Contact' }}
-      footerLinks={[
-        { href: '/', label: 'Home' },
-        { href: '/services', label: 'Services' },
-        { href: '/blog', label: 'Blog' },
-        { href: '/contact', label: 'Contact' },
-      ]}
-    >
+    <PageShell>
       <PageHero
         kicker="404 / PAGE NOT FOUND"
         title={

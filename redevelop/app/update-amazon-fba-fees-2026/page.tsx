@@ -91,10 +91,9 @@ export default function AmazonFbaFees2026Brief() {
         'CURRENT BRIEF · SOURCE CHECKED 17 SEP 2026 · AMAZON SELLER CENTRAL'
       }
       graphic={<PolicyGraphic facts={FACTS} />}
-      footerNote={'Current platform brief'}
       endHeading={'Need your marketplace economics reviewed?'}
-      endHref={'/ecommerce-growth'}
-      endLabel={'Explore eCommerce support'}
+      endHref={'/ecommerce-supply-chain'}
+      endLabel={'Explore eCommerce & supply chain'}
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

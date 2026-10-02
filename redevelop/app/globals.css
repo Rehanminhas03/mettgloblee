@@ -62,8 +62,6 @@
   --animate-spin-ring: spin 22s linear infinite;
   --animate-spin-ring-rev: spin 16s linear infinite reverse;
   --animate-float: float 5s ease-in-out infinite;
-  --animate-ticker: ticker 26s linear infinite;
-  --animate-signal: signalPulse 3.2s ease-in-out infinite;
 
   @keyframes spin {
     to {
@@ -75,22 +73,6 @@
       transform: translateY(-16px) rotate(1deg);
     }
   }
-  @keyframes ticker {
-    to {
-      transform: translateX(-50%);
-    }
-  }
-  @keyframes signalPulse {
-    0%,
-    100% {
-      transform: scaleY(0.75);
-      opacity: 0.55;
-    }
-    50% {
-      transform: scaleY(1);
-      opacity: 1;
-    }
-  }
 }
 
 /*
@@ -98,9 +80,30 @@
   document-level defaults, the `prefers-reduced-motion` blanket reset and the
   native `<summary>` marker removal.
 */
+/*
+  A full screen below the sticky header (94px, 80px under 900px). Homepage
+  sections use it as a minimum, so longer content still grows past it.
+*/
+/* Desktop screens with little height (e.g. 1366×768 laptops). */
+@custom-variant short (@media (max-height: 820px) and (min-width: 901px));
+
+@utility min-h-view {
+  min-height: calc(100svh - 94px);
+  @media (width < 901px) {
+    min-height: calc(100svh - 80px);
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Keep anchor targets clear of the sticky header (94px, 80px below 900px). */
+    scroll-padding-top: 94px;
+  }
+  @media (width < 901px) {
+    html {
+      scroll-padding-top: 80px;
+    }
   }
   body {
     overflow-x: hidden;
@@ -139,5 +142,16 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/*
+  Below 1100px the cookie banner spans the bottom of the screen, so lift the
+  floating WhatsApp / call buttons above it until a choice is made. Unlayered,
+  so it outranks the buttons' own `bottom-*` utility.
+*/
+@media (width < 1101px) {
+  body:has([data-consent-banner]) [data-floating-contact] {
+    bottom: calc(var(--consent-height, 150px) + 24px);
   }
 }

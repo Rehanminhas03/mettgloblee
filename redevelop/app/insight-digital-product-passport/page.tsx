@@ -134,8 +134,8 @@ export default function DigitalProductPassportGuide() {
       meta="METTGLOBAL CURRENT PRACTICE NOTE · PRODUCT DATA SYSTEMS · 10 MIN READ"
       graphic={<PassportGraphic nodes={NODES} />}
       endHeading="Need product data that can move across systems?"
-      endHref="/audits-diagnostics"
-      endLabel="Explore audits & diagnostics"
+      endHref="/services"
+      endLabel="Explore our services"
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

@@ -15,12 +15,12 @@ export const PAGE_SEO = {
   '/': {
     title: 'MettGlobal | Growth, eCommerce, AI & Operations',
     description:
-      'MettGlobal helps ambitious businesses improve eCommerce, marketing, websites, AI automation, supply chain and sales operations.',
+      'MettGlobal helps businesses grow with eCommerce and supply chain operations, performance marketing, web and software development, and AI automation.',
   },
   '/services': {
     title: 'eCommerce, Web, AI & Operations Services | MettGlobal',
     description:
-      'Explore MettGlobal services for eCommerce operations, websites, AI automation, marketing, supply chain, sales systems and audits.',
+      'Explore MettGlobal services: eCommerce & supply chain, performance marketing & social media, web & software development, and AI automation & content.',
   },
   '/about': {
     title: 'About MettGlobal | Founder-Led Growth & Operations',
@@ -41,6 +41,11 @@ export const PAGE_SEO = {
     title: 'Book a Strategy Meeting | MettGlobal',
     description:
       'Choose a preferred date and time to discuss your business constraint with MettGlobal online or in person.',
+  },
+  '/portfolio': {
+    title: 'MettGlobal Portfolio | Local & International Work',
+    description:
+      'Selected MettGlobal clients and projects across growth, eCommerce, web, AI automation and operations, in Pakistan and internationally.',
   },
   '/case-studies': {
     title: 'MettGlobal Case Studies | Growth & Operations',
@@ -64,45 +69,25 @@ export const PAGE_SEO = {
   },
 
   /* ---- Service pages ---- */
-  '/ecommerce-growth': {
-    title: 'eCommerce Operations & Amazon Management | MettGlobal',
+  '/ecommerce-supply-chain': {
+    title: 'eCommerce & Supply Chain Management | MettGlobal',
     description:
-      'Improve marketplace operations, catalog health, inventory, replenishment, fulfillment, claims and eCommerce growth.',
+      'Amazon, Walmart and Shopify operations, Amazon FBA and Walmart WFS reimbursement claims, courier claims and invoice overcharge recovery, inventory, sourcing and 3PL.',
   },
-  '/web-development': {
-    title: 'Website Design & Conversion Development | MettGlobal',
+  '/performance-marketing': {
+    title: 'Performance Marketing & Social Media Management | MettGlobal',
     description:
-      'Build faster, clearer websites and landing pages with responsive UX, conversion paths, analytics and technical SEO foundations.',
+      'Meta, TikTok and Google ads, social media management, ad creatives and lead generation funnels measured by leads and sales.',
+  },
+  '/software-development': {
+    title: 'Web & Software Development, Custom CRM | MettGlobal',
+    description:
+      'Websites, eCommerce stores, custom CRM development, web apps, portals, dashboards and integrations built around how you work.',
   },
   '/ai-automation': {
-    title: 'AI Automation Services for Growing Businesses | MettGlobal',
+    title: 'AI Automation & AI Content Creation | MettGlobal',
     description:
-      'Map repetitive workflows and implement practical AI automation for lead handling, operations, reporting and internal processes.',
-  },
-  '/digital-marketing': {
-    title: 'Digital Marketing & Creative Services | MettGlobal',
-    description:
-      'Connect paid media, creative, offers, landing pages and follow-up into a more measurable customer acquisition system.',
-  },
-  '/operations-supply-chain': {
-    title: 'Supply Chain & 3PL Operations Support | MettGlobal',
-    description:
-      'Strengthen inventory, replenishment, warehouse, 3PL, sourcing, freight and operational reporting across growing businesses.',
-  },
-  '/lead-generation-sales': {
-    title: 'Lead Generation & Sales Systems | MettGlobal',
-    description:
-      'Build better prospecting, qualification, CRM, outreach and follow-up systems for a more disciplined commercial pipeline.',
-  },
-  '/ai-content-production': {
-    title: 'AI Video & Content Production | MettGlobal',
-    description:
-      'Produce useful AI-assisted video and content with stronger briefs, creative direction, brand consistency and human review.',
-  },
-  '/audits-diagnostics': {
-    title: 'Website, SEO & Operations Audits | MettGlobal',
-    description:
-      'Find the constraint with evidence-led audits across websites, funnels, eCommerce, SEO, performance, workflows and operations.',
+      'Workflow automation, AI chatbots and WhatsApp assistants, document processing and AI video and image content with human review.',
   },
 
   /* ---- Case studies ---- */
@@ -278,16 +263,12 @@ export function breadcrumbJsonLd(path: PagePath) {
   };
 }
 
-/** The eight service routes that also received `Service` JSON-LD. */
+/** The service routes that also receive `Service` JSON-LD. */
 export const SERVICE_PATHS = [
-  '/ecommerce-growth',
-  '/web-development',
+  '/ecommerce-supply-chain',
+  '/performance-marketing',
+  '/software-development',
   '/ai-automation',
-  '/digital-marketing',
-  '/operations-supply-chain',
-  '/lead-generation-sales',
-  '/ai-content-production',
-  '/audits-diagnostics',
 ] as const;
 
 export function serviceJsonLd(path: (typeof SERVICE_PATHS)[number]) {

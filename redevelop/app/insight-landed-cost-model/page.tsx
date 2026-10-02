@@ -171,8 +171,8 @@ export default function LandedCostModelGuide() {
         />
       }
       endHeading="Need a clearer cross-border operating model?"
-      endHref="/operations-supply-chain"
-      endLabel="Explore supply chain operations"
+      endHref="/ecommerce-supply-chain"
+      endLabel="Explore eCommerce & supply chain"
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

@@ -1,6 +1,11 @@
 import { Btn } from './ui';
 
-export type ServiceBlock = { heading: string; copy: React.ReactNode };
+export type ServiceBlock = {
+  heading: string;
+  copy: React.ReactNode;
+  /** Optional "what's included" list rendered under the copy. */
+  items?: string[];
+};
 
 /**
  * `.service-layout` — sticky left rail plus the prose column, shared by the
@@ -45,6 +50,18 @@ export function ServiceLayout({
               <p className="my-[1em] text-[16px] leading-[1.85] text-[#514d46]">
                 {block.copy}
               </p>
+              {block.items?.length ? (
+                <ul className="max-b620:grid-cols-1 m-0 mt-5 grid list-none grid-cols-2 gap-x-6 gap-y-[10px] p-0">
+                  {block.items.map(item => (
+                    <li
+                      key={item}
+                      className="before:text-p-gold relative pl-5 text-[15px] leading-[1.5] text-[#3d3a34] before:absolute before:left-0 before:content-['✓']"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </div>
           ))}
         </article>

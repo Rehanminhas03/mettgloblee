@@ -16,7 +16,6 @@ import {
   Workflow,
 } from '@/components/page/case';
 import { breadcrumbJsonLd, pageMetadata } from '@/lib/seo';
-import { CASE_FOOTER, CASE_NAV, GLOBAL_FOOTER_NOTE } from '@/lib/navigation';
 
 export const metadata = pageMetadata('/case-study-csm-ittehad');
 
@@ -74,11 +73,7 @@ const PROOF = [
 
 export default function CsmCaseStudyPage() {
   return (
-    <PageShell
-      navLinks={CASE_NAV}
-      footerNote={GLOBAL_FOOTER_NOTE}
-      footerLinks={CASE_FOOTER}
-    >
+    <PageShell>
       <JsonLd data={breadcrumbJsonLd('/case-study-csm-ittehad')} />
 
       <CaseHero

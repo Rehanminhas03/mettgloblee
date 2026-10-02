@@ -21,16 +21,12 @@ const BLOCKS = [
     copy: 'The website currently uses FormSubmit to route website form submissions to contact@mettglobal.com. FormSubmit may process the submission as a third-party service before delivery. The workflow may be replaced by domain email, a CRM or another form processor; this notice should then be updated.',
   },
   {
-    heading: 'Google reviews',
-    copy: "MettGlobal uses Google as its public review channel. Visitors who choose to leave a review are sent to the official Google review destination and the review is handled under Google's own terms and privacy practices. The website does not currently collect a separate public-review form.",
-  },
-  {
     heading: 'Analytics and cookies',
     copy: 'The website uses Google Analytics measurement tags to understand page visits and selected actions such as booking, phone, email, WhatsApp and form interactions. Non-essential analytics and advertising storage is denied by default until a visitor chooses “Allow analytics” in the cookie preference notice. A visitor can decline analytics or clear the saved preference from their browser.',
   },
   {
     heading: 'Third-party services',
-    copy: 'The site may link to or load services including Google Analytics, Google Tag Manager infrastructure, FormSubmit, WhatsApp, Google reviews and social platforms. Those services have their own terms and privacy practices.',
+    copy: 'The site may link to or load services including Google Analytics, Google Tag Manager infrastructure, FormSubmit, WhatsApp and social platforms. Those services have their own terms and privacy practices.',
   },
   {
     heading: 'Retention and requests',
@@ -44,20 +40,7 @@ const BLOCKS = [
 
 export default function PrivacyPage() {
   return (
-    <PageShell
-      navLinks={[
-        { href: '/services', label: 'Services' },
-        { href: '/blog', label: 'Blog' },
-        { href: '/contact', label: 'Contact' },
-      ]}
-      footerLinks={[
-        { href: '/', label: 'Home' },
-        { href: '/contact', label: 'Contact' },
-        { href: '/appointment', label: 'Book a meeting' },
-        { href: '/terms', label: 'Terms' },
-        { href: '/sitemap', label: 'Sitemap' },
-      ]}
-    >
+    <PageShell>
       <JsonLd data={breadcrumbJsonLd('/privacy')} />
 
       <PageHero

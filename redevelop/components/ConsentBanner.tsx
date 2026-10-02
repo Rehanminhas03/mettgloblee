@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useHydrated } from '@/hooks/useHydrated';
 import { CONSENT_STORAGE_KEY } from '@/lib/site';
 
@@ -25,6 +25,18 @@ export function ConsentBanner() {
   const hydrated = useHydrated();
   const [decided, setDecided] = useState(false);
 
+  /* Publish the banner's height so the floating contact buttons clear it. */
+  const measure = useCallback((node: HTMLDivElement | null) => {
+    if (!node) {
+      document.body.style.removeProperty('--consent-height');
+      return;
+    }
+    document.body.style.setProperty(
+      '--consent-height',
+      `${node.getBoundingClientRect().height}px`,
+    );
+  }, []);
+
   if (!hydrated || decided || storedChoice()) return null;
 
   const decide = (choice: 'accepted' | 'declined') => {
@@ -39,8 +51,10 @@ export function ConsentBanner() {
 
   return (
     <div
+      ref={measure}
       role="dialog"
       aria-label="Cookie preferences"
+      data-consent-banner
       className="max-b650:bottom-3 max-b650:left-3 max-b650:right-3 max-b650:block fixed right-[18px] bottom-[18px] left-[18px] z-[200] flex max-w-[760px] items-center justify-between gap-[18px] rounded-2xl border border-[rgba(201,152,44,.45)] bg-[#11110f] px-[18px] py-4 font-[Arial,sans-serif] text-[14px]/[1.45] text-white shadow-[0_18px_45px_rgba(0,0,0,.25)]"
     >
       <p className="m-0">

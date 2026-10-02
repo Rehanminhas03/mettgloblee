@@ -83,7 +83,7 @@ export function SectionHead({
 }) {
   return (
     <div className="max-b900:grid-cols-1 mb-[45px] grid grid-cols-[1fr_.7fr] items-end gap-[60px]">
-      <h2 className="m-0 text-[clamp(40px,5.5vw,76px)] leading-[.95] tracking-[-.055em]">
+      <h2 className="m-0 text-[clamp(32px,3.8vw,52px)] leading-[1.05] tracking-[-.04em]">
         {heading}
       </h2>
       <p
@@ -97,10 +97,18 @@ export function SectionHead({
   );
 }
 
-/** `.grid` — the three-column card grid. */
-export function CardGrid({ children }: { children: React.ReactNode }) {
+/** `.grid` — the card grid; three columns unless four cards need one row. */
+export function CardGrid({
+  children,
+  cols = 3,
+}: {
+  children: React.ReactNode;
+  cols?: 3 | 4;
+}) {
   return (
-    <div className="max-b900:grid-cols-2 max-b620:grid-cols-1 grid grid-cols-3 gap-4">
+    <div
+      className={`max-b900:grid-cols-2 max-b620:grid-cols-1 grid gap-4 ${cols === 4 ? 'grid-cols-4' : 'grid-cols-3'}`}
+    >
       {children}
     </div>
   );
@@ -159,24 +167,6 @@ export function Card({
         )
       ) : null}
     </article>
-  );
-}
-
-/** `.list` — the name / role roster on the dark About band. */
-export function RosterList({
-  people,
-}: {
-  people: { name: string; role: string }[];
-}) {
-  return (
-    <div className="grid gap-3">
-      {people.map(person => (
-        <div key={person.name} className="border-t border-[#37342e] py-[18px]">
-          <strong className="block text-xl">{person.name}</strong>
-          <span className="text-[13px] text-[#aaa69d]">{person.role}</span>
-        </div>
-      ))}
-    </div>
   );
 }
 

@@ -52,8 +52,8 @@ export default function LeadGenerationSystemGuide() {
         />
       }
       endHeading={'Need the pipeline system reviewed?'}
-      endHref={'/lead-generation-sales'}
-      endLabel={'Explore sales systems'}
+      endHref={'/performance-marketing'}
+      endLabel={'Explore performance marketing'}
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

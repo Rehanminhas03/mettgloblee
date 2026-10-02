@@ -50,8 +50,8 @@ export default function GrowthSystemGuide() {
         <ChipGraphic steps={['AUDIENCE', 'AD', 'OFFER', 'PAGE', 'FOLLOW-UP']} />
       }
       endHeading={'Need the acquisition chain reviewed?'}
-      endHref={'/digital-marketing'}
-      endLabel={'Explore digital marketing'}
+      endHref={'/performance-marketing'}
+      endLabel={'Explore performance marketing'}
     >
       <Prose blocks={BLOCKS} />
     </ArticleShell>

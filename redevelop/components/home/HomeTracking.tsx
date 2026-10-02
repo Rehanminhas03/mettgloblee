@@ -36,8 +36,6 @@ export function HomeTracking() {
         });
       } else if (href.startsWith('tel:')) track('phone_click');
       else if (href.startsWith('mailto:')) track('email_click');
-      else if (link.hasAttribute('data-google-review-link'))
-        track('google_review_click');
       else if (href.includes('/appointment'))
         track('appointment_intent', {
           label: link.textContent?.trim() ?? 'meeting',

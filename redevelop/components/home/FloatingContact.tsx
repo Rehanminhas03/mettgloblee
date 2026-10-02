@@ -1,9 +1,12 @@
 import { WaIcon } from './WaIcon';
 
-/** `.floating-contact` — the persistent WhatsApp and call buttons. */
+/** `.floating-contact` — WhatsApp and call buttons, fixed bottom-right on every page. */
 export function FloatingContact() {
   return (
-    <aside className="max-b560:bottom-[14px] max-b560:right-[14px] fixed right-[22px] bottom-[22px] z-[45] flex items-center gap-2">
+    <aside
+      data-floating-contact
+      className="max-b560:bottom-[14px] max-b560:right-[14px] fixed right-[22px] bottom-[22px] z-[45] flex items-center gap-2"
+    >
       <a
         href="https://wa.me/923046551553?text=Hi%20MettGlobal"
         target="_blank"

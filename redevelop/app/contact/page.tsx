@@ -12,16 +12,7 @@ const CARD_LINK = 'mt-[10px] block font-extrabold';
 
 export default function ContactPage() {
   return (
-    <PageShell
-      footerLinks={[
-        { href: '/', label: 'Home' },
-        { href: '/services', label: 'Services' },
-        { href: '/about', label: 'About' },
-        { href: '/blog', label: 'Blog' },
-        { href: '/appointment', label: 'Book a meeting' },
-        { href: '/privacy', label: 'Privacy' },
-      ]}
-    >
+    <PageShell>
       <JsonLd data={breadcrumbJsonLd('/contact')} />
 
       <PageHero

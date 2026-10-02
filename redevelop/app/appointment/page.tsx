@@ -8,22 +8,7 @@ export const metadata = pageMetadata('/appointment');
 
 export default function AppointmentPage() {
   return (
-    <PageShell
-      navCta={{
-        href: '/appointment',
-        label: 'Book a meeting',
-        current: true,
-      }}
-      footerNote="© MettGlobal · Meeting requests currently route to contact@mettglobal.com"
-      footerLinks={[
-        { href: '/', label: 'Home' },
-        { href: '/services', label: 'Services' },
-        { href: '/blog', label: 'Blog' },
-        { href: '/contact', label: 'Contact' },
-        { href: '/privacy', label: 'Privacy' },
-        { href: '/sitemap', label: 'Sitemap' },
-      ]}
-    >
+    <PageShell>
       <JsonLd data={breadcrumbJsonLd('/appointment')} />
 
       {/* .booking-hero */}
@@ -31,7 +16,7 @@ export default function AppointmentPage() {
         <span className="text-p-gold text-[10px] font-black tracking-[.2em]">
           BOOK A MEETING
         </span>
-        <h1 className="mt-5 mb-[26px] text-[clamp(52px,7.5vw,96px)] leading-[.92] tracking-[-.065em]">
+        <h1 className="mt-5 mb-[26px] text-[clamp(40px,5.2vw,72px)] leading-[1.02] tracking-[-.045em]">
           Choose a date.
           <br />
           <span className="text-p-gold">Pick a time.</span>

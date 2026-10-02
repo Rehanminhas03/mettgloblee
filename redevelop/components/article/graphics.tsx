@@ -76,7 +76,7 @@ function DataGraphic({
       aria-label={ariaLabel}
       className={`mb-[70px] min-h-[170px] overflow-hidden rounded-[26px] p-[30px] text-white ${
         className ||
-        'bg-[radial-gradient(circle_at_90%_0%,rgba(223,186,100,.16),transparent_30%),#11110f]'
+        'bg-[#11110f] bg-[image:radial-gradient(circle_at_90%_0%,rgba(223,186,100,.16),transparent_30%)]'
       }`}
     >
       <div className="max-b480:block mb-[25px] flex items-end justify-between gap-5">
@@ -274,7 +274,7 @@ export function PassportGraphic({
     <DataGraphic
       label="DPP DATA LIFECYCLE"
       heading="One product identity. Several trusted views."
-      className="bg-[radial-gradient(circle_at_50%_45%,rgba(201,152,44,.2),transparent_22%),#11110f]"
+      className="bg-[#11110f] bg-[image:radial-gradient(circle_at_50%_45%,rgba(201,152,44,.2),transparent_22%)]"
       ariaLabel="Digital Product Passport data lifecycle from design and supplier evidence through product use, repair and end of life"
     >
       <div className="max-b700:grid-cols-2 max-b480:grid-cols-1 grid grid-cols-4 items-stretch gap-[9px]">

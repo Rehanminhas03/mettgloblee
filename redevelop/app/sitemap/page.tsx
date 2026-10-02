@@ -3,6 +3,7 @@ import { PageShell } from '@/components/page/PageShell';
 import { PageHero, HeroAccent } from '@/components/page/PageHero';
 import { JsonLd } from '@/components/JsonLd';
 import { breadcrumbJsonLd, pageMetadata } from '@/lib/seo';
+import { SERVICES } from '@/lib/services';
 
 export const metadata = pageMetadata('/sitemap');
 
@@ -14,6 +15,7 @@ const GROUPS = [
       { href: '/', label: 'Home' },
       { href: '/about', label: 'About' },
       { href: '/services', label: 'Services' },
+      { href: '/portfolio', label: 'Portfolio' },
       { href: '/case-studies', label: 'Case Studies' },
       { href: '/blog', label: 'Blog' },
       { href: '/contact', label: 'Contact' },
@@ -26,20 +28,11 @@ const GROUPS = [
     label: 'SERVICES',
     title: 'Capabilities',
     links: [
-      { href: '/ecommerce-growth', label: 'eCommerce Growth & Operations' },
-      { href: '/web-development', label: 'Web Development & Conversion' },
-      { href: '/ai-automation', label: 'AI Automation' },
-      { href: '/digital-marketing', label: 'Digital Marketing & Creative' },
-      { href: '/operations-supply-chain', label: 'Supply Chain & Operations' },
-      {
-        href: '/lead-generation-sales',
-        label: 'Lead Generation & Sales Systems',
-      },
-      {
-        href: '/ai-content-production',
-        label: 'AI Video & Content Production',
-      },
-      { href: '/audits-diagnostics', label: 'Audits & Diagnostics' },
+      { href: '/services', label: 'All services' },
+      ...SERVICES.map(service => ({
+        href: service.href,
+        label: service.title,
+      })),
     ],
   },
   {
@@ -89,15 +82,7 @@ const GROUPS = [
 
 export default function SitemapPage() {
   return (
-    <PageShell
-      footerLinks={[
-        { href: '/', label: 'Home' },
-        { href: '/services', label: 'Services' },
-        { href: '/blog', label: 'Blog' },
-        { href: '/contact', label: 'Contact' },
-        { href: '/privacy', label: 'Privacy' },
-      ]}
-    >
+    <PageShell>
       <JsonLd data={breadcrumbJsonLd('/sitemap')} />
 
       <PageHero
