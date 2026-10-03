@@ -20,8 +20,9 @@ const LEADERSHIP: Leader[] = [
     name: 'Hammad Ayub',
     copy: 'Leads marketing, paid media, customer relationships, content direction and commercial positioning.',
     email: 'hammad@mettglobal.com',
-    whatsapp: '18328580716',
-    phone: { href: 'tel:+18328580716', label: '+1 (832) 858-0716' },
+    photo: '/team/HammadAyub.jpeg',
+    whatsapp: '+923355005901',
+    phone: { href: 'tel:+923355005901', label: '+92 335 500 5901' },
   },
   {
     role: 'Co-Founder',
