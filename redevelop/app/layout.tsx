@@ -39,7 +39,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       {/*
         The background follows the surface the page declares, so rubber-band
         overscroll matches the section behind it exactly as it did when each

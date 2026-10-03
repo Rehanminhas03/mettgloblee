@@ -3,6 +3,7 @@ import { Contact } from '@/components/home/Contact';
 import { Faq } from '@/components/home/Faq';
 import { jsonLdHtml } from '@/components/JsonLd';
 import { Hero } from '@/components/home/Hero';
+import { Intro } from '@/components/home/Intro';
 import { HomeTracking } from '@/components/home/HomeTracking';
 import { Partners } from '@/components/home/Partners';
 import { Services } from '@/components/home/Services';
@@ -98,6 +99,7 @@ export default function HomePage() {
         <HomeTracking />
         <SiteHeader />
 
+        <Intro />
         <main id="main-content">
           <Hero />
           <Services />

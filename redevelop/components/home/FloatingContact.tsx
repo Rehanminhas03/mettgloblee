@@ -1,11 +1,35 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { WaIcon } from './WaIcon';
 
-/** `.floating-contact` — WhatsApp and call buttons, fixed bottom-right on every page. */
+/**
+ * `.floating-contact` — WhatsApp and call buttons, fixed bottom-right on every
+ * page. On the homepage they wait until the visitor scrolls, so they never sit
+ * over the hero's service line (the hero already carries a meeting CTA).
+ */
 export function FloatingContact() {
+  const isHome = usePathname() === '/';
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    if (!isHome) return;
+    const update = () => setScrolled(window.scrollY > 160);
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    return () => window.removeEventListener('scroll', update);
+  }, [isHome]);
+
+  const hidden = isHome && !scrolled;
+
   return (
     <aside
       data-floating-contact
-      className="max-b560:bottom-[14px] max-b560:right-[14px] fixed right-[22px] bottom-[22px] z-[45] flex items-center gap-2"
+      inert={hidden}
+      className={`max-b560:bottom-[14px] max-b560:right-[14px] fixed right-[22px] bottom-[22px] z-[45] flex items-center gap-2 transition-[opacity,transform] duration-300 ${
+        hidden ? 'pointer-events-none translate-y-3 opacity-0' : ''
+      }`}
     >
       <a
         href="https://wa.me/923046551553?text=Hi%20MettGlobal"

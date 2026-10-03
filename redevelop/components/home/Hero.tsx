@@ -1,56 +1,110 @@
-import { HomeButton } from './Button';
+import Link from 'next/link';
+import { SERVICES } from '@/lib/services';
+import { Knewave } from 'next/font/google';
 import { Reveal } from './Reveal';
 
+/** Short sentence-style labels for the service line along the hero's foot. */
+const SERVICE_LINE: Record<string, string> = {
+  '/ecommerce-supply-chain': 'eCommerce & supply chain.',
+  '/performance-marketing': 'Performance marketing.',
+  '/software-development': 'Web & software development.',
+  '/ai-automation': 'AI automation & content.',
+};
+
+/** Brush display face for the hero word only. */
+const display = Knewave({ weight: '400', subsets: ['latin'], display: 'swap' });
+
+const LETTER =
+  'animate-rise inline-block transition-[transform,color] duration-500 ease-[cubic-bezier(.2,.7,.2,1)] hover:-translate-y-[.07em] hover:-rotate-3 motion-reduce:animate-none';
+
+/** One word of the wordmark, its letters rising in on a stagger. */
+function Word({
+  text,
+  offset,
+  className,
+}: {
+  text: string;
+  offset: number;
+  className: string;
+}) {
+  return (
+    <span className={`inline-flex ${className}`}>
+      {[...text].map((letter, index) => (
+        <span
+          key={index}
+          className={LETTER}
+          style={{
+            animationDelay: `calc(var(--intro-delay, 0ms) + ${(offset + index) * 55}ms)`,
+          }}
+        >
+          {letter}
+        </span>
+      ))}
+    </span>
+  );
+}
+
 /**
- * `.hero` — dark opening panel with the orbiting monogram. Sized to fill the
- * first screen below the sticky header (94px) without overflowing it.
+ * `.hero` — minimal light opening panel: one oversized brush word across the top, the headline, and the four services along the foot. Fills the
+ * first screen below the sticky header.
  */
 export function Hero() {
   return (
     <section
       id="home"
-      className="px-pad max-b900:grid-cols-1 max-b900:content-center max-b900:py-[72px] max-b560:px-6 max-b560:py-14 min-h-view relative grid grid-cols-[1.15fr_.85fr] items-center gap-[60px] overflow-hidden bg-black py-16 text-white"
+      className="min-h-view bg-[#eee8dd] text-ink max-b900:justify-center max-b900:gap-12 relative flex flex-col justify-between overflow-hidden pt-[clamp(20px,3vh,40px)] pb-[clamp(24px,4vh,44px)]"
     >
-      {/* .hero-noise — a 7px dot lattice */}
-      <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.12)_0.7px,transparent_0.7px)] bg-[length:7px_7px] opacity-[.16]" />
-      <div className="absolute top-[-330px] right-[-260px] h-[720px] w-[720px] rounded-full border border-[rgba(224,188,104,0.18)] bg-[radial-gradient(circle_at_35%_65%,rgba(184,137,45,0.22),transparent_55%)] blur-[1px]" />
+      {/* Display word — decorative; letters rise in, then lift on hover */}
+      <div
+        aria-hidden="true"
+        className={`${display.className} px-pad text-ink relative my-auto flex overflow-hidden py-[.08em] text-[27vw] short:text-[22vw] leading-[.95] tracking-[-.01em] whitespace-nowrap select-none`}
+      >
+        <Word text="Scale" offset={0} className="" />
+      </div>
 
-      <Reveal className="relative z-[3]">
-        <div className="text-gold2 flex items-center gap-3 text-[11px] font-extrabold tracking-[.2em] uppercase">
-          <span className="bg-gold2 h-px w-[34px]" />
-          One partner. Multiple disciplines.
-        </div>
-        <h1 className="max-b560:text-[40px] my-6 max-w-[760px] text-[clamp(42px,5.2vw,76px)] leading-[1.02] tracking-[-.05em]">
-          We build the systems behind{' '}
-          <em className="text-gold2 font-serif font-normal not-italic">
-            serious growth.
-          </em>
-        </h1>
-        <p className="max-b560:text-[16px] max-w-[600px] text-[clamp(16px,1.25vw,18px)] leading-[1.7] text-[#aaa69d]">
-          eCommerce and supply chain, performance marketing, web and software
-          development, and AI automation — one partner, so businesses can move
-          faster without managing a fragmented vendor stack.
-        </p>
-        <div className="max-b560:flex-col mt-8 flex flex-wrap gap-3">
-          <HomeButton href="/appointment" variant="gold">
+      <div className="px-pad">
+        <Reveal className="max-b900:flex-col max-b900:items-start flex items-end justify-between gap-10">
+          <h1 className="max-b560:text-[44px] m-0 max-w-[1200px] text-[clamp(48px,6.4vw,108px)] leading-[.98] font-medium tracking-[-.05em]">
+            We build the systems
+            <br className="max-b560:hidden" /> behind{' '}
+            <span className="text-gold">serious growth.</span>
+          </h1>
+
+          <Link
+            href="/appointment"
+            className="group bg-ink mb-[.6vw] inline-flex flex-none items-center gap-5 rounded-full py-2 pr-2 pl-7 text-[15px] font-semibold text-white transition-colors duration-300 hover:bg-black"
+          >
             Book a meeting
-          </HomeButton>
-          <HomeButton href="#services" variant="ghost">
-            Explore services
-          </HomeButton>
-        </div>
-      </Reveal>
+            <span className="bg-gold2 text-ink grid h-11 w-11 place-items-center rounded-full transition-transform duration-300 group-hover:translate-x-1">
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+              >
+                <path d="M4 12h15M13 6l6 6-6 6" />
+              </svg>
+            </span>
+          </Link>
+        </Reveal>
 
-      <Reveal className="max-b900:hidden relative z-[3] grid h-[460px] place-items-center">
-        <div className="animate-spin-ring absolute h-[420px] w-[420px] rounded-full border border-[rgba(224,188,104,0.22)]" />
-        <div className="animate-spin-ring-rev absolute h-[310px] w-[310px] rounded-full border border-[rgba(224,188,104,0.22)]" />
-
-        {/* .mega-mark — the oversized monogram, gently floating */}
-        <div className="animate-float relative h-[230px] w-[210px] scale-[.78] drop-shadow-[0_30px_50px_rgba(184,137,45,0.18)]">
-          <span className="absolute top-5 left-0 h-14 w-14 rounded-full bg-[linear-gradient(145deg,#f0cf7d,#9c6c17)]" />
-          <i className="absolute top-0 left-[90px] h-[205px] w-[72px] rotate-[35deg] rounded-[60px] bg-[linear-gradient(145deg,#f0cf7d,#9c6c17)]" />
-        </div>
-      </Reveal>
+        <nav
+          aria-label="Services"
+          className="max-b900:grid max-b900:grid-cols-2 max-b900:gap-y-3 max-b560:grid-cols-1 mt-[clamp(28px,5vh,56px)] flex justify-between gap-x-8"
+        >
+          {SERVICES.map(service => (
+            <Link
+              key={service.href}
+              href={service.href}
+              className="hover:text-gold text-[clamp(15px,1.15vw,19px)] transition-colors duration-300"
+            >
+              {SERVICE_LINE[service.href] ?? service.title}
+            </Link>
+          ))}
+        </nav>
+      </div>
     </section>
   );
 }
