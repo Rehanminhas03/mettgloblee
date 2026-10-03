@@ -40,17 +40,29 @@ export function ContactForm() {
 
       <label className={LABEL}>
         Name
-        <input name="name" autoComplete="name" required className={FIELD} />
+        <input
+          name="name"
+          maxLength={100}
+          autoComplete="name"
+          required
+          className={FIELD}
+        />
       </label>
       <label className={LABEL}>
         Company
-        <input name="company" autoComplete="organization" className={FIELD} />
+        <input
+          name="company"
+          maxLength={120}
+          autoComplete="organization"
+          className={FIELD}
+        />
       </label>
       <label className={LABEL}>
         Email
         <input
           type="email"
           name="email"
+          maxLength={254}
           autoComplete="email"
           required
           className={FIELD}
@@ -68,6 +80,7 @@ export function ContactForm() {
         What are you trying to improve?
         <textarea
           name="message"
+          maxLength={3000}
           required
           minLength={20}
           className={`${FIELD} min-h-[140px] resize-y`}

@@ -133,6 +133,7 @@ function DetailsStage({
           <input
             ref={nameRef}
             name="name"
+            maxLength={100}
             required
             autoComplete="name"
             className={DARK_FIELD}
@@ -143,6 +144,7 @@ function DetailsStage({
           <input
             type="email"
             name="email"
+            maxLength={254}
             required
             autoComplete="email"
             className={DARK_FIELD}
@@ -150,12 +152,19 @@ function DetailsStage({
         </label>
         <label className={DARK_FIELD_LABEL}>
           Phone / WhatsApp
-          <input name="phone" autoComplete="tel" className={DARK_FIELD} />
+          <input
+            type="tel"
+            name="phone"
+            maxLength={30}
+            autoComplete="tel"
+            className={DARK_FIELD}
+          />
         </label>
         <label className={DARK_FIELD_LABEL}>
           Company
           <input
             name="company"
+            maxLength={120}
             autoComplete="organization"
             className={DARK_FIELD}
           />
@@ -164,6 +173,7 @@ function DetailsStage({
           Anything we should prepare?
           <textarea
             name="meeting_context"
+            maxLength={3000}
             placeholder="A short note about the business, problem or decision you want to discuss."
             className={`${DARK_FIELD} min-h-[92px] resize-y`}
           />

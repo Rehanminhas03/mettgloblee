@@ -149,6 +149,7 @@ export function Contact() {
               Name
               <input
                 name="name"
+                maxLength={100}
                 required
                 autoComplete="name"
                 className={FIELD}
@@ -159,6 +160,7 @@ export function Contact() {
               <input
                 type="email"
                 name="email"
+                maxLength={254}
                 required
                 autoComplete="email"
                 className={FIELD}
@@ -168,6 +170,7 @@ export function Contact() {
               Company
               <input
                 name="company"
+                maxLength={120}
                 autoComplete="organization"
                 className={FIELD}
               />
@@ -184,6 +187,7 @@ export function Contact() {
               Project brief
               <textarea
                 name="message"
+                maxLength={3000}
                 required
                 placeholder="Tell us the problem, current setup and desired outcome."
                 className={`${FIELD} short:min-h-[64px] min-h-[96px] resize-y`}

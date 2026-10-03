@@ -1,6 +1,7 @@
 import { CaseStudies } from '@/components/home/CaseStudies';
 import { Contact } from '@/components/home/Contact';
 import { Faq } from '@/components/home/Faq';
+import { jsonLdHtml } from '@/components/JsonLd';
 import { Hero } from '@/components/home/Hero';
 import { HomeTracking } from '@/components/home/HomeTracking';
 import { Partners } from '@/components/home/Partners';
@@ -82,7 +83,7 @@ export default function HomePage() {
         <script
           key={index}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          dangerouslySetInnerHTML={{ __html: jsonLdHtml(schema) }}
         />
       ))}
 
