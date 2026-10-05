@@ -1,0 +1,304 @@
+@import 'tailwindcss';
+
+/*
+  Design tokens ported 1:1 from the original stylesheets.
+  - `styles.css`  -> homepage palette (gold / gold2 / ink / paper ...)
+  - `page.css`    -> standard page palette (p-*)
+  - `article.css` -> insight & update article palette (a-*, shares p-gold / p-ink)
+*/
+@theme {
+  /* ---- Homepage palette (src/styles.css :root) ---- */
+  --color-black: #090908;
+  --color-ink: #121210;
+  --color-cream: #f3f0e8;
+  --color-paper: #fbfaf6;
+  --color-gold: #b8892d;
+  --color-gold2: #e0bc68;
+  --color-muted: #777268;
+  --color-line: #dcd5c8;
+
+  /* ---- Standard page palette (src/page.css :root) ---- */
+  --color-p-paper: #f4efe5;
+  --color-p-ink: #11110f;
+  --color-p-gold: #c9982c;
+  --color-p-gold2: #dfba64;
+  --color-p-muted: #69645c;
+  --color-p-line: #d8cfbf;
+  --color-p-dark: #090908;
+
+  /* ---- Article palette (src/article.css :root) ---- */
+  --color-a-ivory: #f5f0e6;
+  --color-a-muted: #6d685f;
+  --color-a-line: #d9d0c0;
+
+  /* ---- Typography ---- */
+  --font-sans: Inter, Arial, Helvetica, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-dm: 'DM Sans', sans-serif;
+
+  /* ---- Section gutter: `--pad: clamp(24px, 5vw, 78px)` ---- */
+  --spacing-pad: clamp(24px, 5vw, 78px);
+  --spacing-casepad: max(24px, 6vw);
+
+  /*
+    Breakpoints are declared one pixel above the original `max-width` values so
+    that Tailwind's `max-*` variants (`width < N`) reproduce the source
+    `@media (max-width: N)` queries exactly.
+  */
+  --breakpoint-b430: 431px;
+  --breakpoint-b480: 481px;
+  --breakpoint-b560: 561px;
+  --breakpoint-b620: 621px;
+  --breakpoint-b650: 651px;
+  --breakpoint-b700: 701px;
+  --breakpoint-b760: 761px;
+  --breakpoint-b900: 901px;
+  --breakpoint-b1000: 1001px;
+  --breakpoint-b1050: 1051px;
+  --breakpoint-b1100: 1101px;
+  --breakpoint-b1120: 1121px;
+
+  /* ---- Animations ---- */
+  --animate-spin-ring: spin 22s linear infinite;
+  --animate-spin-ring-rev: spin 16s linear infinite reverse;
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-intro-done: intro-done 0s linear 2.1s forwards;
+  --animate-rise: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes intro-done {
+    to {
+      visibility: hidden;
+    }
+  }
+  @keyframes intro-up {
+    to {
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes intro-down {
+    to {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes intro-seam {
+    0% {
+      transform: translateX(-50%) scaleX(0);
+      opacity: 1;
+    }
+    70% {
+      transform: translateX(-50%) scaleX(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-50%) scaleX(1);
+      opacity: 0;
+    }
+  }
+  @keyframes intro-mark {
+    0% {
+      opacity: 0;
+      filter: blur(6px);
+    }
+    35%,
+    75% {
+      opacity: 1;
+      filter: blur(0);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(0.6em) rotate(4deg);
+    }
+  }
+  @keyframes float {
+    50% {
+      transform: translateY(-16px) rotate(1deg);
+    }
+  }
+}
+
+/*
+  The only non-utility rules in the project. Tailwind cannot express these:
+  document-level defaults, the `prefers-reduced-motion` blanket reset and the
+  native `<summary>` marker removal.
+*/
+/*
+  A full screen below the sticky header (72px, 64px under 900px). Homepage
+  sections use it as a minimum, so longer content still grows past it.
+*/
+/* Desktop screens with little height (e.g. 1366×768 laptops). */
+@custom-variant short (@media (max-height: 820px) and (min-width: 901px));
+
+@utility min-h-view {
+  min-height: calc(100svh - 72px);
+  @media (width < 901px) {
+    min-height: calc(100svh - 64px);
+  }
+}
+
+/*
+  Laptop windows are often only ~560-740px tall once the browser toolbar is
+  counted. Below 780px the homepage sections scale down (stepped, so each
+  step still fits its screen) and their minimum height is divided by the same
+  factor, so every section still fills exactly one screen with no scrolling.
+*/
+@media (min-width: 901px) and (max-height: 780px) {
+  main[data-home] > section {
+    zoom: 0.96;
+  }
+  main[data-home] > section:not([data-natural]) {
+    min-height: calc((100svh - 72px) / 0.96);
+  }
+}
+@media (min-width: 901px) and (max-height: 740px) {
+  main[data-home] > section {
+    zoom: 0.9;
+  }
+  main[data-home] > section:not([data-natural]) {
+    min-height: calc((100svh - 72px) / 0.9);
+  }
+}
+@media (min-width: 901px) and (max-height: 700px) {
+  main[data-home] > section {
+    zoom: 0.84;
+  }
+  main[data-home] > section:not([data-natural]) {
+    min-height: calc((100svh - 72px) / 0.84);
+  }
+}
+@media (min-width: 901px) and (max-height: 660px) {
+  main[data-home] > section {
+    zoom: 0.78;
+  }
+  main[data-home] > section:not([data-natural]) {
+    min-height: calc((100svh - 72px) / 0.78);
+  }
+}
+@media (min-width: 901px) and (max-height: 620px) {
+  main[data-home] > section {
+    zoom: 0.72;
+  }
+  main[data-home] > section:not([data-natural]) {
+    min-height: calc((100svh - 72px) / 0.72);
+  }
+}
+@media (min-width: 901px) and (max-height: 580px) {
+  main[data-home] > section {
+    zoom: 0.66;
+  }
+  main[data-home] > section:not([data-natural]) {
+    min-height: calc((100svh - 72px) / 0.66);
+  }
+}
+
+@keyframes orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@utility animate-orbit {
+  animation: orbit-spin 90s linear infinite;
+}
+@utility animate-orbit-reverse {
+  animation: orbit-spin 70s linear infinite reverse;
+}
+
+@keyframes float-y {
+  from {
+    translate: 0 0;
+  }
+  to {
+    translate: 0 -14px;
+  }
+}
+@utility animate-float {
+  animation: float-y 6s ease-in-out infinite alternate;
+}
+@utility animate-float-slow {
+  animation: float-y 9s ease-in-out infinite alternate-reverse;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Keep anchor targets clear of the sticky header (72px, 64px below 900px). */
+    scroll-padding-top: 72px;
+  }
+  @media (width < 901px) {
+    html {
+      scroll-padding-top: 64px;
+    }
+  }
+  body {
+    overflow-x: hidden;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /*
+    Document-level focus ring. The homepage stylesheet used `--gold2` and the
+    page/article stylesheets used `--gold`, so the surface decides the colour.
+  */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible {
+    outline: 3px solid var(--color-gold2);
+    outline-offset: 3px;
+  }
+
+  [data-surface='page']
+    :is(a, button, input, select, textarea, summary):focus-visible,
+  [data-surface='article']
+    :is(a, button, input, select, textarea, summary):focus-visible {
+    outline-color: var(--color-p-gold);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*
+  Below 1100px the cookie banner spans the bottom of the screen, so lift the
+  floating WhatsApp / call buttons above it until a choice is made. Unlayered,
+  so it outranks the buttons' own `bottom-*` utility.
+*/
+@media (width < 1101px) {
+  body:has([data-consent-banner]) [data-floating-contact] {
+    bottom: calc(var(--consent-height, 150px) + 24px);
+  }
+}
+
+/* Homepage opening curtain: skipped after the first visit in a session, and
+   the hero's letters wait for it only while it is actually playing. */
+html[data-intro='seen'] [data-intro] {
+  display: none;
+}
+html:not([data-intro='seen']) {
+  --intro-delay: 1350ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    --intro-delay: 0ms;
+  }
+}
