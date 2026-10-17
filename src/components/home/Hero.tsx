@@ -99,7 +99,7 @@ export function Hero() {
       {/* Display word — decorative; letters rise in, then lift on hover */}
       <div
         aria-hidden="true"
-        className={`${display.className} px-pad text-ink short:text-[23vw] relative my-auto flex overflow-hidden py-[.08em] text-[27vw] leading-[.95] tracking-[-.01em] whitespace-nowrap select-none`}
+        className={`${display.className} px-pad text-ink short:text-[19vw] relative my-auto flex overflow-hidden py-[.08em] text-[22vw] leading-[.95] tracking-[-.01em] whitespace-nowrap select-none`}
       >
         <Word text="Scale" offset={0} className="" />
       </div>
