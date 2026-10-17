@@ -56,7 +56,7 @@ export function Contact() {
           {/* .contact-actions */}
           <div className="border-t border-[rgba(224,188,104,.22)]">
             <a
-              href="https://wa.me/923046551553?text=Hi%20MettGlobal%2C%20I%27d%20like%20to%20discuss%20a%20project."
+              href="https://wa.me/923046551553?text=Hi%20Mett%20Global%2C%20I%27d%20like%20to%20discuss%20a%20project."
               target="_blank"
               rel="noopener"
               className={`group ${ROW}`}
@@ -65,7 +65,7 @@ export function Contact() {
                 className={`${ROW_LABEL} max-b560:gap-2 inline-flex items-center gap-[10px]`}
               >
                 <WaIcon />
-                WhatsApp MettGlobal
+                WhatsApp Mett Global
               </span>
               <b className={ROW_VALUE}>+92 304 6551553</b>
               <i aria-hidden="true" className={DOT} />
@@ -108,7 +108,7 @@ export function Contact() {
             </span>
             <strong>Usman Rafiq</strong>
             <a
-              href="https://wa.me/18328580716?text=Hi%20Usman%2C%20I%27d%20like%20to%20discuss%20MettGlobal%20services."
+              href="https://wa.me/18328580716?text=Hi%20Usman%2C%20I%27d%20like%20to%20discuss%20Mett%20Global%20services."
               target="_blank"
               rel="noopener"
               className="underline"
@@ -132,7 +132,7 @@ export function Contact() {
             </span>
             <h3 className="my-2 text-[26px]">Tell us what you need.</h3>
             <p className="mt-0 mb-5 text-sm leading-[1.6] text-[#aaa69d]">
-              Send the brief directly to MettGlobal. The form is routed to{' '}
+              Send the brief directly to Mett Global. The form is routed to{' '}
               <strong>contact@mettglobal.com</strong>.
             </p>
           </div>
@@ -144,7 +144,7 @@ export function Contact() {
             <input
               type="hidden"
               name="_subject"
-              value="New MettGlobal website enquiry"
+              value="New Mett Global website enquiry"
             />
             <input type="hidden" name="_captcha" value="false" />
             <input

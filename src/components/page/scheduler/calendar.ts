@@ -91,9 +91,9 @@ export function buildMonth(
   };
 }
 
-const EVENT_TITLE = 'MettGlobal Discovery Meeting';
+const EVENT_TITLE = 'Mett Global Discovery Meeting';
 const EVENT_DETAILS =
-  'Tentative MettGlobal meeting request. Final time and joining or location details are confirmed by email.';
+  'Tentative Mett Global meeting request. Final time and joining or location details are confirmed by email.';
 
 /** Pre-filled Google Calendar event for the chosen slot. */
 export function googleCalendarUrl(
@@ -134,9 +134,9 @@ export function buildIcs(
     `DTSTART:${calendarStamp(start)}`,
     `DTEND:${calendarStamp(end)}`,
     `SUMMARY:${EVENT_TITLE}`,
-    'DESCRIPTION:Tentative MettGlobal meeting request. Final time and meeting details are confirmed by email.',
+    'DESCRIPTION:Tentative Mett Global meeting request. Final time and meeting details are confirmed by email.',
     `LOCATION:${location}`,
-    'ATTENDEE;CN=MettGlobal:mailto:contact@mettglobal.com',
+    'ATTENDEE;CN=Mett Global:mailto:contact@mettglobal.com',
     'STATUS:TENTATIVE',
     'END:VEVENT',
     'END:VCALENDAR',

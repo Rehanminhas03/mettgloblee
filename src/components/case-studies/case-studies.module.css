@@ -1,0 +1,836 @@
+/*
+  Scoped styles for the operations case studies (detail pages, portfolio
+  journey and homepage proof band).
+
+  ONE PLACE TO TUNE MOTION: --cs-duration, --cs-stagger and --cs-ease on
+  .scope. The enhancer reads these with getComputedStyle, so CSS and
+  JavaScript never disagree. The enhancer clamps total motion to 1400ms.
+
+  Every final label and graphic is visible in this base CSS. Nothing starts
+  hidden, so a failed script or disabled JavaScript still shows the complete
+  static figure.
+*/
+.scope {
+  --cs-ink: var(--color-ink, #121210);
+  --cs-paper: var(--color-paper, #fbfaf6);
+  /* Decorative gold (lines, dots, borders). Text gold is --cs-gold-light on ink. */
+  --cs-gold: #b8892d;
+  --cs-gold-light: var(--color-gold2, #e0bc68);
+  --cs-line: #dcd5c8;
+  --cs-duration: 900ms;
+  --cs-stagger: 45ms;
+  --cs-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  color: var(--cs-ink);
+  font-family: var(--font-inter, Inter), Arial, Helvetica, sans-serif;
+  background: var(--cs-paper);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+.scope *,
+.scope *::before,
+.scope *::after {
+  box-sizing: border-box;
+}
+.scope :is(h1, h2, h3, h4, p, figure, dl, dd) {
+  margin: 0;
+}
+.scope :is(h1, h2, h3, h4) {
+  line-height: 1.12;
+  text-wrap: balance;
+}
+.scope :is(a, summary):focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 5px;
+}
+.scope a {
+  color: inherit;
+  text-underline-offset: 0.22em;
+}
+.scope :is(ul, ol) {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: min(100%, 1320px);
+  margin-inline: auto;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--cs-ink);
+  color: var(--cs-paper);
+  padding: 48px 8vw 80px;
+}
+.breadcrumb {
+  margin-bottom: 36px;
+  font-size: 0.875rem;
+}
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  list-style: none;
+}
+.breadcrumb li:not(:last-child)::after {
+  content: '/';
+  margin-left: 1rem;
+  opacity: 0.6;
+}
+.breadcrumb a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.hero .eyebrow {
+  color: var(--cs-gold-light);
+}
+.projectType {
+  font-size: 0.875rem;
+  margin-top: 8px !important;
+}
+.hero h1 {
+  max-width: 1050px;
+  font-size: clamp(36px, 5.2vw, 72px);
+  letter-spacing: -0.045em;
+  margin-top: 20px;
+}
+.deck {
+  max-width: 800px;
+  margin-top: 24px !important;
+  font-size: 1.125rem;
+}
+.clientDetails {
+  display: grid;
+  gap: 16px 36px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  margin-top: 28px !important;
+  max-width: 1000px;
+}
+.clientDetails dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.clientDetails dd {
+  margin-top: 4px;
+}
+.confidentiality {
+  margin-top: 16px !important;
+  font-size: 0.875rem;
+  max-width: 760px;
+}
+
+.resultPanel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(24px, 4vw, 60px);
+  align-items: center;
+  margin-top: 48px;
+  padding: clamp(20px, 3vw, 40px);
+  border: 1px solid var(--cs-gold);
+  border-radius: 28px;
+}
+.resultText,
+.figure {
+  min-width: 0;
+}
+.resultText {
+  container-type: inline-size;
+}
+.metric {
+  color: var(--cs-gold-light);
+  font-size: clamp(36px, 8vw, 144px);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+  font-variant-numeric: tabular-nums;
+}
+/* The longest numeric metric (">£50,000") has eight characters. Container
+   units keep it inside its actual column, including at 320px and when zoomed. */
+@supports (font-size: 1cqw) {
+  .metric {
+    font-size: clamp(32px, 16cqw, 144px);
+  }
+}
+.coverageMetric {
+  color: var(--cs-gold-light);
+  font-size: clamp(38px, 6vw, 96px);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+/* The final text is always rendered and reserves the width, so a temporary
+   count-up never shifts the layout. */
+.numberBox {
+  display: inline-grid;
+  position: relative;
+  max-width: 100%;
+}
+.numberReserve {
+  grid-area: 1 / 1;
+  visibility: hidden;
+}
+.numberValue {
+  grid-area: 1 / 1;
+}
+.metric .numberBox {
+  white-space: nowrap;
+}
+.coverageMetric .numberBox {
+  white-space: normal;
+}
+.metricLabel {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-top: 14px !important;
+}
+.qualifier {
+  margin-top: 16px !important;
+  font-size: 0.9375rem;
+}
+
+/* ---------- Figures ---------- */
+.figureHeading {
+  margin-top: 8px !important;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.graphic {
+  margin-top: 20px;
+  min-height: 160px;
+}
+.figure figcaption {
+  margin-top: 20px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+.processPath {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 3;
+  color: var(--cs-gold-light);
+  display: block;
+}
+.connector {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 40 / 7;
+  color: var(--cs-gold-light);
+  display: block;
+}
+.processLabels {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin-top: 18px !important;
+  font-size: 0.9375rem;
+}
+.processLabels li {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  gap: 12px;
+}
+.processLabels li > span {
+  color: var(--cs-gold-light);
+  font-variant-numeric: tabular-nums;
+}
+.accuracyRows {
+  display: grid;
+  gap: 24px;
+}
+.trackLabel {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.9375rem;
+}
+.trackLabel strong {
+  color: var(--cs-gold-light);
+}
+.track {
+  position: relative;
+  height: 12px;
+  margin-top: 12px;
+  border: 1px solid var(--cs-gold-light);
+  border-radius: 99px;
+}
+.track > span {
+  display: block;
+  width: 95%;
+  height: 100%;
+  background: var(--cs-gold-light);
+  border-radius: inherit;
+  transform-origin: left center;
+}
+.small {
+  font-size: 0.875rem;
+}
+.originGrid,
+.invoiceCompare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.originGrid p,
+.invoiceCompare > div {
+  padding: 14px;
+  border: 1px solid var(--cs-gold);
+  border-radius: 12px;
+  font-size: 0.875rem;
+}
+.invoiceCompare .eyebrow {
+  margin-bottom: 10px;
+}
+.correctionLabels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  color: var(--cs-gold-light);
+  font-size: 0.9375rem;
+  margin-top: 16px;
+}
+.labelList,
+.channelGrid {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+}
+.labelList {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.labelList li,
+.channelGrid li {
+  border: 1px solid var(--cs-gold);
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+}
+.channelGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-block: 12px 20px !important;
+}
+.etsyGrid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 6px;
+  max-width: 360px;
+}
+.etsyGrid span {
+  aspect-ratio: 1;
+  border-radius: 4px;
+  background: var(--cs-gold-light);
+}
+.score {
+  color: var(--cs-gold-light);
+  font-weight: 700;
+  margin-top: 16px !important;
+}
+.supportingStats {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px !important;
+}
+.supportingStats > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: baseline;
+  border-top: 1px solid var(--cs-gold);
+  padding-top: 10px;
+}
+.supportingStats dt {
+  font-size: 0.875rem;
+}
+.supportingStats dd {
+  color: var(--cs-gold-light);
+  font-weight: 800;
+}
+
+/* ---------- Story ---------- */
+.story {
+  max-width: 768px;
+  margin-inline: auto;
+  padding: 56px 24px 80px;
+}
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.9375rem;
+  margin-bottom: 24px;
+}
+.beat {
+  position: relative;
+  padding: 0 0 44px 28px;
+  border-left: 1px solid var(--cs-line);
+}
+.beat::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  border-radius: 50%;
+  background: var(--cs-gold);
+}
+.beat h2 {
+  font-size: clamp(25px, 3vw, 36px);
+  margin-top: 12px;
+  letter-spacing: -0.025em;
+}
+.beat > p:last-child {
+  margin-top: 20px;
+}
+.handled,
+.questions,
+.related {
+  margin-top: 32px;
+}
+.handled h2,
+.questions h2,
+.related h2 {
+  font-size: clamp(25px, 3vw, 34px);
+  margin-bottom: 24px;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+.chips li {
+  border: 1px solid var(--cs-line);
+  border-radius: 99px;
+  padding: 7px 12px;
+  font-size: 0.875rem;
+}
+.questions details {
+  border-top: 1px solid var(--cs-line);
+  padding-block: 12px;
+}
+.questions details:last-child {
+  border-bottom: 1px solid var(--cs-line);
+}
+.questions summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding-block: 10px;
+  font-weight: 700;
+}
+.questions details p {
+  padding-block: 10px 14px;
+}
+.closing {
+  border-top: 1px solid var(--cs-line);
+  margin-top: 48px;
+  padding-top: 36px;
+}
+.closingLine {
+  font-size: clamp(25px, 3vw, 36px);
+  line-height: 1.3;
+  font-weight: 700;
+  margin-bottom: 24px !important;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 22px;
+  margin-top: 20px;
+  border: 1px solid var(--cs-ink);
+  border-radius: 99px;
+  background: var(--cs-ink);
+  color: var(--cs-paper) !important;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+.related ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  list-style: none;
+}
+.related a {
+  display: block;
+  height: 100%;
+  border: 1px solid var(--cs-line);
+  padding: 24px;
+  border-radius: 24px;
+  text-decoration: none;
+}
+.related h3 {
+  font-size: 1.25rem;
+  margin-block: 16px;
+}
+.related a > p {
+  font-size: 0.9375rem;
+}
+.related a > span:last-child {
+  display: block;
+  font-weight: 700;
+  margin-top: 20px;
+  font-size: 0.9375rem;
+}
+
+/* ---------- Portfolio journey ---------- */
+.journeyHeading {
+  font-size: clamp(28px, 3vw, 42px);
+  margin-bottom: 32px !important;
+}
+.journey {
+  list-style: none;
+  position: relative;
+}
+/* The spine is decorative (pseudo-elements, never exposed to assistive tech).
+   ::before is the pale rail. ::after is the gold fill. By default the fill is
+   complete; JourneyScroll switches it to scroll-driven via --journey-progress. */
+.journey::before,
+.journey::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 19px;
+  width: 2px;
+  border-radius: 2px;
+}
+.journey::before {
+  background: var(--cs-line);
+}
+.journey::after {
+  background: var(--cs-gold);
+  transform-origin: top center;
+}
+.journey[data-enhanced='true']::after {
+  transform: scaleY(var(--journey-progress, 0));
+}
+.journey > li {
+  position: relative;
+  padding: 0 0 20px 64px;
+}
+.journey > li:last-child {
+  padding-bottom: 0;
+}
+.milestone {
+  position: absolute;
+  left: 0;
+  top: 14px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 2px solid var(--cs-gold);
+  background: var(--cs-gold);
+  color: var(--cs-ink);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  transition:
+    background-color 0.35s var(--cs-ease),
+    transform 0.35s var(--cs-ease);
+}
+/* Once enhanced, a milestone is paper until the line reaches it. */
+.journey[data-enhanced='true'] .milestone:not([data-reached='true']) {
+  background: var(--cs-paper);
+}
+.journey[data-enhanced='true'] .milestone[data-reached='true'] {
+  transform: scale(1.08);
+}
+.journeyStop {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.34fr) minmax(0, 1fr);
+  gap: clamp(16px, 3vw, 40px);
+  align-items: start;
+  padding: 22px clamp(20px, 2.6vw, 32px);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--cs-line);
+  border-radius: 24px;
+  background: var(--cs-paper);
+}
+/* Soft gold ring in the corner, like the cards elsewhere on the site. */
+.journeyStop::after {
+  content: '';
+  position: absolute;
+  top: -90px;
+  right: -100px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 1px solid rgba(184, 137, 45, 0.26);
+  box-shadow: 0 0 0 40px rgba(184, 137, 45, 0.035);
+  pointer-events: none;
+}
+.journeyFigure,
+.journeyBody {
+  position: relative;
+  z-index: 1;
+}
+/* Three tones in a fixed rhythm (dark, cream, light), as on the homepage
+   cards. Light tones use a darker gold so small gold text stays readable. */
+.toneLight .journeyMetric,
+.toneCream .journeyMetric {
+  color: #84601a;
+}
+.toneLight .journeyBody .eyebrow,
+.toneCream .journeyBody .eyebrow {
+  color: #84601a;
+}
+.toneCream {
+  background: linear-gradient(145deg, #f7f1e5, #fff);
+}
+.toneLight {
+  background: #fff;
+}
+.toneDark {
+  background: var(--cs-ink);
+  border-color: #26231e;
+  color: var(--cs-paper);
+}
+.toneDark .journeyMetric,
+.toneDark .journeyBody .eyebrow,
+.toneDark .textLink {
+  color: var(--cs-gold-light);
+}
+.toneDark .journeyFigure .small,
+.toneDark .journeyClient,
+.toneDark .journeySummary {
+  color: #cfcabd;
+}
+.toneDark .chips li {
+  border-color: rgba(224, 188, 104, 0.35);
+  color: var(--cs-paper);
+}
+.journeyFigure {
+  min-width: 0;
+}
+.journeyMetric {
+  font-size: clamp(30px, 3.4vw, 50px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+.journeyFigure .small {
+  margin-top: 6px !important;
+  line-height: 1.4;
+}
+.journeyBody {
+  min-width: 0;
+}
+.journeyClient {
+  font-size: 0.8125rem;
+  margin-top: 2px !important;
+}
+.journeyBody h4 {
+  font-size: clamp(20px, 2vw, 26px);
+  letter-spacing: -0.025em;
+  margin-block: 10px 8px;
+}
+.journeyBody h4 a {
+  text-decoration: none;
+}
+.journeySummary {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+.journeyBody .chips {
+  margin-top: 12px;
+  gap: 6px;
+}
+.journeyBody .chips li {
+  padding: 4px 10px;
+  font-size: 0.8125rem;
+}
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+/* ---------- Homepage proof band ---------- */
+.proof {
+  background: var(--cs-ink);
+  color: var(--cs-paper);
+  padding: 56px 8vw;
+}
+.proof h2 {
+  font-size: clamp(28px, 3vw, 42px);
+  margin-bottom: 16px;
+}
+.proofGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  margin-top: 32px !important;
+  border-top: 1px solid var(--cs-gold);
+}
+.proofGrid li {
+  min-width: 0;
+  border-bottom: 1px solid var(--cs-gold);
+}
+.proofGrid a {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 24px 14px;
+  height: 100%;
+  min-height: 160px;
+  text-decoration: none;
+  font-size: 0.9375rem;
+}
+/* Small service label above each figure, so the mix reads at a glance. */
+.proofTag {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cs-gold-light);
+  opacity: 0.85;
+}
+.proofValue {
+  font-size: clamp(28px, 3vw, 52px);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--cs-gold-light);
+  overflow-wrap: anywhere;
+}
+.proofNote {
+  margin-top: 24px !important;
+  max-width: 880px;
+  font-size: 0.875rem;
+}
+
+/* ---------- Service-page link block ---------- */
+.serviceLink {
+  padding: 64px 8vw;
+  background: var(--cs-paper);
+}
+.serviceLink h2 {
+  font-size: clamp(28px, 3vw, 42px);
+}
+.serviceLink p {
+  margin-top: 16px !important;
+  max-width: 640px;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 999px) {
+  .proofGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .proofValue {
+    font-size: 36px;
+  }
+}
+@media (max-width: 900px) {
+  .resultPanel {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .clientDetails {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 620px) {
+  /* Two narrow columns: scale the figure to the column and never split it. */
+  .proofValue {
+    font-size: clamp(20px, 6.2vw, 30px);
+    white-space: nowrap;
+    overflow-wrap: normal;
+  }
+  .hero {
+    padding: 24px 24px 48px;
+  }
+  .resultPanel {
+    padding: 20px;
+    border-radius: 24px;
+  }
+  .proof {
+    padding: 40px 24px;
+  }
+  .serviceLink {
+    padding: 48px 24px;
+  }
+  .related ul {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .journey > li {
+    padding-left: 44px;
+  }
+  .milestone {
+    width: 32px;
+    height: 32px;
+    top: 12px;
+    font-size: 0.75rem;
+  }
+  .journey::before,
+  .journey::after {
+    left: 15px;
+  }
+  .journeyStop {
+    padding: 18px;
+  }
+}
+/* Stack the figure above the story once two columns get too narrow. */
+@media (max-width: 760px) {
+  .journeyStop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+  .journeyMetric {
+    font-size: 36px;
+  }
+}
+@media (max-width: 379px) {
+  .originGrid,
+  .invoiceCompare {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+/* The proof band stays two columns on ordinary phones (375px and up); only
+   very narrow screens get a single column. */
+@media (max-width: 339px) {
+  .proofGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scope {
+    scroll-behavior: auto;
+  }
+  .scope *,
+  .scope *::before,
+  .scope *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -3,10 +3,17 @@ import { ContactBand } from '@/components/page/ContactBand';
 import { ProcessGrid, Section, SectionHead } from '@/components/page/ui';
 import { JsonLd } from '@/components/JsonLd';
 import { WorkCardGrid } from '@/components/site/WorkCards';
+import { caseStudyCards } from '@/content/operations-case-studies';
 import { CASE_STUDIES } from '@/lib/caseStudies';
 import { breadcrumbJsonLd, pageMetadata, pageJsonLd } from '@/lib/seo';
 
 export const metadata = pageMetadata('/case-studies');
+
+/* The curated studies plus the six operations studies, de-duplicated by URL. */
+const ALL_STUDIES = [...CASE_STUDIES, ...caseStudyCards].filter(
+  (card, index, cards) =>
+    !card.href || cards.findIndex(other => other.href === card.href) === index,
+);
 
 const METHOD = [
   {
@@ -48,7 +55,7 @@ export default function CaseStudiesPage() {
           <span className="text-p-gold">promises.</span>
         </h1>
         <p className="text-p-muted max-b620:text-[16px] my-[1em] max-w-[780px] text-[18px] leading-[1.75]">
-          MettGlobal case studies show how strategy, creative, technology,
+          Mett Global case studies show how strategy, creative, technology,
           automation and operations come together around real client problems.
           Performance figures are published only where the underlying evidence
           supports them.
@@ -56,7 +63,7 @@ export default function CaseStudiesPage() {
       </section>
 
       <Section className="bg-[#f6f1e7]">
-        <WorkCardGrid items={CASE_STUDIES} />
+        <WorkCardGrid items={ALL_STUDIES} />
       </Section>
 
       <Section dark>

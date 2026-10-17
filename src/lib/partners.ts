@@ -27,19 +27,19 @@ export const PARTNERS: Partner[] = [
     name: 'Jetour Ittehad',
     caption: 'Automotive · Islamabad',
     region: 'local',
-    href: '/case-study-jetour-ittehad',
+    href: '/portfolio/jetour-ittehad',
   },
   {
     name: 'Hyundai Islamabad',
     caption: 'Automotive · Islamabad',
     region: 'local',
-    href: '/case-study-hyundai-islamabad',
+    href: '/portfolio/hyundai-islamabad',
   },
   {
     name: 'CSM Ittehad',
     caption: 'EV automotive · Islamabad',
     region: 'local',
-    href: '/case-study-csm-ittehad',
+    href: '/portfolio/csm-ittehad',
   },
   {
     name: 'SFYKEA',

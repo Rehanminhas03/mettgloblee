@@ -72,7 +72,7 @@ export default function ErpGuide() {
       dek={
         'Spreadsheets and chat threads work until several teams depend on the same customer. That is the point where one shared system starts to pay for itself.'
       }
-      meta={'METTGLOBAL FIELD GUIDE · SOFTWARE & SYSTEMS · 9 MIN READ'}
+      meta={'METT GLOBAL FIELD GUIDE · SOFTWARE & SYSTEMS · 9 MIN READ'}
       graphic={
         <ChipGraphic
           steps={['ENQUIRY', 'FOLLOW-UP', 'ORDER', 'DELIVERY', 'AFTER-SALES']}

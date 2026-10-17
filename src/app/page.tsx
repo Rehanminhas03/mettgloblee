@@ -1,7 +1,8 @@
 import { Contact } from '@/components/home/Contact';
 import { Faq } from '@/components/home/Faq';
 import { jsonLdHtml } from '@/components/JsonLd';
-import { Hero } from '@/components/home/Hero';
+import { ResultsStrip } from '@/components/case-studies/ResultsStrip';
+import { HeroMarquee } from '@/components/home/HeroMarquee';
 import { Intro } from '@/components/home/Intro';
 import { HomeTracking } from '@/components/home/HomeTracking';
 import { Partners } from '@/components/home/Partners';
@@ -12,7 +13,7 @@ import { pageMetadata } from '@/lib/seo';
 import { SERVICES } from '@/lib/services';
 import { FAQS } from '@/lib/faqs';
 import { LEADERSHIP } from '@/lib/leadership';
-import { SITE_URL } from '@/lib/site';
+import { SITE_URL, SOCIAL_PROFILES } from '@/lib/site';
 
 export const metadata = pageMetadata('/');
 
@@ -20,8 +21,8 @@ export const metadata = pageMetadata('/');
 const WEBSITE_JSON_LD = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'MettGlobal',
-  alternateName: 'Mett Global',
+  name: 'Mett Global',
+  alternateName: 'MettGlobal',
   url: `${SITE_URL}/`,
 };
 
@@ -29,12 +30,13 @@ const ORGANIZATION_JSON_LD = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   '@id': `${SITE_URL}/#organization`,
-  name: 'MettGlobal',
-  alternateName: 'Mett Global',
+  name: 'Mett Global',
+  alternateName: 'MettGlobal',
   url: `${SITE_URL}/`,
   logo: `${SITE_URL}/logo-512.png`,
   description:
-    'MettGlobal is a Pakistan-based global partner that builds, grows and automates businesses through digital marketing and growth, web and software development, AI automation and content, and e-commerce and supply chain.',
+    'Mett Global was founded in 2025 and is based in Islamabad, Pakistan. It builds, grows and automates businesses through digital marketing and growth, web and software development, AI automation and content, and e-commerce and supply chain.',
+  foundingDate: '2025',
   email: 'contact@mettglobal.com',
   telephone: '+92-304-6551553',
   contactPoint: {
@@ -79,12 +81,7 @@ const ORGANIZATION_JSON_LD = {
     addressCountry: 'PK',
   },
   hasMap: 'https://maps.app.goo.gl/9PrdtKZQhU1X93em7',
-  sameAs: [
-    'https://www.linkedin.com/company/mett-global/',
-    'https://www.facebook.com/share/1ETMXRB1Ls/',
-    'https://www.instagram.com/mettglobal',
-    'https://x.com/mettglobal',
-  ],
+  sameAs: SOCIAL_PROFILES.map(profile => profile.href),
 };
 
 const FAQ_JSON_LD = {
@@ -100,7 +97,7 @@ const FAQ_JSON_LD = {
 const PROFESSIONAL_SERVICE_JSON_LD = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'MettGlobal',
+  name: 'Mett Global',
   url: `${SITE_URL}/`,
   telephone: '+92-304-6551553',
   email: 'contact@mettglobal.com',
@@ -147,7 +144,8 @@ export default function HomePage() {
 
         <Intro />
         <main id="main-content" data-home>
-          <Hero />
+          <HeroMarquee />
+          <ResultsStrip />
           <Services />
           <Partners />
           <Faq />

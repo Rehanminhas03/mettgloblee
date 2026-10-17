@@ -3,7 +3,16 @@ import { CARD_TITLE, CardTop, TONES, ToneCard } from '@/components/ui/ToneCard';
 import type { WorkCard } from '@/lib/caseStudies';
 
 /** `.case-card` — the homepage case-study card, used site-wide. */
-export function WorkCardItem({ item, num }: { item: WorkCard; num: number }) {
+export function WorkCardItem({
+  item,
+  num,
+  titleAs: Title = 'h3',
+}: {
+  item: WorkCard;
+  num: number;
+  /** Heading level for the card title, so it can sit under a subsection H3. */
+  titleAs?: 'h3' | 'h4';
+}) {
   const tone = TONES[item.tone];
   const hasMetrics = Boolean(item.metrics?.length);
   const external = Boolean(item.href?.startsWith('http'));
@@ -24,9 +33,9 @@ export function WorkCardItem({ item, num }: { item: WorkCard; num: number }) {
         {item.brand}
       </div>
 
-      <h3 className={`${CARD_TITLE} mt-[14px] mb-3 max-w-[700px]`}>
+      <Title className={`${CARD_TITLE} mt-[14px] mb-3 max-w-[700px]`}>
         {item.title}
-      </h3>
+      </Title>
       {item.copy ? (
         <p
           className={`relative z-[1] m-0 max-w-[680px] text-[15px] leading-[1.65] ${tone.copy}`}
@@ -97,9 +106,11 @@ export function WorkCardItem({ item, num }: { item: WorkCard; num: number }) {
 export function WorkCardGrid({
   items,
   cols = 3,
+  titleAs,
 }: {
   items: WorkCard[];
   cols?: 2 | 3;
+  titleAs?: 'h3' | 'h4';
 }) {
   return (
     <div
@@ -110,8 +121,8 @@ export function WorkCardGrid({
       }`}
     >
       {items.map((item, index) => (
-        <Reveal key={item.brand} className="h-full">
-          <WorkCardItem item={item} num={index + 1} />
+        <Reveal key={item.href ?? item.brand} className="h-full">
+          <WorkCardItem item={item} num={index + 1} titleAs={titleAs} />
         </Reveal>
       ))}
     </div>

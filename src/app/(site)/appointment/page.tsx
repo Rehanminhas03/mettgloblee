@@ -23,7 +23,7 @@ export default function AppointmentPage() {
           <span className="text-p-gold">Pick a time.</span>
         </h1>
         <p className="text-p-muted my-[1em] max-w-[760px] text-[17px] leading-[1.75]">
-          A cleaner, calendar-first way to request time with MettGlobal. Select
+          A cleaner, calendar-first way to request time with Mett Global. Select
           the meeting format, choose a preferred slot, then add your contact
           details. Requests currently route to{' '}
           <strong>contact@mettglobal.com</strong> for confirmation.
@@ -35,8 +35,8 @@ export default function AppointmentPage() {
       <ContactBand
         heading="Need a faster answer?"
         copy="Use WhatsApp for a quick fit check before requesting a meeting."
-        ctaHref="https://wa.me/923046551553?text=Hi%20MettGlobal%2C%20I%27d%20like%20to%20discuss%20a%20meeting."
-        ctaLabel="WhatsApp MettGlobal"
+        ctaHref="https://wa.me/923046551553?text=Hi%20Mett%20Global%2C%20I%27d%20like%20to%20discuss%20a%20meeting."
+        ctaLabel="WhatsApp Mett Global"
       />
     </PageShell>
   );

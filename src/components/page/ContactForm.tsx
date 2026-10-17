@@ -21,7 +21,7 @@ export function ContactForm() {
       <input
         type="hidden"
         name="_subject"
-        value="New MettGlobal website enquiry"
+        value="New Mett Global website enquiry"
       />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_captcha" value="false" />

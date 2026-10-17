@@ -18,7 +18,7 @@ import {
 } from '@/components/page/case';
 import { breadcrumbJsonLd, pageMetadata, caseStudyJsonLd } from '@/lib/seo';
 
-export const metadata = pageMetadata('/case-study-csm-ittehad');
+export const metadata = pageMetadata('/portfolio/csm-ittehad');
 
 const CHALLENGES = [
   {
@@ -75,8 +75,8 @@ const PROOF = [
 export default function CsmCaseStudyPage() {
   return (
     <PageShell>
-      <JsonLd data={breadcrumbJsonLd('/case-study-csm-ittehad')} />
-      <JsonLd data={caseStudyJsonLd('/case-study-csm-ittehad')} />
+      <JsonLd data={breadcrumbJsonLd('/portfolio/csm-ittehad')} />
+      <JsonLd data={caseStudyJsonLd('/portfolio/csm-ittehad')} />
 
       <CaseHero
         tone="csm"
@@ -86,7 +86,7 @@ export default function CsmCaseStudyPage() {
         titleAccent="to showroom traffic."
         lede={
           <>
-            MettGlobal built the digital foundation and campaign operating
+            Mett Global built the digital foundation and campaign operating
             system around CSM Ittehad&rsquo;s EV launch activity — combining
             social setup, acquisition, lead automation, digital journey and
             local visibility.
@@ -94,7 +94,7 @@ export default function CsmCaseStudyPage() {
         }
         panelLabel="REPORTING STANDARD"
         panelValue="Measured, with attribution clearly labelled."
-        panelCopy="The campaign figures on this page come from client-reported performance in the supplied case-study file. MettGlobal does not publish spend, CPL, ROI or closed-sales claims until those figures are supported by underlying records."
+        panelCopy="The campaign figures on this page come from client-reported performance in the supplied case-study file. Mett Global does not publish spend, CPL, ROI or closed-sales claims until those figures are supported by underlying records."
         kpis={[
           { value: '~400', label: 'client-reported leads' },
           { value: '112', label: 'confirmed showroom visits' },

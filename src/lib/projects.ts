@@ -173,9 +173,9 @@ export const PROJECTS: Project[] = [
     ],
     portals: true,
     seo: {
-      title: 'Ittehad Automotive Dealerships ERP Case Study | MettGlobal',
+      title: 'Ittehad Automotive Dealerships ERP Case Study | Mett Global',
       description:
-        'How MettGlobal is building a complete dealership management system for three showrooms, covering sales, service, parts, accounts and a CEO portal.',
+        'How Mett Global is building a complete dealership management system for three showrooms, covering sales, service, parts, accounts and a CEO portal.',
     },
   },
   {
@@ -186,7 +186,7 @@ export const PROJECTS: Project[] = [
     sector: 'On-demand car care · Islamabad',
     title: 'A door-to-door car wash,',
     accent: 'run from one platform.',
-    lede: 'SFYKEA brings professional car washing to customers’ homes and offices in Islamabad. MettGlobal built the company website, the customer app on iOS and Android, and the admin and partner portals that run bookings, riders and areas behind it.',
+    lede: 'SFYKEA brings professional car washing to customers’ homes and offices in Islamabad. Mett Global built the company website, the customer app on iOS and Android, and the admin and partner portals that run bookings, riders and areas behind it.',
     links: [
       { label: 'Visit website', href: 'https://sfykea.com/' },
       {
@@ -259,9 +259,9 @@ export const PROJECTS: Project[] = [
       ],
     },
     seo: {
-      title: 'SFYKEA Case Study: Car Wash App & Portals | MettGlobal',
+      title: 'SFYKEA Case Study: Car Wash App & Portals | Mett Global',
       description:
-        'How MettGlobal built the website, Flutter app and admin and partner portals for SFYKEA, a door-to-door car wash service in Islamabad.',
+        'How Mett Global built the website, Flutter app and admin and partner portals for SFYKEA, a door-to-door car wash service in Islamabad.',
     },
   },
   {
@@ -327,9 +327,9 @@ export const PROJECTS: Project[] = [
       ],
     },
     seo: {
-      title: 'Mowing Case Study: Field-Ops Software | MettGlobal',
+      title: 'Mowing Case Study: Field-Ops Software | Mett Global',
       description:
-        'How MettGlobal built a custom Laravel and Vue 3 scheduling and workforce platform for a commercial lawn-care business.',
+        'How Mett Global built a custom Laravel and Vue 3 scheduling and workforce platform for a commercial lawn-care business.',
     },
   },
   {
@@ -386,9 +386,9 @@ export const PROJECTS: Project[] = [
       ],
     },
     seo: {
-      title: 'Ittehad Steel Marketing Case | MettGlobal',
+      title: 'Ittehad Steel Marketing Case | Mett Global',
       description:
-        'Instagram management, video reels, and billboard and poster design MettGlobal delivered for Ittehad Steel, a steel manufacturer in Islamabad.',
+        'Instagram management, video reels, and billboard and poster design Mett Global delivered for Ittehad Steel, a steel manufacturer in Islamabad.',
     },
   },
   {
@@ -440,9 +440,9 @@ export const PROJECTS: Project[] = [
       ],
     },
     seo: {
-      title: 'Serenada Mental Health Website & SEO | MettGlobal',
+      title: 'Serenada Mental Health Website & SEO | Mett Global',
       description:
-        'Website design, development and ongoing SEO MettGlobal delivered for Serenada Mental Health, a psychiatric and counseling practice in Texas.',
+        'Website design, development and ongoing SEO Mett Global delivered for Serenada Mental Health, a psychiatric and counseling practice in Texas.',
     },
   },
   {
@@ -492,9 +492,9 @@ export const PROJECTS: Project[] = [
       ],
     },
     seo: {
-      title: 'Prospect Smile Dental Website & Local SEO | MettGlobal',
+      title: 'Prospect Smile Dental Website & Local SEO | Mett Global',
       description:
-        'Website design, development and local SEO MettGlobal delivered for Prospect Smile, a family and cosmetic dental clinic in Mount Prospect, Illinois.',
+        'Website design, development and local SEO Mett Global delivered for Prospect Smile, a family and cosmetic dental clinic in Mount Prospect, Illinois.',
     },
   },
   {
@@ -546,9 +546,9 @@ export const PROJECTS: Project[] = [
       ],
     },
     seo: {
-      title: "Luxury O'Hare Limo Website & SEO | MettGlobal",
+      title: "Luxury O'Hare Limo Website & SEO | Mett Global",
       description:
-        "Website design, development and SEO MettGlobal delivered for Luxury O'Hare Limo, a chauffeured transportation service in Chicago.",
+        "Website design, development and SEO Mett Global delivered for Luxury O'Hare Limo, a chauffeured transportation service in Chicago.",
     },
   },
 ];

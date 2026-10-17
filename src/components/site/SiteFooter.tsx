@@ -1,8 +1,9 @@
 import Link from 'next/link';
+import { CookieSettingsButton } from '@/components/CookieSettingsButton';
 import { CurrentYear } from '@/components/home/CurrentYear';
 import { FOOTER_NAV, LEGAL_NAV } from '@/lib/navigation';
 import { SERVICES } from '@/lib/services';
-import { ADDRESS_LINE, MAPS_URL } from '@/lib/site';
+import { ADDRESS_LINE, MAPS_URL, SOCIAL_URLS } from '@/lib/site';
 import { SiteLogo } from './SiteLogo';
 
 const SOCIAL_BADGE =
@@ -10,9 +11,9 @@ const SOCIAL_BADGE =
 
 const SOCIALS = [
   {
-    href: 'https://www.linkedin.com/company/mett-global/',
+    href: SOCIAL_URLS.linkedin,
     label: 'LinkedIn',
-    aria: 'MettGlobal on LinkedIn',
+    aria: 'Mett Global on LinkedIn',
     badge: (
       <span className={`${SOCIAL_BADGE} border-0 !bg-[#0a66c2] text-white`}>
         <svg
@@ -27,9 +28,9 @@ const SOCIALS = [
     ),
   },
   {
-    href: 'https://www.facebook.com/share/1ETMXRB1Ls/?mibextid=wwXIfr',
+    href: SOCIAL_URLS.facebook,
     label: 'Facebook',
-    aria: 'MettGlobal on Facebook',
+    aria: 'Mett Global on Facebook',
     badge: (
       <span className={`${SOCIAL_BADGE} border-0 !bg-[#1877f2] text-white`}>
         <svg
@@ -44,9 +45,9 @@ const SOCIALS = [
     ),
   },
   {
-    href: 'https://www.instagram.com/mettglobal',
+    href: SOCIAL_URLS.instagram,
     label: 'Instagram',
-    aria: 'MettGlobal on Instagram',
+    aria: 'Mett Global on Instagram',
     badge: (
       <span
         className={`${SOCIAL_BADGE} border-0 !bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285aeb_90%)] text-white`}
@@ -74,9 +75,43 @@ const SOCIALS = [
     ),
   },
   {
-    href: 'https://x.com/mettglobal',
+    href: SOCIAL_URLS.tiktok,
+    label: 'TikTok',
+    aria: 'Mett Global on TikTok',
+    badge: (
+      <span className={`${SOCIAL_BADGE} border-0 !bg-black text-white`}>
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-[14px] w-[14px]"
+          fill="currentColor"
+        >
+          <path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.27 0 .53.04.77.12V9.7a5.7 5.7 0 1 0 4.93 5.65V9.1a7.4 7.4 0 0 0 4.3 1.38V7.4a4.3 4.3 0 0 1-3.2-1.6Z" />
+        </svg>
+      </span>
+    ),
+  },
+  {
+    href: SOCIAL_URLS.youtube,
+    label: 'YouTube',
+    aria: 'Mett Global on YouTube',
+    badge: (
+      <span className={`${SOCIAL_BADGE} border-0 !bg-[#ff0000] text-white`}>
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-[15px] w-[15px]"
+          fill="currentColor"
+        >
+          <path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.27 5 12 5 12 5s-6.27 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2C2 8.78 2 12 2 12s0 3.22.4 4.8a2.5 2.5 0 0 0 1.76 1.77C5.73 19 12 19 12 19s6.27 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77C22 15.22 22 12 22 12s0-3.22-.4-4.8ZM10 15V9l5.2 3L10 15Z" />
+        </svg>
+      </span>
+    ),
+  },
+  {
+    href: SOCIAL_URLS.x,
     label: 'X',
-    aria: 'MettGlobal on X',
+    aria: 'Mett Global on X',
     badge: (
       <span className={`${SOCIAL_BADGE} border-0 !bg-black text-white`}>
         <svg
@@ -187,7 +222,7 @@ export function SiteFooter() {
 
       <div className="border-line text-muted max-b560:flex-col max-b560:gap-2 col-span-full flex items-center justify-between gap-6 border-t pt-6 text-[9px] tracking-[.16em]">
         <span>
-          © <CurrentYear /> METTGLOBAL
+          © <CurrentYear /> METT GLOBAL
         </span>
         <nav aria-label="Legal" className="flex flex-wrap gap-x-5 gap-y-2">
           {LEGAL_NAV.map(link => (
@@ -199,6 +234,7 @@ export function SiteFooter() {
               {link.label}
             </Link>
           ))}
+          <CookieSettingsButton className="hover:text-ink cursor-pointer border-0 bg-transparent p-0 tracking-[inherit] text-inherit uppercase transition-colors" />
         </nav>
         <span>ISLAMABAD · PAKISTAN · GLOBAL DELIVERY</span>
       </div>

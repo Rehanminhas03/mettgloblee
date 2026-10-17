@@ -46,7 +46,7 @@ export default function GrowthSystemGuide() {
       dek={
         'Acquisition is a chain. Creative can earn attention, but the offer, page, follow-up and delivery determine whether that attention becomes business.'
       }
-      meta={'METTGLOBAL FIELD GUIDE · PAID GROWTH · 7 MIN READ'}
+      meta={'METT GLOBAL FIELD GUIDE · PAID GROWTH · 7 MIN READ'}
       graphic={
         <ChipGraphic steps={['AUDIENCE', 'AD', 'OFFER', 'PAGE', 'FOLLOW-UP']} />
       }

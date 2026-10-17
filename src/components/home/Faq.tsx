@@ -76,7 +76,7 @@ export function Faq() {
       id="faq"
       className="min-h-view px-pad max-b700:px-6 max-b700:py-[68px] short:py-8 flex flex-col justify-center bg-[#eee8dd] py-14"
     >
-      <div className="text-gold2 text-[11px] font-extrabold tracking-[.2em] uppercase">
+      <div className="text-gold text-[11px] font-extrabold tracking-[.2em] uppercase">
         03 / FREQUENTLY ASKED QUESTIONS
       </div>
 
@@ -89,7 +89,7 @@ export function Faq() {
           </h2>
           <p className="text-muted mt-5 mb-0 leading-[1.75]">
             What clients usually want to know about scope, delivery, meetings,
-            collaboration and how MettGlobal works.
+            collaboration and how Mett Global works.
           </p>
         </Reveal>
 

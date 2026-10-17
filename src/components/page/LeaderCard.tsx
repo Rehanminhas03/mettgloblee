@@ -9,6 +9,8 @@ export type Leader = {
   /** International format without `+`, e.g. `18328580716`. */
   whatsapp?: string;
   phone?: { href: string; label: string };
+  /** Further numbers, shown under `phone` (for example a U.S. line). */
+  extraPhones?: { href: string; label: string }[];
 };
 
 const CONTACT =
@@ -82,6 +84,16 @@ export function LeaderCard({ leader }: { leader: Leader }) {
             </a>
           </li>
         ) : null}
+        {leader.extraPhones?.map(extra => (
+          <li key={extra.href}>
+            <a href={extra.href} className={CONTACT}>
+              <span className={CONTACT_ICON}>
+                <PhoneIcon />
+              </span>
+              {extra.label}
+            </a>
+          </li>
+        ))}
         {leader.whatsapp ? (
           <li>
             <a

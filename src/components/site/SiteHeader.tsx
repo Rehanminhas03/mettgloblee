@@ -16,6 +16,7 @@ import {
 import {
   HEADER_CTA,
   HEADER_NAV,
+  PHONE_US,
   WHATSAPP_URL,
   isCurrent,
 } from '@/lib/navigation';
@@ -40,6 +41,32 @@ function CtaArrow() {
         <path d="M4 12h15M13 6l6 6-6 6" />
       </svg>
     </span>
+  );
+}
+
+/** Same round badge as the WhatsApp button, so the pair reads as one group. */
+function PhoneLink({ onClick }: { onClick?: () => void }) {
+  return (
+    <a
+      href={PHONE_US.href}
+      aria-label={`Call Mett Global on ${PHONE_US.label}`}
+      title={PHONE_US.label}
+      onClick={onClick}
+      className={WA_CLASS}
+    >
+      <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        className="h-[18px] w-[18px]"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M6.6 3.5h2.6l1.5 4.2-2 1.4a12 12 0 0 0 6.2 6.2l1.4-2 4.2 1.5v2.6a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z" />
+      </svg>
+    </a>
   );
 }
 
@@ -73,17 +100,18 @@ export function SiteHeader() {
 
   return (
     <header className="text-ink contents">
-      <Navbar>
+      <Navbar pinned={open}>
         {/* Desktop */}
         <NavBody>
           <SiteLogo compact />
           <NavItems items={items} isCurrent={current} />
           <div className="flex items-center gap-3">
+            <PhoneLink />
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener"
-              aria-label="WhatsApp MettGlobal"
+              aria-label="WhatsApp Mett Global"
               className={WA_CLASS}
             >
               <WaIcon className="!h-[28px] !w-[28px]" />
@@ -123,11 +151,12 @@ export function SiteHeader() {
               </Link>
             ))}
             <div className="flex items-center gap-3">
+              <PhoneLink onClick={close} />
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener"
-                aria-label="WhatsApp MettGlobal"
+                aria-label="WhatsApp Mett Global"
                 onClick={close}
                 className={WA_CLASS}
               >

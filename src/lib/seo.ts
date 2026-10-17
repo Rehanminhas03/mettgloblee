@@ -13,204 +13,204 @@ export type PageSeo = { title: string; description: string };
 
 export const PAGE_SEO = {
   '/': {
-    title: 'MettGlobal | Digital Marketing, Software, AI & E-Commerce',
+    title: 'Mett Global | Digital Marketing, Software, AI & E-Commerce',
     description:
-      'MettGlobal is an Islamabad, Pakistan company that builds, grows and automates businesses worldwide: digital marketing, web and software, AI automation and e-commerce.',
+      'Mett Global is an Islamabad, Pakistan company that builds, grows and automates businesses worldwide: digital marketing, web and software, AI automation and e-commerce.',
   },
   '/services': {
-    title: 'Digital Marketing, Web, AI & E-Commerce Services | MettGlobal',
+    title: 'Digital Marketing, Web, AI & E-Commerce Services | Mett Global',
     description:
-      'Explore MettGlobal services: Digital Marketing & Growth, Web & Software Development, AI Automation & Content, and E-Commerce & Supply Chain.',
+      'Explore Mett Global services: Digital Marketing & Growth, Web & Software Development, AI Automation & Content, and E-Commerce & Supply Chain.',
   },
   '/about': {
-    title: 'About MettGlobal | Founder-Led Growth & Operations',
+    title: 'About Mett Global | Founder-Led Growth & Operations',
     description:
-      'Meet MettGlobal, a Pakistan-based, globally focused team connecting growth, eCommerce, technology and operations.',
+      'Mett Global was founded in 2025 and is based in Islamabad, Pakistan: a founder-led team connecting growth, eCommerce, technology and operations.',
   },
   '/blog': {
-    title: 'MettGlobal Insights | eCommerce, AI & Supply Chain',
+    title: 'Mett Global Insights | eCommerce, AI & Supply Chain',
     description:
       'Practical guides and current briefs on eCommerce operations, marketing, AI automation, websites, sales and supply chain.',
   },
   '/contact': {
-    title: 'Contact MettGlobal | Start a Business Project',
+    title: 'Contact Mett Global | Start a Business Project',
     description:
-      'Tell MettGlobal what is blocking growth, eCommerce, technology, marketing or operations and start a focused project discussion.',
+      'Tell Mett Global what is blocking growth, eCommerce, technology, marketing or operations and start a focused project discussion.',
   },
   '/appointment': {
-    title: 'Book a Strategy Meeting | MettGlobal',
+    title: 'Book a Strategy Meeting | Mett Global',
     description:
-      'Choose a preferred date and time to discuss your business constraint with MettGlobal online or in person.',
+      'Choose a preferred date and time to discuss your business constraint with Mett Global online or in person.',
   },
   '/portfolio': {
-    title: 'MettGlobal Portfolio | Local & International Work',
+    title: 'Mett Global Portfolio | Local & International Work',
     description:
-      'Selected MettGlobal clients and projects across growth, eCommerce, web, AI automation and operations, in Pakistan and internationally.',
+      'Selected Mett Global clients and projects across growth, eCommerce, web, AI automation and operations, in Pakistan and internationally.',
   },
   '/case-studies': {
-    title: 'MettGlobal Case Studies | Growth & Operations',
+    title: 'Mett Global Case Studies | Growth & Operations',
     description:
-      'Review MettGlobal case studies across automotive marketing, lead generation, digital systems and measurable showroom outcomes.',
+      'Review Mett Global case studies across automotive marketing, lead generation, digital systems and measurable showroom outcomes.',
   },
   '/privacy': {
-    title: 'Privacy Policy & Data Use | MettGlobal',
+    title: 'Privacy Policy & Data Use | Mett Global',
     description:
-      'Read how MettGlobal handles website enquiries, analytics, communications and personal information.',
+      'Read how Mett Global handles website enquiries, analytics, communications and personal information.',
   },
   '/terms': {
-    title: 'Website Terms of Use | MettGlobal',
+    title: 'Website Terms of Use | Mett Global',
     description:
-      'Read the terms governing use of the MettGlobal website, enquiries, content, links and service discussions.',
+      'Read the terms governing use of the Mett Global website, enquiries, content, links and service discussions.',
   },
   '/sitemap': {
-    title: 'MettGlobal Sitemap | All Website Pages',
+    title: 'Mett Global Sitemap | All Website Pages',
     description:
-      'Browse the public MettGlobal website, including services, case studies, insights, legal pages and contact routes.',
+      'Browse the public Mett Global website, including services, case studies, insights, legal pages and contact routes.',
   },
 
   /* ---- Service pages ---- */
   '/digital-marketing-growth': {
-    title: 'Digital Marketing & Growth | MettGlobal',
+    title: 'Digital Marketing & Growth | Mett Global',
     description:
-      'Digital Marketing & Growth from MettGlobal: performance marketing, Meta and Google Ads, social media, SEO, creative and analytics built for measurable growth.',
+      'Digital Marketing & Growth from Mett Global: performance marketing, Meta and Google Ads, social media, SEO, creative and analytics built for measurable growth.',
   },
   '/web-software-development': {
-    title: 'Web & Software Development, Custom CRM | MettGlobal',
+    title: 'Web & Software Development, Custom CRM | Mett Global',
     description:
-      'Web & Software Development from MettGlobal: websites, online stores, custom CRMs, web applications, integrations and hosting built around how your business works.',
+      'Web & Software Development from Mett Global: websites, online stores, custom CRMs, web applications, integrations and hosting built around how your business works.',
   },
   '/ai-automation-content': {
-    title: 'AI Automation & Content | MettGlobal',
+    title: 'AI Automation & Content | Mett Global',
     description:
-      'AI Automation & Content from MettGlobal: workflow automation, AI assistants, document and data processing, lead and CRM automation, and on-brand AI content.',
+      'AI Automation & Content from Mett Global: workflow automation, AI assistants, document and data processing, lead and CRM automation, and on-brand AI content.',
   },
   '/ecommerce-supply-chain': {
-    title: 'E-Commerce & Supply Chain Management | MettGlobal',
+    title: 'E-Commerce & Supply Chain Management | Mett Global',
     description:
-      'E-Commerce & Supply Chain from MettGlobal: marketplace management, inventory, sourcing, 3PL and logistics, claims and reimbursement recovery, and reporting.',
+      'E-Commerce & Supply Chain from Mett Global: marketplace management, inventory, sourcing, 3PL and logistics, claims and reimbursement recovery, and reporting.',
   },
 
   /* ---- Case studies ---- */
-  '/case-study-csm-ittehad': {
-    title: 'CSM Ittehad Case Study | MettGlobal',
+  '/portfolio/csm-ittehad': {
+    title: 'CSM Ittehad Case Study | Mett Global',
     description:
-      'A MettGlobal case study on EV marketing, lead generation, automation and showroom visits for CSM Ittehad Islamabad.',
+      'A Mett Global case study on EV marketing, lead generation, automation and showroom visits for CSM Ittehad Islamabad.',
   },
-  '/case-study-hyundai-islamabad': {
-    title: 'Hyundai Islamabad Case Study | MettGlobal',
+  '/portfolio/hyundai-islamabad': {
+    title: 'Hyundai Islamabad Case Study | Mett Global',
     description:
-      'A MettGlobal case study on content, customer journeys, lead handling and local growth infrastructure for Hyundai Islamabad.',
+      'A Mett Global case study on content, customer journeys, lead handling and local growth infrastructure for Hyundai Islamabad.',
   },
-  '/case-study-jetour-ittehad': {
-    title: 'Jetour Ittehad Case Study | MettGlobal',
+  '/portfolio/jetour-ittehad': {
+    title: 'Jetour Ittehad Case Study | Mett Global',
     description:
-      'A MettGlobal case study on Meta lead generation, automation, outdoor visibility and showroom growth for Jetour Ittehad.',
+      'A Mett Global case study on Meta lead generation, automation, outdoor visibility and showroom growth for Jetour Ittehad.',
   },
 
   /* ---- Current platform & policy updates ---- */
   '/update-amazon-fba-fees-2026': {
-    title: 'Amazon FBA Fees 2026: Operator Brief | MettGlobal',
+    title: 'Amazon FBA Fees 2026: Operator Brief | Mett Global',
     description:
       'Understand Amazon’s 2026 US FBA fee changes, SKU-level margins, packaging, inbound costs and inventory actions.',
   },
   '/update-eu-ai-act-transparency-2026': {
-    title: 'EU AI Act Transparency Rules 2026 | MettGlobal Blog',
+    title: 'EU AI Act Transparency Rules 2026 | Mett Global Blog',
     description:
       'A practical business brief on EU AI Act transparency obligations applying from August 2, 2026 for interactive and generative AI systems.',
   },
   '/update-google-ads-consent-2026': {
-    title: 'Google Ads Consent Requirements in 2026 | MettGlobal Blog',
+    title: 'Google Ads Consent Requirements in 2026 | Mett Global Blog',
     description:
       'A practical 2026 checklist for Google Ads consent requirements affecting EEA traffic, measurement, personalization and remarketing.',
   },
   '/update-eu-ics2-2026': {
-    title: 'EU ICS2 in 2026 | MettGlobal Blog',
+    title: 'EU ICS2 in 2026 | Mett Global Blog',
     description:
       'A practical supply-chain brief on the EU Import Control System 2, ENS data quality and all-mode transport requirements in 2026.',
   },
   '/update-google-search-2026': {
-    title: 'Google Search Technical Basics in 2026 | MettGlobal Blog',
+    title: 'Google Search Technical Basics in 2026 | Mett Global Blog',
     description:
       'A current 2026 technical SEO brief based on Google Search documentation covering crawlability, indexing, security, performance and accessibility.',
   },
 
   /* ---- Insight guides ---- */
   '/insight-ecommerce-operations': {
-    title: 'eCommerce Operations After the Click | MettGlobal Blog',
+    title: 'eCommerce Operations After the Click | Mett Global Blog',
     description:
       'A practical guide to operational leaks behind eCommerce growth: inventory, fulfillment, returns, marketplace health and reporting.',
   },
   '/insight-conversion-audit': {
-    title: 'Website Conversion Audit | MettGlobal Blog',
+    title: 'Website Conversion Audit | Mett Global Blog',
     description:
       'A practical conversion-audit framework covering message clarity, trust, mobile friction, CTAs and lead capture.',
   },
   '/insight-ai-automation': {
-    title: 'Practical AI Automation | MettGlobal Blog',
+    title: 'Practical AI Automation | Mett Global Blog',
     description:
       'How to identify AI automation opportunities in repetitive business workflows without automating broken processes.',
   },
   '/insight-growth-system': {
-    title: 'Ads, Offers and Landing Pages | MettGlobal Blog',
+    title: 'Ads, Offers and Landing Pages | Mett Global Blog',
     description:
       'Diagnose the acquisition chain from audience and creative through offer, landing page and follow-up before increasing ad spend.',
   },
   '/insight-supply-chain-control': {
-    title: 'Inventory Accuracy Is a System | MettGlobal Blog',
+    title: 'Inventory Accuracy Is a System | Mett Global Blog',
     description:
       'A practical supply-chain guide to receiving, location control, stock adjustments, cycle counts and inventory exception ownership.',
   },
   '/insight-lead-generation-system': {
-    title: 'Build a Prospecting System | MettGlobal Blog',
+    title: 'Build a Prospecting System | Mett Global Blog',
     description:
       'A practical lead-generation guide covering ICP definition, buying signals, qualification, CRM hygiene, personalized outreach and follow-up.',
   },
   '/insight-ai-video-brief': {
-    title: 'The AI Video Brief | MettGlobal Blog',
+    title: 'The AI Video Brief | Mett Global Blog',
     description:
       'A practical briefing framework for AI-assisted video covering audience, objective, hook, proof, structure, visual direction and human review.',
   },
   '/insight-utm-governance': {
-    title: 'UTMs That Survive Reporting | MettGlobal Blog',
+    title: 'UTMs That Survive Reporting | Mett Global Blog',
     description:
       'A practical UTM governance system for consistent campaign naming, cleaner reporting and fewer attribution surprises.',
   },
   '/insight-product-feed-health': {
-    title: 'The Product Feed Is Part of the Storefront | MettGlobal Blog',
+    title: 'The Product Feed Is Part of the Storefront | Mett Global Blog',
     description:
       'A practical Merchant Center product-feed health check for stable IDs, accurate titles, strong images, price parity and better eligibility.',
   },
   '/insight-landed-cost-model': {
-    title: 'Landed Cost Before Launch | MettGlobal Blog',
+    title: 'Landed Cost Before Launch | Mett Global Blog',
     description:
       'A practical landed-cost model for cross-border launches, including origin charges, freight, duty, destination fees and returns risk.',
   },
   '/insight-3pl-scorecard': {
-    title: 'The 3PL Scorecard | MettGlobal Blog',
+    title: 'The 3PL Scorecard | Mett Global Blog',
     description:
       'How to compare 3PL and warehouse partners using service reliability, inventory control, systems, cost transparency and resilience.',
   },
   '/insight-erp-for-growing-businesses': {
-    title: 'When a Growing Business Needs Its Own ERP | MettGlobal Blog',
+    title: 'When a Growing Business Needs Its Own ERP | Mett Global Blog',
     description:
       'A practical guide to recognising when spreadsheets stop working, how to map the customer journey, and what a custom ERP should track.',
   },
   '/insight-booking-app-partner-portal': {
-    title: 'Booking Apps & Partner Portals Guide | MettGlobal Blog',
+    title: 'Booking Apps & Partner Portals Guide | Mett Global Blog',
     description:
       'What an on-demand service business needs beyond the customer app: slot booking, rider assignment, an owner admin portal and partner portals.',
   },
   '/insight-digital-outdoor-marketing': {
-    title: 'Digital and Outdoor Marketing Together | MettGlobal Blog',
+    title: 'Digital and Outdoor Marketing Together | Mett Global Blog',
     description:
       'How Instagram, short video, billboards and posters can work as one system, with a clear next step and honest measurement.',
   },
 
   /* ---- Utility pages ---- */
   '/404': {
-    title: 'Page Not Found | MettGlobal',
+    title: 'Page Not Found | Mett Global',
     description:
-      'The requested MettGlobal page could not be found. Return to the homepage or explore our services and case studies.',
+      'The requested Mett Global page could not be found. Return to the homepage or explore our services and case studies.',
   },
 } as const satisfies Record<string, PageSeo>;
 
@@ -221,7 +221,19 @@ export type PagePath = keyof typeof PAGE_SEO;
  * injected: canonical, Open Graph, Twitter card and the shared social image.
  */
 export function pageMetadata(path: PagePath): Metadata {
-  const { title, description } = PAGE_SEO[path];
+  return routeMetadata(path, PAGE_SEO[path]);
+}
+
+/**
+ * Same tags as `pageMetadata`, for routes whose copy lives outside
+ * `PAGE_SEO` (the portfolio and operations case-study detail pages). The
+ * shared social image is kept, and the title is used as written so the brand
+ * is never appended twice.
+ */
+export function routeMetadata(
+  path: string,
+  { title, description }: PageSeo,
+): Metadata {
   const url = path === '/' ? `${SITE_URL}/` : `${SITE_URL}${path}`;
 
   return {
@@ -232,7 +244,7 @@ export function pageMetadata(path: PagePath): Metadata {
       title,
       description,
       url,
-      siteName: 'MettGlobal',
+      siteName: 'Mett Global',
       type: 'website',
       locale: 'en_PK',
       images: [{ url: `${SITE_URL}/social-card.png` }],
@@ -279,7 +291,8 @@ export function serviceJsonLd(path: (typeof SERVICE_PATHS)[number]) {
     name: title.split('|')[0].trim(),
     provider: {
       '@type': 'Organization',
-      name: 'MettGlobal',
+      '@id': `${SITE_URL}/#organization`,
+      name: 'Mett Global',
       url: `${SITE_URL}/`,
     },
     areaServed: 'Worldwide',
@@ -310,12 +323,14 @@ export function articleJsonLd(path: PagePath) {
         inLanguage: 'en',
         author: {
           '@type': 'Organization',
-          name: 'MettGlobal',
+          '@id': `${SITE_URL}/#organization`,
+          name: 'Mett Global',
           url: `${SITE_URL}/`,
         },
         publisher: {
           '@type': 'Organization',
-          name: 'MettGlobal',
+          '@id': `${SITE_URL}/#organization`,
+          name: 'Mett Global',
           url: `${SITE_URL}/`,
           logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo-512.png` },
         },
@@ -360,7 +375,7 @@ export function pageJsonLd(path: PagePath, type: WebPageType = 'WebPage') {
     description,
     inLanguage: 'en',
     dateModified: '2026-10-06',
-    isPartOf: { '@type': 'WebSite', name: 'MettGlobal', url: `${SITE_URL}/` },
+    isPartOf: { '@type': 'WebSite', name: 'Mett Global', url: `${SITE_URL}/` },
     about: { '@id': `${SITE_URL}/#organization` },
   };
 }

@@ -39,21 +39,21 @@ export const ERP_CASE_STUDY: WorkCard = {
 
 export const LOCAL_CASE_STUDIES: WorkCard[] = [
   {
-    href: '/case-study-jetour-ittehad',
+    href: '/portfolio/jetour-ittehad',
     tone: 'dark',
     sector: 'AUTOMOTIVE · ISLAMABAD',
     brand: 'JETOUR ITTEHAD',
     title: 'From zero digital presence to a measurable lead engine.',
     copy: 'Brand launch, Meta acquisition, lead automation, outdoor visibility and live activations working as one system.',
     metrics: [
-      { value: '79', label: 'verified leads' },
-      { value: '82%', label: 'from Reel creative' },
-      { value: '20.3%', label: 'visit-stage+' },
+      { value: '1,000+', label: 'verified leads' },
+      { value: '50+', label: 'confirmed bookings' },
+      { value: '30%+', label: 'visit stage or beyond' },
     ],
     linkLabel: 'Read the Jetour case study',
   },
   {
-    href: '/case-study-hyundai-islamabad',
+    href: '/portfolio/hyundai-islamabad',
     tone: 'light',
     sector: 'AUTOMOTIVE · ISLAMABAD',
     brand: 'HYUNDAI ISLAMABAD',
@@ -68,7 +68,7 @@ export const LOCAL_CASE_STUDIES: WorkCard[] = [
     linkLabel: 'Read the Hyundai case study',
   },
   {
-    href: '/case-study-csm-ittehad',
+    href: '/portfolio/csm-ittehad',
     tone: 'cream',
     sector: 'EV AUTOMOTIVE · ISLAMABAD',
     brand: 'CSM ITTEHAD',

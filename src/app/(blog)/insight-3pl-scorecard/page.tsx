@@ -129,7 +129,7 @@ const BLOCKS: Block[] = [
     label: 'FRAMEWORK NOTE',
     body: (
       <SourceNote>
-        This scorecard and its illustrative weights are an original MettGlobal
+        This scorecard and its illustrative weights are an original Mett Global
         planning framework, created to structure a comparable 3PL review. They
         are not a third-party benchmark or a guarantee of performance. Validate
         service levels, insurance, liability, security and local contract terms
@@ -145,11 +145,11 @@ export default function ThreePlScorecardGuide() {
       back="BLOG / SUPPLY CHAIN OPERATIONS"
       title="The 3PL scorecard: how to compare warehouses beyond pick fees"
       dek="The lowest pick fee is rarely the lowest operating cost. Compare a 3PL on the controls that protect customer promise, inventory truth, data flow and the ability to handle a difficult week."
-      meta="METTGLOBAL OPERATOR PLAYBOOK · 3PL SELECTION · 9 MIN READ"
+      meta="METT GLOBAL OPERATOR PLAYBOOK · 3PL SELECTION · 9 MIN READ"
       graphic={
         <ScorecardGraphic
           rows={ROWS}
-          note="Weights are an original MettGlobal planning model, not an industry benchmark."
+          note="Weights are an original Mett Global planning model, not an industry benchmark."
         />
       }
       endHeading="Need to turn warehouse activity into a controlled system?"

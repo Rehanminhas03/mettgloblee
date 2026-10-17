@@ -1,7 +1,11 @@
 /** Homepage FAQ. Drives the accordion and the FAQPage structured data. */
 export const FAQS = [
   {
-    q: 'What does MettGlobal actually do?',
+    q: 'Who is Mett Global and when was it founded?',
+    a: 'Mett Global was founded in 2025 and is based in Islamabad, Pakistan. It is led by founder Hammad Ayub, co-founder and COO Muhammad Ahmad Aamir, and Usman Rafiq, Director of U.S. Business Development.',
+  },
+  {
+    q: 'What does Mett Global actually do?',
     a: 'We build, grow and automate businesses through four services: Digital Marketing & Growth, Web & Software Development (including custom CRMs), AI Automation & Content, and E-Commerce & Supply Chain. We combine them around a defined business problem.',
   },
   {
@@ -14,10 +18,10 @@ export const FAQS = [
   },
   {
     q: 'Do you work with businesses outside Pakistan?',
-    a: 'Yes. MettGlobal is Pakistan-based with international delivery and a U.S. business-development presence. Remote collaboration is built into the operating model.',
+    a: 'Yes. Mett Global is Pakistan-based with international delivery and a U.S. business-development presence. Remote collaboration is built into the operating model.',
   },
   {
-    q: 'Can MettGlobal work alongside our existing team or agency?',
+    q: 'Can Mett Global work alongside our existing team or agency?',
     a: 'Yes. We can own a defined workstream, fill a specialist gap or work as embedded support without replacing an existing internal team or partner.',
   },
   {
