@@ -26,9 +26,7 @@ export function WorkCardItem({
       />
 
       <div
-        className={`relative z-[1] text-xs font-black tracking-[.18em] ${tone.brand} ${
-          hasMetrics ? 'short:mt-5 mt-9' : 'mt-auto pt-12'
-        }`}
+        className={`short:mt-5 relative z-[1] mt-9 text-xs font-black tracking-[.18em] ${tone.brand}`}
       >
         {item.brand}
       </div>
@@ -45,7 +43,7 @@ export function WorkCardItem({
       ) : null}
 
       {!hasMetrics && item.tags?.length ? (
-        <ul className="short:pt-4 relative z-[1] m-0 flex list-none flex-wrap gap-2 p-0 pt-6">
+        <ul className="short:pt-4 relative z-[1] m-0 mt-auto flex list-none flex-wrap gap-2 p-0 pt-6">
           {item.tags.map(tag => (
             <li
               key={tag}

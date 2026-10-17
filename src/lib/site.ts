@@ -32,6 +32,7 @@ export const SOCIAL_URLS = {
   instagram: 'https://www.instagram.com/mettglobal',
   tiktok: 'https://www.tiktok.com/@mett.global',
   youtube: 'https://youtube.com/@mettglobal',
+  pinterest: 'https://www.pinterest.com/mettglobalinc',
   x: 'https://x.com/mettglobal',
 } as const;
 
@@ -41,6 +42,7 @@ export const SOCIAL_PROFILES = [
   { label: 'Instagram', href: SOCIAL_URLS.instagram },
   { label: 'TikTok', href: SOCIAL_URLS.tiktok },
   { label: 'YouTube', href: SOCIAL_URLS.youtube },
+  { label: 'Pinterest', href: SOCIAL_URLS.pinterest },
   { label: 'X', href: SOCIAL_URLS.x },
 ];
 

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { caseStudies, caseStudyPath } from '@/content/operations-case-studies';
 import { JourneyScroll } from './JourneyScroll.client';
+import { MiniVisual, type MiniKind } from './MiniVisual';
 import styles from './case-studies.module.css';
 
 /**
@@ -11,6 +12,16 @@ import styles from './case-studies.module.css';
  */
 /** Card tones in a fixed rhythm: ink, cream, light, then repeat. */
 const TONES = [styles.toneDark, styles.toneCream, styles.toneLight];
+
+/** The small graphic under each stop's figure, by the study's figure type. */
+const MINI: Record<string, MiniKind> = {
+  recovery: 'rise',
+  accuracy: 'bars',
+  sourcing: 'origins',
+  invoice: 'compare',
+  channels: 'channels',
+  etsy: 'tiles',
+};
 
 export function OperationsJourney() {
   return (
@@ -34,6 +45,10 @@ export function OperationsJourney() {
               <div className={styles.journeyFigure}>
                 <p className={styles.journeyMetric}>{study.hero.display}</p>
                 <p className={styles.small}>{study.hero.label}</p>
+                <MiniVisual
+                  kind={MINI[study.visual.type]}
+                  className={styles.journeyMini}
+                />
               </div>
               <div className={styles.journeyBody}>
                 <p className={styles.eyebrow}>{study.category}</p>

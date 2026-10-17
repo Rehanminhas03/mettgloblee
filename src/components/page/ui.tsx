@@ -16,7 +16,7 @@ export function Btn({
   children,
 }: {
   href: string;
-  variant?: 'plain' | 'dark' | 'gold';
+  variant?: 'plain' | 'dark' | 'gold' | 'light';
   children: React.ReactNode;
 }) {
   const className = `inline-flex items-center justify-center rounded-full px-5 py-[15px] text-xs font-extrabold ${
@@ -24,6 +24,8 @@ export function Btn({
       plain: 'border border-p-line',
       dark: 'border border-p-ink bg-p-ink text-white',
       gold: 'border border-p-gold bg-p-gold text-white',
+      /* Light gold with ink text: for use on dark cards. */
+      light: 'border border-p-gold2 bg-p-gold2 text-p-ink',
     }[variant]
   }`;
 

@@ -30,8 +30,10 @@ hero, and the `/case-studies` listing. `/ecommerce-supply-chain` links to them.
 | `src/components/case-studies/CaseStudyVisual.tsx`      | The six figures (recovery, accuracy, sourcing, invoice, channels, etsy).                                                                                    |
 | `src/components/case-studies/OperationsJourney.tsx`    | The six-stop list on `/portfolio`.                                                                                                                          |
 | `src/components/case-studies/JourneyScroll.client.tsx` | Makes the gold line fill as you scroll.                                                                                                                     |
-| `src/components/case-studies/ResultsStrip.tsx`         | The homepage proof band (layout).                                                                                                                           |
-| `src/content/home-proof.ts`                            | **The eight figures in the homepage proof band**: a mix of marketing, software and e-commerce. E-commerce ones are read from the case-study records.        |
+| `src/components/case-studies/ResultsStrip.tsx` | The homepage results carousel (cards with graphics). |
+| `src/components/case-studies/ProofCarousel.client.tsx` | Carousel buttons and gentle autoplay (off with reduced motion, paused on hover or focus). |
+| `src/components/case-studies/MiniVisual.tsx` | The small schematic graphics used on the homepage cards and in the portfolio journey. They never imply a value. |
+| `src/content/home-proof.ts`                            | **The eight cards in the homepage results carousel**: a mix of marketing, software and e-commerce. E-commerce ones are read from the case-study records.        |
 | `src/components/case-studies/RelatedCaseStudies.tsx`   | The two related links at the end of a page.                                                                                                                 |
 | `src/components/case-studies/MotionGate.client.tsx`    | Loads the figure animation only when it nears the screen.                                                                                                   |
 | `src/components/case-studies/enhance-visual.client.ts` | The figure animation itself (line draw, count-up, tile reveal).                                                                                             |
