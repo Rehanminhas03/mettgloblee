@@ -246,7 +246,7 @@ export default function BlogPage() {
       <JsonLd data={pageJsonLd('/blog', 'CollectionPage')} />
 
       <PageHero
-        kicker="METTGLOBAL / BLOG"
+        kicker="METT GLOBAL / BLOG"
         title={
           <>
             Current updates.
@@ -280,7 +280,7 @@ export default function BlogPage() {
 
       <Section dark>
         <SectionHead heading="Field guides" dark>
-          Ten evergreen guides mapped to the services MettGlobal currently
+          Ten evergreen guides mapped to the services Mett Global currently
           offers.
         </SectionHead>
         <BlogGrid>
@@ -316,7 +316,7 @@ export default function BlogPage() {
             Then decide what changes operationally.
           </>
         }
-        copy="If a platform or policy change affects your business, MettGlobal can help translate it into an operating checklist."
+        copy="If a platform or policy change affects your business, Mett Global can help translate it into an operating checklist."
         ctaHref="/appointment"
         ctaLabel="Book a diagnostic meeting"
       />

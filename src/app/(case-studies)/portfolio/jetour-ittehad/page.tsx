@@ -17,7 +17,7 @@ import {
 } from '@/components/page/case';
 import { breadcrumbJsonLd, pageMetadata, caseStudyJsonLd } from '@/lib/seo';
 
-export const metadata = pageMetadata('/case-study-jetour-ittehad');
+export const metadata = pageMetadata('/portfolio/jetour-ittehad');
 
 const CHALLENGES = [
   {
@@ -42,14 +42,23 @@ const CHALLENGES = [
   },
 ];
 
+/* The early 04–09 Sep 2026 lead-sheet snapshot (79 leads). Overall campaign
+   totals are in the hero; these are kept separate and dated. */
+const SNAPSHOT = [
+  { value: '79', label: 'verified leads' },
+  { value: '82.3%', label: 'from Reel creative' },
+  { value: '21.5%', label: 'visit stage or beyond' },
+  { value: '2', label: 'confirmed bookings' },
+];
+
 const PIPELINE = [
-  { stage: 'New / in pipeline', width: '51.9%', value: '41 · 51.9%' },
+  { stage: 'New / in pipeline', width: '50.6%', value: '40 · 50.6%' },
   { stage: 'Visit scheduled', width: '15.2%', value: '12 · 15.2%' },
   { stage: 'Unreachable', width: '19.0%', value: '15 · 19.0%' },
   { stage: 'Details sent', width: '6.3%', value: '5 · 6.3%' },
   { stage: 'Visited showroom', width: '3.8%', value: '3 · 3.8%' },
   { stage: 'Not interested', width: '2.5%', value: '2 · 2.5%' },
-  { stage: 'Booked', width: '1.3%', value: '1 · 1.3%' },
+  { stage: 'Booked', width: '2.5%', value: '2 · 2.5%' },
 ];
 
 const WORKFLOW = [
@@ -75,7 +84,7 @@ const PROOF = [
   },
   {
     label: 'PIPELINE',
-    figure: '41',
+    figure: '40',
     title: 'Open leads',
     copy: 'More than half of the documented lead set remained new or in pipeline at the snapshot date, so the case study does not treat the early booking count as the final campaign outcome.',
   },
@@ -84,8 +93,8 @@ const PROOF = [
 export default function JetourCaseStudyPage() {
   return (
     <PageShell>
-      <JsonLd data={breadcrumbJsonLd('/case-study-jetour-ittehad')} />
-      <JsonLd data={caseStudyJsonLd('/case-study-jetour-ittehad')} />
+      <JsonLd data={breadcrumbJsonLd('/portfolio/jetour-ittehad')} />
+      <JsonLd data={caseStudyJsonLd('/portfolio/jetour-ittehad')} />
 
       <CaseHero
         tone="dark"
@@ -93,15 +102,15 @@ export default function JetourCaseStudyPage() {
         kicker="AUTOMOTIVE · ISLAMABAD · DOCUMENTED CAMPAIGN"
         titleTop="Building a dealership"
         titleAccent="growth engine from zero."
-        lede="MettGlobal connected brand launch, social content, Meta acquisition, lead handling, digital journey, outdoor visibility and on-ground activation into one operating system for Jetour Ittehad."
-        panelLabel="DOCUMENTED CAMPAIGN WINDOW"
-        panelValue="04–09 Sep 2026"
-        panelCopy="Lead and pipeline figures below are derived from the live campaign lead sheet supplied for this case study."
+        lede="Mett Global connected brand launch, social content, Meta acquisition, lead handling, digital journey, outdoor visibility and on-ground activation into one operating system for Jetour Ittehad."
+        panelLabel="CAMPAIGN TOTALS"
+        panelValue="October 2026 onwards"
+        panelCopy="Headline figures are overall campaign totals from October 2026 onwards. The charts below are an early snapshot of the first 79 leads (04–09 Sep 2026)."
         kpis={[
-          { value: '79', label: 'verified leads' },
+          { value: '1,000+', label: 'verified leads' },
           { value: '82%', label: 'from Reel creative' },
-          { value: '20.3%', label: 'visit-stage+' },
-          { value: '1', label: 'confirmed booking' },
+          { value: '30%+', label: 'visit stage or beyond' },
+          { value: '50+', label: 'confirmed bookings' },
         ]}
       />
 
@@ -131,14 +140,46 @@ export default function JetourCaseStudyPage() {
       </Section>
 
       <Section className="bg-[#0c0c0b] text-white">
-        <SectionHead heading="Campaign performance" dark>
-          The strongest story is not a vague claim about reach. It is the
-          distribution of the 79 verified leads and what happened next.
+        <SectionHead heading="Early campaign snapshot" dark>
+          The headline figures above are overall campaign totals. This snapshot
+          is the first 79 verified leads, 04–09 Sep 2026: how they split by
+          creative and platform, and what happened next.
         </SectionHead>
+
+        {/* The dated window first: what the first days of the campaign produced. */}
+        <div className="mb-4 rounded-3xl border border-[#34312a] bg-[#151513] p-7">
+          <div className="max-b620:block flex items-end justify-between gap-5">
+            <div>
+              <span className="text-p-gold2 text-[9px] font-black tracking-[.16em]">
+                EARLY SNAPSHOT
+              </span>
+              <p className="m-0 mt-2 text-[clamp(30px,4vw,52px)] leading-none font-extrabold tracking-[-.045em]">
+                04–09 Sep 2026
+              </p>
+            </div>
+            <p className="max-b620:mt-3 m-0 max-w-[340px] text-xs leading-[1.65] text-[#9f9a90]">
+              Leads entered and tracked in the campaign lead sheet over these
+              dates.
+            </p>
+          </div>
+          <dl className="max-b760:grid-cols-2 m-0 mt-7 grid grid-cols-4 gap-5 border-t border-[#2d2a23] pt-6">
+            {SNAPSHOT.map(item => (
+              <div key={item.label}>
+                <dd className="text-p-gold2 m-0 text-[clamp(30px,3.2vw,46px)] leading-none font-extrabold tracking-[-.05em]">
+                  {item.value}
+                </dd>
+                <dt className="mt-2 text-[10px] tracking-[.12em] text-[#aaa59b] uppercase">
+                  {item.label}
+                </dt>
+              </div>
+            ))}
+          </dl>
+        </div>
+
         <DataGrid>
           <ChartCard
             label="CREATIVE MIX"
-            note="79 total"
+            note="snapshot · 79 leads"
             heading="Reel creative generated most leads."
           >
             <SplitBar
@@ -150,7 +191,7 @@ export default function JetourCaseStudyPage() {
           </ChartCard>
           <ChartCard
             label="PLATFORM MIX"
-            note="79 total"
+            note="snapshot · 79 leads"
             heading="Facebook delivered three quarters of leads."
           >
             <SplitBar
@@ -165,15 +206,14 @@ export default function JetourCaseStudyPage() {
 
         <PipelineCard
           label="LEAD OUTCOMES"
-          note="100% reconciled"
+          note="snapshot · 100% reconciled"
           rows={PIPELINE}
         />
 
         <DataNote>
-          Visit-stage+ is calculated as booked + visited + scheduled: 16 of 79
-          leads = 20.3%. The source workbook displayed 15 / 19.0%; this page
-          uses the reconciled status counts instead of repeating that
-          inconsistency.
+          This snapshot covers 04–09 Sep 2026. Visit-stage+ is calculated as
+          booked + visited + scheduled: 17 of 79 leads = 21.5%. Status counts
+          are reconciled to the 79 leads, so the percentages add up.
         </DataNote>
       </Section>
 

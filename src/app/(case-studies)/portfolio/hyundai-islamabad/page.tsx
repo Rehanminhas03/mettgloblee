@@ -13,7 +13,7 @@ import {
 } from '@/components/page/case';
 import { breadcrumbJsonLd, pageMetadata, caseStudyJsonLd } from '@/lib/seo';
 
-export const metadata = pageMetadata('/case-study-hyundai-islamabad');
+export const metadata = pageMetadata('/portfolio/hyundai-islamabad');
 
 const CHALLENGES = [
   {
@@ -70,8 +70,8 @@ const PROOF = [
 export default function HyundaiCaseStudyPage() {
   return (
     <PageShell>
-      <JsonLd data={breadcrumbJsonLd('/case-study-hyundai-islamabad')} />
-      <JsonLd data={caseStudyJsonLd('/case-study-hyundai-islamabad')} />
+      <JsonLd data={breadcrumbJsonLd('/portfolio/hyundai-islamabad')} />
+      <JsonLd data={caseStudyJsonLd('/portfolio/hyundai-islamabad')} />
 
       <CaseHero
         tone="light"
@@ -109,7 +109,7 @@ export default function HyundaiCaseStudyPage() {
         <div className="mb-[35px]">
           <SectionHead heading="The operating challenge">
             Hyundai Islamabad already has established brand and product equity.
-            MettGlobal&rsquo;s role is not to manufacture a &ldquo;from
+            Mett Global&rsquo;s role is not to manufacture a &ldquo;from
             zero&rdquo; story; it is to connect local content, digital pathways
             and lead handling around showroom outcomes.
           </SectionHead>
@@ -134,7 +134,7 @@ export default function HyundaiCaseStudyPage() {
           includes the Elantra Hybrid and wider vehicle range, brochure access,
           service appointments and supporting after-sales information. Those
           facts support the journey design — they do not, by themselves, prove
-          MettGlobal performance.
+          Mett Global performance.
         </SectionHead>
         <EvidenceStack
           items={[
@@ -153,7 +153,7 @@ export default function HyundaiCaseStudyPage() {
                   Hyundai Islamabad&rsquo;s own published material describes the
                   Elantra Hybrid as Pakistan&rsquo;s first locally assembled
                   hybrid sedan. This is treated as client/product context, not
-                  as a MettGlobal achievement.
+                  as a Mett Global achievement.
                 </>
               ),
               href: 'https://hyundai-islamabad.com/hyundai-launches-pakistans-first-hybrid-sedan-the-elantra-hybrid/',

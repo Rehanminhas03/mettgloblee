@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { caseStudies, caseStudyPath } from '@/content/operations-case-studies';
 import { SITE_URL } from '@/lib/site';
 
 /**
@@ -6,31 +7,31 @@ import { SITE_URL } from '@/lib/site';
  * from the hand-maintained `public/sitemap.xml` of the static build.
  */
 const ENTRIES = [
-  { path: '/', lastModified: '2026-10-06', priority: 1.0 },
+  { path: '/', lastModified: '2026-10-18', priority: 1.0 },
   { path: '/services', lastModified: '2026-10-06', priority: 0.9 },
-  { path: '/portfolio', lastModified: '2026-10-06', priority: 0.9 },
-  { path: '/case-studies', lastModified: '2026-10-06', priority: 0.9 },
+  { path: '/portfolio', lastModified: '2026-10-18', priority: 0.9 },
+  { path: '/case-studies', lastModified: '2026-10-18', priority: 0.9 },
   {
-    path: '/case-study-jetour-ittehad',
+    path: '/portfolio/jetour-ittehad',
     lastModified: '2026-09-20',
     priority: 0.8,
   },
   {
-    path: '/case-study-hyundai-islamabad',
+    path: '/portfolio/hyundai-islamabad',
     lastModified: '2026-09-20',
     priority: 0.8,
   },
   {
-    path: '/case-study-csm-ittehad',
+    path: '/portfolio/csm-ittehad',
     lastModified: '2026-09-20',
     priority: 0.8,
   },
-  { path: '/about', lastModified: '2026-10-06', priority: 0.8 },
+  { path: '/about', lastModified: '2026-10-14', priority: 0.8 },
   { path: '/blog', lastModified: '2026-10-06', priority: 0.9 },
   { path: '/contact', lastModified: '2026-10-06', priority: 0.8 },
   { path: '/appointment', lastModified: '2026-10-06', priority: 0.8 },
   { path: '/sitemap', lastModified: '2026-09-17', priority: 0.4 },
-  { path: '/privacy', lastModified: '2026-10-06', priority: 0.3 },
+  { path: '/privacy', lastModified: '2026-10-14', priority: 0.3 },
   { path: '/terms', lastModified: '2026-10-06', priority: 0.3 },
   { path: '/portfolio/dealership-erp', lastModified: '2026-10-06', priority: 0.8 },
   { path: '/portfolio/ittehad-steel', lastModified: '2026-10-06', priority: 0.6 },
@@ -42,7 +43,7 @@ const ENTRIES = [
   { path: '/digital-marketing-growth', lastModified: '2026-10-05', priority: 0.9 },
   { path: '/web-software-development', lastModified: '2026-10-05', priority: 0.9 },
   { path: '/ai-automation-content', lastModified: '2026-10-05', priority: 0.9 },
-  { path: '/ecommerce-supply-chain', lastModified: '2026-10-05', priority: 0.9 },
+  { path: '/ecommerce-supply-chain', lastModified: '2026-10-18', priority: 0.9 },
   {
     path: '/update-amazon-fba-fees-2026',
     lastModified: '2026-09-17',
@@ -112,8 +113,16 @@ const ENTRIES = [
   { path: '/insight-3pl-scorecard', lastModified: '2026-09-20', priority: 0.7 },
 ];
 
+/* The six operations studies come from their content records, so the sitemap
+   cannot drift from the pages. Dates are real: the day the pages were added. */
+const OPERATIONS_ENTRIES = caseStudies.map(study => ({
+  path: caseStudyPath(study.slug),
+  lastModified: '2026-10-18',
+  priority: 0.8,
+}));
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return ENTRIES.map(entry => ({
+  return [...ENTRIES, ...OPERATIONS_ENTRIES].map(entry => ({
     url: entry.path === '/' ? `${SITE_URL}/` : `${SITE_URL}${entry.path}`,
     lastModified: entry.lastModified,
     priority: entry.priority,

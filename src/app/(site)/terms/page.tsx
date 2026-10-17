@@ -28,11 +28,11 @@ const BLOCKS = [
   },
   {
     heading: '5. Third-party platforms and links',
-    copy: 'The website may link to Google, Meta, Instagram, WhatsApp, social networks, app stores, marketplaces and other third-party services, including the websites and apps of our clients. Those services operate under their own terms, availability and privacy practices, and MettGlobal is not responsible for their content or availability.',
+    copy: 'The website may link to Google, Meta, Instagram, WhatsApp, social networks, app stores, marketplaces and other third-party services, including the websites and apps of our clients. Those services operate under their own terms, availability and privacy practices, and Mett Global is not responsible for their content or availability.',
   },
   {
     heading: '6. Intellectual property',
-    copy: 'Unless otherwise stated, MettGlobal’s original website copy, brand presentation, graphics and site design are owned by or licensed to MettGlobal. You may view the website and share links to it for legitimate purposes, but you may not reproduce, republish, sell or substantially copy its content without written permission. Third-party names, logos and marks remain the property of their respective owners.',
+    copy: 'Unless otherwise stated, Mett Global’s original website copy, brand presentation, graphics and site design are owned by or licensed to Mett Global. You may view the website and share links to it for legitimate purposes, but you may not reproduce, republish, sell or substantially copy its content without written permission. Third-party names, logos and marks remain the property of their respective owners.',
   },
   {
     heading: '7. Portfolio and case-study references',
@@ -44,7 +44,7 @@ const BLOCKS = [
   },
   {
     heading: '9. Disclaimer and limitation',
-    copy: 'The website is provided on an “as available” basis. To the extent permitted by applicable law, MettGlobal does not guarantee uninterrupted availability or that every page will be error-free. Nothing in these terms excludes liability that cannot legally be excluded.',
+    copy: 'The website is provided on an “as available” basis. To the extent permitted by applicable law, Mett Global does not guarantee uninterrupted availability or that every page will be error-free. Nothing in these terms excludes liability that cannot legally be excluded.',
   },
   {
     heading: '10. Governing law',
@@ -60,7 +60,7 @@ const BLOCKS = [
       <>
         Questions about these terms can be sent to{' '}
         <a href="mailto:contact@mettglobal.com">contact@mettglobal.com</a> or by
-        post to MettGlobal, {ADDRESS_LINE} (
+        post to Mett Global, {ADDRESS_LINE} (
         <a href={MAPS_URL} target="_blank" rel="noopener">
           map
         </a>
@@ -87,7 +87,7 @@ export default function TermsPage() {
           </>
         }
       >
-        These terms describe the use of MettGlobal&rsquo;s public website.
+        These terms describe the use of Mett Global&rsquo;s public website.
         Specific client work is governed by the proposal, scope, contract or
         other written terms agreed for that engagement.
       </PageHero>
@@ -102,7 +102,7 @@ export default function TermsPage() {
         heading="Need to discuss a project?"
         copy="Use the project enquiry or booking flow and we will map the next appropriate step."
         ctaHref="/contact"
-        ctaLabel="Contact MettGlobal"
+        ctaLabel="Contact Mett Global"
       />
     </PageShell>
   );

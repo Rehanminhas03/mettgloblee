@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useHydrated } from '@/hooks/useHydrated';
-import { CONSENT_STORAGE_KEY } from '@/lib/site';
+import { CONSENT_STORAGE_KEY, COOKIE_SETTINGS_EVENT } from '@/lib/site';
 
 function storedChoice() {
   try {
@@ -12,6 +12,37 @@ function storedChoice() {
     /* storage blocked — treat as undecided and show the banner */
     return null;
   }
+}
+
+const CONSENT_SIGNALS = [
+  'analytics_storage',
+  'ad_storage',
+  'ad_user_data',
+  'ad_personalization',
+] as const;
+
+function grantConsent() {
+  window.gtag?.('consent', 'update', { analytics_storage: 'granted' });
+}
+
+/** Denies every consent signal and removes the Google Analytics cookies. */
+function withdrawConsent() {
+  window.gtag?.(
+    'consent',
+    'update',
+    Object.fromEntries(CONSENT_SIGNALS.map(signal => [signal, 'denied'])),
+  );
+
+  const root = location.hostname.replace(/^www\./, '');
+  document.cookie
+    .split(';')
+    .map(cookie => cookie.split('=')[0].trim())
+    .filter(name => name === '_ga' || name.startsWith('_ga_'))
+    .forEach(name => {
+      const expired = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+      document.cookie = expired;
+      document.cookie = `${expired}; domain=.${root}`;
+    });
 }
 
 /**
@@ -24,6 +55,14 @@ function storedChoice() {
 export function ConsentBanner() {
   const hydrated = useHydrated();
   const [decided, setDecided] = useState(false);
+  /* Set by the footer "Cookie settings" button to reopen a saved choice. */
+  const [reopened, setReopened] = useState(false);
+
+  useEffect(() => {
+    const reopen = () => setReopened(true);
+    window.addEventListener(COOKIE_SETTINGS_EVENT, reopen);
+    return () => window.removeEventListener(COOKIE_SETTINGS_EVENT, reopen);
+  }, []);
 
   /* Publish the banner's height so the floating contact buttons clear it. */
   const measure = useCallback((node: HTMLDivElement | null) => {
@@ -37,7 +76,7 @@ export function ConsentBanner() {
     );
   }, []);
 
-  if (!hydrated || decided || storedChoice()) return null;
+  if (!hydrated || !(reopened || (!decided && !storedChoice()))) return null;
 
   const decide = (choice: 'accepted' | 'declined') => {
     try {
@@ -45,8 +84,16 @@ export function ConsentBanner() {
     } catch {
       /* storage blocked — the choice simply is not remembered */
     }
-    if (choice === 'accepted') window.mettLoadAnalytics?.(true);
+    if (choice === 'accepted') {
+      /* Already loaded earlier this session (accepted, declined, accepted
+         again): the loader is a no-op, so grant consent directly. */
+      if (window.mettAnalyticsReady) grantConsent();
+      else window.mettLoadAnalytics?.(true);
+    } else {
+      withdrawConsent();
+    }
     setDecided(true);
+    setReopened(false);
   };
 
   return (

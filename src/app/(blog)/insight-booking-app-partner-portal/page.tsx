@@ -63,7 +63,7 @@ export default function BookingAppGuide() {
       dek={
         'A customer app is the visible part. The admin and partner portals behind it are what make bookings, riders and areas manageable as the business grows.'
       }
-      meta={'METTGLOBAL FIELD GUIDE · APPS & PORTALS · 8 MIN READ'}
+      meta={'METT GLOBAL FIELD GUIDE · APPS & PORTALS · 8 MIN READ'}
       graphic={<ChipGraphic steps={['BOOK', 'ASSIGN', 'SERVE', 'REPORT']} />}
       endHeading={'Building a booking platform?'}
       endHref={'/web-software-development'}

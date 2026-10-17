@@ -4,6 +4,7 @@ import { PageHero, HeroAccent } from '@/components/page/PageHero';
 import { ContactBand } from '@/components/page/ContactBand';
 import { Btn, Section, SectionHead } from '@/components/page/ui';
 import { JsonLd } from '@/components/JsonLd';
+import { OperationsJourney } from '@/components/case-studies/OperationsJourney';
 import { WorkCardGrid } from '@/components/site/WorkCards';
 import { INTERNATIONAL, LOCAL, withoutStats } from '@/lib/portfolio';
 import { breadcrumbJsonLd, pageMetadata, pageJsonLd } from '@/lib/seo';
@@ -50,13 +51,20 @@ export default function PortfolioPage() {
       <div id="international" className="scroll-mt-24">
         <Section>
           <SectionHead heading="International clients">
-            Websites, SEO and custom software delivered for businesses in the
-            United States.
+            Marketplace operations, supply chain delivery, websites and software
+            for international businesses.
           </SectionHead>
+
+          <OperationsJourney />
+
+          <h3 className="mt-[90px] mb-[35px] text-[clamp(28px,3vw,42px)] leading-[1.05] tracking-[-.04em]">
+            Websites and software
+          </h3>
           {INTERNATIONAL.length ? (
             <WorkCardGrid
               items={withoutStats(INTERNATIONAL)}
               cols={INTERNATIONAL.length % 2 ? 3 : 2}
+              titleAs="h4"
             />
           ) : (
             <div className="border-p-line text-p-muted rounded-3xl border border-dashed p-8 text-[15px] leading-[1.65]">

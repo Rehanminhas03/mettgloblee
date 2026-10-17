@@ -122,7 +122,7 @@ function DetailsStage({
         </div>
         <small className="mt-[9px] block text-[9px] leading-[1.45] text-[#817d75]">
           The event is marked tentative and includes contact@mettglobal.com.
-          Final availability is still confirmed by MettGlobal.
+          Final availability is still confirmed by Mett Global.
         </small>
       </div>
 
@@ -185,7 +185,7 @@ function DetailsStage({
       </button>
       <p className="mt-3 mb-0 text-[10px] leading-[1.55] text-[#8d887f]">
         This is a meeting request, not an automatic calendar confirmation.
-        MettGlobal will confirm the final time and joining/location details by
+        Mett Global will confirm the final time and joining/location details by
         email.
       </p>
     </div>

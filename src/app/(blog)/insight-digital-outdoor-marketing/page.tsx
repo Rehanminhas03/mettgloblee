@@ -63,7 +63,7 @@ export default function DigitalOutdoorGuide() {
       dek={
         'Local and automotive brands often run outdoor and social separately. Connected, they reinforce each other and give you something to measure.'
       }
-      meta={'METTGLOBAL FIELD GUIDE · DIGITAL MARKETING · 8 MIN READ'}
+      meta={'METT GLOBAL FIELD GUIDE · DIGITAL MARKETING · 8 MIN READ'}
       graphic={
         <ChipGraphic steps={['AWARENESS', 'SOCIAL', 'ENQUIRY', 'VISIT']} />
       }

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { PageShell } from '@/components/page/PageShell';
 import { PageHero, HeroAccent } from '@/components/page/PageHero';
 import { ContactBand } from '@/components/page/ContactBand';
@@ -12,15 +13,27 @@ import {
   SectionHead,
 } from '@/components/page/ui';
 import { breadcrumbJsonLd, pageMetadata } from '@/lib/seo';
-import { SITE_URL } from '@/lib/site';
+import { ADDRESS_LINE, SITE_URL, SOCIAL_PROFILES } from '@/lib/site';
+import { SERVICES } from '@/lib/services';
 
 export const metadata = pageMetadata('/about');
+
+const STATS = [
+  { value: '2025', label: 'Founded' },
+  { value: String(SERVICES.length), label: 'Service lines' },
+  { value: 'Islamabad', label: 'Based in Pakistan' },
+];
+
+const FACT_HEADING =
+  'm-0 mb-4 text-[10px] font-black tracking-[.18em] text-p-gold2 uppercase';
+const FACT_LIST = 'm-0 list-none p-0';
+const FACT_ROW = 'border-t border-white/10 py-3 leading-[1.5]';
 
 const REASONS = [
   {
     label: '01',
     title: 'Founder-led direction',
-    copy: 'Commercial decisions, positioning and priorities stay close to MettGlobal leadership instead of disappearing into layers of account management.',
+    copy: 'Commercial decisions, positioning and priorities stay close to Mett Global leadership instead of disappearing into layers of account management.',
   },
   {
     label: '02',
@@ -71,8 +84,8 @@ export default function AboutPage() {
           '@context': 'https://schema.org',
           '@type': 'AboutPage',
           url: `${SITE_URL}/about`,
-          name: 'About MettGlobal',
-          dateModified: '2026-10-06',
+          name: 'About Mett Global',
+          dateModified: '2026-10-14',
           about: { '@id': `${SITE_URL}/#organization` },
           mainEntity: LEADERSHIP.map(person => ({
             '@type': 'Person',
@@ -85,7 +98,7 @@ export default function AboutPage() {
       />
 
       <PageHero
-        kicker="ABOUT METTGLOBAL"
+        kicker="ABOUT METT GLOBAL"
         title={
           <>
             Founder-led.
@@ -94,10 +107,103 @@ export default function AboutPage() {
           </>
         }
       >
-        MettGlobal brings commercial thinking and specialist delivery into one
+        Mett Global brings commercial thinking and specialist delivery into one
         connected operating model. The founders stay close to the work, then
         bring in specialists when the scope demands it.
       </PageHero>
+
+      <Section dark className="!py-[72px]">
+        <div id="company-facts" className="scroll-mt-24">
+          <span className="text-p-gold2 text-[10px] font-black tracking-[.2em]">
+            AT A GLANCE
+          </span>
+          <h2 className="mt-4 mb-4 text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-[-.04em]">
+            Company facts
+          </h2>
+          <p className="m-0 max-w-[640px] leading-[1.7] text-[#cfcabd]">
+            Mett Global was founded in 2025 and is based in Islamabad, Pakistan.
+          </p>
+
+          {/* Four headline figures */}
+          <dl className="max-b760:grid-cols-2 max-b760:gap-y-8 m-0 mt-12 grid grid-cols-3 gap-x-6 border-t border-white/15 pt-8">
+            {STATS.map(stat => (
+              <div key={stat.label}>
+                <dd className="text-p-gold2 m-0 text-[clamp(30px,3.4vw,48px)] leading-none font-extrabold tracking-[-.04em]">
+                  {stat.value}
+                </dd>
+                <dt className="mt-2 text-[11px] font-bold tracking-[.14em] text-[#a8a398] uppercase">
+                  {stat.label}
+                </dt>
+              </div>
+            ))}
+          </dl>
+
+          {/* Details: plain columns, no boxes */}
+          <div className="max-b900:grid-cols-1 max-b900:gap-10 mt-14 grid grid-cols-3 gap-x-12">
+            <div>
+              <h3 className={FACT_HEADING}>Leadership</h3>
+              <ul className={FACT_LIST}>
+                {LEADERSHIP.map(person => (
+                  <li key={person.email} className={FACT_ROW}>
+                    <strong className="block text-[15px] text-white">
+                      {person.name}
+                    </strong>
+                    <span className="text-[13px] text-[#a8a398]">
+                      {person.role}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className={FACT_HEADING}>Services</h3>
+              <ul className={FACT_LIST}>
+                {SERVICES.map(service => (
+                  <li key={service.href} className={FACT_ROW}>
+                    <Link
+                      href={service.href}
+                      className="hover:text-p-gold2 text-[15px] text-white transition-colors"
+                    >
+                      {service.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className={FACT_HEADING}>Find us</h3>
+              <ul className={FACT_LIST}>
+                <li className={FACT_ROW}>
+                  <a
+                    href="mailto:contact@mettglobal.com"
+                    className="hover:text-p-gold2 text-[15px] text-white transition-colors"
+                  >
+                    contact@mettglobal.com
+                  </a>
+                </li>
+                <li className={`${FACT_ROW} text-[13px] text-[#a8a398]`}>
+                  {ADDRESS_LINE}
+                </li>
+              </ul>
+              <p className="mt-5 mb-0 flex flex-wrap gap-2">
+                {SOCIAL_PROFILES.map(profile => (
+                  <a
+                    key={profile.href}
+                    href={profile.href}
+                    target="_blank"
+                    rel="noopener"
+                    className="hover:border-p-gold2 hover:text-p-gold2 rounded-full border border-white/20 px-3 py-[5px] text-[12px] font-bold text-white transition-colors"
+                  >
+                    {profile.label}
+                  </a>
+                ))}
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
 
       <Section>
         <SectionHead heading="Leadership">
@@ -112,7 +218,7 @@ export default function AboutPage() {
       </Section>
 
       <Section dark>
-        <SectionHead heading="Why MettGlobal" dark>
+        <SectionHead heading="Why Mett Global" dark>
           Senior attention and connected execution, without the agency
           hierarchy.
         </SectionHead>
@@ -136,7 +242,7 @@ export default function AboutPage() {
         heading="Bring us the problem."
         copy="We will tell you which part of the system deserves attention first."
         ctaHref="/contact"
-        ctaLabel="Talk to MettGlobal"
+        ctaLabel="Talk to Mett Global"
       />
     </PageShell>
   );

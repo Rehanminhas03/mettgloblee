@@ -2,17 +2,19 @@
 
 /**
  * Resizable navbar — ported from Aceternity UI's `resizable-navbar` and
- * restyled as a glass bar in the MettGlobal palette. At the top of the page it
+ * restyled as a glass bar in the Mett Global palette. At the top of the page it
  * sits full width; once the visitor scrolls it shrinks into a floating,
  * blurred pill. Without the Tabler icon dependency (inline SVG instead) and
  * without a shadcn `cn` helper (a small local join).
  */
 
-import React, { useState } from 'react';
+import Link from 'next/link';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   AnimatePresence,
   motion,
   useMotionValueEvent,
+  useReducedMotion,
   useScroll,
 } from 'motion/react';
 
@@ -24,20 +26,74 @@ const GLASS_SHADOW =
 
 type VisibleProps = { visible?: boolean };
 
+/** Scroll distance (px) before the bar is allowed to hide. */
+const HIDE_AFTER = 120;
+/** How long (ms) the bar stays visible after the first scroll down. */
+const FIRST_SCROLL_VISIBLE_MS = 2500;
+/** Ignore tiny scroll movements so a trackpad jitter does not flicker the bar. */
+const SCROLL_THRESHOLD = 6;
+
+/**
+ * Sticky header that shrinks into a pill after 60px and, like Aceternity's
+ * floating navbar, slides away when you scroll down and returns the moment you
+ * scroll back up. The first scroll down keeps it visible for a few seconds
+ * before it hides. It never hides near the top of the page, while the mobile
+ * menu is open (`pinned`), or while keyboard focus is inside it.
+ */
 export function Navbar({
   children,
   className,
+  pinned = false,
 }: {
   children: React.ReactNode;
   className?: string;
+  /** Keeps the bar on screen, for example while the mobile menu is open. */
+  pinned?: boolean;
 }) {
   const { scrollY } = useScroll();
+  const reduceMotion = useReducedMotion();
   const [visible, setVisible] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
-  useMotionValueEvent(scrollY, 'change', latest => setVisible(latest > 60));
+  // The first scroll down is special: the bar stays on screen for a moment so
+  // visitors see it, then hides. 'idle' -> 'waiting' -> 'done'.
+  const grace = useRef<'idle' | 'waiting' | 'done'>('idle');
+  const graceTimer = useRef<number | undefined>(undefined);
+  useEffect(() => () => window.clearTimeout(graceTimer.current), []);
+
+  useMotionValueEvent(scrollY, 'change', latest => {
+    setVisible(latest > 60);
+    const delta = latest - (scrollY.getPrevious() ?? latest);
+    if (latest < HIDE_AFTER) {
+      setHidden(false);
+    } else if (delta > SCROLL_THRESHOLD) {
+      if (grace.current === 'done') {
+        setHidden(true);
+      } else if (grace.current === 'idle') {
+        grace.current = 'waiting';
+        graceTimer.current = window.setTimeout(() => {
+          grace.current = 'done';
+          // Only hide if the visitor is still down the page.
+          if (scrollY.get() >= HIDE_AFTER) setHidden(true);
+        }, FIRST_SCROLL_VISIBLE_MS);
+      }
+    } else if (delta < -SCROLL_THRESHOLD) {
+      setHidden(false);
+    }
+  });
 
   return (
-    <div className={cn('sticky inset-x-0 top-0 z-40 w-full', className)}>
+    <motion.div
+      // Keyboard users tabbing into a hidden bar bring it back into view.
+      onFocusCapture={() => setHidden(false)}
+      animate={{ y: hidden && !pinned ? '-170%' : '0%' }}
+      transition={
+        reduceMotion
+          ? { duration: 0 }
+          : { duration: 0.3, ease: [0.2, 0.7, 0.2, 1] }
+      }
+      className={cn('sticky inset-x-0 top-0 z-40 w-full', className)}
+    >
       {React.Children.map(children, child =>
         React.isValidElement(child)
           ? React.cloneElement(child as React.ReactElement<VisibleProps>, {
@@ -45,7 +101,7 @@ export function Navbar({
             })
           : child,
       )}
-    </div>
+    </motion.div>
   );
 }
 
@@ -70,7 +126,7 @@ export function NavBody({
       className={cn(
         'max-b900:hidden relative z-[60] mx-auto flex h-[72px] w-full flex-row items-center justify-between self-start rounded-full px-[clamp(24px,5vw,78px)]',
         visible
-          ? '!px-6 bg-[rgba(251,250,246,.62)]'
+          ? 'bg-[rgba(251,250,246,.62)] !px-6'
           : 'bg-[rgba(251,250,246,.55)] backdrop-blur-[10px]',
         className,
       )}
@@ -105,7 +161,7 @@ export function NavItems({
       {items.map((item, index) => {
         const current = isCurrent(item.link);
         return (
-          <a
+          <Link
             key={item.link}
             href={item.link}
             onMouseEnter={() => setHovered(index)}
@@ -124,7 +180,7 @@ export function NavItems({
               />
             )}
             <span className="relative z-10">{item.name}</span>
-          </a>
+          </Link>
         );
       })}
     </nav>
@@ -237,7 +293,11 @@ export function MobileNavToggle({
         strokeWidth="2"
         strokeLinecap="round"
       >
-        {isOpen ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 8h16M4 16h16" />}
+        {isOpen ? (
+          <path d="M6 6l12 12M18 6L6 18" />
+        ) : (
+          <path d="M4 8h16M4 16h16" />
+        )}
       </svg>
     </button>
   );

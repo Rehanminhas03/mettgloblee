@@ -4,6 +4,7 @@ import { useMemo, useRef, useState } from 'react';
 import { useHydrated } from '@/hooks/useHydrated';
 import Link from 'next/link';
 import { submitForm } from '@/lib/submitForm';
+import { track } from '@/lib/track';
 import { CalendarPanel } from './CalendarPanel';
 import { MeetingSummary } from './MeetingSummary';
 import { SlotPanel } from './SlotPanel';
@@ -163,6 +164,7 @@ export function Scheduler() {
     setSending(false);
     if (ok) {
       setSent(true);
+      track('meeting_request', { meeting_type: meetingType });
     } else {
       setStatus(
         'Sorry, that did not send. Please try again, or email contact@mettglobal.com.',
@@ -232,7 +234,7 @@ export function Scheduler() {
         <input
           type="hidden"
           name="_subject"
-          value="New MettGlobal meeting request"
+          value="New Mett Global meeting request"
         />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_captcha" value="false" />

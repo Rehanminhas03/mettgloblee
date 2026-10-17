@@ -481,6 +481,11 @@ export function getService(href: ServicePath): Service {
  * route, so a visitor never goes through two redirects.
  */
 export const RETIRED_SERVICE_REDIRECTS: { from: string; to: string }[] = [
+  /* Case studies moved to the /portfolio/{slug} convention. Keep these
+     permanently: search engines and external links still use the old URLs. */
+  { from: '/case-study-jetour-ittehad', to: '/portfolio/jetour-ittehad' },
+  { from: '/case-study-hyundai-islamabad', to: '/portfolio/hyundai-islamabad' },
+  { from: '/case-study-csm-ittehad', to: '/portfolio/csm-ittehad' },
   { from: '/ecommerce-growth', to: '/ecommerce-supply-chain' },
   { from: '/operations-supply-chain', to: '/ecommerce-supply-chain' },
   { from: '/digital-marketing', to: '/digital-marketing-growth' },
@@ -491,6 +496,14 @@ export const RETIRED_SERVICE_REDIRECTS: { from: string; to: string }[] = [
   { from: '/ai-content-production', to: '/ai-automation-content' },
   { from: '/ai-automation', to: '/ai-automation-content' },
   { from: '/audits-diagnostics', to: '/services' },
+  { from: '/team', to: '/about' },
+  { from: '/services/ecommerce', to: '/ecommerce-supply-chain' },
+  { from: '/services/supply-chain', to: '/ecommerce-supply-chain' },
+  { from: '/services/web-development', to: '/web-software-development' },
+  { from: '/services/digital-marketing', to: '/digital-marketing-growth' },
+  { from: '/services/lead-generation', to: '/digital-marketing-growth' },
+  { from: '/services/ai-automation', to: '/ai-automation-content' },
+  { from: '/services/ai-video', to: '/ai-automation-content' },
   { from: '/contact-success', to: '/contact' },
   { from: '/insight-audit-framework', to: '/blog' },
   { from: '/insight-digital-product-passport', to: '/blog' },

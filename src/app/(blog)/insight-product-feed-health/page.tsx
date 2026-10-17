@@ -126,7 +126,7 @@ export default function ProductFeedHealthGuide() {
       back="BLOG / COMMERCE SYSTEMS"
       title="The product feed is part of the storefront: a Merchant Center health check"
       dek="A shopper may never see the feed, but the feed decides how a product can be discovered, classified and displayed. When catalog data disagrees with the landing page, growth becomes an eligibility problem before it becomes a creative problem."
-      meta="METTGLOBAL OPERATOR PLAYBOOK · PRODUCT DATA QUALITY · 9 MIN READ"
+      meta="METT GLOBAL OPERATOR PLAYBOOK · PRODUCT DATA QUALITY · 9 MIN READ"
       graphic={<FeedGraphic cells={CELLS} />}
       endHeading="Need a stronger commerce foundation?"
       endHref="/ecommerce-supply-chain"

@@ -5,7 +5,7 @@ export function SiteLogo({ compact = false }: { compact?: boolean }) {
   return (
     <Link
       href="/"
-      aria-label="MettGlobal home"
+      aria-label="Mett Global home"
       className="flex flex-none items-center gap-3"
     >
       {/* .mark — a dot and a tilted bar forming the monogram */}

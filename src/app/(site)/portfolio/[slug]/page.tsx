@@ -11,6 +11,15 @@ import {
   ManagerPortalPreview,
 } from '@/components/page/PortalPreviews';
 import { JsonLd } from '@/components/JsonLd';
+import { ScrollTilt } from '@/components/ui/scroll-tilt';
+import { CaseStudyPage } from '@/components/case-studies/CaseStudyPage';
+import { caseStudyJsonLd } from '@/components/case-studies/case-study-jsonld';
+import {
+  caseStudies,
+  caseStudyPath,
+  getCaseStudy,
+} from '@/content/operations-case-studies';
+import { routeMetadata } from '@/lib/seo';
 import { SITE_URL } from '@/lib/site';
 import { PROJECTS, getProject, type Project } from '@/lib/projects';
 
@@ -18,8 +27,14 @@ type Params = { slug: string };
 
 export const dynamicParams = false;
 
+/* Two sources share this route: the six operations case studies (typed records
+   in `content/`) and the existing project pages. Both are listed here because
+   `dynamicParams` is false, so an unknown slug is a genuine 404. */
 export function generateStaticParams(): Params[] {
-  return PROJECTS.map(project => ({ slug: project.slug }));
+  return [
+    ...caseStudies.map(study => ({ slug: study.slug })),
+    ...PROJECTS.map(project => ({ slug: project.slug })),
+  ];
 }
 
 export async function generateMetadata({
@@ -27,7 +42,11 @@ export async function generateMetadata({
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
-  const project = getProject((await params).slug);
+  const { slug } = await params;
+  const study = getCaseStudy(slug);
+  if (study) return routeMetadata(caseStudyPath(slug), study.seo);
+
+  const project = getProject(slug);
   if (!project) return {};
 
   const { title, description } = project.seo;
@@ -40,7 +59,7 @@ export async function generateMetadata({
       title,
       description,
       url,
-      siteName: 'MettGlobal',
+      siteName: 'Mett Global',
       type: 'website',
       locale: 'en_PK',
       images: [{ url: `${SITE_URL}/social-card.png` }],
@@ -81,7 +100,18 @@ export default async function ProjectPage({
 }: {
   params: Promise<Params>;
 }) {
-  const project = getProject((await params).slug);
+  const { slug } = await params;
+  const study = getCaseStudy(slug);
+  if (study) {
+    return (
+      <>
+        <JsonLd data={caseStudyJsonLd(study)} />
+        <CaseStudyPage study={study} />
+      </>
+    );
+  }
+
+  const project = getProject(slug);
   if (!project) notFound();
 
   const links = project.links.length ? (
@@ -227,7 +257,9 @@ export default async function ProjectPage({
             slots, bookings by area and partner, riders, customers and locations
             — all read live from the same Firebase data the app writes to.
           </SectionHead>
-          <AdminDashboardPreview />
+          <ScrollTilt>
+            <AdminDashboardPreview />
+          </ScrollTilt>
         </Section>
       ) : null}
 
@@ -240,14 +272,18 @@ export default async function ProjectPage({
           </SectionHead>
           <div className="grid gap-12">
             <figure className="m-0">
-              <ManagerPortalPreview />
+              <ScrollTilt>
+                <ManagerPortalPreview />
+              </ScrollTilt>
               <figcaption className="text-p-muted mt-4 text-xs leading-[1.65]">
                 Sales manager portal — illustrative layout with sample figures,
                 not real dealership performance.
               </figcaption>
             </figure>
             <figure className="m-0">
-              <CeoPortalPreview />
+              <ScrollTilt>
+                <CeoPortalPreview />
+              </ScrollTilt>
               <figcaption className="text-p-muted mt-4 text-xs leading-[1.65]">
                 CEO portal — illustrative layout with sample figures. One view
                 across every showroom and department.

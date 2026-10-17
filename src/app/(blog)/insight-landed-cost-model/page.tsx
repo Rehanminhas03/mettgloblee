@@ -163,7 +163,7 @@ export default function LandedCostModelGuide() {
       back="BLOG / CROSS-BORDER OPERATIONS"
       title="Landed cost before launch: the cross-border margin model operators should use"
       dek="A factory quote is not a market-ready cost. Before a product crosses a border, build the full cost stack and make the commercial responsibility visible. Otherwise a launch can look profitable in the spreadsheet and expensive in the real world."
-      meta="METTGLOBAL OPERATOR PLAYBOOK · TRADE & MARGIN CONTROL · 10 MIN READ"
+      meta="METT GLOBAL OPERATOR PLAYBOOK · TRADE & MARGIN CONTROL · 10 MIN READ"
       graphic={
         <LandedGraphic
           parts={PARTS}

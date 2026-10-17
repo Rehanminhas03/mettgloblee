@@ -44,7 +44,7 @@ export default function ContactPage() {
             <small className="text-p-gold font-black tracking-[.15em]">
               PAKISTAN
             </small>
-            <h3 className="my-3 text-[26px]">MettGlobal</h3>
+            <h3 className="my-3 text-[26px]">Mett Global</h3>
             <a
               href="https://wa.me/923046551553"
               target="_blank"

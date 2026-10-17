@@ -7,7 +7,14 @@ import { breadcrumbJsonLd, serviceJsonLd } from '@/lib/seo';
 import type { Service } from '@/lib/services';
 
 /** The shared layout for the four service pages, driven by `lib/services`. */
-export function ServicePage({ service }: { service: Service }) {
+export function ServicePage({
+  service,
+  extra,
+}: {
+  service: Service;
+  /** Optional block rendered just before the closing call to action. */
+  extra?: React.ReactNode;
+}) {
   return (
     <PageShell>
       <JsonLd data={breadcrumbJsonLd(service.href)} />
@@ -33,6 +40,8 @@ export function ServicePage({ service }: { service: Service }) {
         ctaLabel="Discuss this service"
         blocks={service.details}
       />
+
+      {extra}
 
       <ContactBand
         heading={service.band.heading}

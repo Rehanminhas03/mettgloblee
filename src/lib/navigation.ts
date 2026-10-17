@@ -25,8 +25,14 @@ export const HEADER_CTA: NavLink = {
   label: 'Book a meeting',
 };
 
+/** U.S. line, answered by the co-founder. Shown as a phone icon in the header. */
+export const PHONE_US = {
+  href: 'tel:+18328214066',
+  label: '+1 (832) 821-4066',
+};
+
 export const WHATSAPP_URL =
-  'https://wa.me/923046551553?text=Hi%20MettGlobal%2C%20I%27d%20like%20to%20discuss%20a%20project.';
+  'https://wa.me/923046551553?text=Hi%20Mett%20Global%2C%20I%27d%20like%20to%20discuss%20a%20project.';
 
 /* ---- Footer ---- */
 
@@ -34,6 +40,7 @@ export const FOOTER_NAV: NavLink[] = [
   { href: '/services', label: 'Services' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/about', label: 'About' },
+  { href: '/about#company-facts', label: 'Company facts' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
   { href: '/appointment', label: 'Book a meeting' },
@@ -59,9 +66,7 @@ export function isCurrent(href: string, pathname: string) {
     case '/services':
       return SERVICE_PAGES.includes(pathname);
     case '/portfolio':
-      return (
-        pathname === '/case-studies' || pathname.startsWith('/case-study-')
-      );
+      return pathname === '/case-studies' || pathname.startsWith('/portfolio/');
     case '/blog':
       return (
         pathname.startsWith('/insight-') || pathname.startsWith('/update-')

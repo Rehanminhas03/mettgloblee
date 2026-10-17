@@ -12,9 +12,9 @@
   --color-ink: #121210;
   --color-cream: #f3f0e8;
   --color-paper: #fbfaf6;
-  --color-gold: #b8892d;
+  --color-gold: #84601a; /* darkened from #b8892d: AA contrast on cream and white */
   --color-gold2: #e0bc68;
-  --color-muted: #777268;
+  --color-muted: #66615a; /* darkened from #777268: AA contrast on cream */
   --color-line: #dcd5c8;
 
   /* ---- Standard page palette (src/page.css :root) ---- */
@@ -32,7 +32,6 @@
   --color-a-line: #d9d0c0;
 
   /* ---- Typography ---- */
-  --font-sans: Inter, Arial, Helvetica, sans-serif;
   --font-serif: Georgia, serif;
   --font-dm: 'DM Sans', sans-serif;
 
@@ -124,6 +123,15 @@
       transform: translateY(-16px) rotate(1deg);
     }
   }
+}
+
+/*
+  Inter is loaded in the root layout through next/font and exposed as
+  --font-inter. `inline` makes the font-sans utility read that variable
+  directly instead of copying its value at :root.
+*/
+@theme inline {
+  --font-sans: var(--font-inter), Arial, Helvetica, sans-serif;
 }
 
 /*

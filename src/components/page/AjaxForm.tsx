@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { submitForm } from '@/lib/submitForm';
+import { track } from '@/lib/track';
 
 /**
  * A form that submits in the background and swaps itself for a thank-you
@@ -26,6 +27,7 @@ export function AjaxForm({
     setState('sending');
     const ok = await submitForm(event.currentTarget);
     setState(ok ? 'sent' : 'error');
+    if (ok) track('generate_lead', { form_location: location.pathname });
   };
 
   if (state === 'sent') {

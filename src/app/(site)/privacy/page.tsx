@@ -12,7 +12,7 @@ export const metadata = pageMetadata('/privacy');
 const BLOCKS = [
   {
     heading: 'Who we are',
-    copy: `MettGlobal is a business growth and technology company based in Islamabad, Pakistan (${ADDRESS_LINE}). This notice explains what personal information the MettGlobal website collects, why we use it and the choices you have.`,
+    copy: `Mett Global is a business growth and technology company based in Islamabad, Pakistan (${ADDRESS_LINE}). This notice explains what personal information the Mett Global website collects, why we use it and the choices you have.`,
   },
   {
     heading: 'Information you choose to provide',
@@ -32,7 +32,7 @@ const BLOCKS = [
   },
   {
     heading: 'Analytics and cookies',
-    copy: 'The website uses Google Analytics to measure page visits and selected actions such as bookings, calls, emails, WhatsApp clicks and form submissions. Analytics and advertising storage is switched off by default and starts only if you choose “Allow analytics” in the cookie notice. Your choice is saved in your own browser, and you can change it at any time by clearing the site’s saved data in your browser settings.',
+    copy: 'The website uses Google Analytics to measure page visits and selected actions such as bookings, calls, emails, WhatsApp clicks and form submissions. Analytics and advertising storage is switched off by default and starts only if you choose “Allow analytics” in the cookie notice. Your choice is saved in your own browser, and you can change it at any time with the “Cookie settings” link in the footer of every page. Choosing “Decline” stops analytics and removes the Google Analytics cookies the site set.',
   },
   {
     heading: 'Who we share it with',
@@ -40,7 +40,7 @@ const BLOCKS = [
   },
   {
     heading: 'International processing',
-    copy: 'MettGlobal is based in Pakistan and works with clients worldwide. Our service providers may process information in other countries, including the United States. By sending us an enquiry, you understand that your information may be handled outside your own country.',
+    copy: 'Mett Global is based in Pakistan and works with clients worldwide. Our service providers may process information in other countries, including the United States. By sending us an enquiry, you understand that your information may be handled outside your own country.',
   },
   {
     heading: 'Security',
@@ -60,7 +60,7 @@ const BLOCKS = [
   },
   {
     heading: 'Changes to this notice',
-    copy: 'We may update this notice when the website or the way we handle information changes. The current version is always on this page, with the date it was last updated. Last updated: 6 October 2026.',
+    copy: 'We may update this notice when the website or the way we handle information changes. The current version is always on this page, with the date it was last updated. Last updated: 14 October 2026.',
   },
   {
     heading: 'Contact us',
@@ -68,7 +68,7 @@ const BLOCKS = [
       <>
         Questions about your data can be sent to{' '}
         <a href="mailto:contact@mettglobal.com">contact@mettglobal.com</a> or by
-        post to MettGlobal, {ADDRESS_LINE} (
+        post to Mett Global, {ADDRESS_LINE} (
         <a href={MAPS_URL} target="_blank" rel="noopener">
           map
         </a>
@@ -95,7 +95,7 @@ export default function PrivacyPage() {
           </>
         }
       >
-        This notice explains what information the MettGlobal website collects,
+        This notice explains what information the Mett Global website collects,
         why we use it, who handles it and the choices you have.
       </PageHero>
 
@@ -107,9 +107,9 @@ export default function PrivacyPage() {
 
       <ContactBand
         heading="Questions about your data?"
-        copy="Contact MettGlobal at contact@mettglobal.com."
+        copy="Contact Mett Global at contact@mettglobal.com."
         ctaHref="mailto:contact@mettglobal.com"
-        ctaLabel="Email MettGlobal"
+        ctaLabel="Email Mett Global"
       />
     </PageShell>
   );

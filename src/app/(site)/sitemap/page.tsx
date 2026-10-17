@@ -98,7 +98,7 @@ export default function SitemapPage() {
         kicker="SITE MAP"
         title={
           <>
-            Everything MettGlobal.
+            Everything Mett Global.
             <br />
             <HeroAccent>One index.</HeroAccent>
           </>

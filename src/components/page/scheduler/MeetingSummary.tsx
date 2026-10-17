@@ -53,7 +53,7 @@ export function MeetingSummary({
 }) {
   return (
     <aside className="border-p-line max-b760:border-r-0 max-b760:border-b max-b760:p-[22px] min-w-0 border-r bg-[#f8f4ec] p-[30px]">
-      <span className={KICKER}>METTGLOBAL DISCOVERY MEETING</span>
+      <span className={KICKER}>METT GLOBAL DISCOVERY MEETING</span>
       <h2 className="mt-3 mb-4 text-[34px] leading-none tracking-[-.045em]">
         Start with the problem.
       </h2>

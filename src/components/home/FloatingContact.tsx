@@ -32,10 +32,10 @@ export function FloatingContact() {
       }`}
     >
       <a
-        href="https://wa.me/923046551553?text=Hi%20MettGlobal"
+        href="https://wa.me/923046551553?text=Hi%20Mett%20Global"
         target="_blank"
         rel="noopener"
-        aria-label="Chat with MettGlobal on WhatsApp"
+        aria-label="Chat with Mett Global on WhatsApp"
         className="max-b560:h-12 max-b560:w-12 max-b560:justify-center max-b560:p-0 flex items-center gap-[9px] rounded-full border border-[rgba(224,188,104,.34)] bg-[#0c0c0b] px-[18px] py-[13px] text-xs text-white shadow-[0_16px_45px_rgba(0,0,0,.22)]"
       >
         <WaIcon className="!h-[34px] !w-[34px] border-0 bg-transparent" />
@@ -43,7 +43,7 @@ export function FloatingContact() {
       </a>
       <a
         href="tel:+923046551553"
-        aria-label="Call MettGlobal"
+        aria-label="Call Mett Global"
         className="bg-gold grid h-12 w-12 place-items-center rounded-full text-white shadow-[0_16px_45px_rgba(0,0,0,.18)]"
       >
         ☎
