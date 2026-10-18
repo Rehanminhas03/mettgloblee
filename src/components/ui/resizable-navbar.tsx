@@ -122,9 +122,9 @@ export function NavBody({
         y: visible ? 10 : 0,
       }}
       transition={{ type: 'spring', stiffness: 200, damping: 50 }}
-      style={{ minWidth: 'min(880px, 96%)' }}
+      style={{ minWidth: 'min(940px, 96%)' }}
       className={cn(
-        'max-b900:hidden relative z-[60] mx-auto flex h-[72px] w-full flex-row items-center justify-between self-start rounded-full px-[clamp(24px,5vw,78px)]',
+        'max-b1000:hidden relative z-[60] mx-auto flex h-[72px] w-full flex-row items-center justify-between self-start rounded-full px-[clamp(24px,5vw,78px)]',
         visible
           ? 'bg-[rgba(251,250,246,.62)] !px-6'
           : 'bg-[rgba(251,250,246,.55)] backdrop-blur-[10px]',
@@ -154,7 +154,7 @@ export function NavItems({
       aria-label="Main"
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        'pointer-events-none absolute inset-0 flex flex-row items-center justify-center gap-1 text-[13px] font-bold',
+        'flex min-w-0 flex-1 flex-row items-center justify-center gap-1 px-3 text-[13px] font-bold',
         className,
       )}
     >
@@ -169,7 +169,7 @@ export function NavItems({
             onClick={onItemClick}
             aria-current={current ? 'page' : undefined}
             className={cn(
-              'pointer-events-auto relative rounded-full px-4 py-2 transition-colors',
+              'relative rounded-full px-3 py-2 whitespace-nowrap transition-colors min-[1100px]:px-4',
               current ? 'text-gold' : 'text-ink',
             )}
           >
@@ -206,7 +206,7 @@ export function MobileNav({
       }}
       transition={{ type: 'spring', stiffness: 200, damping: 50 }}
       className={cn(
-        'max-b900:flex relative z-50 mx-auto hidden h-16 w-full flex-col justify-center px-6',
+        'max-b1000:flex relative z-50 mx-auto hidden h-16 w-full flex-col justify-center px-6',
         visible ? 'bg-[rgba(251,250,246,.72)]' : 'bg-[rgba(251,250,246,.6)]',
         className,
       )}

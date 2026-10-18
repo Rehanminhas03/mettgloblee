@@ -39,9 +39,6 @@ export function ResultsStrip() {
                   {item.display}
                 </span>
                 <span>{item.label}</span>
-                <span className={styles.proofArrowIcon} aria-hidden="true">
-                  ↗
-                </span>
               </Link>
             </li>
           ))}
