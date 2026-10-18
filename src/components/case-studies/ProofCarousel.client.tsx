@@ -1,94 +1,64 @@
 'use client';
 
-import { useEffect, useRef, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useInViewOnce } from './useInViewOnce';
 import styles from './case-studies.module.css';
 
-/** Time (ms) between automatic slides. */
-const AUTOPLAY_MS = 4500;
-
 /**
- * Horizontal carousel for the homepage result cards. The cards are
+ * Horizontal swipe row for the homepage result cards. The cards are
  * server-rendered children in a native scroll-snap row, so swiping, trackpad
- * scrolling and keyboard focus all work without this code. It adds previous and
- * next buttons and a gentle autoplay. Autoplay never runs with reduced motion,
- * and stops while the pointer is over the carousel, while anything inside has
- * focus, while the tab is hidden, and after the visitor scrolls it themselves.
+ * scrolling and keyboard focus work without this code. It adds decorative
+ * pagination dots and a "Swipe" hint where the row overflows, and plays the
+ * card graphics once as the row enters view. No arrows and no autoplay.
  */
-export function ProofCarousel({ children }: { children: ReactNode }) {
+export function ProofCarousel({
+  children,
+  count,
+}: {
+  children: ReactNode;
+  count: number;
+}) {
+  const view = useInViewOnce<HTMLDivElement>();
   const track = useRef<HTMLUListElement>(null);
-  const paused = useRef(false);
-  const touched = useRef(false);
-
-  const step = (direction: 1 | -1, smooth: boolean) => {
-    const el = track.current;
-    if (!el) return;
-    const card = el.firstElementChild as HTMLElement | null;
-    const gap = Number.parseFloat(getComputedStyle(el).columnGap) || 0;
-    const width = (card?.offsetWidth ?? el.clientWidth) + gap;
-    const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
-    const behavior: ScrollBehavior = smooth ? 'smooth' : 'auto';
-    if (direction === 1 && atEnd) el.scrollTo({ left: 0, behavior });
-    else el.scrollBy({ left: direction * width, behavior });
-  };
+  const [active, setActive] = useState(0);
+  const [overflows, setOverflows] = useState(false);
 
   useEffect(() => {
     const el = track.current;
-    if (!el || !window.matchMedia) return;
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (reduce.matches) return;
-
-    const timer = window.setInterval(() => {
-      if (!paused.current && !touched.current && !document.hidden)
-        step(1, true);
-    }, AUTOPLAY_MS);
-
-    // Anything the visitor does by hand ends autoplay for good.
-    const stop = () => {
-      touched.current = true;
+    if (!el) return;
+    const onScroll = () => {
+      const card = el.firstElementChild as HTMLElement | null;
+      if (!card) return;
+      const gap = Number.parseFloat(getComputedStyle(el).columnGap) || 0;
+      const step = card.offsetWidth + gap;
+      setActive(Math.min(count - 1, Math.round(el.scrollLeft / step)));
     };
-    el.addEventListener('pointerdown', stop);
-    el.addEventListener('wheel', stop, { passive: true });
+    const measure = () => setOverflows(el.scrollWidth > el.clientWidth + 1);
+    measure();
+    el.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', measure);
     return () => {
-      window.clearInterval(timer);
-      el.removeEventListener('pointerdown', stop);
-      el.removeEventListener('wheel', stop);
+      el.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', measure);
     };
-  }, []);
+  }, [count]);
 
   return (
-    <div
-      onPointerEnter={() => (paused.current = true)}
-      onPointerLeave={() => (paused.current = false)}
-      onFocusCapture={() => (paused.current = true)}
-      onBlurCapture={() => (paused.current = false)}
-    >
-      <div className={styles.proofControls}>
-        <button
-          type="button"
-          className={styles.proofArrow}
-          aria-label="Previous results"
-          onClick={() => {
-            touched.current = true;
-            step(-1, true);
-          }}
-        >
-          ←
-        </button>
-        <button
-          type="button"
-          className={styles.proofArrow}
-          aria-label="Next results"
-          onClick={() => {
-            touched.current = true;
-            step(1, true);
-          }}
-        >
-          →
-        </button>
-      </div>
+    <div ref={view}>
       <ul ref={track} className={styles.proofTrack}>
         {children}
       </ul>
+      {overflows ? (
+        <div className={styles.proofPager} aria-hidden="true">
+          {Array.from({ length: count }, (_, i) => (
+            <span
+              key={i}
+              className={i === active ? styles.dotActive : styles.dot}
+            />
+          ))}
+          <span className={styles.swipeHint}>Swipe</span>
+        </div>
+      ) : null}
     </div>
   );
 }

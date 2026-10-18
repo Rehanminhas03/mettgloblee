@@ -1,0 +1,290 @@
+/* Scenes for the portfolio journey. Colour comes from currentColor, set by the
+   card tone. Motion: transform, opacity and dash offsets only. */
+.art {
+  display: block;
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  overflow: visible;
+  transition:
+    opacity 0.7s var(--cs-ease, ease),
+    transform 0.7s var(--cs-ease, ease);
+}
+.art * {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.soft,
+.softThick {
+  fill: none;
+  stroke: currentColor;
+  stroke-opacity: 0.3;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+.softThick {
+  stroke-width: 5;
+  stroke-opacity: 0.16;
+}
+.solid {
+  fill: currentColor;
+}
+.faint {
+  fill: currentColor;
+  fill-opacity: 0.2;
+}
+.nodeFill {
+  fill: currentColor;
+  fill-opacity: 0.28;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+.hub {
+  fill: currentColor;
+  fill-opacity: 0.14;
+}
+.draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+.arc {
+  stroke-width: 5;
+  stroke-dasharray: 0.95 1;
+}
+/* Moving dashes read as goods, claims or data travelling along a route. */
+.flow {
+  stroke-dasharray: 5 7;
+  animation: flow 1.4s linear infinite;
+}
+.flowLate {
+  animation-delay: -0.6s;
+}
+.rise {
+  transform-origin: bottom;
+  animation: rise 5.5s var(--cs-ease, ease) infinite;
+  animation-delay: calc(var(--i) * 140ms);
+}
+.pulse {
+  animation: pulse 2.6s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * 180ms);
+}
+.ping {
+  fill: currentColor;
+  fill-opacity: 0.18;
+  animation: ping 3s ease-out infinite;
+}
+.pingLate {
+  animation-delay: 1.4s;
+}
+.bob {
+  animation: bob 3.2s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 260ms);
+}
+.slide {
+  animation: slide 5s linear infinite;
+}
+.slideLate {
+  animation-delay: -2.5s;
+}
+.scan {
+  animation: scan 4.2s ease-in-out infinite;
+}
+.lineIn {
+  animation: lineIn 4.2s var(--cs-ease, ease) infinite;
+  animation-delay: calc(var(--i) * 220ms);
+}
+.drive {
+  animation: drive 7s linear infinite;
+}
+.wheel {
+  fill: var(--cs-paper, #fbfaf6);
+  stroke: currentColor;
+  stroke-width: 1.6;
+}
+.orbit {
+  transform-box: view-box;
+  transform-origin: 100px 80px;
+  animation: spin 60s linear infinite;
+}
+.tileCell {
+  fill: currentColor;
+  animation: tile 9s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 55ms);
+}
+.firstSale {
+  animation-name: firstSale;
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+@keyframes rise {
+  0%,
+  8% {
+    transform: scaleY(0.12);
+  }
+  34%,
+  86% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.12);
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.28);
+    opacity: 0.7;
+  }
+}
+@keyframes ping {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+}
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes slide {
+  from {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  12%,
+  88% {
+    opacity: 1;
+  }
+  to {
+    transform: translateX(176px);
+    opacity: 0;
+  }
+}
+@keyframes scan {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  15%,
+  85% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(92px);
+  }
+}
+@keyframes lineIn {
+  0%,
+  6% {
+    stroke-dashoffset: 1;
+  }
+  30%,
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 1;
+  }
+}
+@keyframes drive {
+  from {
+    transform: translateX(4px);
+  }
+  to {
+    transform: translateX(166px);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes tile {
+  0%,
+  4% {
+    opacity: 0.1;
+    transform: scale(0.55);
+  }
+  12%,
+  82% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0.55);
+  }
+}
+@keyframes firstSale {
+  0%,
+  4% {
+    opacity: 0.1;
+    transform: scale(0.55);
+  }
+  12%,
+  82% {
+    opacity: 1;
+    transform: scale(1.18);
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0.55);
+  }
+}
+
+/* Until the scroll line reaches a stop, its scene waits and then plays. */
+[data-enhanced='true'] [data-milestone]:not([data-reached='true']) + div .art {
+  opacity: 0.15;
+  transform: scale(0.94);
+}
+[data-enhanced='true']
+  [data-milestone]:not([data-reached='true'])
+  + div
+  .art
+  * {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .art,
+  .art * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .tileCell {
+    opacity: 0.85;
+  }
+  .scan,
+  .slide,
+  .drive {
+    opacity: 0;
+  }
+  .rise {
+    transform: none;
+  }
+}

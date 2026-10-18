@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PageShell } from '@/components/page/PageShell';
-import { PageHero, HeroAccent } from '@/components/page/PageHero';
+import { PageHero } from '@/components/page/PageHero';
 import { ContactBand } from '@/components/page/ContactBand';
 import { Btn, Section, SectionHead } from '@/components/page/ui';
 import { CaseHero, ChallengeGrid, Workflow } from '@/components/page/case';
@@ -152,7 +152,7 @@ export default async function ProjectPage({
           crumb={project.brand}
           kicker={`${project.sector.toUpperCase()} · CASE STUDY`}
           titleTop={project.title}
-          titleAccent={project.accent}
+          subtitle={project.subtitle}
           lede={project.lede}
           panelLabel={project.panel.label}
           panelValue={project.panel.value}
@@ -162,15 +162,14 @@ export default async function ProjectPage({
       ) : (
         <PageHero
           kicker={`PORTFOLIO / ${project.sector.toUpperCase()}`}
-          title={
-            <>
-              {project.title}
-              <br />
-              <HeroAccent>{project.accent}</HeroAccent>
-            </>
-          }
+          title={<>{project.title}</>}
           actions={links}
         >
+          {project.subtitle ? (
+            <strong className="mb-4 block max-w-[46ch] text-[clamp(18px,1.6vw,22px)] leading-[1.45]">
+              {project.subtitle}
+            </strong>
+          ) : null}
           {project.lede}
         </PageHero>
       )}

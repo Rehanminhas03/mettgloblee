@@ -1,3 +1,4 @@
+import { CASE_NAMES } from '@/lib/caseNames';
 import { PageShell } from '@/components/page/PageShell';
 import { ContactBand } from '@/components/page/ContactBand';
 import { Section, SectionHead } from '@/components/page/ui';
@@ -100,8 +101,8 @@ export default function JetourCaseStudyPage() {
         tone="dark"
         crumb="Jetour Ittehad"
         kicker="AUTOMOTIVE · ISLAMABAD · DOCUMENTED CAMPAIGN"
-        titleTop="Building a dealership"
-        titleAccent="growth engine from zero."
+        titleTop={CASE_NAMES['jetour-ittehad'].name}
+        subtitle={CASE_NAMES['jetour-ittehad'].subtitle}
         lede="Mett Global connected brand launch, social content, Meta acquisition, lead handling, digital journey, outdoor visibility and on-ground activation into one operating system for Jetour Ittehad."
         panelLabel="CAMPAIGN TOTALS"
         panelValue="October 2026 onwards"

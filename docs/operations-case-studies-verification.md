@@ -42,3 +42,12 @@ preview. Not a field-data or accessibility-certification test.
   breadcrumb and schema URLs, and internal links changed.
 - `public/Etsy/` (two screenshots) was already in the working tree. It is not
   used by this feature and was left untouched.
+
+## Fix document (18 Oct 2026) — implementation notes
+
+- Names, subtitles and meta titles for all 16 case studies live in `src/lib/caseNames.ts` and feed H1s, cards, JSON-LD and metadata.
+- Homepage: "Selected results" strip (six cards, swipe + dots, play-once graphics) and a new "Selected work" section between Services and Partners. Animations use `useInViewOnce` (server HTML is the finished state; reduced motion skips the reset).
+- `ScrollTilt`: smaller tilt, finishes at 70% viewport height, `overflow: clip`; the case-study hero panel is not tilted. `html { overflow-x: clip }` is a safety net.
+- `node scripts/check-overflow.mjs` checks every sitemap URL at 1440/1024/768/390px (needs a running site and playwright-core). Last run: no overflow on 50 URLs.
+- Homepage "INTERNATIONAL" card is fixed at 10 per the document's final decision.
+- Not done: contrast tweak for small gold text on `/portfolio`, and the Lighthouse performance items.

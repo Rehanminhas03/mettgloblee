@@ -20,6 +20,7 @@ export function CaseHero({
   kicker,
   titleTop,
   titleAccent,
+  subtitle,
   lede,
   panelLabel,
   panelValue,
@@ -30,7 +31,9 @@ export function CaseHero({
   crumb: string;
   kicker: string;
   titleTop: string;
-  titleAccent: string;
+  titleAccent?: string;
+  /** Line under the H1 (case-study subtitle). */
+  subtitle?: string;
   lede: React.ReactNode;
   panelLabel: string;
   panelValue: string;
@@ -60,11 +63,24 @@ export function CaseHero({
           </span>
           <h1 className="mt-[10px] mb-[22px] text-[clamp(40px,5.2vw,72px)] leading-[1.02] tracking-[-.045em]">
             {titleTop}
-            <br />
-            <span className={light ? 'text-p-gold' : 'text-p-gold2'}>
-              {titleAccent}
-            </span>
+            {titleAccent ? (
+              <>
+                <br />
+                <span className={light ? 'text-p-gold' : 'text-p-gold2'}>
+                  {titleAccent}
+                </span>
+              </>
+            ) : null}
           </h1>
+          {subtitle ? (
+            <p
+              className={`my-[1em] max-w-[46ch] text-[clamp(18px,1.6vw,22px)] leading-[1.45] font-semibold ${
+                tone === 'dark' ? 'text-[#d6d0c4]' : ''
+              }`}
+            >
+              {subtitle}
+            </p>
+          ) : null}
           <p
             className={`my-[1em] max-w-[800px] text-[17px] leading-[1.75] ${
               tone === 'dark' ? 'text-[#aaa59c]' : light ? 'text-p-muted' : ''

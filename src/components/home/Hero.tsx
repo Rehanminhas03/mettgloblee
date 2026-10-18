@@ -1,9 +1,17 @@
 import Link from 'next/link';
-import { Knewave } from 'next/font/google';
+import { Instrument_Serif, Knewave } from 'next/font/google';
 import { Reveal } from './Reveal';
 
 /** Brush display face for the hero word only. */
 const display = Knewave({ weight: '400', subsets: ['latin'], display: 'swap' });
+
+/** Elegant serif for the headline; its italic carries the gold accent word. */
+const headline = Instrument_Serif({
+  weight: '400',
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 const LETTER =
   'animate-rise inline-block transition-[transform,color] duration-500 ease-[cubic-bezier(.2,.7,.2,1)] hover:-translate-y-[.07em] hover:-rotate-3 motion-reduce:animate-none';
@@ -106,10 +114,12 @@ export function Hero() {
 
       <div className="px-pad relative">
         <Reveal className="max-b900:flex-col max-b900:items-start flex items-end justify-between gap-10">
-          <h1 className="max-b560:text-[44px] m-0 max-w-[1200px] text-[clamp(44px,5.2vw,88px)] leading-[.98] font-medium tracking-[-.05em]">
+          <h1
+            className={`${headline.className} max-b560:text-[46px] m-0 max-w-[1200px] text-[clamp(46px,5.8vw,96px)] leading-[1.02] font-normal tracking-[-.025em]`}
+          >
             You focus on business.
             <br className="max-b560:hidden" /> We build what makes it{' '}
-            <span className="text-gold">grow.</span>
+            <span className="text-gold italic">grow.</span>
           </h1>
 
           <Link

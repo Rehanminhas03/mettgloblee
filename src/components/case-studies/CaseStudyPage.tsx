@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { PageShell } from '@/components/page/PageShell';
 import { CaseStudyHero } from './CaseStudyHero';
@@ -28,14 +30,22 @@ export function CaseStudyPage({ study }: { study: CaseStudy }) {
           </Link>
 
           {beats.map((beat, index) => (
-            <section className={styles.beat} key={beat.label}>
-              <p className={styles.eyebrow}>
-                <span aria-hidden="true">0{index + 1} </span>
-                {beat.label}
-              </p>
-              <h2>{beat.heading}</h2>
-              <p>{beat.body}</p>
-            </section>
+            <Fragment key={beat.label}>
+              <section className={styles.beat}>
+                <p className={styles.eyebrow}>
+                  <span aria-hidden="true">0{index + 1} </span>
+                  {beat.label}
+                </p>
+                <h2>{beat.heading}</h2>
+                <p>{beat.body}</p>
+              </section>
+              {beat.label === 'Approach' ? (
+                <ApproachExtras study={study} />
+              ) : null}
+              {beat.label === 'Result' ? (
+                <CatalogueImages study={study} />
+              ) : null}
+            </Fragment>
           ))}
 
           <section className={styles.handled}>
@@ -69,5 +79,61 @@ export function CaseStudyPage({ study }: { study: CaseStudy }) {
         </article>
       </div>
     </PageShell>
+  );
+}
+
+/** Courier badges, scope sections and extra headed paragraphs that follow Approach. */
+function ApproachExtras({ study }: { study: CaseStudy }) {
+  return (
+    <>
+      {study.couriers?.length ? (
+        <section className={styles.handled} aria-label="Couriers">
+          <ul className={styles.chips}>
+            {study.couriers.map(name => (
+              <li key={name}>{name}</li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+      {study.scopeSections?.map(section => (
+        <section className={styles.beat} key={section.id} id={section.id}>
+          <p className={styles.eyebrow}>{section.eyebrow}</p>
+          <h2>{section.title}</h2>
+          <p>{section.intro}</p>
+          <ul className={styles.chips}>
+            {section.points.map(point => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+        </section>
+      ))}
+      {study.extras?.map(extra => (
+        <section className={styles.beat} key={extra.heading}>
+          <h2>{extra.heading}</h2>
+          <p>{extra.body}</p>
+        </section>
+      ))}
+    </>
+  );
+}
+
+/** Catalogue screenshots shown under the Result (Etsy study). */
+function CatalogueImages({ study }: { study: CaseStudy }) {
+  if (!study.images?.length) return null;
+  return (
+    <div className={styles.catalogue}>
+      {study.images.map(image => (
+        <figure key={image.src}>
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={image.width}
+            height={image.height}
+            sizes="(max-width: 900px) 100vw, 480px"
+          />
+          <figcaption>{image.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
   );
 }

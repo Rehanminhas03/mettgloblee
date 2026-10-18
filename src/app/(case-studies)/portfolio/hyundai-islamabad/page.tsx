@@ -1,3 +1,4 @@
+import { CASE_NAMES } from '@/lib/caseNames';
 import { PageShell } from '@/components/page/PageShell';
 import { ContactBand } from '@/components/page/ContactBand';
 import { Section, SectionHead } from '@/components/page/ui';
@@ -77,8 +78,8 @@ export default function HyundaiCaseStudyPage() {
         tone="light"
         crumb="Hyundai Islamabad"
         kicker="AUTOMOTIVE · ISLAMABAD · GROWTH INFRASTRUCTURE"
-        titleTop="Connecting product strength"
-        titleAccent="to a measurable local journey."
+        titleTop={CASE_NAMES['hyundai-islamabad'].name}
+        subtitle={CASE_NAMES['hyundai-islamabad'].subtitle}
         lede="This engagement is presented differently from Jetour because the source material does not yet include verified campaign performance data. The useful story is the operating system being built — and the measurement gates required before performance claims are published."
         panelLabel="PUBLICATION STANDARD"
         panelValue="Evidence first."

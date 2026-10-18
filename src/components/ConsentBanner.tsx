@@ -112,20 +112,20 @@ export function ConsentBanner() {
         <button
           type="button"
           onClick={() => decide('accepted')}
-          className="cursor-pointer whitespace-nowrap rounded-full border-0 bg-[#dfba64] px-[13px] py-[9px] font-[Arial,sans-serif] text-[12px] font-bold text-[#11110f]"
+          className="cursor-pointer rounded-full border-0 bg-[#dfba64] px-[13px] py-[9px] font-[Arial,sans-serif] text-[12px] font-bold whitespace-nowrap text-[#11110f]"
         >
           Allow analytics
         </button>
         <button
           type="button"
           onClick={() => decide('declined')}
-          className="cursor-pointer whitespace-nowrap rounded-full border border-[#5f594f] bg-transparent px-[13px] py-[9px] font-[Arial,sans-serif] text-[12px] font-bold text-white"
+          className="cursor-pointer rounded-full border border-[#5f594f] bg-transparent px-[13px] py-[9px] font-[Arial,sans-serif] text-[12px] font-bold whitespace-nowrap text-white"
         >
           Decline
         </button>
         <Link
           href="/privacy"
-          className="whitespace-nowrap rounded-full border border-[#5f594f] px-[13px] py-[9px] font-[Arial,sans-serif] text-[12px] font-bold text-white"
+          className="rounded-full border border-[#5f594f] px-[13px] py-[9px] font-[Arial,sans-serif] text-[12px] font-bold whitespace-nowrap text-white"
         >
           Privacy
         </Link>

@@ -20,33 +20,40 @@ import {
 import { useHydrated } from '@/hooks/useHydrated';
 
 /** Starting tilt in degrees and starting scale; the end state is 0deg and 1. */
-const START_TILT = 18;
-const START_SCALE = 0.94;
+const START_TILT = 8;
+const START_SCALE = 0.97;
 
 export function ScrollTilt({
   children,
   className,
+  disabled = false,
 }: {
   children: ReactNode;
   className?: string;
+  /** Above-the-fold panels stay flat; their own count-up is the motion. */
+  disabled?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const hydrated = useHydrated();
   const reduceMotion = useReducedMotion();
 
   // 0 when the card's top edge enters the bottom of the screen, 1 when it
-  // reaches about a third of the way down: the effect is done before reading.
+  // is 70% down: anything visible on first paint is already flat.
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start end', 'start 35%'],
+    offset: ['start end', 'start 70%'],
   });
   const rotateX = useTransform(scrollYProgress, [0, 1], [START_TILT, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], [START_SCALE, 1]);
 
-  const animated = hydrated && !reduceMotion;
+  const animated = hydrated && !reduceMotion && !disabled;
 
   return (
-    <div ref={ref} className={className} style={{ perspective: '1000px' }}>
+    <div
+      ref={ref}
+      className={className}
+      style={{ perspective: '1000px', overflow: 'clip' }}
+    >
       <motion.div
         style={
           animated

@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import { Fraunces } from 'next/font/google';
 import { Reveal } from './Reveal';
 import { WaIcon } from './WaIcon';
 import { SERVICES } from '@/lib/services';
 import { AjaxForm } from '@/components/page/AjaxForm';
+import { PHONE_US } from '@/lib/navigation';
 import { ADDRESS_LINE, MAPS_URL } from '@/lib/site';
 
 const SERVICE_OPTIONS = [
@@ -10,12 +12,17 @@ const SERVICE_OPTIONS = [
   'Not sure yet',
 ];
 
+/* Elegant serif for the contact values; labels stay in the site sans. */
+const valueFont = Fraunces({
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 const ROW =
   'relative my-[6px] grid grid-cols-[.6fr_minmax(0,1fr)_auto] items-center gap-5 rounded-[14px] border-b border-[rgba(224,188,104,.22)] px-4 py-[18px] short:py-3 transition-[background,padding,border-color] duration-300 hover:bg-[rgba(224,188,104,.06)] hover:pl-[30px] max-b560:grid-cols-[1fr_auto] max-b560:gap-[10px] max-b560:px-0 max-b560:py-[21px]';
 const ROW_LABEL =
   'text-[10px] font-bold uppercase tracking-[.14em] text-[#d5c8aa]';
-const ROW_VALUE =
-  'text-[clamp(16px,1.3vw,20px)] font-bold leading-[1.15] tracking-[-.025em] text-white transition-colors duration-300 [overflow-wrap:anywhere] group-hover:text-gold2 max-b560:col-start-1 max-b560:text-[clamp(17px,4.9vw,22px)] max-b560:leading-[1.2]';
+const ROW_VALUE = `${valueFont.className} text-[clamp(18px,1.5vw,23px)] font-normal leading-[1.3] tracking-[.005em] text-white transition-colors duration-300 [overflow-wrap:anywhere] group-hover:text-gold2 max-b560:col-start-1 max-b560:text-[clamp(18px,5.2vw,22px)] max-b560:leading-[1.3]`;
 const DOT =
   "relative block h-3 w-3 rounded-full border border-[rgba(224,188,104,.7)] transition-[transform,background,box-shadow] duration-[.35s] after:absolute after:inset-0 after:m-auto after:h-1 after:w-1 after:rounded-full after:bg-gold2 after:content-[''] group-hover:scale-[1.35] group-hover:bg-[rgba(224,188,104,.12)] group-hover:shadow-[0_0_0_8px_rgba(224,188,104,.06)] max-b560:col-start-2 max-b560:row-[1/3] max-b560:self-center";
 
@@ -36,7 +43,7 @@ export function Contact() {
           <div className="text-gold2 text-[11px] font-extrabold tracking-[.2em] uppercase">
             04 / START A CONVERSATION
           </div>
-          <h2 className="short:text-[40px] mb-0 max-w-[1120px] font-sans text-[clamp(34px,4.2vw,58px)] leading-[1.02] font-medium tracking-[-.04em]">
+          <h2 className="short:text-[30px] mb-0 max-w-[1120px] font-sans text-[clamp(26px,2.8vw,40px)] leading-[1.1] font-medium tracking-[-.03em]">
             Bring us the problem.
             <br />
             <span className="text-gold2 font-semibold tracking-[-.035em]">
@@ -74,6 +81,12 @@ export function Contact() {
             <a href="tel:+923046551553" className={`group ${ROW}`}>
               <span className={ROW_LABEL}>Call</span>
               <b className={ROW_VALUE}>+92 304 6551553</b>
+              <i aria-hidden="true" className={DOT} />
+            </a>
+
+            <a href={PHONE_US.href} className={`group ${ROW}`}>
+              <span className={ROW_LABEL}>Call · U.S.</span>
+              <b className={ROW_VALUE}>{PHONE_US.label}</b>
               <i aria-hidden="true" className={DOT} />
             </a>
 

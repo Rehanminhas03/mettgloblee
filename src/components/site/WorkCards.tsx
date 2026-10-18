@@ -34,11 +34,11 @@ export function WorkCardItem({
       <Title className={`${CARD_TITLE} mt-[14px] mb-3 max-w-[700px]`}>
         {item.title}
       </Title>
-      {item.copy ? (
+      {item.subtitle || item.copy ? (
         <p
           className={`relative z-[1] m-0 max-w-[680px] text-[15px] leading-[1.65] ${tone.copy}`}
         >
-          {item.copy}
+          {item.subtitle ?? item.copy}
         </p>
       ) : null}
 

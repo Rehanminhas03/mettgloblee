@@ -310,3 +310,27 @@ html:not([data-intro='seen']) {
     --intro-delay: 0ms;
   }
 }
+
+/* Balanced headings avoid single-word last lines. */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+p,
+li,
+figcaption {
+  text-wrap: pretty;
+}
+/* Clear the floating contact buttons at the end of the page on phones. */
+@media (max-width: 620px) {
+  body {
+    padding-bottom: 72px;
+  }
+}
+
+/* Long unbroken strings (URLs, UTM strings) wrap instead of widening the page. */
+strong {
+  overflow-wrap: anywhere;
+}

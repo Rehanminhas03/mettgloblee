@@ -27,9 +27,9 @@ const GLASS_SHADOW =
 type VisibleProps = { visible?: boolean };
 
 /** Scroll distance (px) before the bar is allowed to hide. */
-const HIDE_AFTER = 120;
+const HIDE_AFTER = 60;
 /** How long (ms) the bar stays visible after the first scroll down. */
-const FIRST_SCROLL_VISIBLE_MS = 2500;
+const FIRST_SCROLL_VISIBLE_MS = 3500;
 /** Ignore tiny scroll movements so a trackpad jitter does not flicker the bar. */
 const SCROLL_THRESHOLD = 6;
 

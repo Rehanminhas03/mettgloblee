@@ -1,3 +1,4 @@
+import { CASE_NAMES } from '@/lib/caseNames';
 import { PageShell } from '@/components/page/PageShell';
 import { ContactBand } from '@/components/page/ContactBand';
 import { Section, SectionHead } from '@/components/page/ui';
@@ -82,8 +83,8 @@ export default function CsmCaseStudyPage() {
         tone="csm"
         crumb="CSM Ittehad"
         kicker="EV AUTOMOTIVE · ISLAMABAD · CLIENT-REPORTED CAMPAIGN DATA"
-        titleTop="From brand setup"
-        titleAccent="to showroom traffic."
+        titleTop={CASE_NAMES['csm-ittehad'].name}
+        subtitle={CASE_NAMES['csm-ittehad'].subtitle}
         lede={
           <>
             Mett Global built the digital foundation and campaign operating
@@ -138,7 +139,7 @@ export default function CsmCaseStudyPage() {
             note="client-reported"
             heading="More than one in four leads reached the showroom."
           >
-            <ConversionDonut value="28%" label="visit conversion" />
+            <ConversionDonut value="~28%" label="visit conversion" />
             <p className="my-[1em] text-center text-[11px] leading-[1.65] text-[#aaa59b]">
               112 confirmed showroom visits ÷ approximately 400 leads =
               approximately 28.0%.

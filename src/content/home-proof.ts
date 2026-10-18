@@ -1,22 +1,18 @@
 import 'server-only';
 import type { MiniKind } from '@/components/case-studies/MiniVisual';
-import { caseStudies, caseStudyPath } from './operations-case-studies';
+import { caseStudyPath } from './operations-case-studies';
 
 /**
- * Homepage results cards: a mix across the service lines, not one service.
- *
- * Every figure already appears on its own case-study or project page. The
- * e-commerce figures are read from the case-study records so they cannot
- * drift; the others mirror the published cards in `lib/caseStudies.ts`.
+ * Homepage "Selected results" strip (exactly six cards) and the "Selected
+ * work" section (three international cards). No stat appears in both.
  * `accessible` is the full sentence for the link's accessible name, including
- * every qualifier (more than, above, client-reported, in development).
- * `visual` picks a small schematic graphic for the card; it never implies a
+ * every qualifier. `visual` picks a schematic graphic; it never implies a
  * value, and no client names appear in any label.
  */
 export type ProofItem = {
-  /** Which service line the figure belongs to (small label on the card). */
   service: string;
-  display: string;
+  value: string;
+  unit?: string;
   label: string;
   accessible: string;
   href: string;
@@ -25,28 +21,14 @@ export type ProofItem = {
 
 const MARKETING = 'Digital marketing';
 const SOFTWARE = 'Web & software';
-const ECOMMERCE = 'E-commerce & supply chain';
+const ECOMMERCE = 'E‑commerce & supply chain';
 
-/** Figures from the operations case studies, by slug. */
-function fromStudy(slug: string, label: string, visual: MiniKind): ProofItem {
-  const study = caseStudies.find(entry => entry.slug === slug);
-  if (!study) throw new Error(`Unknown case study: ${slug}`);
-  return {
-    service: ECOMMERCE,
-    display: study.hero.display,
-    label,
-    accessible: study.hero.accessible,
-    href: caseStudyPath(slug),
-    visual,
-  };
-}
-
-/* Order: two marketing, two software, four e-commerce. */
 export const homeProofItems: ProofItem[] = [
   {
     service: MARKETING,
-    display: '1,000+',
-    label: 'Verified leads from one Meta lead-generation campaign',
+    value: '1,000+',
+    unit: 'verified leads',
+    label: 'One Meta lead-generation campaign',
     accessible:
       'More than 1,000 verified leads from one Meta lead-generation campaign',
     href: '/portfolio/jetour-ittehad',
@@ -54,8 +36,9 @@ export const homeProofItems: ProofItem[] = [
   },
   {
     service: MARKETING,
-    display: '112',
-    label: 'Showroom visits from a lead-generation campaign (client-reported)',
+    value: '112',
+    unit: 'showroom visits',
+    label: 'Lead-generation campaign, client-reported',
     accessible:
       '112 showroom visits from a lead-generation campaign, as reported by the client',
     href: '/portfolio/csm-ittehad',
@@ -63,8 +46,9 @@ export const homeProofItems: ProofItem[] = [
   },
   {
     service: SOFTWARE,
-    display: '2 + 2',
-    label: 'Store apps plus admin and partner portals, in one platform',
+    value: '2 + 2',
+    unit: 'apps and portals',
+    label: 'Two store apps, admin and partner portals',
     accessible:
       'Two store apps plus two portals, admin and partner, running as one platform',
     href: '/portfolio/sfykea',
@@ -72,27 +56,68 @@ export const homeProofItems: ProofItem[] = [
   },
   {
     service: SOFTWARE,
-    display: '6',
-    label: 'Role portals in one custom ERP and CRM, in development',
+    value: '6',
+    unit: 'role portals',
+    label: 'One custom ERP and CRM, in development',
     accessible:
       'Six role portals in one custom ERP and CRM for three showrooms, currently in development',
     href: '/portfolio/dealership-erp',
     visual: 'portals',
   },
-  fromStudy('claims-recovery', 'Recovered in one year', 'rise'),
-  fromStudy(
-    'remote-warehouse-management',
-    'Inventory and fulfilment accuracy',
-    'ring',
-  ),
-  fromStudy(
-    'multichannel-ecommerce-operations',
-    'Amazon marketplaces',
-    'sixdots',
-  ),
-  fromStudy(
-    'etsy-in-house-launch',
-    'To first sale in an in-house Etsy project',
-    'calendar',
-  ),
+  {
+    service: ECOMMERCE,
+    value: '>95%',
+    unit: 'accuracy',
+    label: 'Inventory and order fulfilment',
+    accessible:
+      'Inventory and order fulfilment accuracy above 95 percent in a remotely managed US warehouse',
+    href: caseStudyPath('remote-warehouse-management'),
+    visual: 'ring',
+  },
+  {
+    service: ECOMMERCE,
+    value: '20+',
+    unit: 'courier and 3PL partners',
+    label: 'Selected, tested and invoice-audited',
+    accessible:
+      'More than twenty courier and 3PL partners selected, tested and invoice-audited',
+    href: caseStudyPath('courier-3pl-management'),
+    visual: 'compare',
+  },
+];
+
+/** "Selected work": three strongest international engagements. */
+export type WorkItem = ProofItem & { line: string };
+
+export const selectedWorkItems: WorkItem[] = [
+  {
+    service: 'Claims recovery',
+    value: '>£50,000',
+    label: 'Recovered in one year',
+    line: 'Courier and marketplace claims for a leading global brand.',
+    accessible:
+      'More than fifty thousand pounds recovered in one year in courier and marketplace claims for a leading global brand',
+    href: caseStudyPath('claims-recovery'),
+    visual: 'rise',
+  },
+  {
+    service: 'Multichannel operations',
+    value: '8',
+    unit: 'Amazon marketplaces',
+    label: 'Across 6 sales channels',
+    line: 'Inventory, listings and reporting run as one operation.',
+    accessible: 'Eight Amazon marketplaces across six sales channels',
+    href: caseStudyPath('multichannel-ecommerce-operations'),
+    visual: 'sixdots',
+  },
+  {
+    service: 'Etsy shop launch',
+    value: '2 days',
+    unit: 'to first sale',
+    label: 'In-house Etsy launch',
+    line: 'All 64 listings live within 2 days in our own shop.',
+    accessible: 'First sale within two days of an in-house Etsy launch',
+    href: caseStudyPath('etsy-in-house-launch'),
+    visual: 'calendar',
+  },
 ];

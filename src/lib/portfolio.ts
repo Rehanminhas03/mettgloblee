@@ -6,6 +6,8 @@
  * `metrics` only for work with a published, client-approved case study.
  */
 
+import { CASE_NAMES } from './caseNames';
+
 import {
   ERP_CASE_STUDY,
   LOCAL_CASE_STUDIES,
@@ -19,7 +21,8 @@ export const INTERNATIONAL: WorkCard[] = [
     tone: 'light',
     sector: 'MENTAL HEALTH · TEXAS, USA',
     brand: 'SERENADA MENTAL HEALTH',
-    title: 'A patient-first website built to be found.',
+    title: CASE_NAMES['serenada-mental-health'].name,
+    subtitle: CASE_NAMES['serenada-mental-health'].subtitle,
     copy: 'Website design and development with ongoing SEO for a psychiatric and counseling practice serving Georgetown and Waco.',
     tags: ['Website', 'SEO'],
     href: '/portfolio/serenada-mental-health',
@@ -29,7 +32,8 @@ export const INTERNATIONAL: WorkCard[] = [
     tone: 'cream',
     sector: 'DENTAL CARE · ILLINOIS, USA',
     brand: 'PROSPECT SMILE',
-    title: 'A modern dental website that books patients.',
+    title: CASE_NAMES['prospect-smile'].name,
+    subtitle: CASE_NAMES['prospect-smile'].subtitle,
     copy: 'Website design and development with local SEO for a family and cosmetic dental clinic in Mount Prospect.',
     tags: ['Website', 'Local SEO'],
     href: '/portfolio/prospect-smile',
@@ -39,7 +43,8 @@ export const INTERNATIONAL: WorkCard[] = [
     tone: 'dark',
     sector: 'LUXURY TRANSPORTATION · CHICAGO, USA',
     brand: "LUXURY O'HARE LIMO",
-    title: 'Chauffeur bookings, driven by search.',
+    title: CASE_NAMES['luxury-ohare-limo'].name,
+    subtitle: CASE_NAMES['luxury-ohare-limo'].subtitle,
     copy: 'Website design and development with SEO for airport transfers, corporate travel and event transportation across the Chicago area.',
     tags: ['Website', 'SEO'],
     href: '/portfolio/luxury-ohare-limo',
@@ -56,7 +61,8 @@ export const LOCAL: WorkCard[] = [
     brand: 'ITTEHAD STEEL',
     href: '/portfolio/ittehad-steel',
     linkLabel: 'View the project',
-    title: 'Industrial service partner.',
+    title: CASE_NAMES['ittehad-steel'].name,
+    subtitle: CASE_NAMES['ittehad-steel'].subtitle,
     copy: 'Marketing support for the steel business: Instagram page management, video reels, and billboard and poster design.',
     tags: ['Instagram', 'Video reels', 'Billboards', 'Posters'],
   },

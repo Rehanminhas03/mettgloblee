@@ -9,6 +9,8 @@
  * (`lib/caseStudies.ts` / `lib/portfolio.ts`) at `/portfolio/<slug>`.
  */
 
+import { CASE_NAMES } from './caseNames';
+
 export type ProjectLink = { label: string; href: string };
 
 export type Project = {
@@ -20,6 +22,8 @@ export type Project = {
   sector: string;
   title: string;
   accent: string;
+  /** Line under the H1, from lib/caseNames. */
+  subtitle?: string;
   lede: string;
   links: ProjectLink[];
   /** KPI strip — case studies only. */
@@ -39,7 +43,7 @@ export type Project = {
 
 export type ProjectBlock = { label: string; title: string; copy: string };
 
-export const PROJECTS: Project[] = [
+const RAW_PROJECTS: Project[] = [
   {
     slug: 'dealership-erp',
     market: 'local',
@@ -552,6 +556,19 @@ export const PROJECTS: Project[] = [
     },
   },
 ];
+
+/** Name, subtitle and meta title come from lib/caseNames (one source). */
+export const PROJECTS: Project[] = RAW_PROJECTS.map(project => {
+  const named = CASE_NAMES[project.slug];
+  if (!named) return project;
+  return {
+    ...project,
+    title: named.name,
+    accent: '',
+    subtitle: named.subtitle,
+    seo: { ...project.seo, title: named.metaTitle },
+  };
+});
 
 export function getProject(slug: string): Project | undefined {
   return PROJECTS.find(project => project.slug === slug);

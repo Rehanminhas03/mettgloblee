@@ -1,3 +1,4 @@
+import { CASE_NAMES } from './caseNames';
 import type { Metadata } from 'next';
 import { SITE_URL } from './site';
 
@@ -92,17 +93,17 @@ export const PAGE_SEO = {
 
   /* ---- Case studies ---- */
   '/portfolio/csm-ittehad': {
-    title: 'CSM Ittehad Case Study | Mett Global',
+    title: CASE_NAMES['csm-ittehad'].metaTitle,
     description:
       'A Mett Global case study on EV marketing, lead generation, automation and showroom visits for CSM Ittehad Islamabad.',
   },
   '/portfolio/hyundai-islamabad': {
-    title: 'Hyundai Islamabad Case Study | Mett Global',
+    title: CASE_NAMES['hyundai-islamabad'].metaTitle,
     description:
       'A Mett Global case study on content, customer journeys, lead handling and local growth infrastructure for Hyundai Islamabad.',
   },
   '/portfolio/jetour-ittehad': {
-    title: 'Jetour Ittehad Case Study | Mett Global',
+    title: CASE_NAMES['jetour-ittehad'].metaTitle,
     description:
       'A Mett Global case study on Meta lead generation, automation, outdoor visibility and showroom growth for Jetour Ittehad.',
   },

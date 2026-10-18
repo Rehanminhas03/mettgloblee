@@ -32,6 +32,7 @@ export function CaseStudyHero({ study }: { study: CaseStudy }) {
         <p className={styles.eyebrow}>{study.category}</p>
         <p className={styles.projectType}>{study.projectType}</p>
         <h1 id="case-study-title">{study.title}</h1>
+        <p className={styles.subtitle}>{study.subtitle}</p>
         <p className={styles.deck}>{study.deck}</p>
 
         <dl className={styles.clientDetails}>
@@ -48,7 +49,7 @@ export function CaseStudyHero({ study }: { study: CaseStudy }) {
           <p className={styles.confidentiality}>{study.confidentialityNote}</p>
         ) : null}
 
-        <ScrollTilt>
+        <ScrollTilt disabled>
           <MotionGate className={styles.resultPanel}>
             <div className={styles.resultText}>
               <p
@@ -59,22 +60,30 @@ export function CaseStudyHero({ study }: { study: CaseStudy }) {
                 }
               >
                 <span className={styles.srOnly}>{study.hero.accessible}</span>
-                <span className={styles.numberBox} aria-hidden="true">
-                  <span className={styles.numberReserve}>
-                    {study.hero.display}
+                <span className={styles.statLine} aria-hidden="true">
+                  <span className={styles.numberBox}>
+                    <span className={styles.numberReserve}>
+                      {study.hero.display}
+                    </span>
+                    <span
+                      className={styles.numberValue}
+                      data-cs-number={canCount ? '' : undefined}
+                      data-cs-target={canCount ? study.hero.value! : undefined}
+                      data-cs-prefix={study.hero.prefix}
+                      data-cs-suffix={study.hero.suffix}
+                    >
+                      {study.hero.display}
+                    </span>
                   </span>
-                  <span
-                    className={styles.numberValue}
-                    data-cs-number={canCount ? '' : undefined}
-                    data-cs-target={canCount ? study.hero.value! : undefined}
-                    data-cs-prefix={study.hero.prefix}
-                    data-cs-suffix={study.hero.suffix}
-                  >
-                    {study.hero.display}
-                  </span>
+                  {study.hero.unit ? (
+                    <span className={styles.statUnitText}>
+                      {study.hero.unit}
+                    </span>
+                  ) : null}
                 </span>
               </p>
-              <p className={styles.metricLabel}>{study.hero.label}</p>
+              <p className={styles.statLabel}>{study.hero.label}</p>
+              <p className={styles.statContext}>{study.hero.context}</p>
               <p className={styles.qualifier}>{study.hero.qualifier}</p>
             </div>
             <CaseStudyVisual study={study} />
