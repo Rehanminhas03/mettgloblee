@@ -1,4 +1,6 @@
-# Operations case studies: verification report
+# Historical operations case studies verification
+
+This is the team's historical 18 October record. It does not describe the current homepage or final QA results. See [the current website release notes](website-release-2026-10-20.md) for the final implementation, validation and remaining release caveats.
 
 Run on 18 October 2026 against a local production build (`next build` and
 `next start`) in Microsoft Edge driven by Playwright. Not run on a Vercel

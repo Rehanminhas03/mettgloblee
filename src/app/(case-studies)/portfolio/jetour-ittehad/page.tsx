@@ -1,4 +1,3 @@
-import { CASE_NAMES } from '@/lib/caseNames';
 import { PageShell } from '@/components/page/PageShell';
 import { ContactBand } from '@/components/page/ContactBand';
 import { Section, SectionHead } from '@/components/page/ui';
@@ -93,16 +92,18 @@ const PROOF = [
 
 export default function JetourCaseStudyPage() {
   return (
-    <PageShell>
+    <PageShell caseStudy>
       <JsonLd data={breadcrumbJsonLd('/portfolio/jetour-ittehad')} />
       <JsonLd data={caseStudyJsonLd('/portfolio/jetour-ittehad')} />
 
       <CaseHero
+        visualSlug="jetour-ittehad"
         tone="dark"
-        crumb="Jetour Ittehad"
+        crumb="The 1,000-Lead Launch"
         kicker="AUTOMOTIVE · ISLAMABAD · DOCUMENTED CAMPAIGN"
-        titleTop={CASE_NAMES['jetour-ittehad'].name}
-        subtitle={CASE_NAMES['jetour-ittehad'].subtitle}
+        titleTop="The 1,000-Lead Launch"
+        titleAccent=""
+        subtitle="A dealership growth engine built from zero digital presence for Jetour Ittehad"
         lede="Mett Global connected brand launch, social content, Meta acquisition, lead handling, digital journey, outdoor visibility and on-ground activation into one operating system for Jetour Ittehad."
         panelLabel="CAMPAIGN TOTALS"
         panelValue="October 2026 onwards"

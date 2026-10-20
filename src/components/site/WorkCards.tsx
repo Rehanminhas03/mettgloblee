@@ -1,8 +1,14 @@
 import { Reveal } from '@/components/home/Reveal';
 import { CARD_TITLE, CardTop, TONES, ToneCard } from '@/components/ui/ToneCard';
 import type { WorkCard } from '@/lib/caseStudies';
+import { CASE_NAMES } from '@/lib/caseNames';
+import { CardVisual } from '@/components/case-studies/CardVisual';
+import { CardArtwork } from '@/components/case-studies/CardArtwork.client';
+import { CaseStudyArrow } from '@/components/case-studies/CaseStudyArrow';
+import { InViewList } from '@/components/case-studies/InViewList.client';
+import styles from '@/components/case-studies/case-studies.module.css';
 
-/** `.case-card` — the homepage case-study card, used site-wide. */
+/** `.case-card`, the homepage case-study card, used site-wide. */
 export function WorkCardItem({
   item,
   num,
@@ -15,7 +21,53 @@ export function WorkCardItem({
 }) {
   const tone = TONES[item.tone];
   const hasMetrics = Boolean(item.metrics?.length);
-  const external = Boolean(item.href?.startsWith('http'));
+  const slug = item.href?.startsWith('/portfolio/')
+    ? item.href.split('/').pop()
+    : undefined;
+  const name = slug ? CASE_NAMES[slug] : undefined;
+
+  if (slug && name && item.href) {
+    return (
+      <a
+        href={item.href}
+        data-study-card
+        className={`${styles.csCard} ${styles.studyRow} ${item.tone === 'dark' ? styles.toneDark : styles.toneLight}`}
+      >
+        <CardArtwork>
+          <CardVisual slug={slug} />
+        </CardArtwork>
+        <div className={styles.studyCopy}>
+          <p className={styles.eyebrow}>{item.sector}</p>
+          <p className={styles.studyBrand}>{item.brand}</p>
+          <Title>{name.name}</Title>
+          <p className={styles.cardSubtitle}>{name.subtitle}</p>
+          {item.copy ? (
+            <p className={styles.studySummary}>{item.copy}</p>
+          ) : null}
+          {item.tags?.length ? (
+            <ul className={styles.chips}>
+              {item.tags.map(tag => (
+                <li key={tag}>{tag}</li>
+              ))}
+            </ul>
+          ) : null}
+          {item.metrics?.length ? (
+            <dl className={styles.cardMetrics}>
+              {item.metrics.map(metric => (
+                <div key={metric.label}>
+                  <dt>{metric.label}</dt>
+                  <dd>{metric.value}</dd>
+                </div>
+              ))}
+            </dl>
+          ) : null}
+          <span className={styles.proofCta}>
+            View case study <CaseStudyArrow />
+          </span>
+        </div>
+      </a>
+    );
+  }
 
   const body = (
     <>
@@ -24,6 +76,11 @@ export function WorkCardItem({
         label={item.sector}
         num={String(num).padStart(2, '0')}
       />
+      {slug && name ? (
+        <div className={styles.portfolioVisual}>
+          <CardVisual slug={slug} />
+        </div>
+      ) : null}
 
       <div
         className={`short:mt-5 relative z-[1] mt-9 text-xs font-black tracking-[.18em] ${tone.brand}`}
@@ -32,13 +89,16 @@ export function WorkCardItem({
       </div>
 
       <Title className={`${CARD_TITLE} mt-[14px] mb-3 max-w-[700px]`}>
-        {item.title}
+        {name?.name ?? item.title}
       </Title>
-      {item.subtitle || item.copy ? (
+      {name ? (
+        <p className={`${styles.cardSubtitle} ${tone.copy}`}>{name.subtitle}</p>
+      ) : null}
+      {item.copy ? (
         <p
           className={`relative z-[1] m-0 max-w-[680px] text-[15px] leading-[1.65] ${tone.copy}`}
         >
-          {item.subtitle ?? item.copy}
+          {item.copy}
         </p>
       ) : null}
 
@@ -79,7 +139,7 @@ export function WorkCardItem({
 
       {item.href && item.linkLabel ? (
         <span className="short:mt-3 relative z-[1] mt-5 text-[11px] font-black tracking-[.05em]">
-          {item.linkLabel} {external ? '↗' : '→'}
+          {name ? 'View case study' : item.linkLabel} <CaseStudyArrow />
         </span>
       ) : null}
     </>
@@ -89,7 +149,7 @@ export function WorkCardItem({
     <ToneCard
       tone={item.tone}
       href={item.href}
-      className={hasMetrics ? 'short:min-h-0 min-h-[380px]' : 'min-h-[260px]'}
+      className={`${hasMetrics ? 'short:min-h-0 min-h-[380px]' : 'min-h-[260px]'} ${item.href ? styles.csCard : ''} ${item.tone === 'dark' ? styles.portfolioDark : styles.portfolioLight}`}
     >
       {body}
     </ToneCard>
@@ -103,7 +163,6 @@ export function WorkCardItem({
  */
 export function WorkCardGrid({
   items,
-  cols = 3,
   titleAs,
 }: {
   items: WorkCard[];
@@ -111,18 +170,14 @@ export function WorkCardGrid({
   titleAs?: 'h3' | 'h4';
 }) {
   return (
-    <div
-      className={`max-b1100:grid-cols-2 max-b1100:[&>*:last-child:nth-child(odd)]:col-span-full max-b900:grid-cols-1 grid gap-[18px] ${
-        cols === 2
-          ? 'grid-cols-[repeat(2,minmax(0,1fr))]'
-          : 'grid-cols-[repeat(3,minmax(0,1fr))]'
-      }`}
-    >
+    <InViewList className={`${styles.cardScope} ${styles.studyList}`}>
       {items.map((item, index) => (
-        <Reveal key={item.href ?? item.brand} className="h-full">
-          <WorkCardItem item={item} num={index + 1} titleAs={titleAs} />
-        </Reveal>
+        <li key={item.href ?? item.brand} className="h-full min-w-0">
+          <Reveal className="h-full">
+            <WorkCardItem item={item} num={index + 1} titleAs={titleAs} />
+          </Reveal>
+        </li>
       ))}
-    </div>
+    </InViewList>
   );
 }

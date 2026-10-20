@@ -6,7 +6,7 @@ const NAV_BUTTON =
 
 const GRID = 'grid grid-cols-7 gap-2 max-b620:gap-[5px] max-b430:gap-1';
 
-/** `.calendar-panel` — month header, weekday row and the day grid. */
+/** `.calendar-panel`, month header, weekday row and the day grid. */
 export function CalendarPanel({
   monthLabel,
   cells,

@@ -10,7 +10,7 @@ export type CardTone = 'dark' | 'light' | 'cream';
 
 export type WorkCard = {
   brand: string;
-  /** Sector, then location — shown in the card's top line. */
+  /** Sector, then location, shown in the card's top line. */
   sector: string;
   title: string;
   /** Line under the card title (see lib/caseNames). */

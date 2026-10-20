@@ -16,7 +16,7 @@ const BLOCKS = [
   },
   {
     heading: 'Information you choose to provide',
-    copy: 'Website forms may ask for your name, email address, phone or WhatsApp number, company, the service you are interested in, your project details, and — if you request a meeting — your preferred date, time, time zone and meeting format. If you contact us by email, WhatsApp or social media, we receive whatever you send us.',
+    copy: 'Website forms may ask for your name, email address, phone or WhatsApp number, company, the service you are interested in, your project details, and, if you request a meeting, your preferred date, time, time zone and meeting format. If you contact us by email, WhatsApp or social media, we receive whatever you send us.',
   },
   {
     heading: 'Information collected automatically',
@@ -36,7 +36,7 @@ const BLOCKS = [
   },
   {
     heading: 'Who we share it with',
-    copy: 'We do not sell personal information. We share it only with the service providers that help us run the website and respond to you — such as hosting, form delivery and analytics — when it is needed to deliver something you asked for, or where the law requires it. Those providers have their own privacy practices.',
+    copy: 'We do not sell personal information. We share it only with the service providers that help us run the website and respond to you, such as hosting, form delivery and analytics, when it is needed to deliver something you asked for, or where the law requires it. Those providers have their own privacy practices.',
   },
   {
     heading: 'International processing',

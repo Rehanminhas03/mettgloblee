@@ -7,9 +7,9 @@ import {
 } from './constants';
 
 const CHIP =
-  'flex min-h-[42px] cursor-pointer items-center justify-center rounded-xl border border-p-line bg-white px-[10px] py-[9px] text-center text-[11px] font-extrabold text-[#4d483f] transition-[border-color,background,color] duration-[.18s] peer-checked:border-p-gold peer-checked:bg-[#fff7e7] peer-checked:text-[#6e4c0e] peer-checked:shadow-[inset_0_0_0_1px_rgba(201,152,44,.28)]';
+  'flex min-h-[42px] cursor-pointer items-center justify-center rounded-xl border border-p-line bg-white px-[10px] py-[9px] text-center text-[11px] font-extrabold text-[#4d483f] transition-[border-color,background,color] duration-[.18s] peer-checked:border-p-gold peer-checked:bg-[#fff7e7] peer-checked:text-[#6e4c0e] peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-p-gold peer-checked:shadow-[inset_0_0_0_1px_rgba(201,152,44,.28)]';
 
-/** `.choice-chip` — a radio input hidden behind its styled label. */
+/** `.choice-chip`, a radio input hidden behind its styled label. */
 function ChoiceChip({
   name,
   value,
@@ -39,7 +39,7 @@ function ChoiceChip({
 }
 
 /**
- * `.meeting-summary` — the left rail: meeting format, duration, topic and the
+ * `.meeting-summary`, the left rail: meeting format, duration, topic and the
  * detected timezone.
  */
 export function MeetingSummary({

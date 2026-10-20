@@ -37,7 +37,8 @@ const PARTS = [
   {
     key: 'duty',
     grow: '3',
-    bg: 'bg-[#877451]',
+    bg: 'bg-[#665536]',
+    text: 'text-white',
     amount: '$3',
     label: 'duty + tax',
   },
@@ -45,6 +46,7 @@ const PARTS = [
     key: 'destination',
     grow: '2',
     bg: 'bg-[#6f6046]',
+    text: 'text-white',
     amount: '$2',
     label: 'destination',
   },
@@ -163,7 +165,7 @@ export default function LandedCostModelGuide() {
       back="BLOG / CROSS-BORDER OPERATIONS"
       title="Landed cost before launch: the cross-border margin model operators should use"
       dek="A factory quote is not a market-ready cost. Before a product crosses a border, build the full cost stack and make the commercial responsibility visible. Otherwise a launch can look profitable in the spreadsheet and expensive in the real world."
-      meta="METT GLOBAL OPERATOR PLAYBOOK · TRADE & MARGIN CONTROL · 10 MIN READ"
+      meta="METT GLOBAL OPERATOR PLAYBOOK · TRADE & MARGIN CONTROL · 4 MIN READ"
       graphic={
         <LandedGraphic
           parts={PARTS}

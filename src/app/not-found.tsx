@@ -2,7 +2,7 @@ import { PageShell } from '@/components/page/PageShell';
 import { PageHero, HeroAccent } from '@/components/page/PageHero';
 import { Btn } from '@/components/page/ui';
 
-/** Port of 404.html — App Router serves this for any unmatched route. */
+/** Port of 404.html, App Router serves this for any unmatched route. */
 export default function NotFound() {
   return (
     <PageShell>

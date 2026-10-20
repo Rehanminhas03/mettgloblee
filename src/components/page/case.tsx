@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import { CardArtwork } from '@/components/case-studies/CardArtwork.client';
+import { CardVisual } from '@/components/case-studies/CardVisual';
+import styles from '@/components/case-studies/case-studies.module.css';
 
 /* ------------------------------------------------------------------ *
  * Case-study building blocks (the `.case-*` rules in page.css).
@@ -13,7 +16,7 @@ const HERO_TONE = {
   csm: 'bg-[radial-gradient(circle_at_82%_20%,rgba(224,188,104,.13),transparent_28%),linear-gradient(145deg,#10100f,#201a10)] text-white',
 } as const;
 
-/** `.case-hero` — breadcrumb, headline, summary panel and the KPI strip. */
+/** `.case-hero`, breadcrumb, headline, summary panel and the KPI strip. */
 export function CaseHero({
   tone,
   crumb,
@@ -21,6 +24,7 @@ export function CaseHero({
   titleTop,
   titleAccent,
   subtitle,
+  visualSlug,
   lede,
   panelLabel,
   panelValue,
@@ -31,9 +35,9 @@ export function CaseHero({
   crumb: string;
   kicker: string;
   titleTop: string;
-  titleAccent?: string;
-  /** Line under the H1 (case-study subtitle). */
+  titleAccent: string;
   subtitle?: string;
+  visualSlug?: string;
   lede: React.ReactNode;
   panelLabel: string;
   panelValue: string;
@@ -44,7 +48,7 @@ export function CaseHero({
 
   return (
     <section
-      className={`px-casepad max-b620:px-6 max-b620:pt-12 overflow-hidden pt-[76px] ${HERO_TONE[tone]}`}
+      className={`${styles.cardScope} ${visualSlug ? styles.caseHero : ''} px-casepad max-b620:px-6 max-b620:pt-12 overflow-hidden pt-[76px] ${HERO_TONE[tone]}`}
     >
       <div
         className={`mb-[42px] flex items-center gap-[9px] text-[10px] tracking-[.12em] uppercase ${
@@ -56,27 +60,34 @@ export function CaseHero({
         <b className="text-p-gold">{crumb}</b>
       </div>
 
-      <div className="max-b1000:grid-cols-1 max-b620:gap-[34px] grid grid-cols-[minmax(0,1.35fr)_minmax(300px,.65fr)] items-end gap-[62px] pb-[54px]">
+      <div
+        className={
+          visualSlug
+            ? styles.detailHeroGrid
+            : 'max-b1000:grid-cols-1 max-b620:gap-[34px] grid grid-cols-[minmax(0,1.35fr)_minmax(300px,.65fr)] items-end gap-[62px] pb-[54px]'
+        }
+      >
+        {visualSlug ? (
+          <div className={styles.detailHeroArt}>
+            <CardArtwork>
+              <CardVisual slug={visualSlug} />
+            </CardArtwork>
+          </div>
+        ) : null}
         <div>
           <span className="text-p-gold text-[10px] font-black tracking-[.2em]">
             {kicker}
           </span>
           <h1 className="mt-[10px] mb-[22px] text-[clamp(40px,5.2vw,72px)] leading-[1.02] tracking-[-.045em]">
             {titleTop}
-            {titleAccent ? (
-              <>
-                <br />
-                <span className={light ? 'text-p-gold' : 'text-p-gold2'}>
-                  {titleAccent}
-                </span>
-              </>
-            ) : null}
+            {titleAccent ? <br /> : null}
+            <span className={light ? 'text-p-gold' : 'text-p-gold2'}>
+              {titleAccent}
+            </span>
           </h1>
           {subtitle ? (
             <p
-              className={`my-[1em] max-w-[46ch] text-[clamp(18px,1.6vw,22px)] leading-[1.45] font-semibold ${
-                tone === 'dark' ? 'text-[#d6d0c4]' : ''
-              }`}
+              className={`case-study-subtitle ${light ? 'text-p-muted' : 'text-p-paper'}`}
             >
               {subtitle}
             </p>
@@ -92,7 +103,9 @@ export function CaseHero({
 
         <aside
           className={`rounded-3xl border p-[26px] ${
-            light ? 'border-p-line bg-white' : 'border-[#343029] bg-[#151513]'
+            light
+              ? 'border-p-line bg-white'
+              : 'dark-surface border-[#343029] bg-[#151513]'
           }`}
         >
           <small className="text-p-gold text-[9px] font-black tracking-[.15em]">
@@ -111,8 +124,9 @@ export function CaseHero({
         </aside>
       </div>
 
-      {/* .case-kpi-strip — bleeds to the section edges */}
+      {/* .case-kpi-strip, bleeds to the section edges */}
       <div
+        data-case-kpis
         className={`-mx-casepad px-casepad max-b1000:grid-cols-2 max-b620:-mx-6 max-b620:px-6 grid grid-cols-4 border-t ${
           light ? 'border-t-[#d8ccb8]' : 'border-t-[#28251f]'
         }`}
@@ -157,12 +171,20 @@ export function ChallengeGrid({
 }: {
   items: { label: string; title: string; copy: string }[];
 }) {
+  const columns =
+    items.length === 1
+      ? 'grid-cols-1'
+      : items.length === 2
+        ? 'grid-cols-2 max-b620:grid-cols-1'
+        : items.length === 3
+          ? 'grid-cols-3 max-b620:grid-cols-1'
+          : 'grid-cols-4 max-b1000:grid-cols-2 max-b620:grid-cols-1';
   return (
-    <div className="max-b1000:grid-cols-2 max-b620:grid-cols-1 grid grid-cols-4 gap-[14px]">
+    <div className={`grid ${columns} gap-[14px]`}>
       {items.map(item => (
         <article
           key={item.label}
-          className="border-p-line min-h-[240px] rounded-[22px] border bg-white p-6"
+          className={`border-p-line ${items.length === 1 ? '' : 'min-h-[240px]'} rounded-[22px] border bg-white p-6`}
         >
           <small className="text-p-gold font-black tracking-[.13em]">
             {item.label}
@@ -306,7 +328,7 @@ export function DataNote({ children }: { children: React.ReactNode }) {
   );
 }
 
-/** `.workflow` — five numbered steps. `dark` maps to `.hyundai-flow`. */
+/** `.workflow`, five numbered steps. `dark` maps to `.hyundai-flow`. */
 export function Workflow({
   steps,
   dark,
@@ -315,13 +337,15 @@ export function Workflow({
   dark?: boolean;
 }) {
   return (
-    <div className="max-b1000:grid-cols-1 grid grid-cols-4 items-center gap-3">
+    <div
+      className={`max-b1000:grid-cols-1 grid ${steps.length === 5 ? 'grid-cols-5' : 'grid-cols-4'} items-center gap-3`}
+    >
       {steps.map(step => (
         <div
           key={step.num}
           className={`flex min-h-[130px] flex-col justify-between rounded-[20px] border p-5 ${
             dark
-              ? 'border-[#363229] bg-[#171715] text-white'
+              ? 'dark-surface border-[#363229] bg-[#171715] text-white'
               : 'border-p-line bg-white'
           }`}
         >
@@ -348,7 +372,7 @@ export function ProofGrid({
           key={item.label}
           className={`rounded-[22px] border p-[25px] ${
             dark
-              ? 'border-[#34312a] bg-[#151513]'
+              ? 'dark-surface border-[#34312a] bg-[#151513]'
               : 'border-p-line bg-[#f7f2e8]'
           }`}
         >
@@ -445,7 +469,7 @@ export function IntegrityCard({
   );
 }
 
-/** `.conversion-donut` — a 28% conic wedge with a punched-out centre. */
+/** `.conversion-donut`, a 28% conic wedge with a punched-out centre. */
 export function ConversionDonut({
   value,
   label,

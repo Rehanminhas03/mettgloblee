@@ -53,12 +53,20 @@ export function ArticleShell({
         </p>
 
         <div className="border-a-line mt-[34px] mb-[60px] border-t pt-[18px] text-[10px] font-extrabold tracking-[.14em]">
+          <span className="mb-3 block text-sm font-semibold tracking-normal normal-case">
+            By{' '}
+            <Link href="/about" className="underline underline-offset-4">
+              Mett Global
+            </Link>
+          </span>
           {meta}
         </div>
 
         {graphic}
 
-        <article className="mx-auto max-w-[760px]">{children}</article>
+        <article className="mx-auto max-w-[760px] [overflow-wrap:anywhere]">
+          {children}
+        </article>
 
         {/* .end */}
         <section className="max-b650:flex-col max-b650:items-start mx-auto mt-[90px] flex max-w-[760px] items-center justify-between gap-5 rounded-3xl bg-[#111] p-[35px] text-white">

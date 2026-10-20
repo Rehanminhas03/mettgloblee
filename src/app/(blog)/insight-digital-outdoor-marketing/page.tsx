@@ -15,7 +15,7 @@ const BLOCKS: Block[] = [
   { t: 'h2', text: 'Use outdoor to be noticed, digital to be measured' },
   {
     t: 'p',
-    text: 'Outdoor advertising builds recall in the streets people already travel. Digital channels turn that recall into an action you can count. Give every outdoor piece a clear next step — a handle, a QR code or a WhatsApp number — so interest has somewhere to go.',
+    text: 'Outdoor advertising builds recall in the streets people already travel. Digital channels turn that recall into an action you can count. Give every outdoor piece a clear next step, a handle, a QR code or a WhatsApp number, so interest has somewhere to go.',
   },
   { t: 'h2', text: 'Make the Instagram page the destination' },
   {
@@ -63,7 +63,7 @@ export default function DigitalOutdoorGuide() {
       dek={
         'Local and automotive brands often run outdoor and social separately. Connected, they reinforce each other and give you something to measure.'
       }
-      meta={'METT GLOBAL FIELD GUIDE · DIGITAL MARKETING · 8 MIN READ'}
+      meta={'METT GLOBAL FIELD GUIDE · DIGITAL MARKETING · 2 MIN READ'}
       graphic={
         <ChipGraphic steps={['AWARENESS', 'SOCIAL', 'ENQUIRY', 'VISIT']} />
       }

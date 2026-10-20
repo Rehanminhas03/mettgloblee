@@ -18,6 +18,7 @@ export default function PortfolioPage() {
       <JsonLd data={pageJsonLd('/portfolio', 'CollectionPage')} />
 
       <PageHero
+        compact
         kicker="PORTFOLIO"
         title={
           <>
@@ -40,7 +41,7 @@ export default function PortfolioPage() {
       </PageHero>
 
       <div id="international" className="scroll-mt-24">
-        <Section>
+        <Section className="!pt-8">
           <SectionHead heading="International clients">
             Marketplace operations, supply chain delivery, websites and software
             for international businesses.
@@ -48,7 +49,7 @@ export default function PortfolioPage() {
 
           <OperationsJourney />
 
-          <h3 className="mt-[90px] mb-[35px] text-[clamp(28px,3vw,42px)] leading-[1.05] tracking-[-.04em]">
+          <h3 className="mt-14 mb-8 text-[clamp(28px,3vw,42px)] leading-[1.05] tracking-[-.04em]">
             Websites and software
           </h3>
           {INTERNATIONAL.length ? (
@@ -60,7 +61,7 @@ export default function PortfolioPage() {
           ) : (
             <div className="border-p-line text-p-muted rounded-3xl border border-dashed p-8 text-[15px] leading-[1.65]">
               International project details are being prepared for publication.
-              References are available on request —{' '}
+              References are available on request,{' '}
               <Link href="/appointment" className="text-p-gold font-bold">
                 book a meeting
               </Link>

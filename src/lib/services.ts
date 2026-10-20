@@ -71,7 +71,7 @@ export const SERVICES: Service[] = [
       kicker: 'SERVICE / DIGITAL MARKETING & GROWTH',
       title: 'Turn attention',
       accent: 'into growth.',
-      copy: 'Strategy, creative, paid media, social, SEO and analytics managed as one growth system — measured by the leads and sales it produces, not by likes.',
+      copy: 'Strategy, creative, paid media, social, SEO and analytics managed as one growth system, measured by the leads and sales it produces, not by likes.',
     },
     sideHeading: 'Strategy, media and measurement under one plan.',
     details: [
@@ -101,7 +101,7 @@ export const SERVICES: Service[] = [
       },
       {
         heading: 'SEO & search',
-        copy: 'The free channels that support paid spend and help customers find and trust you when they search.',
+        copy: 'Organic search that supports paid campaigns and helps customers find and evaluate your business when they search.',
         items: [
           'Technical SEO',
           'On-Page SEO',
@@ -148,7 +148,7 @@ export const SERVICES: Service[] = [
       },
       {
         heading: 'CRM & lead management',
-        copy: 'The form, routing and follow-up are part of acquisition — fast response turns clicks into conversations.',
+        copy: 'The form, routing and follow-up are part of acquisition. A fast response turns clicks into conversations.',
         items: [
           'Lead Capture',
           'Lead Routing',
@@ -192,7 +192,7 @@ export const SERVICES: Service[] = [
       kicker: 'SERVICE / WEB & SOFTWARE DEVELOPMENT',
       title: 'Software that',
       accent: 'runs the business.',
-      copy: 'From the website customers see to the CRM and tools your team uses every day — designed, built and maintained by one team.',
+      copy: 'From the website customers see to the CRM and tools your team uses every day, designed, built and maintained by one team.',
     },
     sideHeading: 'Built for customers and for your team.',
     details: [
@@ -228,7 +228,7 @@ export const SERVICES: Service[] = [
       },
       {
         heading: 'CRM development',
-        copy: 'A CRM shaped around your sales process — built custom, or an existing platform configured properly.',
+        copy: 'A CRM shaped around your sales process, built custom, or an existing platform configured properly.',
         items: [
           'Custom CRM',
           'CRM Setup',
@@ -271,7 +271,7 @@ export const SERVICES: Service[] = [
     ],
     band: {
       heading: 'Build trust. Reduce friction.',
-      copy: 'Tell us what you need to build — a website, a CRM or an internal tool — and we will scope it with you.',
+      copy: 'Tell us what you need to build, a website, a CRM or an internal tool, and we will scope it with you.',
       cta: 'Discuss a build',
     },
   },
@@ -303,13 +303,13 @@ export const SERVICES: Service[] = [
       kicker: 'SERVICE / AI AUTOMATION & CONTENT',
       title: 'Automate the busywork.',
       accent: 'Scale the content.',
-      copy: 'AI built around real workflows and real brand standards — with human checkpoints, so it reaches production instead of staying a demo.',
+      copy: 'AI built around real workflows and real brand standards, with human checkpoints, so it reaches production instead of staying a demo.',
     },
     sideHeading: 'Useful AI, not experiments.',
     details: [
       {
         heading: 'AI workflow automation',
-        copy: 'Map the process first — trigger, inputs, decisions, owner and exceptions — then automate the parts that repeat.',
+        copy: 'Map the process first: trigger, inputs, decisions, owner and exceptions. Then automate the parts that repeat.',
         items: [
           'Workflow Automation',
           'Repetitive Task Automation',
@@ -319,7 +319,7 @@ export const SERVICES: Service[] = [
       },
       {
         heading: 'AI agents & assistants',
-        copy: 'Assistants that answer, qualify and route — and hand over to a person when they should.',
+        copy: 'Assistants that answer, qualify and route, and hand over to a person when they should.',
         items: [
           'AI Assistants',
           'AI Agents',
@@ -329,7 +329,7 @@ export const SERVICES: Service[] = [
       },
       {
         heading: 'AI content',
-        copy: 'AI-assisted production for faster content — briefed properly, reviewed by people and kept on-brand.',
+        copy: 'AI-assisted production for faster content, briefed properly, reviewed by people and kept on-brand.',
         items: [
           'Social Media Content',
           'Marketing Copy',

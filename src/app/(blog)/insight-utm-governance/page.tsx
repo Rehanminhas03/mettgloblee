@@ -145,7 +145,7 @@ export default function UtmGovernanceGuide() {
           several incompatible stories.
         </>
       }
-      meta="METT GLOBAL OPERATOR PLAYBOOK · CAMPAIGN MEASUREMENT · 8 MIN READ"
+      meta="METT GLOBAL OPERATOR PLAYBOOK · CAMPAIGN MEASUREMENT · 4 MIN READ"
       graphic={<UtmGraphic fields={FIELDS} />}
       endHeading="Need a measurement system that the team can trust?"
       endHref="/digital-marketing-growth"

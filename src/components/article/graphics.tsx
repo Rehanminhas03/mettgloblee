@@ -1,12 +1,12 @@
 /* ------------------------------------------------------------------ *
  * Article hero graphics (`.graphic` and its `.data-graphic` variants).
- * All are pure CSS — no images were used in the original either.
+ * All are pure CSS, no images were used in the original either.
  * ------------------------------------------------------------------ */
 
 const GRAPHIC_BASE =
   'mb-[70px] min-h-[170px] rounded-[26px] p-[35px] text-white max-b650:p-[25px]';
 
-/** `.graphic` — the chip-and-rule strip used by the eight field guides. */
+/** `.graphic`, the chip-and-rule strip used by the eight field guides. */
 export function ChipGraphic({ steps }: { steps: string[] }) {
   return (
     <div
@@ -26,7 +26,7 @@ export function ChipGraphic({ steps }: { steps: string[] }) {
   );
 }
 
-/** `.policy-graphic` — three stat panels, used by the five policy updates. */
+/** `.policy-graphic`, three stat panels, used by the five policy updates. */
 export function PolicyGraphic({
   facts,
 }: {
@@ -56,7 +56,7 @@ export function PolicyGraphic({
   );
 }
 
-/** `.data-graphic` shell — dark panel with a title row. */
+/** `.data-graphic` shell, dark panel with a title row. */
 function DataGraphic({
   label,
   heading,
@@ -80,10 +80,10 @@ function DataGraphic({
       }`}
     >
       <div className="max-b480:block mb-[25px] flex items-end justify-between gap-5">
-        <span className="text-p-gold2 text-[9px] font-black tracking-[.16em]">
+        <span className="text-p-gold2 block text-[9px] font-black tracking-[.16em]">
           {label}
         </span>
-        <strong className="max-b480:mt-[10px] max-b480:text-left max-w-[340px] text-right text-xl leading-[1.05] tracking-[-.035em]">
+        <strong className="max-b480:block max-b480:mt-[10px] max-b480:text-left max-w-[340px] text-right text-xl leading-[1.05] tracking-[-.035em]">
           {heading}
         </strong>
       </div>
@@ -169,7 +169,7 @@ export function FeedGraphic({
   );
 }
 
-/** `.landed-graphic` — a proportional cost stack. */
+/** `.landed-graphic`, a proportional cost stack. */
 export function LandedGraphic({
   parts,
   totalLabel,
@@ -199,7 +199,7 @@ export function LandedGraphic({
             key={part.key}
             style={{ flexGrow: Number(part.grow), flexBasis: 0 }}
             className={`max-b700:px-[7px] max-b700:py-3 flex min-w-0 flex-col justify-between px-[10px] py-[15px] ${part.bg} ${
-              part.text ?? ''
+              part.text ?? 'text-[#11110f]'
             }`}
           >
             <strong className="max-b480:text-[18px] text-[clamp(18px,3vw,29px)] tracking-[-.05em]">
@@ -207,7 +207,7 @@ export function LandedGraphic({
             </strong>
             <small
               className={`max-b700:text-[8px] text-[9px] leading-[1.2] font-black ${
-                part.text ? 'text-[#ddd4c5]' : 'text-[rgba(17,17,15,.78)]'
+                part.text ? 'text-white' : 'text-[#11110f]'
               }`}
             >
               {part.label}
@@ -223,7 +223,7 @@ export function LandedGraphic({
   );
 }
 
-/** `.score-rows` — the weighted 3PL scorecard. */
+/** `.score-rows`, the weighted 3PL scorecard. */
 export function ScorecardGraphic({
   rows,
   note,

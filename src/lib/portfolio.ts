@@ -70,6 +70,8 @@ export const LOCAL: WorkCard[] = [
     tone: 'dark',
     sector: 'GPS & VEHICLE TRACKING · PAKISTAN',
     brand: 'MYTRACKEE PAKISTAN',
+    href: '/portfolio/mytrackee-pakistan',
+    linkLabel: 'View the project',
     title: 'GPS location & vehicle tracking platform.',
     copy: 'A web portal for GPS location and vehicle tracking, so fleets and vehicle owners can see where their vehicles are.',
     tags: ['GPS', 'Vehicle tracking', 'Web portal'],
@@ -77,7 +79,7 @@ export const LOCAL: WorkCard[] = [
 ];
 
 /**
- * Portfolio cards show scope tags, not statistics — the numbers live on each
+ * Portfolio cards show scope tags, not statistics, the numbers live on each
  * project's own page.
  */
 const SCOPE_TAGS: Record<string, string[]> = {

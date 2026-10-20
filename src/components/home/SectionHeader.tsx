@@ -12,12 +12,16 @@ export function SectionHeader({
   heading,
   children,
   action,
+  equalColumns = false,
+  centerCopy = false,
 }: {
   kicker: string;
   dark?: boolean;
   heading: React.ReactNode;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   action?: React.ReactNode;
+  equalColumns?: boolean;
+  centerCopy?: boolean;
 }) {
   return (
     <>
@@ -29,20 +33,24 @@ export function SectionHeader({
         {kicker}
       </div>
 
-      <Reveal className="max-b900:grid-cols-1 max-b900:gap-5 short:mt-1 short:mb-5 mt-4 mb-9 grid grid-cols-[1fr_.7fr] items-end gap-[60px]">
+      <Reveal
+        className={`max-b900:grid-cols-1 max-b900:gap-5 short:mt-1 short:mb-5 mt-4 mb-9 grid ${children ? (equalColumns ? 'grid-cols-2 gap-8' : 'grid-cols-[1fr_.8fr] gap-[40px]') : 'grid-cols-1'} ${centerCopy ? 'max-b900:items-start items-center' : 'items-start'}`}
+      >
         <h2 className="short:text-[40px] m-0 text-[clamp(34px,4.2vw,58px)] leading-[1.02] tracking-[-.045em]">
           {heading}
         </h2>
-        <div>
-          <p
-            className={`m-0 max-w-[560px] text-base leading-[1.7] ${
-              dark ? 'text-[#9c988f]' : 'text-muted'
-            } ${action ? 'mb-5' : ''}`}
-          >
-            {children}
-          </p>
-          {action}
-        </div>
+        {children || action ? (
+          <div>
+            <p
+              className={`m-0 max-w-[560px] text-base leading-[1.7] ${
+                dark ? 'text-[#9c988f]' : 'text-muted'
+              } ${action ? 'mb-5' : ''}`}
+            >
+              {children}
+            </p>
+            {action}
+          </div>
+        ) : null}
       </Reveal>
     </>
   );

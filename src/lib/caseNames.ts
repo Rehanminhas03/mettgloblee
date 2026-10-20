@@ -13,6 +13,12 @@ export type CaseName = {
 };
 
 export const CASE_NAMES: Record<string, CaseName> = {
+  'mytrackee-pakistan': {
+    name: 'MyTrackee Pakistan',
+    subtitle:
+      'A GPS location and vehicle tracking portal for fleets and vehicle owners',
+    metaTitle: 'MyTrackee Pakistan GPS Tracking Portal | Mett Global',
+  },
   'claims-recovery': {
     name: 'The £50,000 Recovery',
     subtitle: 'Courier and marketplace claims for a leading global brand',

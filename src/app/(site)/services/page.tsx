@@ -24,7 +24,7 @@ export default function ServicesPage() {
         </h1>
         <p className="text-p-muted max-b620:text-[16px] my-[1em] max-w-[780px] text-[18px] leading-[1.75]">
           Digital Marketing & Growth, Web & Software Development, AI Automation
-          & Content, and E-Commerce & Supply Chain — combined around your
+          & Content, and E-Commerce & Supply Chain, combined around your
           business problem instead of sold as separate silos.
         </p>
       </section>

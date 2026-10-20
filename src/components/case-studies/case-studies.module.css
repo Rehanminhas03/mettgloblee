@@ -70,15 +70,9 @@
 .breadcrumb ol {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem 1rem;
+  align-items: baseline;
+  gap: 6px 10px;
   list-style: none;
-}
-.breadcrumb li {
-  display: flex;
-  align-items: center;
-  min-height: 44px;
-  line-height: 1.4;
 }
 .breadcrumb li:not(:last-child)::after {
   content: '/';
@@ -89,6 +83,14 @@
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+}
+.breadcrumb li {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+.breadcrumb a {
+  display: inline-block;
+  padding-block: 12px;
 }
 .eyebrow {
   font-size: 0.75rem;
@@ -167,13 +169,6 @@
     font-size: clamp(32px, 16cqw, 144px);
   }
 }
-.coverageMetric {
-  color: var(--cs-gold-light);
-  font-size: clamp(38px, 6vw, 96px);
-  font-weight: 800;
-  line-height: 1.04;
-  letter-spacing: -0.04em;
-}
 /* The final text is always rendered and reserves the width, so a temporary
    count-up never shifts the layout. */
 .numberBox {
@@ -190,55 +185,6 @@
 }
 .metric .numberBox {
   white-space: nowrap;
-}
-.coverageMetric .numberBox {
-  white-space: normal;
-}
-.metricLabel {
-  font-size: 1.125rem;
-  font-weight: 700;
-  margin-top: 14px !important;
-}
-.qualifier {
-  margin-top: 16px !important;
-  font-size: 0.9375rem;
-}
-.subtitle {
-  margin-top: 14px !important;
-  max-width: 46ch;
-  font-size: clamp(18px, 1.6vw, 22px);
-  line-height: 1.45;
-  color: color-mix(in srgb, var(--cs-paper) 82%, transparent);
-  text-wrap: balance;
-}
-/* Hero stat unit: figure and unit on one baseline, small-caps label, context. */
-.statLine {
-  display: inline-flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  column-gap: 0.3em;
-  max-width: 100%;
-}
-.statUnitText {
-  color: var(--cs-gold-light);
-  font-weight: 700;
-  font-size: clamp(18px, 1.8vw, 26px);
-  letter-spacing: -0.01em;
-}
-.statLabel {
-  margin-top: 14px !important;
-  padding-top: 12px;
-  border-top: 1px solid color-mix(in srgb, var(--cs-gold) 60%, transparent);
-  font-variant-caps: all-small-caps;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-  font-size: 1.125rem;
-}
-.statContext {
-  margin-top: 8px !important;
-  font-size: 0.9375rem;
-  line-height: 1.55;
-  color: color-mix(in srgb, var(--cs-paper) 78%, transparent);
 }
 
 /* ---------- Figures ---------- */
@@ -596,9 +542,9 @@
 }
 .journeyStop {
   display: grid;
-  grid-template-columns: minmax(170px, 0.3fr) minmax(0, 1fr);
+  grid-template-columns: minmax(140px, 0.27fr) minmax(0, 1fr);
   gap: clamp(16px, 3vw, 40px);
-  align-items: center;
+  align-items: start;
   padding: 22px clamp(20px, 2.6vw, 32px);
   position: relative;
   overflow: hidden;
@@ -628,21 +574,21 @@
    cards. Light tones use a darker gold so small gold text stays readable. */
 .toneLight .journeyMetric,
 .toneCream .journeyMetric {
-  color: #84601a;
+  color: color-mix(in srgb, var(--cs-gold) 80%, var(--cs-ink));
 }
 .toneLight .journeyBody .eyebrow,
 .toneCream .journeyBody .eyebrow {
   color: #84601a;
 }
 .toneCream {
-  background: linear-gradient(145deg, #f7f1e5, #fff);
+  background: var(--cs-paper);
 }
 .toneLight {
   background: #fff;
 }
 .toneDark {
   background: var(--cs-ink);
-  border-color: #26231e;
+  border-color: color-mix(in srgb, var(--cs-line) 16%, transparent);
   color: var(--cs-paper);
 }
 .toneDark .journeyMetric,
@@ -653,7 +599,7 @@
 .toneDark .journeyFigure .small,
 .toneDark .journeyClient,
 .toneDark .journeySummary {
-  color: #cfcabd;
+  color: color-mix(in srgb, var(--cs-paper) 82%, transparent);
 }
 .toneDark .chips li {
   border-color: rgba(224, 188, 104, 0.35);
@@ -661,10 +607,6 @@
 }
 .journeyFigure {
   min-width: 0;
-  color: #84601a;
-}
-.toneDark .journeyFigure {
-  color: var(--cs-gold-light);
 }
 .journeyMetric {
   font-size: clamp(24px, 2.1vw, 32px);
@@ -718,7 +660,7 @@
 .journeyMini {
   max-width: 128px;
   margin-top: 14px;
-  color: #84601a;
+  color: color-mix(in srgb, var(--cs-gold) 80%, var(--cs-ink));
 }
 .toneDark .journeyMini {
   color: var(--cs-gold-light);
@@ -742,398 +684,30 @@
   opacity: 0.12;
 }
 
-/* ---------- Homepage results strip ---------- */
+/* ---------- Homepage proof strip ---------- */
 .proof {
   background: var(--cs-ink);
   color: var(--cs-paper);
-  padding: 36px 8vw 30px;
+  padding: 56px 8vw;
 }
 .proof h2 {
   font-size: clamp(22px, 2.3vw, 32px);
   margin-bottom: 8px;
-}
-.proofContainer {
-  position: relative;
 }
 .proofIntro {
   font-size: 0.9375rem;
   line-height: 1.55;
   max-width: 640px;
 }
-/* A native scroll-snap row: swipe, trackpad and keyboard work without scripts.
-   The right edge fades so a partly visible card reads as "more". */
-.proofTrack {
-  display: flex;
-  gap: 14px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  list-style: none;
-  margin: 8px 0 0 !important;
-  padding: 6px 0 12px !important;
-  scrollbar-width: none;
-  overscroll-behavior-x: contain;
-  -webkit-overflow-scrolling: touch;
-  mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
-}
-.proofTrack::-webkit-scrollbar {
-  display: none;
-}
-.proofCard {
-  flex: 0 0 min(262px, 76vw);
-  scroll-snap-align: start;
-}
-.proofCard:last-child {
-  margin-right: 40px;
-}
-.proofCard a {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  height: 100%;
-  min-height: 236px;
-  padding: 20px 22px;
-  border: 1px solid color-mix(in srgb, var(--cs-line) 16%, transparent);
-  border-radius: 22px;
-  background: var(--cs-ink);
-  text-decoration: none;
-  font-size: 0.8125rem;
-  line-height: 1.4;
-  transition:
-    transform 0.25s var(--cs-ease),
-    border-color 0.25s,
-    box-shadow 0.25s;
-}
-.proofCard a:hover,
-.proofCard a:focus-visible,
-.workCard a:hover,
-.workCard a:focus-visible {
-  transform: translateY(-5px);
-  border-color: var(--cs-gold);
-  box-shadow: 0 14px 40px -18px
-    color-mix(in srgb, var(--cs-gold-light) 55%, transparent);
-}
-.proofCard a:focus-visible,
-.workCard a:focus-visible {
-  outline: 2px solid var(--cs-gold-light);
-  outline-offset: 3px;
-}
-/* Small service label on each card, so the mix reads at a glance. */
 .proofTag {
-  font-size: 0.625rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--cs-gold-light);
-  opacity: 0.85;
-}
-.proofMini {
-  color: var(--cs-gold-light);
-  max-width: 128px;
-  margin-block: 4px 2px;
-}
-.proofStat {
-  display: inline-flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  column-gap: 0.3em;
-}
-.proofValue {
-  font-size: clamp(22px, 1.9vw, 28px);
-  line-height: 1.1;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  color: var(--cs-gold-light);
-}
-.proofUnit {
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: var(--cs-gold-light);
-}
-.proofLabel {
-  font-variant-caps: all-small-caps;
-  letter-spacing: 0.06em;
-  font-size: 0.9375rem;
-  color: color-mix(in srgb, var(--cs-paper) 82%, transparent);
-}
-.proofCta,
-.workCta {
-  margin-top: auto;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: var(--cs-gold-light);
-}
-.proofCta svg,
-.workCta svg {
-  transition: transform 0.25s var(--cs-ease);
-}
-.proofCard a:hover .proofCta svg,
-.proofCard a:focus-visible .proofCta svg,
-.workCard a:hover .workCta svg,
-.workCard a:focus-visible .workCta svg {
-  transform: translateX(4px);
-}
-.proofPager {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 6px;
-}
-.dot,
-.dotActive {
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--cs-paper) 30%, transparent);
-  transition:
-    width 0.25s,
-    background-color 0.25s;
-}
-.dotActive {
-  width: 18px;
-  background: var(--cs-gold-light);
-}
-.swipeHint {
-  margin-left: auto;
-  font-size: 0.6875rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: color-mix(in srgb, var(--cs-paper) 60%, transparent);
-}
-.proofNote {
-  margin-top: 8px !important;
-  max-width: 880px;
-  font-size: 0.75rem;
-  color: color-mix(in srgb, var(--cs-paper) 65%, transparent);
-}
-@media (min-width: 1280px) {
-  .proofTrack {
-    display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    overflow: visible;
-    mask-image: none;
-  }
-  .proofCard {
-    flex: none;
-  }
-  .proofCard:last-child {
-    margin-right: 0;
-  }
-  .proofPager {
-    display: none;
-  }
-}
-/* Play once on entering view. The server HTML is the finished state; the
-   client marks the wrapper "pending" (reset) and then "true" (draw in). */
-[data-inview='pending'] .draw {
-  stroke-dashoffset: 1;
-}
-[data-inview='pending'] .grow {
-  transform: scaleX(0);
-}
-[data-inview='pending'] .tile {
-  opacity: 0.12;
-}
-[data-inview='pending'] .proofCard,
-[data-inview='pending'] .workCard {
-  opacity: 0;
-  transform: translateY(14px);
-}
-.proofCard,
-.workCard {
-  transition:
-    opacity 0.6s var(--cs-ease),
-    transform 0.6s var(--cs-ease);
-}
-[data-inview='true'] .proofCard:nth-child(2),
-[data-inview='true'] .workCard:nth-child(2) {
-  transition-delay: 0.08s;
-}
-[data-inview='true'] .proofCard:nth-child(3),
-[data-inview='true'] .workCard:nth-child(3) {
-  transition-delay: 0.16s;
-}
-[data-inview='true'] .proofCard:nth-child(n + 4) {
-  transition-delay: 0.24s;
-}
-/* Redraw a card's line graphic when it is hovered or focused. */
-@keyframes proofDraw {
-  from {
-    stroke-dashoffset: 1;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-.proofCard a:hover .draw,
-.proofCard a:focus-visible .draw,
-.workCard a:hover .draw,
-.workCard a:focus-visible .draw {
-  animation: proofDraw 1s var(--cs-ease);
-}
-
-/* ---------- Homepage "Selected work" ---------- */
-.work {
-  background: var(--cs-paper);
-  color: var(--cs-ink);
-  padding: 72px 8vw;
-}
-.workEyebrow {
-  font-size: 0.6875rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #84601a;
-  margin: 0 0 8px;
-}
-.work h2 {
-  font-size: clamp(26px, 3vw, 40px);
-  margin-bottom: 8px;
-}
-.workIntro {
-  max-width: 640px;
-  margin-bottom: 0;
-}
-.workGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  margin: 32px 0 0 !important;
-  padding: 0 !important;
-  list-style: none;
-}
-.workCard a {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 100%;
-  padding: 24px;
-  border-radius: 24px;
-  background: #fff;
-  border: 1px solid var(--cs-line);
-  color: var(--cs-ink);
-  text-decoration: none;
-  transition:
-    border-color 0.25s var(--cs-ease),
-    transform 0.25s var(--cs-ease),
-    box-shadow 0.25s;
-}
-.workVisual {
-  display: grid;
-  place-items: center;
-  aspect-ratio: 16 / 9;
-  border-radius: 16px;
-  background: var(--cs-ink);
-  color: var(--cs-gold-light);
-  overflow: hidden;
-}
-.workMini {
-  width: 52%;
-  max-width: 190px;
-}
-.workTag {
   font-size: 0.6875rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #84601a;
+  color: var(--cs-gold-light);
 }
-.workStat {
-  display: inline-flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  column-gap: 0.3em;
-}
-.workValue {
-  font-size: clamp(30px, 3vw, 42px);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1.05;
-  color: #84601a;
-}
-.workUnit {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #84601a;
-}
-.workLabel {
-  font-variant-caps: all-small-caps;
-  letter-spacing: 0.06em;
-  font-size: 1rem;
-  font-weight: 700;
-}
-.workLine {
-  font-size: 0.9375rem;
-  line-height: 1.5;
-  color: color-mix(in srgb, var(--cs-ink) 75%, transparent);
-}
-.workCta {
-  color: #84601a;
-  font-size: 0.875rem;
-  padding-top: 6px;
-}
-.workAll {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 32px;
-  padding: 12px 22px;
-  border: 1px solid var(--cs-gold);
-  border-radius: 999px;
-  color: var(--cs-ink);
-  font-weight: 700;
-  text-decoration: none;
-  transition:
-    background-color 0.2s,
-    color 0.2s;
-}
-.workAll:hover,
-.workAll:focus-visible {
-  background: var(--cs-gold);
-  color: var(--cs-paper);
-}
-@media (max-width: 1023px) {
-  .workGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .workCard:last-child {
-    grid-column: 1 / -1;
-  }
-}
-@media (max-width: 620px) {
-  .work {
-    padding: 56px 24px;
-  }
-  .workGrid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .workCard:last-child {
-    grid-column: auto;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .proofCard,
-  .workCard,
-  .proofCard a,
-  .workCard a,
-  .proofCta svg,
-  .workCta svg,
-  .dot,
-  .dotActive {
-    transition: none;
-  }
-  .proofCard a:hover,
-  .proofCard a:focus-visible,
-  .workCard a:hover,
-  .workCard a:focus-visible {
-    transform: none;
-  }
-  .proofCard a:hover .draw,
-  .workCard a:hover .draw {
-    animation: none;
-  }
+.proofContainer {
+  position: relative;
 }
 
 /* ---------- Mini graphics (homepage cards and portfolio journey) ---------- */
@@ -1294,29 +868,1333 @@
   }
 }
 
-/* Catalogue screenshots (Etsy case study) */
+/* Approved review additions. */
+/* case-studies.module.css: claims scope block */
+.scopeBlock {
+  padding: clamp(56px, 7vw, 96px) 8vw;
+  background: var(--cs-paper);
+}
+.scopeBlock h2 {
+  font-size: clamp(26px, 3vw, 40px);
+  margin-top: 12px;
+  max-width: 22ch;
+}
+.scopeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+.scopeCard {
+  border: 1px solid var(--cs-line);
+  border-radius: 24px;
+  padding: clamp(22px, 3vw, 36px);
+  background: #fff;
+}
+.scopeCard h3 {
+  font-size: clamp(20px, 1.8vw, 26px);
+  margin-top: 8px;
+}
+.scopeIntro {
+  margin-top: 12px !important;
+  color: color-mix(in srgb, var(--cs-ink) 78%, transparent);
+}
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin-top: 20px !important;
+}
+.badge {
+  border: 1px solid var(--cs-gold);
+  color: var(--cs-ink);
+  background: color-mix(in srgb, var(--cs-gold-light) 18%, transparent);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.badgeMuted {
+  border-color: var(--cs-line);
+  background: transparent;
+  font-weight: 600;
+}
+.tickList {
+  list-style: none;
+  margin-top: 20px !important;
+  display: grid;
+  gap: 10px;
+}
+.tickList li {
+  position: relative;
+  padding-left: 28px;
+}
+.tickList li::before {
+  /* gold tick, drawn in CSS so no icon file or emoji is needed */
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.55em;
+  width: 12px;
+  height: 7px;
+  border-left: 2px solid var(--cs-gold);
+  border-bottom: 2px solid var(--cs-gold);
+  transform: rotate(-45deg);
+}
+@media (max-width: 900px) {
+  .scopeGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Subtitle under the case-study H1 */
+.subtitle {
+  margin-top: 14px !important;
+  max-width: 46ch;
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.45;
+  color: color-mix(in srgb, var(--cs-paper) 82%, transparent);
+  text-wrap: balance;
+}
+
+/* Hero stat unit: shared by case-study heroes and homepage cards */
+.resultText {
+  align-self: center;
+} /* removes the empty top-left area */
+.statUnit {
+  display: grid;
+  gap: 10px;
+  max-width: 34ch;
+}
+.statLine {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 0.35em;
+}
+.statLine .numberValue,
+.statLine .numberReserve {
+  color: var(--cs-gold-light);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-size: clamp(48px, 6vw, 88px);
+  font-variant-numeric: tabular-nums; /* no width jitter while counting */
+}
+.statUnitText {
+  color: var(--cs-gold-light);
+  font-weight: 700;
+  font-size: clamp(18px, 1.8vw, 26px);
+  letter-spacing: -0.01em;
+}
+.statLabel {
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--cs-paper);
+  padding-top: 12px;
+  border-top: 1px solid color-mix(in srgb, var(--cs-gold) 60%, transparent);
+}
+.statContext {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--cs-paper) 78%, transparent);
+}
+@media (max-width: 620px) {
+  .statLine .numberValue,
+  .statLine .numberReserve {
+    font-size: clamp(44px, 13vw, 60px);
+  }
+}
+
+/* Proof strip: replaces .proofControls/.proofArrow/.proofArrowIcon and the off-palette card colours */
+.proofTrack {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  list-style: none;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  padding: 6px 0 12px !important;
+  margin: 20px 0 0 !important;
+  /* fade the last partly visible card so it reads as "more", not "cut off" */
+  mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent);
+}
+.proofTrack::-webkit-scrollbar {
+  display: none;
+}
+.proofCard {
+  flex: 0 0 min(272px, 78vw);
+  scroll-snap-align: start;
+}
+.proofCard:last-child {
+  margin-right: 48px;
+} /* lets the last card snap clear of the fade */
+.proofCard a {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  min-height: 248px;
+  padding: 22px;
+  border-radius: 22px;
+  text-decoration: none;
+  color: var(--cs-paper);
+  background: var(--cs-ink);
+  border: 1px solid color-mix(in srgb, var(--cs-line) 16%, transparent);
+  transition:
+    border-color 0.25s var(--cs-ease),
+    transform 0.25s var(--cs-ease);
+}
+.proofCard a:hover,
+.proofCard a:focus-visible {
+  border-color: var(--cs-gold);
+  transform: translateY(-4px);
+}
+.proofCard a:focus-visible {
+  outline: 2px solid var(--cs-gold-light);
+  outline-offset: 3px;
+}
+.proofMiniWrap {
+  display: block;
+  margin: 4px 0 2px;
+} /* the icon starts on the same left edge as the text */
+.proofMiniWrap svg {
+  display: block;
+  width: 112px;
+  height: auto;
+  margin: 0;
+  color: var(--cs-gold-light);
+}
+.proofStat {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 0.3em;
+}
+.proofValue {
+  color: var(--cs-gold-light);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  font-size: clamp(28px, 2.4vw, 36px);
+}
+.proofUnit {
+  color: var(--cs-gold-light);
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+.proofLabel {
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.06em;
+  font-size: 0.9375rem;
+  color: color-mix(in srgb, var(--cs-paper) 82%, transparent);
+}
+.proofCta {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--cs-gold-light);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+.proofCta svg {
+  transition: transform 0.25s var(--cs-ease);
+}
+.proofCard a:hover .proofCta svg,
+.proofCard a:focus-visible .proofCta svg {
+  transform: translateX(4px);
+}
+.proofPager {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+.dot,
+.dotActive {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--cs-paper) 30%, transparent);
+  transition:
+    width 0.25s,
+    background-color 0.25s;
+}
+.dotActive {
+  width: 18px;
+  background: var(--cs-gold-light);
+}
+.swipeHint {
+  margin-left: auto;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--cs-paper) 55%, transparent);
+}
+.proofNote {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--cs-paper) 60%, transparent);
+  max-width: 70ch;
+  margin-top: 16px !important;
+}
+/* Wide screens: all 6 cards fit, so use a grid and hide the pager */
+@media (min-width: 1280px) {
+  .proofTrack {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    overflow: visible;
+    mask-image: none;
+  }
+  .proofCard:last-child {
+    margin-right: 0;
+  }
+  .proofPager {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .proofCard a,
+  .proofCta svg,
+  .dot,
+  .dotActive {
+    transition: none;
+  }
+  .proofCard a:hover,
+  .proofCard a:focus-visible {
+    transform: none;
+  }
+}
+
+.workGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+.workCard a {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  padding: 24px;
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid var(--cs-line);
+  color: var(--cs-ink);
+  text-decoration: none;
+  transition:
+    border-color 0.25s var(--cs-ease),
+    transform 0.25s var(--cs-ease);
+}
+.workCard a:hover,
+.workCard a:focus-visible {
+  border-color: var(--cs-gold);
+  transform: translateY(-4px);
+}
+.workVisual {
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  background: var(--cs-ink);
+  color: var(--cs-gold-light);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.workCard .proofValue,
+.workCard .proofUnit {
+  color: var(--cs-gold);
+} /* gold on paper; #B8892D passes for 24px+ bold */
+.workCard .proofLabel {
+  color: color-mix(in srgb, var(--cs-ink) 75%, transparent);
+}
+.workCard .proofCta {
+  color: var(--cs-gold);
+}
+.workAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  padding: 12px 22px;
+  border: 1px solid var(--cs-gold);
+  border-radius: 999px;
+  color: var(--cs-ink);
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+.workAll:hover,
+.workAll:focus-visible {
+  background: var(--cs-gold);
+  color: var(--cs-paper);
+}
+@media (max-width: 1023px) {
+  .workGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .workCard:last-child {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 620px) {
+  .workGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .workCard:last-child {
+    grid-column: auto;
+  }
+}
+
+/* Shared by .proofCard, .workCard and the Portfolio card (add the class .csCard to each card <a>) */
+.csCard {
+  position: relative;
+  isolation: isolate;
+  transition:
+    transform 0.3s var(--cs-ease),
+    border-color 0.3s var(--cs-ease),
+    box-shadow 0.3s var(--cs-ease);
+}
+.csCard:hover,
+.csCard:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--cs-gold);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--cs-gold) 40%, transparent),
+    0 14px 40px -18px color-mix(in srgb, var(--cs-gold-light) 55%, transparent);
+}
+.csVisual {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  color: var(--cs-gold-light);
+  overflow: visible;
+}
+.csCard:hover .csVisual,
+.csCard:focus-visible .csVisual {
+  filter: drop-shadow(
+    0 0 6px color-mix(in srgb, var(--cs-gold-light) 45%, transparent)
+  );
+}
+.csVisual .line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.csVisual .muted {
+  fill: none;
+  stroke: var(--cs-line);
+  stroke-opacity: 0.35;
+  stroke-width: 1.2;
+}
+.csVisual .solid {
+  fill: currentColor;
+}
+.csVisual .text {
+  fill: currentColor;
+  font:
+    700 11px/1 var(--font-inter, Inter),
+    Arial,
+    sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Animation primitives. They run only after [data-inview="true"] is set on an ancestor. */
+[data-inview] .csVisual .draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+[data-inview] .csVisual .pop {
+  opacity: 0;
+  transform: scale(0.6);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+[data-inview] .csVisual .rise {
+  transform: scaleY(0);
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+[data-inview] .csVisual .fade {
+  opacity: 0.2;
+}
+[data-inview='true'] .csVisual .draw {
+  animation: csDraw 1.2s var(--cs-ease) forwards;
+  animation-delay: calc(var(--i, 0) * 90ms);
+}
+[data-inview='true'] .csVisual .pop {
+  animation: csPop 0.5s var(--cs-ease) forwards;
+  animation-delay: calc(var(--i, 0) * 70ms);
+}
+[data-inview='true'] .csVisual .rise {
+  animation: csRise 0.7s var(--cs-ease) forwards;
+  animation-delay: calc(var(--i, 0) * 80ms);
+}
+[data-inview='true'] .csVisual .fade {
+  animation: csFill 0.4s var(--cs-ease) forwards;
+  animation-delay: calc(var(--i, 0) * 14ms);
+}
+/* A parcel dot travels along a route once (offset-path); browsers without support simply show it at the start */
+[data-inview='true'] .csVisual .travel {
+  offset-rotate: 0deg;
+  animation: csTravel 2.4s var(--cs-ease) 0.4s forwards;
+}
+@keyframes csDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes csPop {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes csRise {
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes csFill {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes csTravel {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .csCard,
+  .csCard:hover,
+  .csCard:focus-visible {
+    transition: none;
+    transform: none;
+  }
+  [data-inview] .csVisual .draw {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+  [data-inview] .csVisual .pop,
+  [data-inview] .csVisual .fade {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  [data-inview] .csVisual .rise {
+    transform: none;
+    animation: none;
+  }
+  [data-inview] .csVisual .travel {
+    animation: none;
+    offset-distance: 100%;
+  }
+}
+
+/* The token-only scope works with existing portfolio cards without resetting their layout. */
+.cardScope {
+  --cs-ink: #121210;
+  --cs-paper: #fbfaf6;
+  --cs-gold: #b8892d;
+  --cs-gold-light: #e0bc68;
+  --cs-line: #dcd5c8;
+  --cs-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.scope .selectedWork,
+.selectedWork {
+  padding: clamp(56px, 7vw, 96px) 8vw;
+}
+.selectedWork h2 {
+  font-size: clamp(30px, 4vw, 48px);
+  margin-top: 12px;
+}
+.workIntro {
+  margin-top: 16px !important;
+}
+.workGrid {
+  list-style: none;
+}
+.scope .workGrid {
+  margin-top: 32px;
+}
+.workCard h3 {
+  font-size: clamp(22px, 2.3vw, 30px);
+}
+.workCard .proofCta,
+.workCard .proofUnit,
+.workCard .proofLabel,
+.portfolioLight .csVisual {
+  color: color-mix(in srgb, var(--cs-gold) 80%, var(--cs-ink));
+}
+.proofTitle {
+  font-size: clamp(17px, 1.35vw, 21px);
+}
+.cardSubtitle {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.proofCard .cardSubtitle {
+  font-size: 0.8125rem;
+  color: color-mix(in srgb, var(--cs-paper) 82%, transparent);
+}
+.proofCard .csVisual {
+  width: 112px;
+  min-height: 56px;
+  margin-block: 4px 2px;
+}
+.proofCard a {
+  min-width: 0;
+}
+.proofCard .proofCta {
+  font-size: 0.8125rem;
+}
+.proofTrack[data-at-end='true'] {
+  mask-image: none;
+}
+.proofCard:last-child {
+  scroll-snap-align: end;
+}
+.dot,
+.dotActive {
+  width: 8px;
+  transition: none;
+}
+.dotActive {
+  transform: scaleX(2);
+}
+.dot {
+  margin-inline: 3px;
+}
+.dotActive {
+  margin-inline: 3px;
+}
+.csCard {
+  min-width: 0;
+}
+.scope .journeyStop {
+  text-decoration: none;
+}
+.journeyFigure .csVisual {
+  margin-top: 14px;
+  max-width: 180px;
+}
+.toneLight .csVisual,
+.toneCream .csVisual,
+.related .csVisual {
+  color: color-mix(in srgb, var(--cs-gold) 80%, var(--cs-ink));
+}
+.journeyBody .cardSubtitle {
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+.journeyHeadline {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 12px !important;
+}
+.journeyBody .proofCta {
+  margin-top: 18px;
+  color: color-mix(in srgb, var(--cs-gold) 80%, var(--cs-ink));
+}
+.toneDark .proofCta {
+  color: var(--cs-gold-light);
+}
+.related a {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.related h3 {
+  margin-block: 0;
+}
+.related .proofCta {
+  display: inline-flex !important;
+  color: color-mix(in srgb, var(--cs-gold) 80%, var(--cs-ink));
+}
+.portfolioVisual {
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+}
+.portfolioLight [class*='text-gold'],
+.portfolioLight [class*='text-p-gold'] {
+  color: color-mix(in srgb, var(--cs-gold) 80%, var(--cs-ink));
+}
+.portfolioLight .csVisual {
+  color: var(--cs-gold);
+}
+.portfolioDark .csVisual {
+  color: var(--cs-gold-light);
+}
+.cardScope svg + span,
+.cardScope span > svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+.scopeBlock {
+  padding-inline: 0;
+  padding-block: clamp(56px, 7vw, 96px);
+}
+.scopeGrid {
+  grid-template-columns: minmax(0, 1fr);
+}
+.scopeCard {
+  min-width: 0;
+}
+.scopeBlock .tickList {
+  padding-left: 0;
+}
+.scopeBlock h2 + p,
+.beat h2 + p {
+  margin-top: 16px;
+}
+.approachDetail {
+  margin-top: 28px;
+}
+.approachDetail h3 {
+  font-size: 1.25rem;
+}
+.approachDetail h3 + p {
+  margin-top: 12px;
+}
+.beat {
+  padding-bottom: clamp(56px, 7vw, 96px);
+}
+.statUnit {
+  max-width: 100%;
+}
+.statLine {
+  max-width: 100%;
+}
+.metric {
+  font-size: inherit;
+  line-height: 1;
+}
+.statLine .numberValue,
+.statLine .numberReserve {
+  font-size: clamp(40px, 6vw, 88px);
+}
+.questions summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.questions summary::after {
+  content: '+';
+  flex: none;
+}
+.questions details[open] summary::after {
+  content: '−';
+}
+@media (max-width: 620px) {
+  .selectedWork {
+    padding-inline: 24px;
+  }
+  .statLine .numberValue,
+  .statLine .numberReserve {
+    font-size: clamp(38px, 13vw, 60px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .proofCta svg,
+  .csCard:hover,
+  .csCard:focus-visible {
+    transform: none !important;
+  }
+}
+
+/* Case-study rows: artwork only on the left; all information on the right. */
+.studyList {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.studyRow {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.35fr);
+  align-items: stretch;
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--cs-line);
+  border-radius: 26px;
+  text-decoration: none;
+  color: var(--cs-ink);
+  padding: 0;
+}
+.studyRow .artwork {
+  min-height: 300px;
+  border-radius: 0;
+}
+.studyCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
+  min-width: 0;
+  padding: clamp(24px, 3.5vw, 48px);
+  text-align: left;
+}
+.studyCopy :is(h3, h4) {
+  font-size: clamp(25px, 2.7vw, 36px);
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+  margin: 0;
+}
+.studyCopy p {
+  margin: 0;
+}
+.studyCopy .eyebrow {
+  font-size: 0.6875rem;
+  color: color-mix(in srgb, var(--cs-gold) 80%, var(--cs-ink));
+}
+.studyBrand {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+}
+.studyCopy .cardSubtitle {
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+.studySummary {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+.studyCopy .chips {
+  margin-top: 2px;
+}
+.studyCopy .chips li {
+  font-size: 0.75rem;
+}
+.studyResult {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.studyCopy .proofCta {
+  padding-top: 8px;
+  color: color-mix(in srgb, var(--cs-gold) 80%, var(--cs-ink));
+}
+.toneDark .studyCopy {
+  color: var(--cs-paper);
+}
+.toneDark .studyCopy .eyebrow,
+.toneDark .studyCopy .proofCta {
+  color: var(--cs-gold-light);
+}
+.toneDark .studyCopy .chips li {
+  border-color: color-mix(in srgb, var(--cs-line) 35%, transparent);
+}
+.scope .journeyStop.studyRow {
+  padding: 0;
+  gap: 0;
+}
+.scope .journeyBody {
+  gap: 14px;
+}
+.scope .journeyBody :is(h4, p, .chips) {
+  margin: 0;
+}
+.cardMetrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 0;
+}
+.cardMetrics div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.cardMetrics dt {
+  font-size: 0.75rem;
+}
+.cardMetrics dd {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+.artwork {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-width: 0;
+  min-height: 240px;
+  overflow: clip;
+  border-radius: 18px;
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    color-mix(in srgb, var(--cs-gold) 13%, var(--cs-ink)),
+    var(--cs-ink) 75%
+  );
+  color: var(--cs-gold-light);
+  isolation: isolate;
+}
+.artwork::before {
+  content: '';
+  position: absolute;
+  inset: 24px;
+  border: 1px solid color-mix(in srgb, var(--cs-gold-light) 12%, transparent);
+  border-radius: 50%;
+  transform: rotate(-18deg) scaleY(0.7);
+}
+.artwork::after {
+  content: '';
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--cs-gold-light) 7%, transparent);
+  filter: blur(40px);
+  z-index: -1;
+}
+.artwork .csVisual {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  min-height: 180px;
+  margin: 0;
+  color: var(--cs-gold-light);
+  overflow: visible;
+}
+.sceneGrid {
+  stroke: currentColor;
+  stroke-width: 0.6;
+  opacity: 0.06;
+  fill: none;
+}
+.csVisual .inkLine {
+  stroke: var(--cs-ink);
+  stroke-width: 1.6;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.floatSheet,
+.parcelMove,
+.pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.artwork[data-inview='true'] .floatSheet {
+  animation: sheetFloat 2.2s var(--cs-ease) 0.25s both;
+}
+.artwork[data-inview='true'] .parcelMove {
+  animation: parcelSlide 2.2s var(--cs-ease) 0.2s both;
+}
+.artwork[data-inview='true'] .pulse {
+  animation: resultPulse 1.6s var(--cs-ease) 0.6s both;
+}
+@keyframes sheetFloat {
+  from {
+    opacity: 0.2;
+    transform: translate(-16px, 18px) rotate(-6deg);
+  }
+  65% {
+    opacity: 1;
+    transform: translate(0, -4px) rotate(1deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes parcelSlide {
+  from {
+    opacity: 0.2;
+    transform: translateX(-30px);
+  }
+  65% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes resultPulse {
+  from {
+    opacity: 0.25;
+    transform: scale(0.6);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.related ul {
+  grid-template-columns: minmax(0, 1fr);
+}
+.related a.relatedRow {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  padding: 0;
+  gap: 0;
+  overflow: hidden;
+}
+.relatedRow .artwork {
+  border-radius: 0;
+  min-height: 220px;
+}
+.relatedRow .studyCopy {
+  padding: 24px;
+}
+.relatedRow .studyCopy h3 {
+  font-size: 1.375rem;
+}
+.relatedRow .studyCopy p {
+  font-size: 0.875rem;
+}
+.resultPanel {
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  padding: 0;
+  overflow: clip;
+}
+.resultPanel > .artwork {
+  align-self: stretch;
+  min-height: 360px;
+  border-radius: 0;
+}
+.resultText {
+  padding: clamp(24px, 3vw, 40px);
+}
+.resultText .figure {
+  margin-top: 28px;
+}
+.figureLabels {
+  margin-top: 16px !important;
+}
+.figureLabels li {
+  font-size: 0.8125rem;
+  border-color: color-mix(in srgb, var(--cs-gold-light) 35%, transparent);
+}
+.detailHeroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  column-gap: 48px;
+  row-gap: 24px;
+  padding-bottom: 54px;
+}
+.detailHeroArt {
+  grid-row: span 2;
+  align-self: stretch;
+  display: grid;
+  align-items: center;
+}
+.detailHeroArt .artwork {
+  min-height: 400px;
+}
+.detailPageHeroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 48px;
+  margin-top: 24px;
+}
+.detailPageHeroGrid > .artwork {
+  min-height: 320px;
+}
+.detailHeroGrid h1,
+.detailPageHeroGrid h1 {
+  font-size: clamp(32px, 4.2vw, 60px);
+}
+@media (max-width: 1000px) {
+  .detailHeroGrid,
+  .detailPageHeroGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+  .detailHeroArt {
+    grid-row: auto;
+  }
+  .detailHeroArt .artwork {
+    min-height: 240px;
+  }
+}
+.resultText .figure figcaption {
+  color: color-mix(in srgb, var(--cs-paper) 78%, transparent);
+}
+@media (max-width: 900px) {
+  .resultPanel {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .resultPanel > .artwork {
+    min-height: 240px;
+  }
+}
+@media (max-width: 700px) {
+  .studyRow,
+  .scope .journeyStop.studyRow,
+  .related a.relatedRow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .studyRow .artwork,
+  .relatedRow .artwork {
+    min-height: 220px;
+  }
+  .studyCopy {
+    padding: 24px;
+  }
+  .journey > li {
+    padding-left: 0;
+    padding-top: 44px;
+  }
+  .milestone {
+    top: 0;
+  }
+  .journey::before,
+  .journey::after {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .artwork .floatSheet,
+  .artwork .parcelMove,
+  .artwork .pulse {
+    animation: none !important;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* Long content uses natural wrapping at every viewport. */
+.chips li,
+.badge {
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
 .catalogue {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-  margin-top: 28px;
+  gap: 24px;
+  margin: 40px 0;
 }
 .catalogue figure {
   margin: 0;
+  min-width: 0;
 }
 .catalogue img {
-  display: block;
   width: 100%;
   height: auto;
   border-radius: 16px;
   border: 1px solid var(--cs-line);
 }
 .catalogue figcaption {
-  margin-top: 8px;
+  margin-top: 12px;
   font-size: 0.875rem;
+  line-height: 1.6;
 }
 @media (max-width: 700px) {
   .catalogue {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.scope.journeyScope {
+  background: transparent;
+}
+.studyCopy .eyebrow,
+.studyCopy .proofCta,
+.related .proofCta {
+  color: #84601a;
+}
+
+/* Strong titles, large cinematic scenes, and a quieter stage. */
+.studyCopy :is(h3, h4) {
+  font-size: clamp(30px, 3.25vw, 46px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+.relatedRow .studyCopy h3 {
+  font-size: clamp(27px, 2.6vw, 36px);
+  font-weight: 800;
+}
+.hero h1 {
+  font-size: clamp(42px, 5.7vw, 78px);
+  font-weight: 800;
+}
+.detailHeroGrid h1,
+.detailPageHeroGrid h1 {
+  font-size: clamp(38px, 5vw, 72px);
+  font-weight: 800;
+}
+.artwork {
+  background: radial-gradient(
+    ellipse at 48% 37%,
+    #302b22 0%,
+    #1b1915 43%,
+    #121210 82%
+  );
+}
+.artwork::before,
+.artwork::after {
+  display: none;
+}
+.studyRow .artwork {
+  min-height: 380px;
+}
+@media (max-width: 700px) {
+  .studyRow .artwork,
+  .relatedRow .artwork {
+    min-height: 285px;
+  }
+  .studyCopy :is(h3, h4) {
+    font-size: 32px;
+  }
+}
+
+/* Shared case-study rhythm: aligned tops, readable measure, restrained headings. */
+.projectHero {
+  max-width: none;
+  width: 100%;
+  padding: 48px var(--case-gutter, 8vw) 40px;
+}
+.collectionHero {
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+.collectionHero h1 {
+  font-size: clamp(36px, 4vw, 56px);
+  margin-block: 20px 24px;
+}
+.collectionHero p {
+  margin-block: 16px 0;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 68ch;
+}
+.caseHero {
+  padding: 48px var(--case-gutter, 8vw) 0;
+}
+.caseHero [data-case-kpis] {
+  margin-inline: calc(-1 * var(--case-gutter, 8vw));
+  padding-inline: var(--case-gutter, 8vw);
+}
+.hero {
+  padding-inline: var(--case-gutter, 8vw);
+}
+.detailPageHeroGrid,
+.detailHeroGrid {
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  align-items: start;
+  gap: 28px 36px;
+}
+.detailPageHeroGrid > *,
+.detailHeroGrid > * {
+  min-width: 0;
+}
+.detailPageHeroGrid > .artwork,
+.detailHeroArt .artwork {
+  min-height: 0;
+  aspect-ratio: 640 / 460;
+}
+.detailHeroArt {
+  align-self: start;
+  align-items: start;
+}
+.detailPageHeroGrid h1,
+.detailHeroGrid h1 {
+  margin: 0 0 20px;
+  font-size: clamp(34px, 3.8vw, 56px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+.detailPageHeroGrid :global(.case-study-subtitle),
+.detailHeroGrid :global(.case-study-subtitle) {
+  margin: 0 0 18px;
+  font-size: clamp(18px, 1.55vw, 21px);
+  line-height: 1.5;
+  font-weight: 500;
+}
+.detailPageHeroGrid p,
+.detailHeroGrid p {
+  max-width: 65ch;
+  margin-block: 16px 0;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.detailPageHeroGrid p:has(a) {
+  margin-top: 24px;
+}
+.hero h1 {
+  font-size: clamp(36px, 4.5vw, 64px);
+}
+.story {
+  max-width: 1080px;
+}
+.beat {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 14px 36px;
+  padding-bottom: 40px;
+}
+.beat > .eyebrow {
+  grid-column: 1 / -1;
+}
+.beat h2 {
+  margin-top: 0;
+  font-size: clamp(26px, 2.5vw, 36px);
+}
+.beat > p:not(.eyebrow),
+.beat > .approachDetail {
+  grid-column: 2;
+  margin-top: 0;
+}
+@media (max-width: 1000px) {
+  .detailPageHeroGrid,
+  .detailHeroGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .detailPageHeroGrid > .artwork,
+  .detailHeroArt .artwork {
+    max-width: 640px;
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .beat {
+    display: block;
+  }
+  .beat h2 {
+    margin-block: 12px 16px;
+  }
+  .beat > .approachDetail {
+    margin-top: 24px;
+  }
+  .detailPageHeroGrid h1,
+  .detailHeroGrid h1 {
+    font-size: 36px;
   }
 }

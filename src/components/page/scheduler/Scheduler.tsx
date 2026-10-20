@@ -5,9 +5,11 @@ import { useHydrated } from '@/hooks/useHydrated';
 import Link from 'next/link';
 import { submitForm } from '@/lib/submitForm';
 import { track } from '@/lib/track';
+import { FormWithoutJavaScript } from '../FormWithoutJavaScript';
 import { CalendarPanel } from './CalendarPanel';
 import { MeetingSummary } from './MeetingSummary';
 import { SlotPanel } from './SlotPanel';
+import { PREFERRED_HOURS } from './constants';
 import {
   buildIcs,
   buildMonth,
@@ -87,12 +89,26 @@ export function Scheduler() {
     ? readableTime(Number(selectedTime.split(':')[0]))
     : '';
 
+  const pastHours = useMemo(() => {
+    if (!selectedDate) return [];
+    const now = new Date();
+    return PREFERRED_HOURS.filter(
+      hour =>
+        new Date(
+          selectedDate.getFullYear(),
+          selectedDate.getMonth(),
+          selectedDate.getDate(),
+          hour,
+        ) <= now,
+    );
+  }, [selectedDate]);
+
   const durationMinutes = Number.parseInt(duration, 10) || 30;
 
   const meetingLocation =
     meetingType === 'Online meeting'
-      ? 'Online — joining details to follow'
-      : 'In person — location to be confirmed';
+      ? 'Online, joining details to follow'
+      : 'In person, location to be confirmed';
 
   const startDate = useMemo(() => {
     if (!selectedDate || !selectedTime) return null;
@@ -140,6 +156,12 @@ export function Scheduler() {
 
   const onContinue = () => {
     if (!selectedDate || !selectedTime) return;
+    if (!startDate || startDate <= new Date()) {
+      setSelectedDate(new Date(selectedDate));
+      setSelectedTime('');
+      setStatus('That time has passed. Please choose a future date and time.');
+      return;
+    }
     setShowDetails(true);
     setStatus('Time selected. Add your details to request the meeting.');
     window.setTimeout(() => nameInput.current?.focus(), 0);
@@ -158,6 +180,14 @@ export function Scheduler() {
       return;
     }
     const form = event.currentTarget;
+    if (!startDate || startDate <= new Date()) {
+      setSelectedDate(new Date(selectedDate));
+      setSelectedTime('');
+      setShowDetails(false);
+      setStatus('That time has passed. Please choose a future date and time.');
+      statusRef.current?.scrollIntoView({ block: 'center' });
+      return;
+    }
     setSending(true);
     setStatus('Sending your meeting request…');
     const ok = await submitForm(form);
@@ -226,7 +256,10 @@ export function Scheduler() {
 
   return (
     <section className="max-b760:px-[18px] max-b760:pt-[10px] max-b760:pb-[70px] px-[6vw] pt-5 pb-24">
+      <FormWithoutJavaScript />
       <form
+        method="post"
+        data-js-form
         id="scheduler-form"
         onSubmit={onSubmit}
         className="mx-auto max-w-[1440px]"
@@ -285,6 +318,7 @@ export function Scheduler() {
               dayLabel={dayLabel}
               hasDate={Boolean(selectedDate)}
               selectedTime={selectedTime}
+              pastHours={pastHours}
               onPick={pickTime}
               onContinue={onContinue}
               summary={`${dayLabel} · ${selectedReadableTime}`}

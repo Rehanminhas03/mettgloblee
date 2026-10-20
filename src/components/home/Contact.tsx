@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Fraunces } from 'next/font/google';
 import { Reveal } from './Reveal';
 import { WaIcon } from './WaIcon';
 import { SERVICES } from '@/lib/services';
@@ -12,17 +11,12 @@ const SERVICE_OPTIONS = [
   'Not sure yet',
 ];
 
-/* Elegant serif for the contact values; labels stay in the site sans. */
-const valueFont = Fraunces({
-  subsets: ['latin'],
-  display: 'swap',
-});
-
 const ROW =
-  'relative my-[6px] grid grid-cols-[.6fr_minmax(0,1fr)_auto] items-center gap-5 rounded-[14px] border-b border-[rgba(224,188,104,.22)] px-4 py-[18px] short:py-3 transition-[background,padding,border-color] duration-300 hover:bg-[rgba(224,188,104,.06)] hover:pl-[30px] max-b560:grid-cols-[1fr_auto] max-b560:gap-[10px] max-b560:px-0 max-b560:py-[21px]';
+  'relative grid grid-cols-[minmax(110px,.65fr)_minmax(0,1fr)_auto] items-center gap-4 border-b border-[rgba(224,188,104,.22)] px-0 py-[18px] transition-colors duration-200 hover:bg-white/[.025] max-b560:grid-cols-[1fr_auto] max-b560:gap-[8px]';
 const ROW_LABEL =
   'text-[10px] font-bold uppercase tracking-[.14em] text-[#d5c8aa]';
-const ROW_VALUE = `${valueFont.className} text-[clamp(18px,1.5vw,23px)] font-normal leading-[1.3] tracking-[.005em] text-white transition-colors duration-300 [overflow-wrap:anywhere] group-hover:text-gold2 max-b560:col-start-1 max-b560:text-[clamp(18px,5.2vw,22px)] max-b560:leading-[1.3]`;
+const ROW_VALUE =
+  'font-sans text-[17px] font-medium leading-[1.6] tracking-[-.015em] tabular-nums text-white transition-colors duration-200 [overflow-wrap:anywhere] group-hover:text-gold2 max-b560:col-start-1 max-b560:text-[16px]';
 const DOT =
   "relative block h-3 w-3 rounded-full border border-[rgba(224,188,104,.7)] transition-[transform,background,box-shadow] duration-[.35s] after:absolute after:inset-0 after:m-auto after:h-1 after:w-1 after:rounded-full after:bg-gold2 after:content-[''] group-hover:scale-[1.35] group-hover:bg-[rgba(224,188,104,.12)] group-hover:shadow-[0_0_0_8px_rgba(224,188,104,.06)] max-b560:col-start-2 max-b560:row-[1/3] max-b560:self-center";
 
@@ -31,7 +25,7 @@ const LABEL =
 const FIELD =
   'w-full rounded-[12px] border border-[rgba(224,188,104,.22)] bg-ink px-[14px] py-[11px] font-[inherit] text-white outline-none focus:border-gold2 focus:shadow-[0_0_0_3px_rgba(224,188,104,.08)]';
 
-/** `.contact` — direct contact rows, the enquiry form and the U.S. line. */
+/** `.contact`, direct contact rows, the enquiry form and the U.S. line. */
 export function Contact() {
   return (
     <section
@@ -108,32 +102,39 @@ export function Contact() {
               rel="noopener"
               className={`group ${ROW}`}
             >
-              <span className={ROW_LABEL}>Visit us</span>
+              <span className={ROW_LABEL}>Get directions</span>
               <b className={ROW_VALUE}>{ADDRESS_LINE}</b>
               <i aria-hidden="true" className={DOT} />
             </a>
           </div>
 
           {/* .us-contact */}
-          <div className="mt-6 flex flex-wrap items-center gap-x-[18px] gap-y-2 text-[13px]">
-            <span className="text-[10px] tracking-[.16em]">
-              DIRECTOR, U.S. BUSINESS DEVELOPMENT · U.S. REPRESENTATIVE
-            </span>
-            <strong>Usman Rafiq</strong>
-            <a
-              href="https://wa.me/18328580716?text=Hi%20Usman%2C%20I%27d%20like%20to%20discuss%20Mett%20Global%20services."
-              target="_blank"
-              rel="noopener"
-              className="underline"
-            >
-              WhatsApp
-            </a>
-            <a href="tel:+18328580716" className="underline">
-              Call +1 (832) 858-0716
-            </a>
-            <a href="mailto:usman@mettglobal.com" className="underline">
-              usman@mettglobal.com
-            </a>
+          <div className="border-gold2/50 mt-8 border-l-2 pl-5 text-[14px] leading-[1.7]">
+            <p className="m-0 text-[10px] font-semibold tracking-[.13em] text-[#d5c8aa] uppercase">
+              U.S. business development
+            </p>
+            <p className="mt-2 mb-0 text-[17px] font-semibold text-white">
+              Usman Rafiq
+            </p>
+            <p className="mt-0 mb-3 text-[13px] text-[#aaa69d]">
+              Director · U.S. representative
+            </p>
+            <div className="flex flex-wrap gap-x-5 gap-y-2 [overflow-wrap:anywhere]">
+              <a
+                href="https://wa.me/18328580716?text=Hi%20Usman%2C%20I%27d%20like%20to%20discuss%20Mett%20Global%20services."
+                target="_blank"
+                rel="noopener"
+                className="underline"
+              >
+                WhatsApp
+              </a>
+              <a href="tel:+18328580716" className="underline">
+                Call +1 (832) 858-0716
+              </a>
+              <a href="mailto:usman@mettglobal.com" className="underline">
+                usman@mettglobal.com
+              </a>
+            </div>
           </div>
         </div>
 

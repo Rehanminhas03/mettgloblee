@@ -20,6 +20,9 @@ export const COOKIE_SETTINGS_EVENT = 'mett:cookie-settings';
 /** Office address and its Google Maps link. */
 export const ADDRESS_LINE =
   'Plot # 195, Street 1, I-10/3, Islamabad 44000, Pakistan';
+/** Business Profile share link supplied by the owner. */
+export const BUSINESS_PROFILE_URL = 'https://share.google/4dQhYgKMuqcFVdiuL';
+/** Office building pin; the building is listed on Google as NESL IT. */
 export const MAPS_URL = 'https://maps.app.goo.gl/9PrdtKZQhU1X93em7';
 
 /**
@@ -46,6 +49,6 @@ export const SOCIAL_PROFILES = [
   { label: 'X', href: SOCIAL_URLS.x },
 ];
 
-/** Same inbox, via FormSubmit's background (AJAX) endpoint — no redirect. */
+/** Same inbox, via FormSubmit's background (AJAX) endpoint, no redirect. */
 export const FORM_AJAX_ENDPOINT =
   'https://formsubmit.co/ajax/contact@mettglobal.com';

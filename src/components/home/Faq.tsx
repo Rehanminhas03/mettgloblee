@@ -28,7 +28,7 @@ function FaqList() {
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => setOpen(isOpen ? null : index)}
-                className="group hover:text-gold short:py-3 flex w-full cursor-pointer items-center justify-between gap-6 border-0 bg-transparent py-[15px] text-left text-[clamp(16px,1.35vw,19px)] font-extrabold tracking-[-.015em] text-inherit transition-colors duration-300"
+                className="group hover:text-gold short:py-3 flex w-full cursor-pointer items-center justify-between gap-6 border-0 bg-transparent py-[15px] text-left text-[clamp(16px,1.25vw,18px)] font-semibold tracking-[-.015em] text-inherit transition-colors duration-300"
               >
                 {faq.q}
                 <span
@@ -69,25 +69,25 @@ function FaqList() {
   );
 }
 
-/** `.faq` — heading on the left, animated accordion on the right. */
+/** `.faq`, heading on the left, animated accordion on the right. */
 export function Faq() {
   return (
     <section
       id="faq"
-      className="min-h-view px-pad max-b700:px-6 max-b700:py-[68px] short:py-8 flex flex-col justify-center bg-[#eee8dd] py-14"
+      className="min-h-view px-pad max-b700:px-6 bg-[#eee8dd] py-[clamp(48px,6vw,80px)]"
     >
       <div className="text-gold text-[11px] font-extrabold tracking-[.2em] uppercase">
         03 / FREQUENTLY ASKED QUESTIONS
       </div>
 
-      <div className="max-b900:grid-cols-1 max-b900:gap-8 mt-4 grid grid-cols-[.75fr_1.25fr] items-start gap-[70px]">
-        <Reveal className="max-b900:static sticky top-[120px]">
+      <div className="mt-4">
+        <Reveal className="max-b900:grid-cols-1 max-b900:gap-4 mb-9 grid grid-cols-[1fr_.8fr] items-start gap-8">
           <h2 className="short:text-[40px] m-0 text-[clamp(34px,4.2vw,58px)] leading-[1.02] tracking-[-.045em]">
             Clear answers.
             <br />
             <span className="text-gold">Before the first call.</span>
           </h2>
-          <p className="text-muted mt-5 mb-0 leading-[1.75]">
+          <p className="text-muted m-0 max-w-[52ch] leading-[1.75]">
             What clients usually want to know about scope, delivery, meetings,
             collaboration and how Mett Global works.
           </p>

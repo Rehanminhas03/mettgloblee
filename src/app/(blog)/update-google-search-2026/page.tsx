@@ -64,7 +64,7 @@ const BLOCKS: Block[] = [
             'https://developers.google.com/search/docs/fundamentals/get-started-developers'
           }
         >
-          {'Google Search Central — SEO Guide for Web Developers'}
+          {'Google Search Central, SEO Guide for Web Developers'}
         </SourceLink>
         <SourceNote>
           {
@@ -87,7 +87,7 @@ export default function GoogleSearch2026Brief() {
         'Google’s current developer guidance still starts with fundamentals: make content accessible to Google, then ensure the website is secure, fast, accessible and functional across devices. Search visibility cannot be repaired by metadata alone if the underlying page is difficult to crawl or use.'
       }
       meta={
-        'CURRENT BRIEF · SOURCE CHECKED 17 SEP 2026 · GOOGLE SEARCH CENTRAL'
+        'CURRENT BRIEF · SOURCE CHECKED 20 OCT 2026 · GOOGLE SEARCH CENTRAL'
       }
       graphic={<PolicyGraphic facts={FACTS} />}
       endHeading={'Need your website’s technical foundation reviewed?'}

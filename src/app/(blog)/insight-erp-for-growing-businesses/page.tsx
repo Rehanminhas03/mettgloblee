@@ -20,7 +20,7 @@ const BLOCKS: Block[] = [
   { t: 'h2', text: 'Build the spine first, then the modules' },
   {
     t: 'p',
-    text: 'Sales, service, parts and accounts look like separate screens, but they describe one customer story. Start with the spine — customer, order, delivery — and let each module hang off it. That keeps data consistent and makes later modules faster to add.',
+    text: 'Sales, service, parts and accounts look like separate screens, but they describe one customer story. Start with the spine, customer, order, delivery, and let each module hang off it. That keeps data consistent and makes later modules faster to add.',
   },
   { t: 'h2', text: 'Give every role its own portal' },
   {
@@ -67,12 +67,12 @@ export default function ErpGuide() {
     <ArticleShell
       back={'BLOG / SOFTWARE'}
       title={
-        'When a growing business needs its own ERP — and what it should track'
+        'When a growing business needs its own ERP, and what it should track'
       }
       dek={
         'Spreadsheets and chat threads work until several teams depend on the same customer. That is the point where one shared system starts to pay for itself.'
       }
-      meta={'METT GLOBAL FIELD GUIDE · SOFTWARE & SYSTEMS · 9 MIN READ'}
+      meta={'METT GLOBAL FIELD GUIDE · SOFTWARE & SYSTEMS · 3 MIN READ'}
       graphic={
         <ChipGraphic
           steps={['ENQUIRY', 'FOLLOW-UP', 'ORDER', 'DELIVERY', 'AFTER-SALES']}

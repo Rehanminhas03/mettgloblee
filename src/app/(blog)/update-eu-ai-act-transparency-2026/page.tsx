@@ -30,6 +30,11 @@ const FACTS = [
 ];
 
 const BLOCKS: Block[] = [
+  { t: 'h2', text: 'Check the obligation and transition date' },
+  {
+    t: 'p',
+    text: 'Article 50 applies from 2 August 2026. Commission guidance identifies a limited transition until 2 December 2026 for the Article 50(2) marking and detection obligation for systems already on the market before 2 August. This is not a blanket extension for every transparency duty. Check the provider or deployer role and the specific obligation before changing a workflow.',
+  },
   { t: 'h2', text: 'Map where people interact with AI' },
   {
     t: 'p',
@@ -61,11 +66,11 @@ const BLOCKS: Block[] = [
       <>
         <SourceLink
           href={
-            'https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august'
+            'https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act'
           }
         >
           {
-            'European Commission — AI Act enforcement and transparency requirements from 2 August 2026'
+            'European Commission, Article 50 transparency obligations and transition dates'
           }
         </SourceLink>
         <SourceNote>
@@ -88,7 +93,7 @@ export default function EuAiActTransparency2026Brief() {
       dek={
         'From 2 August 2026, key transparency requirements under the EU AI Act apply. Businesses using customer-facing AI or publishing certain AI-generated content should review where disclosure, labelling and machine-readable marking are required.'
       }
-      meta={'CURRENT BRIEF · SOURCE CHECKED 17 SEP 2026 · EUROPEAN COMMISSION'}
+      meta={'CURRENT BRIEF · SOURCE CHECKED 20 OCT 2026 · EUROPEAN COMMISSION'}
       graphic={<PolicyGraphic facts={FACTS} />}
       endHeading={'Need an AI workflow mapped with human checkpoints?'}
       endHref={'/ai-automation-content'}

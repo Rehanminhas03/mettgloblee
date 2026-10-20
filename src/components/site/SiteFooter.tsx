@@ -1,15 +1,52 @@
 import Link from 'next/link';
 import { CookieSettingsButton } from '@/components/CookieSettingsButton';
+import { MotionSettingsButton } from '@/components/MotionSettingsButton';
 import { CurrentYear } from '@/components/home/CurrentYear';
 import { FOOTER_NAV, LEGAL_NAV } from '@/lib/navigation';
 import { SERVICES } from '@/lib/services';
-import { ADDRESS_LINE, MAPS_URL, SOCIAL_URLS } from '@/lib/site';
+import {
+  ADDRESS_LINE,
+  MAPS_URL,
+  BUSINESS_PROFILE_URL,
+  SOCIAL_URLS,
+} from '@/lib/site';
 import { SiteLogo } from './SiteLogo';
 
 const SOCIAL_BADGE =
   'grid h-[28px] w-[28px] flex-none place-items-center rounded-full border border-line bg-white';
 
 const SOCIALS = [
+  {
+    href: BUSINESS_PROFILE_URL,
+    label: 'Google Business Profile',
+    aria: 'Mett Global on Google',
+    badge: (
+      <span className={SOCIAL_BADGE}>
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-[15px] w-[15px]"
+        >
+          <path
+            fill="#4285f4"
+            d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.75 3.28-8.09Z"
+          />
+          <path
+            fill="#34a853"
+            d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.24 1.06-3.72 1.06-2.87 0-5.3-1.94-6.17-4.54H2.18v2.83A11 11 0 0 0 12 23Z"
+          />
+          <path
+            fill="#fbbc05"
+            d="M5.83 14.1a6.6 6.6 0 0 1 0-4.2V7.07H2.18a11 11 0 0 0 0 9.86l3.65-2.83Z"
+          />
+          <path
+            fill="#ea4335"
+            d="M12 5.36c1.62 0 3.06.56 4.21 1.64l3.16-3.16A10.55 10.55 0 0 0 12 1a11 11 0 0 0-9.82 6.07L5.83 9.9C6.7 7.3 9.13 5.36 12 5.36Z"
+          />
+        </svg>
+      </span>
+    ),
+  },
   {
     href: SOCIAL_URLS.linkedin,
     label: 'LinkedIn',
@@ -144,7 +181,7 @@ const SOCIALS = [
   },
 ];
 
-/** `.footer` — the homepage footer, used on every page. */
+/** `.footer`, the homepage footer, used on every page. */
 export function SiteFooter() {
   return (
     <footer className="text-ink px-pad max-b900:grid-cols-2 max-b900:gap-x-8 max-b900:gap-y-10 max-b900:px-7 max-b900:pt-14 max-b900:pb-6 max-b560:grid-cols-1 grid grid-cols-[1.5fr_1fr_.8fr_.8fr] gap-x-[48px] gap-y-12 bg-[#f4f0e8] pt-16 pb-7">
@@ -163,7 +200,7 @@ export function SiteFooter() {
             rel="noopener"
             className="text-gold font-semibold hover:underline"
           >
-            View on Google Maps ↗
+            Get directions
           </a>
         </address>
         <p className="mt-4 mb-0 text-sm leading-[1.9] font-semibold">
@@ -183,9 +220,9 @@ export function SiteFooter() {
       </div>
 
       <nav aria-label="Footer services">
-        <h4 className="text-gold m-0 mb-5 text-[10px] tracking-[.18em] uppercase">
+        <h2 className="text-gold m-0 mb-5 text-[10px] tracking-[.18em] uppercase">
           Services
-        </h4>
+        </h2>
         <div className="grid gap-3">
           {SERVICES.map(service => (
             <Link
@@ -200,9 +237,9 @@ export function SiteFooter() {
       </nav>
 
       <nav aria-label="Footer">
-        <h4 className="text-gold m-0 mb-5 text-[10px] tracking-[.18em] uppercase">
+        <h2 className="text-gold m-0 mb-5 text-[10px] tracking-[.18em] uppercase">
           Company
-        </h4>
+        </h2>
         <div className="grid gap-3">
           {FOOTER_NAV.filter(link => link.href !== '/services').map(link => (
             <Link
@@ -217,9 +254,9 @@ export function SiteFooter() {
       </nav>
 
       <div>
-        <h4 className="text-gold m-0 mb-5 text-[10px] tracking-[.18em] uppercase">
+        <h2 className="text-gold m-0 mb-5 text-[10px] tracking-[.18em] uppercase">
           Connect
-        </h4>
+        </h2>
         <div className="grid gap-3">
           {SOCIALS.map(social => (
             <a
@@ -252,6 +289,7 @@ export function SiteFooter() {
             </Link>
           ))}
           <CookieSettingsButton className="hover:text-ink cursor-pointer border-0 bg-transparent p-0 tracking-[inherit] text-inherit uppercase transition-colors" />
+          <MotionSettingsButton className="hover:text-ink cursor-pointer border-0 bg-transparent p-0 tracking-[inherit] text-inherit uppercase transition-colors" />
         </nav>
         <span>ISLAMABAD · PAKISTAN · GLOBAL DELIVERY</span>
       </div>

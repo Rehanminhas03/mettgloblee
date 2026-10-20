@@ -1,5 +1,5 @@
 /**
- * Detail pages for `/portfolio/[slug]` — one entry per client page.
+ * Detail pages for `/portfolio/[slug]`, one entry per client page.
  *
  * `caseStudy: true` renders the longer case-study layout with a KPI strip.
  * Everything here describes the engagement itself or facts the client already
@@ -14,19 +14,19 @@ import { CASE_NAMES } from './caseNames';
 export type ProjectLink = { label: string; href: string };
 
 export type Project = {
+  modifiedAt?: string;
   slug: string;
   market: 'international' | 'local';
   caseStudy: boolean;
   brand: string;
-  /** Sector, then location — upper-cased in the hero kicker. */
+  /** Sector, then location, upper-cased in the hero kicker. */
   sector: string;
   title: string;
+  subtitle: string;
   accent: string;
-  /** Line under the H1, from lib/caseNames. */
-  subtitle?: string;
   lede: string;
   links: ProjectLink[];
-  /** KPI strip — case studies only. */
+  /** KPI strip, case studies only. */
   kpis?: { value: string; label: string }[];
   panel: { label: string; value: string; copy: string };
   about: { heading: string; copy: string };
@@ -45,13 +45,55 @@ export type ProjectBlock = { label: string; title: string; copy: string };
 
 const RAW_PROJECTS: Project[] = [
   {
+    slug: 'mytrackee-pakistan',
+    modifiedAt: '2026-10-19',
+    market: 'local',
+    caseStudy: false,
+    brand: 'MYTRACKEE PAKISTAN',
+    sector: 'GPS & Vehicle Tracking · Pakistan',
+    title: 'MyTrackee Pakistan',
+    subtitle:
+      'A GPS location and vehicle tracking portal for fleets and vehicle owners',
+    accent: '',
+    lede: 'A web portal that helps fleets and vehicle owners see where their vehicles are.',
+    links: [],
+    panel: {
+      label: 'Scope',
+      value: 'GPS tracking portal',
+      copy: 'Vehicle location presented through a web portal.',
+    },
+    about: {
+      heading: 'The project',
+      copy: 'MyTrackee Pakistan is a GPS location and vehicle tracking platform. Mett Global’s work covers the web portal used to view vehicle locations.',
+    },
+    scope: ['GPS', 'Vehicle tracking', 'Web portal'],
+    delivered: {
+      heading: 'What we delivered',
+      copy: 'A web portal focused on vehicle location.',
+      blocks: [
+        {
+          label: '01 / WEB PORTAL',
+          title: 'Vehicle tracking',
+          copy: 'A browser-based place for fleets and vehicle owners to view where their vehicles are.',
+        },
+      ],
+    },
+    seo: {
+      title: 'MyTrackee Pakistan GPS Tracking Portal | Mett Global',
+      description:
+        'Explore Mett Global’s web portal work for MyTrackee Pakistan, a GPS location and vehicle tracking platform for fleets and vehicle owners.',
+    },
+  },
+  {
     slug: 'dealership-erp',
     market: 'local',
     caseStudy: true,
     brand: 'ITTEHAD AUTOMOTIVE DEALERSHIPS ERP',
     sector: 'Automotive retail · Islamabad',
-    title: 'One system for the entire',
-    accent: 'car-buying journey.',
+    title: 'One System, Three Showrooms',
+    subtitle:
+      'A dealership ERP and CRM with a portal for every role, up to the CEO (in development)',
+    accent: '',
     lede: 'A complete dealership management system, built for Hyundai Islamabad, Jetour Ittehad Islamabad and Capital Smart Motors. One web portal follows every customer from their first visit to the day they receive their new car, and on into after-sales and the other services a dealership provides, so the whole team knows where each customer and each car stands.',
     links: [],
     kpis: [
@@ -83,7 +125,7 @@ const RAW_PROJECTS: Project[] = [
     ],
     glance: [
       { label: 'Industry', value: 'Automotive retail' },
-      { label: 'My role', value: 'Designer & full-stack developer' },
+      { label: 'Our role', value: 'Design & full-stack development' },
       { label: 'Platform', value: 'Web and mobile' },
       { label: 'Timeline', value: '3 months so far, in development' },
     ],
@@ -115,8 +157,8 @@ const RAW_PROJECTS: Project[] = [
       blocks: [
         {
           label: '01 / CUSTOMERS & LEADS',
-          title: 'No enquiry is lost',
-          copy: 'Every enquiry is captured, followed up and never lost.',
+          title: 'Enquiries in one shared record',
+          copy: 'Capture enquiries, assign follow-ups and keep their status visible to the team.',
         },
         {
           label: '02 / SALES ORDERS',
@@ -136,7 +178,7 @@ const RAW_PROJECTS: Project[] = [
         {
           label: '05 / ROLE-BASED PORTALS',
           title: 'Each person sees what they need',
-          copy: 'Every team member gets a tailored portal — nothing more, nothing less.',
+          copy: 'Every team member gets a tailored portal, nothing more, nothing less.',
         },
         {
           label: '06 / NOTIFICATIONS',
@@ -157,7 +199,7 @@ const RAW_PROJECTS: Project[] = [
     },
     flow: {
       heading: 'The customer journey, in one place',
-      copy: 'From the first visit to the keys in hand — and every service after.',
+      copy: 'From the first visit to the keys in hand, and every service after.',
       steps: [
         'Enquiry & follow-up',
         'Booking & approval',
@@ -177,7 +219,7 @@ const RAW_PROJECTS: Project[] = [
     ],
     portals: true,
     seo: {
-      title: 'Ittehad Automotive Dealerships ERP Case Study | Mett Global',
+      title: 'One System, Three Showrooms: Dealership ERP | Mett Global',
       description:
         'How Mett Global is building a complete dealership management system for three showrooms, covering sales, service, parts, accounts and a CEO portal.',
     },
@@ -188,8 +230,10 @@ const RAW_PROJECTS: Project[] = [
     caseStudy: true,
     brand: 'SFYKEA',
     sector: 'On-demand car care · Islamabad',
-    title: 'A door-to-door car wash,',
-    accent: 'run from one platform.',
+    title: 'Car Care, On Demand',
+    subtitle:
+      "Website, iOS and Android apps, and admin and partner portals running SFYKEA's door-to-door car wash",
+    accent: '',
     lede: 'SFYKEA brings professional car washing to customers’ homes and offices in Islamabad. Mett Global built the company website, the customer app on iOS and Android, and the admin and partner portals that run bookings, riders and areas behind it.',
     links: [
       { label: 'Visit website', href: 'https://sfykea.com/' },
@@ -205,8 +249,8 @@ const RAW_PROJECTS: Project[] = [
       { label: 'support@sfykea.com', href: 'mailto:support@sfykea.com' },
     ],
     kpis: [
-      { value: '2', label: 'store apps — iOS & Android' },
-      { value: '2', label: 'portals — admin & partner' },
+      { value: '2', label: 'store apps, iOS & Android' },
+      { value: '2', label: 'portals, admin & partner' },
       { value: '1', label: 'Firebase backend' },
       { value: '5,000+', label: 'customers served (client-reported)' },
     ],
@@ -238,7 +282,7 @@ const RAW_PROJECTS: Project[] = [
         {
           label: '02 / CUSTOMER APP',
           title: 'Booking in a few taps',
-          copy: 'A Flutter app, live on the App Store and Google Play, where a customer books a specific slot — for example tomorrow at 4 p.m. — for their car wash.',
+          copy: 'A Flutter app, live on the App Store and Google Play, where a customer books a specific slot, for example tomorrow at 4 p.m., for their car wash.',
         },
         {
           label: '03 / ADMIN PORTAL',
@@ -263,7 +307,7 @@ const RAW_PROJECTS: Project[] = [
       ],
     },
     seo: {
-      title: 'SFYKEA Case Study: Car Wash App & Portals | Mett Global',
+      title: 'Car Care, On Demand: SFYKEA App & Portals | Mett Global',
       description:
         'How Mett Global built the website, Flutter app and admin and partner portals for SFYKEA, a door-to-door car wash service in Islamabad.',
     },
@@ -274,14 +318,16 @@ const RAW_PROJECTS: Project[] = [
     caseStudy: true,
     brand: 'MOWING',
     sector: 'Lawn care · Field-ops software',
-    title: 'Field operations for',
-    accent: 'commercial lawn care.',
+    title: 'The Crew Scheduler',
+    subtitle:
+      'Field-operations software that turns recurring lawn-care routes into daily crew schedules',
+    accent: '',
     lede: 'A custom scheduling and workforce platform for a commercial lawn-care business. It turns recurring property routes into daily crew schedules, and gives drivers a locked field workflow to complete jobs and track their time.',
     links: [],
     kpis: [
-      { value: '2', label: 'workspaces — office & field' },
+      { value: '2', label: 'workspaces, office & field' },
       { value: 'Daily', label: 'crew schedules from recurring routes' },
-      { value: '3', label: 'stack layers — Laravel, Vue 3, MySQL' },
+      { value: '3', label: 'stack layers, Laravel, Vue 3, MySQL' },
       { value: '1', label: 'custom platform' },
     ],
     panel: {
@@ -331,7 +377,7 @@ const RAW_PROJECTS: Project[] = [
       ],
     },
     seo: {
-      title: 'Mowing Case Study: Field-Ops Software | Mett Global',
+      title: 'The Crew Scheduler: Mowing Field-Ops | Mett Global',
       description:
         'How Mett Global built a custom Laravel and Vue 3 scheduling and workforce platform for a commercial lawn-care business.',
     },
@@ -342,8 +388,10 @@ const RAW_PROJECTS: Project[] = [
     caseStudy: false,
     brand: 'ITTEHAD STEEL',
     sector: 'Industrial · Islamabad',
-    title: 'Marketing for a',
-    accent: 'steel manufacturer.',
+    title: 'Steel, Made Visible',
+    subtitle:
+      'Instagram management, video reels, and billboard and poster design for Ittehad Steel',
+    accent: '',
     lede: 'Marketing support for Ittehad Steel, a Pakistani manufacturer of reinforcement bars and light section steel: Instagram page management, video reels, and billboard and poster design.',
     links: [
       { label: 'Visit website', href: 'https://ittehad.com.pk' },
@@ -390,7 +438,7 @@ const RAW_PROJECTS: Project[] = [
       ],
     },
     seo: {
-      title: 'Ittehad Steel Marketing Case | Mett Global',
+      title: 'Steel, Made Visible: Ittehad Steel | Mett Global',
       description:
         'Instagram management, video reels, and billboard and poster design Mett Global delivered for Ittehad Steel, a steel manufacturer in Islamabad.',
     },
@@ -401,8 +449,10 @@ const RAW_PROJECTS: Project[] = [
     caseStudy: false,
     brand: 'SERENADA MENTAL HEALTH',
     sector: 'Mental health · Texas, USA',
-    title: 'A patient-first website',
-    accent: 'built to be found.',
+    title: 'Found by Patients',
+    subtitle:
+      'A patient-first website and SEO for a mental health practice serving Georgetown and Waco, Texas',
+    accent: '',
     lede: 'Website design and development, with ongoing SEO, for a psychiatric and counseling practice serving Georgetown and Waco, Texas.',
     links: [
       { label: 'Visit website', href: 'https://www.serenadamentalhealth.com/' },
@@ -444,7 +494,7 @@ const RAW_PROJECTS: Project[] = [
       ],
     },
     seo: {
-      title: 'Serenada Mental Health Website & SEO | Mett Global',
+      title: 'Found by Patients: Serenada Website & SEO | Mett Global',
       description:
         'Website design, development and ongoing SEO Mett Global delivered for Serenada Mental Health, a psychiatric and counseling practice in Texas.',
     },
@@ -455,8 +505,10 @@ const RAW_PROJECTS: Project[] = [
     caseStudy: false,
     brand: 'PROSPECT SMILE',
     sector: 'Dental care · Illinois, USA',
-    title: 'A modern dental website',
-    accent: 'that books patients.',
+    title: 'Smiles, Booked',
+    subtitle:
+      'A modern dental website with local SEO for a family and cosmetic clinic in Mount Prospect, Illinois',
+    accent: '',
     lede: 'Website design and development with local SEO for a family and cosmetic dental clinic in Mount Prospect, Illinois.',
     links: [{ label: 'Visit website', href: 'https://www.prospectsmile.com/' }],
     panel: {
@@ -496,7 +548,7 @@ const RAW_PROJECTS: Project[] = [
       ],
     },
     seo: {
-      title: 'Prospect Smile Dental Website & Local SEO | Mett Global',
+      title: 'Smiles, Booked: Prospect Smile Dental | Mett Global',
       description:
         'Website design, development and local SEO Mett Global delivered for Prospect Smile, a family and cosmetic dental clinic in Mount Prospect, Illinois.',
     },
@@ -507,8 +559,10 @@ const RAW_PROJECTS: Project[] = [
     caseStudy: false,
     brand: "LUXURY O'HARE LIMO",
     sector: 'Luxury transportation · Chicago, USA',
-    title: 'Chauffeur bookings,',
-    accent: 'driven by search.',
+    title: 'Booked by Search',
+    subtitle:
+      'A website and SEO that turn airport and event searches into Chicago chauffeur bookings',
+    accent: '',
     lede: 'Website design and development with SEO for airport transfers, corporate travel and event transportation across the Chicago area.',
     links: [
       { label: 'Visit website', href: 'https://www.luxuryoharelimo.com/' },
@@ -550,7 +604,7 @@ const RAW_PROJECTS: Project[] = [
       ],
     },
     seo: {
-      title: "Luxury O'Hare Limo Website & SEO | Mett Global",
+      title: "Booked by Search: Luxury O'Hare Limo | Mett Global",
       description:
         "Website design, development and SEO Mett Global delivered for Luxury O'Hare Limo, a chauffeured transportation service in Chicago.",
     },

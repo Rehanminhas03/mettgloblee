@@ -2,7 +2,7 @@
  * Clients and projects shown in the homepage clients section, in two groups:
  * `local` (Pakistan) and `international`.
  *
- * To add one, append an entry. `href` opens that client's page — a portfolio
+ * To add one, append an entry. `href` opens that client's page, a portfolio
  * page, a case study, or a full `https://` URL (new tab). Entries without an
  * `href` render as plain cards. Only list organizations that have approved
  * being referenced.
@@ -10,7 +10,7 @@
 
 export type Partner = {
   name: string;
-  /** Sector, then location — e.g. "Automotive · Islamabad". */
+  /** Sector, then location, e.g. "Automotive · Islamabad". */
   caption: string;
   region: 'international' | 'local';
   href?: string;

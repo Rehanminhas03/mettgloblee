@@ -46,7 +46,7 @@ export default function AiAutomationGuide() {
       dek={
         'The best automation opportunity is usually not the flashiest demo. It is a repeated, rules-heavy workflow that consumes attention and has a clear human checkpoint.'
       }
-      meta={'METT GLOBAL FIELD GUIDE · AI & OPERATIONS · 10 MIN READ'}
+      meta={'METT GLOBAL FIELD GUIDE · AI & OPERATIONS · 2 MIN READ'}
       graphic={<ChipGraphic steps={['INPUT', 'DECIDE', 'ACT', 'VERIFY']} />}
       endHeading={'Have a repetitive workflow?'}
       endHref={'/ai-automation-content'}

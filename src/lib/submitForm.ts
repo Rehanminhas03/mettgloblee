@@ -11,9 +11,12 @@ export async function submitForm(form: HTMLFormElement): Promise<boolean> {
     if (typeof value === 'string') data[key] = value;
   });
 
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 15000);
   try {
     const response = await fetch(FORM_AJAX_ENDPOINT, {
       method: 'POST',
+      signal: controller.signal,
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
@@ -25,5 +28,7 @@ export async function submitForm(form: HTMLFormElement): Promise<boolean> {
     return result.success === true || result.success === 'true';
   } catch {
     return false;
+  } finally {
+    window.clearTimeout(timeout);
   }
 }

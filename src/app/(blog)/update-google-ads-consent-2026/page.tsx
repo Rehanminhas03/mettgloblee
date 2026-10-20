@@ -52,7 +52,7 @@ const BLOCKS: Block[] = [
   },
   {
     t: 'quote',
-    text: 'Privacy implementation is a system of choices, signals and tag behavior—not a banner graphic.',
+    text: 'Privacy implementation is a system of choices, signals and tag behavior, not a banner graphic.',
   },
   {
     t: 'source',
@@ -62,7 +62,7 @@ const BLOCKS: Block[] = [
         <SourceLink
           href={'https://support.google.com/google-ads/answer/13695607?hl=en'}
         >
-          {'Google Ads Help — Updates to consent mode for traffic in the EEA'}
+          {'Google Ads Help, Updates to consent mode for traffic in the EEA'}
         </SourceLink>
         <SourceNote>
           {
@@ -84,7 +84,7 @@ export default function GoogleAdsConsent2026Brief() {
       dek={
         'For advertisers receiving traffic from the European Economic Area, Google says consent requirements affect measurement, ad personalization and remarketing when applicable Google tags, SDKs and uploaded data are used.'
       }
-      meta={'CURRENT BRIEF · SOURCE CHECKED 17 SEP 2026 · GOOGLE ADS HELP'}
+      meta={'CURRENT BRIEF · SOURCE CHECKED 20 OCT 2026 · GOOGLE ADS HELP'}
       graphic={<PolicyGraphic facts={FACTS} />}
       endHeading={'Need the acquisition and measurement stack reviewed?'}
       endHref={'/digital-marketing-growth'}

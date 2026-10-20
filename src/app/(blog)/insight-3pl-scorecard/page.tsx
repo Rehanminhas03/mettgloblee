@@ -122,7 +122,7 @@ const BLOCKS: Block[] = [
   },
   {
     t: 'quote',
-    text: 'A 3PL should be evaluated as an operating system with people, controls, data and recovery paths—not as a single line on a rate card.',
+    text: 'A 3PL should be evaluated as an operating system with people, controls, data and recovery paths, not as a single line on a rate card.',
   },
   {
     t: 'source',
@@ -145,7 +145,7 @@ export default function ThreePlScorecardGuide() {
       back="BLOG / SUPPLY CHAIN OPERATIONS"
       title="The 3PL scorecard: how to compare warehouses beyond pick fees"
       dek="The lowest pick fee is rarely the lowest operating cost. Compare a 3PL on the controls that protect customer promise, inventory truth, data flow and the ability to handle a difficult week."
-      meta="METT GLOBAL OPERATOR PLAYBOOK · 3PL SELECTION · 9 MIN READ"
+      meta="METT GLOBAL OPERATOR PLAYBOOK · 3PL SELECTION · 4 MIN READ"
       graphic={
         <ScorecardGraphic
           rows={ROWS}

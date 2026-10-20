@@ -1,4 +1,3 @@
-import { CASE_NAMES } from '@/lib/caseNames';
 import { PageShell } from '@/components/page/PageShell';
 import { ContactBand } from '@/components/page/ContactBand';
 import { Section, SectionHead } from '@/components/page/ui';
@@ -75,20 +74,22 @@ const PROOF = [
 
 export default function CsmCaseStudyPage() {
   return (
-    <PageShell>
+    <PageShell caseStudy>
       <JsonLd data={breadcrumbJsonLd('/portfolio/csm-ittehad')} />
       <JsonLd data={caseStudyJsonLd('/portfolio/csm-ittehad')} />
 
       <CaseHero
+        visualSlug="csm-ittehad"
         tone="csm"
-        crumb="CSM Ittehad"
+        crumb="112 Showroom Visits"
         kicker="EV AUTOMOTIVE · ISLAMABAD · CLIENT-REPORTED CAMPAIGN DATA"
-        titleTop={CASE_NAMES['csm-ittehad'].name}
-        subtitle={CASE_NAMES['csm-ittehad'].subtitle}
+        titleTop="112 Showroom Visits"
+        titleAccent=""
+        subtitle="Turning a new EV presence into showroom traffic for CSM Ittehad (client-reported)"
         lede={
           <>
             Mett Global built the digital foundation and campaign operating
-            system around CSM Ittehad&rsquo;s EV launch activity — combining
+            system around CSM Ittehad&rsquo;s EV launch activity, combining
             social setup, acquisition, lead automation, digital journey and
             local visibility.
           </>
@@ -171,7 +172,7 @@ export default function CsmCaseStudyPage() {
       <Section>
         <SectionHead heading="The operating system behind the campaign">
           The strongest part of the engagement is the connection between
-          awareness, acquisition and follow-up — not an unsupported
+          awareness, acquisition and follow-up, not an unsupported
           market-position claim.
         </SectionHead>
         <Workflow steps={WORKFLOW} />
@@ -222,7 +223,7 @@ export default function CsmCaseStudyPage() {
         The original workbook contained stronger positioning and efficiency
         language than the attached data could independently support. We retained
         the documented work, the client-reported ~400 leads, the 112 visits and
-        the derived ~28% visit rate — and removed claims that would require
+        the derived ~28% visit rate, and removed claims that would require
         comparative market data, spend, revenue or closed-sale records.
       </IntegrityCard>
 

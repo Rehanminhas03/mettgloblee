@@ -51,7 +51,7 @@ function PhoneIcon() {
 
 /**
  * Leadership profile card: initials monogram, name and title, a short bio and
- * contacts. No photographs or monograms — the shared cream `ToneCard`.
+ * contacts. No photographs or monograms, the shared cream `ToneCard`.
  */
 export function LeaderCard({ leader }: { leader: Leader }) {
   return (

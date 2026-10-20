@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { SERVICES, type Service } from '@/lib/services';
 import {
   CARD_COPY,
@@ -63,7 +62,7 @@ function Divider() {
 }
 
 /**
- * `.services` — the four services as compact cards, over two sections of
+ * `.services`, the four services as compact cards, over two sections of
  * two. The sections keep their natural height (no forced full screen) so the
  * gap between the rows stays even. A gold rule separates the hero above from
  * the first row.
@@ -90,19 +89,7 @@ export function Services() {
                 </span>
               </>
             }
-            action={
-              <Link
-                href="/services"
-                className="inline-block rounded-full bg-black px-6 py-[13px] text-[13px] font-extrabold text-white transition-colors hover:bg-[#2a2925]"
-              >
-                View all services
-              </Link>
-            }
-          >
-            Digital growth, technology, AI and commerce — engage us for one
-            focused problem or connect all four into a single growth and
-            operations program.
-          </SectionHeader>
+          />
 
           <div className="max-b900:grid-cols-1 grid grid-cols-2 gap-8">
             {first.map(service => (

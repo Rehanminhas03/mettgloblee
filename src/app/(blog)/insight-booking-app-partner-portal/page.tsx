@@ -10,7 +10,7 @@ const BLOCKS: Block[] = [
   { t: 'h2', text: 'The customer app is only one part of the product' },
   {
     t: 'p',
-    text: 'An on-demand service — a home car wash, a cleaner, a technician — serves three audiences: the customer who books, the field staff who do the work, and the owner who has to run it all. An app for the first group alone leaves the other two on phone calls and spreadsheets.',
+    text: 'An on-demand service, a home car wash, a cleaner, a technician, serves three audiences: the customer who books, the field staff who do the work, and the owner who has to run it all. An app for the first group alone leaves the other two on phone calls and spreadsheets.',
   },
   { t: 'h2', text: 'Make booking simple and trustworthy' },
   {
@@ -63,7 +63,7 @@ export default function BookingAppGuide() {
       dek={
         'A customer app is the visible part. The admin and partner portals behind it are what make bookings, riders and areas manageable as the business grows.'
       }
-      meta={'METT GLOBAL FIELD GUIDE · APPS & PORTALS · 8 MIN READ'}
+      meta={'METT GLOBAL FIELD GUIDE · APPS & PORTALS · 3 MIN READ'}
       graphic={<ChipGraphic steps={['BOOK', 'ASSIGN', 'SERVE', 'REPORT']} />}
       endHeading={'Building a booking platform?'}
       endHref={'/web-software-development'}

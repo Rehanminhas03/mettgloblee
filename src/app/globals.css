@@ -20,7 +20,7 @@
   /* ---- Standard page palette (src/page.css :root) ---- */
   --color-p-paper: #f4efe5;
   --color-p-ink: #11110f;
-  --color-p-gold: #c9982c;
+  --color-p-gold: #84601a; /* Readable gold text on light page surfaces. */
   --color-p-gold2: #dfba64;
   --color-p-muted: #69645c;
   --color-p-line: #d8cfbf;
@@ -238,6 +238,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
     /* Keep anchor targets clear of the sticky header (72px, 64px below 900px). */
     scroll-padding-top: 72px;
   }
@@ -247,7 +248,7 @@
     }
   }
   body {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
   summary::-webkit-details-marker {
     display: none;
@@ -311,7 +312,7 @@ html:not([data-intro='seen']) {
   }
 }
 
-/* Balanced headings avoid single-word last lines. */
+/* Reading rhythm and fixed contact controls from the review brief. */
 h1,
 h2,
 h3,
@@ -323,14 +324,107 @@ li,
 figcaption {
   text-wrap: pretty;
 }
-/* Clear the floating contact buttons at the end of the page on phones. */
+.case-study-subtitle {
+  max-width: 46ch;
+  margin-top: 14px;
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.45;
+  text-wrap: balance;
+}
+[data-cookie-open] .fab {
+  display: none;
+}
+[data-idle-motion][data-motion-active='false'] * {
+  animation-play-state: paused !important;
+}
 @media (max-width: 620px) {
-  body {
-    padding-bottom: 72px;
+  body:has([data-floating-contact]) {
+    padding-bottom: calc(66px + env(safe-area-inset-bottom));
+  }
+  .fab {
+    inset-inline: 0;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px 16px max(10px, env(safe-area-inset-bottom));
+    background: rgba(18, 18, 16, 0.96);
+    border-top: 1px solid rgba(224, 188, 104, 0.24);
+  }
+  .fab a {
+    width: auto;
+    min-width: 44px;
+    height: 44px;
+    padding: 0 14px;
+    justify-content: center;
+  }
+  .fab b {
+    display: inline;
+  }
+  .fab svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-idle-motion] * {
+    animation: none !important;
   }
 }
 
-/* Long unbroken strings (URLs, UTM strings) wrap instead of widening the page. */
-strong {
-  overflow-wrap: anywhere;
+/* Text colors follow the surface without changing decorative gold fills. */
+html[data-motion-paused='true'] [data-artwork] *,
+html[data-motion-paused='true'] [data-idle-motion] * {
+  animation-play-state: paused !important;
+}
+
+@media (max-width: 760px) {
+  input:not([type='hidden']),
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+.dark-surface .text-p-gold {
+  color: #e0bc68;
+}
+.dark-surface .text-p-muted {
+  color: #c4bfb5;
+}
+.navbar-shell {
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.navbar-shell:focus-within {
+  transform: translateY(0) !important;
+}
+.navbar-body {
+  transition:
+    width 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.4s,
+    border-radius 0.4s,
+    box-shadow 0.4s;
+  backdrop-filter: blur(18px) saturate(1.4);
+}
+.mobile-menu {
+  animation: menu-in 0.2s ease-out;
+}
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .navbar-shell,
+  .navbar-body {
+    transition: none;
+  }
+  .mobile-menu {
+    animation: none;
+  }
 }

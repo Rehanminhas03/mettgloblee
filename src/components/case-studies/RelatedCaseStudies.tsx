@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import { caseStudyPath, getCaseStudy } from '@/content/operations-case-studies';
+import { CardVisual } from './CardVisual';
+import { CardArtwork } from './CardArtwork.client';
+import { CaseStudyArrow } from './CaseStudyArrow';
 import type { CaseStudy } from './types';
 import styles from './case-studies.module.css';
 
-/** Two related links, resolved from the same server-owned records. */
 export function RelatedCaseStudies({ study }: { study: CaseStudy }) {
   return (
     <section className={styles.related} aria-labelledby="related-heading">
@@ -14,13 +16,22 @@ export function RelatedCaseStudies({ study }: { study: CaseStudy }) {
           if (!related) return null;
           return (
             <li key={slug}>
-              <Link href={caseStudyPath(slug)}>
-                <span className={styles.eyebrow}>{related.projectType}</span>
-                <h3>{related.title}</h3>
-                <p>{related.summary}</p>
-                <span>
-                  Read the case study <span aria-hidden="true">→</span>
-                </span>
+              <Link
+                href={caseStudyPath(slug)}
+                className={`${styles.csCard} ${styles.relatedRow}`}
+              >
+                <CardArtwork>
+                  <CardVisual slug={slug} />
+                </CardArtwork>
+                <div className={styles.studyCopy}>
+                  <p className={styles.eyebrow}>{related.projectType}</p>
+                  <h3>{related.title}</h3>
+                  <p className={styles.cardSubtitle}>{related.subtitle}</p>
+                  <p>{related.summary}</p>
+                  <span className={styles.proofCta}>
+                    View case study <CaseStudyArrow />
+                  </span>
+                </div>
               </Link>
             </li>
           );

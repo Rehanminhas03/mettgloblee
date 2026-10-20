@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback } from 'react';
 
 const TAGS = {
   div: 'div',
@@ -9,15 +9,7 @@ const TAGS = {
   aside: 'aside',
 } as const;
 
-/**
- * `.reveal` / `.reveal.visible` from styles.css, driven by the same
- * IntersectionObserver threshold (0.12) that `src/main.ts` used.
- *
- * The observer is attached through a callback ref so it starts watching the
- * moment the node mounts and tears itself down when it unmounts.
- * `motion-reduce:` restores the final state immediately, matching the
- * stylesheet's reduced-motion block.
- */
+/** SSR is fully visible; optional motion never gates text or the LCP headline. */
 export function Reveal({
   as = 'div',
   className = '',
@@ -27,31 +19,43 @@ export function Reveal({
   className?: string;
   children: React.ReactNode;
 }) {
-  const [visible, setVisible] = useState(false);
-
   const observe = useCallback((node: HTMLElement | null) => {
-    if (!node) return;
+    if (!node || !('IntersectionObserver' in window)) return;
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (preference.matches) return;
+    let animation: Animation | undefined;
     const observer = new IntersectionObserver(
       entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) setVisible(true);
-        });
+        if (!entries.some(entry => entry.isIntersecting)) return;
+        observer.disconnect();
+        if (!preference.matches)
+          animation = node.animate(
+            [
+              { opacity: 0.6, transform: 'translateY(20px)' },
+              { opacity: 1, transform: 'none' },
+            ],
+            { duration: 650, easing: 'cubic-bezier(.2,.8,.2,1)' },
+          );
       },
       { threshold: 0.12 },
     );
+    const settle = () => {
+      if (preference.matches) {
+        observer.disconnect();
+        animation?.cancel();
+      }
+    };
+    preference.addEventListener('change', settle);
     observer.observe(node);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      animation?.cancel();
+      preference.removeEventListener('change', settle);
+    };
   }, []);
-
   const Tag = TAGS[as];
-
   return (
-    <Tag
-      ref={observe}
-      className={`transition-[opacity,transform] duration-[.8s] ease-[cubic-bezier(.2,.8,.2,1)] motion-reduce:translate-y-0 motion-reduce:opacity-100 ${
-        visible ? 'translate-y-0 opacity-100' : 'translate-y-[30px] opacity-0'
-      } ${className}`}
-    >
+    <Tag ref={observe} className={className}>
       {children}
     </Tag>
   );

@@ -8,7 +8,7 @@ export type ServiceBlock = {
 };
 
 /**
- * `.service-layout` — sticky left rail plus the prose column, shared by the
+ * `.service-layout`, sticky left rail plus the prose column, shared by the
  * service detail pages and the two legal pages.
  */
 export function ServiceLayout({
@@ -25,13 +25,13 @@ export function ServiceLayout({
   blocks: ServiceBlock[];
 }) {
   return (
-    <section className="max-b620:px-6 px-[8vw] py-[90px]">
-      <div className="max-b900:grid-cols-1 grid grid-cols-[.72fr_1.28fr] gap-[70px]">
+    <section className="max-b620:px-6 max-b620:py-10 px-[8vw] py-16">
+      <div className="max-b900:grid-cols-1 max-b900:gap-7 grid grid-cols-[.72fr_1.28fr] gap-12">
         <aside className="max-b900:static sticky top-[120px] h-max">
           <span className="text-p-gold text-[10px] font-black tracking-[.16em]">
             {sideKicker}
           </span>
-          <h2 className="my-[0.83em] text-[38px] leading-[1.05] tracking-[-.04em]">
+          <h2 className="my-5 text-[clamp(28px,3vw,38px)] leading-[1.12] tracking-[-.04em]">
             {sideHeading}
           </h2>
           {ctaHref && ctaLabel ? (
@@ -41,10 +41,10 @@ export function ServiceLayout({
           ) : null}
         </aside>
 
-        <article>
+        <article className="min-w-0 [overflow-wrap:anywhere]">
           {blocks.map(block => (
-            <div key={block.heading}>
-              <h2 className="mt-[45px] mb-[14px] text-[36px] tracking-[-.04em]">
+            <div key={block.heading} className="pt-10 first:pt-0">
+              <h2 className="mt-0 mb-[14px] text-[clamp(26px,2.8vw,36px)] leading-[1.15] tracking-[-.04em]">
                 {block.heading}
               </h2>
               <p className="my-[1em] text-[16px] leading-[1.85] text-[#514d46]">

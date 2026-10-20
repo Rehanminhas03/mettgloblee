@@ -4,10 +4,19 @@ import { PageHero, HeroAccent } from '@/components/page/PageHero';
 import { JsonLd } from '@/components/JsonLd';
 import { breadcrumbJsonLd, pageMetadata, pageJsonLd } from '@/lib/seo';
 import { SERVICES } from '@/lib/services';
+import { CASE_NAMES } from '@/lib/caseNames';
 
 export const metadata = pageMetadata('/sitemap');
 
 const GROUPS = [
+  {
+    label: 'OUR WORK',
+    title: 'Projects and case studies',
+    links: Object.entries(CASE_NAMES).map(([slug, item]) => ({
+      href: `/portfolio/${slug}`,
+      label: item.name,
+    })),
+  },
   {
     label: 'COMPANY',
     title: 'Core pages',
@@ -53,6 +62,16 @@ const GROUPS = [
         href: '/update-google-search-2026',
         label: 'Google Search technical fundamentals',
       },
+    ],
+  },
+  {
+    label: 'OPERATOR PLAYBOOKS',
+    title: 'Planning and measurement',
+    links: [
+      { href: '/insight-utm-governance', label: 'Campaign naming and UTMs' },
+      { href: '/insight-product-feed-health', label: 'Product feed health' },
+      { href: '/insight-landed-cost-model', label: 'Landed-cost planning' },
+      { href: '/insight-3pl-scorecard', label: 'The 3PL scorecard' },
     ],
   },
   {

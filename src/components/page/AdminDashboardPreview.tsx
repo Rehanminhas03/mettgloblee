@@ -67,7 +67,14 @@ const STATUS: Record<string, string> = {
   Completed: 'bg-[#16291d] text-[#7fd49a]',
 };
 
-const NAV = ['Dashboard', 'Bookings', 'Customers', 'Riders', 'Partners', 'Areas'];
+const NAV = [
+  'Dashboard',
+  'Bookings',
+  'Customers',
+  'Riders',
+  'Partners',
+  'Areas',
+];
 
 export function AdminDashboardPreview() {
   const max = Math.max(...AREAS.map(area => area.value));
@@ -171,20 +178,34 @@ export function AdminDashboardPreview() {
             </div>
           </div>
 
-          <div className="overflow-x-auto rounded-2xl border border-[#2d2a23] bg-[#151513]">
+          <div
+            role="region"
+            aria-label="Illustrative recent bookings table"
+            tabIndex={0}
+            className="focus-visible:outline-p-gold2 overflow-x-auto rounded-2xl border border-[#2d2a23] bg-[#151513] focus-visible:outline-2 focus-visible:outline-offset-4"
+          >
             <table className="w-full min-w-[560px] border-collapse text-left text-[12px]">
               <caption className="text-p-gold2 p-5 pb-3 text-left text-[10px] font-black tracking-[.14em]">
                 RECENT BOOKINGS
               </caption>
               <thead>
                 <tr className="text-[10px] tracking-[.1em] text-[#8a857b] uppercase">
-                  {['Booking', 'Customer', 'Area', 'Slot', 'Rider', 'Status'].map(
-                    heading => (
-                      <th key={heading} scope="col" className="px-5 py-2 font-bold">
-                        {heading}
-                      </th>
-                    ),
-                  )}
+                  {[
+                    'Booking',
+                    'Customer',
+                    'Area',
+                    'Slot',
+                    'Rider',
+                    'Status',
+                  ].map(heading => (
+                    <th
+                      key={heading}
+                      scope="col"
+                      className="px-5 py-2 font-bold"
+                    >
+                      {heading}
+                    </th>
+                  ))}
                 </tr>
               </thead>
               <tbody>
@@ -196,7 +217,9 @@ export function AdminDashboardPreview() {
                     </td>
                     <td className="px-5 py-3 text-[#d4cfc4]">{booking.area}</td>
                     <td className="px-5 py-3 text-[#d4cfc4]">{booking.slot}</td>
-                    <td className="px-5 py-3 text-[#d4cfc4]">{booking.rider}</td>
+                    <td className="px-5 py-3 text-[#d4cfc4]">
+                      {booking.rider}
+                    </td>
                     <td className="px-5 py-3">
                       <span
                         className={`rounded-full px-3 py-1 text-[10px] font-bold ${STATUS[booking.status]}`}
@@ -212,7 +235,7 @@ export function AdminDashboardPreview() {
         </div>
       </div>
       <figcaption className="text-p-muted mt-4 text-xs leading-[1.65]">
-        Illustrative layout of the admin portal with sample figures — it shows
+        Illustrative layout of the admin portal with sample figures, it shows
         what the portal tracks (orders, slots, riders, partners and areas), not
         real SFYKEA performance.
       </figcaption>

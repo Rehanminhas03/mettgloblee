@@ -1,4 +1,3 @@
-import { CASE_NAMES } from '@/lib/caseNames';
 import { PageShell } from '@/components/page/PageShell';
 import { ContactBand } from '@/components/page/ContactBand';
 import { Section, SectionHead } from '@/components/page/ui';
@@ -70,17 +69,19 @@ const PROOF = [
 
 export default function HyundaiCaseStudyPage() {
   return (
-    <PageShell>
+    <PageShell caseStudy>
       <JsonLd data={breadcrumbJsonLd('/portfolio/hyundai-islamabad')} />
       <JsonLd data={caseStudyJsonLd('/portfolio/hyundai-islamabad')} />
 
       <CaseHero
+        visualSlug="hyundai-islamabad"
         tone="light"
-        crumb="Hyundai Islamabad"
+        crumb="The Connected Showroom"
         kicker="AUTOMOTIVE · ISLAMABAD · GROWTH INFRASTRUCTURE"
-        titleTop={CASE_NAMES['hyundai-islamabad'].name}
-        subtitle={CASE_NAMES['hyundai-islamabad'].subtitle}
-        lede="This engagement is presented differently from Jetour because the source material does not yet include verified campaign performance data. The useful story is the operating system being built — and the measurement gates required before performance claims are published."
+        titleTop="The Connected Showroom"
+        titleAccent=""
+        subtitle="A local growth system linking content, leads and showroom visits for Hyundai Islamabad"
+        lede="This engagement is presented differently from Jetour because the source material does not yet include verified campaign performance data. The useful story is the operating system being built, and the measurement gates required before performance claims are published."
         panelLabel="PUBLICATION STANDARD"
         panelValue="Evidence first."
         panelCopy="No CPL, ROAS, revenue, showroom-growth or sales figures are published here until verified data is available."
@@ -134,7 +135,7 @@ export default function HyundaiCaseStudyPage() {
           Public Hyundai Islamabad pages confirm that the digital destination
           includes the Elantra Hybrid and wider vehicle range, brochure access,
           service appointments and supporting after-sales information. Those
-          facts support the journey design — they do not, by themselves, prove
+          facts support the journey design, they do not, by themselves, prove
           Mett Global performance.
         </SectionHead>
         <EvidenceStack

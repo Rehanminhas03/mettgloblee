@@ -1,4 +1,4 @@
-/** `.wa-icon` — the inline WhatsApp glyph used across the homepage. */
+/** `.wa-icon`, the inline WhatsApp glyph used across the homepage. */
 export function WaIcon({ className = '' }: { className?: string }) {
   return (
     <i
