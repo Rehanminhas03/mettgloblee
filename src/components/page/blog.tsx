@@ -42,7 +42,7 @@ export function UpdateCard({
 }) {
   return (
     <article className="border-p-line max-b620:grid-cols-1 grid min-h-[310px] grid-cols-[.88fr_1.12fr] overflow-hidden rounded-[28px] border bg-white">
-      {/* .policy-art — two concentric outlined circles bleed off the corner */}
+      {/* .policy-art, two concentric outlined circles bleed off the corner */}
       <div
         className={`max-b620:min-h-[240px] relative flex min-h-full flex-col justify-end overflow-hidden p-7 text-white ${POLICY_ART[art]} before:absolute before:top-[-65px] before:right-[-80px] before:h-[200px] before:w-[200px] before:rounded-full before:border before:border-[rgba(223,186,100,.34)] before:content-[''] after:absolute after:top-[-18px] after:right-[-25px] after:h-[105px] after:w-[105px] after:rounded-full after:border after:border-[rgba(223,186,100,.34)] after:content-['']`}
       >
@@ -124,10 +124,12 @@ export function BlogCard({
   return (
     <article
       className={`flex flex-col overflow-hidden rounded-[28px] border ${
-        dark ? 'border-[#34312b] bg-[#11110f]' : 'border-p-line bg-white'
+        dark
+          ? 'dark-surface border-[#34312b] bg-[#11110f]'
+          : 'border-p-line bg-white'
       }`}
     >
-      {/* .blog-art — the outlined circle sits off the top-right corner */}
+      {/* .blog-art, the outlined circle sits off the top-right corner */}
       <div
         className={`relative flex min-h-[230px] flex-col justify-between overflow-hidden p-[26px] text-white ${BLOG_ART[art]} after:absolute after:top-[-45px] after:right-[-45px] after:h-[170px] after:w-[170px] after:rounded-full after:border after:border-[rgba(223,186,100,.45)] after:shadow-[0_0_0_35px_rgba(223,186,100,.04)] after:content-['']`}
       >

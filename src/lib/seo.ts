@@ -14,9 +14,9 @@ export type PageSeo = { title: string; description: string };
 
 export const PAGE_SEO = {
   '/': {
-    title: 'Mett Global | Digital Marketing, Software, AI & E-Commerce',
+    title: 'Mett Global | Digital Marketing & Software, Islamabad',
     description:
-      'Mett Global is an Islamabad, Pakistan company that builds, grows and automates businesses worldwide: digital marketing, web and software, AI automation and e-commerce.',
+      'Digital marketing, web and software development, AI automation and e-commerce operations from Islamabad, Pakistan. Explore Mett Global services and client work.',
   },
   '/services': {
     title: 'Digital Marketing, Web, AI & E-Commerce Services | Mett Global',
@@ -71,17 +71,17 @@ export const PAGE_SEO = {
 
   /* ---- Service pages ---- */
   '/digital-marketing-growth': {
-    title: 'Digital Marketing & Growth | Mett Global',
+    title: 'Digital Marketing & SEO in Islamabad | Mett Global',
     description:
       'Digital Marketing & Growth from Mett Global: performance marketing, Meta and Google Ads, social media, SEO, creative and analytics built for measurable growth.',
   },
   '/web-software-development': {
-    title: 'Web & Software Development, Custom CRM | Mett Global',
+    title: 'Web & Software Development in Islamabad | Mett Global',
     description:
       'Web & Software Development from Mett Global: websites, online stores, custom CRMs, web applications, integrations and hosting built around how your business works.',
   },
   '/ai-automation-content': {
-    title: 'AI Automation & Content | Mett Global',
+    title: 'AI Automation & Content Services, Pakistan | Mett Global',
     description:
       'AI Automation & Content from Mett Global: workflow automation, AI assistants, document and data processing, lead and CRM automation, and on-brand AI content.',
   },
@@ -246,9 +246,19 @@ export function routeMetadata(
       description,
       url,
       siteName: 'Mett Global',
-      type: 'website',
+      type:
+        path.startsWith('/insight-') || path.startsWith('/update-')
+          ? 'article'
+          : 'website',
       locale: 'en_PK',
-      images: [{ url: `${SITE_URL}/social-card.png` }],
+      images: [
+        {
+          url: `${SITE_URL}/social-card.png`,
+          width: 1200,
+          height: 630,
+          alt: 'Mett Global, digital marketing, technology and operations',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
@@ -375,7 +385,6 @@ export function pageJsonLd(path: PagePath, type: WebPageType = 'WebPage') {
     name: title.split('|')[0].trim(),
     description,
     inLanguage: 'en',
-    dateModified: '2026-10-06',
     isPartOf: { '@type': 'WebSite', name: 'Mett Global', url: `${SITE_URL}/` },
     about: { '@id': `${SITE_URL}/#organization` },
   };
@@ -394,7 +403,6 @@ export function caseStudyJsonLd(path: PagePath) {
     mainEntityOfPage: url,
     image: `${SITE_URL}/social-card.png`,
     inLanguage: 'en',
-    dateModified: '2026-10-06',
     author: { '@id': `${SITE_URL}/#organization` },
     publisher: { '@id': `${SITE_URL}/#organization` },
   };

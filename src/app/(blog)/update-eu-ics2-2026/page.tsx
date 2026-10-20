@@ -18,9 +18,9 @@ const FACTS = [
     note: 'air, maritime, road and rail',
   },
   {
-    label: 'FULL MANDATE',
-    value: '01 SEP',
-    note: '2025; operating requirement throughout 2026',
+    label: 'TRANSITION COMPLETE',
+    value: '01 JUN',
+    note: '2026; remaining NCTS Phase 6 derogations ended',
   },
   {
     label: 'CORE DATA',
@@ -64,7 +64,7 @@ const BLOCKS: Block[] = [
             'https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en'
           }
         >
-          {'European Commission — Import Control System 2 (ICS2)'}
+          {'European Commission, Import Control System 2 (ICS2)'}
         </SourceLink>
         <SourceNote>
           {
@@ -84,9 +84,9 @@ export default function EuIcs22026Brief() {
         'ICS2 in 2026: why complete ENS data is now an operating requirement'
       }
       dek={
-        'The European Commission states that ICS2 safety and security data requirements became fully mandatory across air, maritime, road and rail transport from 1 September 2025. In 2026, this is no longer a rollout topic; it is part of normal shipment readiness for goods entering the EU.'
+        'ICS2 covers goods entering the EU across air, maritime, road and rail transport. The September 2025 rollout included temporary road, rail and transit-system derogations. The Commission states that, from 1 June 2026, entering consignments need a valid ENS, filed directly in ICS2 or through a combined NCTS Phase 6 declaration in opt-in countries.'
       }
-      meta={'CURRENT BRIEF · SOURCE CHECKED 17 SEP 2026 · EUROPEAN COMMISSION'}
+      meta={'CURRENT BRIEF · SOURCE CHECKED 20 OCT 2026 · EUROPEAN COMMISSION'}
       graphic={<PolicyGraphic facts={FACTS} />}
       endHeading={'Need shipment and data handoffs mapped?'}
       endHref={'/ecommerce-supply-chain'}

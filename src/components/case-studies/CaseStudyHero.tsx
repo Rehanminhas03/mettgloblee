@@ -3,6 +3,8 @@ import type { CaseStudy } from './types';
 import { ScrollTilt } from '@/components/ui/scroll-tilt';
 import { MotionGate } from './MotionGate.client';
 import { CaseStudyVisual } from './CaseStudyVisual';
+import { CardVisual } from './CardVisual';
+import { CardArtwork } from './CardArtwork.client';
 import styles from './case-studies.module.css';
 
 /** Ink hero: one H1, the supported result and the case's single figure. */
@@ -51,42 +53,43 @@ export function CaseStudyHero({ study }: { study: CaseStudy }) {
 
         <ScrollTilt disabled>
           <MotionGate className={styles.resultPanel}>
+            <CardArtwork>
+              <CardVisual slug={study.slug} />
+            </CardArtwork>
             <div className={styles.resultText}>
-              <p
-                className={
-                  study.hero.kind === 'coverage'
-                    ? styles.coverageMetric
-                    : styles.metric
-                }
-              >
-                <span className={styles.srOnly}>{study.hero.accessible}</span>
-                <span className={styles.statLine} aria-hidden="true">
-                  <span className={styles.numberBox}>
-                    <span className={styles.numberReserve}>
-                      {study.hero.display}
+              <div className={styles.statUnit}>
+                <p className={styles.metric}>
+                  <span className={styles.srOnly}>{study.hero.accessible}</span>
+                  <span className={styles.statLine} aria-hidden="true">
+                    <span className={styles.numberBox}>
+                      <span className={styles.numberReserve}>
+                        {study.hero.display}
+                      </span>
+                      <span
+                        className={styles.numberValue}
+                        data-cs-number={canCount ? '' : undefined}
+                        data-cs-target={
+                          canCount ? study.hero.value! : undefined
+                        }
+                        data-cs-prefix={study.hero.prefix}
+                        data-cs-suffix={study.hero.suffix}
+                      >
+                        {study.hero.display}
+                      </span>
                     </span>
-                    <span
-                      className={styles.numberValue}
-                      data-cs-number={canCount ? '' : undefined}
-                      data-cs-target={canCount ? study.hero.value! : undefined}
-                      data-cs-prefix={study.hero.prefix}
-                      data-cs-suffix={study.hero.suffix}
-                    >
-                      {study.hero.display}
-                    </span>
+                    {study.hero.unit ? (
+                      <span className={styles.statUnitText}>
+                        {study.hero.unit}
+                      </span>
+                    ) : null}
                   </span>
-                  {study.hero.unit ? (
-                    <span className={styles.statUnitText}>
-                      {study.hero.unit}
-                    </span>
-                  ) : null}
-                </span>
-              </p>
-              <p className={styles.statLabel}>{study.hero.label}</p>
-              <p className={styles.statContext}>{study.hero.context}</p>
-              <p className={styles.qualifier}>{study.hero.qualifier}</p>
+                </p>
+                <p className={styles.statLabel}>{study.hero.label}</p>
+                <p className={styles.statContext}>{study.hero.context}</p>
+                <p className={styles.statContext}>{study.hero.qualifier}</p>
+              </div>
+              <CaseStudyVisual study={study} textOnly />
             </div>
-            <CaseStudyVisual study={study} />
           </MotionGate>
         </ScrollTilt>
       </div>

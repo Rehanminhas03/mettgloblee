@@ -30,6 +30,9 @@ const CONTENT_SECURITY_POLICY = [
 ].join('; ');
 
 const SECURITY_HEADERS = [
+  ...(process.env.VERCEL_ENV === 'preview'
+    ? [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }]
+    : []),
   ...(process.env.NODE_ENV === 'production'
     ? [{ key: 'Content-Security-Policy', value: CONTENT_SECURITY_POLICY }]
     : []),

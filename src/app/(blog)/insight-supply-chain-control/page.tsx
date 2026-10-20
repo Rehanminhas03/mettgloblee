@@ -46,7 +46,7 @@ export default function SupplyChainControlGuide() {
       dek={
         'A warehouse can complete a perfect annual count and still lose accuracy again within weeks. Sustainable accuracy comes from controlling the transactions that change stock every day.'
       }
-      meta={'METT GLOBAL FIELD GUIDE · SUPPLY CHAIN & OPERATIONS · 9 MIN READ'}
+      meta={'METT GLOBAL FIELD GUIDE · SUPPLY CHAIN & OPERATIONS · 2 MIN READ'}
       graphic={
         <ChipGraphic
           steps={['RECEIVE', 'LOCATE', 'MOVE', 'COUNT', 'RECONCILE']}

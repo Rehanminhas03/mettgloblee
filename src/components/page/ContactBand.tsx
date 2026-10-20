@@ -1,7 +1,7 @@
 import { Btn } from './ui';
 
 /**
- * `.contact-band` — the closing call to action: a dark ink rounded card with a
+ * `.contact-band`, the closing call to action: a dark ink rounded card with a
  * soft gold ring, floating on the cream page above the footer, in the same
  * style as the site's dark cards.
  */

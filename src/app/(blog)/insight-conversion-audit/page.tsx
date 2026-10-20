@@ -48,7 +48,7 @@ export default function ConversionAuditGuide() {
       dek={
         'A website should reduce uncertainty. If visitors cannot quickly understand the offer, trust the business and take the next step, additional traffic simply buys more exits.'
       }
-      meta={'METT GLOBAL FIELD GUIDE · WEBSITE & CRO · 8 MIN READ'}
+      meta={'METT GLOBAL FIELD GUIDE · WEBSITE & CRO · 2 MIN READ'}
       graphic={
         <ChipGraphic steps={['MESSAGE', 'TRUST', 'FRICTION', 'ACTION']} />
       }

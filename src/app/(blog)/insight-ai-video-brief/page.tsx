@@ -46,7 +46,7 @@ export default function AiVideoBriefGuide() {
       dek={
         'Generation tools can produce footage quickly, but without a disciplined brief they often produce polished content with no clear commercial job.'
       }
-      meta={'METT GLOBAL FIELD GUIDE · AI VIDEO & CONTENT · 7 MIN READ'}
+      meta={'METT GLOBAL FIELD GUIDE · AI VIDEO & CONTENT · 2 MIN READ'}
       graphic={
         <ChipGraphic
           steps={['AUDIENCE', 'HOOK', 'PROOF', 'VISUAL', 'REVIEW']}

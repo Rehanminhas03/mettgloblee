@@ -133,13 +133,13 @@ function Channels({ study }: { study: CaseStudy }) {
     <>
       <p className={styles.small}>Sales channels in scope</p>
       <ul className={styles.channelGrid}>
-        {study.visual.labels.slice(0, 10).map(label => (
+        {study.visual.labels.slice(0, 13).map(label => (
           <li key={label}>{label}</li>
         ))}
       </ul>
       <p className={styles.small}>Operational systems used</p>
       <ul className={styles.labelList}>
-        {study.visual.labels.slice(10).map(label => (
+        {study.visual.labels.slice(13).map(label => (
           <li key={label}>{label}</li>
         ))}
       </ul>
@@ -182,15 +182,29 @@ const GRAPHICS = {
   etsy: Etsy,
 };
 
-export function CaseStudyVisual({ study }: { study: CaseStudy }) {
+export function CaseStudyVisual({
+  study,
+  textOnly = false,
+}: {
+  study: CaseStudy;
+  textOnly?: boolean;
+}) {
   const Graphic = GRAPHICS[study.visual.type];
   return (
     <figure className={styles.figure}>
       <p className={styles.eyebrow}>The work in view</p>
       <p className={styles.figureHeading}>{study.visual.heading}</p>
-      <div className={styles.graphic}>
-        <Graphic study={study} />
-      </div>
+      {textOnly ? (
+        <ul className={`${styles.chips} ${styles.figureLabels}`}>
+          {study.visual.labels.map(label => (
+            <li key={label}>{label}</li>
+          ))}
+        </ul>
+      ) : (
+        <div className={styles.graphic}>
+          <Graphic study={study} />
+        </div>
+      )}
       {study.supportingStats?.length ? (
         <dl className={styles.supportingStats}>
           {study.supportingStats.map(stat => (

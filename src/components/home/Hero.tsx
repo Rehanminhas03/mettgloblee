@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Instrument_Serif, Knewave } from 'next/font/google';
 import { Reveal } from './Reveal';
+import { IdleMotion } from './IdleMotion.client';
 
 /** Brush display face for the hero word only. */
 const display = Knewave({ weight: '400', subsets: ['latin'], display: 'swap' });
@@ -85,7 +86,7 @@ function Orbit() {
 }
 
 /**
- * `.hero` — minimal light opening panel: one oversized brush word across the
+ * `.hero`, minimal light opening panel: one oversized brush word across the
  * top and the headline with its call to action. Fills the first screen below
  * the sticky header.
  */
@@ -102,9 +103,11 @@ export function Hero() {
         <div className="absolute inset-0 [background-image:radial-gradient(rgba(31,27,19,.16)_1px,transparent_1px)] [mask-image:linear-gradient(to_bottom,black,transparent_88%)] [background-size:26px_26px]" />
       </div>
 
-      <Orbit />
+      <IdleMotion>
+        <Orbit />
+      </IdleMotion>
 
-      {/* Display word — decorative; letters rise in, then lift on hover */}
+      {/* Display word, decorative; letters rise in, then lift on hover */}
       <div
         aria-hidden="true"
         className={`${display.className} px-pad text-ink short:text-[19vw] relative my-auto flex overflow-hidden py-[.08em] text-[22vw] leading-[.95] tracking-[-.01em] whitespace-nowrap select-none`}

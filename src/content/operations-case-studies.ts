@@ -44,7 +44,8 @@ const internalStudies: InternalStudy[] = [
     problemHeading: 'Different providers. Different claims processes.',
     problem:
       'Claims were spread across P2P, FedEx, UPS, USPS, eShipper and other couriers, alongside Amazon, Walmart and Wish. Each provider required different documentation, query formats and filing deadlines. Denied claims needed further investigation and a clear response within the relevant challenge window.',
-    approachHeading: 'Evidence prepared. Deadlines tracked. Decisions challenged.',
+    approachHeading:
+      'Evidence prepared. Deadlines tracked. Decisions challenged.',
     approach:
       'We checked tracking histories, reviewed courier reports and assembled the documents required for each case. We filed claims in the appropriate format, monitored query and follow-up windows, and responded to requests for further information. Where claims were denied, we reviewed the decision and challenged it with supporting evidence. The scope covered courier loss and damage, Amazon FBA reimbursement and other marketplace claims, including follow-through on outstanding Wish claims.',
     resultHeading: 'More than £50,000 recovered in one year',
@@ -114,7 +115,10 @@ const internalStudies: InternalStudy[] = [
           'Yes. The recovered amount included previously denied cases. We reviewed decisions, assembled supporting evidence and followed the relevant challenge process. Recovery depends on the evidence and the provider’s rules.',
       },
     ],
-    relatedSlugs: ['courier-3pl-management', 'multichannel-ecommerce-operations'],
+    relatedSlugs: [
+      'courier-3pl-management',
+      'multichannel-ecommerce-operations',
+    ],
     // Courier names are taken from the source docs for this engagement.
     // Do NOT add DHL, DPD or Parcelforce: they are not part of this case.
     couriers: [
@@ -625,7 +629,8 @@ const internalStudies: InternalStudy[] = [
     resultHeading: 'The first sale arrived in two days',
     result:
       'The shop received its first sale in two days, with 91 visits and one order recorded in the reported launch window. All 64 listings scored 90/100 or above; the ten-listing sample documented in the portfolio averaged 95.6/100. Six to seven listings also appeared on Etsy’s second results page during the project. All 64 listings were live within two days of opening the shop.',
-    closing: 'A practical launch, with the operating work carried out in-house.',
+    closing:
+      'A practical launch, with the operating work carried out in-house.',
     tags: [
       'In-house project',
       'Etsy ads',

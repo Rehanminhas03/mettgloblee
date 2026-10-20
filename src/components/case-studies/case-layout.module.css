@@ -1,0 +1,37 @@
+.casePage {
+  --case-gutter: max(24px, calc((100% - 1280px) / 2));
+}
+.casePage p {
+  overflow-wrap: anywhere;
+}
+.casePage [data-content-section] {
+  padding: 56px var(--case-gutter);
+}
+.casePage [data-section-heading] {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: 36px;
+  margin-bottom: 28px;
+}
+.casePage [data-section-heading] h2 {
+  max-width: 22ch;
+  font-size: clamp(28px, 2.5vw, 40px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+.casePage [data-section-heading] p {
+  margin: 0;
+  max-width: 68ch;
+  font-size: 16px;
+  line-height: 1.75;
+}
+@media (max-width: 900px) {
+  .casePage [data-section-heading] {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+  .casePage [data-content-section] {
+    padding-block: 40px;
+  }
+}

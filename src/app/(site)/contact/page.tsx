@@ -44,7 +44,7 @@ export default function ContactPage() {
             <small className="text-p-gold font-black tracking-[.15em]">
               PAKISTAN
             </small>
-            <h3 className="my-3 text-[26px]">Mett Global</h3>
+            <h2 className="my-3 text-[26px]">Mett Global</h2>
             <a
               href="https://wa.me/923046551553"
               target="_blank"
@@ -62,7 +62,7 @@ export default function ContactPage() {
             <small className="text-p-gold font-black tracking-[.15em]">
               U.S. BUSINESS DEVELOPMENT
             </small>
-            <h3 className="my-3 text-[26px]">Usman Rafiq</h3>
+            <h2 className="my-3 text-[26px]">Usman Rafiq</h2>
             <a
               href="https://wa.me/18328580716"
               target="_blank"
@@ -83,7 +83,7 @@ export default function ContactPage() {
             <small className="text-p-gold font-black tracking-[.15em]">
               EMAIL
             </small>
-            <h3 className="my-3 text-[26px]">Projects &amp; meetings</h3>
+            <h2 className="my-3 text-[26px]">Projects &amp; meetings</h2>
             <a href="mailto:contact@mettglobal.com" className={CARD_LINK}>
               contact@mettglobal.com
             </a>
@@ -96,7 +96,7 @@ export default function ContactPage() {
             <small className="text-p-gold font-black tracking-[.15em]">
               OFFICE
             </small>
-            <h3 className="my-3 text-[26px]">Islamabad</h3>
+            <h2 className="my-3 text-[26px]">Islamabad</h2>
             <p className="text-p-muted m-0 leading-[1.6]">{ADDRESS_LINE}</p>
             <a
               href={MAPS_URL}
@@ -104,7 +104,7 @@ export default function ContactPage() {
               rel="noopener"
               className={CARD_LINK}
             >
-              View on Google Maps ↗
+              Get directions
             </a>
           </article>
         </div>

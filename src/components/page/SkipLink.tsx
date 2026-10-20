@@ -1,4 +1,4 @@
-/** `.skip-link` from page.css / article.css — off-screen until focused. */
+/** `.skip-link` from page.css / article.css, off-screen until focused. */
 export function SkipLink() {
   return (
     <a

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PageShell } from '@/components/page/PageShell';
 import { PageHero } from '@/components/page/PageHero';
+import { CaseStudyArrow } from '@/components/case-studies/CaseStudyArrow';
 import { ContactBand } from '@/components/page/ContactBand';
 import { Btn, Section, SectionHead } from '@/components/page/ui';
 import { CaseHero, ChallengeGrid, Workflow } from '@/components/page/case';
@@ -88,7 +89,7 @@ function breadcrumb(project: Project) {
       {
         '@type': 'ListItem',
         position: 3,
-        name: project.brand,
+        name: project.title,
         item: `${SITE_URL}/portfolio/${project.slug}`,
       },
     ],
@@ -122,14 +123,14 @@ export default async function ProjectPage({
           href={link.href}
           variant={index === 0 ? 'dark' : 'plain'}
         >
-          {link.label} ↗
+          {link.label} <CaseStudyArrow />
         </Btn>
       ))}
     </span>
   ) : null;
 
   return (
-    <PageShell>
+    <PageShell caseStudy>
       <JsonLd data={breadcrumb(project)} />
       <JsonLd
         data={{
@@ -140,7 +141,7 @@ export default async function ProjectPage({
           description: project.seo.description,
           url: `${SITE_URL}/portfolio/${project.slug}`,
           inLanguage: 'en',
-          dateModified: '2026-10-06',
+          dateModified: project.modifiedAt ?? '2026-10-06',
           author: { '@id': `${SITE_URL}/#organization` },
           publisher: { '@id': `${SITE_URL}/#organization` },
         }}
@@ -149,10 +150,12 @@ export default async function ProjectPage({
       {project.caseStudy && project.kpis ? (
         <CaseHero
           tone="dark"
-          crumb={project.brand}
+          crumb={project.title}
           kicker={`${project.sector.toUpperCase()} · CASE STUDY`}
           titleTop={project.title}
+          titleAccent={project.accent}
           subtitle={project.subtitle}
+          visualSlug={project.slug}
           lede={project.lede}
           panelLabel={project.panel.label}
           panelValue={project.panel.value}
@@ -162,14 +165,11 @@ export default async function ProjectPage({
       ) : (
         <PageHero
           kicker={`PORTFOLIO / ${project.sector.toUpperCase()}`}
-          title={<>{project.title}</>}
+          title={project.title}
+          subtitle={project.subtitle}
+          visualSlug={project.slug}
           actions={links}
         >
-          {project.subtitle ? (
-            <strong className="mb-4 block max-w-[46ch] text-[clamp(18px,1.6vw,22px)] leading-[1.45]">
-              {project.subtitle}
-            </strong>
-          ) : null}
           {project.lede}
         </PageHero>
       )}
@@ -253,8 +253,9 @@ export default async function ProjectPage({
         <Section className="bg-[#f6f1e7]">
           <SectionHead heading="The admin portal dashboard">
             The owner’s view of the whole operation: today’s orders and booked
-            slots, bookings by area and partner, riders, customers and locations
-            — all read live from the same Firebase data the app writes to.
+            slots, bookings by area and partner, riders, customers and
+            locations, all read live from the same Firebase data the app writes
+            to.
           </SectionHead>
           <ScrollTilt>
             <AdminDashboardPreview />
@@ -267,7 +268,7 @@ export default async function ProjectPage({
           <SectionHead heading="Inside the portals">
             Each role gets its own portal. Below: the sales manager’s portal and
             the CEO portal that brings every showroom and department into a
-            single view — both built in the same interface.
+            single view, both built in the same interface.
           </SectionHead>
           <div className="grid gap-12">
             <figure className="m-0">
@@ -275,7 +276,7 @@ export default async function ProjectPage({
                 <ManagerPortalPreview />
               </ScrollTilt>
               <figcaption className="text-p-muted mt-4 text-xs leading-[1.65]">
-                Sales manager portal — illustrative layout with sample figures,
+                Sales manager portal, illustrative layout with sample figures,
                 not real dealership performance.
               </figcaption>
             </figure>
@@ -284,7 +285,7 @@ export default async function ProjectPage({
                 <CeoPortalPreview />
               </ScrollTilt>
               <figcaption className="text-p-muted mt-4 text-xs leading-[1.65]">
-                CEO portal — illustrative layout with sample figures. One view
+                CEO portal, illustrative layout with sample figures. One view
                 across every showroom and department.
               </figcaption>
             </figure>

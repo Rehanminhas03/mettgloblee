@@ -2,7 +2,7 @@
  * Site-wide header and footer link sets.
  *
  * Every page renders the same `SiteHeader` and `SiteFooter` from these lists.
- * Both carry real pages only — no homepage `#section` jumps — with legal links
+ * Both carry real pages only, no homepage `#section` jumps, with legal links
  * kept to the footer's bottom bar.
  */
 

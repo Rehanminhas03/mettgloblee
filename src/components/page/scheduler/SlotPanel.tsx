@@ -15,18 +15,20 @@ function SlotStage({
   dayLabel,
   hasDate,
   selectedTime,
+  pastHours,
   onPick,
   onContinue,
 }: {
   dayLabel: string;
   hasDate: boolean;
   selectedTime: string;
+  pastHours: number[];
   onPick: (hour: number) => void;
   onContinue: () => void;
 }) {
   return (
     <div>
-      <span className={KICKER}>SELECT A TIME</span>
+      <span className={`${KICKER} !text-[#e0bc68]`}>SELECT A TIME</span>
       <h3 className="mt-[7px] mb-0 text-[26px] tracking-[-.035em]">
         {dayLabel}
       </h3>
@@ -37,6 +39,7 @@ function SlotStage({
       </p>
 
       <div
+        role="group"
         aria-label="Preferred meeting times"
         className="max-b1120:grid-cols-4 max-b760:grid-cols-2 grid grid-cols-1 gap-[9px]"
       >
@@ -48,8 +51,9 @@ function SlotStage({
                 <button
                   key={hour}
                   type="button"
+                  disabled={pastHours.includes(hour)}
                   onClick={() => onPick(hour)}
-                  className={`hover:border-p-gold min-h-[46px] cursor-pointer rounded-xl border px-2 py-3 text-xs font-extrabold hover:bg-[#2a2316] hover:text-[#e0bc68] ${
+                  className={`hover:border-p-gold min-h-[46px] cursor-pointer rounded-xl border px-2 py-3 text-xs font-extrabold hover:bg-[#2a2316] hover:text-[#e0bc68] disabled:cursor-not-allowed disabled:opacity-35 ${
                     active
                       ? 'border-p-gold bg-[#2a2316] text-[#e0bc68]'
                       : 'border-[#3b3831] bg-[#171714] text-white'
@@ -61,6 +65,12 @@ function SlotStage({
             })
           : null}
       </div>
+
+      {hasDate && pastHours.length === PREFERRED_HOURS.length ? (
+        <p className="text-xs leading-relaxed text-[#c4bfb5]">
+          No preferred times remain today. Please choose another date.
+        </p>
+      ) : null}
 
       <button
         type="button"
@@ -184,20 +194,21 @@ function DetailsStage({
         Request this meeting
       </button>
       <p className="mt-3 mb-0 text-[10px] leading-[1.55] text-[#8d887f]">
-        This is a meeting request, not an automatic calendar confirmation.
-        Mett Global will confirm the final time and joining/location details by
+        This is a meeting request, not an automatic calendar confirmation. Mett
+        Global will confirm the final time and joining/location details by
         email.
       </p>
     </div>
   );
 }
 
-/** `.slot-panel` — the dark right rail, showing one stage at a time. */
+/** `.slot-panel`, the dark right rail, showing one stage at a time. */
 export function SlotPanel({
   showDetails,
   dayLabel,
   hasDate,
   selectedTime,
+  pastHours,
   onPick,
   onContinue,
   summary,
@@ -211,6 +222,7 @@ export function SlotPanel({
   dayLabel: string;
   hasDate: boolean;
   selectedTime: string;
+  pastHours: number[];
   onPick: (hour: number) => void;
   onContinue: () => void;
   /** Details stage */
@@ -235,6 +247,7 @@ export function SlotPanel({
           dayLabel={dayLabel}
           hasDate={hasDate}
           selectedTime={selectedTime}
+          pastHours={pastHours}
           onPick={onPick}
           onContinue={onContinue}
         />

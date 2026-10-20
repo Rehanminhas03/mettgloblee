@@ -1,9 +1,10 @@
-import { Fragment } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
+import { Fragment } from 'react';
 import { PageShell } from '@/components/page/PageShell';
 import { CaseStudyHero } from './CaseStudyHero';
 import { RelatedCaseStudies } from './RelatedCaseStudies';
+import { ClaimsScope } from './ClaimsScope';
 import type { CaseStudy } from './types';
 import styles from './case-studies.module.css';
 
@@ -20,7 +21,7 @@ export function CaseStudyPage({ study }: { study: CaseStudy }) {
   ];
 
   return (
-    <PageShell>
+    <PageShell caseStudy>
       <div className={styles.scope}>
         <CaseStudyHero study={study} />
 
@@ -31,16 +32,32 @@ export function CaseStudyPage({ study }: { study: CaseStudy }) {
 
           {beats.map((beat, index) => (
             <Fragment key={beat.label}>
-              <section className={styles.beat}>
+              <section className={styles.beat} key={beat.label}>
                 <p className={styles.eyebrow}>
                   <span aria-hidden="true">0{index + 1} </span>
                   {beat.label}
                 </p>
                 <h2>{beat.heading}</h2>
                 <p>{beat.body}</p>
+                {beat.label === 'Approach'
+                  ? study.extras?.map(extra => (
+                      <div
+                        className={styles.approachDetail}
+                        key={extra.heading}
+                      >
+                        <h3>{extra.heading}</h3>
+                        <p>{extra.body}</p>
+                      </div>
+                    ))
+                  : null}
               </section>
-              {beat.label === 'Approach' ? (
-                <ApproachExtras study={study} />
+              {beat.label === 'Approach' &&
+              study.scopeSections &&
+              study.couriers ? (
+                <ClaimsScope
+                  couriers={study.couriers}
+                  sections={study.scopeSections}
+                />
               ) : null}
               {beat.label === 'Result' ? (
                 <CatalogueImages study={study} />
@@ -79,41 +96,6 @@ export function CaseStudyPage({ study }: { study: CaseStudy }) {
         </article>
       </div>
     </PageShell>
-  );
-}
-
-/** Courier badges, scope sections and extra headed paragraphs that follow Approach. */
-function ApproachExtras({ study }: { study: CaseStudy }) {
-  return (
-    <>
-      {study.couriers?.length ? (
-        <section className={styles.handled} aria-label="Couriers">
-          <ul className={styles.chips}>
-            {study.couriers.map(name => (
-              <li key={name}>{name}</li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
-      {study.scopeSections?.map(section => (
-        <section className={styles.beat} key={section.id} id={section.id}>
-          <p className={styles.eyebrow}>{section.eyebrow}</p>
-          <h2>{section.title}</h2>
-          <p>{section.intro}</p>
-          <ul className={styles.chips}>
-            {section.points.map(point => (
-              <li key={point}>{point}</li>
-            ))}
-          </ul>
-        </section>
-      ))}
-      {study.extras?.map(extra => (
-        <section className={styles.beat} key={extra.heading}>
-          <h2>{extra.heading}</h2>
-          <p>{extra.body}</p>
-        </section>
-      ))}
-    </>
   );
 }
 

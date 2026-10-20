@@ -53,7 +53,7 @@ export default function EcommerceOperationsGuide() {
       dek={
         'Traffic creates opportunity. Operations determine whether that opportunity becomes repeatable revenue, healthy margins and a customer willing to return.'
       }
-      meta={'METT GLOBAL FIELD GUIDE · ECOMMERCE OPERATIONS · 9 MIN READ'}
+      meta={'METT GLOBAL FIELD GUIDE · ECOMMERCE OPERATIONS · 2 MIN READ'}
       graphic={
         <ChipGraphic steps={['CLICK', 'STOCK', 'FULFILL', 'RETURN', 'LEARN']} />
       }

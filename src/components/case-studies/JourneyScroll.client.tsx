@@ -77,7 +77,7 @@ export function JourneyScroll({
       preference.removeEventListener('change', onPreferenceChange);
       settle();
     };
-  }, []);
+  }, [ref]);
 
   return (
     <ol ref={ref} className={className}>

@@ -46,7 +46,7 @@ export default function LeadGenerationSystemGuide() {
       dek={
         'More outreach volume rarely fixes weak targeting, unclear qualification and inconsistent follow-up. Build the operating system before scaling the headcount.'
       }
-      meta={'METT GLOBAL FIELD GUIDE · LEAD GENERATION & SALES · 9 MIN READ'}
+      meta={'METT GLOBAL FIELD GUIDE · LEAD GENERATION & SALES · 2 MIN READ'}
       graphic={
         <ChipGraphic
           steps={['ICP', 'SIGNAL', 'QUALIFY', 'OUTREACH', 'FOLLOW-UP']}

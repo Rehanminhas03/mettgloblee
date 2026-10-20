@@ -1,5 +1,6 @@
 import { PageShell } from './PageShell';
 import { PageHero, HeroAccent } from './PageHero';
+import { ServiceGuidance } from './ServiceGuidance';
 import { ServiceLayout } from './ServiceLayout';
 import { ContactBand } from './ContactBand';
 import { JsonLd } from '@/components/JsonLd';
@@ -42,6 +43,7 @@ export function ServicePage({
       />
 
       {extra}
+      <ServiceGuidance path={service.href} />
 
       <ContactBand
         heading={service.band.heading}

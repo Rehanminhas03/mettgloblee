@@ -22,20 +22,20 @@ type Group = {
 
 const GROUPS: Group[] = [
   {
-    region: 'local',
-    label: 'LOCAL · PAKISTAN',
-    question: 'Which Pakistani brands do we work with?',
-    hint: 'Some of the names behind platforms and the industry at home.',
-    href: '/portfolio#local',
-    tone: 'dark',
-  },
-  {
     region: 'international',
-    label: 'INTERNATIONAL',
+    label: 'INTERNATIONAL CASE STUDIES',
     question: 'Which international businesses trust us?',
     hint: 'Software, websites and growth for companies abroad.',
     href: '/portfolio#international',
     tone: 'cream',
+  },
+  {
+    region: 'local',
+    label: 'LOCAL CASE STUDIES',
+    question: 'Which Pakistani brands do we work with?',
+    hint: 'Some of the names behind platforms and the industry at home.',
+    href: '/portfolio#local',
+    tone: 'dark',
   },
 ];
 
@@ -43,7 +43,7 @@ function ClientsCard({ group, count }: { group: Group; count: number }) {
   const { tone } = group;
   return (
     <Reveal className="h-full">
-      <ToneCard tone={tone} href={group.href} className="min-h-[360px]">
+      <ToneCard tone={tone} href={group.href} className="min-h-[280px]">
         <CardTop
           tone={tone}
           label={group.label}
@@ -62,22 +62,27 @@ function ClientsCard({ group, count }: { group: Group; count: number }) {
 }
 
 /**
- * `.partners` — two cards, one for local clients and one for international,
+ * `.partners`, two cards, one for local clients and one for international,
  * that hold the names back on purpose and lead into the matching group on the
  * portfolio page. The counts come from `lib/partners`.
  */
 export function Partners() {
   const count = (region: Group['region']) =>
-    PARTNERS.filter(partner => partner.region === region).length;
+    region === 'international'
+      ? 10
+      : PARTNERS.filter(partner => partner.region === region).length;
 
   return (
     <section
       id="partners"
-      className="min-h-view px-pad max-b900:px-7 max-b900:py-[70px] max-b560:px-6 max-b560:py-[60px] short:py-8 flex flex-col justify-center bg-[#070706] bg-[image:radial-gradient(circle_at_10%_15%,rgba(184,137,45,.09),transparent_24%),radial-gradient(circle_at_90%_75%,rgba(224,188,104,.055),transparent_28%)] py-14 text-white"
+      data-natural
+      className="px-pad max-b900:px-7 max-b560:px-6 short:py-10 flex scroll-mt-24 flex-col bg-[#070706] bg-[image:radial-gradient(circle_at_10%_15%,rgba(184,137,45,.09),transparent_24%),radial-gradient(circle_at_90%_75%,rgba(224,188,104,.055),transparent_28%)] py-12 text-white"
     >
       <SectionHeader
         kicker="02 / Clients & partners"
         dark
+        equalColumns
+        centerCopy
         heading={
           <>
             Trusted by brands
@@ -87,7 +92,7 @@ export function Partners() {
         }
       >
         Organizations we have delivered growth, technology and operations work
-        for — locally in Pakistan and for international businesses.
+        for, locally in Pakistan and for international businesses.
       </SectionHeader>
 
       <div className="max-b900:grid-cols-1 grid grid-cols-2 gap-8">
@@ -99,11 +104,6 @@ export function Partners() {
           />
         ))}
       </div>
-
-      <p className="short:mt-4 mt-7 mb-0 text-[11px] text-[#77736b]">
-        Client and partner references describe service relationships and are not
-        claims of endorsement.
-      </p>
     </section>
   );
 }

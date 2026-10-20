@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { submitForm } from '@/lib/submitForm';
 import { track } from '@/lib/track';
+import { FormWithoutJavaScript } from './FormWithoutJavaScript';
 
 /**
  * A form that submits in the background and swaps itself for a thank-you
@@ -38,7 +39,7 @@ export function AjaxForm({
         className={`rounded-2xl border p-8 ${
           dark
             ? 'border-[rgba(224,188,104,.3)] bg-white/[.04] text-white'
-            : 'border-p-line bg-white text-p-ink'
+            : 'border-p-line text-p-ink bg-white'
         }`}
       >
         <span
@@ -50,7 +51,7 @@ export function AjaxForm({
           ✓
         </span>
         <strong className="block text-[22px] tracking-[-.02em]">
-          Thank you — your enquiry has been sent.
+          Thank you, your enquiry has been sent.
         </strong>
         <p
           className={`mt-2 mb-0 text-sm leading-[1.65] ${
@@ -64,27 +65,35 @@ export function AjaxForm({
   }
 
   return (
-    <form onSubmit={onSubmit} className={className}>
-      <fieldset
-        disabled={state === 'sending'}
-        className="contents border-0 p-0 m-0"
+    <>
+      <FormWithoutJavaScript />
+      <form
+        method="post"
+        data-js-form
+        onSubmit={onSubmit}
+        className={className}
       >
-        {children}
-      </fieldset>
-      {state === 'error' ? (
-        <p
-          role="alert"
-          className={`col-span-full m-0 text-sm ${
-            tone === 'dark' ? 'text-[#f0b4a8]' : 'text-[#b3261e]'
-          }`}
+        <fieldset
+          disabled={state === 'sending'}
+          className="m-0 contents border-0 p-0"
         >
-          Sorry, that did not send. Please try again, or email us at{' '}
-          <a href="mailto:contact@mettglobal.com" className="underline">
-            contact@mettglobal.com
-          </a>
-          .
-        </p>
-      ) : null}
-    </form>
+          {children}
+        </fieldset>
+        {state === 'error' ? (
+          <p
+            role="alert"
+            className={`col-span-full m-0 text-sm ${
+              tone === 'dark' ? 'text-[#f0b4a8]' : 'text-[#b3261e]'
+            }`}
+          >
+            Sorry, that did not send. Please try again, or email us at{' '}
+            <a href="mailto:contact@mettglobal.com" className="underline">
+              contact@mettglobal.com
+            </a>
+            .
+          </p>
+        ) : null}
+      </form>
+    </>
   );
 }

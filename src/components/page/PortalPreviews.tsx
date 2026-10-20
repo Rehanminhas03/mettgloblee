@@ -1,6 +1,6 @@
 /**
  * Illustrative previews of two portals in the Ittehad Automotive Dealerships
- * ERP — the sales manager's and the CEO's — drawn in one shared glass UI so
+ * ERP, the sales manager's and the CEO's, drawn in one shared glass UI so
  * they read as the same product.
  *
  * Every figure is sample data used to show the layout and what each portal
@@ -21,7 +21,8 @@ const ICON_PATHS = {
   users:
     'M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM3 19c0-3 2.7-5 6-5s6 2 6 5M17 11a2.5 2.5 0 1 0 0-5M18 14c2 .4 3 2 3 4',
   document: 'M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5',
-  truck: 'M3 6h11v10H3zM14 9h4l3 3v4h-7M7 19a1.5 1.5 0 1 0 0-.01M17 19a1.5 1.5 0 1 0 0-.01',
+  truck:
+    'M3 6h11v10H3zM14 9h4l3 3v4h-7M7 19a1.5 1.5 0 1 0 0-.01M17 19a1.5 1.5 0 1 0 0-.01',
 } as const;
 
 const TILE_TONES = {
@@ -125,8 +126,17 @@ function Frame({
 
       {/* Main */}
       <div className="min-w-0">
-        <div className={`${GLASS} mb-4 flex items-center justify-between px-4 py-2.5`}>
-          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+        <div
+          className={`${GLASS} mb-4 flex items-center justify-between px-4 py-2.5`}
+        >
+          <svg
+            viewBox="0 0 24 24"
+            className="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          >
             <path d="M4 7h16M4 12h16M4 17h16" />
           </svg>
           <div className="flex items-center gap-3 text-[12px]">
@@ -134,7 +144,14 @@ function Frame({
               <span className="absolute -top-1 -right-1 grid h-4 min-w-4 place-items-center rounded-full bg-[#e5252f] px-1 text-[9px] font-bold text-white">
                 9
               </span>
-              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+              >
                 <path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0" />
               </svg>
             </span>
@@ -160,7 +177,9 @@ function Frame({
             <span
               key={range}
               className={`rounded-[10px] px-3 py-1.5 ${
-                range === '14 days' ? 'bg-white text-[#2d4a9a] shadow-sm' : 'text-[#4a5a85]'
+                range === '14 days'
+                  ? 'bg-white text-[#2d4a9a] shadow-sm'
+                  : 'text-[#4a5a85]'
               }`}
             >
               {range}
@@ -186,7 +205,10 @@ function Frame({
 
         <div className="max-b620:grid-cols-2 mb-4 grid grid-cols-4 gap-3">
           {tiles.map(tile => (
-            <div key={tile.label} className={`${GLASS} flex items-center gap-3 p-3.5`}>
+            <div
+              key={tile.label}
+              className={`${GLASS} flex items-center gap-3 p-3.5`}
+            >
               <span
                 className={`grid h-11 w-11 flex-none place-items-center rounded-xl bg-gradient-to-br text-white shadow-md ${TILE_TONES[tile.tone]}`}
               >
@@ -199,7 +221,9 @@ function Frame({
                 <strong className="block text-[24px] leading-[1.1] tracking-[-.02em]">
                   {tile.value}
                 </strong>
-                <span className="block text-[10px] text-[#5d6b92]">{tile.note}</span>
+                <span className="block text-[10px] text-[#5d6b92]">
+                  {tile.note}
+                </span>
               </span>
             </div>
           ))}
@@ -314,10 +338,34 @@ export function ManagerPortalPreview() {
       sections={MANAGER_NAV}
       action={{ badge: '3', text: 'Customer appointments today' }}
       tiles={[
-        { label: 'Leads today', value: '12', note: 'Logged today', icon: 'calendar', tone: 'blue' },
-        { label: 'Open leads', value: '38', note: 'of 124 total leads', icon: 'users', tone: 'green' },
-        { label: 'Awaiting your approval', value: '5', note: 'Draft or submitted', icon: 'document', tone: 'orange' },
-        { label: 'Delivered', value: '17', note: 'last 14 days', icon: 'truck', tone: 'purple' },
+        {
+          label: 'Leads today',
+          value: '12',
+          note: 'Logged today',
+          icon: 'calendar',
+          tone: 'blue',
+        },
+        {
+          label: 'Open leads',
+          value: '38',
+          note: 'of 124 total leads',
+          icon: 'users',
+          tone: 'green',
+        },
+        {
+          label: 'Awaiting your approval',
+          value: '5',
+          note: 'Draft or submitted',
+          icon: 'document',
+          tone: 'orange',
+        },
+        {
+          label: 'Delivered',
+          value: '17',
+          note: 'last 14 days',
+          icon: 'truck',
+          tone: 'purple',
+        },
       ]}
     >
       <div className="max-b900:grid-cols-1 grid grid-cols-[1.2fr_.8fr] gap-3">
@@ -348,10 +396,34 @@ export function CeoPortalPreview() {
       sections={CEO_NAV}
       action={{ badge: '8', text: 'Approvals waiting across showrooms' }}
       tiles={[
-        { label: 'Leads this month', value: '412', note: 'All showrooms', icon: 'calendar', tone: 'blue' },
-        { label: 'Bookings', value: '96', note: 'All showrooms', icon: 'users', tone: 'green' },
-        { label: 'Pending approvals', value: '8', note: 'Across the group', icon: 'document', tone: 'orange' },
-        { label: 'Deliveries', value: '71', note: 'last 14 days', icon: 'truck', tone: 'purple' },
+        {
+          label: 'Leads this month',
+          value: '412',
+          note: 'All showrooms',
+          icon: 'calendar',
+          tone: 'blue',
+        },
+        {
+          label: 'Bookings',
+          value: '96',
+          note: 'All showrooms',
+          icon: 'users',
+          tone: 'green',
+        },
+        {
+          label: 'Pending approvals',
+          value: '8',
+          note: 'Across the group',
+          icon: 'document',
+          tone: 'orange',
+        },
+        {
+          label: 'Deliveries',
+          value: '71',
+          note: 'last 14 days',
+          icon: 'truck',
+          tone: 'purple',
+        },
       ]}
     >
       <div className="max-b900:grid-cols-1 grid grid-cols-[1.2fr_.8fr] gap-3">

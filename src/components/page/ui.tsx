@@ -52,7 +52,7 @@ export function Btn({
   );
 }
 
-/** `.section` — the standard content band. `dark` maps to `.section.dark`. */
+/** `.section`, the standard content band. `dark` maps to `.section.dark`. */
 export function Section({
   dark,
   className = '',
@@ -64,8 +64,9 @@ export function Section({
 }) {
   return (
     <section
-      className={`max-b620:px-6 px-[8vw] py-[90px] ${
-        dark ? 'bg-p-dark text-white' : ''
+      data-content-section
+      className={`max-b620:px-6 max-b620:py-10 px-[8vw] py-16 ${
+        dark ? 'dark-surface bg-p-dark text-white' : ''
       } ${className}`}
     >
       {children}
@@ -73,7 +74,7 @@ export function Section({
   );
 }
 
-/** `.section-head` — headline plus supporting paragraph. */
+/** `.section-head`, headline plus supporting paragraph. */
 export function SectionHead({
   heading,
   dark,
@@ -84,12 +85,15 @@ export function SectionHead({
   children: React.ReactNode;
 }) {
   return (
-    <div className="max-b900:grid-cols-1 mb-[45px] grid grid-cols-[1fr_.7fr] items-end gap-[60px]">
+    <div
+      data-section-heading
+      className="max-b900:grid-cols-1 max-b900:gap-4 mb-8 grid grid-cols-[1fr_.85fr] items-start gap-9"
+    >
       <h2 className="m-0 text-[clamp(34px,4.2vw,58px)] leading-[1.05] tracking-[-.04em]">
         {heading}
       </h2>
       <p
-        className={`my-[1em] leading-[1.75] ${
+        className={`m-0 max-w-[68ch] leading-[1.75] ${
           dark ? 'text-[#aaa69d]' : 'text-p-muted'
         }`}
       >
@@ -99,7 +103,7 @@ export function SectionHead({
   );
 }
 
-/** `.grid` — the card grid; three columns unless four cards need one row. */
+/** `.grid`, the card grid; three columns unless four cards need one row. */
 export function CardGrid({
   children,
   cols = 3,
@@ -116,7 +120,7 @@ export function CardGrid({
   );
 }
 
-/** `.card` — bordered card with a pinned link at the bottom. */
+/** `.card`, bordered card with a pinned link at the bottom. */
 export function Card({
   label,
   title,
@@ -137,7 +141,7 @@ export function Card({
     <article
       className={`flex min-h-[260px] flex-col rounded-3xl p-7 ${
         dark
-          ? 'border border-[#302d27] bg-[#11110f]'
+          ? 'dark-surface border border-[#302d27] bg-[#11110f]'
           : 'border-p-line border bg-white/[.62]'
       }`}
     >
@@ -173,7 +177,7 @@ export function Card({
 }
 
 /**
- * `.process` — the numbered four-step band. `dark` applies the
+ * `.process`, the numbered four-step band. `dark` applies the
  * `.case-method .process article` treatment used on the case-study index.
  */
 export function ProcessGrid({
@@ -189,7 +193,9 @@ export function ProcessGrid({
         <article
           key={step.num}
           className={`rounded-[22px] border p-[26px] ${
-            dark ? 'border-[#37332b] bg-[#181816]' : 'border-p-line'
+            dark
+              ? 'dark-surface border-[#37332b] bg-[#181816]'
+              : 'border-p-line'
           }`}
         >
           <b className="text-p-gold">{step.num}</b>

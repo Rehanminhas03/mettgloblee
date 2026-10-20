@@ -2,30 +2,37 @@
 
 import { useEffect, useRef } from 'react';
 
-/**
- * Plays an element's entrance once, when it scrolls into view. Server HTML is
- * the complete final state; after hydration the element is marked "pending"
- * (graphics reset), then "true" when visible so CSS transitions draw them in.
- * With reduced motion nothing is reset. CSS does the animation, not JS.
- */
+/** The static final graphic stays visible if JavaScript or observation fails. */
 export function useInViewOnce<T extends HTMLElement>() {
   const ref = useRef<T>(null);
   useEffect(() => {
-    const el = ref.current;
-    if (!el || !window.matchMedia) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    if (typeof IntersectionObserver === 'undefined') return;
-    el.dataset.inview = 'pending';
-    const io = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry?.isIntersecting) return;
-        el.dataset.inview = 'true';
-        io.disconnect();
+    const element = ref.current;
+    if (!element) return;
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (preference.matches || !('IntersectionObserver' in window)) {
+      element.dataset.inview = 'true';
+      return;
+    }
+    element.dataset.inview = 'pending';
+    const observer = new IntersectionObserver(
+      entries => {
+        if (!entries.some(entry => entry.isIntersecting)) return;
+        element.dataset.inview = 'true';
+        observer.disconnect();
       },
       { rootMargin: '0px 0px -10% 0px' },
     );
-    io.observe(el);
-    return () => io.disconnect();
+    const settle = () => {
+      if (!preference.matches) return;
+      element.dataset.inview = 'true';
+      observer.disconnect();
+    };
+    preference.addEventListener('change', settle);
+    observer.observe(element);
+    return () => {
+      preference.removeEventListener('change', settle);
+      observer.disconnect();
+    };
   }, []);
   return ref;
 }

@@ -53,7 +53,7 @@ export function Quote({ children }: { children: React.ReactNode }) {
 }
 
 /**
- * `.source-box` — the primary-source citation panel. Its body varies per
+ * `.source-box`, the primary-source citation panel. Its body varies per
  * article (one link, two links, or no link at all), so it takes children.
  */
 export function SourceBox({

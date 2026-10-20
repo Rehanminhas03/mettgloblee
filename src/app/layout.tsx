@@ -5,6 +5,8 @@ import { Analytics } from '@/components/Analytics';
 import { ConsentBanner } from '@/components/ConsentBanner';
 import { FloatingContact } from '@/components/home/FloatingContact';
 import { SITE_URL } from '@/lib/site';
+import { JsonLd } from '@/components/JsonLd';
+import { WEBSITE_JSON_LD, ORGANIZATION_JSON_LD } from '@/lib/site-schema';
 
 /* Real Inter, self-hosted by next/font; `font-sans` falls back to Arial. */
 const inter = Inter({
@@ -22,8 +24,8 @@ export const metadata: Metadata = {
   authors: [{ name: 'Mett Global' }],
   manifest: '/site.webmanifest',
   robots: {
-    index: true,
-    follow: true,
+    index: process.env.VERCEL_ENV !== 'preview',
+    follow: process.env.VERCEL_ENV !== 'preview',
     'max-image-preview': 'large',
     'max-snippet': -1,
     'max-video-preview': -1,
@@ -53,14 +55,23 @@ export const viewport: Viewport = {
  * first visit, remember that it is about to play.
  */
 const INTRO_SESSION_SCRIPT = `try{if(sessionStorage.getItem('mg-intro')){document.documentElement.dataset.intro='seen'}else if(location.pathname==='/'){sessionStorage.setItem('mg-intro','1')}}catch(e){}`;
+const MOTION_PREFERENCE_SCRIPT = `try{if(sessionStorage.getItem('mett_motion_paused')==='true')document.documentElement.dataset.motionPaused='true'}catch(e){}`;
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
+    <html
+      data-scroll-behavior="smooth"
+      lang="en"
+      className={inter.variable}
+      suppressHydrationWarning
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: INTRO_SESSION_SCRIPT }} />
+        <script
+          dangerouslySetInnerHTML={{ __html: MOTION_PREFERENCE_SCRIPT }}
+        />
       </head>
       {/*
         The background follows the surface the page declares, so rubber-band
@@ -68,6 +79,12 @@ export default function RootLayout({
         stylesheet set its own `body` colour.
       */}
       <body className="bg-paper has-[[data-surface=page]]:bg-p-paper has-[[data-surface=article]]:bg-a-ivory font-sans">
+        <JsonLd
+          data={{
+            '@context': 'https://schema.org',
+            '@graph': [WEBSITE_JSON_LD, ORGANIZATION_JSON_LD],
+          }}
+        />
         <Analytics />
         {children}
         <FloatingContact />

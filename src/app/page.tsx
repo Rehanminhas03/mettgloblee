@@ -9,79 +9,10 @@ import { Services } from '@/components/home/Services';
 import { SiteFooter } from '@/components/site/SiteFooter';
 import { SiteHeader } from '@/components/site/SiteHeader';
 import { pageMetadata } from '@/lib/seo';
-import { SERVICES } from '@/lib/services';
 import { FAQS } from '@/lib/faqs';
-import { LEADERSHIP } from '@/lib/leadership';
-import { SITE_URL, SOCIAL_PROFILES } from '@/lib/site';
+import { SITE_URL } from '@/lib/site';
 
 export const metadata = pageMetadata('/');
-
-/* Structured data carried over verbatim from index.html. */
-const WEBSITE_JSON_LD = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Mett Global',
-  alternateName: 'MettGlobal',
-  url: `${SITE_URL}/`,
-};
-
-const ORGANIZATION_JSON_LD = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': `${SITE_URL}/#organization`,
-  name: 'Mett Global',
-  alternateName: 'MettGlobal',
-  url: `${SITE_URL}/`,
-  logo: `${SITE_URL}/logo-512.png`,
-  description:
-    'Mett Global was founded in 2025 and is based in Islamabad, Pakistan. It builds, grows and automates businesses through digital marketing and growth, web and software development, AI automation and content, and e-commerce and supply chain.',
-  foundingDate: '2025',
-  email: 'contact@mettglobal.com',
-  telephone: '+92-304-6551553',
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'customer service',
-    email: 'contact@mettglobal.com',
-    telephone: '+92-304-6551553',
-    availableLanguage: ['English', 'Urdu'],
-  },
-  slogan: 'The Art of Digital Excellence',
-  areaServed: [
-    { '@type': 'Country', name: 'Pakistan' },
-    { '@type': 'Place', name: 'Worldwide' },
-  ],
-  knowsAbout: [
-    'Digital marketing',
-    'Performance marketing',
-    'Web development',
-    'Software development',
-    'Custom CRM and ERP systems',
-    'AI automation',
-    'E-commerce operations',
-    'Supply chain management',
-  ],
-  founder: {
-    '@type': 'Person',
-    name: LEADERSHIP[0].name,
-    jobTitle: LEADERSHIP[0].role,
-  },
-  employee: LEADERSHIP.map(person => ({
-    '@type': 'Person',
-    name: person.name,
-    jobTitle: person.role,
-    email: person.email,
-    worksFor: { '@id': `${SITE_URL}/#organization` },
-  })),
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Plot # 195, Street 1, I-10/3',
-    addressLocality: 'Islamabad',
-    postalCode: '44000',
-    addressCountry: 'PK',
-  },
-  hasMap: 'https://maps.app.goo.gl/9PrdtKZQhU1X93em7',
-  sameAs: SOCIAL_PROFILES.map(profile => profile.href),
-};
 
 const FAQ_JSON_LD = {
   '@context': 'https://schema.org',
@@ -96,6 +27,9 @@ const FAQ_JSON_LD = {
 const PROFESSIONAL_SERVICE_JSON_LD = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  '@id': `${SITE_URL}/#business`,
+  parentOrganization: { '@id': `${SITE_URL}/#organization` },
+  image: `${SITE_URL}/logo-512.png`,
   name: 'Mett Global',
   url: `${SITE_URL}/`,
   telephone: '+92-304-6551553',
@@ -107,7 +41,6 @@ const PROFESSIONAL_SERVICE_JSON_LD = {
     postalCode: '44000',
     addressCountry: 'PK',
   },
-  serviceType: SERVICES.map(service => service.title),
   areaServed: [
     { '@type': 'Country', name: 'Pakistan' },
     { '@type': 'Place', name: 'Worldwide' },
@@ -117,12 +50,7 @@ const PROFESSIONAL_SERVICE_JSON_LD = {
 export default function HomePage() {
   return (
     <>
-      {[
-        WEBSITE_JSON_LD,
-        ORGANIZATION_JSON_LD,
-        PROFESSIONAL_SERVICE_JSON_LD,
-        FAQ_JSON_LD,
-      ].map((schema, index) => (
+      {[PROFESSIONAL_SERVICE_JSON_LD, FAQ_JSON_LD].map((schema, index) => (
         <script
           key={index}
           type="application/ld+json"

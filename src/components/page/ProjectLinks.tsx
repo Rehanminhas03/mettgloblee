@@ -1,4 +1,5 @@
 import { Btn, Section } from './ui';
+import { CaseStudyArrow } from '@/components/case-studies/CaseStudyArrow';
 
 /** A row of outbound buttons (website, Instagram, Facebook…) under a hero. */
 export function ProjectLinks({
@@ -15,7 +16,7 @@ export function ProjectLinks({
             href={link.href}
             variant={index === 0 ? 'dark' : 'plain'}
           >
-            {link.label} ↗
+            {link.label} <CaseStudyArrow />
           </Btn>
         ))}
       </div>

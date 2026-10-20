@@ -3,13 +3,17 @@
 import Link from 'next/link';
 import { useCallback, useEffect, useState } from 'react';
 import { useHydrated } from '@/hooks/useHydrated';
-import { CONSENT_STORAGE_KEY, COOKIE_SETTINGS_EVENT } from '@/lib/site';
+import {
+  CONSENT_STORAGE_KEY,
+  COOKIE_SETTINGS_EVENT,
+  GA_MEASUREMENT_ID,
+} from '@/lib/site';
 
 function storedChoice() {
   try {
     return localStorage.getItem(CONSENT_STORAGE_KEY);
   } catch {
-    /* storage blocked — treat as undecided and show the banner */
+    /* storage blocked, treat as undecided and show the banner */
     return null;
   }
 }
@@ -22,11 +26,15 @@ const CONSENT_SIGNALS = [
 ] as const;
 
 function grantConsent() {
+  window.mettAnalyticsConsentEnabled = true;
+  Object.assign(window, { [`ga-disable-${GA_MEASUREMENT_ID}`]: false });
   window.gtag?.('consent', 'update', { analytics_storage: 'granted' });
 }
 
 /** Denies every consent signal and removes the Google Analytics cookies. */
 function withdrawConsent() {
+  window.mettAnalyticsConsentEnabled = false;
+  Object.assign(window, { [`ga-disable-${GA_MEASUREMENT_ID}`]: true });
   window.gtag?.(
     'consent',
     'update',
@@ -67,13 +75,24 @@ export function ConsentBanner() {
   /* Publish the banner's height so the floating contact buttons clear it. */
   const measure = useCallback((node: HTMLDivElement | null) => {
     if (!node) {
+      delete document.documentElement.dataset.cookieOpen;
       document.body.style.removeProperty('--consent-height');
       return;
     }
-    document.body.style.setProperty(
-      '--consent-height',
-      `${node.getBoundingClientRect().height}px`,
-    );
+    document.documentElement.dataset.cookieOpen = '';
+    const updateHeight = () =>
+      document.body.style.setProperty(
+        '--consent-height',
+        `${node.getBoundingClientRect().height}px`,
+      );
+    updateHeight();
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(node);
+    return () => {
+      observer.disconnect();
+      delete document.documentElement.dataset.cookieOpen;
+      document.body.style.removeProperty('--consent-height');
+    };
   }, []);
 
   if (!hydrated || !(reopened || (!decided && !storedChoice()))) return null;
@@ -82,7 +101,7 @@ export function ConsentBanner() {
     try {
       localStorage.setItem(CONSENT_STORAGE_KEY, choice);
     } catch {
-      /* storage blocked — the choice simply is not remembered */
+      /* storage blocked, the choice simply is not remembered */
     }
     if (choice === 'accepted') {
       /* Already loaded earlier this session (accepted, declined, accepted

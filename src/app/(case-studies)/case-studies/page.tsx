@@ -45,7 +45,7 @@ export default function CaseStudiesPage() {
       <JsonLd data={pageJsonLd('/case-studies', 'CollectionPage')} />
 
       {/* .hero.case-index-hero */}
-      <section className="max-b620:px-6 bg-p-paper max-b620:pt-14 max-b620:pb-12 max-w-[1320px] bg-[image:radial-gradient(circle_at_82%_18%,rgba(184,137,45,.10),transparent_22%)] px-[8vw] pt-20 pb-16">
+      <section className="max-b620:px-6 bg-p-paper max-b620:pt-10 max-b620:pb-8 max-w-[1320px] bg-[image:radial-gradient(circle_at_82%_18%,rgba(184,137,45,.10),transparent_22%)] px-[8vw] pt-16 pb-10">
         <span className="text-p-gold text-[10px] font-black tracking-[.2em]">
           CASE STUDIES / SELECTED WORK
         </span>
@@ -63,6 +63,9 @@ export default function CaseStudiesPage() {
       </section>
 
       <Section className="bg-[#f6f1e7]">
+        <h2 className="mb-10 text-[clamp(30px,4vw,48px)] tracking-[-.04em]">
+          Work and outcomes
+        </h2>
         <WorkCardGrid items={ALL_STUDIES} />
       </Section>
 

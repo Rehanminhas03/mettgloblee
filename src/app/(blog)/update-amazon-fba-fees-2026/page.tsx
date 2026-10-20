@@ -30,6 +30,20 @@ const FACTS = [
 ];
 
 const BLOCKS: Block[] = [
+  { t: 'h2', text: 'Check the current seasonal schedule' },
+  {
+    t: 'p',
+    text: 'The eight-cent average describes the annual announcement. Amazon also lists separate non-peak and peak rates, with the 2026 peak period beginning on 15 October. Check the applicable rate for each product and shipment date before using a January estimate for a holiday forecast.',
+  },
+  {
+    t: 'source',
+    label: 'CURRENT FEE SCHEDULE',
+    body: (
+      <SourceLink href="https://sellercentral.amazon.com/help/hub/reference/external/GMUTB89XM7AATPR3?language=en_us">
+        Amazon Seller Central: current FBA fulfilment fees and seasonal rates
+      </SourceLink>
+    ),
+  },
   { t: 'h2', text: 'Recalculate at SKU level' },
   {
     t: 'p',
@@ -65,7 +79,7 @@ const BLOCKS: Block[] = [
           }
         >
           {
-            'Amazon Seller Central — 2026 Updates to US Referral and Fulfillment by Amazon Fees'
+            'Amazon Seller Central, 2026 Updates to US Referral and Fulfillment by Amazon Fees'
           }
         </SourceLink>
         <SourceNote>
@@ -89,7 +103,7 @@ export default function AmazonFbaFees2026Brief() {
         'Amazon’s published 2026 update raises US FBA fees by an average of $0.08 per unit sold, with most changes effective January 15, 2026. The useful question is not whether eight cents sounds large; it is which SKUs are already close to an unacceptable contribution margin.'
       }
       meta={
-        'CURRENT BRIEF · SOURCE CHECKED 17 SEP 2026 · AMAZON SELLER CENTRAL'
+        'CURRENT BRIEF · SOURCE CHECKED 20 OCT 2026 · AMAZON SELLER CENTRAL'
       }
       graphic={<PolicyGraphic facts={FACTS} />}
       endHeading={'Need your marketplace economics reviewed?'}
