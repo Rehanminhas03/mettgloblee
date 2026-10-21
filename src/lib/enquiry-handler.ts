@@ -102,7 +102,7 @@ export async function handleEnquiry(
     const start = Date.parse(fields.preferred_start || '');
     if (
       !/^\d{4}-\d{2}-\d{2}$/.test(fields.preferred_date || '') ||
-      !/^(10|11|12|14|15|16|17|18):00$/.test(fields.preferred_time || '') ||
+      !/^([01]\d|2[0-3]):00$/.test(fields.preferred_time || '') ||
       !Number.isFinite(start) ||
       start <= Date.now() ||
       start > Date.now() + 61 * 86400000 ||
@@ -116,6 +116,16 @@ export async function handleEnquiry(
   if (input._honey) return reply('accepted', requestId);
   const payload = {
     ...fields,
+    ...(meeting
+      ? {
+          office_time:
+            new Intl.DateTimeFormat('en-GB', {
+              timeZone: 'Asia/Karachi',
+              dateStyle: 'full',
+              timeStyle: 'short',
+            }).format(new Date(fields.preferred_start)) + ' (Asia/Karachi)',
+        }
+      : {}),
     request_id: requestId,
     _subject: meeting
       ? 'New Mett Global meeting request'

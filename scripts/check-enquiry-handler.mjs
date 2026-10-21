@@ -206,3 +206,31 @@ test('local/proxy hostname normalization still accepts the matching public Host'
   );
   assert.equal((await r.json()).outcome, 'accepted');
 });
+
+test('all 24 hourly starts including midnight and late evening reach the provider', async () => {
+  for (let hour = 0; hour < 24; hour++) {
+    const r = await handleEnquiry(
+      request({
+        ...meeting,
+        preferred_time: String(hour).padStart(2, '0') + ':00',
+      }),
+      async (_url, options) => {
+        const payload = JSON.parse(options.body);
+        assert.equal(
+          payload.preferred_time,
+          String(hour).padStart(2, '0') + ':00',
+        );
+        assert.match(payload.office_time, /Asia\/Karachi/);
+        return accepted();
+      },
+    );
+    assert.equal((await r.json()).outcome, 'accepted');
+  }
+});
+test('an invalid 24:00 start is rejected', async () => {
+  const r = await handleEnquiry(
+    request({ ...meeting, preferred_time: '24:00' }),
+    accepted,
+  );
+  assert.equal(r.status, 400);
+});

@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useHydrated } from '@/hooks/useHydrated';
 import Link from 'next/link';
 import { useFormSubmission } from '@/hooks/useFormSubmission';
@@ -8,6 +8,7 @@ import { SubmissionFeedback } from '../SubmissionFeedback';
 import { track } from '@/lib/track';
 import { FormWithoutJavaScript } from '../FormWithoutJavaScript';
 import { CalendarPanel } from './CalendarPanel';
+import styles from './booking.module.css';
 import { MeetingSummary } from './MeetingSummary';
 import { SlotPanel } from './SlotPanel';
 import { PREFERRED_HOURS } from './constants';
@@ -49,6 +50,10 @@ export function Scheduler() {
 
   const nameInput = useRef<HTMLInputElement>(null);
   const statusRef = useRef<HTMLDivElement>(null);
+  const confirmationRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (sent) confirmationRef.current?.focus();
+  }, [sent]);
 
   const today = useMemo(() => (hydrated ? startOfToday() : null), [hydrated]);
   const maxDate = useMemo(
@@ -204,6 +209,8 @@ export function Scheduler() {
       <section className="max-b760:px-[18px] max-b760:pb-[70px] px-[6vw] pt-5 pb-24">
         <div
           role="status"
+          ref={confirmationRef}
+          tabIndex={-1}
           className="border-p-line mx-auto max-w-[760px] rounded-[30px] border bg-white p-10 shadow-[0_30px_90px_rgba(32,26,15,.08)]"
         >
           <span
@@ -251,7 +258,7 @@ export function Scheduler() {
   }
 
   return (
-    <section className="max-b760:px-[18px] max-b760:pt-[10px] max-b760:pb-[70px] px-[6vw] pt-5 pb-24">
+    <section className={styles.scheduler}>
       <FormWithoutJavaScript />
       <form
         method="post"
@@ -259,7 +266,7 @@ export function Scheduler() {
         id="scheduler-form"
         onSubmit={onSubmit}
         onChange={submission.onEdit}
-        className="mx-auto max-w-[1440px]"
+        className="mx-auto"
       >
         <input
           type="hidden"
@@ -291,54 +298,77 @@ export function Scheduler() {
 
         {/* .scheduler-card */}
         <fieldset className="m-0 contents border-0 p-0">
-          <div className="border-p-line max-b1120:grid-cols-[minmax(240px,.7fr)_minmax(380px,1fr)] max-b760:grid-cols-1 max-b760:rounded-[22px] grid grid-cols-[minmax(250px,.72fr)_minmax(420px,1.15fr)_minmax(290px,.78fr)] overflow-hidden rounded-[30px] border bg-white shadow-[0_30px_90px_rgba(32,26,15,.08)]">
+          <div className={styles.workspace}>
             <MeetingSummary
               timezone={timezone}
+              meetingType={meetingType}
               onMeetingTypeChange={setMeetingType}
               onDurationChange={setDuration}
             />
 
-            <CalendarPanel
-              monthLabel={
-                viewMonth
-                  ? viewMonth.toLocaleDateString(undefined, {
-                      month: 'long',
-                      year: 'numeric',
-                    })
-                  : 'Month'
-              }
-              cells={cells}
-              prevDisabled={prevDisabled}
-              nextDisabled={nextDisabled}
-              onPrev={() => setMonthOffset(monthOffset - 1)}
-              onNext={() => setMonthOffset(monthOffset + 1)}
-              onPick={pickDate}
-            />
-
-            <SlotPanel
-              showDetails={showDetails}
-              dayLabel={dayLabel}
-              hasDate={Boolean(selectedDate)}
-              selectedTime={selectedTime}
-              pastHours={pastHours}
-              onPick={pickTime}
-              onContinue={onContinue}
-              summary={`${dayLabel} · ${selectedReadableTime}`}
-              googleCalendarHref={googleCalendarHref}
-              onDownloadIcs={onDownloadIcs}
-              onBack={() => setShowDetails(false)}
-              nameRef={nameInput}
-              sending={submission.sending || !hydrated}
-              uncertain={submission.state === 'unconfirmed'}
-            />
+            <div
+              className={styles.bookingArea}
+              data-stage={showDetails ? 'details' : 'time'}
+            >
+              <div className={styles.steps}>
+                <h2>
+                  {showDetails
+                    ? 'Your meeting request'
+                    : 'Choose a preferred time.'}
+                </h2>
+                <ol
+                  className={styles.stepList}
+                  aria-label="Meeting request steps"
+                >
+                  <li aria-current={!showDetails ? 'step' : undefined}>
+                    <span>1</span>Date & time
+                  </li>
+                  <li aria-current={showDetails ? 'step' : undefined}>
+                    <span>2</span>Your details
+                  </li>
+                </ol>
+              </div>
+              <div hidden={showDetails}>
+                <CalendarPanel
+                  monthLabel={
+                    viewMonth
+                      ? viewMonth.toLocaleDateString(undefined, {
+                          month: 'long',
+                          year: 'numeric',
+                        })
+                      : 'Month'
+                  }
+                  cells={cells}
+                  prevDisabled={prevDisabled}
+                  nextDisabled={nextDisabled}
+                  onPrev={() => setMonthOffset(monthOffset - 1)}
+                  onNext={() => setMonthOffset(monthOffset + 1)}
+                  onPick={pickDate}
+                />
+              </div>
+              <SlotPanel
+                showDetails={showDetails}
+                dayLabel={dayLabel}
+                timezone={timezone}
+                hasDate={Boolean(selectedDate)}
+                selectedTime={selectedTime}
+                pastHours={pastHours}
+                onPick={pickTime}
+                onContinue={onContinue}
+                summary={`${dayLabel} · ${selectedReadableTime} (${timezone})`}
+                googleCalendarHref={googleCalendarHref}
+                onDownloadIcs={onDownloadIcs}
+                onBack={() => setShowDetails(false)}
+                nameRef={nameInput}
+                sending={submission.sending || !hydrated}
+                uncertain={submission.state === 'unconfirmed'}
+              />
+            </div>
           </div>
         </fieldset>
 
         {/* .booking-status */}
-        <div
-          ref={statusRef}
-          className="border-p-line mx-auto mt-[14px] max-w-[1440px] rounded-[14px] border bg-[#fffaf0] px-4 py-[13px] text-xs text-[#5f5544]"
-        >
+        <div ref={statusRef} className={styles.status}>
           {submission.state === 'idle' ? (
             <p className="m-0" role="status">
               {status}

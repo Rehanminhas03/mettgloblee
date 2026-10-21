@@ -1,18 +1,17 @@
+﻿import { useState } from 'react';
 import { readableTime } from './calendar';
-import {
-  DARK_FIELD,
-  DARK_FIELD_LABEL,
-  KICKER,
-  PANEL_BUTTON,
-  PREFERRED_HOURS,
-} from './constants';
+import { PREFERRED_HOURS } from './constants';
+import styles from './booking.module.css';
 
-const HOLD_ACTION =
-  'inline-flex min-h-[42px] cursor-pointer items-center justify-center rounded-[10px] border border-[#403c34] bg-[#24211b] px-[11px] py-[9px] text-center text-[10px] font-black text-white hover:border-p-gold hover:text-[#e0bc68]';
-
-/** Stage one: pick a time from the fixed list of preferred hours. */
+const PERIODS = [
+  { start: 0, label: 'Night', range: '12am–6am' },
+  { start: 6, label: 'Morning', range: '6am–12pm' },
+  { start: 12, label: 'Afternoon', range: '12pm–6pm' },
+  { start: 18, label: 'Evening', range: '6pm–12am' },
+];
 function SlotStage({
   dayLabel,
+  timezone,
   hasDate,
   selectedTime,
   pastHours,
@@ -20,71 +19,113 @@ function SlotStage({
   onContinue,
 }: {
   dayLabel: string;
+  timezone: string;
   hasDate: boolean;
   selectedTime: string;
   pastHours: number[];
   onPick: (hour: number) => void;
   onContinue: () => void;
 }) {
+  const [period, setPeriod] = useState(6);
+  const available = (start: number) =>
+    PREFERRED_HOURS.some(
+      hour => hour >= start && hour < start + 6 && !pastHours.includes(hour),
+    );
+  const current = available(period)
+    ? period
+    : (PERIODS.find(p => available(p.start))?.start ?? period);
   return (
     <div>
-      <span className={`${KICKER} !text-[#e0bc68]`}>SELECT A TIME</span>
-      <h3 className="mt-[7px] mb-0 text-[26px] tracking-[-.035em]">
-        {dayLabel}
-      </h3>
-      <p className="mt-[10px] mb-[18px] text-xs leading-[1.55] text-[#9d988f]">
-        {hasDate
-          ? 'Choose the time that works best for you.'
-          : 'Select a day from the calendar and the preferred times will appear here.'}
+      <span className={styles.kicker}>PREFERRED START TIME</span>
+      <h3>{hasDate ? dayLabel : 'Pick your date first.'}</h3>
+      <p className={styles.slotZone}>
+        Times in {timezone.replaceAll('_', ' ')}
       </p>
-
-      <div
-        role="group"
-        aria-label="Preferred meeting times"
-        className="max-b1120:grid-cols-4 max-b760:grid-cols-2 grid grid-cols-1 gap-[9px]"
-      >
+      <p className={styles.slotDescription}>
         {hasDate
-          ? PREFERRED_HOURS.map(hour => {
-              const active =
-                selectedTime === `${String(hour).padStart(2, '0')}:00`;
-              return (
-                <button
-                  key={hour}
-                  type="button"
-                  disabled={pastHours.includes(hour)}
-                  onClick={() => onPick(hour)}
-                  className={`hover:border-p-gold min-h-[46px] cursor-pointer rounded-xl border px-2 py-3 text-xs font-extrabold hover:bg-[#2a2316] hover:text-[#e0bc68] disabled:cursor-not-allowed disabled:opacity-35 ${
-                    active
-                      ? 'border-p-gold bg-[#2a2316] text-[#e0bc68]'
-                      : 'border-[#3b3831] bg-[#171714] text-white'
-                  }`}
-                >
-                  {readableTime(hour)}
-                </button>
-              );
-            })
-          : null}
-      </div>
-
-      {hasDate && pastHours.length === PREFERRED_HOURS.length ? (
-        <p className="text-xs leading-relaxed text-[#c4bfb5]">
-          No preferred times remain today. Please choose another date.
+          ? 'All 24 hours are available to request. Choose a part of the day.'
+          : 'Choose a day on the calendar, then pick a time that works for you.'}
+      </p>
+      {hasDate ? (
+        <>
+          <div className={styles.periods} role="group" aria-label="Part of day">
+            {PERIODS.map(p => (
+              <button
+                type="button"
+                key={p.start}
+                aria-pressed={current === p.start}
+                disabled={!available(p.start)}
+                onClick={() => setPeriod(p.start)}
+              >
+                {p.label}
+                <small>{p.range}</small>
+              </button>
+            ))}
+          </div>
+          <div
+            role="group"
+            aria-label="Preferred meeting times"
+            className={styles.times}
+          >
+            {PREFERRED_HOURS.filter(
+              hour => hour >= current && hour < current + 6,
+            ).map(hour => (
+              <button
+                className={styles.time}
+                type="button"
+                key={hour}
+                aria-pressed={
+                  selectedTime === String(hour).padStart(2, '0') + ':00'
+                }
+                disabled={pastHours.includes(hour)}
+                onClick={() => onPick(hour)}
+              >
+                {readableTime(hour)}
+              </button>
+            ))}
+          </div>
+        </>
+      ) : (
+        <div className={styles.empty}>
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.3"
+          >
+            <rect x="3" y="5" width="18" height="16" rx="3" />
+            <path d="M7 2v6m10-6v6M3 11h18m-11 4h4" />
+          </svg>
+          <span>
+            A time that fits
+            <br />
+            your working day.
+          </span>
+        </div>
+      )}
+      {hasDate && pastHours.length === 24 && (
+        <p className={styles.slotDescription}>
+          No times remain today. Please choose another date.
         </p>
-      ) : null}
-
+      )}
+      {selectedTime && (
+        <p className={styles.selectedTime}>
+          Selected:{' '}
+          <strong>{readableTime(Number(selectedTime.split(':')[0]))}</strong>
+        </p>
+      )}
       <button
         type="button"
         disabled={!selectedTime}
         onClick={onContinue}
-        className={`${PANEL_BUTTON} disabled:cursor-not-allowed disabled:opacity-30`}
+        className={styles.primary}
       >
-        Continue
+        Continue <span aria-hidden="true">→</span>
       </button>
     </div>
   );
 }
-
-/** Stage two: calendar holds plus the contact fields that get submitted. */
 function DetailsStage({
   summary,
   googleCalendarHref,
@@ -104,45 +145,13 @@ function DetailsStage({
 }) {
   return (
     <div>
-      <button
-        type="button"
-        onClick={onBack}
-        className="mb-6 cursor-pointer border-0 bg-transparent p-0 font-extrabold text-[#aaa69d]"
-      >
+      <button type="button" className={styles.back} onClick={onBack}>
         ← Change time
       </button>
-      <span className={KICKER}>YOUR DETAILS</span>
-      <h3 className="mt-[7px] mb-0 text-[26px] tracking-[-.035em]">
-        {summary}
-      </h3>
-
-      {/* .calendar-hold */}
-      <div className="mt-4 mb-1 rounded-[14px] border border-[#39362f] bg-[#171714] p-[14px]">
-        <span className="mb-[10px] block text-[9px] font-black tracking-[.12em] text-[#9d988f] uppercase">
-          Hold this tentative slot on your calendar
-        </span>
-        <div className="max-b430:grid-cols-1 grid grid-cols-2 gap-2">
-          <a
-            href={googleCalendarHref}
-            target="_blank"
-            rel="noopener"
-            className={HOLD_ACTION}
-          >
-            Google Calendar
-          </a>
-          <button type="button" onClick={onDownloadIcs} className={HOLD_ACTION}>
-            Apple / Outlook (.ics)
-          </button>
-        </div>
-        <small className="mt-[9px] block text-[9px] leading-[1.45] text-[#817d75]">
-          The event is marked tentative and includes contact@mettglobal.com.
-          Final availability is still confirmed by Mett Global.
-        </small>
-      </div>
-
-      {/* .scheduler-fields */}
-      <div className="mt-[22px] grid gap-3">
-        <label className={DARK_FIELD_LABEL}>
+      <h3 className={styles.detailsTitle}>A few details, then we’re set.</h3>
+      <p className={styles.summaryLine}>{summary}</p>
+      <div className={styles.fields}>
+        <label>
           Name
           <input
             ref={nameRef}
@@ -150,10 +159,9 @@ function DetailsStage({
             maxLength={100}
             required
             autoComplete="name"
-            className={DARK_FIELD}
           />
         </label>
-        <label className={DARK_FIELD_LABEL}>
+        <label>
           Email
           <input
             type="email"
@@ -161,44 +169,37 @@ function DetailsStage({
             maxLength={254}
             required
             autoComplete="email"
-            className={DARK_FIELD}
           />
         </label>
-        <label className={DARK_FIELD_LABEL}>
-          Phone / WhatsApp
-          <input
-            type="tel"
-            name="phone"
-            maxLength={30}
-            autoComplete="tel"
-            className={DARK_FIELD}
-          />
+        <label>
+          <span>
+            Phone / WhatsApp <span className={styles.optional}>(optional)</span>
+          </span>
+          <input type="tel" name="phone" maxLength={30} autoComplete="tel" />
         </label>
-        <label className={DARK_FIELD_LABEL}>
-          Company
-          <input
-            name="company"
-            maxLength={120}
-            autoComplete="organization"
-            className={DARK_FIELD}
-          />
+        <label>
+          <span>
+            Company <span className={styles.optional}>(optional)</span>
+          </span>
+          <input name="company" maxLength={120} autoComplete="organization" />
         </label>
-        <label className={DARK_FIELD_LABEL}>
-          Anything we should prepare?
+        <label className={styles.full}>
+          <span>
+            Anything we should prepare?{' '}
+            <span className={styles.optional}>(optional)</span>
+          </span>
           <textarea
             name="meeting_context"
             maxLength={3000}
-            placeholder="A short note about the business, problem or decision you want to discuss."
-            className={`${DARK_FIELD} min-h-[92px] resize-y`}
+            placeholder="A little context about your business or what you’d like to discuss."
           />
         </label>
       </div>
-
       <button
         type="submit"
         disabled={sending}
         aria-busy={sending}
-        className={`${PANEL_BUTTON} disabled:cursor-wait disabled:opacity-70`}
+        className={styles.primary}
       >
         {sending
           ? 'Sending…'
@@ -206,41 +207,41 @@ function DetailsStage({
             ? 'Send again (may duplicate)'
             : 'Request this meeting'}
       </button>
-      <p className="mt-3 mb-0 text-[10px] leading-[1.55] text-[#8d887f]">
-        This is a meeting request, not an automatic calendar confirmation. Mett
-        Global will confirm the final time and joining/location details by
-        email.
+      <p className={styles.confirmationNote}>
+        Your request goes to contact@mettglobal.com. We’ll confirm the time and
+        joining details or office arrangements by email.
       </p>
+      <details className={styles.hold}>
+        <summary>Optional: add a tentative calendar hold</summary>
+        <div className={styles.holdActions}>
+          <a
+            href={googleCalendarHref}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Calendar ↗
+          </a>
+          <button type="button" onClick={onDownloadIcs}>
+            Apple / Outlook (.ics)
+          </button>
+        </div>
+        <p>
+          This holds the proposed time in your calendar. It does not confirm
+          availability with Mett Global.
+        </p>
+      </details>
     </div>
   );
 }
-
-/** `.slot-panel`, the dark right rail, showing one stage at a time. */
-export function SlotPanel({
-  showDetails,
-  dayLabel,
-  hasDate,
-  selectedTime,
-  pastHours,
-  onPick,
-  onContinue,
-  summary,
-  googleCalendarHref,
-  onDownloadIcs,
-  onBack,
-  nameRef,
-  sending,
-  uncertain,
-}: {
+export function SlotPanel(props: {
   showDetails: boolean;
-  /** Slot stage */
   dayLabel: string;
+  timezone: string;
   hasDate: boolean;
   selectedTime: string;
   pastHours: number[];
   onPick: (hour: number) => void;
   onContinue: () => void;
-  /** Details stage */
   summary: string;
   googleCalendarHref: string;
   onDownloadIcs: () => void;
@@ -250,31 +251,16 @@ export function SlotPanel({
   uncertain: boolean;
 }) {
   return (
-    <aside className="bg-p-ink max-b1120:col-span-full max-b1120:grid max-b1120:min-h-0 max-b760:p-[22px] min-w-0 p-[30px] text-white">
+    <aside className={styles.slotPanel}>
       <fieldset
-        hidden={!showDetails}
-        disabled={!showDetails}
-        className="m-0 min-w-0 border-0 p-0"
+        hidden={!props.showDetails}
+        disabled={!props.showDetails}
+        className={styles.detailsFieldset}
       >
-        <DetailsStage
-          summary={summary}
-          googleCalendarHref={googleCalendarHref}
-          onDownloadIcs={onDownloadIcs}
-          onBack={onBack}
-          nameRef={nameRef}
-          sending={sending}
-          uncertain={uncertain}
-        />
+        <DetailsStage {...props} />
       </fieldset>
-      <div hidden={showDetails}>
-        <SlotStage
-          dayLabel={dayLabel}
-          hasDate={hasDate}
-          selectedTime={selectedTime}
-          pastHours={pastHours}
-          onPick={onPick}
-          onContinue={onContinue}
-        />
+      <div hidden={props.showDetails}>
+        <SlotStage {...props} />
       </div>
     </aside>
   );
