@@ -1,5 +1,7 @@
 # Direct Zoho delivery — verified localhost review
 
+**Launch hold discovered in the subsequent readiness audit:** these successful local delivery results do not make normal Zoho Mail SMTP the recommended production channel. Zoho's published usage policy excludes automated/transactional sending from normal Mail. The appropriate Transactional Emails service is available in this account but not yet activated. Read [the current readiness decision](form-launch-readiness-2026-10-22.md) before publishing or conducting further real sending.
+
 22 October 2026, Asia/Karachi. Branch `codex/form-delivery-investigation`.
 
 The previous FormSubmit path was reproduced timing out after 20.156 seconds without a confirmation response. An email may still be delivered after such a timeout, so unconditional failure or success would be misleading. Mocked UI tests had verified validation/popups, not delivery reliability.
