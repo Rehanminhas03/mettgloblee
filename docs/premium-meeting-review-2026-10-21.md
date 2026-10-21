@@ -24,3 +24,13 @@ Targeted browser checks cover all 24 hours, six-at-a-time grouping, 23:00 reques
 All browser submissions in this design pass were simulated; no extra real enquiries or meetings were sent. The preceding contact/form review documents the two actual FormSubmit acceptance tests. Zoho inbox arrival was not independently observed, and the external provider remains a dependency.
 
 Local diagnostics and screenshots are under docs/qa and are not part of the release commit. The previous call-number/WhatsApp changes and form fixes remain included in this branch. The user requested localhost review before deployment; do not assume the earlier deployment approval applies to this revised design.
+
+## Final polish and profile consistency
+
+Follow-up branch: codex/meeting-final-polish, based on premium meeting commit 17cfcda. The booking header is centered, with its progress indicator underneath. The sidebar now reuses the original SiteLogo component from the website header rather than an M badge. A WebKit accessibility scan caught a transient contrast dip during time-button colour interpolation; selection colours now switch immediately while border transitions remain subtle.
+
+The About page's Find us profile chips were missing Google Business Profile. Added it to the shared profile list and changed the footer to consume that same list. Organization sameAs now reads the list without duplicating Google. Get directions continues to use the separate office-building Maps pin. A source inventory found no additional Mett Global social-link groups; case-study client links remain their own links.
+
+Final production build and lint passed. Chromium and WebKit each passed 50 browser assertions, including centered heading, original sidebar logo, all hourly starts, preserved details, request payloads, Asia/Karachi and America/Chicago (Houston) local-to-UTC handling, and phone/tablet/desktop layout and accessibility checks. The company-facts section passed 10 additional link consistency, layout and accessibility assertions at 320, 390 and 1440px. The site audit again passed 51 routes and 17 studies. The 28 form regression tests passed during this polish pass; provider transport code was not changed. Browser submissions were mocked and no additional real emails were sent. Physical iPhone testing and independent Zoho inbox verification retain the limitations described above.
+
+This revision is available on localhost for review. No push, merge or deployment has been performed for either premium-design branch.

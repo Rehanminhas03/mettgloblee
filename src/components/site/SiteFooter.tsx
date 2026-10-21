@@ -10,6 +10,7 @@ import {
   MAPS_URL,
   BUSINESS_PROFILE_URL,
   SOCIAL_URLS,
+  SOCIAL_PROFILES,
 } from '@/lib/site';
 import { SiteLogo } from './SiteLogo';
 
@@ -259,19 +260,22 @@ export function SiteFooter() {
           Connect
         </h2>
         <div className="grid gap-3">
-          {SOCIALS.map(social => (
-            <a
-              key={social.href}
-              href={social.href}
-              target="_blank"
-              rel="noopener"
-              aria-label={social.aria}
-              className="flex items-center gap-[10px] text-[13px]"
-            >
-              {social.badge}
-              {social.label}
-            </a>
-          ))}
+          {SOCIAL_PROFILES.map(profile => {
+            const social = SOCIALS.find(item => item.href === profile.href);
+            return (
+              <a
+                key={profile.href}
+                href={profile.href}
+                target="_blank"
+                rel="noopener"
+                aria-label={social?.aria || `Mett Global on ${profile.label}`}
+                className="flex items-center gap-[10px] text-[13px]"
+              >
+                {social?.badge}
+                {profile.label}
+              </a>
+            );
+          })}
         </div>
       </div>
 

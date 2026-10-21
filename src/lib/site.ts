@@ -40,6 +40,7 @@ export const SOCIAL_URLS = {
 } as const;
 
 export const SOCIAL_PROFILES = [
+  { label: 'Google Business Profile', href: BUSINESS_PROFILE_URL },
   { label: 'LinkedIn', href: SOCIAL_URLS.linkedin },
   { label: 'Facebook', href: SOCIAL_URLS.facebook },
   { label: 'Instagram', href: SOCIAL_URLS.instagram },

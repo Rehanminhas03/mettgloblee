@@ -1,5 +1,6 @@
 ﻿import { ADDRESS_LINE, MAPS_URL } from '@/lib/site';
 import { DURATIONS, MEETING_TYPES, TOPICS } from './constants';
+import { SiteLogo } from '@/components/site/SiteLogo';
 import styles from './booking.module.css';
 
 function Choice({
@@ -69,10 +70,7 @@ export function MeetingSummary({
   return (
     <aside className={styles.summary}>
       <div className={styles.brand}>
-        <span aria-hidden="true" className={styles.brandMark}>
-          M
-        </span>
-        METT GLOBAL
+        <SiteLogo compact />
       </div>
       <h2>
         Let’s find your

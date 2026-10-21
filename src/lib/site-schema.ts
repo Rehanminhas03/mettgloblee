@@ -1,10 +1,5 @@
 import { PHONE } from '@/lib/navigation';
-import {
-  SITE_URL,
-  SOCIAL_PROFILES,
-  MAPS_URL,
-  BUSINESS_PROFILE_URL,
-} from './site';
+import { SITE_URL, SOCIAL_PROFILES, MAPS_URL } from './site';
 import { LEADERSHIP } from './leadership';
 
 /* Structured data carried over verbatim from index.html. */
@@ -72,8 +67,5 @@ export const ORGANIZATION_JSON_LD = {
     addressCountry: 'PK',
   },
   hasMap: MAPS_URL,
-  sameAs: [
-    BUSINESS_PROFILE_URL,
-    ...SOCIAL_PROFILES.map(profile => profile.href),
-  ],
+  sameAs: [...SOCIAL_PROFILES.map(profile => profile.href)],
 };
