@@ -1,4 +1,6 @@
-# Form delivery investigation — in progress
+# Form delivery investigation — historical checkpoint
+
+Update: direct Zoho delivery is now configured and verified locally with two real browser submissions and matching inbox references. See [the completed local review](zoho-delivery-local-review-2026-10-22.md). The pending setup statements below describe the earlier investigation checkpoint, not the current state.
 
 The user's enquiry and meeting screenshots show uncertain receipt after submission. Validation and popup regression tests do not establish real email delivery reliability. Do not call these forms fixed or deploy this branch until the real delivery path is verified.
 
