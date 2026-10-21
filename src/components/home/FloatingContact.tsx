@@ -1,5 +1,7 @@
 'use client';
 
+import { PHONE } from '@/lib/navigation';
+
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { WaIcon } from './WaIcon';
@@ -44,7 +46,7 @@ export function FloatingContact() {
         <b className="max-b560:hidden">WhatsApp</b>
       </a>
       <a
-        href="tel:+923046551553"
+        href={PHONE.href}
         aria-label="Call Mett Global"
         className="bg-gold grid h-12 w-12 place-items-center rounded-full text-white shadow-[0_16px_45px_rgba(0,0,0,.18)]"
       >

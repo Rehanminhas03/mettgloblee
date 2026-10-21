@@ -1,69 +1,32 @@
-'use client';
+﻿'use client';
 
-import { useState } from 'react';
-import { submitForm } from '@/lib/submitForm';
+import { useFormSubmission } from '@/hooks/useFormSubmission';
+import { useHydrated } from '@/hooks/useHydrated';
 import { track } from '@/lib/track';
 import { FormWithoutJavaScript } from './FormWithoutJavaScript';
+import { SubmissionFeedback } from './SubmissionFeedback';
 
-/**
- * A form that submits in the background and swaps itself for a thank-you
- * message, so the visitor never leaves the page. The fields (and the hidden
- * FormSubmit settings) are passed in as children.
- */
 export function AjaxForm({
   className,
   tone = 'light',
+  submitLabel = 'Send enquiry',
   children,
 }: {
   className?: string;
   tone?: 'light' | 'dark';
+  submitLabel?: string;
   children: React.ReactNode;
 }) {
-  const [state, setState] = useState<'idle' | 'sending' | 'sent' | 'error'>(
-    'idle',
-  );
-
+  const submission = useFormSubmission();
+  const hydrated = useHydrated();
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setState('sending');
-    const ok = await submitForm(event.currentTarget);
-    setState(ok ? 'sent' : 'error');
-    if (ok) track('generate_lead', { form_location: location.pathname });
+    if (!hydrated || (submission.state === 'accepted' && !submission.edited))
+      return;
+    const result = await submission.submit(event.currentTarget);
+    if (result?.outcome === 'accepted')
+      track('generate_lead', { form_location: location.pathname });
   };
-
-  if (state === 'sent') {
-    const dark = tone === 'dark';
-    return (
-      <div
-        role="status"
-        className={`rounded-2xl border p-8 ${
-          dark
-            ? 'border-[rgba(224,188,104,.3)] bg-white/[.04] text-white'
-            : 'border-p-line text-p-ink bg-white'
-        }`}
-      >
-        <span
-          aria-hidden="true"
-          className={`mb-4 grid h-11 w-11 place-items-center rounded-full text-lg font-black ${
-            dark ? 'bg-gold2 text-ink' : 'bg-p-gold text-white'
-          }`}
-        >
-          ✓
-        </span>
-        <strong className="block text-[22px] tracking-[-.02em]">
-          Thank you, your enquiry has been sent.
-        </strong>
-        <p
-          className={`mt-2 mb-0 text-sm leading-[1.65] ${
-            dark ? 'text-[#aaa69d]' : 'text-p-muted'
-          }`}
-        >
-          We will review the details and reply by email.
-        </p>
-      </div>
-    );
-  }
-
   return (
     <>
       <FormWithoutJavaScript />
@@ -71,28 +34,33 @@ export function AjaxForm({
         method="post"
         data-js-form
         onSubmit={onSubmit}
+        onChange={submission.onEdit}
         className={className}
       >
-        <fieldset
-          disabled={state === 'sending'}
-          className="m-0 contents border-0 p-0"
+        {children}
+        <button
+          type="submit"
+          disabled={
+            !hydrated ||
+            submission.sending ||
+            (submission.state === 'accepted' && !submission.edited)
+          }
+          aria-busy={submission.sending}
+          className={`col-span-full min-h-12 cursor-pointer rounded-full border-0 px-5 py-[15px] font-black text-white disabled:cursor-not-allowed disabled:opacity-70 ${tone === 'dark' ? 'bg-gold' : 'bg-p-ink'}`}
         >
-          {children}
-        </fieldset>
-        {state === 'error' ? (
-          <p
-            role="alert"
-            className={`col-span-full m-0 text-sm ${
-              tone === 'dark' ? 'text-[#f0b4a8]' : 'text-[#b3261e]'
-            }`}
-          >
-            Sorry, that did not send. Please try again, or email us at{' '}
-            <a href="mailto:contact@mettglobal.com" className="underline">
-              contact@mettglobal.com
-            </a>
-            .
-          </p>
-        ) : null}
+          {!hydrated
+            ? 'Loading form…'
+            : submission.sending
+              ? 'Sending…'
+              : submission.state === 'accepted' && !submission.edited
+                ? 'Submitted'
+                : submission.state === 'unconfirmed'
+                  ? 'Send again (may duplicate)'
+                  : submission.state === 'accepted'
+                    ? 'Send updated enquiry'
+                    : submitLabel}
+        </button>
+        <SubmissionFeedback {...submission} dark={tone === 'dark'} />
       </form>
     </>
   );

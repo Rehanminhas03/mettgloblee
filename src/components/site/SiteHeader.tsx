@@ -16,7 +16,7 @@ import {
 import {
   HEADER_CTA,
   HEADER_NAV,
-  PHONE_US,
+  PHONE,
   WHATSAPP_URL,
   isCurrent,
 } from '@/lib/navigation';
@@ -48,9 +48,9 @@ function CtaArrow() {
 function PhoneLink({ onClick }: { onClick?: () => void }) {
   return (
     <a
-      href={PHONE_US.href}
-      aria-label={`Call Mett Global on ${PHONE_US.label}`}
-      title={PHONE_US.label}
+      href={PHONE.href}
+      aria-label={`Call Mett Global on ${PHONE.label}`}
+      title={PHONE.label}
       onClick={onClick}
       className={WA_CLASS}
     >

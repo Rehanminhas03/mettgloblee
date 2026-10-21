@@ -1,4 +1,4 @@
-import { PHONE_US } from '@/lib/navigation';
+import { PHONE } from '@/lib/navigation';
 import type { Leader } from '@/components/page/LeaderCard';
 
 /** Current leadership. Drives the About page and the site's structured data. */
@@ -17,8 +17,7 @@ export const LEADERSHIP: Leader[] = [
     copy: 'Leads business development, sales coordination, eCommerce, logistics, supply chain and operational execution.',
     email: 'ahmad@mettglobal.com',
     whatsapp: '+923046551553',
-    phone: { href: 'tel:+923134262282', label: '+92 313 426 2282' },
-    extraPhones: [PHONE_US],
+    phone: PHONE,
   },
   {
     role: 'Director, U.S. Business Development',

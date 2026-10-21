@@ -91,12 +91,16 @@ function DetailsStage({
   onDownloadIcs,
   onBack,
   nameRef,
+  sending,
+  uncertain,
 }: {
   summary: string;
   googleCalendarHref: string;
   onDownloadIcs: () => void;
   onBack: () => void;
   nameRef: React.RefObject<HTMLInputElement | null>;
+  sending: boolean;
+  uncertain: boolean;
 }) {
   return (
     <div>
@@ -190,8 +194,17 @@ function DetailsStage({
         </label>
       </div>
 
-      <button type="submit" className={PANEL_BUTTON}>
-        Request this meeting
+      <button
+        type="submit"
+        disabled={sending}
+        aria-busy={sending}
+        className={`${PANEL_BUTTON} disabled:cursor-wait disabled:opacity-70`}
+      >
+        {sending
+          ? 'Sending…'
+          : uncertain
+            ? 'Send again (may duplicate)'
+            : 'Request this meeting'}
       </button>
       <p className="mt-3 mb-0 text-[10px] leading-[1.55] text-[#8d887f]">
         This is a meeting request, not an automatic calendar confirmation. Mett
@@ -216,6 +229,8 @@ export function SlotPanel({
   onDownloadIcs,
   onBack,
   nameRef,
+  sending,
+  uncertain,
 }: {
   showDetails: boolean;
   /** Slot stage */
@@ -231,18 +246,27 @@ export function SlotPanel({
   onDownloadIcs: () => void;
   onBack: () => void;
   nameRef: React.RefObject<HTMLInputElement | null>;
+  sending: boolean;
+  uncertain: boolean;
 }) {
   return (
     <aside className="bg-p-ink max-b1120:col-span-full max-b1120:grid max-b1120:min-h-0 max-b760:p-[22px] min-w-0 p-[30px] text-white">
-      {showDetails ? (
+      <fieldset
+        hidden={!showDetails}
+        disabled={!showDetails}
+        className="m-0 min-w-0 border-0 p-0"
+      >
         <DetailsStage
           summary={summary}
           googleCalendarHref={googleCalendarHref}
           onDownloadIcs={onDownloadIcs}
           onBack={onBack}
           nameRef={nameRef}
+          sending={sending}
+          uncertain={uncertain}
         />
-      ) : (
+      </fieldset>
+      <div hidden={showDetails}>
         <SlotStage
           dayLabel={dayLabel}
           hasDate={hasDate}
@@ -251,7 +275,7 @@ export function SlotPanel({
           onPick={onPick}
           onContinue={onContinue}
         />
-      )}
+      </div>
     </aside>
   );
 }

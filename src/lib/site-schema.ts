@@ -1,3 +1,4 @@
+import { PHONE } from '@/lib/navigation';
 import {
   SITE_URL,
   SOCIAL_PROFILES,
@@ -28,12 +29,12 @@ export const ORGANIZATION_JSON_LD = {
     'Mett Global was founded in 2025 and is based in Islamabad, Pakistan. It builds, grows and automates businesses through digital marketing and growth, web and software development, AI automation and content, and e-commerce and supply chain.',
   foundingDate: '2025',
   email: 'contact@mettglobal.com',
-  telephone: '+92-304-6551553',
+  telephone: PHONE.href.slice(4),
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer service',
     email: 'contact@mettglobal.com',
-    telephone: '+92-304-6551553',
+    telephone: PHONE.href.slice(4),
     availableLanguage: ['English', 'Urdu'],
   },
   slogan: 'The Art of Digital Excellence',

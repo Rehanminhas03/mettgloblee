@@ -1,3 +1,4 @@
+import { PHONE } from '@/lib/navigation';
 import Link from 'next/link';
 import { CookieSettingsButton } from '@/components/CookieSettingsButton';
 import { MotionSettingsButton } from '@/components/MotionSettingsButton';
@@ -211,10 +212,10 @@ export function SiteFooter() {
             contact@mettglobal.com
           </a>
           <a
-            href="tel:+923046551553"
+            href={PHONE.href}
             className="hover:text-gold block transition-colors"
           >
-            +92 304 6551553
+            {PHONE.label}
           </a>
         </p>
       </div>
