@@ -1,3 +1,4 @@
+import { PHONE } from '@/lib/navigation';
 import { PageShell } from '@/components/page/PageShell';
 import { PageHero, HeroAccent } from '@/components/page/PageHero';
 import { ContactForm } from '@/components/page/ContactForm';
@@ -53,8 +54,8 @@ export default function ContactPage() {
             >
               WhatsApp +92 304 6551553
             </a>
-            <a href="tel:+923046551553" className={CARD_LINK}>
-              Call +92 304 6551553
+            <a href={PHONE.href} className={CARD_LINK}>
+              Call {PHONE.label}
             </a>
           </article>
 

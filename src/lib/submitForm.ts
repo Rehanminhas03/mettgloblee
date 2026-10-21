@@ -1,34 +1,56 @@
-import { FORM_AJAX_ENDPOINT } from './site';
+export type SubmissionOutcome =
+  'accepted' | 'rejected' | 'unconfirmed' | 'offline';
+export type SubmissionResult = {
+  outcome: SubmissionOutcome;
+  requestId: string;
+};
 
-/**
- * Sends a form to FormSubmit in the background, so the visitor stays on the
- * site instead of being taken to FormSubmit's confirmation or captcha page.
- * Resolves `true` only when FormSubmit confirms the message was accepted.
- */
-export async function submitForm(form: HTMLFormElement): Promise<boolean> {
+/** A timeout means unknown receipt, never proof that a message was not sent. */
+export async function submitForm(
+  form: HTMLFormElement,
+  requestId: string,
+): Promise<SubmissionResult> {
+  if (navigator.onLine === false) return { outcome: 'offline', requestId };
   const data: Record<string, string> = {};
   new FormData(form).forEach((value, key) => {
     if (typeof value === 'string') data[key] = value;
   });
 
   const controller = new AbortController();
-  const timeout = window.setTimeout(() => controller.abort(), 15000);
+  let timeout: number;
+  const deadline = new Promise<SubmissionResult>(resolve => {
+    timeout = window.setTimeout(() => {
+      resolve({ outcome: 'unconfirmed', requestId });
+      controller.abort();
+    }, 25000);
+  });
+  const send = async (): Promise<SubmissionResult> => {
+    try {
+      const response = await fetch('/api/enquiries', {
+        method: 'POST',
+        signal: controller.signal,
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({ ...data, request_id: requestId }),
+      });
+      const result = (await response.json()) as Partial<SubmissionResult>;
+      const outcome =
+        result.requestId === requestId &&
+        (result.outcome === 'rejected' ||
+          (response.ok && result.outcome === 'accepted'))
+          ? result.outcome
+          : 'unconfirmed';
+      return { outcome, requestId };
+    } catch {
+      return { outcome: 'unconfirmed', requestId };
+    }
+  };
   try {
-    const response = await fetch(FORM_AJAX_ENDPOINT, {
-      method: 'POST',
-      signal: controller.signal,
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-    if (!response.ok) return false;
-    const result = (await response.json()) as { success?: string | boolean };
-    return result.success === true || result.success === 'true';
-  } catch {
-    return false;
+    // Settle the UI even if a browser/network layer fails to honor abort.
+    return await Promise.race([send(), deadline]);
   } finally {
-    window.clearTimeout(timeout);
+    window.clearTimeout(timeout!);
   }
 }

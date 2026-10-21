@@ -1,12 +1,7 @@
-import type { CalendarCell } from './calendar';
-import { KICKER, WEEKDAYS } from './constants';
+﻿import type { CalendarCell } from './calendar';
+import { WEEKDAYS } from './constants';
+import styles from './booking.module.css';
 
-const NAV_BUTTON =
-  'h-10 w-10 cursor-pointer rounded-full border border-p-line bg-white text-2xl text-p-ink disabled:cursor-not-allowed disabled:opacity-[.28]';
-
-const GRID = 'grid grid-cols-7 gap-2 max-b620:gap-[5px] max-b430:gap-1';
-
-/** `.calendar-panel`, month header, weekday row and the day grid. */
 export function CalendarPanel({
   monthLabel,
   cells,
@@ -27,57 +22,64 @@ export function CalendarPanel({
   return (
     <section
       aria-label="Choose preferred meeting date"
-      className="max-b620:p-[22px] min-w-0 bg-white p-[30px]"
+      className={styles.calendar}
     >
-      <div className="mb-[26px] flex items-center justify-between gap-5">
-        <div>
-          <span className={KICKER}>SELECT A DATE</span>
-          <h3 className="mt-[7px] mb-0 text-[26px] tracking-[-.035em]">
-            {monthLabel}
-          </h3>
-        </div>
-        <div className="flex gap-2">
+      <div className={styles.month}>
+        <h3>{monthLabel}</h3>
+        <div className={styles.nav}>
           <button
             type="button"
             aria-label="Previous month"
             disabled={prevDisabled}
             onClick={onPrev}
-            className={NAV_BUTTON}
           >
-            ‹
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+            >
+              <path d="m10 3-5 5 5 5" />
+            </svg>
           </button>
           <button
             type="button"
             aria-label="Next month"
             disabled={nextDisabled}
             onClick={onNext}
-            className={NAV_BUTTON}
           >
-            ›
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+            >
+              <path d="m6 3 5 5-5 5" />
+            </svg>
           </button>
         </div>
       </div>
-
-      <div aria-hidden="true" className={`${GRID} mb-2`}>
-        {WEEKDAYS.map(weekday => (
-          <span
-            key={weekday}
-            className="text-p-muted text-center text-[10px] font-extrabold tracking-[.08em] uppercase"
-          >
-            {weekday}
+      <div aria-hidden="true" className={styles.days}>
+        {WEEKDAYS.map(day => (
+          <span className={styles.weekday} key={day}>
+            {day}
           </span>
         ))}
       </div>
-
-      <div className={GRID}>
-        {cells?.blanks.map(index => (
-          <span key={`blank-${index}`} className="aspect-square" />
+      <div className={styles.days}>
+        {cells?.blanks.map(i => (
+          <span key={'blank' + i} />
         ))}
         {cells?.days.map(cell => (
           <button
             key={cell.day}
             type="button"
+            className={styles.day}
             disabled={cell.disabled}
+            aria-pressed={cell.isSelected}
+            data-today={cell.isToday}
             aria-label={cell.date.toLocaleDateString(undefined, {
               weekday: 'long',
               month: 'long',
@@ -85,22 +87,15 @@ export function CalendarPanel({
               year: 'numeric',
             })}
             onClick={() => onPick(cell.date)}
-            className={`max-b620:rounded-[10px] max-b430:rounded-[9px] aspect-square cursor-pointer rounded-[14px] border text-[13px] font-extrabold transition-[transform,border-color,background] duration-[.18s] disabled:cursor-not-allowed disabled:opacity-25 ${
-              cell.isSelected
-                ? 'border-p-ink bg-p-ink text-white'
-                : `text-p-ink bg-[#f7f3ea] ${
-                    cell.isToday ? 'border-[#cfc4af]' : 'border-transparent'
-                  } ${
-                    cell.disabled
-                      ? ''
-                      : 'hover:border-p-gold hover:-translate-y-[2px]'
-                  }`
-            }`}
           >
             {cell.day}
           </button>
         ))}
       </div>
+      <p className={styles.calendarNote}>
+        Choose a preferred date within the next 60 days. Your meeting is
+        confirmed when our team replies.
+      </p>
     </section>
   );
 }

@@ -1,3 +1,4 @@
+import { PHONE } from '@/lib/navigation';
 import { Contact } from '@/components/home/Contact';
 import { Faq } from '@/components/home/Faq';
 import { jsonLdHtml } from '@/components/JsonLd';
@@ -32,7 +33,7 @@ const PROFESSIONAL_SERVICE_JSON_LD = {
   image: `${SITE_URL}/logo-512.png`,
   name: 'Mett Global',
   url: `${SITE_URL}/`,
-  telephone: '+92-304-6551553',
+  telephone: PHONE.href.slice(4),
   email: 'contact@mettglobal.com',
   address: {
     '@type': 'PostalAddress',

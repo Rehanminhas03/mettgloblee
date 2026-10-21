@@ -17,7 +17,10 @@ const FIELD =
  */
 export function ContactForm() {
   return (
-    <AjaxForm className="max-b620:grid-cols-1 mt-[35px] grid grid-cols-2 gap-3">
+    <AjaxForm
+      submitLabel="Send project enquiry"
+      className="max-b620:grid-cols-1 mt-[35px] grid grid-cols-2 gap-3"
+    >
       <input
         type="hidden"
         name="_subject"
@@ -81,12 +84,6 @@ export function ContactForm() {
           className={`${FIELD} min-h-[140px] resize-y`}
         />
       </label>
-      <button
-        type="submit"
-        className="bg-p-ink max-b620:col-span-1 col-span-full cursor-pointer rounded-full border-0 p-[15px] font-black text-white"
-      >
-        Send project enquiry
-      </button>
     </AjaxForm>
   );
 }

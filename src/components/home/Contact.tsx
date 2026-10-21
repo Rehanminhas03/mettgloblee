@@ -3,7 +3,7 @@ import { Reveal } from './Reveal';
 import { WaIcon } from './WaIcon';
 import { SERVICES } from '@/lib/services';
 import { AjaxForm } from '@/components/page/AjaxForm';
-import { PHONE_US } from '@/lib/navigation';
+import { PHONE } from '@/lib/navigation';
 import { ADDRESS_LINE, MAPS_URL } from '@/lib/site';
 
 const SERVICE_OPTIONS = [
@@ -72,15 +72,9 @@ export function Contact() {
               <i aria-hidden="true" className={DOT} />
             </a>
 
-            <a href="tel:+923046551553" className={`group ${ROW}`}>
+            <a href={PHONE.href} className={`group ${ROW}`}>
               <span className={ROW_LABEL}>Call</span>
-              <b className={ROW_VALUE}>+92 304 6551553</b>
-              <i aria-hidden="true" className={DOT} />
-            </a>
-
-            <a href={PHONE_US.href} className={`group ${ROW}`}>
-              <span className={ROW_LABEL}>Call · U.S.</span>
-              <b className={ROW_VALUE}>{PHONE_US.label}</b>
+              <b className={ROW_VALUE}>{PHONE.label}</b>
               <i aria-hidden="true" className={DOT} />
             </a>
 
@@ -217,12 +211,6 @@ export function Contact() {
                 className={`${FIELD} short:min-h-[64px] min-h-[96px] resize-y`}
               />
             </label>
-            <button
-              type="submit"
-              className="bg-gold max-b760:col-span-1 col-span-full cursor-pointer rounded-full border-0 px-5 py-[13px] font-black text-white"
-            >
-              Send enquiry
-            </button>
           </AjaxForm>
         </div>
       </div>

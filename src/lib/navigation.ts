@@ -25,10 +25,10 @@ export const HEADER_CTA: NavLink = {
   label: 'Book a meeting',
 };
 
-/** U.S. line, answered by the co-founder. Shown as a phone icon in the header. */
-export const PHONE_US = {
-  href: 'tel:+18328214066',
-  label: '+1 (832) 821-4066',
+/** Main call line. WhatsApp keeps its separate existing number. */
+export const PHONE = {
+  href: 'tel:+923134262282',
+  label: '+92 313 426 2282',
 };
 
 export const WHATSAPP_URL =
