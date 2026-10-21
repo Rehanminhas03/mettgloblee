@@ -352,3 +352,50 @@ test('meeting requires a phone before forwarding', async () => {
     assert.equal(forwarded, false);
   }
 });
+
+test('configured sender receives validated meeting and never calls FormSubmit', async () => {
+  let delivered = 0;
+  const response = await handleEnquiry(
+    request(meeting),
+    async () => {
+      assert.fail('SMTP delivery must not fall back to FormSubmit');
+    },
+    async payload => {
+      delivered++;
+      assert.equal(payload.phone, '+442079460018');
+      assert.equal(payload.request_id, id);
+      assert.ok(payload.office_time.includes('Asia/Karachi'));
+      return { outcome: 'accepted' };
+    },
+  );
+  assert.equal((await response.json()).outcome, 'accepted');
+  assert.equal(delivered, 1);
+});
+test('invalid fields never reach the configured sender', async () => {
+  let delivered = false;
+  const response = await handleEnquiry(
+    request({ ...meeting, phone: '' }),
+    accepted,
+    async () => {
+      delivered = true;
+      return { outcome: 'accepted' };
+    },
+  );
+  assert.equal(response.status, 400);
+  assert.equal(delivered, false);
+});
+test('lost configured sender response stays uncertain without fallback', async () => {
+  let delivered = 0;
+  const response = await handleEnquiry(
+    request(enquiry),
+    async () => {
+      assert.fail('Never send a potential duplicate through another provider');
+    },
+    async () => {
+      delivered++;
+      throw Error('Lost acknowledgment');
+    },
+  );
+  assert.equal((await response.json()).outcome, 'unconfirmed');
+  assert.equal(delivered, 1);
+});

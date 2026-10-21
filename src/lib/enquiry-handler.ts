@@ -1,4 +1,5 @@
 import { FORM_AJAX_ENDPOINT, SITE_URL } from './site';
+import type { EnquirySender } from './smtp-delivery';
 import {
   contactErrors,
   checkedPhone,
@@ -34,6 +35,7 @@ const FIELD_LIMITS: Record<string, number> = {
 export async function handleEnquiry(
   request: Request,
   forward: typeof fetch = fetch,
+  send?: EnquirySender,
 ) {
   const reply = (
     outcome: string,
@@ -155,6 +157,23 @@ export async function handleEnquiry(
     _captcha: 'false',
     _url: SITE_URL + (meeting ? '/appointment' : '/contact'),
   };
+  if (send) {
+    try {
+      const result = await send(payload);
+      return reply(
+        result.outcome,
+        requestId,
+        result.outcome === 'accepted'
+          ? 200
+          : result.outcome === 'rejected'
+            ? 422
+            : 502,
+        result.reason ? { reason: result.reason } : undefined,
+      );
+    } catch {
+      return reply('unconfirmed', requestId, 502, { reason: 'mail-network' });
+    }
+  }
   try {
     const response = await forward(FORM_AJAX_ENDPOINT, {
       method: 'POST',
