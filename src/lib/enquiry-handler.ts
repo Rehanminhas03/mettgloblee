@@ -113,11 +113,12 @@ export async function handleEnquiry(
   }
   if (!fields.name || /[\r\n]/.test(fields.name))
     return reply('rejected', requestId, 400);
+  const meeting = input._subject === 'New Mett Global meeting request';
   const fieldErrors = contactErrors(fields.email || '', fields.phone);
+  if (meeting && !fields.phone) fieldErrors.phone = 'Enter your phone number.';
   if (Object.keys(fieldErrors).length)
     return reply('rejected', requestId, 400, { fieldErrors });
   if (fields.phone) fields.phone = checkedPhone(fields.phone).number;
-  const meeting = input._subject === 'New Mett Global meeting request';
   if (meeting) {
     const start = Date.parse(fields.preferred_start || '');
     if (

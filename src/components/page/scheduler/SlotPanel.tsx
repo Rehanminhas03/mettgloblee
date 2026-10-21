@@ -153,7 +153,9 @@ function DetailsStage({
       <p className={styles.summaryLine}>{summary}</p>
       <div className={styles.fields}>
         <label>
-          Name
+          <span>
+            Name <span aria-hidden="true">*</span>
+          </span>
           <input
             ref={nameRef}
             name="name"
@@ -163,18 +165,16 @@ function DetailsStage({
           />
         </label>
         <label>
-          Email
+          <span>
+            Email <span aria-hidden="true">*</span>
+          </span>
           <ContactInput kind="email" maxLength={254} required />
         </label>
         <label>
           <span>
-            Phone / WhatsApp <span className={styles.optional}>(optional)</span>
+            Phone / WhatsApp <span aria-hidden="true">*</span>
           </span>
-          <ContactInput
-            kind="phone"
-            maxLength={30}
-            placeholder="+1 713 555 0123"
-          />
+          <ContactInput kind="phone" maxLength={30} required />
         </label>
         <label>
           <span>

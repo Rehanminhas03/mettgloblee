@@ -436,11 +436,13 @@
 }
 .fields {
   display: grid;
+  align-items: start;
   grid-template-columns: 1fr 1fr;
   gap: 19px 17px;
 }
 .fields label {
   display: grid;
+  align-content: start;
   gap: 8px;
   color: #4b453b;
   font-size: 12px;

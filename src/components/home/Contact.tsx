@@ -22,7 +22,7 @@ const DOT =
   "relative block h-3 w-3 rounded-full border border-[rgba(224,188,104,.7)] transition-[transform,background,box-shadow] duration-[.35s] after:absolute after:inset-0 after:m-auto after:h-1 after:w-1 after:rounded-full after:bg-gold2 after:content-[''] group-hover:scale-[1.35] group-hover:bg-[rgba(224,188,104,.12)] group-hover:shadow-[0_0_0_8px_rgba(224,188,104,.06)] max-b560:col-start-2 max-b560:row-[1/3] max-b560:self-center";
 
 const LABEL =
-  'grid gap-[7px] text-[10px] uppercase tracking-[.12em] text-[#d5c8aa]';
+  'grid content-start gap-[7px] text-[10px] uppercase tracking-[.12em] text-[#d5c8aa]';
 const FIELD =
   'w-full rounded-[12px] border border-[rgba(224,188,104,.22)] bg-ink px-[14px] py-[11px] font-[inherit] text-white outline-none focus:border-gold2 focus:shadow-[0_0_0_3px_rgba(224,188,104,.08)]';
 
@@ -165,7 +165,9 @@ export function Contact() {
             />
 
             <label className={LABEL}>
-              Name
+              <span>
+                Name <span aria-hidden="true">*</span>
+              </span>
               <input
                 name="name"
                 maxLength={100}
@@ -175,7 +177,9 @@ export function Contact() {
               />
             </label>
             <label className={LABEL}>
-              Email
+              <span>
+                Email <span aria-hidden="true">*</span>
+              </span>
               <ContactInput
                 kind="email"
                 dark
@@ -202,7 +206,9 @@ export function Contact() {
               </select>
             </label>
             <label className={`${LABEL} max-b760:col-span-1 col-span-full`}>
-              Project brief
+              <span>
+                Project brief <span aria-hidden="true">*</span>
+              </span>
               <textarea
                 name="message"
                 maxLength={3000}

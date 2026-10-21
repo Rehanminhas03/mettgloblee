@@ -31,8 +31,7 @@ export function emailError(value: string): string {
 export function checkedPhone(value: string): { error: string; number: string } {
   const raw = value.trim();
   if (!raw) return { error: '', number: '' };
-  const error =
-    'Check your phone number. Include the country code, for example +1 713 555 0123 or +92 313 426 2282.';
+  const error = 'Check your phone number, including the country code.';
   if (raw.length > 30 || /[\r\n]/.test(raw) || !/^\+?[0-9()\s.-]+$/.test(raw))
     return { error, number: '' };
   let compact = raw.replace(/[()\s.-]/g, '');

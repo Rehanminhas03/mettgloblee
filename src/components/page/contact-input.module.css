@@ -1,5 +1,4 @@
-.error,
-.hint {
+.error {
   display: block;
   font-family: var(--font-sans), Arial, sans-serif;
   font-size: 12px;
@@ -14,7 +13,4 @@
 }
 .error.dark {
   color: #ffb8ad;
-}
-.hint {
-  color: #6d6456;
 }

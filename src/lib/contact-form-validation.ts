@@ -12,7 +12,9 @@ export function validateContactForm(form: HTMLFormElement): boolean {
     input.setCustomValidity(
       name === 'email'
         ? emailError(input.value)
-        : checkedPhone(input.value).error,
+        : input.required && !input.value.trim()
+          ? 'Enter your phone number.'
+          : checkedPhone(input.value).error,
     );
   }
   const valid = form.checkValidity();

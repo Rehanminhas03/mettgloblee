@@ -170,6 +170,7 @@ test('honeypot does not send email', async () => {
 const date = new Date(Date.now() + 86400000 * 2);
 const meeting = {
   ...enquiry,
+  phone: '+442079460018',
   _subject: 'New Mett Global meeting request',
   preferred_date: date.toISOString().slice(0, 10),
   preferred_time: '10:00',
@@ -326,9 +327,28 @@ for (const [phone, expected] of [
   });
 }
 
-test('optional phone may be omitted or blank', async () => {
+test('enquiry without a phone field may omit phone', async () => {
   for (const phone of [undefined, '', '   ']) {
     const r = await handleEnquiry(request({ ...enquiry, phone }), accepted);
     assert.equal((await r.json()).outcome, 'accepted');
+  }
+});
+
+test('meeting requires a phone before forwarding', async () => {
+  for (const phone of [undefined, '', '   ']) {
+    let forwarded = false;
+    const response = await handleEnquiry(
+      request({ ...meeting, phone }),
+      async () => {
+        forwarded = true;
+        return accepted();
+      },
+    );
+    assert.equal(response.status, 400);
+    assert.equal(
+      (await response.json()).fieldErrors.phone,
+      'Enter your phone number.',
+    );
+    assert.equal(forwarded, false);
   }
 });

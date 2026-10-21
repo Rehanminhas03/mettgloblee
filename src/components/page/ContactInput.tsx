@@ -15,7 +15,11 @@ export function ContactInput({
   const [error, setError] = useState('');
   const id = useId();
   const message = (value: string) =>
-    kind === 'email' ? emailError(value) : checkedPhone(value).error;
+    kind === 'email'
+      ? emailError(value)
+      : props.required && !value.trim()
+        ? 'Enter your phone number.'
+        : checkedPhone(value).error;
   return (
     <>
       <input
@@ -27,11 +31,7 @@ export function ContactInput({
         spellCheck={false}
         aria-label={kind === 'email' ? 'Email' : 'Phone / WhatsApp'}
         aria-invalid={error ? true : undefined}
-        aria-describedby={
-          [kind === 'phone' ? `${id}-hint` : '', error ? `${id}-error` : '']
-            .filter(Boolean)
-            .join(' ') || undefined
-        }
+        aria-describedby={error ? `${id}-error` : undefined}
         onChange={event => {
           event.currentTarget.setCustomValidity('');
           setError('');
@@ -49,12 +49,6 @@ export function ContactInput({
           setError(text);
         }}
       />
-      {kind === 'phone' && (
-        <span id={`${id}-hint`} className={styles.hint}>
-          Use a country code (e.g. +1 or +92). Pakistan local numbers starting
-          with 0 also work.
-        </span>
-      )}
       {error && (
         <span
           id={`${id}-error`}
