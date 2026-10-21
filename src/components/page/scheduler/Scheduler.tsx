@@ -5,6 +5,7 @@ import { useHydrated } from '@/hooks/useHydrated';
 import Link from 'next/link';
 import { useFormSubmission } from '@/hooks/useFormSubmission';
 import { SubmissionFeedback } from '../SubmissionFeedback';
+import { SubmissionDialog } from '../SubmissionDialog';
 import { track } from '@/lib/track';
 import { FormWithoutJavaScript } from '../FormWithoutJavaScript';
 import { CalendarPanel } from './CalendarPanel';
@@ -207,6 +208,7 @@ export function Scheduler() {
   if (sent) {
     return (
       <section className="max-b760:px-[18px] max-b760:pb-[70px] px-[6vw] pt-5 pb-24">
+        <SubmissionDialog {...submission} meeting />
         <div
           role="status"
           ref={confirmationRef}
@@ -268,6 +270,7 @@ export function Scheduler() {
         onChange={submission.onEdit}
         className="mx-auto"
       >
+        <SubmissionDialog {...submission} meeting />
         <input
           type="hidden"
           name="_subject"
