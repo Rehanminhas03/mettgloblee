@@ -1,5 +1,10 @@
 import { FORM_AJAX_ENDPOINT, SITE_URL } from './site';
 import {
+  contactErrors,
+  checkedPhone,
+  type ContactFieldErrors,
+} from './contact-validation';
+import {
   DURATIONS,
   MEETING_TYPES,
   TOPICS,
@@ -34,7 +39,12 @@ export async function handleEnquiry(
     outcome: string,
     requestId = '',
     status = 200,
-    diagnostic?: { reason: string; providerStatus?: number; code?: string },
+    diagnostic?: {
+      reason?: string;
+      providerStatus?: number;
+      code?: string;
+      fieldErrors?: ContactFieldErrors;
+    },
   ) =>
     Response.json(
       { outcome, requestId, ...diagnostic },
@@ -93,15 +103,20 @@ export async function handleEnquiry(
     if (input[key] === undefined) continue;
     if (typeof input[key] !== 'string' || input[key].length > max)
       return reply('rejected', requestId, 400);
+    if ((key === 'email' || key === 'phone') && /[\r\n]/.test(input[key]))
+      return reply('rejected', requestId, 400, {
+        fieldErrors: {
+          [key]: `Check your ${key === 'email' ? 'email address' : 'phone number'}. Remove line breaks.`,
+        },
+      });
     fields[key] = input[key].trim();
   }
-  if (
-    !fields.name ||
-    !fields.email ||
-    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email) ||
-    /[\r\n]/.test(fields.name)
-  )
+  if (!fields.name || /[\r\n]/.test(fields.name))
     return reply('rejected', requestId, 400);
+  const fieldErrors = contactErrors(fields.email || '', fields.phone);
+  if (Object.keys(fieldErrors).length)
+    return reply('rejected', requestId, 400, { fieldErrors });
+  if (fields.phone) fields.phone = checkedPhone(fields.phone).number;
   const meeting = input._subject === 'New Mett Global meeting request';
   if (meeting) {
     const start = Date.parse(fields.preferred_start || '');

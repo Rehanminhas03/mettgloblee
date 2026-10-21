@@ -84,6 +84,27 @@ test('explicit rejection is distinct from uncertain delivery', async () => {
   const c = client(async () => response('rejected', id, 422));
   assert.equal((await c.submit()).outcome, 'rejected');
 });
+test('server field errors reach the client without unrelated fields', async () => {
+  const c = client(async () =>
+    Response.json(
+      {
+        outcome: 'rejected',
+        requestId: id,
+        fieldErrors: {
+          email: 'Check your email address.',
+          phone: 'Check your phone number.',
+          other: 'Do not expose this',
+        },
+      },
+      { status: 400 },
+    ),
+  );
+  const r = await c.submit();
+  assert.equal(r.outcome, 'rejected');
+  assert.equal(r.fieldErrors.email, 'Check your email address.');
+  assert.equal(r.fieldErrors.phone, 'Check your phone number.');
+  assert.equal(r.fieldErrors.other, undefined);
+});
 test('deadline settles even when fetch ignores AbortSignal completely', async () => {
   let signal;
   const c = client(async (_url, options) => {

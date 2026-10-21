@@ -3,6 +3,7 @@ import { Reveal } from './Reveal';
 import { WaIcon } from './WaIcon';
 import { SERVICES } from '@/lib/services';
 import { AjaxForm } from '@/components/page/AjaxForm';
+import { ContactInput } from '@/components/page/ContactInput';
 import { PHONE } from '@/lib/navigation';
 import { ADDRESS_LINE, MAPS_URL } from '@/lib/site';
 
@@ -175,12 +176,11 @@ export function Contact() {
             </label>
             <label className={LABEL}>
               Email
-              <input
-                type="email"
-                name="email"
+              <ContactInput
+                kind="email"
+                dark
                 maxLength={254}
                 required
-                autoComplete="email"
                 className={FIELD}
               />
             </label>

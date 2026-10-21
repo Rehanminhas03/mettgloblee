@@ -2,6 +2,10 @@
 
 import { useEffect, useRef, useState } from 'react';
 import {
+  validateContactForm,
+  showContactErrors,
+} from '@/lib/contact-form-validation';
+import {
   submitForm,
   type SubmissionOutcome,
   type SubmissionResult,
@@ -37,6 +41,7 @@ export function useFormSubmission() {
   const submit = async (form: HTMLFormElement) => {
     // Synchronous guard catches double-clicks and Enter before React rerenders.
     if (busy.current) return null;
+    if (!validateContactForm(form)) return null;
     const version = revision.current;
     const id = newRequestId();
     busy.current = true;
@@ -52,6 +57,7 @@ export function useFormSubmission() {
       busy.current = false;
     }
     const changed = version !== revision.current;
+    if (result.fieldErrors) showContactErrors(form, result.fieldErrors);
     setEdited(changed);
     setState(result.outcome);
     return { ...result, edited: changed };

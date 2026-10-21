@@ -1,8 +1,11 @@
+import type { ContactFieldErrors } from './contact-validation';
+
 export type SubmissionOutcome =
   'accepted' | 'rejected' | 'unconfirmed' | 'offline';
 export type SubmissionResult = {
   outcome: SubmissionOutcome;
   requestId: string;
+  fieldErrors?: ContactFieldErrors;
 };
 
 /** A timeout means unknown receipt, never proof that a message was not sent. */
@@ -42,7 +45,19 @@ export async function submitForm(
           (response.ok && result.outcome === 'accepted'))
           ? result.outcome
           : 'unconfirmed';
-      return { outcome, requestId };
+      const fieldErrors: ContactFieldErrors = {};
+      if (outcome === 'rejected' && result.fieldErrors) {
+        for (const key of ['email', 'phone'] as const) {
+          const message = result.fieldErrors[key];
+          if (typeof message === 'string' && message.length <= 200)
+            fieldErrors[key] = message;
+        }
+      }
+      return {
+        outcome,
+        requestId,
+        ...(Object.keys(fieldErrors).length ? { fieldErrors } : {}),
+      };
     } catch {
       return { outcome: 'unconfirmed', requestId };
     }

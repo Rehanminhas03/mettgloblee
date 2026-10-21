@@ -1,5 +1,6 @@
 import { SERVICES } from '@/lib/services';
 import { AjaxForm } from './AjaxForm';
+import { ContactInput } from './ContactInput';
 
 const SERVICE_OPTIONS = [
   'Not sure yet',
@@ -57,14 +58,7 @@ export function ContactForm() {
       </label>
       <label className={LABEL}>
         Email
-        <input
-          type="email"
-          name="email"
-          maxLength={254}
-          autoComplete="email"
-          required
-          className={FIELD}
-        />
+        <ContactInput kind="email" maxLength={254} required className={FIELD} />
       </label>
       <label className={LABEL}>
         Service

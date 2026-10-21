@@ -4,6 +4,9 @@ import path from 'node:path';
 import vm from 'node:vm';
 import test from 'node:test';
 import ts from 'typescript';
+import { createRequire } from 'node:module';
+
+const nodeRequire = createRequire(import.meta.url);
 
 // Exercise the production handler with an injected provider; no external emails.
 const cache = new Map();
@@ -29,6 +32,8 @@ function load(file) {
       TextDecoder,
       Date,
       require(name) {
+        if (!name.startsWith('@/') && !name.startsWith('.'))
+          return nodeRequire(name);
         return load(
           (name.startsWith('@/')
             ? path.resolve('src', name.slice(2))
@@ -233,4 +238,97 @@ test('an invalid 24:00 start is rejected', async () => {
     accepted,
   );
   assert.equal(r.status, 400);
+});
+
+for (const email of [
+  '',
+  'missing-at.example.com',
+  'a@@example.com',
+  'a@example',
+  'a..b@example.com',
+  '.a@example.com',
+  'a.@example.com',
+  'a@example..com',
+  'a@-example.com',
+  'a@example-.com',
+  'a@exam_ple.com',
+  'a @example.com',
+  'a\r\n@example.com',
+  'x'.repeat(65) + '@example.com',
+]) {
+  test(`malformed email is rejected before delivery: ${JSON.stringify(email)}`, async () => {
+    let forwarded = false;
+    const r = await handleEnquiry(request({ ...enquiry, email }), async () => {
+      forwarded = true;
+      return accepted();
+    });
+    const body = await r.json();
+    assert.equal(r.status, 400);
+    assert.equal(forwarded, false);
+    assert.ok(body.fieldErrors.email);
+  });
+}
+
+for (const email of [
+  'sales+website@sub.example.co.uk',
+  "o'connor@example.com",
+  'First.Last@Example.COM',
+]) {
+  test(`legitimate email format is accepted: ${email}`, async () => {
+    const r = await handleEnquiry(request({ ...enquiry, email }), accepted);
+    assert.equal((await r.json()).outcome, 'accepted');
+  });
+}
+
+for (const phone of [
+  '123',
+  'abcdefgh',
+  '+999123456789',
+  '++12133734253',
+  '+1 123 456 7890',
+  '0313426228',
+  '7135550123',
+  'Call +12133734253',
+  '+12133734253\r\n',
+]) {
+  test(`invalid phone is rejected before delivery: ${JSON.stringify(phone)}`, async () => {
+    let forwarded = false;
+    const r = await handleEnquiry(request({ ...enquiry, phone }), async () => {
+      forwarded = true;
+      return accepted();
+    });
+    const body = await r.json();
+    assert.equal(r.status, 400);
+    assert.equal(forwarded, false);
+    assert.ok(body.fieldErrors.phone);
+  });
+}
+
+for (const [phone, expected] of [
+  ['03134262282', '+923134262282'],
+  ['+92 313 426 2282', '+923134262282'],
+  ['923134262282', '+923134262282'],
+  ['+1 (213) 373-4253', '+12133734253'],
+  ['0044 20 7946 0018', '+442079460018'],
+  ['+971 50 123 4567', '+971501234567'],
+  ['+61 412 345 678', '+61412345678'],
+  ['+91 98765 43210', '+919876543210'],
+]) {
+  test(`valid phone retains its country: ${phone}`, async () => {
+    const r = await handleEnquiry(
+      request({ ...enquiry, phone }),
+      async (_url, options) => {
+        assert.equal(JSON.parse(options.body).phone, expected);
+        return accepted();
+      },
+    );
+    assert.equal((await r.json()).outcome, 'accepted');
+  });
+}
+
+test('optional phone may be omitted or blank', async () => {
+  for (const phone of [undefined, '', '   ']) {
+    const r = await handleEnquiry(request({ ...enquiry, phone }), accepted);
+    assert.equal((await r.json()).outcome, 'accepted');
+  }
 });

@@ -2,6 +2,7 @@
 import { readableTime } from './calendar';
 import { PREFERRED_HOURS } from './constants';
 import styles from './booking.module.css';
+import { ContactInput } from '../ContactInput';
 
 const PERIODS = [
   { start: 0, label: 'Night', range: '12am–6am' },
@@ -163,19 +164,17 @@ function DetailsStage({
         </label>
         <label>
           Email
-          <input
-            type="email"
-            name="email"
-            maxLength={254}
-            required
-            autoComplete="email"
-          />
+          <ContactInput kind="email" maxLength={254} required />
         </label>
         <label>
           <span>
             Phone / WhatsApp <span className={styles.optional}>(optional)</span>
           </span>
-          <input type="tel" name="phone" maxLength={30} autoComplete="tel" />
+          <ContactInput
+            kind="phone"
+            maxLength={30}
+            placeholder="+1 713 555 0123"
+          />
         </label>
         <label>
           <span>
