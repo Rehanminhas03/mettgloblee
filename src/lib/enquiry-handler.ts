@@ -30,9 +30,14 @@ export async function handleEnquiry(
   request: Request,
   forward: typeof fetch = fetch,
 ) {
-  const reply = (outcome: string, requestId = '', status = 200) =>
+  const reply = (
+    outcome: string,
+    requestId = '',
+    status = 200,
+    diagnostic?: { reason: string; providerStatus?: number; code?: string },
+  ) =>
     Response.json(
-      { outcome, requestId },
+      { outcome, requestId, ...diagnostic },
       { status, headers: { 'Cache-Control': 'no-store' } },
     );
   const origin = request.headers.get('origin');
@@ -147,14 +152,40 @@ export async function handleEnquiry(
       signal: AbortSignal.timeout(20000),
       redirect: 'error',
     });
-    const data = await response.json();
+    let data;
+    try {
+      data = await response.json();
+    } catch {
+      return reply('unconfirmed', requestId, 502, {
+        reason: 'provider-invalid-response',
+        providerStatus: response.status,
+      });
+    }
     if (response.ok && (data?.success === true || data?.success === 'true'))
       return reply('accepted', requestId);
     if (response.ok && (data?.success === false || data?.success === 'false'))
       return reply('rejected', requestId, 422);
-    return reply('unconfirmed', requestId, 502);
-  } catch {
+    return reply('unconfirmed', requestId, 502, {
+      reason: 'provider-unconfirmed',
+      providerStatus: response.status,
+    });
+  } catch (error) {
+    const failure = error as {
+      name?: string;
+      cause?: { code?: string; message?: string };
+    };
+    const code =
+      failure?.cause?.message === 'unexpected redirect'
+        ? 'UPSTREAM_REDIRECT'
+        : failure?.cause?.code;
     // The provider may have sent the email before its response was lost.
-    return reply('unconfirmed', requestId, 504);
+    // Only bounded error categories are returned; never messages, URLs or PII.
+    return reply('unconfirmed', requestId, 504, {
+      reason:
+        failure?.name === 'TimeoutError' || failure?.name === 'AbortError'
+          ? 'provider-timeout'
+          : 'provider-network',
+      ...(code && /^[A-Z0-9_]{1,64}$/.test(code) ? { code } : {}),
+    });
   }
 }
