@@ -68,10 +68,10 @@ export const SERVICES: Service[] = [
     ],
     formLabel: 'Digital Marketing & Growth',
     hero: {
-      kicker: 'SERVICE / DIGITAL MARKETING & GROWTH',
+      kicker: 'SERVICE / DIGITAL MARKETING & GROWTH · ISLAMABAD',
       title: 'Turn attention',
       accent: 'into growth.',
-      copy: 'Strategy, creative, paid media, social, SEO and analytics managed as one growth system, measured by the leads and sales it produces, not by likes.',
+      copy: 'Digital marketing agency in Islamabad: strategy, creative, paid media, social, local SEO, and analytics managed as one growth system, measured by the leads and showroom sales it produces.',
     },
     sideHeading: 'Strategy, media and measurement under one plan.',
     details: [
@@ -392,10 +392,10 @@ export const SERVICES: Service[] = [
     ],
     formLabel: 'E-Commerce & Supply Chain',
     hero: {
-      kicker: 'SERVICE / E-COMMERCE & SUPPLY CHAIN',
+      kicker: 'SERVICE / E-COMMERCE & SUPPLY CHAIN (USA, UK, EU, CANADA)',
       title: 'Sell more.',
       accent: 'Run it cleaner.',
-      copy: 'Growth breaks when listings, stock, suppliers and fulfillment are managed in separate silos. We run the storefront and the operation behind it as one system.',
+      copy: 'Multi-channel Amazon FBA, claims recovery, and supply chain operations across the US, UK, Canada, and EU. We run the storefront, courier claims, and the warehouse operations behind it as one system.',
     },
     sideHeading: 'From the listing to the warehouse.',
     details: [

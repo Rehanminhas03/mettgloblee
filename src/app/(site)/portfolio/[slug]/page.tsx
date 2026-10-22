@@ -74,23 +74,116 @@ export async function generateMetadata({
   };
 }
 
-function breadcrumb(project: Project) {
+function projectJsonLd(project: Project) {
+  const url = `${SITE_URL}/portfolio/${project.slug}`;
+  const headline = project.seo.title.split('|')[0].trim();
+
+  let location: Record<string, unknown> = {
+    '@type': 'Country',
+    name: 'Pakistan',
+  };
+  if (project.sector.includes('Texas')) {
+    location = {
+      '@type': 'AdministrativeArea',
+      name: 'Texas',
+      containedInPlace: { '@type': 'Country', name: 'United States' },
+    };
+  } else if (project.sector.includes('Illinois') || project.sector.includes('Chicago')) {
+    location = {
+      '@type': 'City',
+      name: project.sector.includes('Chicago') ? 'Chicago' : 'Mount Prospect',
+      containedInPlace: { '@type': 'Country', name: 'United States' },
+    };
+  } else if (project.sector.includes('USA')) {
+    location = { '@type': 'Country', name: 'United States' };
+  } else if (project.sector.includes('Islamabad')) {
+    location = {
+      '@type': 'City',
+      name: 'Islamabad',
+      containedInPlace: { '@type': 'Country', name: 'Pakistan' },
+    };
+  }
+
+  const deliveredSummary = project.delivered.blocks
+    .map(b => `${b.title}: ${b.copy}`)
+    .join(' ');
+
+  const faqs = [
+    {
+      question: `What services did Mett Global deliver for ${project.brand}?`,
+      answer: `${project.delivered.copy} ${deliveredSummary}`,
+    },
+    {
+      question: `What is the background and industry for ${project.brand}?`,
+      answer: `${project.about.copy} Sector: ${project.sector}.`,
+    },
+  ];
+
   return {
     '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+    '@graph': [
       {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Portfolio',
-        item: `${SITE_URL}/portfolio`,
+        '@type': 'WebPage',
+        '@id': `${url}#webpage`,
+        url,
+        name: project.title,
+        description: project.seo.description,
+        inLanguage: 'en',
+        publisher: { '@id': `${SITE_URL}/#organization` },
+        breadcrumb: { '@id': `${url}#breadcrumb` },
+        about: project.scope,
+        contentLocation: location,
       },
       {
-        '@type': 'ListItem',
-        position: 3,
-        name: project.title,
-        item: `${SITE_URL}/portfolio/${project.slug}`,
+        '@type': project.caseStudy ? 'Article' : 'CreativeWork',
+        '@id': `${url}#entity`,
+        isPartOf: { '@id': `${url}#webpage` },
+        headline,
+        name: project.brand,
+        description: project.seo.description,
+        url,
+        inLanguage: 'en',
+        dateModified: project.modifiedAt ?? '2026-10-06',
+        author: { '@id': `${SITE_URL}/#organization` },
+        publisher: { '@id': `${SITE_URL}/#organization` },
+        about: project.scope,
+        contentLocation: location,
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${url}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: `${SITE_URL}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Portfolio',
+            item: `${SITE_URL}/portfolio`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: project.title,
+            item: url,
+          },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${url}#faq`,
+        mainEntity: faqs.map(faq => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
       },
     ],
   };
@@ -131,21 +224,7 @@ export default async function ProjectPage({
 
   return (
     <PageShell caseStudy>
-      <JsonLd data={breadcrumb(project)} />
-      <JsonLd
-        data={{
-          '@context': 'https://schema.org',
-          '@type': project.caseStudy ? 'Article' : 'CreativeWork',
-          name: project.brand,
-          headline: project.seo.title.split('|')[0].trim(),
-          description: project.seo.description,
-          url: `${SITE_URL}/portfolio/${project.slug}`,
-          inLanguage: 'en',
-          dateModified: project.modifiedAt ?? '2026-10-06',
-          author: { '@id': `${SITE_URL}/#organization` },
-          publisher: { '@id': `${SITE_URL}/#organization` },
-        }}
-      />
+      <JsonLd data={projectJsonLd(project)} />
 
       {project.caseStudy && project.kpis ? (
         <CaseHero

@@ -71,41 +71,41 @@ export const PAGE_SEO = {
 
   /* ---- Service pages ---- */
   '/digital-marketing-growth': {
-    title: 'Digital Marketing & SEO in Islamabad | Mett Global',
+    title: 'Digital Marketing Agency & SEO in Islamabad | Mett Global',
     description:
-      'Digital Marketing & Growth from Mett Global: performance marketing, Meta and Google Ads, social media, SEO, creative and analytics built for measurable growth.',
+      'Premier digital marketing agency in Islamabad, Pakistan. Performance marketing, Google Ads, Meta Ads, social media, local SEO, creative and analytics built for measurable growth.',
   },
   '/web-software-development': {
-    title: 'Web & Software Development in Islamabad | Mett Global',
+    title: 'Web & Custom Software Development Company, Islamabad | Mett Global',
     description:
-      'Web & Software Development from Mett Global: websites, online stores, custom CRMs, web applications, integrations and hosting built around how your business works.',
+      'Web & software development agency in Islamabad: high-speed websites, online stores, custom CRMs, dealership ERPs, and secure web applications built around your business.',
   },
   '/ai-automation-content': {
-    title: 'AI Automation & Content Services, Pakistan | Mett Global',
+    title: 'AI Automation & Content Workflows Agency, Pakistan | Mett Global',
     description:
       'AI Automation & Content from Mett Global: workflow automation, AI assistants, document and data processing, lead and CRM automation, and on-brand AI content.',
   },
   '/ecommerce-supply-chain': {
-    title: 'E-Commerce & Supply Chain Management | Mett Global',
+    title: 'Amazon FBA & E-Commerce Supply Chain Services (USA, UK, EU, Canada) | Mett Global',
     description:
-      'E-Commerce & Supply Chain from Mett Global: marketplace management, inventory, sourcing, 3PL and logistics, claims and reimbursement recovery, and reporting.',
+      'End-to-end multi-channel e-commerce supply chain management: Amazon FBA reimbursement, courier & 3PL claims recovery, marketplace operations across USA, UK, EU, and Canada.',
   },
 
   /* ---- Case studies ---- */
   '/portfolio/csm-ittehad': {
     title: CASE_NAMES['csm-ittehad'].metaTitle,
     description:
-      'A Mett Global case study on EV marketing, lead generation, automation and showroom visits for CSM Ittehad Islamabad.',
+      'Electric vehicle (EV) dealership marketing in Islamabad: Meta ad acquisition, automated CRM lead capture, and 112 showroom visits for Capital Smart Motors (CSM Ittehad).',
   },
   '/portfolio/hyundai-islamabad': {
     title: CASE_NAMES['hyundai-islamabad'].metaTitle,
     description:
-      'A Mett Global case study on content, customer journeys, lead handling and local growth infrastructure for Hyundai Islamabad.',
+      'Automotive dealership growth in Islamabad: 3 managed social channels, connected lead funnel, digital journeys, and showroom visits for Hyundai Islamabad.',
   },
   '/portfolio/jetour-ittehad': {
     title: CASE_NAMES['jetour-ittehad'].metaTitle,
     description:
-      'A Mett Global case study on Meta lead generation, automation, outdoor visibility and showroom growth for Jetour Ittehad.',
+      'Automotive dealership marketing in Islamabad: 1,000+ verified leads, Meta Ads campaigns, CRM lead automation, 5+ billboards, and showroom activations for Jetour Ittehad.',
   },
 
   /* ---- Current platform & policy updates ---- */
@@ -390,20 +390,113 @@ export function pageJsonLd(path: PagePath, type: WebPageType = 'WebPage') {
   };
 }
 
-/** `Article` structured data for a case study (no blog breadcrumb). */
+const CASE_STUDY_METRIC_FAQS: Record<
+  string,
+  Array<{ question: string; answer: string }>
+> = {
+  '/portfolio/jetour-ittehad': [
+    {
+      question:
+        'What were the results of the Jetour Ittehad digital marketing launch in Islamabad?',
+      answer:
+        'Mett Global generated over 1,000 verified leads, 50+ confirmed vehicle bookings, and drove over 30% of leads to the showroom visit stage or beyond using Meta Ads, CRM lead automation, and outdoor billboard campaigns.',
+    },
+    {
+      question:
+        'How does Mett Global manage automotive dealership marketing in Islamabad?',
+      answer:
+        'We build connected dealership acquisition funnels combining Meta reel and feed ads, automated lead routing into CRM/sheets, instant sales team notifications, and local showroom activations.',
+    },
+    {
+      question:
+        'Which marketing channels were used for Jetour Ittehad in Islamabad?',
+      answer:
+        'Meta advertising (Instagram Reels and Facebook), automated lead capture forms, Google Sheets/CRM integration, 5-6 billboard placements across Islamabad, and 7 on-ground brand activations.',
+    },
+  ],
+  '/portfolio/hyundai-islamabad': [
+    {
+      question:
+        'What automotive marketing services were provided for Hyundai Islamabad?',
+      answer:
+        'Mett Global managed 3 social channels, designed a connected digital lead funnel, handled showroom visit attribution, and synchronized outdoor visibility with digital marketing campaigns.',
+    },
+    {
+      question:
+        'How does Mett Global increase footfall and test-drive bookings for car dealerships?',
+      answer:
+        'By connecting localized social content and Meta ad campaigns directly to lead-handling workflows, follow-up automation, and measurable showroom visit tracking.',
+    },
+  ],
+  '/portfolio/csm-ittehad': [
+    {
+      question:
+        'How did Capital Smart Motors (CSM Ittehad) generate showroom visits for electric vehicles in Islamabad?',
+      answer:
+        'Mett Global launched the EV brand presence, ran Meta acquisition campaigns generating ~400 client-reported leads, and converted 112 verified showroom visits at a ~28% lead-to-visit rate.',
+    },
+    {
+      question:
+        'What was the lead-to-visit conversion rate for CSM Ittehad EV showroom?',
+      answer:
+        'CSM Ittehad achieved an estimated 28% lead-to-visit conversion rate, resulting in 112 documented showroom visits from approximately 400 digital leads.',
+    },
+  ],
+};
+
+/** Structured data for a case study with Article, location, and FAQPage nodes for AI engines. */
 export function caseStudyJsonLd(path: PagePath) {
   const { title, description } = PAGE_SEO[path];
   const url = `${SITE_URL}${path}`;
+  const headline = title.split('|')[0].trim();
+  const faqs = CASE_STUDY_METRIC_FAQS[path];
+
+  const graph: Array<Record<string, unknown>> = [
+    {
+      '@type': 'Article',
+      '@id': `${url}#article`,
+      headline,
+      description,
+      url,
+      mainEntityOfPage: url,
+      image: `${SITE_URL}/social-card.png`,
+      inLanguage: 'en',
+      contentLocation: {
+        '@type': 'City',
+        name: 'Islamabad',
+        containedInPlace: {
+          '@type': 'Country',
+          name: 'Pakistan',
+        },
+      },
+      about: [
+        'Automotive Dealership Marketing',
+        'Lead Generation',
+        'Meta Ads',
+        'Showroom Footfall',
+      ],
+      author: { '@id': `${SITE_URL}/#organization` },
+      publisher: { '@id': `${SITE_URL}/#organization` },
+    },
+  ];
+
+  if (faqs && faqs.length > 0) {
+    graph.push({
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: faqs.map(faq => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    });
+  }
+
   return {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: title.split('|')[0].trim(),
-    description,
-    url,
-    mainEntityOfPage: url,
-    image: `${SITE_URL}/social-card.png`,
-    inLanguage: 'en',
-    author: { '@id': `${SITE_URL}/#organization` },
-    publisher: { '@id': `${SITE_URL}/#organization` },
+    '@graph': graph,
   };
 }
