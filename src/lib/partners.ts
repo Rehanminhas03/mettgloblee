@@ -58,12 +58,12 @@ export const PARTNERS: Partner[] = [
     caption: 'GPS & vehicle tracking · Pakistan',
     region: 'local',
   },
-  {
-    name: 'Mowing',
-    caption: 'Lawn care · Field-ops software',
-    region: 'international',
-    href: '/portfolio/mowing',
-  },
+  // {
+  //   name: 'Mowing',
+  //   caption: 'Lawn care · Field-ops software',
+  //   region: 'international',
+  //   href: '/portfolio/mowing',
+  // },
   {
     name: 'Serenada Mental Health',
     caption: 'Mental health · Texas',

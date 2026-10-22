@@ -106,21 +106,21 @@ export const LOCAL_CASE_STUDIES: WorkCard[] = [
 ];
 
 /** International software case study, listed under International clients. */
-export const MOWING_CASE_STUDY: WorkCard = {
-  href: '/portfolio/mowing',
-  tone: 'dark',
-  sector: 'LAWN CARE · FIELD-OPS SOFTWARE',
-  brand: 'MOWING',
-  title: CASE_NAMES['mowing'].name,
-  subtitle: CASE_NAMES['mowing'].subtitle,
-  copy: 'A scheduling and workforce platform that turns recurring property routes into daily crew schedules, with a locked field workflow for drivers.',
-  metrics: [
-    { value: '2', label: 'workspaces' },
-    { value: 'Daily', label: 'crew schedules' },
-    { value: '3', label: 'stack layers' },
-  ],
-  linkLabel: 'Read the Mowing case study',
-};
+// export const MOWING_CASE_STUDY: WorkCard = {
+//   href: '/portfolio/mowing',
+//   tone: 'dark',
+//   sector: 'LAWN CARE · FIELD-OPS SOFTWARE',
+//   brand: 'MOWING',
+//   title: CASE_NAMES['mowing'].name,
+//   subtitle: CASE_NAMES['mowing'].subtitle,
+//   copy: 'A scheduling and workforce platform that turns recurring property routes into daily crew schedules, with a locked field workflow for drivers.',
+//   metrics: [
+//     { value: '2', label: 'workspaces' },
+//     { value: 'Daily', label: 'crew schedules' },
+//     { value: '3', label: 'stack layers' },
+//   ],
+//   linkLabel: 'Read the Mowing case study',
+// };
 
 /** Every published case study, local and international. */
 export const CASE_STUDIES: WorkCard[] = [

@@ -312,76 +312,76 @@ const RAW_PROJECTS: Project[] = [
         'How Mett Global built the website, Flutter app and admin and partner portals for SFYKEA, a door-to-door car wash service in Islamabad.',
     },
   },
-  {
-    slug: 'mowing',
-    market: 'international',
-    caseStudy: true,
-    brand: 'MOWING',
-    sector: 'Lawn care · Field-ops software',
-    title: 'The Crew Scheduler',
-    subtitle:
-      'Field-operations software that turns recurring lawn-care routes into daily crew schedules',
-    accent: '',
-    lede: 'A custom scheduling and workforce platform for a commercial lawn-care business. It turns recurring property routes into daily crew schedules, and gives drivers a locked field workflow to complete jobs and track their time.',
-    links: [],
-    kpis: [
-      { value: '2', label: 'workspaces, office & field' },
-      { value: 'Daily', label: 'crew schedules from recurring routes' },
-      { value: '3', label: 'stack layers, Laravel, Vue 3, MySQL' },
-      { value: '1', label: 'custom platform' },
-    ],
-    panel: {
-      label: 'BUILD SCOPE',
-      value: 'A custom platform, not an off-the-shelf tool.',
-      copy: 'Built around how the business actually runs routes, crews and jobs, with the office and the field each getting the view they need.',
-    },
-    about: {
-      heading: 'The business',
-      copy: 'Commercial lawn care runs on repetition: the same properties, on the same cycles, with crews who need to know where to be each day. Doing that from spreadsheets and messages does not scale, so the work moved into one platform where the office plans and the field executes.',
-    },
-    scope: ['Laravel', 'Vue 3', 'MySQL', 'Custom platform'],
-    delivered: {
-      heading: 'What the platform does',
-      copy: 'The office plans the work; drivers run a workflow that keeps jobs and hours on the record.',
-      blocks: [
-        {
-          label: '01 / OFFICE PLANNING',
-          title: 'Customers, properties, services and teams',
-          copy: 'The office manages the records that every route is built from.',
-        },
-        {
-          label: '02 / ROUTES',
-          title: 'Recurring routes, turned into daily schedules',
-          copy: 'Recurring property routes become the daily crew schedules, rather than being rebuilt by hand each morning.',
-        },
-        {
-          label: '03 / FIELD WORKFLOW',
-          title: 'A locked workflow for drivers',
-          copy: 'Drivers follow a fixed sequence in the field, so a job is worked and closed the same way every time.',
-        },
-        {
-          label: '04 / TIME',
-          title: 'Job completion, service timers and time clocks',
-          copy: 'Completion, time on each service and hours worked are captured as the work happens.',
-        },
-      ],
-    },
-    flow: {
-      heading: 'From plan to completed job',
-      copy: 'One flow, from the office to the field and back.',
-      steps: [
-        'Office sets up customers, properties and services',
-        'Recurring routes become daily crew schedules',
-        'Drivers run the locked field workflow',
-        'Completion, service timers and time clocks are recorded',
-      ],
-    },
-    seo: {
-      title: 'The Crew Scheduler: Mowing Field-Ops | Mett Global',
-      description:
-        'How Mett Global built a custom Laravel and Vue 3 scheduling and workforce platform for a commercial lawn-care business.',
-    },
-  },
+  // {
+  //   slug: 'mowing',
+  //   market: 'international',
+  //   caseStudy: true,
+  //   brand: 'MOWING',
+  //   sector: 'Lawn care · Field-ops software',
+  //   title: 'The Crew Scheduler',
+  //   subtitle:
+  //     'Field-operations software that turns recurring lawn-care routes into daily crew schedules',
+  //   accent: '',
+  //   lede: 'A custom scheduling and workforce platform for a commercial lawn-care business. It turns recurring property routes into daily crew schedules, and gives drivers a locked field workflow to complete jobs and track their time.',
+  //   links: [],
+  //   kpis: [
+  //     { value: '2', label: 'workspaces, office & field' },
+  //     { value: 'Daily', label: 'crew schedules from recurring routes' },
+  //     { value: '3', label: 'stack layers, Laravel, Vue 3, MySQL' },
+  //     { value: '1', label: 'custom platform' },
+  //   ],
+  //   panel: {
+  //     label: 'BUILD SCOPE',
+  //     value: 'A custom platform, not an off-the-shelf tool.',
+  //     copy: 'Built around how the business actually runs routes, crews and jobs, with the office and the field each getting the view they need.',
+  //   },
+  //   about: {
+  //     heading: 'The business',
+  //     copy: 'Commercial lawn care runs on repetition: the same properties, on the same cycles, with crews who need to know where to be each day. Doing that from spreadsheets and messages does not scale, so the work moved into one platform where the office plans and the field executes.',
+  //   },
+  //   scope: ['Laravel', 'Vue 3', 'MySQL', 'Custom platform'],
+  //   delivered: {
+  //     heading: 'What the platform does',
+  //     copy: 'The office plans the work; drivers run a workflow that keeps jobs and hours on the record.',
+  //     blocks: [
+  //       {
+  //         label: '01 / OFFICE PLANNING',
+  //         title: 'Customers, properties, services and teams',
+  //         copy: 'The office manages the records that every route is built from.',
+  //       },
+  //       {
+  //         label: '02 / ROUTES',
+  //         title: 'Recurring routes, turned into daily schedules',
+  //         copy: 'Recurring property routes become the daily crew schedules, rather than being rebuilt by hand each morning.',
+  //       },
+  //       {
+  //         label: '03 / FIELD WORKFLOW',
+  //         title: 'A locked workflow for drivers',
+  //         copy: 'Drivers follow a fixed sequence in the field, so a job is worked and closed the same way every time.',
+  //       },
+  //       {
+  //         label: '04 / TIME',
+  //         title: 'Job completion, service timers and time clocks',
+  //         copy: 'Completion, time on each service and hours worked are captured as the work happens.',
+  //       },
+  //     ],
+  //   },
+  //   flow: {
+  //     heading: 'From plan to completed job',
+  //     copy: 'One flow, from the office to the field and back.',
+  //     steps: [
+  //       'Office sets up customers, properties and services',
+  //       'Recurring routes become daily crew schedules',
+  //       'Drivers run the locked field workflow',
+  //       'Completion, service timers and time clocks are recorded',
+  //     ],
+  //   },
+  //   seo: {
+  //     title: 'The Crew Scheduler: Mowing Field-Ops | Mett Global',
+  //     description:
+  //       'How Mett Global built a custom Laravel and Vue 3 scheduling and workforce platform for a commercial lawn-care business.',
+  //   },
+  // },
   {
     slug: 'ittehad-steel',
     market: 'local',
