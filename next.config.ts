@@ -15,11 +15,11 @@ import { RETIRED_SERVICE_REDIRECTS } from './src/lib/services';
 const CONTENT_SECURITY_POLICY = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
-  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com",
+  "connect-src 'self' https://formsubmit.co https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com",
   "img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com",
   "style-src 'self' 'unsafe-inline'",
   "font-src 'self' data:",
-  "form-action 'self'",
+  "form-action 'self' https://formsubmit.co",
   "frame-src 'none'",
   "worker-src 'self'",
   "manifest-src 'self'",
@@ -51,13 +51,53 @@ const SECURITY_HEADERS = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  experimental: {
+    cpus: 2,
+  },
 
   async redirects() {
-    return RETIRED_SERVICE_REDIRECTS.map(({ from, to }) => ({
-      source: from,
-      destination: to,
-      permanent: true,
-    }));
+    return [
+      ...RETIRED_SERVICE_REDIRECTS.map(({ from, to }) => ({
+        source: from,
+        destination: to,
+        permanent: true,
+      })),
+      {
+        source: '/case-studies/:num(\\d+)',
+        destination: '/case-studies',
+        permanent: true,
+      },
+      {
+        source: '/blog/:num(\\d+)',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/services/data-entry',
+        destination: '/services',
+        permanent: true,
+      },
+      {
+        source: '/ai-content-production.html',
+        destination: '/ai-automation-content',
+        permanent: true,
+      },
+      {
+        source: '/insight-ecommerce-operations.html',
+        destination: '/insight-ecommerce-operations',
+        permanent: true,
+      },
+      {
+        source: '/insight-supply-chain-control.html',
+        destination: '/insight-supply-chain-control',
+        permanent: true,
+      },
+      {
+        source: '/audits-diagnostics.html',
+        destination: '/services',
+        permanent: true,
+      },
+    ];
   },
 
   async headers() {

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { validateContactForm } from '@/lib/contact-form-validation';
 import {
   submitForm,
   type SubmissionOutcome,
@@ -37,6 +38,7 @@ export function useFormSubmission() {
   const submit = async (form: HTMLFormElement) => {
     // Synchronous guard catches double-clicks and Enter before React rerenders.
     if (busy.current) return null;
+    if (!validateContactForm(form)) return null;
     const version = revision.current;
     const id = newRequestId();
     busy.current = true;

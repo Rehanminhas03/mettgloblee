@@ -5,6 +5,7 @@ import { useHydrated } from '@/hooks/useHydrated';
 import { track } from '@/lib/track';
 import { FormWithoutJavaScript } from './FormWithoutJavaScript';
 import { SubmissionFeedback } from './SubmissionFeedback';
+import { SubmissionDialog } from './SubmissionDialog';
 
 export function AjaxForm({
   className,
@@ -61,6 +62,7 @@ export function AjaxForm({
                     : submitLabel}
         </button>
         <SubmissionFeedback {...submission} dark={tone === 'dark'} />
+        <SubmissionDialog {...submission} />
       </form>
     </>
   );

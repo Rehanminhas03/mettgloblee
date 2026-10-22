@@ -1,5 +1,6 @@
 import { SERVICES } from '@/lib/services';
 import { AjaxForm } from './AjaxForm';
+import { ContactInput } from './ContactInput';
 
 const SERVICE_OPTIONS = [
   'Not sure yet',
@@ -7,7 +8,7 @@ const SERVICE_OPTIONS = [
 ];
 
 const LABEL =
-  'grid gap-[7px] text-[10px] font-black uppercase tracking-[.11em]';
+  'grid content-start gap-[7px] text-[10px] font-black uppercase tracking-[.11em]';
 const FIELD =
   'w-full rounded-[13px] border border-p-line bg-white p-[14px] font-[inherit] text-[length:inherit] text-p-ink';
 
@@ -37,7 +38,9 @@ export function ContactForm() {
       />
 
       <label className={LABEL}>
-        Name
+        <span>
+          Name <span aria-hidden="true">*</span>
+        </span>
         <input
           name="name"
           maxLength={100}
@@ -56,15 +59,10 @@ export function ContactForm() {
         />
       </label>
       <label className={LABEL}>
-        Email
-        <input
-          type="email"
-          name="email"
-          maxLength={254}
-          autoComplete="email"
-          required
-          className={FIELD}
-        />
+        <span>
+          Email <span aria-hidden="true">*</span>
+        </span>
+        <ContactInput kind="email" maxLength={254} required className={FIELD} />
       </label>
       <label className={LABEL}>
         Service
@@ -75,7 +73,9 @@ export function ContactForm() {
         </select>
       </label>
       <label className={`${LABEL} max-b620:col-span-1 col-span-full`}>
-        What are you trying to improve?
+        <span>
+          What are you trying to improve? <span aria-hidden="true">*</span>
+        </span>
         <textarea
           name="message"
           maxLength={3000}
