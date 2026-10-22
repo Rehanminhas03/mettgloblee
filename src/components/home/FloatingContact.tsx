@@ -31,7 +31,7 @@ export function FloatingContact() {
     <aside
       data-floating-contact
       inert={hidden}
-      className={`fab fixed right-[22px] bottom-[22px] z-[45] flex items-center gap-2 transition-[opacity,transform] duration-300 ${
+      className={`fab fixed right-[22px] bottom-[22px] max-b560:right-4 max-b560:bottom-4 z-[45] flex items-center gap-2 transition-[opacity,transform] duration-300 ${
         hidden ? 'pointer-events-none translate-y-3 opacity-0' : ''
       }`}
     >
