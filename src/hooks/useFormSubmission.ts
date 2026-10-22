@@ -1,10 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import {
-  validateContactForm,
-  showContactErrors,
-} from '@/lib/contact-form-validation';
+import { validateContactForm } from '@/lib/contact-form-validation';
 import {
   submitForm,
   type SubmissionOutcome,
@@ -57,7 +54,6 @@ export function useFormSubmission() {
       busy.current = false;
     }
     const changed = version !== revision.current;
-    if (result.fieldErrors) showContactErrors(form, result.fieldErrors);
     setEdited(changed);
     setState(result.outcome);
     return { ...result, edited: changed };

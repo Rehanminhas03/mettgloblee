@@ -1,8 +1,4 @@
-import {
-  emailError,
-  checkedPhone,
-  type ContactFieldErrors,
-} from './contact-validation';
+import { emailError, checkedPhone } from './contact-validation';
 
 /** Native validation also triggers each contact input's accessible inline error. */
 export function validateContactForm(form: HTMLFormElement): boolean {
@@ -20,16 +16,4 @@ export function validateContactForm(form: HTMLFormElement): boolean {
   const valid = form.checkValidity();
   if (!valid) form.reportValidity();
   return valid;
-}
-
-export function showContactErrors(
-  form: HTMLFormElement,
-  errors: ContactFieldErrors,
-) {
-  for (const name of ['email', 'phone'] as const) {
-    const input = form.elements.namedItem(name);
-    if (!(input instanceof HTMLInputElement) || !errors[name]) continue;
-    input.setCustomValidity(errors[name]);
-    input.checkValidity();
-  }
 }

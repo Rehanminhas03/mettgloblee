@@ -1,11 +1,10 @@
-import type { ContactFieldErrors } from './contact-validation';
+import { FORM_AJAX_ENDPOINT } from './site';
 
 export type SubmissionOutcome =
   'accepted' | 'rejected' | 'unconfirmed' | 'offline';
 export type SubmissionResult = {
   outcome: SubmissionOutcome;
   requestId: string;
-  fieldErrors?: ContactFieldErrors;
 };
 
 /** A timeout means unknown receipt, never proof that a message was not sent. */
@@ -18,6 +17,22 @@ export async function submitForm(
   new FormData(form).forEach((value, key) => {
     if (typeof value === 'string') data[key] = value;
   });
+  // Restore the original browser-to-FormSubmit delivery path. No SMTP account
+  // or hosting relay is involved. Keep the reference in the delivered email.
+  data.request_id = requestId;
+  if (
+    data._subject === 'New Mett Global meeting request' &&
+    data.preferred_start
+  ) {
+    const start = new Date(data.preferred_start);
+    if (Number.isFinite(start.getTime()))
+      data.office_time =
+        new Intl.DateTimeFormat('en-GB', {
+          timeZone: 'Asia/Karachi',
+          dateStyle: 'full',
+          timeStyle: 'short',
+        }).format(start) + ' (Asia/Karachi)';
+  }
 
   const controller = new AbortController();
   let timeout: number;
@@ -29,35 +44,24 @@ export async function submitForm(
   });
   const send = async (): Promise<SubmissionResult> => {
     try {
-      const response = await fetch('/api/enquiries', {
+      const response = await fetch(FORM_AJAX_ENDPOINT, {
         method: 'POST',
         signal: controller.signal,
         headers: {
           'Content-Type': 'application/json',
           Accept: 'application/json',
         },
-        body: JSON.stringify({ ...data, request_id: requestId }),
+        body: JSON.stringify(data),
       });
-      const result = (await response.json()) as Partial<SubmissionResult>;
+      const result = (await response.json()) as { success?: string | boolean };
       const outcome =
-        result.requestId === requestId &&
-        (result.outcome === 'rejected' ||
-          (response.ok && result.outcome === 'accepted'))
-          ? result.outcome
-          : 'unconfirmed';
-      const fieldErrors: ContactFieldErrors = {};
-      if (outcome === 'rejected' && result.fieldErrors) {
-        for (const key of ['email', 'phone'] as const) {
-          const message = result.fieldErrors[key];
-          if (typeof message === 'string' && message.length <= 200)
-            fieldErrors[key] = message;
-        }
-      }
-      return {
-        outcome,
-        requestId,
-        ...(Object.keys(fieldErrors).length ? { fieldErrors } : {}),
-      };
+        response.ok && (result.success === true || result.success === 'true')
+          ? 'accepted'
+          : response.ok &&
+              (result.success === false || result.success === 'false')
+            ? 'rejected'
+            : 'unconfirmed';
+      return { outcome, requestId };
     } catch {
       return { outcome: 'unconfirmed', requestId };
     }

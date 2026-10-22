@@ -4,7 +4,11 @@ import vm from 'node:vm';
 import test from 'node:test';
 import ts from 'typescript';
 const id = '12345678-1234-4234-8234-123456789abc';
-function client(fetch, online = true) {
+function client(
+  fetch,
+  online = true,
+  fields = { name: 'QA', email: 'qa@example.invalid' },
+) {
   const exports = {};
   const timers = new Map();
   let next = 0;
@@ -19,13 +23,15 @@ function client(fetch, online = true) {
   ).outputText;
   vm.runInNewContext(code, {
     exports,
+    require: () => ({
+      FORM_AJAX_ENDPOINT: 'https://formsubmit.co/ajax/contact@mettglobal.com',
+    }),
     fetch,
     AbortController,
     navigator: { onLine: online },
     FormData: class {
       forEach(fn) {
-        fn('QA', 'name');
-        fn('qa@example.invalid', 'email');
+        for (const [key, value] of Object.entries(fields)) fn(value, key);
       }
     },
     window: {
@@ -44,8 +50,8 @@ function client(fetch, online = true) {
     timers,
   };
 }
-function response(outcome = 'accepted', requestId = id, status = 200) {
-  return Response.json({ outcome, requestId }, { status });
+function response(success = 'true', status = 200) {
+  return Response.json({ success }, { status });
 }
 test('offline is definitely unsent and does not call fetch', async () => {
   let sent = false;
@@ -55,9 +61,9 @@ test('offline is definitely unsent and does not call fetch', async () => {
   assert.equal((await c.submit()).outcome, 'offline');
   assert.equal(sent, false);
 });
-test('accepts only an explicit success with matching request reference', async () => {
+test('sends directly to original provider and retains the request reference', async () => {
   const c = client(async (url, options) => {
-    assert.equal(url, '/api/enquiries');
+    assert.equal(url, 'https://formsubmit.co/ajax/contact@mettglobal.com');
     assert.equal(JSON.parse(options.body).request_id, id);
     return response();
   });
@@ -65,8 +71,11 @@ test('accepts only an explicit success with matching request reference', async (
   assert.equal(c.timers.size, 0);
 });
 for (const [name, fetch] of [
-  ['wrong reference', async () => response('accepted', 'wrong')],
-  ['unsuccessful HTTP response', async () => response('accepted', id, 503)],
+  [
+    'missing confirmation',
+    async () => Response.json({ message: 'No confirmation' }),
+  ],
+  ['unsuccessful HTTP response', async () => response('true', 503)],
   [
     'lost response',
     async () => {
@@ -81,29 +90,39 @@ for (const [name, fetch] of [
     assert.equal(c.timers.size, 0);
   });
 test('explicit rejection is distinct from uncertain delivery', async () => {
-  const c = client(async () => response('rejected', id, 422));
+  const c = client(async () => response('false'));
   assert.equal((await c.submit()).outcome, 'rejected');
 });
-test('server field errors reach the client without unrelated fields', async () => {
-  const c = client(async () =>
-    Response.json(
-      {
-        outcome: 'rejected',
-        requestId: id,
-        fieldErrors: {
-          email: 'Check your email address.',
-          phone: 'Check your phone number.',
-          other: 'Do not expose this',
-        },
-      },
-      { status: 400 },
-    ),
+test('meeting email preserves Chicago selection and corresponding Pakistan time', async () => {
+  const c = client(
+    async (_url, options) => {
+      const data = JSON.parse(options.body);
+      assert.equal(data.preferred_start, '2026-10-23T00:00:00.000Z');
+      assert.equal(data.visitor_timezone, 'America/Chicago');
+      assert.match(data.office_time, /23 October 2026/);
+      assert.match(data.office_time, /05:00 \(Asia\/Karachi\)$/);
+      return response(true);
+    },
+    true,
+    {
+      name: 'QA',
+      email: 'qa@example.invalid',
+      _subject: 'New Mett Global meeting request',
+      preferred_start: '2026-10-23T00:00:00.000Z',
+      visitor_timezone: 'America/Chicago',
+    },
   );
-  const r = await c.submit();
-  assert.equal(r.outcome, 'rejected');
-  assert.equal(r.fieldErrors.email, 'Check your email address.');
-  assert.equal(r.fieldErrors.phone, 'Check your phone number.');
-  assert.equal(r.fieldErrors.other, undefined);
+  assert.equal((await c.submit()).outcome, 'accepted');
+});
+
+test('a lost response never triggers a duplicate send', async () => {
+  let attempts = 0;
+  const c = client(async () => {
+    attempts++;
+    throw Error('lost response');
+  });
+  assert.equal((await c.submit()).outcome, 'unconfirmed');
+  assert.equal(attempts, 1);
 });
 test('deadline settles even when fetch ignores AbortSignal completely', async () => {
   let signal;
