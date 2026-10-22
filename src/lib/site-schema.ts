@@ -34,19 +34,110 @@ export const ORGANIZATION_JSON_LD = {
   },
   slogan: 'The Art of Digital Excellence',
   areaServed: [
+    { '@type': 'Country', name: 'United States' },
+    { '@type': 'Country', name: 'United Kingdom' },
+    { '@type': 'Country', name: 'Canada' },
+    { '@type': 'Country', name: 'European Union' },
+    { '@type': 'Country', name: 'United Arab Emirates' },
     { '@type': 'Country', name: 'Pakistan' },
     { '@type': 'Place', name: 'Worldwide' },
   ],
   knowsAbout: [
-    'Digital marketing',
-    'Performance marketing',
-    'Web development',
-    'Software development',
-    'Custom CRM and ERP systems',
-    'AI automation',
-    'E-commerce operations',
-    'Supply chain management',
+    'Digital marketing agency Islamabad',
+    'Amazon FBA reimbursement service',
+    'Courier and 3PL claims recovery',
+    'Automotive and car dealership marketing',
+    'Multichannel e-commerce operations',
+    'Performance marketing and Meta Ads',
+    'Web development and Next.js applications',
+    'Custom CRM and dealership ERP software',
+    'Healthcare and medical clinic SEO',
+    'AI automation workflows and LLMs',
+    'Supply chain and warehouse management',
   ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Mett Global Core Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Amazon FBA Reimbursement & Multi-Channel Logistics Claims',
+          description:
+            'Auditing and recovering lost parcel, damaged inventory, and marketplace claims across FedEx, UPS, USPS, Amazon FBA, Walmart WFS in USA, UK, EU, and Canada. Over £50,000+ recovered.',
+          serviceType: 'Amazon FBA Reimbursement',
+          areaServed: [
+            'United States',
+            'United Kingdom',
+            'Canada',
+            'European Union',
+          ],
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Amazon Multichannel E-Commerce Operations & Supply Chain',
+          description:
+            'Marketplace operations, inventory syncing, catalog management, and reporting across 8 Amazon marketplaces (USA, UK, Canada, UAE, EU) and multichannel storefronts (Walmart, Shopify, eBay, Magento).',
+          serviceType: 'E-Commerce Operations',
+          areaServed: [
+            'United States',
+            'United Kingdom',
+            'Canada',
+            'European Union',
+            'United Arab Emirates',
+          ],
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Digital Marketing & Growth Agency (Islamabad)',
+          description:
+            'Performance marketing, Meta and Google Ads, SEO, creative production, and full-funnel digital marketing for high-growth businesses and dealerships.',
+          serviceType: 'Digital Marketing Agency',
+          areaServed: ['Islamabad', 'Pakistan', 'Worldwide'],
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Car Dealership Marketing & Lead Generation',
+          description:
+            'End-to-end digital marketing, CRM integration, footfall generation, and lead automation for automotive dealerships.',
+          serviceType: 'Automotive Dealership Marketing',
+          areaServed: ['Islamabad', 'Pakistan'],
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Web, Custom ERP & Software Development',
+          description:
+            'Modern high-speed web platforms, e-commerce stores, custom CRMs, dealership ERPs, and workflow integrations.',
+          serviceType: 'Software Development',
+          areaServed: ['United States', 'Pakistan', 'Worldwide'],
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Healthcare & Local Medical Practice SEO',
+          description:
+            'Patient-first website design, HIPAA-compliant digital pathways, and local medical SEO for psychiatric, dental, and medical clinics in the United States (Texas, Illinois).',
+          serviceType: 'Medical SEO & Web Development',
+          areaServed: ['United States'],
+        },
+      },
+    ],
+  },
   founder: [
     {
       '@type': 'Person',

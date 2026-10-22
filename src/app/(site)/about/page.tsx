@@ -21,7 +21,7 @@ export const metadata = pageMetadata('/about');
 const STATS = [
   { value: '2025', label: 'Founded' },
   { value: String(SERVICES.length), label: 'Service lines' },
-  { value: 'Islamabad', label: 'Based in Pakistan' },
+  { value: 'Global', label: 'US · UK · EU · PK' },
 ];
 
 const FACT_HEADING =
@@ -121,7 +121,7 @@ export default function AboutPage() {
             Company facts
           </h2>
           <p className="m-0 max-w-[640px] leading-[1.7] text-[#cfcabd]">
-            Mett Global was founded in 2025 and is based in Islamabad, Pakistan.
+            Mett Global was founded in 2025. Headquartered in Islamabad, Pakistan with active operations across the United States, United Kingdom, Canada, and European Union, the firm provides end-to-end performance marketing, custom software development, AI automation, and multi-channel e-commerce supply chain management.
           </p>
 
           {/* Four headline figures */}

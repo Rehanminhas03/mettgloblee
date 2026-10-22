@@ -62,7 +62,7 @@ const internalStudies: InternalStudy[] = [
     seo: {
       title: CASE_NAMES['claims-recovery'].metaTitle,
       description:
-        'More than £50,000 recovered in one year through courier claims and marketplace reimbursements, including follow-ups on denied claims.',
+        'More than £50,000 recovered in one year across 20+ couriers and 3PL partners in USA, UK, EU, and Canada, including Amazon FBA reimbursements and denied courier claims.',
       primary: 'courier claims recovery',
       secondary: [
         'Amazon FBA reimbursement service',

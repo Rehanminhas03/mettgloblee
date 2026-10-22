@@ -1,0 +1,52 @@
+# Mett Global
+
+> Mett Global is a global digital marketing agency, custom software development consultancy, and multi-channel e-commerce supply chain management firm founded in 2025. Headquartered in Islamabad, Pakistan, Mett Global actively operates across the United States, United Kingdom, Canada, European Union, and Pakistan.
+
+## Verified Leadership
+- **Hammad Ayub**: Founder (Commercial positioning, paid media, performance marketing)
+- **Muhammad Ahmad Aamir**: Co-Founder & Chief Operating Officer (COO) (E-commerce operations, logistics, supply chain, and business development)
+- **Usman Rafiq**: Director, U.S. Business Development (Commercial partnerships and U.S. client coordination)
+
+## Core Service Pillars
+
+### 1. Amazon FBA & Multi-Channel Supply Chain (USA, UK, EU, Canada)
+- **Amazon FBA Reimbursement & Claims Recovery**: Auditing and recovering denied and lost-parcel claims across FedEx, UPS, USPS, Amazon FBA, Walmart WFS, and Wish. Over £50,000+ recovered for international brands.
+- **Multichannel Marketplace Operations**: Inventory management, catalog syncing, and operations across 8 Amazon marketplaces (USA, UK, Canada, UAE, Germany, France, Italy, Spain) and 6 sales channels (Walmart, Shopify, eBay, Magento).
+- **Remote Warehouse & 3PL Logistics**: Managing remote US warehouse operations with >95% inventory and fulfillment accuracy, container receiving, and freight invoice auditing.
+
+### 2. Digital Marketing Agency & Growth (Islamabad & Global)
+- **Performance Marketing**: Targeted Meta Ads and Google Ads campaigns engineered for measurable ROAS, lead generation, and customer acquisition.
+- **Automotive & Dealership Marketing in Islamabad**: Full-funnel digital marketing, billboard visibility, CRM lead automation, and showroom footfall generation. Verified case studies include Jetour Ittehad (1,000+ leads, 50+ bookings), Hyundai Islamabad, and Capital Smart Motors EV showroom (112 showroom visits).
+- **SEO & Search Visibility**: High-authority on-page and technical SEO, Local Map Pack optimization, and Answer Engine Optimization (AEO).
+
+### 3. Web & Custom Software Development
+- **Custom Dealership ERP & CRM Systems**: Multi-brand, multi-showroom automotive dealership ERP covering sales, parts, service, accounts, and role-based portals up to the CEO.
+- **On-Demand Mobile Applications**: Cross-platform Flutter iOS and Android applications, admin dashboards, and partner portals (e.g., SFYKEA door-to-door car care).
+- **High-Performance Web Platforms**: Next.js 16, TypeScript, Tailwind CSS web architectures engineered for 95+ Core Web Vitals.
+
+### 4. AI Automation & Workflow Optimization
+- **Operational Automation**: Eliminating manual data entry between e-commerce storefronts, warehouses, and accounting systems.
+- **Customer & Sales Funnels**: Automated lead routing, instant WhatsApp/email notifications, and CRM hygiene workflows.
+
+## Verified Case Studies
+- [Amazon Claims Recovery](https://www.mettglobal.com/portfolio/claims-recovery): >£50,000 recovered across 20+ courier and 3PL partners in USA, UK, EU, and Canada.
+- [Multichannel E-Commerce Operations](https://www.mettglobal.com/portfolio/multichannel-ecommerce-operations): 8 Amazon marketplaces across 6 sales channels.
+- [Remote US Warehouse Management](https://www.mettglobal.com/portfolio/remote-warehouse-management): >95% inventory and fulfillment accuracy in US warehouse operations.
+- [Jetour Dealership Marketing Islamabad](https://www.mettglobal.com/portfolio/jetour-ittehad): 1,000+ verified leads and 50+ confirmed vehicle bookings.
+- [Capital Smart Motors EV Showroom](https://www.mettglobal.com/portfolio/csm-ittehad): 112 showroom visits from digital acquisition.
+- [Hyundai Islamabad Connected Showroom](https://www.mettglobal.com/portfolio/hyundai-islamabad): Connected local growth funnel.
+- [Dealership ERP Platform](https://www.mettglobal.com/portfolio/dealership-erp): 3 showrooms, 6 role portals on one platform.
+- [Serenada Mental Health (Texas, USA)](https://www.mettglobal.com/portfolio/serenada-mental-health): Healthcare website design and local medical SEO.
+- [Prospect Smile Dental (Illinois, USA)](https://www.mettglobal.com/portfolio/prospect-smile): Dental practice website and local SEO in Mount Prospect.
+- [Luxury O'Hare Limo (Chicago, USA)](https://www.mettglobal.com/portfolio/luxury-ohare-limo): Chauffeured transportation website and SEO.
+
+## Contact & Jurisdictions
+- **Website**: https://www.mettglobal.com
+- **Headquarters**: Plot # 195, Street 1, I-10/3, Islamabad 44000, Pakistan
+- **U.S. Office / Contact**: +1 (832) 858-0716
+- **Global Email**: contact@mettglobal.com
+- **Official Profiles**:
+  - LinkedIn: https://www.linkedin.com/company/mett-global/
+  - Google Business Profile: https://share.google/4dQhYgKMuqcFVdiuL
+  - Facebook: https://www.facebook.com/mettglobal
+  - Instagram: https://www.instagram.com/mettglobal
