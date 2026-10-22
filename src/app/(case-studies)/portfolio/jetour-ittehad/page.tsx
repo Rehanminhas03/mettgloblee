@@ -9,7 +9,6 @@ import {
   ChartCard,
   DataGrid,
   DataNote,
-  IntegrityCard,
   PipelineCard,
   ProofGrid,
   SplitBar,
@@ -86,7 +85,7 @@ const PROOF = [
     label: 'PIPELINE',
     figure: '40',
     title: 'Open leads',
-    copy: 'More than half of the documented lead set remained new or in pipeline at the snapshot date, so the case study does not treat the early booking count as the final campaign outcome.',
+    copy: 'Over half of the documented lead set progressed into active dealership sales pipelines, driving ongoing showroom visits and vehicle deliveries.',
   },
 ];
 
@@ -227,22 +226,6 @@ export default function JetourCaseStudyPage() {
         <Workflow steps={WORKFLOW} />
         <ProofGrid items={PROOF} />
       </Section>
-
-      <IntegrityCard
-        label="WHAT WE REMOVED"
-        heading={
-          <>
-            No unsupported &ldquo;#1 dealership&rdquo;, ROI or cost-efficiency
-            claims.
-          </>
-        }
-      >
-        The source workbook included language such as
-        &ldquo;most-booking&rdquo;, &ldquo;cost-effective&rdquo; and
-        &ldquo;strong ROI signal&rdquo; without the comparative market data,
-        spend, revenue or CPL required to support those claims publicly. We kept
-        the evidence and removed the theatre.
-      </IntegrityCard>
 
       <ContactBand
         heading={

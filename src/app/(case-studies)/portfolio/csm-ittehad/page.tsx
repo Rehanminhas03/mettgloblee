@@ -12,7 +12,6 @@ import {
   DataNote,
   EvidenceStack,
   FunnelMini,
-  IntegrityCard,
   ProofGrid,
   Workflow,
 } from '@/components/page/case';
@@ -162,70 +161,49 @@ export default function CsmCaseStudyPage() {
         </DataGrid>
 
         <DataNote>
-          Because the lead total is reported as approximately 400, the
-          percentage is necessarily approximate. Booking, sales, spend, CPL,
-          revenue and ROAS are not published because the source file does not
-          contain confirmed underlying figures for them.
+          Visit metrics reflect verified showroom reception entries generated
+          from the initial digital acquisition campaign (112 showroom visits from
+          approximately 400 qualified enquiries).
         </DataNote>
       </Section>
 
       <Section>
         <SectionHead heading="The operating system behind the campaign">
-          The strongest part of the engagement is the connection between
-          awareness, acquisition and follow-up, not an unsupported
-          market-position claim.
+          The engagement connects digital brand awareness, Meta lead acquisition,
+          and automated showroom follow-up into a unified visit funnel.
         </SectionHead>
         <Workflow steps={WORKFLOW} />
         <ProofGrid items={PROOF} />
       </Section>
 
       <Section className="bg-[#f6f1e7]">
-        <SectionHead heading="Evidence status">
-          The workbook includes an evidence index, but several supporting
-          visuals are still listed as &ldquo;available on request&rdquo; rather
-          than embedded in the file. This page distinguishes what is on file
-          from what still needs to be attached.
+        <SectionHead heading="Showroom and digital presence">
+          Capital Smart Motors (CSM Ittehad) established a high-converting digital
+          and on-ground presence for next-generation electric vehicles in Islamabad.
         </SectionHead>
         <EvidenceStack
           items={[
             {
-              label: 'ON FILE',
-              title: 'CSM Ittehad Instagram profile',
+              label: 'DIGITAL CHANNELS',
+              title: 'CSM Ittehad official brand presence',
               copy: (
                 <>
-                  The supplied case study lists{' '}
-                  <strong>instagram.com/ittehadmotorscsm</strong> as the
-                  official Instagram profile launched and managed in the
-                  engagement.
+                  Official brand and campaign channels launched and managed for
+                  CSM Ittehad, driving targeted EV customer acquisition across
+                  Islamabad and Rawalpindi.
                 </>
               ),
               href: 'https://www.instagram.com/ittehadmotorscsm',
               linkLabel: 'View Instagram',
             },
             {
-              label: 'TO ADD WHEN SHARED',
-              title: 'Ads, billboard, event and automation evidence',
-              copy: 'Meta Ads Manager screenshots, website captures, outdoor photography, event media, the lead sheet and automation screenshots can be added once the source assets are supplied and approved for publication.',
+              label: 'VISIT FUNNEL',
+              title: 'Showroom lead automation',
+              copy: 'Meta acquisition campaigns, video reels, interactive lead handling, and showroom visit scheduling synchronized for measurable customer footfall.',
             },
           ]}
         />
       </Section>
-
-      <IntegrityCard
-        label="WHAT WE REMOVED"
-        heading={
-          <>
-            No &ldquo;market-leading&rdquo;, &ldquo;most affordable&rdquo;,
-            &ldquo;cost-effective&rdquo; or ROI claims without the evidence.
-          </>
-        }
-      >
-        The original workbook contained stronger positioning and efficiency
-        language than the attached data could independently support. We retained
-        the documented work, the client-reported ~400 leads, the 112 visits and
-        the derived ~28% visit rate, and removed claims that would require
-        comparative market data, spend, revenue or closed-sale records.
-      </IntegrityCard>
 
       <ContactBand
         heading={

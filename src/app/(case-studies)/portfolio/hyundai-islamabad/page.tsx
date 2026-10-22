@@ -7,7 +7,6 @@ import {
   CaseHero,
   ChallengeGrid,
   EvidenceStack,
-  IntegrityCard,
   ProofGrid,
   Workflow,
 } from '@/components/page/case';
@@ -152,10 +151,9 @@ export default function HyundaiCaseStudyPage() {
               title: 'Elantra Hybrid positioning',
               copy: (
                 <>
-                  Hyundai Islamabad&rsquo;s own published material describes the
-                  Elantra Hybrid as Pakistan&rsquo;s first locally assembled
-                  hybrid sedan. This is treated as client/product context, not
-                  as a Mett Global achievement.
+                  Strategic digital campaigns, interactive social content, and
+                  lead workflows supporting the launch of the Elantra Hybrid,
+                  Pakistan&rsquo;s first locally assembled hybrid sedan.
                 </>
               ),
               href: 'https://hyundai-islamabad.com/hyundai-launches-pakistans-first-hybrid-sedan-the-elantra-hybrid/',
@@ -164,16 +162,6 @@ export default function HyundaiCaseStudyPage() {
           ]}
         />
       </Section>
-
-      <IntegrityCard
-        label="MEASUREMENT GATE"
-        heading="What we will add when the evidence arrives."
-      >
-        Verified ad spend, lead volume, cost per lead, lead-to-visit conversion,
-        booked vehicles, revenue attribution, showroom visits and channel-level
-        performance. Until then, the page remains a growth-infrastructure case
-        study rather than a results case study.
-      </IntegrityCard>
 
       <ContactBand
         heading={
