@@ -1,0 +1,180 @@
+[
+  {
+    "test": "Three matching portraits",
+    "passed": true
+  },
+  {
+    "test": "Names match card order",
+    "passed": true
+  },
+  {
+    "test": "320 images load",
+    "passed": true
+  },
+  {
+    "test": "320 no horizontal overflow",
+    "passed": true
+  },
+  {
+    "test": "320 consistent frames",
+    "passed": true,
+    "detail": [
+      {
+        "w": 216,
+        "h": 270.5,
+        "fit": "cover",
+        "loading": "lazy"
+      },
+      {
+        "w": 216,
+        "h": 270.5,
+        "fit": "cover",
+        "loading": "lazy"
+      },
+      {
+        "w": 216,
+        "h": 270.5,
+        "fit": "cover",
+        "loading": "lazy"
+      }
+    ]
+  },
+  {
+    "test": "390 images load",
+    "passed": true
+  },
+  {
+    "test": "390 no horizontal overflow",
+    "passed": true
+  },
+  {
+    "test": "390 consistent frames",
+    "passed": true,
+    "detail": [
+      {
+        "w": 286,
+        "h": 358,
+        "fit": "cover",
+        "loading": "lazy"
+      },
+      {
+        "w": 286,
+        "h": 358,
+        "fit": "cover",
+        "loading": "lazy"
+      },
+      {
+        "w": 286,
+        "h": 358,
+        "fit": "cover",
+        "loading": "lazy"
+      }
+    ]
+  },
+  {
+    "test": "390 accessibility",
+    "passed": true,
+    "detail": []
+  },
+  {
+    "test": "768 images load",
+    "passed": true
+  },
+  {
+    "test": "768 no horizontal overflow",
+    "passed": true
+  },
+  {
+    "test": "768 consistent frames",
+    "passed": true,
+    "detail": [
+      {
+        "w": 245.5625,
+        "h": 307.453125,
+        "fit": "cover",
+        "loading": "lazy"
+      },
+      {
+        "w": 245.5625,
+        "h": 307.453125,
+        "fit": "cover",
+        "loading": "lazy"
+      },
+      {
+        "w": 245.5625,
+        "h": 307.453125,
+        "fit": "cover",
+        "loading": "lazy"
+      }
+    ]
+  },
+  {
+    "test": "1024 images load",
+    "passed": true
+  },
+  {
+    "test": "1024 no horizontal overflow",
+    "passed": true
+  },
+  {
+    "test": "1024 consistent frames",
+    "passed": true,
+    "detail": [
+      {
+        "w": 353.09375,
+        "h": 441.859375,
+        "fit": "cover",
+        "loading": "lazy"
+      },
+      {
+        "w": 353.09375,
+        "h": 441.859375,
+        "fit": "cover",
+        "loading": "lazy"
+      },
+      {
+        "w": 353.09375,
+        "h": 441.859375,
+        "fit": "cover",
+        "loading": "lazy"
+      }
+    ]
+  },
+  {
+    "test": "1440 images load",
+    "passed": true
+  },
+  {
+    "test": "1440 no horizontal overflow",
+    "passed": true
+  },
+  {
+    "test": "1440 consistent frames",
+    "passed": true,
+    "detail": [
+      {
+        "w": 323.203125,
+        "h": 404.5,
+        "fit": "cover",
+        "loading": "lazy"
+      },
+      {
+        "w": 323.203125,
+        "h": 404.5,
+        "fit": "cover",
+        "loading": "lazy"
+      },
+      {
+        "w": 323.21875,
+        "h": 404.515625,
+        "fit": "cover",
+        "loading": "lazy"
+      }
+    ]
+  },
+  {
+    "test": "1440 accessibility",
+    "passed": true,
+    "detail": []
+  }
+]

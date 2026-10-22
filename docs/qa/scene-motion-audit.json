@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-19T21:41:32.776Z",
+  "rows": [
+    {
+      "path": "/portfolio/mytrackee-pakistan",
+      "scene": 1,
+      "textNodes": 7,
+      "title": {
+        "fontSize": "41.8px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/jetour-ittehad",
+      "scene": 1,
+      "textNodes": 10,
+      "title": {
+        "fontSize": "41.8px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/hyundai-islamabad",
+      "scene": 1,
+      "textNodes": 11,
+      "title": {
+        "fontSize": "41.8px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/csm-ittehad",
+      "scene": 1,
+      "textNodes": 9,
+      "title": {
+        "fontSize": "41.8px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/dealership-erp",
+      "scene": 1,
+      "textNodes": 11,
+      "title": {
+        "fontSize": "41.8px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/ittehad-steel",
+      "scene": 1,
+      "textNodes": 7,
+      "title": {
+        "fontSize": "41.8px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/sfykea",
+      "scene": 1,
+      "textNodes": 11,
+      "title": {
+        "fontSize": "41.8px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/mowing",
+      "scene": 1,
+      "textNodes": 8,
+      "title": {
+        "fontSize": "41.8px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/serenada-mental-health",
+      "scene": 1,
+      "textNodes": 8,
+      "title": {
+        "fontSize": "41.8px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/prospect-smile",
+      "scene": 1,
+      "textNodes": 8,
+      "title": {
+        "fontSize": "41.8px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/luxury-ohare-limo",
+      "scene": 1,
+      "textNodes": 10,
+      "title": {
+        "fontSize": "41.8px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/claims-recovery",
+      "scene": 1,
+      "textNodes": 22,
+      "title": {
+        "fontSize": "49.5px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/remote-warehouse-management",
+      "scene": 1,
+      "textNodes": 6,
+      "title": {
+        "fontSize": "49.5px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/procurement-sourcing",
+      "scene": 1,
+      "textNodes": 10,
+      "title": {
+        "fontSize": "49.5px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/courier-3pl-management",
+      "scene": 1,
+      "textNodes": 13,
+      "title": {
+        "fontSize": "49.5px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/multichannel-ecommerce-operations",
+      "scene": 1,
+      "textNodes": 13,
+      "title": {
+        "fontSize": "49.5px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "path": "/portfolio/etsy-in-house-launch",
+      "scene": 1,
+      "textNodes": 6,
+      "title": {
+        "fontSize": "49.5px",
+        "weight": "800"
+      },
+      "reducedActive": 0
+    },
+    {
+      "test": "visible scene plays",
+      "passed": true
+    },
+    {
+      "test": "offscreen scenes pause",
+      "passed": true
+    },
+    {
+      "test": "reduced motion stops every scene",
+      "passed": true
+    }
+  ],
+  "motionFrames": {
+    "frames": 180,
+    "median": 16.699999999999818,
+    "p95": 17,
+    "longFrames": 0
+  },
+  "staticFrames": {
+    "frames": 181,
+    "median": 16.699999999999818,
+    "p95": 17,
+    "longFrames": 0
+  }
+}

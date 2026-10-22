@@ -1,0 +1,20 @@
+[
+  {
+    "path": "/",
+    "formsHidden": true,
+    "emailAvailable": true,
+    "postOnly": true
+  },
+  {
+    "path": "/contact",
+    "formsHidden": true,
+    "emailAvailable": true,
+    "postOnly": true
+  },
+  {
+    "path": "/appointment",
+    "formsHidden": true,
+    "emailAvailable": true,
+    "postOnly": true
+  }
+]

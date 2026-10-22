@@ -1,0 +1,113 @@
+{
+  "changed": [
+    "serenada-mental-health",
+    "luxury-ohare-limo",
+    "sfykea"
+  ],
+  "frames": [
+    {
+      "slug": "serenada-mental-health",
+      "time": 0,
+      "animations": 7
+    },
+    {
+      "slug": "serenada-mental-health",
+      "time": 3000,
+      "animations": 7
+    },
+    {
+      "slug": "serenada-mental-health",
+      "time": 6000,
+      "animations": 7
+    },
+    {
+      "slug": "luxury-ohare-limo",
+      "time": 0,
+      "animations": 6
+    },
+    {
+      "slug": "luxury-ohare-limo",
+      "time": 3000,
+      "animations": 6
+    },
+    {
+      "slug": "luxury-ohare-limo",
+      "time": 6000,
+      "animations": 6
+    },
+    {
+      "slug": "sfykea",
+      "time": 0,
+      "animations": 10
+    },
+    {
+      "slug": "sfykea",
+      "time": 3000,
+      "animations": 10
+    },
+    {
+      "slug": "sfykea",
+      "time": 6000,
+      "animations": 10
+    }
+  ],
+  "unchanged": [
+    {
+      "slug": "claims-recovery",
+      "changedPixels": 0
+    },
+    {
+      "slug": "remote-warehouse-management",
+      "changedPixels": 0
+    },
+    {
+      "slug": "procurement-sourcing",
+      "changedPixels": 0
+    },
+    {
+      "slug": "courier-3pl-management",
+      "changedPixels": 0
+    },
+    {
+      "slug": "multichannel-ecommerce-operations",
+      "changedPixels": 0
+    },
+    {
+      "slug": "etsy-in-house-launch",
+      "changedPixels": 0
+    },
+    {
+      "slug": "mowing",
+      "changedPixels": 0
+    },
+    {
+      "slug": "prospect-smile",
+      "changedPixels": 0
+    },
+    {
+      "slug": "dealership-erp",
+      "changedPixels": 0
+    },
+    {
+      "slug": "jetour-ittehad",
+      "changedPixels": 0
+    },
+    {
+      "slug": "hyundai-islamabad",
+      "changedPixels": 0
+    },
+    {
+      "slug": "csm-ittehad",
+      "changedPixels": 0
+    },
+    {
+      "slug": "ittehad-steel",
+      "changedPixels": 0
+    },
+    {
+      "slug": "mytrackee-pakistan",
+      "changedPixels": 0
+    }
+  ],
+  "errors": []
+}

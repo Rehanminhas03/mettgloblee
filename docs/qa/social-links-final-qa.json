@@ -1,0 +1,42 @@
+[
+  {
+    "test": "Google profile in About Find us",
+    "passed": true
+  },
+  {
+    "test": "Eight About profile links",
+    "passed": true
+  },
+  {
+    "test": "Footer and About profiles match",
+    "passed": true
+  },
+  {
+    "test": "Office directions remain separate",
+    "passed": true
+  },
+  {
+    "test": "About fits 320",
+    "passed": true
+  },
+  {
+    "test": "About company facts accessibility 320",
+    "passed": true
+  },
+  {
+    "test": "About fits 390",
+    "passed": true
+  },
+  {
+    "test": "About company facts accessibility 390",
+    "passed": true
+  },
+  {
+    "test": "About fits 1440",
+    "passed": true
+  },
+  {
+    "test": "About company facts accessibility 1440",
+    "passed": true
+  }
+]

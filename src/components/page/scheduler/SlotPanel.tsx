@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { readableTime } from './calendar';
 import { PREFERRED_HOURS } from './constants';
 import styles from './booking.module.css';
@@ -213,13 +213,15 @@ function DetailsStage({
       <details className={styles.hold}>
         <summary>Optional: add a tentative calendar hold</summary>
         <div className={styles.holdActions}>
-          <a
-            href={googleCalendarHref}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Google Calendar ↗
-          </a>
+          {googleCalendarHref && googleCalendarHref !== '#' ? (
+            <a
+              href={googleCalendarHref}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google Calendar ↗
+            </a>
+          ) : null}
           <button type="button" onClick={onDownloadIcs}>
             Apple / Outlook (.ics)
           </button>

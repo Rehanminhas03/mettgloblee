@@ -10,6 +10,7 @@ export const LEADERSHIP: Leader[] = [
     email: 'hammad@mettglobal.com',
     whatsapp: '+923355005901',
     phone: { href: 'tel:+923355005901', label: '+92 335 500 5901' },
+    linkedin: 'https://www.linkedin.com/in/hammad-ayub-62244922b',
   },
   {
     role: 'Co-Founder & COO',
@@ -18,6 +19,7 @@ export const LEADERSHIP: Leader[] = [
     email: 'ahmad@mettglobal.com',
     whatsapp: '+923046551553',
     phone: PHONE,
+    linkedin: 'https://www.linkedin.com/in/muhammad-ahmad-aamir-scm',
   },
   {
     role: 'Director, U.S. Business Development',

@@ -1,0 +1,210 @@
+{
+  "date": "2026-10-20T17:26:23.486Z",
+  "rows": [
+    {
+      "path": "/portfolio/mytrackee-pakistan",
+      "passed": true
+    },
+    {
+      "path": "/",
+      "passed": true
+    },
+    {
+      "path": "/services",
+      "passed": true
+    },
+    {
+      "path": "/portfolio",
+      "passed": true
+    },
+    {
+      "path": "/case-studies",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/jetour-ittehad",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/hyundai-islamabad",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/csm-ittehad",
+      "passed": true
+    },
+    {
+      "path": "/about",
+      "passed": true
+    },
+    {
+      "path": "/blog",
+      "passed": true
+    },
+    {
+      "path": "/contact",
+      "passed": true
+    },
+    {
+      "path": "/appointment",
+      "passed": true
+    },
+    {
+      "path": "/sitemap",
+      "passed": true
+    },
+    {
+      "path": "/privacy",
+      "passed": true
+    },
+    {
+      "path": "/terms",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/dealership-erp",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/ittehad-steel",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/sfykea",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/mowing",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/serenada-mental-health",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/prospect-smile",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/luxury-ohare-limo",
+      "passed": true
+    },
+    {
+      "path": "/digital-marketing-growth",
+      "passed": true
+    },
+    {
+      "path": "/web-software-development",
+      "passed": true
+    },
+    {
+      "path": "/ai-automation-content",
+      "passed": true
+    },
+    {
+      "path": "/ecommerce-supply-chain",
+      "passed": true
+    },
+    {
+      "path": "/update-amazon-fba-fees-2026",
+      "passed": true
+    },
+    {
+      "path": "/update-eu-ai-act-transparency-2026",
+      "passed": true
+    },
+    {
+      "path": "/update-google-ads-consent-2026",
+      "passed": true
+    },
+    {
+      "path": "/update-eu-ics2-2026",
+      "passed": true
+    },
+    {
+      "path": "/update-google-search-2026",
+      "passed": true
+    },
+    {
+      "path": "/insight-ecommerce-operations",
+      "passed": true
+    },
+    {
+      "path": "/insight-conversion-audit",
+      "passed": true
+    },
+    {
+      "path": "/insight-erp-for-growing-businesses",
+      "passed": true
+    },
+    {
+      "path": "/insight-booking-app-partner-portal",
+      "passed": true
+    },
+    {
+      "path": "/insight-digital-outdoor-marketing",
+      "passed": true
+    },
+    {
+      "path": "/insight-ai-automation",
+      "passed": true
+    },
+    {
+      "path": "/insight-growth-system",
+      "passed": true
+    },
+    {
+      "path": "/insight-supply-chain-control",
+      "passed": true
+    },
+    {
+      "path": "/insight-lead-generation-system",
+      "passed": true
+    },
+    {
+      "path": "/insight-ai-video-brief",
+      "passed": true
+    },
+    {
+      "path": "/insight-utm-governance",
+      "passed": true
+    },
+    {
+      "path": "/insight-product-feed-health",
+      "passed": true
+    },
+    {
+      "path": "/insight-landed-cost-model",
+      "passed": true
+    },
+    {
+      "path": "/insight-3pl-scorecard",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/claims-recovery",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/remote-warehouse-management",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/procurement-sourcing",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/courier-3pl-management",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/multichannel-ecommerce-operations",
+      "passed": true
+    },
+    {
+      "path": "/portfolio/etsy-in-house-launch",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

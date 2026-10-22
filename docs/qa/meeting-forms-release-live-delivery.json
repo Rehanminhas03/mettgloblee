@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-21T17:24:58.711Z",
+  "recipient": "contact@mettglobal.com",
+  "actualRequestsSent": 1,
+  "inboxReceiptVerified": false,
+  "rows": [
+    {
+      "kind": "enquiry",
+      "status": 504,
+      "elapsedMs": 2660,
+      "outcome": "unconfirmed",
+      "requestId": "2725f3b0-c6e8-48e3-bf29-9212e446f0bf",
+      "requestReferenceMatches": true
+    }
+  ],
+  "error": "enquiry did not receive matching explicit acceptance; no automatic retry."
+}

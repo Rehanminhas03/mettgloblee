@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-21T23:40:46.264Z",
+  "pages": 51,
+  "issues": [],
+  "orphaned": [],
+  "resourceChecks": [
+    {
+      "p": "/_next/static/media/7ebf22b5a21034f8-s.p.3j3877k49yy0l.woff2",
+      "status": 200,
+      "location": null
+    },
+    {
+      "p": "/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "status": 200,
+      "location": null
+    },
+    {
+      "p": "/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+      "status": 200,
+      "location": null
+    },
+    {
+      "p": "/_next/static/media/ee8cae686f7b38ff-s.p.24tft1141u6k0.woff2",
+      "status": 200,
+      "location": null
+    },
+    {
+      "p": "/_next/static/chunks/2u8hcs663c-o_.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "p": "/_next/static/chunks/3tr-d1hzwkerj.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "p": "/_next/static/chunks/17bjncdmp88yk.js",
+      "status": 200,
+      "location": null
+    },
+    {
+      "p": "/site.webmanifest",
+      "status": 200,
+      "location": null
+    },
+    {
+      "p": "/favicon.svg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "p": "/favicon.ico",
+      "status": 200,
+      "location": null
+    },
+    {
+      "p": "/favicon-96x96.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "p": "/apple-touch-icon.png",
+      "status": 200,
+      "location": null
+    }
+  ],
+  "liveChecks": [
+    {
+      "url": "http://mettglobal.com/",
+      "status": 308,
+      "location": "https://mettglobal.com/",
+      "robots": null,
+      "contentType": "text/plain"
+    },
+    {
+      "url": "https://mettglobal.com/",
+      "status": 308,
+      "location": "https://www.mettglobal.com/",
+      "robots": null,
+      "contentType": "text/plain"
+    },
+    {
+      "url": "http://www.mettglobal.com/",
+      "status": 308,
+      "location": "https://www.mettglobal.com/",
+      "robots": null,
+      "contentType": "text/plain"
+    },
+    {
+      "url": "https://www.mettglobal.com/robots.txt",
+      "status": 200,
+      "location": null,
+      "robots": null,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "url": "https://www.mettglobal.com/sitemap.xml",
+      "status": 200,
+      "location": null,
+      "robots": null,
+      "contentType": "application/xml"
+    }
+  ],
+  "robots": "User-Agent: *\nAllow: /\n\nSitemap: https://www.mettglobal.com/sitemap.xml\n"
+}

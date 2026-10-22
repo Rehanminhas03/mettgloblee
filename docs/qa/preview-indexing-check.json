@@ -1,0 +1,12 @@
+[
+  {
+    "env": "preview",
+    "value": "noindex, nofollow",
+    "passed": true
+  },
+  {
+    "env": "production",
+    "value": null,
+    "passed": true
+  }
+]

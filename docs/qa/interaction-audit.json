@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-20T11:01:09.225Z",
+  "rows": [
+    {
+      "test": "Enquiry accepted with mocked endpoint",
+      "passed": true
+    },
+    {
+      "test": "Failure keeps enquiry available for retry",
+      "passed": true
+    },
+    {
+      "test": "Escape closes mobile menu and restores toggle focus",
+      "passed": true
+    },
+    {
+      "test": "Navbar compacts, hides down, returns up",
+      "passed": true,
+      "hidden": "matrix(1, 0, 0, 1, 0, -122.4)",
+      "shown": "matrix(1, 0, 0, 1, 0, 0)"
+    },
+    {
+      "test": "Navbar fits 320px",
+      "passed": true
+    },
+    {
+      "test": "Navbar fits 390px",
+      "passed": true
+    },
+    {
+      "test": "Navbar fits 768px",
+      "passed": true
+    },
+    {
+      "test": "Navbar fits 1001px",
+      "passed": true
+    },
+    {
+      "test": "Navbar fits 1024px",
+      "passed": true
+    },
+    {
+      "test": "Navbar fits 1440px",
+      "passed": true
+    },
+    {
+      "test": "Reduced motion illustration is visible without active animation",
+      "passed": true
+    },
+    {
+      "test": "Meeting date, slot, details and confirmation with mocked endpoint",
+      "passed": true
+    }
+  ],
+  "mockedRequests": 2,
+  "externalMessagesSent": 0
+}

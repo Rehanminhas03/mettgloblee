@@ -1,0 +1,74 @@
+[
+  {
+    "viewport": {
+      "width": 1876,
+      "height": 687
+    },
+    "headingToLeftCard": 0,
+    "copyToRightCard": 0,
+    "headerTopDifference": 0,
+    "stacked": true,
+    "cardsAligned": true,
+    "overflow": 0
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "headingToLeftCard": 0,
+    "copyToRightCard": 0,
+    "headerTopDifference": 0,
+    "stacked": true,
+    "cardsAligned": true,
+    "overflow": 0
+  },
+  {
+    "viewport": {
+      "width": 1366,
+      "height": 560
+    },
+    "headingToLeftCard": 0,
+    "copyToRightCard": 0,
+    "headerTopDifference": 0,
+    "stacked": true,
+    "cardsAligned": true,
+    "overflow": 0
+  },
+  {
+    "viewport": {
+      "width": 820,
+      "height": 1180
+    },
+    "headingToLeftCard": 0,
+    "copyToRightCard": null,
+    "headerTopDifference": null,
+    "stacked": true,
+    "cardsAligned": true,
+    "overflow": 0
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "headingToLeftCard": 0,
+    "copyToRightCard": null,
+    "headerTopDifference": null,
+    "stacked": true,
+    "cardsAligned": true,
+    "overflow": 0
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "headingToLeftCard": 0,
+    "copyToRightCard": null,
+    "headerTopDifference": null,
+    "stacked": true,
+    "cardsAligned": true,
+    "overflow": 0
+  }
+]

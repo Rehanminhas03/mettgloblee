@@ -47,17 +47,27 @@ export const ORGANIZATION_JSON_LD = {
     'E-commerce operations',
     'Supply chain management',
   ],
-  founder: {
-    '@type': 'Person',
-    name: LEADERSHIP[0].name,
-    jobTitle: LEADERSHIP[0].role,
-  },
+  founder: [
+    {
+      '@type': 'Person',
+      name: LEADERSHIP[0].name,
+      jobTitle: LEADERSHIP[0].role,
+      sameAs: LEADERSHIP[0].linkedin ? [LEADERSHIP[0].linkedin] : undefined,
+    },
+    {
+      '@type': 'Person',
+      name: LEADERSHIP[1].name,
+      jobTitle: LEADERSHIP[1].role,
+      sameAs: LEADERSHIP[1].linkedin ? [LEADERSHIP[1].linkedin] : undefined,
+    },
+  ],
   employee: LEADERSHIP.map(person => ({
     '@type': 'Person',
     name: person.name,
     jobTitle: person.role,
     email: person.email,
     worksFor: { '@id': `${SITE_URL}/#organization` },
+    ...(person.linkedin ? { sameAs: [person.linkedin] } : {}),
   })),
   address: {
     '@type': 'PostalAddress',

@@ -20,8 +20,8 @@ const SOCIAL_BADGE =
 const SOCIALS = [
   {
     href: BUSINESS_PROFILE_URL,
-    label: 'Google Business Profile',
-    aria: 'Mett Global on Google',
+    label: 'Google Business',
+    aria: 'Mett Global on Google Business Profile',
     badge: (
       <span className={SOCIAL_BADGE}>
         <svg
@@ -181,13 +181,84 @@ const SOCIALS = [
       </span>
     ),
   },
+  {
+    href: SOCIAL_URLS.reddit,
+    label: 'Reddit',
+    aria: 'Mett Global on Reddit',
+    badge: (
+      <span className={`${SOCIAL_BADGE} border-0 !bg-[#ff4500] text-white`}>
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-[14px] w-[14px]"
+          fill="currentColor"
+        >
+          <path d="M24 11.5c0-1.65-1.35-3-3-3-.96 0-1.86.48-2.42 1.24-1.64-1-3.75-1.64-6.07-1.72.08-1.1.4-3.05 1.52-3.7.72-.4 1.73-.24 3 .5C17.2 6.3 18.46 7.5 20 7.5c1.65 0 3-1.35 3-3s-1.35-3-3-3c-1.38 0-2.54.94-2.88 2.22-1.43-.72-2.6-.74-3.5-.32-1.1.52-1.48 2.28-1.57 3.42-2.33.04-4.44.72-6.08 1.72C5.56 9.03 4.66 8.55 3.7 8.55c-1.65 0-3 1.35-3 3 0 1.05.57 1.97 1.42 2.48-.06.4-.12.8-.12 1.22 0 6.07 5.38 11 12 11s12-4.93 12-11c0-.42-.06-.82-.12-1.22.85-.51 1.42-1.43 1.42-2.48zM5.5 14.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5zm12.5 4.8c-1.42 1.05-3.21 1.7-5 1.7s-3.58-.65-5-1.7c-.24-.18-.3-.52-.12-.76.18-.24.52-.3.76-.12 1.15.85 2.65 1.38 4.36 1.38s3.21-.53 4.36-1.38c.24-.18.58-.12.76.12.18.24.12.58-.12.76zm-1-3.3c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+        </svg>
+      </span>
+    ),
+  },
+  {
+    href: SOCIAL_URLS.quora,
+    label: 'Quora',
+    aria: 'Mett Global on Quora',
+    badge: (
+      <span className={`${SOCIAL_BADGE} border-0 !bg-[#a72822] text-white`}>
+        <svg
+          viewBox="170 180 470 490"
+          aria-hidden="true"
+          className="h-[14px] w-[14px]"
+          fill="currentColor"
+        >
+          <path d="M517.363 617.861s.052-.17.119-.348c64.893-40.24 108.288-113.652 108.288-201.617 0-169.462-109.745-229.657-224.465-229.657-108.272 0-225.929 85.062-225.929 232.924 0 169.461 109.72 231.614 224.495 231.614 18.038 0 35.572-2.163 52.399-6.178 0 0 .25.084.41.108 45.218 80.793 112.562 61.241 129.939 54.873 0 0-2.331-14.22-6.411-40.685-32.488-.83-46.964-17.136-58.845-41.034zm-86.841-27.517c-10.28 2.526-20.674 3.515-30.721 3.515-53.408 0-117.372-23.066-117.372-167.022 0-143.926 66.987-183.668 120.399-183.668 53.4 0 115.507 34.25 115.507 178.19 0 65.249-13.275 106.74-32.8 132.656a1.816 1.816 0 0 1-.535-.053c-44.412-57.303-102.041-43.57-115.859-37.348 0 0 1.763 13.143 5.417 37.033 30.483-.009 45.579 15.798 56.124 36.213-.1.221-.16.484-.16.484z" />
+        </svg>
+      </span>
+    ),
+  },
+  {
+    href: SOCIAL_URLS.clutch,
+    label: 'Clutch',
+    aria: 'Mett Global on Clutch',
+    badge: (
+      <span className={`${SOCIAL_BADGE} border-0 !bg-[#142d42] text-white`}>
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-[14px] w-[14px]"
+        >
+          <path
+            d="M16.5 17.5c-1.3 1.3-3.1 2-5 2-3.8 0-6.6-3-6.6-7.1 0-4.1 2.8-7.1 6.6-7.1 1.8 0 3.6.7 4.9 2l.5.5 2.3-2.3-.5-.5C16.9 3.1 14.3 2 11.5 2 5.9 2 1.6 6.5 1.6 12.4s4.3 10.4 9.9 10.4c2.8 0 5.4-1.1 7.3-3l.5-.5-2.3-2.3-.5.5z"
+            fill="#ffffff"
+          />
+          <circle cx="18" cy="18" r="2.2" fill="#ff3d2e" />
+        </svg>
+      </span>
+    ),
+  },
+  {
+    href: SOCIAL_URLS.crunchbase,
+    label: 'Crunchbase',
+    aria: 'Mett Global on Crunchbase',
+    badge: (
+      <span className={`${SOCIAL_BADGE} border-0 !bg-[#0066ff] text-white`}>
+        <svg
+          viewBox="3.5 3.5 17 13"
+          aria-hidden="true"
+          className="h-[15px] w-[15px]"
+          fill="currentColor"
+        >
+          <path d="M7.8 8c-2.4 0-4 1.7-4 3.9s1.6 3.9 4 3.9c1.7 0 2.9-.8 3.5-2.1l-1.9-.6c-.3.7-.8 1.1-1.5 1.1-1.2 0-2-.8-2-2.3s.8-2.3 2-2.3c.7 0 1.2.4 1.5 1.1l1.9-.6c-.6-1.3-1.8-2.1-3.5-2.1zm5.7-4.4v4.9c.7-.6 1.5-.9 2.5-.9 2.4 0 4.2 1.7 4.2 4s-1.8 4-4.2 4c-1 0-1.8-.3-2.5-.9v.8h-2.1V3.6h2.1zm2.3 5.5c-1.3 0-2.2.9-2.2 2.5s.9 2.5 2.2 2.5 2.2-.9 2.2-2.5-.9-2.5-2.2-2.5z" />
+        </svg>
+      </span>
+    ),
+  },
 ];
 
 /** `.footer`, the homepage footer, used on every page. */
 export function SiteFooter() {
   return (
-    <footer className="text-ink px-pad max-b900:grid-cols-2 max-b900:gap-x-8 max-b900:gap-y-10 max-b900:px-7 max-b900:pt-14 max-b900:pb-6 max-b560:grid-cols-1 grid grid-cols-[1.5fr_1fr_.8fr_.8fr] gap-x-[48px] gap-y-12 bg-[#f4f0e8] pt-16 pb-7">
-      <div className="max-b900:col-span-full max-b560:col-auto">
+    <footer className="text-ink px-pad max-b1000:grid-cols-2 max-b1000:gap-x-8 max-b1000:gap-y-10 max-b900:px-7 max-b900:pt-14 max-b900:pb-6 max-b560:grid-cols-1 grid grid-cols-[1.4fr_1fr_0.9fr_1.3fr] gap-x-10 gap-y-12 bg-[#f4f0e8] pt-16 pb-7">
+      <div className="max-b1000:col-span-full max-b560:col-auto">
         <SiteLogo />
         <p className="text-muted mt-5 mb-0 max-w-[380px] text-sm leading-[1.7]">
           Strategy, creative, technology and operations brought together for
@@ -255,11 +326,11 @@ export function SiteFooter() {
         </div>
       </nav>
 
-      <div>
+      <div className="max-b1000:col-span-full max-b560:col-auto">
         <h2 className="text-gold m-0 mb-5 text-[10px] tracking-[.18em] uppercase">
           Connect
         </h2>
-        <div className="grid gap-3">
+        <div className="grid grid-cols-2 gap-x-5 gap-y-2.5">
           {SOCIAL_PROFILES.map(profile => {
             const social = SOCIALS.find(item => item.href === profile.href);
             return (
@@ -269,10 +340,12 @@ export function SiteFooter() {
                 target="_blank"
                 rel="noopener"
                 aria-label={social?.aria || `Mett Global on ${profile.label}`}
-                className="flex items-center gap-[10px] text-[13px]"
+                className="group flex items-center gap-2.5 text-[13px] text-ink hover:text-gold transition-colors font-medium whitespace-nowrap"
               >
-                {social?.badge}
-                {profile.label}
+                <span className="transition-transform duration-200 group-hover:scale-110 flex-shrink-0">
+                  {social?.badge}
+                </span>
+                <span>{profile.label}</span>
               </a>
             );
           })}

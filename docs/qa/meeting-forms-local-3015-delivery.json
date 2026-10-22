@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-21T17:42:03.980Z",
+  "recipient": "contact@mettglobal.com",
+  "actualRequestsSent": 2,
+  "inboxReceiptVerified": false,
+  "rows": [
+    {
+      "kind": "enquiry",
+      "status": 200,
+      "elapsedMs": 1812,
+      "outcome": "accepted",
+      "requestId": "4676bee3-92fd-4bee-985b-a7a5ff340621",
+      "requestReferenceMatches": true,
+      "visibleSuccess": true
+    },
+    {
+      "kind": "meeting",
+      "status": 200,
+      "elapsedMs": 1353,
+      "outcome": "accepted",
+      "requestId": "f6932ef1-a17f-4bfd-ae62-62c82266b4c1",
+      "requestReferenceMatches": true,
+      "visitorTimezone": "America/Chicago",
+      "preferredTime": "19:00",
+      "preferredStart": "2026-10-23T00:00:00.000Z",
+      "visibleSuccess": true
+    }
+  ]
+}

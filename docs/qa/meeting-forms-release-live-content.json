@@ -1,0 +1,53 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "newPhone": true,
+    "whatsappPreserved": true,
+    "removedPhoneAbsent": true,
+    "googleProfile": true,
+    "mapsSeparate": true,
+    "portraitsAbsent": true,
+    "calendlyAbsent": true,
+    "indexingAllowed": true
+  },
+  {
+    "path": "/contact",
+    "status": 200,
+    "newPhone": true,
+    "whatsappPreserved": true,
+    "removedPhoneAbsent": true,
+    "googleProfile": true,
+    "mapsSeparate": true,
+    "portraitsAbsent": true,
+    "calendlyAbsent": true,
+    "indexingAllowed": true
+  },
+  {
+    "path": "/appointment",
+    "status": 200,
+    "newPhone": true,
+    "whatsappPreserved": true,
+    "removedPhoneAbsent": true,
+    "googleProfile": true,
+    "mapsSeparate": true,
+    "portraitsAbsent": true,
+    "calendlyAbsent": true,
+    "indexingAllowed": true,
+    "premiumHeading": true,
+    "originalLogo": true,
+    "apiForm": true
+  },
+  {
+    "path": "/about",
+    "status": 200,
+    "newPhone": true,
+    "whatsappPreserved": true,
+    "removedPhoneAbsent": true,
+    "googleProfile": true,
+    "mapsSeparate": true,
+    "portraitsAbsent": true,
+    "calendlyAbsent": true,
+    "indexingAllowed": true
+  }
+]

@@ -1,0 +1,284 @@
+{
+  "rows": [
+    {
+      "name": "chromium duplicate clicks send one request",
+      "passed": true
+    },
+    {
+      "name": "chromium accepted request locks only unchanged submit",
+      "passed": true
+    },
+    {
+      "name": "chromium explicit update available after edits",
+      "passed": true
+    },
+    {
+      "name": "chromium reject retains editable fields",
+      "passed": true
+    },
+    {
+      "name": "chromium reject never falsely shows success",
+      "passed": true
+    },
+    {
+      "name": "chromium unknown retains editable fields",
+      "passed": true
+    },
+    {
+      "name": "chromium unknown never falsely shows success",
+      "passed": true
+    },
+    {
+      "name": "chromium transport retains editable fields",
+      "passed": true
+    },
+    {
+      "name": "chromium transport never falsely shows success",
+      "passed": true
+    },
+    {
+      "name": "chromium slow progress and editable fields",
+      "passed": true
+    },
+    {
+      "name": "chromium sends captured original, not later edits",
+      "passed": true
+    },
+    {
+      "name": "chromium later edits survive original success",
+      "passed": true
+    },
+    {
+      "name": "chromium offline never sends",
+      "passed": true
+    },
+    {
+      "name": "chromium changing time preserves meeting draft",
+      "passed": true
+    },
+    {
+      "name": "chromium unknown meeting remains editable with explicit retry",
+      "passed": true
+    },
+    {
+      "name": "chromium meeting edits survive late confirmation",
+      "passed": true
+    },
+    {
+      "name": "chromium meeting confirmed only on explicit acceptance",
+      "passed": true
+    },
+    {
+      "name": "client deadline never leaves form locked",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /contact 320",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /contact 320",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /contact 320",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /appointment 320",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /appointment 320",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /appointment 320",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /about 320",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /about 320",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /about 320",
+      "passed": true
+    },
+    {
+      "name": "chromium layout / 320",
+      "passed": true
+    },
+    {
+      "name": "chromium call links / 320",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved / 320",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /contact 390",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /contact 390",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /contact 390",
+      "passed": true
+    },
+    {
+      "name": "chromium accessibility /contact",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "name": "chromium layout /appointment 390",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /appointment 390",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /appointment 390",
+      "passed": true
+    },
+    {
+      "name": "chromium accessibility /appointment",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "name": "chromium layout /about 390",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /about 390",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /about 390",
+      "passed": true
+    },
+    {
+      "name": "chromium layout / 390",
+      "passed": true
+    },
+    {
+      "name": "chromium call links / 390",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved / 390",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /contact 820",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /contact 820",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /contact 820",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /appointment 820",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /appointment 820",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /appointment 820",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /about 820",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /about 820",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /about 820",
+      "passed": true
+    },
+    {
+      "name": "chromium layout / 820",
+      "passed": true
+    },
+    {
+      "name": "chromium call links / 820",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved / 820",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /contact 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /contact 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /contact 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /appointment 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /appointment 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /appointment 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /about 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /about 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /about 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium layout / 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium call links / 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved / 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium no uncaught client errors",
+      "passed": true,
+      "errors": []
+    }
+  ],
+  "externalMessagesSent": 0
+}

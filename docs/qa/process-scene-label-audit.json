@@ -1,0 +1,410 @@
+[
+  {
+    "width": 1440,
+    "path": "/portfolio/mytrackee-pakistan",
+    "labels": 7,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/jetour-ittehad",
+    "labels": 10,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/hyundai-islamabad",
+    "labels": 11,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/csm-ittehad",
+    "labels": 9,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/dealership-erp",
+    "labels": 11,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/ittehad-steel",
+    "labels": 7,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/sfykea",
+    "labels": 17,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/mowing",
+    "labels": 8,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/serenada-mental-health",
+    "labels": 17,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/prospect-smile",
+    "labels": 8,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/luxury-ohare-limo",
+    "labels": 13,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/claims-recovery",
+    "labels": 22,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/remote-warehouse-management",
+    "labels": 6,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/procurement-sourcing",
+    "labels": 10,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/courier-3pl-management",
+    "labels": 13,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/multichannel-ecommerce-operations",
+    "labels": 13,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 1440,
+    "path": "/portfolio/etsy-in-house-launch",
+    "labels": 6,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/mytrackee-pakistan",
+    "labels": 7,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/jetour-ittehad",
+    "labels": 10,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/hyundai-islamabad",
+    "labels": 11,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/csm-ittehad",
+    "labels": 9,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/dealership-erp",
+    "labels": 11,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/ittehad-steel",
+    "labels": 7,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/sfykea",
+    "labels": 17,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/mowing",
+    "labels": 8,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/serenada-mental-health",
+    "labels": 17,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/prospect-smile",
+    "labels": 8,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/luxury-ohare-limo",
+    "labels": 13,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/claims-recovery",
+    "labels": 22,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/remote-warehouse-management",
+    "labels": 6,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/procurement-sourcing",
+    "labels": 10,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/courier-3pl-management",
+    "labels": 13,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/multichannel-ecommerce-operations",
+    "labels": 13,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "path": "/portfolio/etsy-in-house-launch",
+    "labels": 6,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/mytrackee-pakistan",
+    "labels": 7,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/jetour-ittehad",
+    "labels": 10,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/hyundai-islamabad",
+    "labels": 11,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/csm-ittehad",
+    "labels": 9,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/dealership-erp",
+    "labels": 11,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/ittehad-steel",
+    "labels": 7,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/sfykea",
+    "labels": 17,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/mowing",
+    "labels": 8,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/serenada-mental-health",
+    "labels": 17,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/prospect-smile",
+    "labels": 8,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/luxury-ohare-limo",
+    "labels": 13,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/claims-recovery",
+    "labels": 22,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/remote-warehouse-management",
+    "labels": 6,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/procurement-sourcing",
+    "labels": 10,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/courier-3pl-management",
+    "labels": 13,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/multichannel-ecommerce-operations",
+    "labels": 13,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  },
+  {
+    "width": 320,
+    "path": "/portfolio/etsy-in-house-launch",
+    "labels": 6,
+    "clipped": [],
+    "collisions": [],
+    "overflow": 0
+  }
+]

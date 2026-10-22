@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-20T17:32:05.316Z",
+  "rows": [
+    {
+      "width": 320,
+      "profiles": 1,
+      "mainProfileLinks": 0,
+      "text": "Google Business Profile",
+      "underConnect": true,
+      "googleIcon": true,
+      "addressProfileLinks": 0,
+      "directions": "https://maps.app.goo.gl/9PrdtKZQhU1X93em7",
+      "overflow": 0,
+      "clipped": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "profiles": 1,
+      "mainProfileLinks": 0,
+      "text": "Google Business Profile",
+      "underConnect": true,
+      "googleIcon": true,
+      "addressProfileLinks": 0,
+      "directions": "https://maps.app.goo.gl/9PrdtKZQhU1X93em7",
+      "overflow": 0,
+      "clipped": false,
+      "violations": []
+    },
+    {
+      "width": 820,
+      "profiles": 1,
+      "mainProfileLinks": 0,
+      "text": "Google Business Profile",
+      "underConnect": true,
+      "googleIcon": true,
+      "addressProfileLinks": 0,
+      "directions": "https://maps.app.goo.gl/9PrdtKZQhU1X93em7",
+      "overflow": 0,
+      "clipped": false,
+      "violations": []
+    },
+    {
+      "width": 1024,
+      "profiles": 1,
+      "mainProfileLinks": 0,
+      "text": "Google Business Profile",
+      "underConnect": true,
+      "googleIcon": true,
+      "addressProfileLinks": 0,
+      "directions": "https://maps.app.goo.gl/9PrdtKZQhU1X93em7",
+      "overflow": 0,
+      "clipped": false,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "profiles": 1,
+      "mainProfileLinks": 0,
+      "text": "Google Business Profile",
+      "underConnect": true,
+      "googleIcon": true,
+      "addressProfileLinks": 0,
+      "directions": "https://maps.app.goo.gl/9PrdtKZQhU1X93em7",
+      "overflow": 0,
+      "clipped": false,
+      "violations": []
+    }
+  ],
+  "failures": []
+}

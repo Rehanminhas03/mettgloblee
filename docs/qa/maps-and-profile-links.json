@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-20T17:25:52.250Z",
+  "rows": [
+    {
+      "width": 320,
+      "path": "/",
+      "directions": 2,
+      "profiles": 1,
+      "footerDirections": 1,
+      "footerProfile": 1,
+      "overflow": 0,
+      "clipped": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "path": "/contact",
+      "directions": 2,
+      "profiles": 2,
+      "footerDirections": 1,
+      "footerProfile": 1,
+      "overflow": 0,
+      "clipped": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/",
+      "directions": 2,
+      "profiles": 1,
+      "footerDirections": 1,
+      "footerProfile": 1,
+      "overflow": 0,
+      "clipped": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/contact",
+      "directions": 2,
+      "profiles": 2,
+      "footerDirections": 1,
+      "footerProfile": 1,
+      "overflow": 0,
+      "clipped": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/",
+      "directions": 2,
+      "profiles": 1,
+      "footerDirections": 1,
+      "footerProfile": 1,
+      "overflow": 0,
+      "clipped": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/contact",
+      "directions": 2,
+      "profiles": 2,
+      "footerDirections": 1,
+      "footerProfile": 1,
+      "overflow": 0,
+      "clipped": [],
+      "violations": []
+    }
+  ],
+  "failures": []
+}

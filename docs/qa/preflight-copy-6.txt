@@ -1,0 +1,809 @@
+
+
+========== /insight-ai-video-brief ==========
+TITLE: The AI Video Brief | Mett Global Blog
+DESCRIPTION: A practical briefing framework for AI-assisted video covering audience, objective, hook, proof, structure, visual direction and human review.
+
+BLOG / AI VIDEO
+The brief that makes AI video useful instead of generic
+
+Generation tools can produce footage quickly, but without a disciplined brief they often produce polished content with no clear commercial job.
+
+By Mett Global
+METT GLOBAL FIELD GUIDE · AI VIDEO & CONTENT · 2 MIN READ
+AUDIENCE
+HOOK
+PROOF
+VISUAL
+REVIEW
+Define the one audience
+
+State who the video is for and what they already know. A video trying to speak to everyone usually becomes generic because the model has no reason to make specific creative choices.
+
+Give the video one job
+
+Awareness, explanation, lead generation and retargeting need different structures. Define the desired next action before writing the script.
+
+Write the hook around a real problem
+
+The first seconds should establish relevance. Use a credible problem, tension, question or outcome rather than an empty attention trick.
+
+Specify proof and constraints
+
+List claims that are allowed, claims that are not supported, required product details, brand language and visual references. This prevents the generation process from inventing authority.
+
+Review like an editor
+
+Check continuity, text accuracy, brand fit, pacing, voice, claims and platform requirements. AI reduces production friction; it does not remove the publishing responsibility.
+
+A useful AI video workflow begins with a better brief and ends with a human quality gate.
+Need a repeatable content workflow?
+Explore AI Automation & Content
+
+========== /insight-utm-governance ==========
+TITLE: UTMs That Survive Reporting | Mett Global Blog
+DESCRIPTION: A practical UTM governance system for consistent campaign naming, cleaner reporting and fewer attribution surprises.
+
+BLOG / MARKETING MEASUREMENT
+UTMs that survive reporting: a practical campaign naming system
+
+Attribution breaks quietly. One person types “Meta,” another types “facebook,” and a third leaves the campaign field blank. The ads still run, but the reporting starts telling several incompatible stories.
+
+By Mett Global
+METT GLOBAL OPERATOR PLAYBOOK · CAMPAIGN MEASUREMENT · 4 MIN READ
+CAMPAIGN URL
+One naming contract. Cleaner reporting.
+utm_source
+meta
+where traffic began
+utm_medium
+paid_social
+how it arrived
+utm_campaign
+ev3-isb-launch
+business initiative
+utm_content
+reel-01
+creative variation
+utm_term
+family-suv
+keyword or audience
+UTM tags are a data contract
+
+UTM parameters are not a substitute for analytics design, but they are a small and powerful contract between the person launching a campaign and the people reading the results. Google Analytics describes them as custom URL parameters that identify the campaigns and referrals sending traffic to a property. The operational implication is simple: the values need to be consistent enough to group together and specific enough to answer a decision.
+
+Use source for the platform or referrer, medium for the channel type, and campaign for the business initiative. Add content when several ads share the same campaign and term when keyword or audience detail matters. Treat the extra fields as a controlled vocabulary, not as free-form notes.
+
+Choose a naming grammar before you need the report
+
+A useful grammar is short, lowercase and readable by someone who did not build the campaign. For example:
+
+utm_source=meta&utm_medium=paid_social&utm_campaign=ev3-isb-launch&utm_content=reel-01
+
+The example carries four decisions: the source is Meta, the medium is paid social, the campaign is an Islamabad EV3 launch and the creative is the first reel. The exact vocabulary will vary by business. The important part is that the vocabulary is documented and reused.
+
+Pick one spelling for every source and medium. Keep values lowercase.
+Use a predictable campaign pattern such as offer-market-period.
+Keep creative labels stable enough to compare formats, hooks or variants.
+Never put customer names, email addresses or other personal information in a URL parameter.
+Build the control around the link, not around memory
+
+Most UTM errors happen before the URL reaches the ad platform. Give the team one campaign builder or spreadsheet with dropdowns for source and medium, a required campaign field, an owner, a launch date and the final destination URL. A generated URL should be reviewed like a small piece of production data: does the destination load, does the naming match the brief, and will the value appear in the intended report?
+
+Keep a short dictionary beside the builder. Define whether “paid_social” or “paid-social” is valid, whether market is encoded as “pk” or “pakistan,” and which campaign components are mandatory. Google notes that UTM values are case-sensitive, so inconsistent capitalization can split what looks like one campaign into multiple rows.
+
+Audit the report for three failure modes
+
+Unclassified traffic: a required parameter is missing and the report shows “(not set).” Fragmented traffic: capitalization or spelling creates several buckets for one channel. Misleading detail: a campaign name changes halfway through the flight, so the trend looks like performance changed when only the label changed.
+
+Run a weekly exception report for missing source, missing medium, new values and sudden volume from an unexpected value. Assign a person to close the exceptions. Governance only works when somebody owns the cleanup loop.
+
+A 30-minute rollout
+List the channels, markets and campaign types the business actually uses.
+Approve a small vocabulary and write two or three valid examples.
+Put those choices into a controlled builder with an owner and review date.
+Update dashboard filters so the new values map to the decisions leadership makes.
+Review the first week of links and fix the process, not just the individual URL.
+Clean attribution is not a reporting trick. It is the trail that connects a campaign decision to a business outcome.
+PRIMARY SOURCE
+Google Analytics: URL builders and custom campaign URLs
+
+Google’s guidance covers the standard UTM parameters, consistent naming, case sensitivity and the Campaign URL Builder. Platform interfaces and reporting rules can change, so verify the current documentation before changing a live measurement setup.
+
+Need a measurement system that the team can trust?
+Explore Digital Marketing & Growth
+
+========== /insight-product-feed-health ==========
+TITLE: The Product Feed Is Part of the Storefront | Mett Global Blog
+DESCRIPTION: A practical Merchant Center product-feed health check for stable IDs, accurate titles, strong images, price parity and better eligibility.
+
+BLOG / COMMERCE SYSTEMS
+The product feed is part of the storefront: a Merchant Center health check
+
+A shopper may never see the feed, but the feed decides how a product can be discovered, classified and displayed. When catalog data disagrees with the landing page, growth becomes an eligibility problem before it becomes a creative problem.
+
+By Mett Global
+METT GLOBAL OPERATOR PLAYBOOK · PRODUCT DATA QUALITY · 4 MIN READ
+FEED HEALTH / FIVE CONTROL POINTS
+Eligibility is a data-quality problem.
+01
+Stable ID
+SKU or variant key
+02
+Truthful title
+matches the landing page
+03
+Clear description
+product facts only
+04
+Useful image
+crawlable main asset
+05
+Price + stock
+same at every checkpoint
+Think of the feed as a product data layer
+
+Google’s Merchant Center product data specification describes accurate, correctly formatted product data as essential for ads and free listings. Missing or incorrect information can lead to disapprovals, limited eligibility or a product being displayed incorrectly. That makes the feed part of the storefront architecture, not a one-time marketing upload.
+
+The fastest way to improve it is to trace one SKU from the master catalog to the feed, the product page, structured data and checkout. If the title, variant, price or availability changes between those checkpoints, the customer and the platform are receiving different versions of the same product.
+
+Start with identity and variants
+
+A product ID should be unique and stable. Use the SKU where it is the durable business key, and do not recycle an ID for a completely different product. For variants, preserve the relationship between the parent item and the variant attributes such as size, color or pack count. A stable identity makes it possible to diagnose history instead of treating every feed refresh as a new object.
+
+Make the title specific without turning it into ad copy. The title should match what appears on the landing page and include the feature that distinguishes a variant. Keep promotional language, discount claims and gimmicky punctuation out of the product title; put the offer in the appropriate promotion or pricing field instead.
+
+Quality-check the visible fields
+Description: describe the product itself, in language that agrees with the product page. Remove links, unrelated products and promotional slogans.
+Main image: use a crawlable, high-quality image that represents the product. Avoid placeholders, watermarks, borders and images that have been scaled up beyond their source quality.
+Link: send the shopper to a verified, working product URL over HTTP or HTTPS. Do not route a variant to a generic category page.
+Price and availability: reconcile the feed, landing page, checkout and structured data. A product that says “in stock” in one place and “unavailable” in another creates both trust and eligibility risk.
+Run a feed health loop, not a monthly scramble
+
+Divide issues into three queues. Blocking issues affect eligibility or checkout truth, such as missing IDs, broken links or price mismatch. Quality issues reduce clarity, such as weak titles, thin descriptions or poor images. Enhancement issues improve discovery, such as richer attributes or better variant grouping.
+
+Give each queue an owner and a freshness target. A price or availability mismatch should be investigated the same day; a title or image improvement can sit in a planned catalog sprint. Record the first detected date, affected SKU count, root cause and verification result so the team can see whether the system is getting healthier.
+
+The five-minute SKU trace
+
+Pick the product with the highest commercial importance and ask five questions: Is the ID stable? Does the title match the page? Does the image represent the exact item? Do price and stock agree across feed, page and checkout? If a customer saw only the feed content, would they understand what they are buying?
+
+If the answer is no, fix the source-of-truth workflow before adding more ad spend. A feed that is accurate, complete and refreshed on time gives every downstream channel a better starting point.
+
+A catalog is not clean because it exported successfully. It is clean when the product record tells the same truth everywhere a customer or platform can see it.
+PRIMARY SOURCE
+Google Merchant Center: product data specification
+
+The specification covers IDs, titles, descriptions, links, images, price and availability, plus common causes of disapprovals and limited eligibility. Requirements vary by destination and product category; confirm the current specification before changing a production feed.
+
+Need a stronger commerce foundation?
+Explore E-Commerce & Supply Chain
+
+========== /insight-landed-cost-model ==========
+TITLE: Landed Cost Before Launch | Mett Global Blog
+DESCRIPTION: A practical landed-cost model for cross-border launches, including origin charges, freight, duty, destination fees and returns risk.
+
+BLOG / CROSS-BORDER OPERATIONS
+Landed cost before launch: the cross-border margin model operators should use
+
+A factory quote is not a market-ready cost. Before a product crosses a border, build the full cost stack and make the commercial responsibility visible. Otherwise a launch can look profitable in the spreadsheet and expensive in the real world.
+
+By Mett Global
+METT GLOBAL OPERATOR PLAYBOOK · TRADE & MARGIN CONTROL · 4 MIN READ
+ILLUSTRATIVE COST STACK / USD PER UNIT
+Margin is decided before the product arrives.
+$20
+unit cost
+$2
+origin
+$5
+freight + insurance
+$3
+duty + tax
+$2
+destination
+$1
+returns reserve
+Illustrative landed cost
+$33 / unit
+Use one formula before you compare suppliers
+
+A practical planning formula is:
+
+Landed cost = ex-factory cost + origin charges + freight + insurance + import duty and tax + destination charges + risk reserve
+
+The formula is not a customs ruling and it does not replace a broker’s classification work. It is a decision model. Its job is to make hidden cost visible early enough that a team can change the price, pack size, route, order quantity or launch market before cash is committed.
+
+The graphic above is illustrative, not a market quote. The percentages and amounts will change with product class, origin, destination, route, volume, service level, currency and the responsibilities agreed with the seller or buyer.
+
+Separate cost from responsibility
+
+Two shipments can have a similar physical cost and a very different commercial risk. Document the named place, the delivery term, who arranges transport, who provides customs information, who pays duties and taxes, and where the risk transfers. ICC’s Incoterms rules provide a common language for these responsibilities; they do not replace the sales contract, customs advice or local tax advice.
+
+When comparing supplier quotes, put the delivery basis in the first column. “$20 per unit” is not comparable if one quote is ex works, one is delivered to a port and one includes delivery to a named warehouse. Write the term and place next to the number every time.
+
+Model the variables that actually move margin
+Chargeable size: volumetric weight, carton dimensions and pallet utilization can move freight more than unit price.
+Classification: product description, material and tariff classification affect duty treatment; confirm the classification with a qualified customs professional.
+Currency: record the quote currency, conversion date and a sensitivity range for foreign-exchange movement.
+Minimums: separate one-off documentation, customs, inspection and handling fees from per-unit cost.
+Returns and claims: add a visible reserve for reverse logistics, damage, rework or uncollected shipments instead of treating them as surprises.
+Run three scenarios, not one forecast
+
+Build a base case, a delayed or expensive-freight case, and a volume case. In each scenario, show landed cost, gross margin, cash tied up, transit time and the break-even order quantity. A small table that exposes the sensitivity is more useful than a precise-looking single number.
+
+For a new product, also model the first shipment separately from the repeat shipment. Samples, tooling, compliance checks, low-volume freight and launch packaging can make the first run unusually expensive. If those costs are spread invisibly across the entire product forecast, the team will not know whether the margin improved because the business improved or because the model averaged away the setup cost.
+
+The pre-launch checklist
+Write the product description and expected classification in plain language.
+Collect carton dimensions, weights, pack quantities and the intended shipping mode.
+Ask for every quote on the same delivery basis and named place.
+Separate recurring, one-time and risk-based costs in the model.
+Have a customs or trade specialist verify assumptions before the first commercial shipment.
+If the model cannot show who pays, when the cost appears and what can change it, it is not yet a landed-cost model.
+PRIMARY REFERENCE
+ICC: Incoterms® 2020 rules
+
+Use the official ICC reference for the current Incoterms framework and obtain product- and country-specific customs advice before relying on a duty, tax or classification assumption.
+
+Need a clearer cross-border operating model?
+Explore E-Commerce & Supply Chain
+
+========== /insight-3pl-scorecard ==========
+TITLE: The 3PL Scorecard | Mett Global Blog
+DESCRIPTION: How to compare 3PL and warehouse partners using service reliability, inventory control, systems, cost transparency and resilience.
+
+BLOG / SUPPLY CHAIN OPERATIONS
+The 3PL scorecard: how to compare warehouses beyond pick fees
+
+The lowest pick fee is rarely the lowest operating cost. Compare a 3PL on the controls that protect customer promise, inventory truth, data flow and the ability to handle a difficult week.
+
+By Mett Global
+METT GLOBAL OPERATOR PLAYBOOK · 3PL SELECTION · 4 MIN READ
+ILLUSTRATIVE WEIGHTED SCORECARD
+Choose the partner that protects the promise.
+Reliability
+25%
+cutoff, SLA, claims
+Inventory control
+25%
+receiving, counts, adjustments
+Systems & data
+20%
+API, events, reporting
+Cost transparency
+15%
+rates, surcharges, invoices
+Resilience & scale
+15%
+peak, backup, exit plan
+Weights are an original Mett Global planning model, not an industry benchmark.
+Make the customer promise measurable
+
+A warehouse partner is not only a place where stock sits. It is part of the promise made on the product page: what can be ordered, when it ships, whether the right item arrives and how quickly an exception is resolved. Start the selection process by writing the promise in measurable terms.
+
+Examples include the daily order cutoff, same-day dispatch window, receiving turnaround, inventory adjustment approval, return disposition time and the response time for a shipment exception. The numbers should match the real business model. A seasonal seller, a subscription brand and a B2B spare-parts operation do not need the same service design.
+
+Use five weighted categories
+
+The scorecard shown above is a practical starting point. Adjust the weights before sending an RFP, and record why the changes were made.
+
+Reliability: cutoff performance, order accuracy, carrier handoff, claims handling and named escalation ownership.
+Inventory control: receiving checks, location discipline, cycle counts, lot or serial handling, adjustment approvals and root-cause reporting.
+Systems and data: order events, inventory synchronization, API or file integration, status definitions, reporting cadence and access to raw data.
+Cost transparency: storage basis, pick and pack rules, materials, returns, kitting, minimums, peak surcharges and invoice reconciliation.
+Resilience and scale: peak labor, backup carriers, power and system continuity, overflow capacity and a workable exit plan.
+Ask for proof, not adjectives
+
+“Best in class” is not a selection criterion. Ask each provider to show the evidence behind the claim. Request a redacted inventory report, a sample exception ticket, a rate card with every fee, a sample invoice, a system event map and the last peak-season capacity plan. Ask what happens when the answer is no: no ASN, wrong carton count, late carrier, stock variance, oversold SKU or damaged return.
+
+Give every provider the same data pack. Include SKU count, monthly orders, order-line distribution, carton sizes, inbound cadence, returns rate, channels, destinations, service promise and peak multiplier. Apples-to-apples inputs make the cost and capability comparison much more credible.
+
+Calculate total cost of ownership
+
+Compare more than the pick fee. A useful planning equation is:
+
+Total fulfillment cost = storage + receiving + pick/pack + packaging + transport + returns + integration + exceptions
+
+Then add the cost of failure where it is material: replacement shipments, customer support, lost inventory, marketplace penalties, delayed cash conversion or a launch that cannot scale. Do not invent a precise penalty if you cannot measure it; show it as a sensitivity range and state the assumption.
+
+Test the relationship before signing a long contract
+Shortlist providers that fit the product, geography and data requirements.
+Run the same operational scenario through each provider.
+Validate a sample order, receiving case, return and invoice line.
+Define the KPI pack, escalation path and review cadence in the commercial agreement.
+Use a pilot with clear exit criteria before routing the full catalog.
+A 3PL should be evaluated as an operating system with people, controls, data and recovery paths, not as a single line on a rate card.
+FRAMEWORK NOTE
+
+This scorecard and its illustrative weights are an original Mett Global planning framework, created to structure a comparable 3PL review. They are not a third-party benchmark or a guarantee of performance. Validate service levels, insurance, liability, security and local contract terms with qualified advisors.
+
+Need to turn warehouse activity into a controlled system?
+Explore E-Commerce & Supply Chain
+
+========== /portfolio/claims-recovery ==========
+TITLE: The £50,000 Recovery: Claims Case Study | Mett Global
+DESCRIPTION: More than £50,000 recovered in one year through courier claims and marketplace reimbursements, including follow-ups on denied claims.
+
+Home
+Portfolio
+The £50,000 Recovery
+
+CLAIMS AND REIMBURSEMENTS
+
+Confidential client work
+
+The £50,000 Recovery
+
+Courier and marketplace claims for a leading global brand
+
+For a leading global brand, we filed, followed up and challenged lost-parcel, damage and marketplace claims across 20+ courier and 3PL partners in Canada, Germany, the wider EU, the UK and the US, recovering more than £50,000 in one year.
+
+CLIENT
+A leading global brand
+SCOPE
+Canada, Germany, the EU, the UK and the US
+
+Client name and identifying details are withheld to respect confidentiality.
+
+Claims & reimbursements
+Claim sources
+Logistics courier
+claim
+Loss & damage
+E-commerce
+channels claim
+Amazon · Walmart
+Wish
+Discrepancy found
+Claim file
+Tracking
+Invoice
+Delivery
+Inventory
+File & follow up
+Resolution
+£
+Funds recovered
+Find the issue
+Build evidence
+Recover funds
+
+More than fifty thousand pounds recovered in one year
+>£50,000
+
+Recovered in one year
+
+Courier, 3PL and marketplace claims, including previously denied cases.
+
+Courier claims with P2P, FedEx, UPS, USPS, eShipper and more, plus Amazon, Walmart and Wish reimbursements, including previously denied cases.
+
+THE WORK IN VIEW
+
+The claims recovery process
+
+Tracking checks
+Evidence and filing
+Follow-up and challenge
+Recovery
+Courier and 3PL partners across the claims work
+20+
+Claims workflow illustration: tracking checks, evidence, filing and follow-up. More than £50,000 recovered in one year.
+Back to international work
+
+01 PROBLEM
+
+Different providers. Different claims processes.
+
+Claims were spread across P2P, FedEx, UPS, USPS, eShipper and other couriers, alongside Amazon, Walmart and Wish. Each provider required different documentation, query formats and filing deadlines. Denied claims needed further investigation and a clear response within the relevant challenge window.
+
+02 APPROACH
+
+Evidence prepared. Deadlines tracked. Decisions challenged.
+
+We checked tracking histories, reviewed courier reports and assembled the documents required for each case. We filed claims in the appropriate format, monitored query and follow-up windows, and responded to requests for further information. Where claims were denied, we reviewed the decision and challenged it with supporting evidence. The scope covered courier loss and damage, Amazon FBA reimbursement and other marketplace claims, including follow-through on outstanding Wish claims.
+
+WHAT THE RECOVERY COVERED
+
+Two types of claims, one documented process
+
+PART 1
+
+Logistics and courier claims
+
+Lost and damaged parcel claims across 20+ courier and 3PL partners, shipping across Canada, Germany, the wider EU, the UK and the US.
+
+P2P
+FedEx
+UPS
+USPS
+eShipper
+Royal Mail
+Evri
+GLS
++ more, 20+ partners
+Checked tracking histories and courier reports for every lost or damaged parcel.
+Matched proof of delivery and supporting documents to each case before filing.
+Filed in each courier's required format and tracked every query and filing window.
+Wrote formal disputes on denied claims and escalated them with carrier account managers.
+Audited carrier service levels and resolved the escalations that followed.
+
+PART 2
+
+Marketplace reimbursements: Amazon, Walmart and Wish
+
+Reimbursement claims on the marketplaces, including money recovered on claims that were first denied.
+
+Amazon FBA: lost, damaged and unreceived inventory, and returns that never came back.
+Walmart WFS: inventory lost, damaged or received short in Walmart fulfilment centres.
+Wish: follow-through on outstanding claims until a decision was reached.
+Denied claims: decisions reviewed, evidence rebuilt and challenged within each challenge window, with recoveries on previously denied cases included in the total.
+
+03 RESULT
+
+More than £50,000 recovered in one year
+
+The claims work recovered more than £50,000 in one year, including recoveries on previously denied cases. The work depended on understanding each provider’s process, meeting its deadlines and continuing the follow-up until a decision was reached.
+
+What we handled
+Lost and damaged parcel claims
+Tracking histories and courier reports
+Evidence preparation
+Query and filing windows
+Denied-claim challenges
+Amazon FBA reimbursements
+Walmart reimbursements
+Outstanding Wish claims
+Questions about this work
+What did the claims recovery work cover?
+Were previously denied claims included?
+
+A denied claim still deserves a documented review.
+
+Tell us where your operation needs support.
+
+Discuss claims recovery
+Related case studies
+Courier operations, end to end
+Carrier review
+Rates
+Service
+Coverage
+Invoice audit
+Rates matched
+Charges checked
+Disputes followed
+Carrier selection → shipment → reconciliation
+Compare carriers
+Move shipments
+Check the bill
+
+CONFIDENTIAL CLIENT WORK
+
+The Invoice That Matches
+
+Courier and 3PL management, from carrier selection to audited invoices
+
+3PL sourcing, courier testing and shipment management, followed by invoice checks against agreed rate cards.
+
+View case study
+One operation. Multiple marketplaces.
+Amazon
+Walmart
+Shopify
+eBay
+Inventory hub
+Orders & stock
+One connected flow
+Dispatch
+Fulfilment
+Sync listings
+Manage orders
+Fulfil & report
+
+CONFIDENTIAL CLIENT WORK
+
+Eight Markets, One Operation
+
+8 Amazon marketplaces across 6 sales channels, run as one operation
+
+Marketplace management, inventory activation, listing support and reporting across Amazon, Walmart, Shopify, eBay, Magento and Wish.
+
+View case study
+
+========== /portfolio/remote-warehouse-management ==========
+TITLE: The Remote Warehouse: US Operations | Mett Global
+DESCRIPTION: Remote US warehouse management with inventory and fulfilment accuracy above 95%, WMS reconciliation, container receiving and on-site coordination.
+
+Home
+Portfolio
+The Remote Warehouse
+
+WAREHOUSE OPERATIONS
+
+Confidential client work
+
+The Remote Warehouse
+
+A complete US warehouse run remotely, with inventory and fulfilment accuracy above 95%
+
+We run a leading global brand's US warehouse remotely with the on-site team, from container receiving and inventory systems to people and fulfilment, with inventory and order fulfilment accuracy each above 95%.
+
+CLIENT
+A leading global brand
+SCOPE
+US warehouse operations; payroll across Canada, Germany and the US
+
+Client name and identifying details are withheld to respect confidentiality.
+
+A warehouse, managed remotely
+DISPATCH
+Remote control
+Receive stock
+Store & pick
+Pack & dispatch
+
+Inventory accuracy and order fulfilment accuracy above ninety-five percent
+>95%
+accuracy
+
+Inventory and order fulfilment
+
+Each measure stayed above 95% under remote management.
+
+Inventory accuracy and order fulfilment accuracy each above 95%.
+
+THE WORK IN VIEW
+
+Inventory and fulfilment accuracy
+
+Inventory accuracy
+Order fulfilment accuracy
+Inventory accuracy and order fulfilment accuracy were each above 95%. Threshold illustration.
+Back to international work
+
+01 PROBLEM
+
+One warehouse. Many connected responsibilities.
+
+Container release, receiving, stock locations, system records and order fulfilment all needed coordinated management. The operation also required oversight of warehouse supplies, people, payroll and OSHA and safety compliance requirements.
+
+02 APPROACH
+
+From container release to available inventory
+
+We coordinated re-racking and restructuring, procured supplies and managed container receiving. We worked with brokers on customs brokerage, container release and HS codes, then handled racking, inventory reconciliation and stock activation across Microsoft Dynamics, Linnworks and an in-house WMS. Remote management worked with the on-site team on daily responsibilities, people management and safety requirements. The wider scope included payroll for three warehouses across Canada, Germany and the US.
+
+Payroll and workforce across three countries
+
+We manage warehouse payroll for teams in the US, Canada and Germany, coordinate staffing, training and performance management, and write and maintain the standard operating procedures (SOPs) the teams work to.
+
+03 RESULT
+
+Above 95% accuracy across inventory and fulfilment
+
+Inventory accuracy and order fulfilment accuracy were each above 95%. Returns were kept low. The work brought inbound receiving, stock records, warehouse organisation and fulfilment under coordinated remote oversight with on-site management. The US warehouse has been managed remotely since 2023, as part of the brand's network across the US, UK, Canada and Germany.
+
+What we handled
+Container receiving and release
+Customs brokerage and HS codes
+Re-racking and warehouse restructuring
+Inventory reconciliation and activation
+Microsoft Dynamics
+Linnworks and an in-house WMS
+Warehouse supplies
+On-site team coordination
+Payroll across three countries
+OSHA and safety requirements
+Shift schedules and headcount planning
+Team performance management
+Receiving to dispatch against agreed SLAs
+Vendor negotiation
+Bills of lading and packing-list checks
+Freight and container intake coordination
+Questions about this work
+How was the warehouse managed remotely?
+What does the above 95% result measure?
+
+Clear stock records and clear responsibilities support the warehouse behind every order.
+
+Tell us where your operation needs support.
+
+Discuss warehouse operations
+Related case studies
+One operation. Multiple marketplaces.
+Amazon
+Walmart
+Shopify
+eBay
+Inventory hub
+Orders & stock
+One connected flow
+Dispatch
+Fulfilment
+Sync listings
+Manage orders
+Fulfil & report
+
+CONFIDENTIAL CLIENT WORK
+
+Eight Markets, One Operation
+
+8 Amazon marketplaces across 6 sales channels, run as one operation
+
+Marketplace management, inventory activation, listing support and reporting across Amazon, Walmart, Shopify, eBay, Magento and Wish.
+
+View case study
+Claims & reimbursements
+Claim sources
+Logistics courier
+claim
+Loss & damage
+E-commerce
+channels claim
+Amazon · Walmart
+Wish
+Discrepancy found
+Claim file
+Tracking
+Invoice
+Delivery
+Inventory
+File & follow up
+Resolution
+£
+Funds recovered
+Find the issue
+Build evidence
+Recover funds
+
+CONFIDENTIAL CLIENT WORK
+
+The £50,000 Recovery
+
+Courier and marketplace claims for a leading global brand
+
+Courier and marketplace claims handled across 20+ courier and 3PL partners, with more than £50,000 recovered in one year.
+
+View case study
+
+========== /portfolio/procurement-sourcing ==========
+TITLE: From Source to Sale: Sourcing Case Study | Mett Global
+DESCRIPTION: A Faisalabad manufacturing setup, custom clothing and B2B sales, plus Pakistan and China sourcing and documented Amazon listing reinstatement.
+
+Home
+Portfolio
+From Source to Sale
+
+PROCUREMENT AND SOURCING
+
+Confidential client work
+
+From Source to Sale
+
+Manufacturing and sourcing in Pakistan and China, connected to B2B and Amazon sales
+
+For a confidential client in Faisalabad, we set up small-scale clothing manufacturing with custom printing, then connected it to B2B bulk sales and a fully managed Amazon account, with supplements sourced from Pakistan and China.
+
+CLIENT
+A confidential client
+SCOPE
+Faisalabad project; sourcing work in Pakistan and China
+
+Client name and identifying details are withheld to respect confidentiality.
+
+From source to sale
+Source
+Fabric & supplies
+Production
+Print & inspect
+Marketplace
+Ready to sell
+Source materials
+Make & check
+List & sell
+
+Two sourcing countries, Pakistan and China
+2
+sourcing countries
+
+Pakistan and China
+
+Faisalabad manufacturing, Sialkot textiles and China sourcing.
+
+Pakistan and China, with textile sourcing capability in Faisalabad and Sialkot.
+
+THE WORK IN VIEW
+
+From sourcing to sales operations
+
+Pakistan: Faisalabad and Sialkot
+China
+Manufacturing and procurement
+B2B and Amazon operations
+Pakistan and China sourcing scope. Faisalabad manufacturing setup; Sialkot sourcing capability.
+Back to international work
+
+01 PROBLEM
+
+The product needed an operation around it
+
+The client needed more than a supplier contact. Clothing production, custom printing and bulk sales required practical setup and management. The Amazon work also involved supplements, where listing restrictions required careful documentation and follow-up.
+
+02 APPROACH
+
+Manufacturing setup, sourcing and marketplace execution
+
+We set up a small manufacturing system for hoodies and T-shirts, including custom manufacturing and T-shirt printing, and managed B2B bulk orders. We launched and managed a complete Amazon account and sourced supplements from Pakistan and China. When supplements listings were blocked, we prepared the required documentation and handled the reinstatement process. Our wider sourcing capability includes Sialkot and Faisalabad’s textile industries, alongside China.
+
+03 RESULT
+
+From manufacturing setup to documented reinstatements
+
+The work covered manufacturing setup, custom printing, B2B bulk sales and Amazon account operations. Each blocked supplements listing encountered during this work was reinstated with supporting documentation.
+
+What we handled
+Faisalabad manufacturing setup
+Hoodies and T-shirts
+Custom printing
+Pakistan and China sourcing
+B2B bulk sales
+Amazon account launch and management
+Supplements sourcing
+Documentation for listing reinstatement
+Questions about this work
+What was built for the Faisalabad client?
+How were deactivated Amazon listings handled?
+
+Sourcing works best when the supplier, product requirements and sales channel are understood together.
+
+Tell us where your operation needs support.
+
+Discuss sourcing and procurement
+Related case studies
+One operation. Multiple marketplaces.
+Amazon
+Walmart
+Shopify
+eBay
+Inventory hub
+Orders & stock
+One connected flow
+Dispatch
+Fulfilment
+Sync listings
+Manage orders
+Fulfil & report
+
+CONFIDENTIAL CLIENT WORK
+
+Eight Markets, One Operation
+
+8 Amazon marketplaces across 6 sales channels, run as one operation
+
+Marketplace management, inventory activation, listing support and reporting across Amazon, Walmart, Shopify, eBay, Magento and Wish.
+
+View case study
+Courier operations, end to end
+Carrier review
+Rates
+Service
+Coverage
+Invoice audit
+Rates matched
+Charges checked
+Disputes followed
+Carrier selection → shipment → reconciliation
+Compare carriers
+Move shipments
+Check the bill
+
+CONFIDENTIAL CLIENT WORK
+
+The Invoice That Matches
+
+Courier and 3PL management, from carrier selection to audited invoices
+
+3PL sourcing, courier testing and shipment management, followed by invoice checks against agreed rate cards.
+
+View case study

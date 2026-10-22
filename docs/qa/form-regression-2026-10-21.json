@@ -1,0 +1,581 @@
+{
+  "date": "2026-10-21T17:16:50.733Z",
+  "rows": [
+    {
+      "name": "chromium duplicate clicks send one request",
+      "passed": true
+    },
+    {
+      "name": "chromium accepted request locks only unchanged submit",
+      "passed": true
+    },
+    {
+      "name": "chromium explicit update available after edits",
+      "passed": true
+    },
+    {
+      "name": "chromium reject retains editable fields",
+      "passed": true
+    },
+    {
+      "name": "chromium reject never falsely shows success",
+      "passed": true
+    },
+    {
+      "name": "chromium unknown retains editable fields",
+      "passed": true
+    },
+    {
+      "name": "chromium unknown never falsely shows success",
+      "passed": true
+    },
+    {
+      "name": "chromium transport retains editable fields",
+      "passed": true
+    },
+    {
+      "name": "chromium transport never falsely shows success",
+      "passed": true
+    },
+    {
+      "name": "chromium slow progress and editable fields",
+      "passed": true
+    },
+    {
+      "name": "chromium sends captured original, not later edits",
+      "passed": true
+    },
+    {
+      "name": "chromium later edits survive original success",
+      "passed": true
+    },
+    {
+      "name": "chromium offline never sends",
+      "passed": true
+    },
+    {
+      "name": "chromium changing time preserves meeting draft",
+      "passed": true
+    },
+    {
+      "name": "chromium unknown meeting remains editable with explicit retry",
+      "passed": true
+    },
+    {
+      "name": "chromium meeting edits survive late confirmation",
+      "passed": true
+    },
+    {
+      "name": "chromium meeting confirmed only on explicit acceptance",
+      "passed": true
+    },
+    {
+      "name": "client deadline never leaves form locked",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /contact 320",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /contact 320",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /contact 320",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /appointment 320",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /appointment 320",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /appointment 320",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /about 320",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /about 320",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /about 320",
+      "passed": true
+    },
+    {
+      "name": "chromium layout / 320",
+      "passed": true
+    },
+    {
+      "name": "chromium call links / 320",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved / 320",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /contact 390",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /contact 390",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /contact 390",
+      "passed": true
+    },
+    {
+      "name": "chromium accessibility /contact",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "name": "chromium layout /appointment 390",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /appointment 390",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /appointment 390",
+      "passed": true
+    },
+    {
+      "name": "chromium accessibility /appointment",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "name": "chromium layout /about 390",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /about 390",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /about 390",
+      "passed": true
+    },
+    {
+      "name": "chromium layout / 390",
+      "passed": true
+    },
+    {
+      "name": "chromium call links / 390",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved / 390",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /contact 820",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /contact 820",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /contact 820",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /appointment 820",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /appointment 820",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /appointment 820",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /about 820",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /about 820",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /about 820",
+      "passed": true
+    },
+    {
+      "name": "chromium layout / 820",
+      "passed": true
+    },
+    {
+      "name": "chromium call links / 820",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved / 820",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /contact 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /contact 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /contact 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /appointment 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /appointment 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /appointment 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium layout /about 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium call links /about 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved /about 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium layout / 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium call links / 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium WhatsApp preserved / 1440",
+      "passed": true
+    },
+    {
+      "name": "chromium no unexpected client errors (local certificate prefetch warnings recorded separately)",
+      "passed": true,
+      "errors": [],
+      "localPrefetchWarnings": []
+    },
+    {
+      "name": "webkit duplicate clicks send one request",
+      "passed": true
+    },
+    {
+      "name": "webkit accepted request locks only unchanged submit",
+      "passed": true
+    },
+    {
+      "name": "webkit explicit update available after edits",
+      "passed": true
+    },
+    {
+      "name": "webkit reject retains editable fields",
+      "passed": true
+    },
+    {
+      "name": "webkit reject never falsely shows success",
+      "passed": true
+    },
+    {
+      "name": "webkit unknown retains editable fields",
+      "passed": true
+    },
+    {
+      "name": "webkit unknown never falsely shows success",
+      "passed": true
+    },
+    {
+      "name": "webkit transport retains editable fields",
+      "passed": true
+    },
+    {
+      "name": "webkit transport never falsely shows success",
+      "passed": true
+    },
+    {
+      "name": "webkit slow progress and editable fields",
+      "passed": true
+    },
+    {
+      "name": "webkit sends captured original, not later edits",
+      "passed": true
+    },
+    {
+      "name": "webkit later edits survive original success",
+      "passed": true
+    },
+    {
+      "name": "webkit offline never sends",
+      "passed": true
+    },
+    {
+      "name": "webkit changing time preserves meeting draft",
+      "passed": true
+    },
+    {
+      "name": "webkit unknown meeting remains editable with explicit retry",
+      "passed": true
+    },
+    {
+      "name": "webkit meeting edits survive late confirmation",
+      "passed": true
+    },
+    {
+      "name": "webkit meeting confirmed only on explicit acceptance",
+      "passed": true
+    },
+    {
+      "name": "webkit layout /contact 320",
+      "passed": true
+    },
+    {
+      "name": "webkit call links /contact 320",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved /contact 320",
+      "passed": true
+    },
+    {
+      "name": "webkit layout /appointment 320",
+      "passed": true
+    },
+    {
+      "name": "webkit call links /appointment 320",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved /appointment 320",
+      "passed": true
+    },
+    {
+      "name": "webkit layout /about 320",
+      "passed": true
+    },
+    {
+      "name": "webkit call links /about 320",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved /about 320",
+      "passed": true
+    },
+    {
+      "name": "webkit layout / 320",
+      "passed": true
+    },
+    {
+      "name": "webkit call links / 320",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved / 320",
+      "passed": true
+    },
+    {
+      "name": "webkit layout /contact 390",
+      "passed": true
+    },
+    {
+      "name": "webkit call links /contact 390",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved /contact 390",
+      "passed": true
+    },
+    {
+      "name": "webkit accessibility /contact",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "name": "webkit layout /appointment 390",
+      "passed": true
+    },
+    {
+      "name": "webkit call links /appointment 390",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved /appointment 390",
+      "passed": true
+    },
+    {
+      "name": "webkit accessibility /appointment",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "name": "webkit layout /about 390",
+      "passed": true
+    },
+    {
+      "name": "webkit call links /about 390",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved /about 390",
+      "passed": true
+    },
+    {
+      "name": "webkit layout / 390",
+      "passed": true
+    },
+    {
+      "name": "webkit call links / 390",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved / 390",
+      "passed": true
+    },
+    {
+      "name": "webkit layout /contact 820",
+      "passed": true
+    },
+    {
+      "name": "webkit call links /contact 820",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved /contact 820",
+      "passed": true
+    },
+    {
+      "name": "webkit layout /appointment 820",
+      "passed": true
+    },
+    {
+      "name": "webkit call links /appointment 820",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved /appointment 820",
+      "passed": true
+    },
+    {
+      "name": "webkit layout /about 820",
+      "passed": true
+    },
+    {
+      "name": "webkit call links /about 820",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved /about 820",
+      "passed": true
+    },
+    {
+      "name": "webkit layout / 820",
+      "passed": true
+    },
+    {
+      "name": "webkit call links / 820",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved / 820",
+      "passed": true
+    },
+    {
+      "name": "webkit layout /contact 1440",
+      "passed": true
+    },
+    {
+      "name": "webkit call links /contact 1440",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved /contact 1440",
+      "passed": true
+    },
+    {
+      "name": "webkit layout /appointment 1440",
+      "passed": true
+    },
+    {
+      "name": "webkit call links /appointment 1440",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved /appointment 1440",
+      "passed": true
+    },
+    {
+      "name": "webkit layout /about 1440",
+      "passed": true
+    },
+    {
+      "name": "webkit call links /about 1440",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved /about 1440",
+      "passed": true
+    },
+    {
+      "name": "webkit layout / 1440",
+      "passed": true
+    },
+    {
+      "name": "webkit call links / 1440",
+      "passed": true
+    },
+    {
+      "name": "webkit WhatsApp preserved / 1440",
+      "passed": true
+    },
+    {
+      "name": "webkit no unexpected client errors (local certificate prefetch warnings recorded separately)",
+      "passed": true,
+      "errors": [],
+      "localPrefetchWarnings": [
+        "/127.0.0.1:3443/portfolio?_rsc=LujG_PYSZJ0ZIcmZ due to access control checks.",
+        "/127.0.0.1:3443/about?_rsc=LujG_PYSZJ0ZIcmZ due to access control checks.",
+        "/127.0.0.1:3443/blog?_rsc=LujG_PYSZJ0ZIcmZ due to access control checks.",
+        "/127.0.0.1:3443/contact?_rsc=LujG_PYSZJ0ZIcmZ due to access control checks.",
+        "/127.0.0.1:3443/?_rsc=60m9ttaXtJHZmEpN due to access control checks.",
+        "/127.0.0.1:3443/?_rsc=00jsNgvC9sZ9uZS6 due to access control checks.",
+        "/127.0.0.1:3443/privacy?_rsc=K56QiJQxYFcwcMGE due to access control checks.",
+        "/127.0.0.1:3443/appointment?_rsc=1BMNy6dExVeEl65n due to access control checks.",
+        "/127.0.0.1:3443/?_rsc=5CB68i4pnAekjehf due to access control checks.",
+        "/127.0.0.1:3443/services?_rsc=5CB68i4pnAekjehf due to access control checks.",
+        "/127.0.0.1:3443/portfolio?_rsc=5CB68i4pnAekjehf due to access control checks.",
+        "/127.0.0.1:3443/about?_rsc=5CB68i4pnAekjehf due to access control checks."
+      ]
+    }
+  ],
+  "shots": [
+    "docs/qa/chromium-contact-forms-2026-10-21.png",
+    "docs/qa/chromium-appointment-forms-2026-10-21.png",
+    "docs/qa/webkit-contact-forms-2026-10-21.png",
+    "docs/qa/webkit-appointment-forms-2026-10-21.png"
+  ],
+  "externalMessagesSent": 0
+}

@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-20T10:42:54.639Z",
+  "rows": [
+    {
+      "ua": "Mozilla/5.0",
+      "status": 200,
+      "robots": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1",
+      "xRobots": null,
+      "cache": "HIT",
+      "age": "133172"
+    },
+    {
+      "ua": "Googlebot",
+      "status": 200,
+      "robots": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1",
+      "xRobots": null,
+      "cache": "HIT",
+      "age": "133173"
+    },
+    {
+      "ua": "bingbot",
+      "status": 200,
+      "robots": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1",
+      "xRobots": null,
+      "cache": "HIT",
+      "age": "133173"
+    },
+    {
+      "ua": "OAI-SearchBot",
+      "status": 200,
+      "robots": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1",
+      "xRobots": null,
+      "cache": "HIT",
+      "age": "133173"
+    }
+  ]
+}

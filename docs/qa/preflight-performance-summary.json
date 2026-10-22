@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-20T16:52:40.329Z",
+  "localLab": true,
+  "serial": true,
+  "rows": [
+    {
+      "path": "/",
+      "preset": "mobile",
+      "fetchTime": "2026-10-20T16:50:45.046Z",
+      "lighthouseVersion": "13.5.0",
+      "scores": {
+        "performance": 90,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 3236.5947499999993,
+      "tbt": 150,
+      "cls": 0
+    },
+    {
+      "path": "/portfolio",
+      "preset": "mobile",
+      "fetchTime": "2026-10-20T16:51:01.783Z",
+      "lighthouseVersion": "13.5.0",
+      "scores": {
+        "performance": 93,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 3044.46545,
+      "tbt": 143.84484999999995,
+      "cls": 0
+    },
+    {
+      "path": "/contact",
+      "preset": "mobile",
+      "fetchTime": "2026-10-20T16:51:17.499Z",
+      "lighthouseVersion": "13.5.0",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 2705.7006,
+      "tbt": 37,
+      "cls": 0
+    },
+    {
+      "path": "/ecommerce-supply-chain",
+      "preset": "mobile",
+      "fetchTime": "2026-10-20T16:51:31.437Z",
+      "lighthouseVersion": "13.5.0",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 2875.14285,
+      "tbt": 46.5,
+      "cls": 0
+    },
+    {
+      "path": "/portfolio/serenada-mental-health",
+      "preset": "mobile",
+      "fetchTime": "2026-10-20T16:51:45.621Z",
+      "lighthouseVersion": "13.5.0",
+      "scores": {
+        "performance": 94,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 2999.2907999999998,
+      "tbt": 68,
+      "cls": 0
+    },
+    {
+      "path": "/update-amazon-fba-fees-2026",
+      "preset": "mobile",
+      "fetchTime": "2026-10-20T16:51:59.101Z",
+      "lighthouseVersion": "13.5.0",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 2885.8933,
+      "tbt": 50.5,
+      "cls": 0
+    },
+    {
+      "path": "/",
+      "preset": "desktop",
+      "fetchTime": "2026-10-20T16:52:14.281Z",
+      "lighthouseVersion": "13.5.0",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 678.009,
+      "tbt": 3.500000000000057,
+      "cls": 0
+    },
+    {
+      "path": "/portfolio",
+      "preset": "desktop",
+      "fetchTime": "2026-10-20T16:52:29.233Z",
+      "lighthouseVersion": "13.5.0",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 1043.6747999999995,
+      "tbt": 5.999999999999886,
+      "cls": 0
+    }
+  ]
+}

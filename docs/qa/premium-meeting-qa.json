@@ -1,0 +1,77 @@
+{
+  "rows": [
+    {
+      "test": "Asia/Karachi Night six compact times",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi Morning six compact times",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi Afternoon six compact times",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi Evening six compact times",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi all 24 hours exactly once",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi office address and directions visible",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi draft survives time changes",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi late night request and format preserved",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi submitted instant matches local selected hour",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi 320 time stage fits",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi 320 details stage fits",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi 390 time stage fits",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi 390 details stage fits",
+      "passed": true
+    },
+    {
+      "test": "Axe details 390",
+      "passed": false,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "label:nth-child(3) > span > .pb-nIW_optional"
+            ],
+            [
+              "label:nth-child(4) > span > .pb-nIW_optional"
+            ],
+            [
+              ".pb-nIW_full > span > .pb-nIW_optional"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "error": "Axe details 390"
+}

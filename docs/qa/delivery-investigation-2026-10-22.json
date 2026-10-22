@@ -1,0 +1,12 @@
+{
+  "requestId": "6985d922-1a26-4a03-b69d-e4571b9badc7",
+  "startedAt": "2026-10-21T19:00:34.500Z",
+  "realRequestsSent": 1,
+  "status": 504,
+  "elapsedMs": 20156,
+  "response": {
+    "outcome": "unconfirmed",
+    "requestId": "6985d922-1a26-4a03-b69d-e4571b9badc7",
+    "reason": "provider-timeout"
+  }
+}

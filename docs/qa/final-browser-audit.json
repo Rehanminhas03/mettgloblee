@@ -1,0 +1,1128 @@
+{
+  "date": "2026-10-19T16:39:26.886Z",
+  "base": "http://127.0.0.1:3000",
+  "pages": [
+    {
+      "width": 1440,
+      "url": "/",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/services",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/case-studies",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/jetour-ittehad",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/hyundai-islamabad",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/csm-ittehad",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/about",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/blog",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/contact",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/appointment",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/sitemap",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/privacy",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/terms",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/dealership-erp",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/ittehad-steel",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/sfykea",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/mowing",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/serenada-mental-health",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/prospect-smile",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/luxury-ohare-limo",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/digital-marketing-growth",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/web-software-development",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/ai-automation-content",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/ecommerce-supply-chain",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/update-amazon-fba-fees-2026",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/update-eu-ai-act-transparency-2026",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/update-google-ads-consent-2026",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/update-eu-ics2-2026",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/update-google-search-2026",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/insight-ecommerce-operations",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/insight-conversion-audit",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/insight-erp-for-growing-businesses",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/insight-booking-app-partner-portal",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/insight-digital-outdoor-marketing",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/insight-ai-automation",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/insight-growth-system",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/insight-supply-chain-control",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/insight-lead-generation-system",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/insight-ai-video-brief",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/insight-utm-governance",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/insight-product-feed-health",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/insight-landed-cost-model",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/insight-3pl-scorecard",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/claims-recovery",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/remote-warehouse-management",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/procurement-sourcing",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/courier-3pl-management",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/multichannel-ecommerce-operations",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 1440,
+      "url": "/portfolio/etsy-in-house-launch",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/services",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/case-studies",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/jetour-ittehad",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/hyundai-islamabad",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/csm-ittehad",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/about",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/blog",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/contact",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/appointment",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/sitemap",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/privacy",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/terms",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/dealership-erp",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/ittehad-steel",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/sfykea",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/mowing",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/serenada-mental-health",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/prospect-smile",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/luxury-ohare-limo",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/digital-marketing-growth",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/web-software-development",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/ai-automation-content",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/ecommerce-supply-chain",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/update-amazon-fba-fees-2026",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/update-eu-ai-act-transparency-2026",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/update-google-ads-consent-2026",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/update-eu-ics2-2026",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/update-google-search-2026",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/insight-ecommerce-operations",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/insight-conversion-audit",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/insight-erp-for-growing-businesses",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/insight-booking-app-partner-portal",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/insight-digital-outdoor-marketing",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/insight-ai-automation",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/insight-growth-system",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/insight-supply-chain-control",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/insight-lead-generation-system",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/insight-ai-video-brief",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/insight-utm-governance",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/insight-product-feed-health",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/insight-landed-cost-model",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/insight-3pl-scorecard",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/claims-recovery",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/remote-warehouse-management",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/procurement-sourcing",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/courier-3pl-management",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/multichannel-ecommerce-operations",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    },
+    {
+      "width": 390,
+      "url": "/portfolio/etsy-in-house-launch",
+      "h1": 1,
+      "emDash": false,
+      "emojiArrow": false,
+      "nestedLinks": 0,
+      "brokenImages": [],
+      "clippedText": []
+    }
+  ],
+  "interactions": [
+    {
+      "width": 1440,
+      "artworkOpensStudy": true
+    },
+    {
+      "width": 390,
+      "artworkOpensStudy": true
+    },
+    {
+      "mobileMenu": true
+    }
+  ],
+  "accessibility": [
+    {
+      "url": "/",
+      "violations": []
+    },
+    {
+      "url": "/portfolio",
+      "violations": []
+    },
+    {
+      "url": "/portfolio/claims-recovery",
+      "violations": []
+    },
+    {
+      "url": "/portfolio/etsy-in-house-launch",
+      "violations": []
+    },
+    {
+      "url": "/contact",
+      "violations": []
+    },
+    {
+      "url": "/appointment",
+      "violations": []
+    }
+  ],
+  "fallbacks": [
+    {
+      "url": "/portfolio/jetour-ittehad",
+      "noJsHeading": true,
+      "staticArtwork": true
+    },
+    {
+      "url": "/portfolio/hyundai-islamabad",
+      "noJsHeading": true,
+      "staticArtwork": true
+    },
+    {
+      "url": "/portfolio/csm-ittehad",
+      "noJsHeading": true,
+      "staticArtwork": true
+    },
+    {
+      "url": "/portfolio/dealership-erp",
+      "noJsHeading": true,
+      "staticArtwork": true
+    },
+    {
+      "url": "/portfolio/ittehad-steel",
+      "noJsHeading": true,
+      "staticArtwork": true
+    },
+    {
+      "url": "/portfolio/sfykea",
+      "noJsHeading": true,
+      "staticArtwork": true
+    },
+    {
+      "url": "/portfolio/mowing",
+      "noJsHeading": true,
+      "staticArtwork": true
+    },
+    {
+      "url": "/portfolio/serenada-mental-health",
+      "noJsHeading": true,
+      "staticArtwork": true
+    },
+    {
+      "url": "/portfolio/prospect-smile",
+      "noJsHeading": true,
+      "staticArtwork": true
+    },
+    {
+      "url": "/portfolio/luxury-ohare-limo",
+      "noJsHeading": true,
+      "staticArtwork": true
+    },
+    {
+      "url": "/portfolio/claims-recovery",
+      "noJsHeading": true,
+      "staticArtwork": true
+    },
+    {
+      "url": "/portfolio/remote-warehouse-management",
+      "noJsHeading": true,
+      "staticArtwork": true
+    },
+    {
+      "url": "/portfolio/procurement-sourcing",
+      "noJsHeading": true,
+      "staticArtwork": true
+    },
+    {
+      "url": "/portfolio/courier-3pl-management",
+      "noJsHeading": true,
+      "staticArtwork": true
+    },
+    {
+      "url": "/portfolio/multichannel-ecommerce-operations",
+      "noJsHeading": true,
+      "staticArtwork": true
+    },
+    {
+      "url": "/portfolio/etsy-in-house-launch",
+      "noJsHeading": true,
+      "staticArtwork": true
+    }
+  ],
+  "errors": []
+}

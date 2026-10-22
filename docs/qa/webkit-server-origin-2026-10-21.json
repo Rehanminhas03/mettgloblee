@@ -1,0 +1,8 @@
+{
+  "result": {
+    "status": 200,
+    "outcome": "accepted",
+    "requestId": "12345678-1234-4234-8234-123456789abc"
+  },
+  "externalEmailsSent": 0
+}

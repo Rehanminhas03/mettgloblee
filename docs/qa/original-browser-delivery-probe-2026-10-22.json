@@ -1,0 +1,11 @@
+{
+  "started": "2026-10-21T23:45:30.416Z",
+  "realRequestsSent": 1,
+  "note": "Diagnostic only: original direct browser transport. Final CSP must be verified without bypass.",
+  "result": {
+    "status": 200,
+    "elapsedMs": 1505,
+    "reference": "d7a34d3f-dc89-4d04-99e7-8857c79407a9",
+    "body": "{\"success\":\"true\",\"message\":\"The form was submitted successfully.\"}"
+  }
+}

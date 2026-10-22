@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-21T01:33:12.062Z",
+  "recipient": "contact@mettglobal.com",
+  "actualRequestsSent": 2,
+  "inboxReceiptVerified": false,
+  "rows": [
+    {
+      "kind": "enquiry",
+      "status": 200,
+      "elapsedMs": 2669,
+      "outcome": "accepted",
+      "requestId": "407e80b0-96af-4fab-818e-04e71df49a56"
+    },
+    {
+      "kind": "meeting",
+      "status": 200,
+      "elapsedMs": 670,
+      "outcome": "accepted",
+      "requestId": "1724d716-257d-4b7c-a81e-2d5449a79bcb"
+    }
+  ]
+}

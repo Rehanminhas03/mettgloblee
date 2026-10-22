@@ -1,0 +1,75 @@
+{
+  "wordsPerMinute": 200,
+  "estimates": [
+    {
+      "path": "/insight-ecommerce-operations",
+      "words": 322,
+      "minutes": 2
+    },
+    {
+      "path": "/insight-conversion-audit",
+      "words": 243,
+      "minutes": 2
+    },
+    {
+      "path": "/insight-erp-for-growing-businesses",
+      "words": 448,
+      "minutes": 3
+    },
+    {
+      "path": "/insight-booking-app-partner-portal",
+      "words": 413,
+      "minutes": 3
+    },
+    {
+      "path": "/insight-digital-outdoor-marketing",
+      "words": 376,
+      "minutes": 2
+    },
+    {
+      "path": "/insight-ai-automation",
+      "words": 217,
+      "minutes": 2
+    },
+    {
+      "path": "/insight-growth-system",
+      "words": 227,
+      "minutes": 2
+    },
+    {
+      "path": "/insight-supply-chain-control",
+      "words": 256,
+      "minutes": 2
+    },
+    {
+      "path": "/insight-lead-generation-system",
+      "words": 219,
+      "minutes": 2
+    },
+    {
+      "path": "/insight-ai-video-brief",
+      "words": 226,
+      "minutes": 2
+    },
+    {
+      "path": "/insight-utm-governance",
+      "words": 688,
+      "minutes": 4
+    },
+    {
+      "path": "/insight-product-feed-health",
+      "words": 735,
+      "minutes": 4
+    },
+    {
+      "path": "/insight-landed-cost-model",
+      "words": 669,
+      "minutes": 4
+    },
+    {
+      "path": "/insight-3pl-scorecard",
+      "words": 675,
+      "minutes": 4
+    }
+  ]
+}

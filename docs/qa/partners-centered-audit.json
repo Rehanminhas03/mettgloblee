@@ -1,0 +1,98 @@
+[
+  {
+    "viewport": {
+      "width": 1892,
+      "height": 780
+    },
+    "desktop": true,
+    "paragraphCenterDifference": 0,
+    "headingColumnDifference": 0,
+    "paragraphColumnDifference": 0,
+    "stacked": true,
+    "cardTopDifference": 0,
+    "topPadding": 38.390625,
+    "naturalHeight": true,
+    "heroParagraphs": 0,
+    "overflow": 0
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "desktop": true,
+    "paragraphCenterDifference": 0,
+    "headingColumnDifference": 0,
+    "paragraphColumnDifference": 0,
+    "stacked": true,
+    "cardTopDifference": 0,
+    "topPadding": 48,
+    "naturalHeight": true,
+    "heroParagraphs": 0,
+    "overflow": 0
+  },
+  {
+    "viewport": {
+      "width": 1366,
+      "height": 560
+    },
+    "desktop": true,
+    "paragraphCenterDifference": 0,
+    "headingColumnDifference": 0,
+    "paragraphColumnDifference": 0,
+    "stacked": true,
+    "cardTopDifference": 0,
+    "topPadding": 26.390625,
+    "naturalHeight": true,
+    "heroParagraphs": 0,
+    "overflow": 0
+  },
+  {
+    "viewport": {
+      "width": 820,
+      "height": 1180
+    },
+    "desktop": false,
+    "paragraphCenterDifference": null,
+    "headingColumnDifference": 0,
+    "paragraphColumnDifference": null,
+    "stacked": true,
+    "cardTopDifference": null,
+    "topPadding": 48,
+    "naturalHeight": true,
+    "heroParagraphs": 0,
+    "overflow": 0
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "desktop": false,
+    "paragraphCenterDifference": null,
+    "headingColumnDifference": 0,
+    "paragraphColumnDifference": null,
+    "stacked": true,
+    "cardTopDifference": null,
+    "topPadding": 48,
+    "naturalHeight": true,
+    "heroParagraphs": 0,
+    "overflow": 0
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "desktop": false,
+    "paragraphCenterDifference": null,
+    "headingColumnDifference": 0,
+    "paragraphColumnDifference": null,
+    "stacked": true,
+    "cardTopDifference": null,
+    "topPadding": 48,
+    "naturalHeight": true,
+    "heroParagraphs": 0,
+    "overflow": 0
+  }
+]

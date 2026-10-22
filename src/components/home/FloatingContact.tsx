@@ -40,20 +40,22 @@ export function FloatingContact() {
         target="_blank"
         rel="noopener"
         aria-label="Chat with Mett Global on WhatsApp"
-        className="max-b560:h-12 max-b560:w-12 max-b560:justify-center max-b560:p-0 flex items-center gap-[9px] rounded-full border border-[rgba(224,188,104,.34)] bg-[#0c0c0b] px-[18px] py-[13px] text-xs text-white shadow-[0_16px_45px_rgba(0,0,0,.22)]"
+        className="group flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(224,188,104,.34)] bg-[#0c0c0b] text-white shadow-[0_16px_45px_rgba(0,0,0,.22)] transition-all duration-300 ease-out hover:w-auto hover:px-3.5 hover:gap-2"
       >
-        <WaIcon className="!h-[34px] !w-[34px] border-0 bg-transparent" />
-        <b className="max-b560:hidden">WhatsApp</b>
+        <WaIcon className="!h-7 !w-7 border-0 bg-transparent flex-shrink-0" />
+        <span className="max-w-0 overflow-hidden whitespace-nowrap text-xs font-bold opacity-0 transition-all duration-300 ease-out group-hover:max-w-[80px] group-hover:opacity-100">
+          WhatsApp
+        </span>
       </a>
       <a
         href={PHONE.href}
         aria-label="Call Mett Global"
-        className="bg-gold grid h-12 w-12 place-items-center rounded-full text-white shadow-[0_16px_45px_rgba(0,0,0,.18)]"
+        className="bg-gold grid h-11 w-11 place-items-center rounded-full text-white shadow-[0_16px_45px_rgba(0,0,0,.18)] transition-transform duration-200 hover:scale-105"
       >
         <svg
           viewBox="0 0 24 24"
-          width="20"
-          height="20"
+          width="18"
+          height="18"
           fill="none"
           stroke="currentColor"
           strokeWidth="1.8"

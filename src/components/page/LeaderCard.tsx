@@ -111,6 +111,7 @@ export function LeaderCard({ leader }: { leader: Leader }) {
             </a>
           </li>
         ) : null}
+
       </ul>
     </ToneCard>
   );

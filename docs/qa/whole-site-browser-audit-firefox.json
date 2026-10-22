@@ -1,0 +1,3526 @@
+{
+  "date": "2026-10-20T10:46:05.970Z",
+  "rows": [
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/mytrackee-pakistan",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/services",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/case-studies",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/jetour-ittehad",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/hyundai-islamabad",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/csm-ittehad",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/about",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/blog",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/contact",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/appointment",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/sitemap",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/privacy",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/terms",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/dealership-erp",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/ittehad-steel",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/sfykea",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/mowing",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/serenada-mental-health",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/prospect-smile",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/luxury-ohare-limo",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/digital-marketing-growth",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/web-software-development",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/ai-automation-content",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/ecommerce-supply-chain",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/update-amazon-fba-fees-2026",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/update-eu-ai-act-transparency-2026",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/update-google-ads-consent-2026",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/update-eu-ics2-2026",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/update-google-search-2026",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/insight-ecommerce-operations",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/insight-conversion-audit",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/insight-erp-for-growing-businesses",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/insight-booking-app-partner-portal",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/insight-digital-outdoor-marketing",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/insight-ai-automation",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/insight-growth-system",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/insight-supply-chain-control",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/insight-lead-generation-system",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/insight-ai-video-brief",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/insight-utm-governance",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/insight-product-feed-health",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/insight-landed-cost-model",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/insight-3pl-scorecard",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/claims-recovery",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/remote-warehouse-management",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/procurement-sourcing",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/courier-3pl-management",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/multichannel-ecommerce-operations",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "path": "/portfolio/etsy-in-house-launch",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/mytrackee-pakistan",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/services",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/case-studies",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/jetour-ittehad",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/hyundai-islamabad",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/csm-ittehad",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/about",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/blog",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/contact",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/appointment",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/sitemap",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/privacy",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/terms",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/dealership-erp",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/ittehad-steel",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/sfykea",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/mowing",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/serenada-mental-health",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/prospect-smile",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/luxury-ohare-limo",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/digital-marketing-growth",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/web-software-development",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/ai-automation-content",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/ecommerce-supply-chain",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/update-amazon-fba-fees-2026",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/update-eu-ai-act-transparency-2026",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/update-google-ads-consent-2026",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/update-eu-ics2-2026",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/update-google-search-2026",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/insight-ecommerce-operations",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/insight-conversion-audit",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/insight-erp-for-growing-businesses",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/insight-booking-app-partner-portal",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/insight-digital-outdoor-marketing",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/insight-ai-automation",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/insight-growth-system",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/insight-supply-chain-control",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/insight-lead-generation-system",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/insight-ai-video-brief",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/insight-utm-governance",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/insight-product-feed-health",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/insight-landed-cost-model",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/insight-3pl-scorecard",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/claims-recovery",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/remote-warehouse-management",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/procurement-sourcing",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/courier-3pl-management",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/multichannel-ecommerce-operations",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 820,
+      "path": "/portfolio/etsy-in-house-launch",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/mytrackee-pakistan",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/services",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/case-studies",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/jetour-ittehad",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/hyundai-islamabad",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/csm-ittehad",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/about",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/blog",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/contact",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/appointment",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/sitemap",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/privacy",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/terms",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/dealership-erp",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/ittehad-steel",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/sfykea",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/mowing",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/serenada-mental-health",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/prospect-smile",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/luxury-ohare-limo",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/digital-marketing-growth",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/web-software-development",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/ai-automation-content",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/ecommerce-supply-chain",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/update-amazon-fba-fees-2026",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/update-eu-ai-act-transparency-2026",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/update-google-ads-consent-2026",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/update-eu-ics2-2026",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/update-google-search-2026",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/insight-ecommerce-operations",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/insight-conversion-audit",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/insight-erp-for-growing-businesses",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/insight-booking-app-partner-portal",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/insight-digital-outdoor-marketing",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/insight-ai-automation",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/insight-growth-system",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/insight-supply-chain-control",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/insight-lead-generation-system",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/insight-ai-video-brief",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/insight-utm-governance",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/insight-product-feed-health",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/insight-landed-cost-model",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/insight-3pl-scorecard",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/claims-recovery",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/remote-warehouse-management",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/procurement-sourcing",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/courier-3pl-management",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/multichannel-ecommerce-operations",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "width": 390,
+      "path": "/portfolio/etsy-in-house-launch",
+      "h1": 1,
+      "checks": [
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        },
+        {
+          "root": 0,
+          "clipped": [],
+          "imageFailures": []
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "failures": []
+}

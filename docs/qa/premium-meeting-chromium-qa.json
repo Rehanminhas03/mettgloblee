@@ -1,0 +1,213 @@
+{
+  "rows": [
+    {
+      "test": "Asia/Karachi heading centered",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi original linked logo in sidebar",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi Night six compact times",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi Morning six compact times",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi Afternoon six compact times",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi Evening six compact times",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi all 24 hours exactly once",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi office address and directions visible",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi draft survives time changes",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi late night request and format preserved",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi submitted instant matches local selected hour",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi 320 time stage fits",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi 320 details stage fits",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi 390 time stage fits",
+      "passed": true
+    },
+    {
+      "test": "Axe time 390",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "test": "Asia/Karachi 390 details stage fits",
+      "passed": true
+    },
+    {
+      "test": "Axe details 390",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "test": "Asia/Karachi 768 time stage fits",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi 768 details stage fits",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi 1024 time stage fits",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi 1024 details stage fits",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi 1440 time stage fits",
+      "passed": true
+    },
+    {
+      "test": "Axe time 1440",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "test": "Asia/Karachi 1440 details stage fits",
+      "passed": true
+    },
+    {
+      "test": "Axe details 1440",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "test": "Asia/Karachi no Calendly requests or iframe",
+      "passed": true
+    },
+    {
+      "test": "Asia/Karachi no unexpected client errors",
+      "passed": true,
+      "errors": [],
+      "localWarnings": []
+    },
+    {
+      "test": "America/Chicago heading centered",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago original linked logo in sidebar",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago Night six compact times",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago Morning six compact times",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago Afternoon six compact times",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago Evening six compact times",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago all 24 hours exactly once",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago office address and directions visible",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago draft survives time changes",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago late night request and format preserved",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago submitted instant matches local selected hour",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago 320 time stage fits",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago 320 details stage fits",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago 390 time stage fits",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago 390 details stage fits",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago 768 time stage fits",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago 768 details stage fits",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago 1024 time stage fits",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago 1024 details stage fits",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago 1440 time stage fits",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago 1440 details stage fits",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago no Calendly requests or iframe",
+      "passed": true
+    },
+    {
+      "test": "America/Chicago no unexpected client errors",
+      "passed": true,
+      "errors": [],
+      "localWarnings": []
+    }
+  ],
+  "externalEmailsSent": 0
+}

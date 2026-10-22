@@ -1,0 +1,682 @@
+
+
+========== /portfolio/ittehad-steel ==========
+TITLE: Steel, Made Visible: Ittehad Steel | Mett Global
+DESCRIPTION: Instagram management, video reels, and billboard and poster design Mett Global delivered for Ittehad Steel, a steel manufacturer in Islamabad.
+
+PORTFOLIO / INDUSTRIAL · ISLAMABAD
+Ittehad Steel: built to be seen
+Creative studio
+ITTEHAD STEEL
+Social & reels
+Shape the story
+Create content
+Reach audiences
+Steel, Made Visible
+
+Instagram management, video reels, and billboard and poster design for Ittehad Steel
+
+Marketing support for Ittehad Steel, a Pakistani manufacturer of reinforcement bars and light section steel: Instagram page management, video reels, and billboard and poster design.
+
+Visit website
+Instagram
+Facebook
+
+The company
+
+Ittehad Steel is a Pakistani steel manufacturer headquartered in Islamabad, with mills in Islamabad and Faisalabad. It produces reinforcement bars and light section steel for construction and infrastructure projects.
+
+INSTAGRAM
+VIDEO REELS
+BILLBOARDS
+POSTERS
+What we delivered
+
+Creative and channel management that give an industrial brand a clear, consistent voice online and outdoors.
+
+01 / INSTAGRAM
+Page management
+
+Management of the brand’s Instagram page and its content.
+
+02 / VIDEO REELS
+Short-form video
+
+Video reels produced for the Instagram audience.
+
+03 / BILLBOARDS
+Outdoor visibility
+
+Billboard design that carries the brand onto the street.
+
+04 / POSTERS
+Print and campaign posters
+
+Poster design for campaigns and print use.
+
+Have something similar
+in mind?
+
+Tell us what you want to build or improve and we will show you how we would approach it.
+
+Discuss a project
+
+========== /portfolio/sfykea ==========
+TITLE: Car Care, On Demand: SFYKEA App & Portals | Mett Global
+DESCRIPTION: How Mett Global built the website, Flutter app and admin and partner portals for SFYKEA, a door-to-door car wash service in Islamabad.
+
+CASE STUDIES
+/
+CAR CARE, ON DEMAND
+SFYKEA: from booking to doorstep
+Car care
+Service
+Doorstep wash
+Choose a slot
+Confirm booking
+Admin & partner portals
+Bookings · riders · service areas
+Booking
+Rider
+Area
+Doorstep service
+Rider assigned
+Wash completed
+Book a service
+Assign a rider
+Complete the wash
+ON-DEMAND CAR CARE · ISLAMABAD · CASE STUDY
+Car Care, On Demand
+
+Website, iOS and Android apps, and admin and partner portals running SFYKEA's door-to-door car wash
+
+SFYKEA brings professional car washing to customers’ homes and offices in Islamabad. Mett Global built the company website, the customer app on iOS and Android, and the admin and partner portals that run bookings, riders and areas behind it.
+
+BUILD SCOPE
+Website, app and two portals.
+
+One connected system: customers book in the app, riders are assigned, and the owner and regional partners manage everything from their own portal.
+
+2
+STORE APPS, IOS & ANDROID
+2
+PORTALS, ADMIN & PARTNER
+1
+FIREBASE BACKEND
+5,000+
+CUSTOMERS SERVED (CLIENT-REPORTED)
+Visit website
+App Store
+Google Play
+Partner portal
+support@sfykea.com
+The business
+
+SFYKEA is a professional door-to-door car wash service operated by CARAN Technologies. Customers pick a package and a time slot, a trained rider comes to them, and the business currently serves areas of Islamabad including Gulberg and Naval Anchorage, with expansion to the twin cities planned. Running that takes more than an app: bookings, riders, locations and partners all need one place to be managed.
+
+WEBSITE
+FLUTTER APP
+ADMIN PORTAL
+PARTNER PORTAL
+FIREBASE
+Four parts, one system
+
+Each part has a single job, and all of them read from the same Firebase data so what a customer books is what the rider and the portals see.
+
+01 / WEBSITE
+The company website
+
+The public site that explains the service, links to both app stores and gives prospective partners a route to join.
+
+02 / CUSTOMER APP
+Booking in a few taps
+
+A Flutter app, live on the App Store and Google Play, where a customer books a specific slot, for example tomorrow at 4 p.m., for their car wash.
+
+03 / ADMIN PORTAL
+The owner’s control room
+
+Customers, bookings, orders, riders and locations in one place, including how many orders and slots were booked today, in which area and through which partner.
+
+04 / PARTNER PORTAL
+Regional partners, self-managed
+
+A separate login for partners, who add and manage the riders for their own area. Riders are assigned to the partner who runs that area.
+
+How a booking moves through it
+
+The same record travels from the customer’s phone to the rider and into the portals.
+
+01
+Customer books a slot in the app
+02
+Booking is assigned to a rider in that area
+03
+Rider completes the wash
+04
+Admin and partner portals update from Firebase
+The admin portal dashboard
+
+The owner’s view of the whole operation: today’s orders and booked slots, bookings by area and partner, riders, customers and locations, all read live from the same Firebase data the app writes to.
+
+SFYKEA ADMIN
+Dashboard
+Bookings
+Customers
+Riders
+Partners
+Areas
+Overview
+ALL AREAS · TODAY
+48
+ORDERS TODAY
+62
+SLOTS BOOKED
+14
+ACTIVE RIDERS
+3
+PARTNERS
+BOOKINGS BY AREA
+Gulberg
+24
+Naval Anchorage
+18
+Area C
+11
+Area D
+9
+PARTNERS & RIDERS
+Partner 1
+Gulberg
+6 riders
+Partner 2
+Naval Anchorage
+5 riders
+Partner 3
+Area C
+3 riders
+RECENT BOOKINGS
+BOOKING	CUSTOMER	AREA	SLOT	RIDER	STATUS
+BK-1042	Customer A	Gulberg	Tomorrow, 4:00 PM	Rider 03	Assigned
+BK-1041	Customer B	Naval Anchorage	Today, 2:00 PM	Rider 07	In progress
+BK-1040	Customer C	Gulberg	Today, 11:00 AM	Rider 03	Completed
+BK-1039	Customer D	Area C	Today, 10:00 AM	Rider 11	Completed
+Illustrative layout of the admin portal with sample figures, it shows what the portal tracks (orders, slots, riders, partners and areas), not real SFYKEA performance.
+Have something similar
+in mind?
+
+Tell us what you want to build or improve and we will show you how we would approach it.
+
+Discuss a project
+
+========== /portfolio/mowing ==========
+TITLE: The Crew Scheduler: Mowing Field-Ops | Mett Global
+DESCRIPTION: How Mett Global built a custom Laravel and Vue 3 scheduling and workforce platform for a commercial lawn-care business.
+
+CASE STUDIES
+/
+THE CREW SCHEDULER
+Mowing: schedules become field work
+Crew schedule
+Property route
+Assigned crew
+Job complete
+Plan the route
+Assign the crew
+Complete the job
+LAWN CARE · FIELD-OPS SOFTWARE · CASE STUDY
+The Crew Scheduler
+
+Field-operations software that turns recurring lawn-care routes into daily crew schedules
+
+A custom scheduling and workforce platform for a commercial lawn-care business. It turns recurring property routes into daily crew schedules, and gives drivers a locked field workflow to complete jobs and track their time.
+
+BUILD SCOPE
+A custom platform, not an off-the-shelf tool.
+
+Built around how the business actually runs routes, crews and jobs, with the office and the field each getting the view they need.
+
+2
+WORKSPACES, OFFICE & FIELD
+Daily
+CREW SCHEDULES FROM RECURRING ROUTES
+3
+STACK LAYERS, LARAVEL, VUE 3, MYSQL
+1
+CUSTOM PLATFORM
+The business
+
+Commercial lawn care runs on repetition: the same properties, on the same cycles, with crews who need to know where to be each day. Doing that from spreadsheets and messages does not scale, so the work moved into one platform where the office plans and the field executes.
+
+LARAVEL
+VUE 3
+MYSQL
+CUSTOM PLATFORM
+What the platform does
+
+The office plans the work; drivers run a workflow that keeps jobs and hours on the record.
+
+01 / OFFICE PLANNING
+Customers, properties, services and teams
+
+The office manages the records that every route is built from.
+
+02 / ROUTES
+Recurring routes, turned into daily schedules
+
+Recurring property routes become the daily crew schedules, rather than being rebuilt by hand each morning.
+
+03 / FIELD WORKFLOW
+A locked workflow for drivers
+
+Drivers follow a fixed sequence in the field, so a job is worked and closed the same way every time.
+
+04 / TIME
+Job completion, service timers and time clocks
+
+Completion, time on each service and hours worked are captured as the work happens.
+
+From plan to completed job
+
+One flow, from the office to the field and back.
+
+01
+Office sets up customers, properties and services
+02
+Recurring routes become daily crew schedules
+03
+Drivers run the locked field workflow
+04
+Completion, service timers and time clocks are recorded
+Have something similar
+in mind?
+
+Tell us what you want to build or improve and we will show you how we would approach it.
+
+Discuss a project
+
+========== /portfolio/serenada-mental-health ==========
+TITLE: Found by Patients: Serenada Website & SEO | Mett Global
+DESCRIPTION: Website design, development and ongoing SEO Mett Global delivered for Serenada Mental Health, a psychiatric and counseling practice in Texas.
+
+PORTFOLIO / MENTAL HEALTH · TEXAS, USA
+Serenada: a clearer path to care
+Find the right care
+Care in Texas
+Serenada
+Georgetown · Waco
+Mental health care
+Search → website
+SERENADA
+Care, clearly explained
+Counselling
+Explore care
+Medication
+Explore care
+Request an appointment
+Search for care
+Explore treatment
+Request a visit
+Found by Patients
+
+A patient-first website and SEO for a mental health practice serving Georgetown and Waco, Texas
+
+Website design and development, with ongoing SEO, for a psychiatric and counseling practice serving Georgetown and Waco, Texas.
+
+Visit website
+
+The practice
+
+Serenada Mental Health is a psychiatric clinic offering clinical counseling and medication management. Its treatments include Spravato for treatment-resistant depression, along with care for depression, anxiety, PTSD, OCD and panic attacks. Patients are often searching at a difficult moment, so the site has to be calm, clear and quick to act on.
+
+WEBSITE
+SEO
+What we delivered
+
+A website organised around what patients are looking for, and the search visibility to be found for it.
+
+01 / WEBSITE
+Design and development
+
+A clean, accessible website that presents the practice with the calm and clarity patients expect.
+
+02 / SEO
+Ongoing search optimisation
+
+Continuing SEO work so the practice is found for the conditions and treatments it provides in its local areas.
+
+03 / TREATMENTS
+Condition and treatment pages
+
+Dedicated pages for Spravato, depression, anxiety, PTSD, OCD and panic attack treatment, so each search lands on the right answer.
+
+04 / BOOKING
+Clear route to an appointment
+
+A prominent “Book now” action and clear location and contact details across the practice’s sites.
+
+Have something similar
+in mind?
+
+Tell us what you want to build or improve and we will show you how we would approach it.
+
+Discuss a project
+
+========== /portfolio/prospect-smile ==========
+TITLE: Smiles, Booked: Prospect Smile Dental | Mett Global
+DESCRIPTION: Website design, development and local SEO Mett Global delivered for Prospect Smile, a family and cosmetic dental clinic in Mount Prospect, Illinois.
+
+PORTFOLIO / DENTAL CARE · ILLINOIS, USA
+Prospect Smile: search to appointment
+Website & local SEO
+Dental care nearby
+Treatments & information
+Request an appointment
+Find the practice
+Explore treatment
+Request a visit
+Smiles, Booked
+
+A modern dental website with local SEO for a family and cosmetic clinic in Mount Prospect, Illinois
+
+Website design and development with local SEO for a family and cosmetic dental clinic in Mount Prospect, Illinois.
+
+Visit website
+
+The clinic
+
+Prospect Smile is a general dentistry practice in Mount Prospect led by Dr. Jagruti Dudhatra, with a multilingual team. It offers checkups and cleanings, restorative work, implants, cosmetic treatment and emergency care, and accepts major PPO and Medicare plans.
+
+WEBSITE
+LOCAL SEO
+What we delivered
+
+A website that answers the questions patients ask before they call, and local search presence to be found when they ask them.
+
+01 / WEBSITE
+Design and development
+
+A modern, responsive website that presents the clinic and its team to families and cosmetic patients.
+
+02 / LOCAL SEO
+Found in Mount Prospect
+
+Local search optimisation so the clinic appears for dental searches in its own area.
+
+03 / SERVICES
+Clear treatment pages
+
+General, restorative, implant, cosmetic and emergency care, each explained on its own page.
+
+04 / PATIENT JOURNEY
+Booking, insurance and membership
+
+Online appointment booking, insurance information and a membership plan for uninsured patients, all easy to find.
+
+Have something similar
+in mind?
+
+Tell us what you want to build or improve and we will show you how we would approach it.
+
+Discuss a project
+
+========== /portfolio/luxury-ohare-limo ==========
+TITLE: Booked by Search: Luxury O'Hare Limo | Mett Global
+DESCRIPTION: Website design, development and SEO Mett Global delivered for Luxury O'Hare Limo, a chauffeured transportation service in Chicago.
+
+PORTFOLIO / LUXURY TRANSPORTATION · CHICAGO, USA
+Luxury travel, planned around you
+Website enquiry
+Pick-up
+O’Hare Airport
+Destination
+Chicago
+Request a ride
+Pick-up to destination
+Airport
+City
+Find the service
+Plan the journey
+Request a ride
+Booked by Search
+
+A website and SEO that turn airport and event searches into Chicago chauffeur bookings
+
+Website design and development with SEO for airport transfers, corporate travel and event transportation across the Chicago area.
+
+Visit website
+
+The company
+
+Luxury O’Hare Limo is a chauffeured transportation service covering downtown Chicago and its suburbs. It handles airport transfers with flight tracking, corporate travel, weddings and events, and group travel, with a fleet that ranges from executive sedans to 13-seat Sprinter vans.
+
+WEBSITE
+SEO
+What we delivered
+
+A website that carries the premium feel of the service and turns searches for airport and event transport into booking requests.
+
+01 / WEBSITE
+Design and development
+
+A refined, responsive website that presents the brand and the experience of travelling with it.
+
+02 / SEO
+Search visibility
+
+SEO focused on airport transfers, corporate travel and event transportation across the Chicago area.
+
+03 / SERVICES & FLEET
+Services and vehicles, laid out clearly
+
+Pages for airport, corporate, event and group travel, plus the fleet from sedans to Sprinter vans.
+
+04 / BOOKING & PRICING
+A straightforward way to book
+
+A booking route and a pricing page that explains flat-rate quotes so travellers know what to expect.
+
+Have something similar
+in mind?
+
+Tell us what you want to build or improve and we will show you how we would approach it.
+
+Discuss a project
+
+========== /digital-marketing-growth ==========
+TITLE: Digital Marketing & SEO in Islamabad | Mett Global
+DESCRIPTION: Digital Marketing & Growth from Mett Global: performance marketing, Meta and Google Ads, social media, SEO, creative and analytics built for measurable growth.
+
+SERVICE / DIGITAL MARKETING & GROWTH
+Turn attention
+into growth.
+
+Strategy, creative, paid media, social, SEO and analytics managed as one growth system, measured by the leads and sales it produces, not by likes.
+
+WHAT'S INCLUDED
+Strategy, media and measurement under one plan.
+Discuss this service
+Performance marketing
+
+Campaign structure, audiences, budgets and testing treated as connected decisions, with retargeting built in.
+
+Meta Ads
+Google Ads
+Paid Media
+Lead Generation
+Retargeting
+Campaign Optimization
+Social media marketing
+
+Your brand channels planned, published and looked after every week, so they stay active and on-message.
+
+Instagram
+Facebook
+LinkedIn
+TikTok
+Content Strategy
+Community Management
+SEO & search
+
+Organic search that supports paid campaigns and helps customers find and evaluate your business when they search.
+
+Technical SEO
+On-Page SEO
+Local SEO
+Google Business Profile
+Search Visibility
+SEO Content
+Branding & creative
+
+A clear brand and creative direction, so every campaign looks and sounds like one business.
+
+Brand Strategy
+Campaign Concepts
+Creative Direction
+Social Media Creatives
+Copywriting
+Photography & Video Direction
+Media & outdoor marketing
+
+Offline visibility that supports digital campaigns, from outdoor placements to on-the-ground activations.
+
+Outdoor Advertising
+OOH Campaigns
+Events
+Activations
+Print & Standee Campaigns
+Analytics & CRO
+
+Measurement set up correctly first, so decisions are based on data you can trust and every page works harder.
+
+Conversion Tracking
+Marketing Analytics
+Reporting
+Funnel Analysis
+Conversion Optimization
+Performance Insights
+CRM & lead management
+
+The form, routing and follow-up are part of acquisition. A fast response turns clicks into conversations.
+
+Lead Capture
+Lead Routing
+CRM Integration
+Lead Nurturing
+Automated Follow-ups
+Explore the work behind the service
+The 1,000-Lead Launch
+
+Campaigns, lead automation and local visibility for Jetour Ittehad.
+
+The Connected Showroom
+
+Content, enquiries and showroom journeys for Hyundai Islamabad.
+
+112 Showroom Visits
+
+EV marketing and lead handling, with client-reported showroom outcomes.
+
+Questions about this service
+What does Mett Global manage in a growth engagement?
+How is marketing performance measured?
+Can marketing connect to our existing CRM and sales team?
+Better growth starts upstream.
+
+We review the offer, creative, audience, landing page and follow-up together before increasing spend.
+
+Plan a campaign
+
+========== /web-software-development ==========
+TITLE: Web & Software Development in Islamabad | Mett Global
+DESCRIPTION: Web & Software Development from Mett Global: websites, online stores, custom CRMs, web applications, integrations and hosting built around how your business works.
+
+SERVICE / WEB & SOFTWARE DEVELOPMENT
+Software that
+runs the business.
+
+From the website customers see to the CRM and tools your team uses every day, designed, built and maintained by one team.
+
+WHAT'S INCLUDED
+Built for customers and for your team.
+Discuss this service
+Web development
+
+Fast, clear websites that explain what you do and make the next step obvious on every device.
+
+Business Websites
+Corporate Websites
+Landing Pages
+High-Converting Websites
+E-commerce development
+
+Online stores set up to sell, with payments, catalogue and fulfillment connected from day one.
+
+Online Stores
+E-Commerce Platforms
+Product & Catalog Systems
+Checkout Integrations
+Custom software
+
+Internal tools and client-facing applications that replace spreadsheets and manual handoffs.
+
+Custom Web Applications
+Internal Business Tools
+Business Dashboards
+Workflow Systems
+CRM development
+
+A CRM shaped around your sales process, built custom, or an existing platform configured properly.
+
+Custom CRM
+CRM Setup
+Sales Pipelines
+Customer Management
+UI/UX
+
+Interfaces designed around how people actually use them, so the product is easy to learn and easy to buy from.
+
+User Experience Design
+Interface Design
+Conversion-Focused Design
+Responsive Design
+Integrations
+
+Connecting the systems you already use so data moves without copy-and-paste.
+
+APIs
+Third-Party Integrations
+Payment Gateways
+CRM Integrations
+Marketing Integrations
+Infrastructure
+
+Ongoing care so the software stays fast, secure and up to date after launch.
+
+Hosting
+Website Maintenance
+Security
+Performance Optimization
+Technical Support
+Explore the work behind the service
+Car Care, On Demand
+
+A website, mobile apps and the portals behind a car-care operation.
+
+The Crew Scheduler
+
+Field-operations software for recurring routes and daily crew schedules.
+
+One System, Three Showrooms
+
+A dealership ERP with role-based portals, currently in development.
+
+Questions about this service
+Do you build websites as well as custom business software?
+Can one project connect a website, apps and admin portals?
+Can software be designed for different roles in a business?
+Build trust. Reduce friction.
+
+Tell us what you need to build, a website, a CRM or an internal tool, and we will scope it with you.
+
+Discuss a build

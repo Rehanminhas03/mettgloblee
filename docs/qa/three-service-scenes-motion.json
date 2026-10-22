@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "serenada-mental-health",
+    "active": 7,
+    "animated": {
+      "median": 16.699999999999818,
+      "p95": 16.90000000000009,
+      "over50ms": 0
+    },
+    "reducedStopped": true,
+    "still": {
+      "median": 16.699999999999818,
+      "p95": 17.200000000000273,
+      "over50ms": 0
+    }
+  },
+  {
+    "slug": "luxury-ohare-limo",
+    "active": 6,
+    "animated": {
+      "median": 16.699999999999932,
+      "p95": 17,
+      "over50ms": 0
+    },
+    "reducedStopped": true,
+    "still": {
+      "median": 16.699999999999818,
+      "p95": 17.09999999999991,
+      "over50ms": 0
+    }
+  },
+  {
+    "slug": "sfykea",
+    "active": 10,
+    "animated": {
+      "median": 16.699999999999932,
+      "p95": 17.100000000000136,
+      "over50ms": 0
+    },
+    "reducedStopped": true,
+    "still": {
+      "median": 16.699999999999818,
+      "p95": 17.100000000000364,
+      "over50ms": 0
+    }
+  }
+]

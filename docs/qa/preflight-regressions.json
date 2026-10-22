@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-20T11:00:52.705Z",
+  "rows": [
+    {
+      "name": "No analytics script before consent",
+      "passed": true
+    },
+    {
+      "name": "Accept enables analytics and loads one script",
+      "passed": true
+    },
+    {
+      "name": "Withdraw disables tracking and deletes analytics cookies",
+      "passed": true
+    },
+    {
+      "name": "Successful enquiry does not queue analytics after withdrawal",
+      "passed": true
+    },
+    {
+      "name": "Re-accept enables existing script without duplicate load",
+      "passed": true
+    },
+    {
+      "name": "Cookie clearance updates after resize 390",
+      "passed": true
+    },
+    {
+      "name": "Cookie clearance updates after resize 844",
+      "passed": true
+    },
+    {
+      "name": "Cookie clearance updates after resize 320",
+      "passed": true
+    },
+    {
+      "name": "Pause stops every scene animation",
+      "passed": true
+    },
+    {
+      "name": "Pause persists on reload",
+      "passed": true
+    },
+    {
+      "name": "Resume restores motion",
+      "passed": true
+    },
+    {
+      "name": "Past same-day slots disabled",
+      "passed": true
+    },
+    {
+      "name": "Expired selection rejected before any form request",
+      "passed": true
+    },
+    {
+      "name": "Expired slot is disabled on return",
+      "passed": true
+    },
+    {
+      "name": "Mobile editable controls use readable 16px text",
+      "passed": true
+    },
+    {
+      "name": "Final axe /contact",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Final axe /appointment",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Final axe /portfolio",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Final axe /sitemap",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Final axe /update-eu-ics2-2026",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Final axe /update-eu-ai-act-transparency-2026",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Five desktop workflow cards align on one row",
+      "passed": true
+    },
+    {
+      "name": "All operator playbooks in human sitemap",
+      "passed": true
+    }
+  ],
+  "externalMessagesSent": 0,
+  "analyticsEndpointsMocked": true
+}

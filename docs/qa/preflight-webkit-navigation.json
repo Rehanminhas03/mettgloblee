@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-20T16:49:44.946Z",
+  "rows": [
+    {
+      "action": "Direct contact load",
+      "url": "https://127.0.0.1:3443/contact",
+      "h1": "Bring us the problem.We’ll map the next move."
+    },
+    {
+      "action": "Client navigation to services",
+      "url": "https://127.0.0.1:3443/services",
+      "h1": "Four services.One connected team."
+    },
+    {
+      "action": "Footer client navigation",
+      "url": "https://127.0.0.1:3443/web-software-development",
+      "h1": "Software thatruns the business."
+    },
+    {
+      "action": "Back navigation",
+      "url": "https://127.0.0.1:3443/services",
+      "h1": "Four services.One connected team."
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

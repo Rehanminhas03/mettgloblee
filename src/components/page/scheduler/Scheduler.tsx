@@ -232,14 +232,16 @@ export function Scheduler() {
             Reference: {submission.requestId}
           </p>
           <div className="flex flex-wrap gap-3">
-            <a
-              href={googleCalendarHref}
-              target="_blank"
-              rel="noopener"
-              className="border-p-ink bg-p-ink rounded-full border px-5 py-[15px] text-xs font-extrabold text-white"
-            >
-              Add to Google Calendar
-            </a>
+            {googleCalendarHref && googleCalendarHref !== '#' ? (
+              <a
+                href={googleCalendarHref}
+                target="_blank"
+                rel="noopener"
+                className="border-p-ink bg-p-ink rounded-full border px-5 py-[15px] text-xs font-extrabold text-white"
+              >
+                Add to Google Calendar
+              </a>
+            ) : null}
             <button
               type="button"
               onClick={onDownloadIcs}

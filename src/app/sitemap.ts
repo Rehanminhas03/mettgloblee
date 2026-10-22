@@ -15,7 +15,6 @@ const ENTRIES = [
   { path: '/', lastModified: '2026-10-18', priority: 1.0 },
   { path: '/services', lastModified: '2026-10-06', priority: 0.9 },
   { path: '/portfolio', lastModified: '2026-10-18', priority: 0.9 },
-  { path: '/case-studies', lastModified: '2026-10-18', priority: 0.9 },
   {
     path: '/portfolio/jetour-ittehad',
     lastModified: '2026-09-20',
@@ -174,7 +173,6 @@ const UPDATED_PATHS = new Set([
   '/',
   '/services',
   '/portfolio',
-  '/case-studies',
   '/digital-marketing-growth',
   '/web-software-development',
   '/ai-automation-content',
@@ -209,9 +207,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [...ENTRIES, ...OPERATIONS_ENTRIES].map(entry => ({
     url: entry.path === '/' ? `${SITE_URL}/` : `${SITE_URL}${entry.path}`,
     lastModified: reviewedToday.has(entry.path)
-      ? '2026-10-20'
+      ? '2026-10-22'
       : UPDATED_PATHS.has(entry.path)
-        ? '2026-10-19'
+        ? '2026-10-22'
         : entry.lastModified,
     priority: entry.priority,
   }));

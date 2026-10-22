@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-21T23:52:21.737Z",
+  "transport": "Original browser FormSubmit",
+  "recipient": "contact@mettglobal.com",
+  "realRequestsSent": 1,
+  "rows": [
+    {
+      "kind": "enquiry",
+      "status": 200,
+      "elapsedMs": 1561,
+      "providerSuccess": "false",
+      "requestId": "aad659a9-e576-4fac-ac91-1835cef789e0"
+    }
+  ],
+  "inboxReceiptVerified": false,
+  "error": "enquiry was not explicitly accepted; no automatic retry"
+}

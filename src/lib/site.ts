@@ -37,10 +37,14 @@ export const SOCIAL_URLS = {
   youtube: 'https://youtube.com/@mettglobal',
   pinterest: 'https://www.pinterest.com/mettglobalinc',
   x: 'https://x.com/mettglobal',
+  reddit: 'https://www.reddit.com/user/MettGlobal/',
+  quora: 'https://www.quora.com/profile/Mett-Global',
+  clutch: 'https://clutch.co/profile/mett-global',
+  crunchbase: 'https://www.crunchbase.com/organization/mett-global',
 } as const;
 
 export const SOCIAL_PROFILES = [
-  { label: 'Google Business Profile', href: BUSINESS_PROFILE_URL },
+  { label: 'Google Business', href: BUSINESS_PROFILE_URL },
   { label: 'LinkedIn', href: SOCIAL_URLS.linkedin },
   { label: 'Facebook', href: SOCIAL_URLS.facebook },
   { label: 'Instagram', href: SOCIAL_URLS.instagram },
@@ -48,6 +52,10 @@ export const SOCIAL_PROFILES = [
   { label: 'YouTube', href: SOCIAL_URLS.youtube },
   { label: 'Pinterest', href: SOCIAL_URLS.pinterest },
   { label: 'X', href: SOCIAL_URLS.x },
+  { label: 'Reddit', href: SOCIAL_URLS.reddit },
+  { label: 'Quora', href: SOCIAL_URLS.quora },
+  { label: 'Clutch', href: SOCIAL_URLS.clutch },
+  { label: 'Crunchbase', href: SOCIAL_URLS.crunchbase },
 ];
 
 /** Same inbox, via FormSubmit's background (AJAX) endpoint, no redirect. */

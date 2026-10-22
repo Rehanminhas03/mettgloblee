@@ -1,0 +1,161 @@
+{
+  "rows": [
+    {
+      "width": 320,
+      "test": "Page fits",
+      "passed": true
+    },
+    {
+      "width": 320,
+      "test": "No third-party iframe before interaction",
+      "passed": true
+    },
+    {
+      "width": 320,
+      "test": "Office visit uses real address, directions and request contact",
+      "passed": true
+    },
+    {
+      "width": 320,
+      "test": "Office does not open online calendar",
+      "passed": true
+    },
+    {
+      "width": 320,
+      "test": "Axe parent page",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "test": "Page fits",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "test": "No third-party iframe before interaction",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "test": "Office visit uses real address, directions and request contact",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "test": "Office does not open online calendar",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "test": "Axe parent page",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "width": 768,
+      "test": "Page fits",
+      "passed": true
+    },
+    {
+      "width": 768,
+      "test": "No third-party iframe before interaction",
+      "passed": true
+    },
+    {
+      "width": 768,
+      "test": "Office visit uses real address, directions and request contact",
+      "passed": true
+    },
+    {
+      "width": 768,
+      "test": "Office does not open online calendar",
+      "passed": true
+    },
+    {
+      "width": 768,
+      "test": "Axe parent page",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "width": 1024,
+      "test": "Page fits",
+      "passed": true
+    },
+    {
+      "width": 1024,
+      "test": "No third-party iframe before interaction",
+      "passed": true
+    },
+    {
+      "width": 1024,
+      "test": "Office visit uses real address, directions and request contact",
+      "passed": true
+    },
+    {
+      "width": 1024,
+      "test": "Office does not open online calendar",
+      "passed": true
+    },
+    {
+      "width": 1024,
+      "test": "Axe parent page",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "test": "Page fits",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "test": "No third-party iframe before interaction",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "test": "Office visit uses real address, directions and request contact",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "test": "Office does not open online calendar",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "test": "Axe parent page",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "test": "Zero Calendly requests before opening",
+      "passed": true
+    },
+    {
+      "test": "Real Calendly event renders in iframe",
+      "passed": true
+    },
+    {
+      "test": "Loaded mobile page fits",
+      "passed": true
+    },
+    {
+      "test": "Format change removes online embed",
+      "passed": true
+    },
+    {
+      "test": "Project enquiry form preserved",
+      "passed": true
+    }
+  ],
+  "shots": [
+    "docs/qa/calendly-390-before.png",
+    "docs/qa/calendly-1440-before.png",
+    "docs/qa/calendly-desktop-loaded.png",
+    "docs/qa/calendly-mobile-loaded.png"
+  ],
+  "bookingsCreated": 0
+}

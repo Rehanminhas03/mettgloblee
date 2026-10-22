@@ -1,0 +1,356 @@
+{
+  "date": "2026-10-19T09:10:05.196Z",
+  "base": "https://www.mettglobal.com",
+  "rows": [
+    {
+      "path": "/",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/portfolio",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/case-studies",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/portfolio/jetour-ittehad",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/portfolio/hyundai-islamabad",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/blog",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/portfolio/csm-ittehad",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/sitemap",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/appointment",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/portfolio/dealership-erp",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/portfolio/serenada-mental-health",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/portfolio/prospect-smile",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/portfolio/mowing",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/portfolio/sfykea",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/portfolio/ittehad-steel",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/web-software-development",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/ecommerce-supply-chain",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/ai-automation-content",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/digital-marketing-growth",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/portfolio/luxury-ohare-limo",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/update-eu-ics2-2026",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/update-amazon-fba-fees-2026",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/update-google-search-2026",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/update-google-ads-consent-2026",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/update-eu-ai-act-transparency-2026",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/insight-erp-for-growing-businesses",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/insight-booking-app-partner-portal",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/insight-ecommerce-operations",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/insight-digital-outdoor-marketing",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/insight-conversion-audit",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/insight-supply-chain-control",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/insight-growth-system",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/insight-ai-video-brief",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/insight-ai-automation",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/insight-lead-generation-system",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/insight-3pl-scorecard",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": true
+    },
+    {
+      "path": "/portfolio/claims-recovery",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/insight-utm-governance",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/insight-landed-cost-model",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/insight-product-feed-health",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/portfolio/multichannel-ecommerce-operations",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/portfolio/procurement-sourcing",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/portfolio/courier-3pl-management",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/portfolio/remote-warehouse-management",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    },
+    {
+      "path": "/portfolio/etsy-in-house-launch",
+      "status": 200,
+      "h1": 1,
+      "canonical": true,
+      "hasEmDash": false
+    }
+  ]
+}

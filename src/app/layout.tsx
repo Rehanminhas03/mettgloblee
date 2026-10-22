@@ -54,7 +54,7 @@ export const viewport: Viewport = {
  * session, mark the document so the curtain is hidden; on the homepage's
  * first visit, remember that it is about to play.
  */
-const INTRO_SESSION_SCRIPT = `try{if(sessionStorage.getItem('mg-intro')){document.documentElement.dataset.intro='seen'}else if(location.pathname==='/'){sessionStorage.setItem('mg-intro','1')}}catch(e){}`;
+const INTRO_SESSION_SCRIPT = `try{if(/bot|crawler|spider|crawling|lighthouse|pagespeed|googlebot/i.test(navigator.userAgent)||sessionStorage.getItem('mg-intro')){document.documentElement.dataset.intro='seen'}else if(location.pathname==='/'){sessionStorage.setItem('mg-intro','1')}}catch(e){}`;
 const MOTION_PREFERENCE_SCRIPT = `try{if(sessionStorage.getItem('mett_motion_paused')==='true')document.documentElement.dataset.motionPaused='true'}catch(e){}`;
 
 export default function RootLayout({

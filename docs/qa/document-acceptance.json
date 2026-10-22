@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-19T21:00:20.294Z",
+  "results": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "removedServicesCopy": true,
+      "removedServicesButton": true,
+      "removedFootnote": true,
+      "partnersAligned": true,
+      "contactFont": true,
+      "representative": true,
+      "faqFullWidth": true,
+      "shortScreenZoom": "1",
+      "overflow": 0,
+      "faqOpens": true,
+      "myTrackeeOpens": true
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 560
+      },
+      "removedServicesCopy": true,
+      "removedServicesButton": true,
+      "removedFootnote": true,
+      "partnersAligned": true,
+      "contactFont": true,
+      "representative": true,
+      "faqFullWidth": true,
+      "shortScreenZoom": "0.66",
+      "overflow": 0,
+      "faqOpens": true,
+      "myTrackeeOpens": true
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "removedServicesCopy": true,
+      "removedServicesButton": true,
+      "removedFootnote": true,
+      "partnersAligned": true,
+      "contactFont": true,
+      "representative": true,
+      "faqFullWidth": true,
+      "shortScreenZoom": "1",
+      "overflow": 0,
+      "faqOpens": true,
+      "myTrackeeOpens": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "removedServicesCopy": true,
+      "removedServicesButton": true,
+      "removedFootnote": true,
+      "partnersAligned": true,
+      "contactFont": true,
+      "representative": true,
+      "faqFullWidth": true,
+      "shortScreenZoom": "1",
+      "overflow": 0,
+      "faqOpens": true,
+      "myTrackeeOpens": true
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "removedServicesCopy": true,
+      "removedServicesButton": true,
+      "removedFootnote": true,
+      "partnersAligned": true,
+      "contactFont": true,
+      "representative": true,
+      "faqFullWidth": true,
+      "shortScreenZoom": "1",
+      "overflow": 0,
+      "faqOpens": true,
+      "myTrackeeOpens": true
+    }
+  ]
+}

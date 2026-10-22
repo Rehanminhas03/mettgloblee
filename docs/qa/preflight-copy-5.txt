@@ -1,0 +1,351 @@
+
+
+========== /insight-conversion-audit ==========
+TITLE: Website Conversion Audit | Mett Global Blog
+DESCRIPTION: A practical conversion-audit framework covering message clarity, trust, mobile friction, CTAs and lead capture.
+
+BLOG / CONVERSION
+A practical website conversion audit before you spend more on ads
+
+A website should reduce uncertainty. If visitors cannot quickly understand the offer, trust the business and take the next step, additional traffic simply buys more exits.
+
+By Mett Global
+METT GLOBAL FIELD GUIDE · WEBSITE & CRO · 2 MIN READ
+MESSAGE
+TRUST
+FRICTION
+ACTION
+Start with the first screen
+
+Can an unfamiliar visitor explain what the business does, who it serves and what action to take? Clever language should never come at the expense of comprehension.
+
+Match the page to the promise
+
+An ad creates an expectation. The landing page must continue it. If creative promotes one service or outcome but the click lands on a generic homepage, the visitor has to reconstruct the connection.
+
+Audit trust where decisions happen
+
+Place relevant proof close to the decision: genuine reviews, clear process, credible team information, transparent contact details, policies and portfolio evidence. Avoid unsupported counters and manufactured testimonials.
+
+Mobile is not desktop compressed
+
+Check tap targets, form length, text width, page weight and whether important content is buried beneath oversized decorative blocks. Complete the enquiry journey on an actual phone.
+
+Reduce form friction deliberately
+
+Every required field creates cost. Ask only for information needed to qualify or respond and explain what happens after submission.
+
+Conversion work is not about making every element louder. It is about making the decision easier.
+Want an independent diagnosis?
+Explore Web & Software Development
+
+========== /insight-erp-for-growing-businesses ==========
+TITLE: When a Growing Business Needs Its Own ERP | Mett Global Blog
+DESCRIPTION: A practical guide to recognising when spreadsheets stop working, how to map the customer journey, and what a custom ERP should track.
+
+BLOG / SOFTWARE
+When a growing business needs its own ERP, and what it should track
+
+Spreadsheets and chat threads work until several teams depend on the same customer. That is the point where one shared system starts to pay for itself.
+
+By Mett Global
+METT GLOBAL FIELD GUIDE · SOFTWARE & SYSTEMS · 3 MIN READ
+ENQUIRY
+FOLLOW-UP
+ORDER
+DELIVERY
+AFTER-SALES
+Signs the spreadsheet has run out
+
+The same customer lives in a spreadsheet, a chat thread and a paper file. Managers ask people for updates instead of reading a screen. Documents are rebuilt by hand each time. Nobody can say quickly where an order stands. None of these is a crisis on its own; together they are the signal that several teams now depend on one shared record.
+
+Follow one customer from end to end
+
+Before choosing features, map the journey: first contact, follow-up, booking, delivery and after-sales. For each step, write down who touches it, what they need to see and what they must record. The system is the shared record of that journey.
+
+Build the spine first, then the modules
+
+Sales, service, parts and accounts look like separate screens, but they describe one customer story. Start with the spine, customer, order, delivery, and let each module hang off it. That keeps data consistent and makes later modules faster to add.
+
+Give every role its own portal
+Sales staff need leads and follow-ups, not accounts.
+Managers need approvals and team performance.
+Back-office teams need orders and documents.
+Leadership needs one summary across teams or locations.
+
+Role-based portals reduce noise and keep sensitive data in front of only the people who need it.
+
+Make documents a by-product
+
+Quotations, vouchers and delivery notes should be generated from the record in one branded format, not retyped. It saves time and removes a common source of mistakes.
+
+Plan for several locations from day one
+
+If the business has more than one branch or showroom, keep each location’s data separate while giving leadership a combined view. Retrofitting that separation later is far more expensive than designing it in.
+
+Add notifications and reporting early
+
+Reminders make sure follow-ups happen, and a dashboard answers “where are we?” without a meeting. They are small features that change how a team works every day.
+
+Test what must not break
+
+Approvals, calculations and permissions are where mistakes cost money. Automated tests on those paths are worth the effort, because they let the system keep growing without breaking what already works.
+
+A good business system is quiet: it makes the next step obvious for each person and the whole picture visible to the people who run it.
+Planning a custom system?
+Explore Web & Software Development
+
+========== /insight-booking-app-partner-portal ==========
+TITLE: Booking Apps & Partner Portals Guide | Mett Global Blog
+DESCRIPTION: What an on-demand service business needs beyond the customer app: slot booking, rider assignment, an owner admin portal and partner portals.
+
+BLOG / APPS & PORTALS
+Booking apps and partner portals: what an on-demand service business needs
+
+A customer app is the visible part. The admin and partner portals behind it are what make bookings, riders and areas manageable as the business grows.
+
+By Mett Global
+METT GLOBAL FIELD GUIDE · APPS & PORTALS · 3 MIN READ
+BOOK
+ASSIGN
+SERVE
+REPORT
+The customer app is only one part of the product
+
+An on-demand service, a home car wash, a cleaner, a technician, serves three audiences: the customer who books, the field staff who do the work, and the owner who has to run it all. An app for the first group alone leaves the other two on phone calls and spreadsheets.
+
+Make booking simple and trustworthy
+
+A customer should be able to pick a package, a date and a time slot in a few taps and get a clear confirmation. The slots on offer must reflect real capacity, or the first missed booking costs more trust than the app earned.
+
+Assign every booking to a person
+
+Each booking needs an owner on the day. Match it to an available rider or technician in that area, make the assignment visible to both sides, and keep a record of who did what.
+
+Give the owner an admin portal
+Today’s orders and booked slots at a glance.
+Customers, bookings and order details in one place.
+Riders or technicians and where they are assigned.
+Activity by area, so demand and gaps are visible.
+Use partner portals to grow by area
+
+When you grow through local partners, give each partner a separate login. They add and manage the riders for their own area and see only their own data, while the owner keeps the full picture. Delegation without losing control.
+
+Keep one source of truth
+
+The app and every portal should read from the same backend, such as a cloud database. A booking made on a phone is then the same record the rider, the partner and the owner see, with no copying between systems.
+
+Ship on both stores, then iterate
+
+A cross-platform framework lets one team ship iOS and Android together and keep them in step. Launch with the core booking flow, watch how customers and field staff actually use it, and let real usage decide what to build next.
+
+The app wins the booking. The portals are what let the business keep every promise it just made.
+Building a booking platform?
+Explore Web & Software Development
+
+========== /insight-digital-outdoor-marketing ==========
+TITLE: Digital and Outdoor Marketing Together | Mett Global Blog
+DESCRIPTION: How Instagram, short video, billboards and posters can work as one system, with a clear next step and honest measurement.
+
+BLOG / DIGITAL MARKETING
+Instagram, billboards and the showroom: make digital and outdoor marketing work together
+
+Local and automotive brands often run outdoor and social separately. Connected, they reinforce each other and give you something to measure.
+
+By Mett Global
+METT GLOBAL FIELD GUIDE · DIGITAL MARKETING · 2 MIN READ
+AWARENESS
+SOCIAL
+ENQUIRY
+VISIT
+One message across every surface
+
+A billboard, a poster, an Instagram reel and a showroom display are not four campaigns. They are one idea seen in different places. When the message, look and next step match, each surface makes the others work harder.
+
+Use outdoor to be noticed, digital to be measured
+
+Outdoor advertising builds recall in the streets people already travel. Digital channels turn that recall into an action you can count. Give every outdoor piece a clear next step, a handle, a QR code or a WhatsApp number, so interest has somewhere to go.
+
+Make the Instagram page the destination
+
+People who notice a brand outdoors often check its Instagram next. A consistent profile, a steady posting rhythm and recent work tell them the business is active and worth contacting.
+
+Let short video do the showing
+
+Reels are the fastest way to show a product, a team or a process. Lead with the most interesting moment, keep one idea per video and end with a clear action. Production quality matters less than clarity.
+
+Design for a glance
+One idea per billboard or poster.
+Large, readable text that survives a passing glance.
+One clear next step.
+Consistent brand colour, type and tone across every piece.
+Capture every enquiry and follow up fast
+
+Attention only becomes value if enquiries are captured and answered quickly. Route lead forms and WhatsApp messages into one sheet or CRM, notify the right person automatically and follow up the same day.
+
+Measure what you can and label what you cannot
+
+Outdoor is hard to attribute exactly. Use unique QR codes, tracked links and dedicated numbers where you can, ask new customers how they heard about you, and compare periods. Be clear about which results are measured and which are estimated.
+
+The street gets the attention. The page, the video and the follow-up turn it into a conversation.
+Want your marketing connected?
+Explore Digital Marketing & Growth
+
+========== /insight-ai-automation ==========
+TITLE: Practical AI Automation | Mett Global Blog
+DESCRIPTION: How to identify AI automation opportunities in repetitive business workflows without automating broken processes.
+
+BLOG / AUTOMATION
+Where AI automation actually saves time in a growing business
+
+The best automation opportunity is usually not the flashiest demo. It is a repeated, rules-heavy workflow that consumes attention and has a clear human checkpoint.
+
+By Mett Global
+METT GLOBAL FIELD GUIDE · AI & OPERATIONS · 2 MIN READ
+INPUT
+DECIDE
+ACT
+VERIFY
+Map the work before adding AI
+
+Write down the trigger, inputs, decisions, systems, output, owner and exception path. If nobody can explain the current process consistently, automating it may scale confusion.
+
+Look for repetition with judgment
+
+Useful candidates include classifying enquiries, drafting structured responses, extracting information from standardized documents, summarizing updates, preparing first-pass reports and routing tasks.
+
+Keep deterministic work deterministic
+
+Not every workflow needs a language model. Fixed calculations, validations and simple rules are often better handled with conventional software.
+
+Design the exception path first
+
+Ask what happens when confidence is low, data is missing or a downstream system fails. A production workflow needs escalation, logging and human override.
+
+Measure before and after
+
+Baseline time per task, volume, error rate and turnaround. Compare the same metrics after automation plus the amount of human review required.
+
+Automate the repetitive layer so people can spend more attention on decisions, relationships and exceptions.
+Have a repetitive workflow?
+Explore AI Automation & Content
+
+========== /insight-growth-system ==========
+TITLE: Ads, Offers and Landing Pages | Mett Global Blog
+DESCRIPTION: Diagnose the acquisition chain from audience and creative through offer, landing page and follow-up before increasing ad spend.
+
+BLOG / GROWTH
+Why better ads cannot rescue a weak offer and landing page
+
+Acquisition is a chain. Creative can earn attention, but the offer, page, follow-up and delivery determine whether that attention becomes business.
+
+By Mett Global
+METT GLOBAL FIELD GUIDE · PAID GROWTH · 2 MIN READ
+AUDIENCE
+AD
+OFFER
+PAGE
+FOLLOW-UP
+Diagnose in order
+
+If impressions are healthy but few people click, inspect audience-message fit and creative. If clicks arrive but visitors leave, inspect the promise-to-page match, offer clarity, trust and friction. If leads arrive but sales do not, inspect qualification and follow-up.
+
+The offer is more than a discount
+
+A strong offer makes the next step easy to understand: what is being provided, for whom, why it matters and why the prospect should act.
+
+Creative should pre-qualify
+
+The job is not merely to generate clicks. Good creative attracts the right attention and establishes the problem or value proposition before the visitor reaches the site.
+
+Landing pages continue the conversation
+
+Use consistent language from the ad, answer questions that block action, show genuine proof and keep the primary CTA obvious.
+
+Follow-up is part of media performance
+
+Define ownership, response time, qualification and follow-up cadence before scaling campaigns.
+
+Do not ask one part of the funnel to compensate indefinitely for another part that is broken.
+Need the acquisition chain reviewed?
+Explore Digital Marketing & Growth
+
+========== /insight-supply-chain-control ==========
+TITLE: Inventory Accuracy Is a System | Mett Global Blog
+DESCRIPTION: A practical supply-chain guide to receiving, location control, stock adjustments, cycle counts and inventory exception ownership.
+
+BLOG / SUPPLY CHAIN
+Inventory accuracy is a system, not a stock count
+
+A warehouse can complete a perfect annual count and still lose accuracy again within weeks. Sustainable accuracy comes from controlling the transactions that change stock every day.
+
+By Mett Global
+METT GLOBAL FIELD GUIDE · SUPPLY CHAIN & OPERATIONS · 2 MIN READ
+RECEIVE
+LOCATE
+MOVE
+COUNT
+RECONCILE
+Start at receiving
+
+Inventory errors often begin before goods reach a pick location. Verify purchase order, SKU, quantity, condition and unit of measure at receiving. Record discrepancies immediately instead of allowing them to become a later stock mystery.
+
+Control locations and movements
+
+If staff can move product without scanning or recording the movement, the system stops describing the warehouse. Define valid locations, movement rules and ownership for exceptions.
+
+Treat adjustments as evidence
+
+An adjustment should not simply make the system match the shelf. Record why the difference happened: receiving error, picking error, damage, return, unrecorded transfer, unit-of-measure issue or another cause. Trend the reasons.
+
+Cycle count by risk
+
+Count fast-moving, high-value and historically inaccurate SKUs more frequently. A smaller targeted count performed consistently is often more useful than a huge count performed rarely.
+
+Measure accuracy and exception closure
+
+Track count accuracy, adjustment value, repeated variance by SKU/location and the age of unresolved discrepancies. The objective is not just finding errors; it is reducing the causes that create them.
+
+Inventory accuracy improves when every stock-changing event has a controlled path and every exception has an owner.
+Need the inventory-control layer reviewed?
+Explore E-Commerce & Supply Chain
+
+========== /insight-lead-generation-system ==========
+TITLE: Build a Prospecting System | Mett Global Blog
+DESCRIPTION: A practical lead-generation guide covering ICP definition, buying signals, qualification, CRM hygiene, personalized outreach and follow-up.
+
+BLOG / SALES SYSTEMS
+Build a prospecting system before hiring more salespeople
+
+More outreach volume rarely fixes weak targeting, unclear qualification and inconsistent follow-up. Build the operating system before scaling the headcount.
+
+By Mett Global
+METT GLOBAL FIELD GUIDE · LEAD GENERATION & SALES · 2 MIN READ
+ICP
+SIGNAL
+QUALIFY
+OUTREACH
+FOLLOW-UP
+Define a realistic ICP
+
+Specify industry, geography, company size, buying role and the business conditions that make your offer relevant. A broad list is not an ideal-customer profile.
+
+Use buying signals
+
+Prioritize prospects showing observable reasons to act: active advertising with weak landing pages, hiring, expansion, marketplace friction, outdated websites or a clear operational gap.
+
+Qualify before personalizing
+
+Confirm the business is a plausible fit before spending time on deep personalization. Keep a simple priority model such as hot, warm and cold based on signal strength and service fit.
+
+Make outreach diagnostic
+
+Lead with the specific issue you noticed and a relevant next step. Avoid sending the full service catalogue to everyone.
+
+Own the next action
+
+Every live opportunity needs an owner, next action and follow-up date in the CRM. Pipeline leakage often happens because nobody owns the next step.
+
+Good prospecting is a sequence of qualification decisions, not a contest to send the most messages.
+Need the pipeline system reviewed?
+Explore Digital Marketing & Growth

@@ -1,0 +1,316 @@
+{
+  "checkedAt": "2026-10-21T17:25:07.669Z",
+  "base": "https://www.mettglobal.com",
+  "routes": 51,
+  "studies": 17,
+  "redirects": 24,
+  "failures": [],
+  "pages": [
+    {
+      "pathname": "/",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com"
+    },
+    {
+      "pathname": "/portfolio/mytrackee-pakistan",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/mytrackee-pakistan"
+    },
+    {
+      "pathname": "/services",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/services"
+    },
+    {
+      "pathname": "/portfolio",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio"
+    },
+    {
+      "pathname": "/portfolio/csm-ittehad",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/csm-ittehad"
+    },
+    {
+      "pathname": "/portfolio/hyundai-islamabad",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/hyundai-islamabad"
+    },
+    {
+      "pathname": "/portfolio/jetour-ittehad",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/jetour-ittehad"
+    },
+    {
+      "pathname": "/case-studies",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/case-studies"
+    },
+    {
+      "pathname": "/contact",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/contact"
+    },
+    {
+      "pathname": "/about",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/about"
+    },
+    {
+      "pathname": "/appointment",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/appointment"
+    },
+    {
+      "pathname": "/blog",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/blog"
+    },
+    {
+      "pathname": "/sitemap",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/sitemap"
+    },
+    {
+      "pathname": "/terms",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/terms"
+    },
+    {
+      "pathname": "/portfolio/dealership-erp",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/dealership-erp"
+    },
+    {
+      "pathname": "/privacy",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/privacy"
+    },
+    {
+      "pathname": "/portfolio/sfykea",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/sfykea"
+    },
+    {
+      "pathname": "/portfolio/serenada-mental-health",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/serenada-mental-health"
+    },
+    {
+      "pathname": "/portfolio/mowing",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/mowing"
+    },
+    {
+      "pathname": "/portfolio/ittehad-steel",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/ittehad-steel"
+    },
+    {
+      "pathname": "/web-software-development",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/web-software-development"
+    },
+    {
+      "pathname": "/portfolio/luxury-ohare-limo",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/luxury-ohare-limo"
+    },
+    {
+      "pathname": "/portfolio/prospect-smile",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/prospect-smile"
+    },
+    {
+      "pathname": "/digital-marketing-growth",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/digital-marketing-growth"
+    },
+    {
+      "pathname": "/update-eu-ai-act-transparency-2026",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/update-eu-ai-act-transparency-2026"
+    },
+    {
+      "pathname": "/ecommerce-supply-chain",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/ecommerce-supply-chain"
+    },
+    {
+      "pathname": "/update-amazon-fba-fees-2026",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/update-amazon-fba-fees-2026"
+    },
+    {
+      "pathname": "/ai-automation-content",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/ai-automation-content"
+    },
+    {
+      "pathname": "/update-google-ads-consent-2026",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/update-google-ads-consent-2026"
+    },
+    {
+      "pathname": "/update-google-search-2026",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/update-google-search-2026"
+    },
+    {
+      "pathname": "/update-eu-ics2-2026",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/update-eu-ics2-2026"
+    },
+    {
+      "pathname": "/insight-ecommerce-operations",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/insight-ecommerce-operations"
+    },
+    {
+      "pathname": "/insight-booking-app-partner-portal",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/insight-booking-app-partner-portal"
+    },
+    {
+      "pathname": "/insight-erp-for-growing-businesses",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/insight-erp-for-growing-businesses"
+    },
+    {
+      "pathname": "/insight-conversion-audit",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/insight-conversion-audit"
+    },
+    {
+      "pathname": "/insight-digital-outdoor-marketing",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/insight-digital-outdoor-marketing"
+    },
+    {
+      "pathname": "/insight-lead-generation-system",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/insight-lead-generation-system"
+    },
+    {
+      "pathname": "/insight-ai-automation",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/insight-ai-automation"
+    },
+    {
+      "pathname": "/insight-growth-system",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/insight-growth-system"
+    },
+    {
+      "pathname": "/insight-supply-chain-control",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/insight-supply-chain-control"
+    },
+    {
+      "pathname": "/insight-ai-video-brief",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/insight-ai-video-brief"
+    },
+    {
+      "pathname": "/insight-product-feed-health",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/insight-product-feed-health"
+    },
+    {
+      "pathname": "/insight-utm-governance",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/insight-utm-governance"
+    },
+    {
+      "pathname": "/insight-landed-cost-model",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/insight-landed-cost-model"
+    },
+    {
+      "pathname": "/portfolio/remote-warehouse-management",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/remote-warehouse-management"
+    },
+    {
+      "pathname": "/insight-3pl-scorecard",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/insight-3pl-scorecard"
+    },
+    {
+      "pathname": "/portfolio/procurement-sourcing",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/procurement-sourcing"
+    },
+    {
+      "pathname": "/portfolio/claims-recovery",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/claims-recovery"
+    },
+    {
+      "pathname": "/portfolio/multichannel-ecommerce-operations",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/multichannel-ecommerce-operations"
+    },
+    {
+      "pathname": "/portfolio/etsy-in-house-launch",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/etsy-in-house-launch"
+    },
+    {
+      "pathname": "/portfolio/courier-3pl-management",
+      "status": 200,
+      "h1": 1,
+      "canonical": "https://www.mettglobal.com/portfolio/courier-3pl-management"
+    }
+  ]
+}

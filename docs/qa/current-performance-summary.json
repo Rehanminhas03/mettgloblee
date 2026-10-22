@@ -1,0 +1,66 @@
+[
+  {
+    "page": "Homepage",
+    "preset": "Mobile",
+    "date": "2026-10-19T21:04:44.999Z",
+    "scores": [
+      95,
+      100,
+      100,
+      100
+    ],
+    "metrics": [
+      "2.6 s",
+      "100 ms",
+      "0"
+    ]
+  },
+  {
+    "page": "Portfolio",
+    "preset": "Mobile",
+    "date": "2026-10-19T21:05:16.154Z",
+    "scores": [
+      94,
+      100,
+      100,
+      100
+    ],
+    "metrics": [
+      "2.9 s",
+      "130 ms",
+      "0"
+    ]
+  },
+  {
+    "page": "Homepage",
+    "preset": "Desktop",
+    "date": "2026-10-19T21:05:51.294Z",
+    "scores": [
+      99,
+      100,
+      100,
+      100
+    ],
+    "metrics": [
+      "0.7 s",
+      "0 ms",
+      "0"
+    ]
+  },
+  {
+    "page": "Portfolio",
+    "preset": "Desktop",
+    "date": "2026-10-19T21:06:20.161Z",
+    "scores": [
+      99,
+      100,
+      100,
+      100
+    ],
+    "metrics": [
+      "0.7 s",
+      "80 ms",
+      "0"
+    ]
+  }
+]

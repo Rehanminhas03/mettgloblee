@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-21T19:42:11.675Z",
+  "transport": "Zoho SMTP",
+  "recipient": "contact@mettglobal.com",
+  "realRequestsSent": 2,
+  "rows": [
+    {
+      "kind": "enquiry",
+      "status": 200,
+      "elapsedMs": 5650,
+      "outcome": "accepted",
+      "requestId": "6f67786b-8569-45d1-aabf-41b2067371ea",
+      "referenceMatches": true,
+      "successPopup": true,
+      "noHorizontalOverflow": true,
+      "inboxReferenceVerified": true,
+      "verifiedVia": "Zoho contact mailbox UI"
+    },
+    {
+      "kind": "meeting",
+      "status": 200,
+      "elapsedMs": 4204,
+      "outcome": "accepted",
+      "requestId": "944642c4-5269-4731-b612-c066a75fe138",
+      "referenceMatches": true,
+      "successPopup": true,
+      "noHorizontalOverflow": true,
+      "inboxReferenceVerified": true,
+      "verifiedVia": "Zoho contact mailbox UI"
+    }
+  ],
+  "inboxReceiptVerified": true
+}

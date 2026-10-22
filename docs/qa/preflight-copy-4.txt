@@ -1,0 +1,445 @@
+
+
+========== /ai-automation-content ==========
+TITLE: AI Automation & Content Services, Pakistan | Mett Global
+DESCRIPTION: AI Automation & Content from Mett Global: workflow automation, AI assistants, document and data processing, lead and CRM automation, and on-brand AI content.
+
+SERVICE / AI AUTOMATION & CONTENT
+Automate the busywork.
+Scale the content.
+
+AI built around real workflows and real brand standards, with human checkpoints, so it reaches production instead of staying a demo.
+
+WHAT'S INCLUDED
+Useful AI, not experiments.
+Discuss this service
+AI workflow automation
+
+Map the process first: trigger, inputs, decisions, owner and exceptions. Then automate the parts that repeat.
+
+Workflow Automation
+Repetitive Task Automation
+Business Process Automation
+AI-Powered Workflows
+AI agents & assistants
+
+Assistants that answer, qualify and route, and hand over to a person when they should.
+
+AI Assistants
+AI Agents
+Customer Support Automation
+Internal Knowledge Assistants
+AI content
+
+AI-assisted production for faster content, briefed properly, reviewed by people and kept on-brand.
+
+Social Media Content
+Marketing Copy
+Product Content
+On-Brand Content Generation
+Content Repurposing
+Document & data processing
+
+Turning invoices, forms and emails into structured data your systems can use.
+
+Document Processing
+Data Extraction
+Data Classification
+AI-Powered Information Processing
+Automated Reporting
+Lead & CRM automation
+
+Every enquiry qualified, routed and followed up quickly, with your CRM kept up to date automatically.
+
+Lead Qualification
+Automated Follow-Ups
+Lead Routing
+CRM Workflows
+Customer Communication
+Explore the work behind the service
+Where automation earns its place
+
+A practical guide to choosing useful business workflows.
+
+Connect enquiries to follow-up
+
+How lead capture, routing and sales handoffs fit together.
+
+Build the connected system
+
+Explore the websites, CRMs and integrations that support automation.
+
+Questions about this service
+Which tasks can this service help automate?
+Should every task use AI?
+Can automation connect to an existing website or CRM?
+Automate work. Not confusion.
+
+We start by mapping one workflow or content process and measuring what changes.
+
+Find what to automate
+
+========== /ecommerce-supply-chain ==========
+TITLE: E-Commerce & Supply Chain Management | Mett Global
+DESCRIPTION: E-Commerce & Supply Chain from Mett Global: marketplace management, inventory, sourcing, 3PL and logistics, claims and reimbursement recovery, and reporting.
+
+SERVICE / E-COMMERCE & SUPPLY CHAIN
+Sell more.
+Run it cleaner.
+
+Growth breaks when listings, stock, suppliers and fulfillment are managed in separate silos. We run the storefront and the operation behind it as one system.
+
+WHAT'S INCLUDED
+From the listing to the warehouse.
+Discuss this service
+Marketplace & store management
+
+Day-to-day execution across the channels you sell on, from account health to the listing that converts.
+
+Marketplace Management
+Amazon Operations
+Online Store Management
+Product & Catalog Management
+Inventory & operations
+
+Accurate available-to-sell stock and routines that prevent stockouts before they become a marketing problem.
+
+Inventory Management
+Order Management
+Fulfillment
+Operations Management
+Sourcing & supply
+
+Finding and managing the right suppliers, with the full landed cost visible before cash is committed.
+
+Product Sourcing
+Supplier Management
+Procurement
+Supply Management
+Claims & reimbursement
+
+Money leaks through lost and damaged inventory, unreimbursed returns and courier overbilling. We build evidence-backed cases, file them and follow each one through to payment.
+
+Marketplace Claims
+Reimbursement Recovery
+Account Reconciliation
+Revenue Recovery
+Logistics
+
+Operating routines for inbound, outbound and carriers, with clear ownership when something goes wrong.
+
+Warehouse Operations
+3PL Coordination
+Shipping & Logistics
+Fulfillment Support
+Reporting
+
+Dashboards that surface exceptions, and documented processes that keep working after handover.
+
+Sales Reporting
+Inventory Reporting
+Performance Analytics
+Operational Dashboards
+SOP Development
+Explore the work behind the service
+The £50,000 Recovery
+
+Documented courier and marketplace claims, including denied cases.
+
+The Remote Warehouse
+
+Remote warehouse oversight with inventory and fulfilment controls.
+
+Eight Markets, One Operation
+
+Marketplace listings, inventory and reporting across sales channels.
+
+Questions about this service
+Which sales channels can Mett Global support?
+Can you review denied courier or marketplace claims?
+Which logistics and e-commerce claims can you handle?
+Does the service include warehouse and supplier operations?
+Commerce is a system.
+
+We can review the chain from listing and demand through stock, suppliers, fulfillment, returns and unrecovered claims.
+
+Request an e-commerce review
+
+========== /update-amazon-fba-fees-2026 ==========
+TITLE: Amazon FBA Fees 2026: Operator Brief | Mett Global
+DESCRIPTION: Understand Amazon’s 2026 US FBA fee changes, SKU-level margins, packaging, inbound costs and inventory actions.
+
+CURRENT BRIEF / ECOMMERCE
+Amazon’s 2026 US FBA fee changes: what operators should recalculate
+
+Amazon’s published 2026 update raises US FBA fees by an average of $0.08 per unit sold, with most changes effective January 15, 2026. The useful question is not whether eight cents sounds large; it is which SKUs are already close to an unacceptable contribution margin.
+
+By Mett Global
+CURRENT BRIEF · SOURCE CHECKED 20 OCT 2026 · AMAZON SELLER CENTRAL
+AVERAGE CHANGE
++$0.08
+per FBA unit, according to Amazon’s 2026 announcement
+DEFAULT EFFECTIVE DATE
+15 JAN
+2026, unless a specific fee update states otherwise
+NEW FBA FEE TYPES
+NONE
+Amazon said no new FBA fee types were being introduced for 2026
+Check the current seasonal schedule
+
+The eight-cent average describes the annual announcement. Amazon also lists separate non-peak and peak rates, with the 2026 peak period beginning on 15 October. Check the applicable rate for each product and shipment date before using a January estimate for a holiday forecast.
+
+CURRENT FEE SCHEDULE
+Amazon Seller Central: current FBA fulfilment fees and seasonal rates
+Recalculate at SKU level
+
+An average increase hides product-level variation. Re-run contribution margin after referral fees, FBA fees, inbound costs, advertising, returns and product cost. Flag SKUs where a small fee movement pushes the unit below your required margin.
+
+Do not treat packaging as a design-only decision
+
+Amazon explicitly pointed sellers toward packaging and lower-cost inbound options as places where economics can improve. Packaging dimensions and weight can change fulfillment economics, so finance, operations and packaging should be reviewed together.
+
+Inventory health is now even more commercial
+
+Amazon’s update links fee optimization with maintaining healthy inventory levels. Review days of supply, stockout risk, slow-moving inventory and replenishment cadence rather than treating inventory as a warehouse-only metric.
+
+Use Amazon’s own tools before changing price
+
+Amazon referenced its Revenue Calculator, Fee and Economics Preview report and Profit Analytics tools. Use those to model the actual impact before applying blanket price increases.
+
+The operational response is SKU-level economics, not a single percentage added to every product.
+OFFICIAL SOURCE
+Amazon Seller Central, 2026 Updates to US Referral and Fulfillment by Amazon Fees
+
+Platform policies and fees change. Verify the official source before making pricing or inventory decisions.
+
+Need your marketplace economics reviewed?
+Explore E-Commerce & Supply Chain
+
+========== /update-eu-ai-act-transparency-2026 ==========
+TITLE: EU AI Act Transparency Rules 2026 | Mett Global Blog
+DESCRIPTION: A practical business brief on EU AI Act transparency obligations applying from August 2, 2026 for interactive and generative AI systems.
+
+CURRENT BRIEF / AI
+EU AI Act transparency rules are now live: what AI-facing teams should know
+
+From 2 August 2026, key transparency requirements under the EU AI Act apply. Businesses using customer-facing AI or publishing certain AI-generated content should review where disclosure, labelling and machine-readable marking are required.
+
+By Mett Global
+CURRENT BRIEF · SOURCE CHECKED 20 OCT 2026 · EUROPEAN COMMISSION
+APPLICATION DATE
+02 AUG
+2026 for Article 50 transparency obligations
+INTERACTIVE AI
+DISCLOSE
+people should be informed when they are interacting with AI where the rule applies
+SYNTHETIC CONTENT
+MARK
+certain generated or manipulated content requires detectable marking or labelling
+Check the obligation and transition date
+
+Article 50 applies from 2 August 2026. Commission guidance identifies a limited transition until 2 December 2026 for the Article 50(2) marking and detection obligation for systems already on the market before 2 August. This is not a blanket extension for every transparency duty. Check the provider or deployer role and the specific obligation before changing a workflow.
+
+Map where people interact with AI
+
+List chatbots, automated assistants and other interfaces that directly interact with customers, employees or users. Check whether the experience clearly tells the person they are dealing with AI when required.
+
+Review generated media workflows
+
+The Commission says providers of generative AI must support identification of AI-generated content, while deployers have labelling duties for categories such as deepfakes and certain public-interest text. Content teams should know which outputs need disclosure before publishing.
+
+Build disclosure into the workflow
+
+Do not rely on someone remembering to add a label manually at the end. Put required disclosure, metadata and review checks into templates, publishing workflows and approval criteria.
+
+Separate compliance from brand preference
+
+A company may choose to disclose AI use more broadly than the legal minimum for trust or brand reasons. That is a separate decision from what the regulation specifically requires.
+
+AI governance becomes operational when disclosure and review are built into the production system, not added as an afterthought.
+OFFICIAL SOURCE
+European Commission, Article 50 transparency obligations and transition dates
+
+This is an operational summary, not legal advice. Check the official guidance and obtain legal advice where the regulation may apply to your specific use case.
+
+Need an AI workflow mapped with human checkpoints?
+Explore AI Automation & Content
+
+========== /update-google-ads-consent-2026 ==========
+TITLE: Google Ads Consent Requirements in 2026 | Mett Global Blog
+DESCRIPTION: A practical 2026 checklist for Google Ads consent requirements affecting EEA traffic, measurement, personalization and remarketing.
+
+CURRENT BRIEF / PAID MEDIA
+Google Ads consent requirements in 2026: a practical EEA checklist
+
+For advertisers receiving traffic from the European Economic Area, Google says consent requirements affect measurement, ad personalization and remarketing when applicable Google tags, SDKs and uploaded data are used.
+
+By Mett Global
+CURRENT BRIEF · SOURCE CHECKED 20 OCT 2026 · GOOGLE ADS HELP
+REGION
+EEA
+review traffic from European Economic Area users
+KEY INPUT
+CONSENT
+collect and communicate required consent signals
+AFFECTED USE
+MEASURE
+measurement, personalization and remarketing can depend on compliant setup
+Start with the data path
+
+Identify every place your website or app sends user data to Google: Google Ads tags, Analytics-linked advertising, app SDKs, enhanced conversions and uploaded customer data. The compliance review should follow the data, not just the marketing channel name.
+
+Consent is more than showing a banner
+
+A banner needs to capture a meaningful choice and the resulting consent status must be communicated to the tags or framework that uses it. A visual banner with no working signal logic is not a complete implementation.
+
+Test denied and granted states
+
+Use browser and tag-debugging tools to verify what happens before consent, after consent and after a user changes their choice. Measurement configuration should reflect the selected mode rather than behaving identically in every state.
+
+Document ownership
+
+Marketing, web and legal/privacy teams often each own only part of the setup. Write down who owns the CMP, tag configuration, policy language, analytics validation and change management when new tools are added.
+
+Privacy implementation is a system of choices, signals and tag behavior, not a banner graphic.
+OFFICIAL SOURCE
+Google Ads Help, Updates to consent mode for traffic in the EEA
+
+This is a practical implementation summary, not legal advice. Requirements vary by jurisdiction and data use.
+
+Need the acquisition and measurement stack reviewed?
+Explore Digital Marketing & Growth
+
+========== /update-eu-ics2-2026 ==========
+TITLE: EU ICS2 in 2026 | Mett Global Blog
+DESCRIPTION: A practical supply-chain brief on the EU Import Control System 2, ENS data quality and all-mode transport requirements in 2026.
+
+CURRENT BRIEF / SUPPLY CHAIN
+ICS2 in 2026: why complete ENS data is now an operating requirement
+
+ICS2 covers goods entering the EU across air, maritime, road and rail transport. The September 2025 rollout included temporary road, rail and transit-system derogations. The Commission states that, from 1 June 2026, entering consignments need a valid ENS, filed directly in ICS2 or through a combined NCTS Phase 6 declaration in opt-in countries.
+
+By Mett Global
+CURRENT BRIEF · SOURCE CHECKED 20 OCT 2026 · EUROPEAN COMMISSION
+TRANSPORT COVERAGE
+ALL
+air, maritime, road and rail
+TRANSITION COMPLETE
+01 JUN
+2026; remaining NCTS Phase 6 derogations ended
+CORE DATA
+ENS
+accurate and complete Entry Summary Declaration data
+Data quality is now shipment readiness
+
+The Commission emphasizes accurate and complete ENS data, including master and lowest house levels where applicable. Incomplete descriptions, party data or shipment details can create avoidable delays and rework.
+
+Clarify who files what
+
+Importer, carrier, freight forwarder and other parties may each hold parts of the required data. Map filing responsibility by transport mode and lane so the shipment does not reach cutoff with missing information.
+
+Standardize product descriptions
+
+Vague descriptions create risk. Use specific commercial descriptions and maintain clean master data for SKU descriptions, parties and shipment references so documentation is produced consistently.
+
+Build an exception process
+
+Define who responds when a filing is rejected or more information is requested. The faster the owner can access shipment documents and product data, the less operational disruption the exception causes.
+
+Customs compliance becomes an operations problem when shipment data is assembled too late.
+OFFICIAL SOURCE
+European Commission, Import Control System 2 (ICS2)
+
+Requirements depend on transport mode, role and shipment. Verify current Commission guidance and your customs/forwarding obligations.
+
+Need shipment and data handoffs mapped?
+Explore E-Commerce & Supply Chain
+
+========== /update-google-search-2026 ==========
+TITLE: Google Search Technical Basics in 2026 | Mett Global Blog
+DESCRIPTION: A current 2026 technical SEO brief based on Google Search documentation covering crawlability, indexing, security, performance and accessibility.
+
+CURRENT BRIEF / WEB & SEARCH
+Google Search in 2026: the technical basics that still decide whether pages can compete
+
+Google’s current developer guidance still starts with fundamentals: make content accessible to Google, then ensure the website is secure, fast, accessible and functional across devices. Search visibility cannot be repaired by metadata alone if the underlying page is difficult to crawl or use.
+
+By Mett Global
+CURRENT BRIEF · SOURCE CHECKED 20 OCT 2026 · GOOGLE SEARCH CENTRAL
+FOUNDATION
+CRAWL
+Google must be able to discover and access the page
+NEXT STEP
+INDEX
+technical eligibility does not guarantee indexing or ranking
+PAGE QUALITY
+USABLE
+secure, fast, accessible and functional across devices
+Verify what Google can actually see
+
+Use Search Console URL Inspection and Google’s testing tools to confirm that important pages are crawlable, return the right status, expose useful content and are not unintentionally blocked.
+
+Canonical and sitemap signals should agree
+
+Canonical URLs, internal links and sitemap entries should point toward the same preferred pages. Contradictory signals make a site harder to reason about for both crawlers and developers.
+
+Performance is part of page quality, not a trophy score
+
+Optimize real user experience: avoid unnecessary script, stabilize layout, keep interaction responsive and make the mobile experience complete. A perfect lab score is not a guarantee of ranking.
+
+Accessibility and SEO overlap
+
+Semantic headings, descriptive links, labels, keyboard access and understandable content help users and make the page structure clearer. Treat accessibility as a product requirement rather than an SEO hack.
+
+The technical job is to remove barriers to discovery and use. The content still has to deserve the visit.
+OFFICIAL SOURCE
+Google Search Central, SEO Guide for Web Developers
+
+Google explicitly notes that meeting requirements and best practices does not guarantee crawling, indexing or ranking.
+
+Need your website’s technical foundation reviewed?
+Explore Web & Software Development
+
+========== /insight-ecommerce-operations ==========
+TITLE: eCommerce Operations After the Click | Mett Global Blog
+DESCRIPTION: A practical guide to operational leaks behind eCommerce growth: inventory, fulfillment, returns, marketplace health and reporting.
+
+BLOG / ECOMMERCE
+The eCommerce growth leak most teams miss: operations after the click
+
+Traffic creates opportunity. Operations determine whether that opportunity becomes repeatable revenue, healthy margins and a customer willing to return.
+
+By Mett Global
+METT GLOBAL FIELD GUIDE · ECOMMERCE OPERATIONS · 2 MIN READ
+CLICK
+STOCK
+FULFILL
+RETURN
+LEARN
+Growth problems are often system problems
+
+When an online store slows down, the first instinct is often to buy more traffic or produce more creative. That can help, but it does not fix an operation that cannot reliably turn demand into delivery. Inventory accuracy, replenishment, order routing, fulfillment speed, marketplace compliance, returns and reporting sit behind the customer-facing funnel.
+
+Audit the chain, not one dashboard
+
+Can the business trust available-to-sell inventory? Are fast-moving SKUs replenished before they become unavailable? Do orders move from channel to warehouse without manual exceptions? Are returns and claims reconciled? Can management see operational exceptions quickly enough to act?
+
+More demand amplifies the system you already have. It does not automatically improve it.
+Inventory accuracy comes first
+
+If channel inventory and physical inventory disagree, marketing decisions become unreliable. Establish a repeatable cycle-count routine, isolate recurring variance by SKU and location, and document how adjustments enter the system.
+
+Measure handoffs
+
+Look at the time between order receipt, allocation, pick, pack, dispatch and carrier acceptance. Average fulfillment time can hide exceptions. Track the percentage of orders that breach the expected window and identify why.
+
+Returns are operational intelligence
+
+Categorize return reasons consistently and identify repeated patterns. A high return rate may point to product content, quality, sizing, packaging or picking accuracy rather than simply a customer problem.
+
+A practical 30-day sequence
+
+Week one: establish baseline inventory and fulfillment metrics. Week two: map exceptions and ownership. Week three: remove the highest-frequency manual failure. Week four: build a simple management view for stock risk, late orders, returns and unresolved claims.
+
+Need the operational layer audited?
+Explore E-Commerce & Supply Chain

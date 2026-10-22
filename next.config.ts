@@ -51,6 +51,10 @@ const SECURITY_HEADERS = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  compress: true,
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
   experimental: {
     cpus: 2,
   },
@@ -63,8 +67,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       })),
       {
-        source: '/case-studies/:num(\\d+)',
-        destination: '/case-studies',
+        source: '/case-studies',
+        destination: '/portfolio',
+        permanent: true,
+      },
+      {
+        source: '/case-studies/:path*',
+        destination: '/portfolio',
         permanent: true,
       },
       {

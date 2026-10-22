@@ -20,7 +20,7 @@ export default function NotFound() {
             <Btn href="/" variant="dark">
               Return home
             </Btn>{' '}
-            <Btn href="/case-studies">View case studies</Btn>
+            <Btn href="/portfolio">View portfolio</Btn>
           </>
         }
       >

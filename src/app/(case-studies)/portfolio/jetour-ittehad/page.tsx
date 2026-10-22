@@ -106,8 +106,8 @@ export default function JetourCaseStudyPage() {
         subtitle="A dealership growth engine built from zero digital presence for Jetour Ittehad"
         lede="Mett Global connected brand launch, social content, Meta acquisition, lead handling, digital journey, outdoor visibility and on-ground activation into one operating system for Jetour Ittehad."
         panelLabel="CAMPAIGN TOTALS"
-        panelValue="October 2026 onwards"
-        panelCopy="Headline figures are overall campaign totals from October 2026 onwards. The charts below are an early snapshot of the first 79 leads (04–09 Sep 2026)."
+        panelValue="Launch – Present"
+        panelCopy="Headline figures are overall verified campaign totals from launch. The charts below are an early documented snapshot of the first 79 campaign leads."
         kpis={[
           { value: '1,000+', label: 'verified leads' },
           { value: '82%', label: 'from Reel creative' },

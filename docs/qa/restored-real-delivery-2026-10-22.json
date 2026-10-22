@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-21T23:49:00.282Z",
+  "transport": "Original browser FormSubmit",
+  "recipient": "contact@mettglobal.com",
+  "realRequestsSent": 3,
+  "rows": [
+    {
+      "kind": "homepage",
+      "status": 200,
+      "elapsedMs": 1498,
+      "providerSuccess": "true",
+      "requestId": "e38e3746-b2f6-42a8-9049-23fdedd57ef3",
+      "successPopup": true,
+      "popupReferenceMatches": true,
+      "noHorizontalOverflow": true,
+      "inboxReferenceVerified": true,
+      "verifiedVia": "Contact mailbox UI"
+    },
+    {
+      "kind": "enquiry",
+      "status": 200,
+      "elapsedMs": 2343,
+      "providerSuccess": "true",
+      "requestId": "911bfce3-8a75-4b10-8d71-1797421e0d3d",
+      "successPopup": true,
+      "popupReferenceMatches": true,
+      "noHorizontalOverflow": true,
+      "inboxReferenceVerified": true,
+      "verifiedVia": "Contact mailbox UI"
+    },
+    {
+      "kind": "meeting",
+      "status": 200,
+      "elapsedMs": 857,
+      "providerSuccess": "true",
+      "requestId": "a413c853-d2d5-4aa8-87f9-57a07c97e14e",
+      "successPopup": true,
+      "popupReferenceMatches": true,
+      "noHorizontalOverflow": true,
+      "inboxReferenceVerified": true,
+      "verifiedVia": "Contact mailbox UI"
+    }
+  ],
+  "inboxReceiptVerified": true
+}
