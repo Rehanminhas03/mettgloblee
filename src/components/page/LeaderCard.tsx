@@ -11,6 +11,7 @@ export type Leader = {
   phone?: { href: string; label: string };
   /** Further numbers, shown under `phone` (for example a U.S. line). */
   extraPhones?: { href: string; label: string }[];
+  linkedin?: string;
 };
 
 const CONTACT =

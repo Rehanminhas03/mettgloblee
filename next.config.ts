@@ -51,13 +51,53 @@ const SECURITY_HEADERS = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  experimental: {
+    cpus: 2,
+  },
 
   async redirects() {
-    return RETIRED_SERVICE_REDIRECTS.map(({ from, to }) => ({
-      source: from,
-      destination: to,
-      permanent: true,
-    }));
+    return [
+      ...RETIRED_SERVICE_REDIRECTS.map(({ from, to }) => ({
+        source: from,
+        destination: to,
+        permanent: true,
+      })),
+      {
+        source: '/case-studies/:num(\\d+)',
+        destination: '/case-studies',
+        permanent: true,
+      },
+      {
+        source: '/blog/:num(\\d+)',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/services/data-entry',
+        destination: '/services',
+        permanent: true,
+      },
+      {
+        source: '/ai-content-production.html',
+        destination: '/ai-automation-content',
+        permanent: true,
+      },
+      {
+        source: '/insight-ecommerce-operations.html',
+        destination: '/insight-ecommerce-operations',
+        permanent: true,
+      },
+      {
+        source: '/insight-supply-chain-control.html',
+        destination: '/insight-supply-chain-control',
+        permanent: true,
+      },
+      {
+        source: '/audits-diagnostics.html',
+        destination: '/services',
+        permanent: true,
+      },
+    ];
   },
 
   async headers() {
