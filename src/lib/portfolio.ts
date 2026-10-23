@@ -11,12 +11,10 @@ import { CASE_NAMES } from './caseNames';
 import {
   ERP_CASE_STUDY,
   LOCAL_CASE_STUDIES,
-  MOWING_CASE_STUDY,
   type WorkCard,
 } from './caseStudies';
 
 export const INTERNATIONAL: WorkCard[] = [
-  MOWING_CASE_STUDY,
   {
     tone: 'light',
     sector: 'MENTAL HEALTH · TEXAS, USA',

@@ -126,5 +126,4 @@ export const LOCAL_CASE_STUDIES: WorkCard[] = [
 export const CASE_STUDIES: WorkCard[] = [
   ERP_CASE_STUDY,
   ...LOCAL_CASE_STUDIES,
-  MOWING_CASE_STUDY,
 ];
