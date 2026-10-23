@@ -4,8 +4,6 @@
  * references without a published study leave both out.
  */
 
-import { CASE_NAMES } from './caseNames';
-
 export type CardTone = 'dark' | 'light' | 'cream';
 
 export type WorkCard = {
@@ -31,8 +29,7 @@ export const ERP_CASE_STUDY: WorkCard = {
   tone: 'dark',
   sector: 'AUTOMOTIVE · IN DEVELOPMENT',
   brand: 'ITTEHAD AUTOMOTIVE DEALERSHIPS ERP',
-  title: CASE_NAMES['dealership-erp'].name,
-  subtitle: CASE_NAMES['dealership-erp'].subtitle,
+  title: 'One system for the entire car-buying journey.',
   copy: 'A multi-brand dealership management system for three showrooms: sales, service, parts and accounts in one platform, with a portal for every role up to the CEO.',
   metrics: [
     { value: '3', label: 'showrooms' },
@@ -48,8 +45,7 @@ export const LOCAL_CASE_STUDIES: WorkCard[] = [
     tone: 'dark',
     sector: 'AUTOMOTIVE · ISLAMABAD',
     brand: 'JETOUR ITTEHAD',
-    title: CASE_NAMES['jetour-ittehad'].name,
-    subtitle: CASE_NAMES['jetour-ittehad'].subtitle,
+    title: 'From zero digital presence to a measurable lead engine.',
     copy: 'Brand launch, Meta acquisition, lead automation, outdoor visibility and live activations working as one system.',
     metrics: [
       { value: '1,000+', label: 'verified leads' },
@@ -63,8 +59,8 @@ export const LOCAL_CASE_STUDIES: WorkCard[] = [
     tone: 'light',
     sector: 'AUTOMOTIVE · ISLAMABAD',
     brand: 'HYUNDAI ISLAMABAD',
-    title: CASE_NAMES['hyundai-islamabad'].name,
-    subtitle: CASE_NAMES['hyundai-islamabad'].subtitle,
+    title:
+      'Connecting an established automotive brand into a local growth system.',
     copy: 'Content, digital journey, lead handling, outdoor visibility and activation planning built around measurable showroom outcomes.',
     metrics: [
       { value: '3', label: 'managed social channels' },
@@ -78,8 +74,7 @@ export const LOCAL_CASE_STUDIES: WorkCard[] = [
     tone: 'cream',
     sector: 'EV AUTOMOTIVE · ISLAMABAD',
     brand: 'CSM ITTEHAD',
-    title: CASE_NAMES['csm-ittehad'].name,
-    subtitle: CASE_NAMES['csm-ittehad'].subtitle,
+    title: 'Turning a new EV presence into showroom traffic.',
     copy: 'Brand foundation, Meta acquisition, lead automation and local visibility built around a measurable visit funnel.',
     metrics: [
       { value: '~400', label: 'client-reported leads' },
@@ -93,8 +88,7 @@ export const LOCAL_CASE_STUDIES: WorkCard[] = [
     tone: 'light',
     sector: 'ON-DEMAND CAR CARE · ISLAMABAD',
     brand: 'SFYKEA',
-    title: CASE_NAMES['sfykea'].name,
-    subtitle: CASE_NAMES['sfykea'].subtitle,
+    title: 'A door-to-door car wash, run from one platform.',
     copy: 'Company website, a Flutter customer app on iOS and Android, and separate admin and partner portals running on Firebase.',
     metrics: [
       { value: '2', label: 'store apps' },
@@ -123,7 +117,4 @@ export const LOCAL_CASE_STUDIES: WorkCard[] = [
 // };
 
 /** Every published case study, local and international. */
-export const CASE_STUDIES: WorkCard[] = [
-  ERP_CASE_STUDY,
-  ...LOCAL_CASE_STUDIES,
-];
+export const CASE_STUDIES: WorkCard[] = [ERP_CASE_STUDY, ...LOCAL_CASE_STUDIES];

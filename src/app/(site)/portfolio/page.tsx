@@ -24,21 +24,30 @@ export default function PortfolioPage() {
           <>
             Selected work.
             <br />
-            <HeroAccent>International and local.</HeroAccent>
+            <HeroAccent>Local and international.</HeroAccent>
           </>
         }
         actions={
           <span className="flex flex-wrap gap-3">
-            <Btn href="#international" variant="dark">
-              International clients
+            <Btn href="#local" variant="dark">
+              Local clients
             </Btn>
-            <Btn href="#local">Local clients</Btn>
+            <Btn href="#international">International clients</Btn>
           </span>
         }
       >
         Clients and projects across growth, eCommerce, web, automation and
         operations. Detailed case studies are linked where published.
       </PageHero>
+
+      <div id="local" className="scroll-mt-24">
+        <Section>
+          <SectionHead heading="Local clients">
+            Projects and partners in Pakistan.
+          </SectionHead>
+          <WorkCardGrid items={withoutStats(LOCAL)} />
+        </Section>
+      </div>
 
       <div id="international" className="scroll-mt-24">
         <Section className="!pt-8">
@@ -68,15 +77,6 @@ export default function PortfolioPage() {
               .
             </div>
           )}
-        </Section>
-      </div>
-
-      <div id="local" className="scroll-mt-24">
-        <Section>
-          <SectionHead heading="Local clients">
-            Projects and partners in Pakistan.
-          </SectionHead>
-          <WorkCardGrid items={withoutStats(LOCAL)} />
         </Section>
       </div>
 
