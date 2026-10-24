@@ -48,7 +48,6 @@ const ENTRIES = [
     priority: 0.6,
   },
   { path: '/portfolio/sfykea', lastModified: '2026-10-05', priority: 0.8 },
-  { path: '/portfolio/mowing', lastModified: '2026-10-05', priority: 0.8 },
   {
     path: '/portfolio/serenada-mental-health',
     lastModified: '2026-10-05',

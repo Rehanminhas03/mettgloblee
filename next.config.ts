@@ -72,18 +72,23 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/case-studies/:path*',
-        destination: '/portfolio',
+        source: '/case-studies/10',
+        destination: '/portfolio/sfykea',
         permanent: true,
       },
       {
-        source: '/blog/:num(\\d+)',
-        destination: '/blog',
+        source: '/case-studies/11',
+        destination: '/portfolio/ittehad-steel',
         permanent: true,
       },
       {
-        source: '/services/data-entry',
-        destination: '/services',
+        source: '/case-studies/12',
+        destination: '/portfolio/hyundai-islamabad',
+        permanent: true,
+      },
+      {
+        source: '/case-studies/13',
+        destination: '/portfolio/jetour-ittehad',
         permanent: true,
       },
       {
