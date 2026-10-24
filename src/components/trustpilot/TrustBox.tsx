@@ -51,6 +51,7 @@ export function TrustBox({ className = '' }: TrustBoxProps) {
       data-style-width="220px"
     >
       <a
+        suppressHydrationWarning
         href="https://www.trustpilot.com/review/mettglobal.com"
         target="_blank"
         rel="noopener noreferrer"
