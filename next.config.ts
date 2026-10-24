@@ -14,9 +14,9 @@ import { RETIRED_SERVICE_REDIRECTS } from './src/lib/services';
  */
 const CONTENT_SECURITY_POLICY = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://widget.trustpilot.com",
-  "connect-src 'self' https://formsubmit.co https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://widget.trustpilot.com",
-  "img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com https://*.trustpilot.com https://cdn.trustpilot.net",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://widget.trustpilot.com https://assets.apollo.io",
+  "connect-src 'self' https://formsubmit.co https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://widget.trustpilot.com https://assets.apollo.io https://*.apollo.io",
+  "img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com https://*.trustpilot.com https://cdn.trustpilot.net https://assets.apollo.io https://*.apollo.io",
   "style-src 'self' 'unsafe-inline'",
   "font-src 'self' data:",
   "form-action 'self' https://formsubmit.co",

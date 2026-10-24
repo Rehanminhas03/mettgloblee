@@ -56,6 +56,7 @@ export const viewport: Viewport = {
  */
 const INTRO_SESSION_SCRIPT = `try{if(/bot|crawler|spider|crawling|lighthouse|pagespeed|googlebot/i.test(navigator.userAgent)||sessionStorage.getItem('mg-intro')){document.documentElement.dataset.intro='seen'}else if(location.pathname==='/'){sessionStorage.setItem('mg-intro','1')}}catch(e){}`;
 const MOTION_PREFERENCE_SCRIPT = `try{if(sessionStorage.getItem('mett_motion_paused')==='true')document.documentElement.dataset.motionPaused='true'}catch(e){}`;
+const APOLLO_TRACKER_SCRIPT = `function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:"6ad147840f4362001451b919"})},document.head.appendChild(o)}initApollo();`;
 
 export default function RootLayout({
   children,
@@ -71,6 +72,9 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: INTRO_SESSION_SCRIPT }} />
         <script
           dangerouslySetInnerHTML={{ __html: MOTION_PREFERENCE_SCRIPT }}
+        />
+        <script
+          dangerouslySetInnerHTML={{ __html: APOLLO_TRACKER_SCRIPT }}
         />
         <script
           type="text/javascript"
