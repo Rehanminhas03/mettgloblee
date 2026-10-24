@@ -308,9 +308,6 @@ export function SiteFooter() {
             {PHONE.label}
           </a>
         </p>
-        <div className="mt-5 max-w-[280px]">
-          <TrustBox />
-        </div>
       </div>
 
       <nav aria-label="Footer services">
@@ -370,6 +367,22 @@ export function SiteFooter() {
               </a>
             );
           })}
+        </div>
+      </div>
+
+      {/* Trustpilot Review Collector - Bottom Trust Bar */}
+      <div className="col-span-full border-t border-line/60 pt-7 pb-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
+          <span className="text-gold text-[10px] tracking-[.18em] uppercase font-bold">
+            Customer Reviews
+          </span>
+          <span className="hidden sm:inline text-muted text-xs">·</span>
+          <span className="text-muted text-xs">
+            Review Mett Global or verify our client reputation on Trustpilot
+          </span>
+        </div>
+        <div className="w-full sm:w-auto min-w-[220px] max-w-[260px] h-[52px] flex justify-center sm:justify-end">
+          <TrustBox />
         </div>
       </div>
 

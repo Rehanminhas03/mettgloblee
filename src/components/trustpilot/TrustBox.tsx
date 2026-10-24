@@ -10,15 +10,32 @@ export function TrustBox({ className = '' }: TrustBoxProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const tp = (
-      window as unknown as {
-        Trustpilot?: {
-          loadFromElement: (el: HTMLElement | null, force?: boolean) => void;
-        };
+    function loadWidget() {
+      const tp = (
+        window as unknown as {
+          Trustpilot?: {
+            loadFromElement: (el: HTMLElement | null, force?: boolean) => void;
+          };
+        }
+      ).Trustpilot;
+      if (tp && ref.current) {
+        tp.loadFromElement(ref.current, true);
+        return true;
       }
-    ).Trustpilot;
-    if (tp && ref.current) {
-      tp.loadFromElement(ref.current, true);
+      return false;
+    }
+
+    if (!loadWidget()) {
+      const interval = setInterval(() => {
+        if (loadWidget()) {
+          clearInterval(interval);
+        }
+      }, 250);
+      const timeout = setTimeout(() => clearInterval(interval), 6000);
+      return () => {
+        clearInterval(interval);
+        clearTimeout(timeout);
+      };
     }
   }, []);
 
@@ -36,8 +53,20 @@ export function TrustBox({ className = '' }: TrustBoxProps) {
         href="https://www.trustpilot.com/review/mettglobal.com"
         target="_blank"
         rel="noopener noreferrer"
+        className="inline-flex items-center justify-center gap-2 h-[52px] px-6 rounded-md border border-[#dcdce6] bg-white text-[#191919] text-sm font-semibold hover:border-[#191919] transition-colors shadow-sm"
       >
-        Trustpilot
+        Review us on
+        <span className="inline-flex items-center gap-1 font-bold text-[#191919]">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            className="h-[18px] w-[18px] text-[#00b67a]"
+            fill="currentColor"
+          >
+            <path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z" />
+          </svg>
+          Trustpilot
+        </span>
       </a>
     </div>
   );
