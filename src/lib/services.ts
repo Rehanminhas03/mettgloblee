@@ -496,7 +496,6 @@ export const RETIRED_SERVICE_REDIRECTS: { from: string; to: string }[] = [
   { from: '/ai-content-production', to: '/ai-automation-content' },
   { from: '/ai-automation', to: '/ai-automation-content' },
   { from: '/audits-diagnostics', to: '/services' },
-  { from: '/team', to: '/about' },
   { from: '/services/ecommerce', to: '/ecommerce-supply-chain' },
   { from: '/services/supply-chain', to: '/ecommerce-supply-chain' },
   { from: '/services/web-development', to: '/web-software-development' },
