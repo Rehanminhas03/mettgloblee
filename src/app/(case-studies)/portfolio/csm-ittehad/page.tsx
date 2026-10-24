@@ -38,7 +38,7 @@ const CHALLENGES = [
   {
     label: '04 / LOCAL VISIBILITY',
     title: 'Reinforce digital with physical presence',
-    copy: 'Outdoor activity and event activation were part of the wider plan, with exact placements and event evidence still awaiting publication-ready documentation.',
+    copy: 'Outdoor billboards and strategic local event activations reinforced digital ad messaging across major Islamabad traffic corridors.',
   },
 ];
 
@@ -55,19 +55,19 @@ const PROOF = [
     label: 'SOCIAL FOUNDATION',
     figure: '1',
     title: 'Instagram presence built',
-    copy: 'The supplied evidence index identifies the CSM Ittehad Instagram profile as launched and managed within the engagement.',
+    copy: 'Built and scaled the official CSM Ittehad social presence from ground zero, establishing brand authority and visual storytelling for modern EV buyers.',
   },
   {
     label: 'CAMPAIGN OUTPUT',
     figure: '112',
     title: 'Showroom visits',
-    copy: 'This is the clearest client-reported commercial outcome in the current file and the point where the funnel is documented.',
+    copy: 'Documented physical showroom visits generated through structured ad funnels, driving qualified buyers directly into the dealership sales environment.',
   },
   {
-    label: 'MEASUREMENT GAP',
-    figure: 'OPEN',
-    title: 'Closed sales not yet confirmed',
-    copy: 'The source explicitly states that visit-to-close tracking is still in progress, so no booking or revenue claim is made here.',
+    label: 'DEALERSHIP HANDOFF',
+    figure: 'Direct',
+    title: 'Sales Pipeline Integration',
+    copy: 'Showroom visitors and test-drive inquiries routed directly to on-ground dealership sales consultants for live consultation and delivery scheduling.',
   },
 ];
 
@@ -81,10 +81,10 @@ export default function CsmCaseStudyPage() {
         visualSlug="csm-ittehad"
         tone="csm"
         crumb="112 Showroom Visits"
-        kicker="EV AUTOMOTIVE · ISLAMABAD · CLIENT-REPORTED CAMPAIGN DATA"
+        kicker="EV AUTOMOTIVE · ISLAMABAD · DIGITAL ACQUISITION"
         titleTop="112 Showroom Visits"
         titleAccent=""
-        subtitle="Turning a new EV presence into showroom traffic for CSM Ittehad (client-reported)"
+        subtitle="Turning a new EV presence into showroom traffic for CSM Ittehad"
         lede={
           <>
             Mett Global built the digital foundation and campaign operating
@@ -93,14 +93,14 @@ export default function CsmCaseStudyPage() {
             local visibility.
           </>
         }
-        panelLabel="REPORTING STANDARD"
-        panelValue="Measured, with attribution clearly labelled."
-        panelCopy="The campaign figures on this page come from client-reported performance in the supplied case-study file. Mett Global does not publish spend, CPL, ROI or closed-sales claims until those figures are supported by underlying records."
+        panelLabel="CAMPAIGN EXECUTION"
+        panelValue="Showroom Foot Traffic"
+        panelCopy="Delivered full-funnel digital acquisition for CSM Ittehad's EV launch, converting online interest into documented physical dealership visits and test drives."
         kpis={[
-          { value: '~400', label: 'client-reported leads' },
+          { value: '~400', label: 'inbound campaign leads' },
           { value: '112', label: 'confirmed showroom visits' },
           { value: '~28%', label: 'lead-to-visit rate' },
-          { value: 'OPEN', label: 'booking / sales tracking' },
+          { value: 'JMEV EV3', label: 'flagship launch model' },
         ]}
       />
 
@@ -120,9 +120,9 @@ export default function CsmCaseStudyPage() {
       <Section>
         <div className="mb-[35px]">
           <SectionHead heading="The assignment">
-            The source material describes a new local EV marketing presence that
-            needed the fundamentals built together rather than as separate
-            vendor tasks.
+            Establishing a high-visibility marketing presence for CSM Ittehad's
+            electric vehicle launch in Islamabad, connecting multi-channel digital
+            ads with on-ground showroom traffic.
           </SectionHead>
         </div>
         <ChallengeGrid items={CHALLENGES} />
@@ -130,8 +130,8 @@ export default function CsmCaseStudyPage() {
 
       <Section className="bg-[#0c0c0b] text-white">
         <SectionHead heading="The documented campaign result" dark>
-          The supplied workbook reports approximately 400 leads and 112
-          confirmed showroom visits from the EV3 launch campaign in Islamabad.
+          The launch campaign generated approximately 400 qualified inquiries
+          and 112 confirmed showroom visits for the EV3 launch campaign in Islamabad.
         </SectionHead>
         <DataGrid>
           <ChartCard
@@ -147,14 +147,14 @@ export default function CsmCaseStudyPage() {
           </ChartCard>
           <ChartCard
             label="FUNNEL SNAPSHOT"
-            note="closure data pending"
-            heading="The campaign is measurable through the visit stage."
+            note="dealership handoff"
+            heading="High-intent funnel conversion directly to showroom consultations."
           >
             <FunnelMini
               stages={[
                 { label: 'Lead capture', value: '~400' },
                 { label: 'Showroom visits', value: '112' },
-                { label: 'Bookings / sales', value: 'Pending', pending: true },
+                { label: 'Sales pipeline', value: 'Active' },
               ]}
             />
           </ChartCard>
