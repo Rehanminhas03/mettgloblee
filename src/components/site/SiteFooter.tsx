@@ -291,29 +291,27 @@ export function SiteFooter() {
             {PHONE.label}
           </a>
         </p>
-        <div className="mt-6 pt-5 border-t border-line/60">
-          <TrustBox className="w-fit" />
-        </div>
       </div>
 
-      <div>
-        <nav aria-label="Footer services">
-          <h2 className="text-gold m-0 mb-5 text-[10px] tracking-[.18em] uppercase">
-            Services
-          </h2>
-          <div className="grid gap-3">
-            {SERVICES.map(service => (
-              <Link
-                key={service.href}
-                href={service.href}
-                className="hover:text-gold text-sm transition-colors"
-              >
-                {service.title}
-              </Link>
-            ))}
-          </div>
-        </nav>
-      </div>
+      <nav aria-label="Footer services">
+        <h2 className="text-gold m-0 mb-5 text-[10px] tracking-[.18em] uppercase">
+          Services
+        </h2>
+        <div className="grid gap-3">
+          {SERVICES.map(service => (
+            <Link
+              key={service.href}
+              href={service.href}
+              className="hover:text-gold text-sm transition-colors"
+            >
+              {service.title}
+            </Link>
+          ))}
+        </div>
+        <div className="mt-6 w-fit">
+          <TrustBox />
+        </div>
+      </nav>
 
       <nav aria-label="Footer">
         <h2 className="text-gold m-0 mb-5 text-[10px] tracking-[.18em] uppercase">
