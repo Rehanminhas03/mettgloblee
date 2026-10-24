@@ -95,7 +95,17 @@ const FIELD_GUIDES: {
   href: string;
 }[] = [
   {
+    art: 'supply',
     num: '01',
+    topic: 'AMAZON CLAIMS & SUPPLY CHAIN',
+    readTime: '4 MIN READ',
+    title:
+      'The Amazon FBA Inbound Shipment Loss Guide: How Brands Recover Lost Inventory & Carrier Shortages',
+    copy: 'How 7-figure brands compile carrier proof, overturn receiving shortages, and recover capital before the 18-month lookback window closes.',
+    href: '/insight-amazon-fba-inbound-claims',
+  },
+  {
+    num: '02',
     topic: 'ECOMMERCE OPERATIONS',
     readTime: '2 MIN READ',
     title:

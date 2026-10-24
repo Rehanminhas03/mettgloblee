@@ -136,6 +136,11 @@ export const PAGE_SEO = {
   },
 
   /* ---- Insight guides ---- */
+  '/insight-amazon-fba-inbound-claims': {
+    title: 'Amazon FBA Inbound Shipment Loss & Recovery Guide | Mett Global',
+    description:
+      'How 7-figure Amazon brands audit and recover lost inbound shipments, warehouse carrier shortages, and dock discrepancies before the 18-month lookback window closes.',
+  },
   '/insight-ecommerce-operations': {
     title: 'eCommerce Operations After the Click | Mett Global Blog',
     description:
