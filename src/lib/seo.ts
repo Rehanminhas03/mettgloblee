@@ -141,6 +141,11 @@ export const PAGE_SEO = {
     description:
       'How 7-figure Amazon brands audit and recover lost inbound shipments, warehouse carrier shortages, and dock discrepancies before the 18-month lookback window closes.',
   },
+  '/insight-amazon-fba-fee-audit': {
+    title: 'Amazon FBA Weight & Dimension Fee Audit Guide | Mett Global',
+    description:
+      'How to audit historical Cubiscan measurement errors, dispute misclassified size tiers, and recover compounding fee overcharges within the 90-day dispute window.',
+  },
   '/insight-ecommerce-operations': {
     title: 'eCommerce Operations After the Click | Mett Global Blog',
     description:

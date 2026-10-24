@@ -105,6 +105,16 @@ const FIELD_GUIDES: {
     href: '/insight-amazon-fba-inbound-claims',
   },
   {
+    art: 'growth',
+    num: '02',
+    topic: 'AMAZON CLAIMS & FBA FEES',
+    readTime: '4 MIN READ',
+    title:
+      'Amazon FBA Weight & Dimension Fee Audit: How to Reverse Cubiscan Errors & Recover Excess Fulfillment Charges',
+    copy: 'How brands audit historical Cubiscan measurement errors, dispute misclassified size tiers, and recover compounding fee overcharges before the 90-day window closes.',
+    href: '/insight-amazon-fba-fee-audit',
+  },
+  {
     num: '02',
     topic: 'ECOMMERCE OPERATIONS',
     readTime: '2 MIN READ',
