@@ -125,6 +125,16 @@ const FIELD_GUIDES: {
     href: '/insight-manual-amazon-reimbursement-vs-bots',
   },
   {
+    art: 'supply',
+    num: '04',
+    topic: 'AMAZON CLAIMS & WAREHOUSE RECONCILIATION',
+    readTime: '4 MIN READ',
+    title:
+      'Amazon FBA Lost & Damaged Inventory Guide: How Brands Reconcile Warehouse Ledger Discrepancies',
+    copy: 'How enterprise brands audit warehouse damage reason codes, missing customer returns, and uncredited FC write-offs before the 18-month deadline.',
+    href: '/insight-amazon-fba-lost-damaged-inventory',
+  },
+  {
     num: '02',
     topic: 'ECOMMERCE OPERATIONS',
     readTime: '2 MIN READ',
