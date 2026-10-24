@@ -291,9 +291,12 @@ export function SiteFooter() {
             {PHONE.label}
           </a>
         </p>
+        <div className="mt-6 pt-5 border-t border-line/60">
+          <TrustBox className="w-fit" />
+        </div>
       </div>
 
-      <div className="flex flex-col justify-between">
+      <div>
         <nav aria-label="Footer services">
           <h2 className="text-gold m-0 mb-5 text-[10px] tracking-[.18em] uppercase">
             Services
@@ -310,9 +313,6 @@ export function SiteFooter() {
             ))}
           </div>
         </nav>
-        <div className="hidden b1000:block pt-6">
-          <TrustBox className="w-fit min-w-[210px]" />
-        </div>
       </div>
 
       <nav aria-label="Footer">
@@ -356,10 +356,6 @@ export function SiteFooter() {
             );
           })}
         </div>
-      </div>
-
-      <div className="b1000:hidden col-span-full flex justify-center py-2">
-        <TrustBox />
       </div>
 
       <div className="border-line text-muted max-b560:flex-col max-b560:gap-2 col-span-full flex items-center justify-between gap-6 border-t pt-6 text-[9px] tracking-[.16em]">
