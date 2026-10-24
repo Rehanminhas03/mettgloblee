@@ -293,25 +293,27 @@ export function SiteFooter() {
         </p>
       </div>
 
-      <nav aria-label="Footer services">
-        <h2 className="text-gold m-0 mb-5 text-[10px] tracking-[.18em] uppercase">
-          Services
-        </h2>
-        <div className="grid gap-3">
-          {SERVICES.map(service => (
-            <Link
-              key={service.href}
-              href={service.href}
-              className="hover:text-gold text-sm transition-colors"
-            >
-              {service.title}
-            </Link>
-          ))}
+      <div className="flex flex-col justify-between">
+        <nav aria-label="Footer services">
+          <h2 className="text-gold m-0 mb-5 text-[10px] tracking-[.18em] uppercase">
+            Services
+          </h2>
+          <div className="grid gap-3">
+            {SERVICES.map(service => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className="hover:text-gold text-sm transition-colors"
+              >
+                {service.title}
+              </Link>
+            ))}
+          </div>
+        </nav>
+        <div className="pt-6 w-fit">
+          <TrustBox className="w-fit" />
         </div>
-        <div className="mt-6 w-fit">
-          <TrustBox />
-        </div>
-      </nav>
+      </div>
 
       <nav aria-label="Footer">
         <h2 className="text-gold m-0 mb-5 text-[10px] tracking-[.18em] uppercase">
