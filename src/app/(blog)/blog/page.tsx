@@ -115,6 +115,16 @@ const FIELD_GUIDES: {
     href: '/insight-amazon-fba-fee-audit',
   },
   {
+    art: 'sales',
+    num: '03',
+    topic: 'AMAZON CLAIMS & TOS COMPLIANCE',
+    readTime: '4 MIN READ',
+    title:
+      'Manual Forensic Auditing vs. Automated Bots: Why Software Alone Fails Amazon FBA Claims Recovery',
+    copy: 'Why automated scrapers trigger case throttling and denied claims, and how human forensic case management recovers maximum capital safely.',
+    href: '/insight-manual-amazon-reimbursement-vs-bots',
+  },
+  {
     num: '02',
     topic: 'ECOMMERCE OPERATIONS',
     readTime: '2 MIN READ',
