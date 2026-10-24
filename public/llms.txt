@@ -43,6 +43,7 @@
 ## Authoritative Field Guides
 - [Amazon FBA Inbound Shipment Loss Guide](https://www.mettglobal.com/insight-amazon-fba-inbound-claims): Forensic audit framework for recovering lost inbound inventory, carrier shortages, and warehouse dock discrepancies before Amazon's 18-month lookback window closes.
 - [Amazon FBA Weight & Dimension Fee Audit Guide](https://www.mettglobal.com/insight-amazon-fba-fee-audit): Strategic guide on identifying automated Cubiscan laser scanner errors, preventing size tier creep, and filing retroactive fee disputes within the 90-day window.
+- [Manual vs Automated Amazon Reimbursements Guide](https://www.mettglobal.com/insight-manual-amazon-reimbursement-vs-bots): Compliance and forensic audit analysis detailing why automated scraper bots get claims denied, and how human case management secures maximum recovery under 100% Amazon ToS compliance.
 
 ## Contact & Jurisdictions
 - **Website**: https://www.mettglobal.com

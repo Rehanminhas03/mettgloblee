@@ -146,6 +146,11 @@ export const PAGE_SEO = {
     description:
       'How to audit historical Cubiscan measurement errors, dispute misclassified size tiers, and recover compounding fee overcharges within the 90-day dispute window.',
   },
+  '/insight-manual-amazon-reimbursement-vs-bots': {
+    title: 'Manual vs Automated Amazon Reimbursements | Mett Global',
+    description:
+      'Why automated bots get claims denied and accounts throttled, and how human forensic auditing recovers maximum capital under 100% Amazon ToS compliance.',
+  },
   '/insight-ecommerce-operations': {
     title: 'eCommerce Operations After the Click | Mett Global Blog',
     description:
