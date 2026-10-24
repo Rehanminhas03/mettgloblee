@@ -151,6 +151,11 @@ export const PAGE_SEO = {
     description:
       'Why automated bots get claims denied and accounts throttled, and how human forensic auditing recovers maximum capital under 100% Amazon ToS compliance.',
   },
+  '/insight-amazon-fba-lost-damaged-inventory': {
+    title: 'Amazon FBA Lost & Damaged Inventory Guide | Mett Global',
+    description:
+      'How 7-figure brands reconcile warehouse damage, uncredited lost items, and missing customer returns before Amazon 18-month dispute deadline.',
+  },
   '/insight-ecommerce-operations': {
     title: 'eCommerce Operations After the Click | Mett Global Blog',
     description:

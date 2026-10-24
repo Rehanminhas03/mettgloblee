@@ -116,6 +116,11 @@ const ENTRIES = [
     priority: 0.8,
   },
   {
+    path: '/insight-amazon-fba-lost-damaged-inventory',
+    lastModified: '2026-10-24',
+    priority: 0.8,
+  },
+  {
     path: '/insight-ecommerce-operations',
     lastModified: '2026-09-17',
     priority: 0.7,
