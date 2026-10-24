@@ -42,7 +42,7 @@ export function TrustBox({ className = '' }: TrustBoxProps) {
   return (
     <div
       ref={ref}
-      className={`trustpilot-widget ${className}`}
+      className={`trustpilot-widget whitespace-nowrap ${className}`}
       data-locale="en-US"
       data-template-id="56278e9abfbbba0bdcd568bc"
       data-businessunit-id="6adcac9d4716e8a5ad9e67f5"
@@ -53,14 +53,14 @@ export function TrustBox({ className = '' }: TrustBoxProps) {
         href="https://www.trustpilot.com/review/mettglobal.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center gap-2 h-[52px] px-6 rounded-md border border-[#dcdce6] bg-white text-[#191919] text-sm font-semibold hover:border-[#191919] transition-colors shadow-sm"
+        className="inline-flex items-center justify-center gap-2.5 h-[52px] px-4.5 rounded-md border border-[#dcdce6] bg-white text-[#191919] text-sm font-semibold hover:border-[#191919] transition-colors shadow-sm whitespace-nowrap"
       >
-        Review us on
-        <span className="inline-flex items-center gap-1 font-bold text-[#191919]">
+        <span className="whitespace-nowrap">Review us on</span>
+        <span className="inline-flex items-center gap-1 font-bold text-[#191919] whitespace-nowrap">
           <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="h-[18px] w-[18px] text-[#00b67a]"
+            className="h-[18px] w-[18px] text-[#00b67a] flex-shrink-0"
             fill="currentColor"
           >
             <path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z" />

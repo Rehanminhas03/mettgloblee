@@ -258,7 +258,7 @@ const SOCIALS = [
 /** `.footer`, the homepage footer, used on every page. */
 export function SiteFooter() {
   return (
-    <footer className="text-ink px-pad max-b1000:grid-cols-2 max-b1000:gap-x-8 max-b1000:gap-y-10 max-b900:px-7 max-b900:pt-14 max-b900:pb-6 max-b560:grid-cols-1 grid grid-cols-[1.4fr_1fr_0.9fr_1.3fr] gap-x-10 gap-y-12 bg-[#f4f0e8] pt-16 pb-7">
+    <footer className="text-ink px-pad max-b1000:grid-cols-2 max-b1000:gap-x-8 max-b1000:gap-y-10 max-b900:px-7 max-b900:pt-14 max-b900:pb-6 max-b560:grid-cols-1 grid grid-cols-[1.25fr_1.25fr_0.85fr_1.3fr] gap-x-10 gap-y-12 bg-[#f4f0e8] pt-16 pb-7">
       <div className="max-b1000:col-span-full max-b560:col-auto">
         <SiteLogo />
         <p className="text-muted mt-5 mb-0 max-w-[380px] text-sm leading-[1.7]">
@@ -308,8 +308,8 @@ export function SiteFooter() {
             </Link>
           ))}
         </div>
-        <div className="mt-8 max-w-[210px]">
-          <TrustBox />
+        <div className="mt-7 w-fit min-w-[230px] max-w-[250px]">
+          <TrustBox className="w-full" />
         </div>
       </nav>
 
