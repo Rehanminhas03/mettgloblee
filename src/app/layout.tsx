@@ -72,6 +72,11 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{ __html: MOTION_PREFERENCE_SCRIPT }}
         />
+        <script
+          type="text/javascript"
+          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+          async
+        />
       </head>
       {/*
         The background follows the surface the page declares, so rubber-band

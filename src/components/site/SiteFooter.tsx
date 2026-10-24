@@ -13,6 +13,7 @@ import {
   SOCIAL_PROFILES,
 } from '@/lib/site';
 import { SiteLogo } from './SiteLogo';
+import { TrustBox } from '@/components/trustpilot/TrustBox';
 
 const SOCIAL_BADGE =
   'grid h-[28px] w-[28px] flex-none place-items-center rounded-full border border-line bg-white';
@@ -252,6 +253,23 @@ const SOCIALS = [
       </span>
     ),
   },
+  {
+    href: SOCIAL_URLS.trustpilot,
+    label: 'Trustpilot',
+    aria: 'Mett Global on Trustpilot',
+    badge: (
+      <span className={`${SOCIAL_BADGE} border-0 !bg-[#00b67a] text-white`}>
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-[14px] w-[14px]"
+          fill="currentColor"
+        >
+          <path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z" />
+        </svg>
+      </span>
+    ),
+  },
 ];
 
 /** `.footer`, the homepage footer, used on every page. */
@@ -290,6 +308,9 @@ export function SiteFooter() {
             {PHONE.label}
           </a>
         </p>
+        <div className="mt-5 max-w-[280px]">
+          <TrustBox />
+        </div>
       </div>
 
       <nav aria-label="Footer services">
