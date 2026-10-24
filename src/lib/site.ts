@@ -41,6 +41,7 @@ export const SOCIAL_URLS = {
   quora: 'https://www.quora.com/profile/Mett-Global',
   clutch: 'https://clutch.co/profile/mett-global',
   crunchbase: 'https://www.crunchbase.com/organization/mett-global',
+  trustpilot: 'https://www.trustpilot.com/review/mettglobal.com',
 } as const;
 
 export const SOCIAL_PROFILES = [
@@ -56,6 +57,7 @@ export const SOCIAL_PROFILES = [
   { label: 'Quora', href: SOCIAL_URLS.quora },
   { label: 'Clutch', href: SOCIAL_URLS.clutch },
   { label: 'Crunchbase', href: SOCIAL_URLS.crunchbase },
+  { label: 'Trustpilot', href: SOCIAL_URLS.trustpilot },
 ];
 
 /** Same inbox, via FormSubmit's background (AJAX) endpoint, no redirect. */
