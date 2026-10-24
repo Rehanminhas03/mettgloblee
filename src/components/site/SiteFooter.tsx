@@ -253,23 +253,6 @@ const SOCIALS = [
       </span>
     ),
   },
-  {
-    href: SOCIAL_URLS.trustpilot,
-    label: 'Trustpilot',
-    aria: 'Mett Global on Trustpilot',
-    badge: (
-      <span className={`${SOCIAL_BADGE} border-0 !bg-[#00b67a] text-white`}>
-        <svg
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          className="h-[14px] w-[14px]"
-          fill="currentColor"
-        >
-          <path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z" />
-        </svg>
-      </span>
-    ),
-  },
 ];
 
 /** `.footer`, the homepage footer, used on every page. */
@@ -325,6 +308,9 @@ export function SiteFooter() {
             </Link>
           ))}
         </div>
+        <div className="mt-8 max-w-[210px]">
+          <TrustBox />
+        </div>
       </nav>
 
       <nav aria-label="Footer">
@@ -349,7 +335,7 @@ export function SiteFooter() {
           Connect
         </h2>
         <div className="grid grid-cols-2 gap-x-5 gap-y-2.5">
-          {SOCIAL_PROFILES.map(profile => {
+          {SOCIAL_PROFILES.filter(profile => profile.label !== 'Trustpilot').map(profile => {
             const social = SOCIALS.find(item => item.href === profile.href);
             return (
               <a
@@ -367,22 +353,6 @@ export function SiteFooter() {
               </a>
             );
           })}
-        </div>
-      </div>
-
-      {/* Trustpilot Review Collector - Bottom Trust Bar */}
-      <div className="col-span-full border-t border-line/60 pt-7 pb-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
-          <span className="text-gold text-[10px] tracking-[.18em] uppercase font-bold">
-            Customer Reviews
-          </span>
-          <span className="hidden sm:inline text-muted text-xs">·</span>
-          <span className="text-muted text-xs">
-            Review Mett Global or verify our client reputation on Trustpilot
-          </span>
-        </div>
-        <div className="w-full sm:w-auto min-w-[220px] max-w-[260px] h-[52px] flex justify-center sm:justify-end">
-          <TrustBox />
         </div>
       </div>
 
