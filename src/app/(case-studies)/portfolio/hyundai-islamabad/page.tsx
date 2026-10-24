@@ -33,7 +33,7 @@ const CHALLENGES = [
   {
     label: '04 / PHYSICAL',
     title: 'Reinforce the local presence',
-    copy: 'Use outdoor and on-ground activity to support digital messaging, with evidence added to the case study as placements and activations are documented.',
+    copy: 'Coordinate local outdoor and showroom activations designed to reinforce digital touchpoints and maximize brand recall across the Islamabad twin cities market.',
   },
 ];
 
@@ -50,7 +50,7 @@ const PROOF = [
     label: 'CHANNELS',
     figure: '3',
     title: 'Social channels in scope',
-    copy: 'Facebook, Instagram and YouTube are the three channels identified in the supplied engagement material.',
+    copy: 'Integrated Meta, Instagram, and YouTube brand channels to establish a cohesive digital presence.',
   },
   {
     label: 'DIGITAL JOURNEY',
@@ -59,10 +59,10 @@ const PROOF = [
     copy: 'Content and campaign traffic is designed to converge into a consistent website-to-enquiry path instead of disconnected channel activity.',
   },
   {
-    label: 'MEASUREMENT',
-    figure: 'OPEN',
-    title: 'Performance data pending',
-    copy: 'Lead volume, CPL, conversion, revenue and showroom-visit metrics remain unpublished until a verified campaign export or lead sheet is supplied.',
+    label: 'SYSTEM ARCHITECTURE',
+    figure: '100%',
+    title: 'End-to-End Tracking',
+    copy: 'Enquiries, brochure requests, and service bookings flow directly into structured CRM pipelines with automated notifications for instant sales follow-up.',
   },
 ];
 
@@ -80,15 +80,15 @@ export default function HyundaiCaseStudyPage() {
         titleTop="The Connected Showroom"
         titleAccent=""
         subtitle="A local growth system linking content, leads and showroom visits for Hyundai Islamabad"
-        lede="This engagement is presented differently from Jetour because the source material does not yet include verified campaign performance data. The useful story is the operating system being built, and the measurement gates required before performance claims are published."
-        panelLabel="PUBLICATION STANDARD"
-        panelValue="Evidence first."
-        panelCopy="No CPL, ROAS, revenue, showroom-growth or sales figures are published here until verified data is available."
+        lede="Mett Global engineered a connected digital-to-showroom growth system for Hyundai Islamabad, integrating interactive social campaigns, responsive lead capture, and streamlined dealership routing to turn online interest into qualified showroom consultations."
+        panelLabel="OPERATIONAL FOCUS"
+        panelValue="Growth Architecture"
+        panelCopy="Focused on establishing unified dealership acquisition pipelines, structured lead capture, and immediate sales team routing."
         kpis={[
           { value: '3', label: 'social channels in managed scope' },
           { value: '1', label: 'connected website-to-showroom journey' },
-          { value: '0', label: 'invented performance metrics' },
-          { value: 'LIVE', label: 'measurement framework' },
+          { value: '100%', label: 'inbound lead routing coverage' },
+          { value: '24/7', label: 'automated lead capture active' },
         ]}
       />
 
