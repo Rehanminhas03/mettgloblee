@@ -310,8 +310,8 @@ export function SiteFooter() {
             ))}
           </div>
         </nav>
-        <div className="pt-6 w-fit">
-          <TrustBox className="w-fit" />
+        <div className="pt-6 w-fit relative -left-[19px]">
+          <TrustBox className="w-[220px]" />
         </div>
       </div>
 
