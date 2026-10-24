@@ -53,7 +53,7 @@ export function TrustBox({ className = '' }: TrustBoxProps) {
         href="https://www.trustpilot.com/review/mettglobal.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center gap-2.5 h-[52px] px-4.5 rounded-md border border-[#dcdce6] bg-white text-[#191919] text-sm font-semibold hover:border-[#191919] transition-colors shadow-sm whitespace-nowrap"
+        className="inline-flex items-center justify-center gap-2.5 h-[52px] px-5 rounded-md border border-[#d0ccc4] bg-white text-[#191919] text-sm font-semibold hover:border-[#191919] transition-colors shadow-sm whitespace-nowrap"
       >
         <span className="whitespace-nowrap">Review us on</span>
         <span className="inline-flex items-center gap-1 font-bold text-[#191919] whitespace-nowrap">
