@@ -48,7 +48,7 @@ export function TrustBox({ className = '' }: TrustBoxProps) {
       data-template-id="56278e9abfbbba0bdcd568bc"
       data-businessunit-id="6adcac9d4716e8a5ad9e67f5"
       data-style-height="46px"
-      data-style-width="215px"
+      data-style-width="220px"
     >
       <a
         href="https://www.trustpilot.com/review/mettglobal.com"
