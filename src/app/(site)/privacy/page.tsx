@@ -20,23 +20,50 @@ const BLOCKS = [
   },
   {
     heading: 'Information collected automatically',
-    copy: 'If you allow analytics, our analytics tools may receive technical information such as your browser and device type, approximate location, the pages you view and how you arrived at the site. Nothing is collected for analytics until you choose “Allow analytics”.',
+    copy: 'When you visit our website, our analytics and business intelligence tools may collect technical information such as your IP address, browser and device type, approximate geographic location, pages viewed, time spent and referral sources.',
   },
   {
     heading: 'Why we use it',
-    copy: 'We use the information you send to respond to your enquiry, assess whether we can help, arrange requested meetings and keep a record of the conversation. We use analytics information to understand how the website is used and to improve it.',
+    copy: 'We use the information you send to respond to your enquiry, assess whether we can help, arrange requested meetings and keep a record of the conversation. We use analytics and B2B visitor intelligence to understand how the website is used, improve our services, identify prospective business clients and conduct relevant commercial outreach.',
   },
   {
     heading: 'Form processing',
     copy: 'Website enquiries and meeting requests are delivered to contact@mettglobal.com through FormSubmit, a third-party form service that processes the submission before it reaches us. Messages sent through WhatsApp, email or social platforms are handled by those platforms under their own terms.',
   },
   {
-    heading: 'Analytics and cookies',
-    copy: 'The website uses Google Analytics to measure page visits and selected actions such as bookings, calls, emails, WhatsApp clicks and form submissions. Analytics and advertising storage is switched off by default and starts only if you choose “Allow analytics” in the cookie notice. Your choice is saved in your own browser, and you can change it at any time with the “Cookie settings” link in the footer of every page. Choosing “Decline” stops analytics and removes the Google Analytics cookies the site set.',
+    heading: 'Analytics, B2B intelligence and cookies',
+    copy: (
+      <>
+        The website uses Google Analytics to measure page visits and selected actions such as bookings, calls, emails, WhatsApp clicks and form submissions.
+        <br />
+        <br />
+        We also use Apollo.io (Website Visitor Tracking) to identify business organizations visiting our website and understand commercial interest in our services. Apollo processes IP addresses and browsing activity to provide business-level intelligence and prospective business contact profiles. You can learn more about how Apollo handles data or request removal from their database by visiting the{' '}
+        <a
+          href="https://www.apollo.io/privacy-policy"
+          target="_blank"
+          rel="noopener"
+          className="text-gold font-semibold hover:underline"
+        >
+          Apollo.io Privacy Policy
+        </a>{' '}
+        and{' '}
+        <a
+          href="https://www.apollo.io/privacy-policy#opt-out"
+          target="_blank"
+          rel="noopener"
+          className="text-gold font-semibold hover:underline"
+        >
+          Apollo Opt-Out Portal
+        </a>.
+        <br />
+        <br />
+        Google Analytics storage is switched off by default and starts only if you choose “Allow analytics” in the cookie notice. Your choice is saved in your own browser, and you can change it at any time with the “Cookie settings” link in the footer of every page. Choosing “Decline” stops analytics and removes the Google Analytics cookies the site set.
+      </>
+    ),
   },
   {
     heading: 'Who we share it with',
-    copy: 'We do not sell personal information. We share it only with the service providers that help us run the website and respond to you, such as hosting, form delivery and analytics, when it is needed to deliver something you asked for, or where the law requires it. Those providers have their own privacy practices.',
+    copy: 'We do not sell personal information. We share it only with service providers that help us run the website, communicate with prospective and existing clients, and manage business operations—such as hosting, form delivery, analytics and B2B sales intelligence (Apollo.io)—when needed to fulfill your requests, conduct legitimate business development, or comply with legal obligations. Those providers handle data in accordance with their own privacy commitments.',
   },
   {
     heading: 'International processing',
@@ -60,7 +87,7 @@ const BLOCKS = [
   },
   {
     heading: 'Changes to this notice',
-    copy: 'We may update this notice when the website or the way we handle information changes. The current version is always on this page, with the date it was last updated. Last updated: 14 October 2026.',
+    copy: 'We may update this notice when the website or the way we handle information changes. The current version is always on this page, with the date it was last updated. Last updated: 25 October 2026.',
   },
   {
     heading: 'Contact us',
