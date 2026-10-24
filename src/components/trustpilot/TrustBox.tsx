@@ -42,18 +42,20 @@ export function TrustBox({ className = '' }: TrustBoxProps) {
   return (
     <div
       ref={ref}
-      className={`trustpilot-widget whitespace-nowrap ${className}`}
+      suppressHydrationWarning
+      className={`trustpilot-widget whitespace-nowrap w-fit ${className}`}
       data-locale="en-US"
       data-template-id="56278e9abfbbba0bdcd568bc"
       data-businessunit-id="6adcac9d4716e8a5ad9e67f5"
-      data-style-height="52px"
-      data-style-width="100%"
+      data-style-height="46px"
+      data-style-width="220px"
     >
       <a
+        suppressHydrationWarning
         href="https://www.trustpilot.com/review/mettglobal.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center gap-2.5 h-[52px] px-5 rounded-md border border-[#d0ccc4] bg-white text-[#191919] text-sm font-semibold hover:border-[#191919] transition-colors shadow-sm whitespace-nowrap"
+        className="inline-flex items-center justify-center gap-2 h-[44px] px-4 rounded-md border border-[#d0ccc4] bg-white text-[#191919] text-sm font-semibold hover:border-[#191919] transition-colors shadow-xs whitespace-nowrap"
       >
         <span className="whitespace-nowrap">Review us on</span>
         <span className="inline-flex items-center gap-1 font-bold text-[#191919] whitespace-nowrap">
