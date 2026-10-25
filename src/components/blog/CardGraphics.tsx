@@ -32,7 +32,7 @@ export function PlacementFeeCardGraphic() {
       </div>
       <div className="relative z-[1] flex items-center justify-between border-t border-white/10 pt-2 text-[10px] font-mono text-[#c4beb1]">
         <span>Net Cash Recovery</span>
-        <span className="font-bold text-emerald-400">18-Month Lookback</span>
+        <span className="font-bold text-emerald-400">Active Policy Windows</span>
       </div>
     </div>
   );

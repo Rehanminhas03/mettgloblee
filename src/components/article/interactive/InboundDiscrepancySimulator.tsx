@@ -19,7 +19,7 @@ export function InboundDiscrepancySimulator() {
 
   // Calculations
   const missingUnitsYear = Math.round(annualUnits * (discrepancyRate / 100));
-  const missingUnitsLookback = Math.round(missingUnitsYear * 1.5); // 18-month historical lookback
+  const missingUnitsLookback = missingUnitsYear; // Annualized eligible discrepancy pool
   const annualLoss = missingUnitsYear * unitValue;
   const lookbackLoss = missingUnitsLookback * unitValue;
 
@@ -41,7 +41,7 @@ export function InboundDiscrepancySimulator() {
             Interactive Claims Audit
           </span>
           <h3 className="mt-2 text-xl sm:text-2xl font-bold tracking-tight text-white">
-            Inbound Discrepancy & 18-Month Lookback Calculator
+            Inbound Receiving Discrepancy & Capital Recovery Calculator
           </h3>
         </div>
         <div className="flex items-center gap-2">
@@ -211,11 +211,11 @@ export function InboundDiscrepancySimulator() {
         </div>
 
         <div className="rounded-2xl border border-[#2b271f] bg-[#161410] p-4">
-          <div className="text-[10px] font-mono tracking-wider text-[#a39e93] uppercase">18-Mo Lookback Pool</div>
+          <div className="text-[10px] font-mono tracking-wider text-[#a39e93] uppercase">Eligible Discrepancy Pool</div>
           <div className="mt-1 text-2xl font-black text-white font-mono">
             ${lookbackLoss.toLocaleString()}
           </div>
-          <div className="text-[10px] text-p-gold mt-0.5">Eligible audit window</div>
+          <div className="text-[10px] text-p-gold mt-0.5">Active dispute window</div>
         </div>
 
         <div className="rounded-2xl border border-emerald-500/40 bg-emerald-950/20 p-4">
@@ -231,9 +231,9 @@ export function InboundDiscrepancySimulator() {
       <div className="mt-5 flex items-center justify-between rounded-xl bg-[#14120e] px-4 py-3 border border-white/5 text-xs text-[#a39e93]">
         <div className="flex items-center gap-2">
           <span className="text-amber-400 font-bold">⚠️ Strict Window Notice:</span>
-          <span>Amazon claims reconciliation closes after the policy window. Once closed, missing units are written off permanently.</span>
+          <span>Amazon claims reconciliation closes after category-specific windows (60–90 days). Once closed, missing units are written off permanently.</span>
         </div>
-        <span className="hidden sm:inline font-mono text-[10px] text-p-gold font-bold">100% Zero-Risk Model</span>
+        <span className="hidden sm:inline font-mono text-[10px] text-p-gold font-bold">Contingency Recovery Model</span>
       </div>
     </div>
   );

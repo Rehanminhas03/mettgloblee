@@ -34,7 +34,7 @@ export function BotVsForensicWidget() {
       {/* Discrepancy Pool Slider */}
       <div className="my-6 rounded-2xl bg-[#161410] p-5 border border-[#2b271f]">
         <div className="flex justify-between text-xs font-bold text-[#ded8cb] mb-1">
-          <label htmlFor={sliderId}>Historical Discrepancy Pool (18-Month Lookback)</label>
+          <label htmlFor={sliderId}>Estimated Discrepancy Pool (Active Policy Windows)</label>
           <span className="text-p-gold font-extrabold text-base">${discrepancyPool.toLocaleString()}</span>
         </div>
         <input
@@ -145,7 +145,7 @@ export function BotVsForensicWidget() {
           </div>
 
           <div className="mt-5 rounded-xl bg-emerald-950/50 border border-emerald-500/30 p-3 text-[11px] text-emerald-200">
-            🛡️ Contingency model: 100% zero-risk. If we don’t recover cash to your balance, you owe zero.
+            🛡️ Performance Contingency: Zero upfront fee. Mett Global operates on contingency—fees apply exclusively upon confirmed cash recovery.
           </div>
         </div>
       </div>
