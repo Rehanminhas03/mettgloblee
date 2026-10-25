@@ -150,7 +150,7 @@ export default function ManualVsBotsGuide() {
       }
       endHeading={'Tired of bot denials and automated rejections?'}
       endHref={'/appointment'}
-      endLabel={'Book a Free Zero-Risk Forensic Audit with Our Houston Team'}
+      endLabel={'Book a Complimentary, ToS-Compliant Forensic Audit with Our Team'}
     >
       <JsonLd data={articleJsonLd('/insight-manual-amazon-reimbursement-vs-bots')} />
       <BotVsForensicWidget />

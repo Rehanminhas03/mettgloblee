@@ -24,7 +24,7 @@ const BLOCKS: Block[] = [
   },
   {
     t: 'quote',
-    text: 'Amazon promises automated reimbursement for warehouse-damaged and lost items within 30 days. In reality, forensic audits show that 15% to 30% of eligible inventory adjustments fall through system gaps and are never credited unless manually claimed.',
+    text: 'Amazon promises automated reimbursement for warehouse-damaged and lost items within 30 days. In reality, empirical catalog audits indicate that between 15% and 30% of eligible inventory adjustments fail to reconcile automatically without manual seller case filing.',
   },
   { t: 'h2', text: 'Decoding the inventory adjustment reason codes' },
   {
@@ -60,14 +60,18 @@ const BLOCKS: Block[] = [
       </strong>,
     ],
   },
-  { t: 'h2', text: 'The strict 18-month reconciliation deadline' },
+  { t: 'h2', text: 'Category-specific dispute deadlines: The 60-day warehouse rule' },
   {
     t: 'p',
-    text: 'Under Amazon’s FBA Inventory Reimbursement Policy, sellers have exactly 18 months from the date of the adjustment event to submit a reimbursement claim. After 548 days, Amazon’s system permanently archives the ledger transaction, extinguishing the legal claim to compensation.',
+    text: 'Under Amazon’s updated FBA Inventory Reimbursement Policy, historical 18-month dispute deadlines have been replaced by strict, category-specific timeframes. For fulfillment center operations—including warehouse damage, lost inventory, and unauthorized disposals—sellers must submit claims within 60 days of the adjustment event date.',
   },
   {
     t: 'p',
-    text: 'For a 7-figure brand generating $3M to $10M in annual FBA volume, unreconciled warehouse damage and missing customer returns represent an estimated $25,000 to $85,000 in uncollected cash every year.',
+    text: 'For customer return discrepancies (where a buyer is refunded but inventory is never returned), claims must be filed between 60 and 120 days from the refund or replacement date. Once these category-specific windows lapse, Amazon permanently archives the ledger transaction, extinguishing legal eligibility for compensation.',
+  },
+  {
+    t: 'p',
+    text: 'For a 7-figure brand generating $3M to $10M in annual FBA volume, unreconciled warehouse damage and missing customer returns represent an estimated $25,000 to $85,000 in uncollected cash every year if monthly ledger audits are neglected.',
   },
   { t: 'h2', text: 'A forensic 4-step warehouse reconciliation workflow' },
   {
@@ -80,7 +84,7 @@ const BLOCKS: Block[] = [
       <strong key="1">
         Ledger Cross-Reconciliation:{' '}
         <span className="font-normal text-[#514d46]">
-          Cross-matching the Inventory Event Detail report against the Reimbursements Report to isolate every unit marked as lost, damaged, or disposed that received zero reimbursement transaction ID.
+          Cross-matching the Inventory Event Detail report against the Reimbursements Report to isolate every unit marked as lost, damaged, or disposed that received zero reimbursement transaction ID within the 60-day window.
         </span>
       </strong>,
       <strong key="2">
@@ -112,7 +116,7 @@ const BLOCKS: Block[] = [
           Amazon Seller Central: FBA Lost and Damaged Inventory Reimbursement Policy
         </SourceLink>
         <SourceNote>
-          Reconciliation must be performed within 18 months. Mett Global conducts deep historical warehouse audits on a pure contingency basis—no recovery, zero fee.
+          Reconciliation must be executed within Amazon’s 60-day warehouse dispute window. Mett Global conducts forensic ledger audits on a contingency basis—no recovery, zero out-of-pocket expense, in strict compliance with Amazon Terms of Service.
         </SourceNote>
       </>
     ),
@@ -127,7 +131,7 @@ export default function LostDamagedInventoryGuide() {
         'Amazon FBA Lost & Damaged Inventory Guide: How Brands Reconcile Warehouse Ledger Discrepancies'
       }
       dek={
-        'From forklift damage to misplaced FC transfers and unreturned customer refunds, 1% to 2% of warehouse inventory is written off silently. Here is how enterprise brands audit adjustment codes, enforce the 45-day return rule, and claim retroactive cash recovery.'
+        'From forklift damage to misplaced FC transfers and unreturned customer refunds, warehouse shrinkage silently erodes operating margin. Here is how enterprise brands audit adjustment codes, enforce the 45-day return rule, and claim retroactive cash recovery within Amazon’s 60-day dispute window.'
       }
       meta={'METT GLOBAL FIELD GUIDE · WAREHOUSE REIMBURSEMENTS · 4 MIN READ'}
       graphic={
@@ -143,7 +147,7 @@ export default function LostDamagedInventoryGuide() {
       }
       endHeading={'Suspect uncredited warehouse damage in your FBA account?'}
       endHref={'/appointment'}
-      endLabel={'Book a Free Zero-Risk Warehouse Audit with Our Houston Team'}
+      endLabel={'Book a Complimentary, ToS-Compliant Warehouse Audit with Our Team'}
     >
       <JsonLd data={articleJsonLd('/insight-amazon-fba-lost-damaged-inventory')} />
       <WarehouseShrinkageSimulator />

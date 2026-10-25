@@ -139,7 +139,7 @@ export const PAGE_SEO = {
   '/insight-amazon-fba-inbound-claims': {
     title: 'Amazon FBA Inbound Shipment Loss & Recovery Guide | Mett Global',
     description:
-      'How 7-figure Amazon brands audit and recover lost inbound shipments, warehouse carrier shortages, and dock discrepancies before the 18-month lookback window closes.',
+      'How 7-figure Amazon brands audit and recover lost inbound shipments, warehouse carrier shortages, and dock discrepancies before Amazon category-specific dispute windows close.',
   },
   '/insight-amazon-fba-fee-audit': {
     title: 'Amazon FBA Weight & Dimension Fee Audit Guide | Mett Global',
@@ -154,7 +154,7 @@ export const PAGE_SEO = {
   '/insight-amazon-fba-lost-damaged-inventory': {
     title: 'Amazon FBA Lost & Damaged Inventory Guide | Mett Global',
     description:
-      'How 7-figure brands reconcile warehouse damage, uncredited lost items, and missing customer returns before Amazon 18-month dispute deadline.',
+      'How 7-figure brands reconcile warehouse damage, uncredited lost items, and missing customer returns within Amazon category-specific dispute deadlines.',
   },
   '/insight-ecommerce-operations': {
     title: 'eCommerce Operations After the Click | Mett Global Blog',
@@ -229,7 +229,7 @@ export const PAGE_SEO = {
   '/insight-amazon-inbound-placement-fees': {
     title: 'Amazon Inbound Placement Fees & Lost Inventory Guide | Mett Global',
     description:
-      'How US Amazon brands audit inbound placement fee economics, identify receiving dock shortages, and recover uncredited inventory within the 18-month window.',
+      'How US Amazon brands audit inbound placement fee economics, identify receiving dock shortages, and recover uncredited inventory within active policy dispute windows.',
   },
   '/insight-custom-portals-vs-saas': {
     title: 'Custom Portals vs. SaaS for US Logistics & Service Firms | Mett Global',

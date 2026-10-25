@@ -1,12 +1,25 @@
+import React from 'react';
+
 /* ------------------------------------------------------------------ *
  * Prose primitives for `article` in article.css. Browser default
  * margins are restated explicitly because Tailwind's preflight resets
  * them and the original stylesheet relied on them.
  * ------------------------------------------------------------------ */
 
-export function H2({ children }: { children: React.ReactNode }) {
+export function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-');
+}
+
+export function H2({ id, children }: { id?: string; children: React.ReactNode }) {
   return (
-    <h2 className="max-b650:text-[28px] mt-[55px] mb-[14px] text-[34px] tracking-[-.045em]">
+    <h2
+      id={id}
+      className="scroll-mt-28 max-b650:text-[28px] mt-[55px] mb-[14px] text-[34px] tracking-[-.045em] font-extrabold text-[#11110f]"
+    >
       {children}
     </h2>
   );
@@ -46,7 +59,7 @@ export function OL({ items }: { items: React.ReactNode[] }) {
 
 export function Quote({ children }: { children: React.ReactNode }) {
   return (
-    <blockquote className="border-p-gold my-[55px] border-y py-7 text-[27px] leading-[1.35]">
+    <blockquote className="border-p-gold my-[55px] border-y py-7 text-[27px] leading-[1.35] text-[#11110f] font-serif italic">
       {children}
     </blockquote>
   );
@@ -64,8 +77,8 @@ export function SourceBox({
   children: React.ReactNode;
 }) {
   return (
-    <section className="border-a-line mt-[55px] rounded-[20px] border bg-white p-6">
-      <small className="text-p-gold mb-2 block text-[9px] font-black tracking-[.16em]">
+    <section className="border-a-line mt-[55px] rounded-[20px] border bg-white p-6 shadow-2xs">
+      <small className="text-p-gold mb-2 block text-[9px] font-black tracking-[.16em] uppercase">
         {label}
       </small>
       {children}
@@ -86,7 +99,7 @@ export function SourceLink({
       href={href}
       target="_blank"
       rel="noopener"
-      className="font-extrabold underline decoration-[#d2b26a] underline-offset-4"
+      className="font-extrabold underline decoration-[#d2b26a] underline-offset-4 text-[#11110f] hover:text-p-gold transition-colors"
     >
       {children}
     </a>
@@ -103,25 +116,114 @@ export function SourceNote({ children }: { children: React.ReactNode }) {
 }
 
 /* ------------------------------------------------------------------ *
+ * Reader's Guide / Table of Contents
+ * ------------------------------------------------------------------ */
+
+export function ReadersGuide({
+  headings,
+}: {
+  headings: { text: string; id: string }[];
+}) {
+  if (headings.length < 2) return null;
+
+  return (
+    <nav
+      aria-label="Reader's Guide and Table of Contents"
+      className="my-10 rounded-2xl border border-[#e8e2d5] bg-[#faf8f5] p-6 sm:p-7 shadow-xs"
+    >
+      <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-[#e8e2d5]">
+        <div className="flex items-center gap-2.5">
+          <span className="flex h-6 w-6 items-center justify-center rounded-md bg-[#eadecc] text-[#8a7238]">
+            <svg
+              className="h-3.5 w-3.5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="8" y1="6" x2="21" y2="6"></line>
+              <line x1="8" y1="12" x2="21" y2="12"></line>
+              <line x1="8" y1="18" x2="21" y2="18"></line>
+              <line x1="3" y1="6" x2="3.01" y2="6"></line>
+              <line x1="3" y1="12" x2="3.01" y2="12"></line>
+              <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+          </span>
+          <span className="text-[11px] font-black uppercase tracking-[.18em] text-[#11110f]">
+            Reader&apos;s Guide &amp; Key Sections
+          </span>
+        </div>
+        <span className="text-[10px] font-bold text-[#8a857b] uppercase tracking-wider bg-white/80 border border-[#e8e2d5] px-2 py-0.5 rounded-full">
+          {headings.length} Topics
+        </span>
+      </div>
+      <p className="text-[13px] text-[#6d685f] mb-4 leading-relaxed">
+        Jump directly to verified operational frameworks, empirical benchmarks, and regulatory dispute workflows:
+      </p>
+      <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+        {headings.map((h, i) => (
+          <li key={i}>
+            <a
+              href={`#${h.id}`}
+              className="group flex items-start gap-2.5 rounded-lg p-2 text-[13px] font-medium text-[#2d2a26] transition-all hover:bg-white hover:text-p-gold hover:shadow-2xs"
+            >
+              <span className="font-mono text-xs font-bold text-p-gold group-hover:text-[#11110f] transition-colors">
+                {String(i + 1).padStart(2, '0')}.
+              </span>
+              <span className="leading-snug underline decoration-[#e0d9ca] underline-offset-3 group-hover:decoration-p-gold">
+                {h.text}
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
+/* ------------------------------------------------------------------ *
  * Block model. Article bodies are authored as ordered block lists so
  * every guide renders through the same typographic rules.
  * ------------------------------------------------------------------ */
 
 export type Block =
-  | { t: 'h2'; text: string }
+  | { t: 'h2'; text: string; id?: string }
   | { t: 'p'; text: React.ReactNode }
   | { t: 'ul'; items: React.ReactNode[] }
   | { t: 'ol'; items: React.ReactNode[] }
   | { t: 'quote'; text: string }
   | { t: 'source'; label: string; body: React.ReactNode };
 
-export function Prose({ blocks }: { blocks: Block[] }) {
+export function Prose({
+  blocks,
+  hideToc = false,
+}: {
+  blocks: Block[];
+  hideToc?: boolean;
+}) {
+  const headings = blocks
+    .filter((b): b is Block & { t: 'h2' } => b.t === 'h2')
+    .map((b) => ({
+      text: b.text,
+      id: b.id || slugify(b.text),
+    }));
+
   return (
     <>
+      {!hideToc && <ReadersGuide headings={headings} />}
+
       {blocks.map((block, index) => {
         switch (block.t) {
-          case 'h2':
-            return <H2 key={index}>{block.text}</H2>;
+          case 'h2': {
+            const id = block.id || slugify(block.text);
+            return (
+              <H2 key={index} id={id}>
+                {block.text}
+              </H2>
+            );
+          }
           case 'p':
             return <P key={index}>{block.text}</P>;
           case 'ul':

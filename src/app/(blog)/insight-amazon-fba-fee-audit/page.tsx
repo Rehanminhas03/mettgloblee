@@ -65,7 +65,7 @@ const BLOCKS: Block[] = [
       <strong key="1">
         Strict 90-Day Dispute Window:{' '}
         <span className="font-normal text-[#514d46]">
-          Unlike inbound inventory losses (which carry an 18-month lookback window), fee disputes must generally be initiated within 90 days from the fee transaction date. Uncontested historical overcharges beyond this window become virtually impossible to recover.
+          Similar to inbound receiving shortages (60–90 days) and warehouse damage claims (60 days), fee overcharge disputes must generally be initiated within 90 days from the fee transaction date. Uncontested historical overcharges beyond this 90-day window become virtually impossible to recover.
         </span>
       </strong>,
       <strong key="2">
@@ -150,7 +150,7 @@ export default function AmazonFeeAuditGuide() {
       }
       endHeading={'Suspect your SKUs are being overcharged on FBA fees?'}
       endHref={'/appointment'}
-      endLabel={'Book a Free Zero-Risk Fee Audit with Our Houston Team'}
+      endLabel={'Book a Complimentary, ToS-Compliant Fee Audit with Our Team'}
     >
       <JsonLd data={articleJsonLd('/insight-amazon-fba-fee-audit')} />
       <CubiscanSimulator />

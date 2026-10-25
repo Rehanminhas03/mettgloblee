@@ -29,39 +29,30 @@ const BLOCKS: Block[] = [
   { t: 'h2', text: 'Why multi-destination splits increase inventory shrinkage' },
   {
     t: 'p',
-    text: 'When a brand opts for Amazon’s "Distributed Inventory Placement" to minimize per-unit placement fees, full truckloads (FTL) or palletized LTL shipments are broken down into smaller regional consignments headed to disparate fulfillment centers (e.g., AVP1 in Pennsylvania, GYR3 in Arizona, and MDW2 in Illinois).',
-  },
-  {
-    t: 'p',
-    text: 'Cross-dock receiving data across $8M+ in audited consignments reveals three consistent operational breakdowns in multi-destination routing:',
+    text: 'When a brand opts for Amazon’s "Partial or No Placement Fee" option by dividing a 40-foot container or domestic production run into 4–5 shipments, operational complexity compounds across three vectors:',
   },
   {
     t: 'ul',
     items: [
       <strong key="1">
-        Carton-level cross-dock misrouting:{' '}
+        3PL Labor & Palletization Overhead:{' '}
         <span className="font-normal text-[#514d46]">
-          When freight forwarders or 3PLs break master cartons across multiple regional shipments, carton barcode labels are frequently scanned into the wrong shipping plan, triggering automated discrepancies that close as "Investigation Completed" without seller credits.
+          Instead of wrapping standard 24-pallet truckloads to a single cross-dock, warehouse teams must build partial pallets, increasing 3PL pick-and-pack prep fees by $200–$600 per shipment.
         </span>
       </strong>,
       <strong key="2">
-        Carrier pallet separation at transfer hubs:{' '}
+        Carrier Receiving Discrepancies:{' '}
         <span className="font-normal text-[#514d46]">
-          LTL carriers (Estes, R+L, Old Dominion) consolidating shipments at regional freight terminals often separate paired pallets. Amazon receives pallet 1 on Tuesday and pallet 2 the following Monday, frequently marking pallet 2 as an overage or ghost shipment.
+          Multiple regional FCs (e.g., ABE8 in Pennsylvania, GYR3 in Arizona, and MEM1 in Tennessee) unpack shipments with variable staffing quality. Inbound dock workers frequently mark entire cartons as "Missing" during initial check-in.
         </span>
       </strong>,
       <strong key="3">
-        Defective Cubiscan size-tier reclassifications:{' '}
+        Phantom Re-direction & Cross-Dock Loss:{' '}
         <span className="font-normal text-[#514d46]">
-          When units are distributed to newer, high-speed robotic facilities, automated Cubiscan sensors often capture packaging tape flares or protective air bags, re-measuring a standard-size item into an oversize tier and compounding fee overcharges on every subsequent order.
+          When inventory arrives at inbound cross-dock (IXD) facilities, internal transshipment trailers frequently misroute pallets without updating Seller Central receiving records.
         </span>
       </strong>,
     ],
-  },
-  { t: 'h2', text: 'Calculating the breakeven: Placement fees vs. split freight' },
-  {
-    t: 'p',
-    text: 'To determine whether paying Amazon’s minimal-split fee or absorbing LTL multi-stop freight is more profitable, US operators must evaluate the true total landed cost formula:',
   },
   {
     t: 'quote',
@@ -71,14 +62,14 @@ const BLOCKS: Block[] = [
     t: 'p',
     text: 'If splitting a 10,000-unit production run across four FCs saves $2,400 in placement fees but incurs $1,800 in additional 3PL prep charges and results in $3,200 of unaccounted carton shortages, the brand loses $2,600 on the transaction despite appearing to "save" on Amazon fees.',
   },
-  { t: 'h2', text: 'The 18-month clock on FBA inventory reimbursement claims' },
+  { t: 'h2', text: 'The compressed dispute clock on FBA receiving discrepancy claims' },
   {
     t: 'p',
-    text: 'Under Amazon’s FBA Inventory Reimbursement Policy, US brand owners have exactly 18 months from the original shipment delivery date to dispute receiving shortages and recover uncredited inventory value.',
+    text: 'Under Amazon’s updated FBA Inventory Reimbursement Policy, historical 18-month dispute timeframes no longer apply. Sellers face compressed, category-specific reconciliation windows. Inbound receiving discrepancies must be disputed within 60 to 90 days after delivery (once the shipment transitions to "Closed" status in Seller Central).',
   },
   {
     t: 'p',
-    text: 'Once this 548-day statutory lookback window expires, Amazon’s financial ledger permanently locks the transaction. Unclaimed discrepancies cannot be appealed or audited, permanently eroding operating EBITDA.',
+    text: 'Once this operational window expires, Amazon’s financial ledger permanently archives the shipment. Unclaimed discrepancies cannot be appealed or audited, permanently eroding operating EBITDA. In contrast to automated bots that flood Seller Support with generic requests, recovering capital requires a forensic, human-assembled evidence dossier.',
   },
   { t: 'h2', text: 'The 4-point evidence dossier required for dispute approval' },
   {
@@ -95,35 +86,35 @@ const BLOCKS: Block[] = [
         </span>
       </strong>,
       <strong key="2">
-        Stamped Carrier Bill of Lading (BOL) or POD:{' '}
+        Carrier-Stamped Bill of Lading (BOL) or Tracking POD:{' '}
         <span className="font-normal text-[#514d46]">
-          For freight consignments, the stamped BOL must include the official Amazon receiving stamp, delivered carton count, trailer seal number, and driver signature.
+          For freight, the official BOL must bear the physical Amazon fulfillment center receiving stamp, delivered pallet/case count, and signature. For parcel shipments, official signed delivery confirmation.
         </span>
       </strong>,
       <strong key="3">
-        Carton-by-Carton Detailed Packing Slip:{' '}
+        Itemized Carton-Level Packing List:{' '}
         <span className="font-normal text-[#514d46]">
-          Exact carton inventory manifesting correlating physical box labels (FBA box ID) to SKU quantities and gross tare weights.
+          Detailed breakdown mapping individual box IDs (FBA box labels) to exact units, weights, and SKU assignments.
         </span>
       </strong>,
       <strong key="4">
-        Ledger Inventory Reconciliation Audit:{' '}
+        Ledger Inventory Event Cross-Reference:{' '}
         <span className="font-normal text-[#514d46]">
-          A clean cross-reference between the FBA Manage Shipments ledger, Inventory Event Detail report, and Daily Inventory History verifying that the missing units were never credited under an alternative transaction code.
+          Proof extracted from the Inventory Event Detail report confirming that missing units were never credited through alternate FC adjustment transaction IDs.
         </span>
       </strong>,
     ],
   },
   {
     t: 'source',
-    label: 'AMAZON POLICY CITATION',
+    label: 'OFFICIAL POLICY CITATION',
     body: (
       <>
         <SourceLink href="https://sellercentral.amazon.com/help/hub/reference/external/GABBX6GZPA8MSZGW">
-          Amazon Seller Central: Inbound Placement Service Fee Schedule & Reimbursement Guidelines
+          Amazon Seller Central: Inbound Placement Service Fee Schedule
         </SourceLink>
         <SourceNote>
-          Inbound placement fees apply to all US FBA shipments. Mett Global conducts 100% human-managed forensic audits with zero bot scraping in strict accordance with Amazon ToS.
+          Inbound discrepancy reconciliation must be submitted within Amazon’s category-specific window (60–90 days post-delivery). Mett Global operates under 100% manual evidence dossier preparation in strict compliance with Amazon Terms of Service.
         </SourceNote>
       </>
     ),
@@ -138,7 +129,7 @@ export default function AmazonInboundPlacementFeesGuide() {
         'Amazon Inbound Placement Fees & Lost Inventory: The 2026 US Brand Guide'
       }
       dek={
-        'How 7-to-8 figure US Amazon brands audit inbound placement fee economics, identify receiving dock shortages, and recover tens of thousands in uncredited inventory before the strict 18-month window expires.'
+        'How 7-to-8 figure US Amazon brands audit inbound placement fee economics, identify receiving dock shortages, and recover uncredited inventory within active policy dispute windows.'
       }
       meta={'METT GLOBAL FIELD GUIDE · AMAZON SUPPLY CHAIN · 5 MIN READ'}
       graphic={
@@ -154,7 +145,7 @@ export default function AmazonInboundPlacementFeesGuide() {
       }
       endHeading={'Are receiving shortages eroding your Amazon operating margin?'}
       endHref={'/appointment'}
-      endLabel={'Book a Free Zero-Risk Inbound Audit with Our Team'}
+      endLabel={'Book a Complimentary, ToS-Compliant Inbound Audit with Our Team'}
     >
       <JsonLd data={articleJsonLd('/insight-amazon-inbound-placement-fees')} />
       <PlacementFeeSimulator />

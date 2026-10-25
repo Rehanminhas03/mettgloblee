@@ -16,7 +16,7 @@ const BLOCKS: Block[] = [
   { t: 'h2', text: 'Where inbound inventory actually disappears' },
   {
     t: 'p',
-    text: 'For brands scaling beyond $1M in annual Amazon FBA sales, the most significant inventory shrinkage rarely happens inside the customer return loop. It happens between the loading dock and the fulfillment center sorting belt.',
+    text: 'For brands scaling beyond $1M in annual Amazon FBA sales, the most significant inventory shrinkage rarely happens inside the customer return loop. It happens between the freight loading dock and the fulfillment center sorting belt.',
   },
   {
     t: 'p',
@@ -86,14 +86,18 @@ const BLOCKS: Block[] = [
       </strong>,
     ],
   },
-  { t: 'h2', text: 'The strict 18-month lookback window' },
+  { t: 'h2', text: 'Amazon’s compressed claim windows: Category-specific dispute deadlines' },
   {
     t: 'p',
-    text: 'Under Amazon’s FBA Inventory Reimbursement Policy, sellers have exactly 18 months from the date of shipment delivery or inventory discrepancy to file a reimbursement claim. Once an inventory transaction passes day 548, Amazon’s system permanently locks the transaction.',
+    text: 'A critical compliance risk for FBA sellers is relying on outdated policy folklore. Under Amazon’s updated FBA Reimbursement Policy, historical 18-month statutory lookback periods have been replaced by compressed, category-specific dispute windows.',
   },
   {
     t: 'p',
-    text: 'For a 7-figure brand doing $3M to $10M annually, an unperformed reconciliation audit represents an estimated $30,000 to $100,000 in unrecoverable capital that permanently transfers to Amazon’s bottom line.',
+    text: 'For inbound shipment receiving discrepancies, sellers must submit claims between 60 to 90 days after shipment delivery (once the shipment transitions to "Closed" status, and no later than 9 months from shipment creation). By contrast, fulfillment center inventory damage or loss must be disputed within 60 days of the adjustment event, and customer return discrepancies between 60 and 120 days of the refund date. Once an operational window expires, Amazon’s financial ledger permanently archives the transaction, permanently extinguishing the claim.',
+  },
+  {
+    t: 'p',
+    text: 'Across multi-SKU catalog audits for high-velocity 7-to-8 figure FBA brands, receiving miscounts and uncredited carton shortages empirically aggregate between 1% and 3% of annual gross inventory value, varying by packaging format, pallet integrity, and shipment splitting frequency. Without continuous monthly reconciliation, this capital is permanently forfeited.',
   },
   { t: 'h2', text: 'A ToS-compliant manual recovery protocol' },
   {
@@ -104,9 +108,9 @@ const BLOCKS: Block[] = [
     t: 'ul',
     items: [
       <strong key="1">
-        Step 1: Historical Ledger Ingestion:{' '}
+        Step 1: Ledger Ingestion & Window Mapping:{' '}
         <span className="font-normal text-[#514d46]">
-          Cross-referencing Inventory Event Detail reports, Manage FBA Shipments data, and Payments reconciliation ledgers for the preceding 18 months via secure, read-only SP-API access.
+          Cross-referencing Inventory Event Detail reports, Manage FBA Shipments data, and Payments reconciliation ledgers across active eligible claim windows via secure, read-only SP-API access.
         </span>
       </strong>,
       <strong key="2">
@@ -138,7 +142,7 @@ const BLOCKS: Block[] = [
           Amazon Seller Central: FBA Inventory Reimbursement Policy & Timeframes
         </SourceLink>
         <SourceNote>
-          Claims must be submitted within 18 months of shipment delivery. Mett Global operates under 100% manual evidence preparation in strict compliance with Amazon ToS.
+          Inbound shipment discrepancy claims must be submitted within Amazon’s category-specific window (60–90 days post-delivery). Mett Global operates under 100% manual evidence dossier preparation in strict compliance with Amazon Terms of Service.
         </SourceNote>
       </>
     ),
@@ -153,7 +157,7 @@ export default function AmazonInboundClaimsGuide() {
         'The Amazon FBA Inbound Shipment Loss Guide: How Brands Recover Lost Inventory & Carrier Shortages'
       }
       dek={
-        'Between the freight loading dock and the fulfillment center sorting belt, 1% to 3% of FBA inventory routinely goes unrecorded. Here is how 7-figure Amazon brands audit historical discrepancies, compile carrier proof, and recover capital before the strict 18-month window closes.'
+        'Between the freight loading dock and the fulfillment center sorting belt, receiving discrepancies routinely occur. Here is how 7-figure Amazon brands audit inbound discrepancies, compile carrier proof, and recover capital within Amazon’s category-specific dispute windows.'
       }
       meta={'METT GLOBAL FIELD GUIDE · AMAZON REIMBURSEMENTS · 4 MIN READ'}
       graphic={
@@ -167,9 +171,9 @@ export default function AmazonInboundClaimsGuide() {
           ]}
         />
       }
-      endHeading={'Need your historical 18-month lookback audited?'}
+      endHeading={'Need your inbound shipment ledgers audited?'}
       endHref={'/appointment'}
-      endLabel={'Book a Free Zero-Risk Audit with Our Houston Team'}
+      endLabel={'Book a Complimentary, ToS-Compliant Inbound Audit with Our Team'}
     >
       <JsonLd data={articleJsonLd('/insight-amazon-fba-inbound-claims')} />
       <InboundDiscrepancySimulator />
