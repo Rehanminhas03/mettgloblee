@@ -1,5 +1,6 @@
 import { ArticleShell } from '@/components/article/ArticleShell';
 import { LandedGraphic } from '@/components/article/graphics';
+import { LandedCostCalculator } from '@/components/article/interactive/LandedCostCalculator';
 import {
   Prose,
   SourceLink,
@@ -178,6 +179,7 @@ export default function LandedCostModelGuide() {
       endLabel="Explore E-Commerce & Supply Chain"
     >
       <JsonLd data={articleJsonLd('/insight-landed-cost-model')} />
+      <LandedCostCalculator />
       <Prose blocks={BLOCKS} />
     </ArticleShell>
   );

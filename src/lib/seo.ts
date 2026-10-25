@@ -226,6 +226,31 @@ export const PAGE_SEO = {
     description:
       'How Instagram, short video, billboards and posters can work as one system, with a clear next step and honest measurement.',
   },
+  '/insight-amazon-inbound-placement-fees': {
+    title: 'Amazon Inbound Placement Fees & Lost Inventory Guide | Mett Global',
+    description:
+      'How US Amazon brands audit inbound placement fee economics, identify receiving dock shortages, and recover uncredited inventory within the 18-month window.',
+  },
+  '/insight-custom-portals-vs-saas': {
+    title: 'Custom Portals vs. SaaS for US Logistics & Service Firms | Mett Global',
+    description:
+      'Why growing US 3PLs and service operators hit the SaaS ceiling, and how custom portal engineering cuts operating costs, eliminates per-seat fees, and scales.',
+  },
+  '/insight-b2b-lead-generation-apollo-stack': {
+    title: 'B2B Lead Generation Without Ad Waste (Apollo Stack) | Mett Global',
+    description:
+      'How US B2B enterprises replace $90 CPC Google Ads with reverse IP visitor identification, multi-threaded Apollo enrichment, and high-deliverability outbound.',
+  },
+  '/insight-amazon-awd-vs-3pl': {
+    title: 'Amazon AWD vs. Private 3PL: Cost & Control Matrix | Mett Global',
+    description:
+      'How US 7-to-8 figure brand owners balance Amazon AWD placement fee waivers against 3PL multi-channel flexibility, inventory sovereignty, and stockout defense.',
+  },
+  '/insight-nextjs-vs-no-code-portals': {
+    title: 'Why Next.js Beats Airtable & Softr for B2B Client Portals | Mett Global',
+    description:
+      'Why scaling US logistics and service companies hit the no-code wall, and how custom Next.js engineering delivers sub-second speed and zero seat licensing.',
+  },
 
   /* ---- Utility pages ---- */
   '/404': {

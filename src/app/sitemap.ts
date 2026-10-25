@@ -121,6 +121,31 @@ const ENTRIES = [
     priority: 0.8,
   },
   {
+    path: '/insight-amazon-inbound-placement-fees',
+    lastModified: '2026-10-25',
+    priority: 0.8,
+  },
+  {
+    path: '/insight-custom-portals-vs-saas',
+    lastModified: '2026-10-25',
+    priority: 0.8,
+  },
+  {
+    path: '/insight-b2b-lead-generation-apollo-stack',
+    lastModified: '2026-10-25',
+    priority: 0.8,
+  },
+  {
+    path: '/insight-amazon-awd-vs-3pl',
+    lastModified: '2026-10-25',
+    priority: 0.8,
+  },
+  {
+    path: '/insight-nextjs-vs-no-code-portals',
+    lastModified: '2026-10-25',
+    priority: 0.8,
+  },
+  {
     path: '/insight-ecommerce-operations',
     lastModified: '2026-09-17',
     priority: 0.7,

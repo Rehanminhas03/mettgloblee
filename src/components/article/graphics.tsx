@@ -34,22 +34,28 @@ export function PolicyGraphic({
 }) {
   return (
     <div
-      className={`${GRAPHIC_BASE} max-b700:grid-cols-1 grid min-h-[320px] grid-cols-3 gap-px overflow-hidden bg-[radial-gradient(circle_at_82%_15%,rgba(223,186,100,.25),transparent_24%),linear-gradient(145deg,#0a0a09,#292316)] !p-px`}
+      className={`${GRAPHIC_BASE} max-b700:grid-cols-1 grid min-h-[280px] grid-cols-3 gap-px overflow-hidden rounded-[26px] border border-[#2b271f] bg-[radial-gradient(circle_at_82%_15%,rgba(223,186,100,.25),transparent_24%),linear-gradient(145deg,#0a0a09,#292316)] !p-px shadow-xl`}
     >
       {facts.map(fact => (
         <div
           key={fact.label}
-          className="flex min-h-[155px] flex-col justify-end bg-[rgba(15,15,13,.92)] p-[30px]"
+          className="flex min-h-[220px] flex-col justify-between bg-[rgba(15,15,13,.95)] p-6 sm:p-8"
         >
-          <small className="text-p-gold2 text-[9px] font-black tracking-[.16em]">
-            {fact.label}
-          </small>
-          <strong className="my-[10px] text-[clamp(30px,4vw,55px)] leading-[.95] tracking-[-.055em]">
-            {fact.value}
-          </strong>
-          <span className="text-[11px] leading-[1.5] text-[#aaa69d]">
-            {fact.note}
-          </span>
+          <div className="h-6 flex items-center">
+            <span className="text-p-gold2 text-[10px] font-black tracking-[.18em] uppercase">
+              {fact.label}
+            </span>
+          </div>
+          <div className="my-auto py-4">
+            <strong className="block text-[clamp(28px,3.5vw,48px)] font-black leading-none tracking-[-.05em] text-white">
+              {fact.value}
+            </strong>
+          </div>
+          <div className="min-h-[42px] flex items-start border-t border-white/10 pt-3">
+            <span className="text-[11px] leading-[1.45] text-[#c4beb1]">
+              {fact.note}
+            </span>
+          </div>
         </div>
       ))}
     </div>

@@ -1,5 +1,6 @@
 import { ArticleShell } from '@/components/article/ArticleShell';
 import { ChipGraphic } from '@/components/article/graphics';
+import { WarehouseShrinkageSimulator } from '@/components/article/interactive/WarehouseShrinkageSimulator';
 import {
   Prose,
   SourceLink,
@@ -145,6 +146,7 @@ export default function LostDamagedInventoryGuide() {
       endLabel={'Book a Free Zero-Risk Warehouse Audit with Our Houston Team'}
     >
       <JsonLd data={articleJsonLd('/insight-amazon-fba-lost-damaged-inventory')} />
+      <WarehouseShrinkageSimulator />
       <Prose blocks={BLOCKS} />
     </ArticleShell>
   );

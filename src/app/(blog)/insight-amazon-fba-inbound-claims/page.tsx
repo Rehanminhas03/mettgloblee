@@ -1,5 +1,6 @@
 import { ArticleShell } from '@/components/article/ArticleShell';
 import { ChipGraphic } from '@/components/article/graphics';
+import { InboundDiscrepancySimulator } from '@/components/article/interactive/InboundDiscrepancySimulator';
 import {
   Prose,
   SourceLink,
@@ -171,6 +172,7 @@ export default function AmazonInboundClaimsGuide() {
       endLabel={'Book a Free Zero-Risk Audit with Our Houston Team'}
     >
       <JsonLd data={articleJsonLd('/insight-amazon-fba-inbound-claims')} />
+      <InboundDiscrepancySimulator />
       <Prose blocks={BLOCKS} />
     </ArticleShell>
   );

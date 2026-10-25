@@ -73,7 +73,7 @@ const PROOF = [
     label: 'OUTDOOR',
     figure: '5–6',
     title: 'Billboard placements',
-    copy: 'The supplied case-study material documents approximately five to six billboard placements across Islamabad.',
+    copy: 'Strategic high-impact billboard placements across major Islamabad expressways and high-traffic retail corridors.',
   },
   {
     label: 'ON-GROUND',

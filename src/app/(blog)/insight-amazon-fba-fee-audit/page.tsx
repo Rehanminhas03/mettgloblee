@@ -1,5 +1,6 @@
 import { ArticleShell } from '@/components/article/ArticleShell';
 import { ChipGraphic } from '@/components/article/graphics';
+import { CubiscanSimulator } from '@/components/article/interactive/CubiscanSimulator';
 import {
   Prose,
   SourceLink,
@@ -152,6 +153,7 @@ export default function AmazonFeeAuditGuide() {
       endLabel={'Book a Free Zero-Risk Fee Audit with Our Houston Team'}
     >
       <JsonLd data={articleJsonLd('/insight-amazon-fba-fee-audit')} />
+      <CubiscanSimulator />
       <Prose blocks={BLOCKS} />
     </ArticleShell>
   );

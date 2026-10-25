@@ -1,5 +1,6 @@
 import { ArticleShell } from '@/components/article/ArticleShell';
 import { ChipGraphic } from '@/components/article/graphics';
+import { BotVsForensicWidget } from '@/components/article/interactive/BotVsForensicWidget';
 import {
   Prose,
   SourceLink,
@@ -152,6 +153,7 @@ export default function ManualVsBotsGuide() {
       endLabel={'Book a Free Zero-Risk Forensic Audit with Our Houston Team'}
     >
       <JsonLd data={articleJsonLd('/insight-manual-amazon-reimbursement-vs-bots')} />
+      <BotVsForensicWidget />
       <Prose blocks={BLOCKS} />
     </ArticleShell>
   );
