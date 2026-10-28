@@ -15,6 +15,7 @@ import {
   CoreWebVitalsGraphic,
   CubiscanCardGraphic,
   CustomPortalsCardGraphic,
+  DealershipLeadEngineCardGraphic,
   DigitalOutdoorCardGraphic,
   EcommerceOpsCardGraphic,
   ErpCardGraphic,
@@ -22,6 +23,7 @@ import {
   FbaFeeShiftCardGraphic,
   FeedDiagnosticGraphic,
   GrowthSystemCardGraphic,
+  HealthcareLocalSeoCardGraphic,
   Ics2CardGraphic,
   InboundClaimsCardGraphic,
   InventoryControlCardGraphic,
@@ -136,6 +138,10 @@ function renderCardTopGraphic(item: InsightItem) {
       return <ApolloStackCardGraphic />;
     case 'lead-generation-system':
       return <LeadGenSystemCardGraphic />;
+    case 'dealership-lead-engine':
+      return <DealershipLeadEngineCardGraphic />;
+    case 'healthcare-clinic-local-seo':
+      return <HealthcareLocalSeoCardGraphic />;
 
     // AI Automation & Workflows
     case 'ai-automation':

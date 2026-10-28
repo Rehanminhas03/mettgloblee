@@ -25,7 +25,7 @@ export function CaseStudyHero({ study }: { study: CaseStudy }) {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/portfolio">Portfolio</Link>
+              <span>Case Studies</span>
             </li>
             <li aria-current="page">{study.title}</li>
           </ol>

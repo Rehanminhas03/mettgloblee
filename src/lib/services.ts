@@ -68,10 +68,11 @@ export const SERVICES: Service[] = [
     ],
     formLabel: 'Digital Marketing & Growth',
     hero: {
-      kicker: 'SERVICE / DIGITAL MARKETING & GROWTH · ISLAMABAD',
+      kicker:
+        'SERVICE / DIGITAL MARKETING & GROWTH · ISLAMABAD & U.S. MARKETS',
       title: 'Turn attention',
       accent: 'into growth.',
-      copy: 'Digital marketing agency in Islamabad: strategy, creative, paid media, social, local SEO, and analytics managed as one growth system, measured by the leads and showroom sales it produces.',
+      copy: 'Full-funnel digital marketing agency in Islamabad serving enterprise brands in Pakistan and growing businesses in the United States: strategy, creative, Meta & Google paid media, technical & local SEO, and automated CRM lead routing managed as one system—measured by leads, bookings, and showroom or online sales.',
     },
     sideHeading: 'Strategy, media and measurement under one plan.',
     details: [
@@ -375,7 +376,7 @@ export const SERVICES: Service[] = [
     cardPoints: [
       'Marketplace Management',
       'Sourcing & Procurement',
-      'Claims & Recovery',
+      '18-Month Claims & Recovery Audit',
       'Warehouse, 3PL & Logistics',
     ],
     summary:
@@ -385,7 +386,7 @@ export const SERVICES: Service[] = [
       'Inventory & Order Management',
       'Sourcing & Procurement',
       'Supply Management',
-      'Claims & Reimbursement Recovery',
+      '18-Month Claims & Reimbursement Audit (Contingency)',
       'Warehouse, 3PL & Logistics',
       'Operations & SOPs',
       'Reporting & Performance Analytics',
@@ -430,13 +431,13 @@ export const SERVICES: Service[] = [
         ],
       },
       {
-        heading: 'Claims & reimbursement',
-        copy: 'Money leaks through lost and damaged inventory, unreimbursed returns and courier overbilling. We build evidence-backed cases, file them and follow each one through to payment.',
+        heading: '18-Month Claims & reimbursement audit',
+        copy: 'Money leaks through lost and damaged inventory, inbound shortages and carrier overbilling. We provide a zero-risk 18-month historical lookback audit on a 100% contingency model (no recovery = no fee), building evidence-backed cases and following each one through to payment.',
         items: [
-          'Marketplace Claims',
-          'Reimbursement Recovery',
-          'Account Reconciliation',
-          'Revenue Recovery',
+          '18-Month Historical Claims Audit',
+          'Amazon FBA & Courier Disputes',
+          'Contingency Recovery (No Win No Fee)',
+          'Denied-Claim Appeals & Recovery',
         ],
       },
       {

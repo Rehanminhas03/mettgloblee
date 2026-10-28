@@ -1,6 +1,7 @@
 import { CASE_NAMES } from './caseNames';
 import type { Metadata } from 'next';
 import { SITE_URL } from './site';
+import { SERVICE_GUIDANCE } from './service-guidance';
 
 /**
  * Final production title/description for every route.
@@ -14,39 +15,44 @@ export type PageSeo = { title: string; description: string };
 
 export const PAGE_SEO = {
   '/': {
-    title: 'Mett Global | Digital Marketing & Software, Islamabad',
+    title:
+      'Mett Global | Digital Marketing, Software, AI & E-Commerce (Islamabad & USA)',
     description:
-      'Digital marketing, web and software development, AI automation and e-commerce operations from Islamabad, Pakistan. Explore Mett Global services and client work.',
+      'Headquartered in Islamabad with U.S. business representation, Mett Global builds growth systems, custom software, AI automation & e-commerce ops for Pakistan & U.S. brands.',
   },
   '/services': {
-    title: 'Digital Marketing, Web, AI & E-Commerce Services | Mett Global',
+    title:
+      'Digital Marketing, Custom Software, AI & E-Commerce Services (USA & PK) | Mett Global',
     description:
-      'Explore Mett Global services: Digital Marketing & Growth, Web & Software Development, AI Automation & Content, and E-Commerce & Supply Chain.',
+      'Four connected capabilities delivered from our Islamabad HQ for U.S. and Pakistani businesses: Digital Marketing, Web & ERP Software, AI Automation, and Supply Chain.',
   },
   '/about': {
-    title: 'About Mett Global | Founder-Led Growth & Operations',
+    title:
+      'About Mett Global | Islamabad Headquarters & U.S. Business Representation',
     description:
-      'Mett Global was founded in 2025 and is based in Islamabad, Pakistan: a founder-led team connecting growth, eCommerce, technology and operations.',
+      'Founded in 2025 and headquartered in Islamabad, Pakistan with U.S. business development in Houston, TX. Led by Hammad Ayub, Muhammad Ahmad Aamir, and Usman Rafiq.',
   },
   '/blog': {
-    title: 'Mett Global Insights | eCommerce, AI & Supply Chain',
+    title:
+      'Mett Global Insights | U.S. Amazon FBA, Custom ERP, AI & Growth Guides',
     description:
-      'Practical guides and current briefs on eCommerce operations, marketing, AI automation, websites, sales and supply chain.',
+      '28 verified operator guides for U.S. 7–8 figure Amazon brands, 3PL operators, and enterprise teams on FBA fee recovery, custom ERPs, AI, and demand gen.',
   },
   '/contact': {
-    title: 'Contact Mett Global | Start a Business Project',
+    title: 'Contact Mett Global | Islamabad Headquarters & U.S. Business Desk',
     description:
-      'Tell Mett Global what is blocking growth, eCommerce, technology, marketing or operations and start a focused project discussion.',
+      'Start a project with Mett Global. Contact our Islamabad Headquarters (+92 313 426 2282) or our U.S. Business Development Director Usman Rafiq (+1 832-858-0716).',
   },
   '/appointment': {
     title: 'Book a Strategy Meeting | Mett Global',
     description:
-      'Choose a preferred date and time to discuss your business constraint with Mett Global online or in person.',
+      'Schedule an online strategy call in your local time zone, or request a focused project discussion with Mett Global.',
   },
   '/portfolio': {
-    title: 'Mett Global Portfolio | Local & International Work',
+    title:
+      'Mett Global Portfolio | Enterprise Pakistan & U.S. Case Studies',
     description:
-      'Selected Mett Global clients and projects across growth, eCommerce, web, AI automation and operations, in Pakistan and internationally.',
+      'Explore 17 verified case studies: Jetour & Hyundai growth systems and dealership ERPs in Islamabad, plus U.S. warehouse ops, FBA claims recovery, and SEO in TX & IL.',
   },
   '/case-studies': {
     title: 'Mett Global Case Studies | Growth & Operations',
@@ -71,24 +77,28 @@ export const PAGE_SEO = {
 
   /* ---- Service pages ---- */
   '/digital-marketing-growth': {
-    title: 'Digital Marketing Agency & SEO in Islamabad | Mett Global',
+    title:
+      'Digital Marketing, Meta Ads & SEO Agency (Islamabad & USA) | Mett Global',
     description:
-      'Premier digital marketing agency in Islamabad, Pakistan. Performance marketing, Google Ads, Meta Ads, social media, local SEO, creative and analytics built for measurable growth.',
+      'Proven across 1,000+ lead launches for Hyundai & Jetour in Islamabad and SEO funnels in Texas & Illinois. Full-funnel ads, SEO, and CRM automation.',
   },
   '/web-software-development': {
-    title: 'Web & Custom Software Development Company, Islamabad | Mett Global',
+    title:
+      'Custom Web Apps, Dealership ERPs & B2B Portals (USA & Islamabad) | Mett Global',
     description:
-      'Web & software development agency in Islamabad: high-speed websites, online stores, custom CRMs, dealership ERPs, and secure web applications built around your business.',
+      'We build high-converting websites, custom Next.js/Laravel B2B portals, multi-showroom dealership ERPs, and mobile apps for U.S. and Pakistani enterprises.',
   },
   '/ai-automation-content': {
-    title: 'AI Automation & Content Workflows Agency, Pakistan | Mett Global',
+    title:
+      'AI Workflow Automation, Chatbots & CRM Integration (USA & Islamabad) | Mett Global',
     description:
-      'AI Automation & Content from Mett Global: workflow automation, AI assistants, document and data processing, lead and CRM automation, and on-brand AI content.',
+      'Remove repetitive manual work with custom AI workflow automation, intelligent chatbots, BOL/invoice OCR extraction, and automated CRM lead routing.',
   },
   '/ecommerce-supply-chain': {
-    title: 'Amazon FBA & E-Commerce Supply Chain Services (USA, UK, EU, Canada) | Mett Global',
+    title:
+      'Amazon FBA Claims Recovery, 3PL & Supply Chain Services (USA, UK, EU) | Mett Global',
     description:
-      'End-to-end multi-channel e-commerce supply chain management: Amazon FBA reimbursement, courier & 3PL claims recovery, marketplace operations across USA, UK, EU, and Canada.',
+      'End-to-end e-commerce operations for U.S. & global brands: forensic Amazon FBA & Walmart WFS claims recovery (£50k+/$65k+ recovered), 3PL audits & remote U.S. warehouse ops.',
   },
 
   /* ---- Case studies ---- */
@@ -251,6 +261,16 @@ export const PAGE_SEO = {
     description:
       'Why scaling US logistics and service companies hit the no-code wall, and how custom Next.js engineering delivers sub-second speed and zero seat licensing.',
   },
+  '/insight-dealership-lead-engine': {
+    title: 'Automotive Dealership Lead Engine: Meta Ads to Showroom Visits | Mett Global',
+    description:
+      'How automotive dealerships convert Meta & Google ad spend into verified showroom visits using sub-5-minute speed-to-lead, automated CRM routing, and attribution.',
+  },
+  '/insight-healthcare-clinic-local-seo': {
+    title: 'Healthcare & Dental Clinic Local SEO: Dominating Patient Search | Mett Global',
+    description:
+      'How private medical practices, dental clinics, and psychiatric centers capture high-intent patient queries and drive booked appointments through local SEO & HIPAA-compliant funnels.',
+  },
 
   /* ---- Utility pages ---- */
   '/404': {
@@ -341,19 +361,75 @@ export const SERVICE_PATHS = [
 
 export function serviceJsonLd(path: (typeof SERVICE_PATHS)[number]) {
   const { title, description } = PAGE_SEO[path];
+  const url = `${SITE_URL}${path}`;
+  const name = title.split('|')[0].trim();
+  const guidance = SERVICE_GUIDANCE[path];
+
+  const graph: Array<Record<string, unknown>> = [
+    {
+      '@type': 'Service',
+      '@id': `${url}#service`,
+      name,
+      description,
+      url,
+      provider: {
+        '@type': ['Organization', 'ProfessionalService'],
+        '@id': `${SITE_URL}/#organization`,
+        name: 'Mett Global',
+        url: `${SITE_URL}/`,
+      },
+      areaServed: [
+        { '@type': 'Country', name: 'United States' },
+        { '@type': 'Country', name: 'Pakistan' },
+        { '@type': 'Country', name: 'United Kingdom' },
+        { '@type': 'Country', name: 'Canada' },
+        { '@type': 'Country', name: 'European Union' },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${url}#breadcrumb`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: `${SITE_URL}/`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Services',
+          item: `${SITE_URL}/services`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name,
+          item: url,
+        },
+      ],
+    },
+  ];
+
+  if (guidance?.questions && guidance.questions.length > 0) {
+    graph.push({
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: guidance.questions.map(q => ({
+        '@type': 'Question',
+        name: q.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: q.answer,
+        },
+      })),
+    });
+  }
+
   return {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: title.split('|')[0].trim(),
-    provider: {
-      '@type': 'Organization',
-      '@id': `${SITE_URL}/#organization`,
-      name: 'Mett Global',
-      url: `${SITE_URL}/`,
-    },
-    areaServed: 'Worldwide',
-    url: `${SITE_URL}${path}`,
-    description,
+    '@graph': graph,
   };
 }
 

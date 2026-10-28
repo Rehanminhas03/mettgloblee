@@ -53,6 +53,14 @@ export type CaseStudy = {
   resultHeading: string;
   result: string;
   closing: string;
+  auditOffer?: {
+    eyebrow?: string;
+    heading: string;
+    body: string;
+    ctaLabel: string;
+    ctaHref: string;
+    badge?: string;
+  };
   tags: string[];
   handled: string[];
   faqs: { question: string; answer: string }[];

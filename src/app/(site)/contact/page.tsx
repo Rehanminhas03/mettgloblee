@@ -6,6 +6,7 @@ import { Btn, Section } from '@/components/page/ui';
 import { JsonLd } from '@/components/JsonLd';
 import { breadcrumbJsonLd, pageMetadata, pageJsonLd } from '@/lib/seo';
 import { ADDRESS_LINE, MAPS_URL } from '@/lib/site';
+import { TimezoneDeskBadge } from '@/components/site/TimezoneDeskBadge';
 
 export const metadata = pageMetadata('/contact');
 
@@ -60,9 +61,12 @@ export default function ContactPage() {
           </article>
 
           <article className={CARD}>
-            <small className="text-p-gold font-black tracking-[.15em]">
-              U.S. BUSINESS DEVELOPMENT
-            </small>
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <small className="text-p-gold font-black tracking-[.15em]">
+                U.S. BUSINESS DEVELOPMENT
+              </small>
+              <TimezoneDeskBadge label="Recommended for U.S. Time Zones" />
+            </div>
             <h2 className="my-3 text-[26px]">Usman Rafiq</h2>
             <a
               href="https://wa.me/18328580716"

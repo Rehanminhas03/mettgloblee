@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { SERVICE_GUIDANCE } from '@/lib/service-guidance';
 import type { ServicePath } from '@/lib/services';
 
@@ -21,17 +21,54 @@ export function ServiceGuidance({ path }: { path: ServicePath }) {
             <Link
               key={link.href}
               href={link.href}
-              className="group border-p-line hover:border-p-gold focus-visible:outline-p-gold rounded-3xl border bg-white p-7 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4"
+              className="group border-p-line hover:border-p-gold focus-visible:outline-p-gold rounded-3xl border bg-white p-7 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 flex flex-col justify-between"
             >
-              <h3 className="m-0 text-2xl leading-[1.2] tracking-[-.03em]">
-                {link.title}
-              </h3>
-              <p className="text-p-muted mt-4 mb-0 text-base leading-[1.7]">
-                {link.copy}
-              </p>
+              <div>
+                {link.badge ? (
+                  <span className="mb-3 block text-[10px] font-black tracking-[.12em] text-p-gold uppercase">
+                    {link.badge}
+                  </span>
+                ) : null}
+                <h3 className="m-0 text-2xl leading-[1.2] tracking-[-.03em]">
+                  {link.title}
+                </h3>
+                <p className="text-p-muted mt-4 mb-0 text-base leading-[1.7]">
+                  {link.copy}
+                </p>
+              </div>
             </Link>
           ))}
         </div>
+        {guidance.secondarySection ? (
+          <div className="mt-12">
+            <h3 className="mb-6 text-[12px] font-black tracking-[.18em] text-p-gold uppercase">
+              {guidance.secondarySection.heading}
+            </h3>
+            <div className="max-b900:grid-cols-1 grid grid-cols-3 gap-5">
+              {guidance.secondarySection.links.map(link => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="group border-p-line hover:border-p-gold focus-visible:outline-p-gold rounded-3xl border bg-white p-7 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 flex flex-col justify-between"
+                >
+                  <div>
+                    {link.badge ? (
+                      <span className="mb-3 block text-[10px] font-black tracking-[.12em] text-p-gold uppercase">
+                        {link.badge}
+                      </span>
+                    ) : null}
+                    <h4 className="m-0 text-2xl leading-[1.2] tracking-[-.03em]">
+                      {link.title}
+                    </h4>
+                    <p className="text-p-muted mt-4 mb-0 text-base leading-[1.7]">
+                      {link.copy}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ) : null}
       </section>
       <section
         className="max-b620:px-6 px-[8vw] py-16"

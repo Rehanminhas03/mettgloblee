@@ -28,8 +28,9 @@ const internalStudies: InternalStudy[] = [
     summary:
       'Courier and marketplace claims handled across 20+ courier and 3PL partners, with more than £50,000 recovered in one year.',
     hero: {
-      display: '>£50,000',
-      accessible: 'More than fifty thousand pounds recovered in one year',
+      display: '>£50,000 ($65,000+ USD)',
+      accessible:
+        'More than fifty thousand pounds, over sixty-five thousand US dollars recovered in one year',
       label: 'Recovered in one year',
       context:
         'Courier, 3PL and marketplace claims, including previously denied cases.',
@@ -52,6 +53,14 @@ const internalStudies: InternalStudy[] = [
     result:
       'The claims work recovered more than £50,000 in one year, including recoveries on previously denied cases. The work depended on understanding each provider’s process, meeting its deadlines and continuing the follow-up until a decision was reached.',
     closing: 'A denied claim still deserves a documented review.',
+    auditOffer: {
+      eyebrow: 'Zero-Risk Historical Recovery',
+      heading: 'Request a Free 18-Month Claims & Reimbursement Audit',
+      body: 'Amazon FBA, Walmart WFS, and major carriers strictly limit how far back you can dispute missing inventory. We conduct a thorough, human-verified historical audit across your last 18 months of shipment manifests, warehouse damage logs, and denied cases on a 100% contingency basis. If we recover nothing, it costs you $0.',
+      ctaLabel: 'Claim Your 18-Month Audit',
+      ctaHref: '/appointment',
+      badge: 'Contingency Only · No Win, No Fee',
+    },
     tags: [
       'Courier claims',
       'FBA reimbursement',
@@ -104,6 +113,11 @@ const internalStudies: InternalStudy[] = [
       'Outstanding Wish claims',
     ],
     faqs: [
+      {
+        question: 'What is the 18-Month Historical Claims Audit?',
+        answer:
+          'Our 18-month historical audit reconciles your past year and a half of logistics tracking, carrier shortage reports, Amazon warehouse damages, and fee misclassifications. It operates strictly on a contingency basis: no upfront retainers or hidden costs. We only get paid when cash or inventory credits are successfully returned to your account.',
+      },
       {
         question: 'What did the claims recovery work cover?',
         answer:
@@ -205,6 +219,14 @@ const internalStudies: InternalStudy[] = [
       "Inventory accuracy and order fulfilment accuracy were each above 95%. Returns were kept low. The work brought inbound receiving, stock records, warehouse organisation and fulfilment under coordinated remote oversight with on-site management. The US warehouse has been managed remotely since 2023, as part of the brand's network across the US, UK, Canada and Germany.",
     closing:
       'Clear stock records and clear responsibilities support the warehouse behind every order.',
+    auditOffer: {
+      eyebrow: 'Operations & 3PL Review',
+      heading: 'Request a 3PL & Warehouse Inventory Accuracy Audit',
+      body: 'Identify receiving discrepancies, warehouse shrinkage, and stock record errors before they trigger costly stockouts or customer refunds. We evaluate your current WMS, SOPs, and inventory controls to recommend immediate accuracy improvements.',
+      ctaLabel: 'Book a Warehouse Audit',
+      ctaHref: '/appointment',
+      badge: 'Operator Diagnostic',
+    },
     tags: [
       'Inventory reconciliation',
       'WMS',
@@ -514,6 +536,14 @@ const internalStudies: InternalStudy[] = [
     result:
       'The work covered eight Amazon marketplaces across six sales channels, with practical execution across inventory activation, listing support, software queries and reporting. If your platform is not listed, we adapt fast. New marketplaces are new rulebooks, and we know how to read them.',
     closing: 'Every channel needs reliable work behind the listing.',
+    auditOffer: {
+      eyebrow: 'Marketplace Operations Review',
+      heading: 'Request a Multi-Marketplace Catalog & Margin Audit',
+      body: 'Identify inventory synchronization leaks, buy-box suppression, and fee discrepancies across Amazon (US, UK, CA, EU), Walmart, and Shopify. We audit your multi-channel stock feeds and catalog health to protect your bottom line.',
+      ctaLabel: 'Request Marketplace Audit',
+      ctaHref: '/appointment',
+      badge: 'Channel Diagnostic',
+    },
     tags: [
       'Multichannel inventory',
       'Linnworks',
@@ -748,7 +778,7 @@ internalStudies.forEach((study, index) => {
   }
   // Five of the six are confidential client work; the Etsy project is in-house.
   if (
-    study.faqs.length !== 2 ||
+    study.faqs.length < 2 ||
     !study.handled.length ||
     (index < 5 && !study.confidentialityNote)
   ) {

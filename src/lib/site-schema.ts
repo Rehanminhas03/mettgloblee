@@ -1,4 +1,3 @@
-import { PHONE } from '@/lib/navigation';
 import { SITE_URL, SOCIAL_PROFILES, MAPS_URL } from './site';
 import { LEADERSHIP } from './leadership';
 
@@ -14,34 +13,38 @@ export const WEBSITE_JSON_LD = {
 
 export const ORGANIZATION_JSON_LD = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': ['Organization', 'ProfessionalService'],
   '@id': `${SITE_URL}/#organization`,
   name: 'Mett Global',
   alternateName: 'Mett Global',
   url: `${SITE_URL}/`,
   logo: `${SITE_URL}/logo-512.png`,
   description:
-    'Mett Global was founded in 2025 and is based in Islamabad, Pakistan. It builds, grows and automates businesses through digital marketing and growth, web and software development, AI automation and content, and e-commerce and supply chain.',
+    'Headquartered in Islamabad with U.S. business representation, Mett Global builds growth systems, custom software, AI automation & e-commerce ops for Pakistan & U.S. brands.',
   foundingDate: '2025',
   email: 'contact@mettglobal.com',
-  telephone: PHONE.href.slice(4),
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'customer service',
-    email: 'contact@mettglobal.com',
-    telephone: PHONE.href.slice(4),
-    availableLanguage: ['English', 'Urdu'],
-  },
-  slogan: 'The Art of Digital Excellence',
-  areaServed: [
-    { '@type': 'Country', name: 'United States' },
-    { '@type': 'Country', name: 'United Kingdom' },
-    { '@type': 'Country', name: 'Canada' },
-    { '@type': 'Country', name: 'European Union' },
-    { '@type': 'Country', name: 'United Arab Emirates' },
-    { '@type': 'Country', name: 'Pakistan' },
-    { '@type': 'Place', name: 'Worldwide' },
+  telephone: '+92-313-426-2282',
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      email: 'contact@mettglobal.com',
+      telephone: '+92-313-426-2282',
+      areaServed: ['PK', 'Global'],
+      availableLanguage: ['English', 'Urdu'],
+    },
+    {
+      '@type': 'ContactPoint',
+      contactType: 'sales',
+      name: 'Usman Rafiq (Director, U.S. Business Development)',
+      email: 'usman@mettglobal.com',
+      telephone: '+1-832-858-0716',
+      areaServed: 'US',
+      availableLanguage: ['English', 'Urdu'],
+    },
   ],
+  slogan: 'The Art of Digital Excellence',
+  areaServed: ['US', 'PK', 'GB', 'CA', 'EU'],
   knowsAbout: [
     'Digital marketing agency Islamabad',
     'Amazon FBA reimbursement service',

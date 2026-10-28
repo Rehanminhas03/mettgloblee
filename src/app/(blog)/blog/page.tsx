@@ -278,6 +278,40 @@ const ALL_INSIGHTS: InsightItem[] = [
     href: '/insight-lead-generation-system',
     targetAudience: 'Operations Leads & Sales Leadership',
   },
+  {
+    id: 'dealership-lead-engine',
+    type: 'guide',
+    category: 'growth',
+    categoryLabel: 'AUTOMOTIVE GROWTH & CRM · 2026 GUIDE',
+    art: 'growth',
+    readTime: '6 MIN READ',
+    title: 'Automotive Dealership Lead Engine: From Meta & Google Ads to Verified Showroom Footfall',
+    copy: 'How automotive dealerships and multi-rooftop groups connect ad spend to automated CRM webhook ingestion, sub-5-minute speed-to-lead, and verified showroom visits.',
+    href: '/insight-dealership-lead-engine',
+    targetAudience: 'Automotive GMs, Dealership Marketing Directors & Sales Heads',
+    keyTakeaways: [
+      'Why responding within 5 minutes increases vehicle lead connection rates by 21x compared to waiting 30 minutes.',
+      'Automated CRM webhook routing, instant WhatsApp/SMS buyer confirmations, and sales rep round-robin dispatch.',
+      'Showroom walk-in attribution: Closing the loop between digital clicks and physical test-drive sign-ins.',
+    ],
+  },
+  {
+    id: 'healthcare-clinic-local-seo',
+    type: 'guide',
+    category: 'growth',
+    categoryLabel: 'HEALTHCARE & LOCAL SEO · 2026 GUIDE',
+    art: 'growth',
+    readTime: '6 MIN READ',
+    title: 'Healthcare & Dental Clinic Local SEO: How Private Practices Capture High-Intent Patient Demand',
+    copy: 'The local search architecture for private medical, dental, and psychiatric practices: Google Business Profile 3-mile clusters, condition-specific geo-landing pages, and HIPAA-compliant intake funnels.',
+    href: '/insight-healthcare-clinic-local-seo',
+    targetAudience: 'Clinic Owners, Medical Directors & Dental Practice Managers',
+    keyTakeaways: [
+      'The 3-mile Google Business Profile pack engine: Category clusters, symptom-keyword review velocity, and citation alignment.',
+      'Condition-specific geo-landing pages with medical schema vs. high-bounce generic homepages.',
+      'HIPAA-compliant analytics: Server-side tracking, call attribution without PHI capture, and ethical review governance.',
+    ],
+  },
 
   /* ------------------------------------------------------------- */
   /* 4. AI AUTOMATION & CONTENT                                    */

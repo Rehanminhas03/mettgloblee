@@ -36,6 +36,11 @@ export function SubmissionDialog({
         : null;
     dialog.current.showModal();
   }, [state, requestId]);
+
+  if (!['accepted', 'rejected', 'offline', 'unconfirmed'].includes(state)) {
+    return null;
+  }
+
   const title = accepted
     ? meeting
       ? 'Meeting request submitted successfully'

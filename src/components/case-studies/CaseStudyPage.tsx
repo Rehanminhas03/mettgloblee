@@ -26,10 +26,6 @@ export function CaseStudyPage({ study }: { study: CaseStudy }) {
         <CaseStudyHero study={study} />
 
         <article className={styles.story} aria-label={study.title}>
-          <Link className={styles.backLink} href="/portfolio#international">
-            Back to international work
-          </Link>
-
           {beats.map((beat, index) => (
             <Fragment key={beat.label}>
               <section className={styles.beat} key={beat.label}>
@@ -83,6 +79,44 @@ export function CaseStudyPage({ study }: { study: CaseStudy }) {
               </details>
             ))}
           </section>
+
+          {study.auditOffer ? (
+            <section
+              className="my-10 rounded-3xl border border-[rgba(224,188,104,0.35)] bg-gradient-to-br from-[#1c1a16] to-[#0f0e0c] p-8 text-white shadow-xl relative overflow-hidden"
+              aria-labelledby="audit-offer-heading"
+            >
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
+                <span className="text-[10px] font-black tracking-[.2em] text-p-gold uppercase">
+                  {study.auditOffer.eyebrow || 'Zero-Risk Diagnostic'}
+                </span>
+                {study.auditOffer.badge ? (
+                  <span className="rounded-full bg-emerald-950/80 border border-emerald-500/40 px-3 py-0.5 text-[10px] font-bold text-emerald-400 uppercase tracking-wider">
+                    ✓ {study.auditOffer.badge}
+                  </span>
+                ) : null}
+              </div>
+              <h2
+                id="audit-offer-heading"
+                className="m-0 text-2xl font-bold tracking-tight text-white sm:text-3xl"
+              >
+                {study.auditOffer.heading}
+              </h2>
+              <p className="mt-4 mb-6 text-sm leading-relaxed text-[#c5beb0] sm:text-base max-w-[680px]">
+                {study.auditOffer.body}
+              </p>
+              <div className="flex flex-wrap items-center gap-4">
+                <Link
+                  href={study.auditOffer.ctaHref}
+                  className="inline-flex items-center gap-2 rounded-full bg-p-gold hover:bg-[#e8cb7d] px-6 py-3.5 text-xs font-black text-black uppercase tracking-wider transition-transform hover:scale-[1.02]"
+                >
+                  {study.auditOffer.ctaLabel} →
+                </Link>
+                <span className="text-xs text-[#8e887d]">
+                  No obligation · 100% Confidential
+                </span>
+              </div>
+            </section>
+          ) : null}
 
           <section className={styles.closing} aria-label="Discuss this work">
             <p className={styles.closingLine}>{study.closing}</p>

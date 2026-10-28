@@ -94,6 +94,94 @@ export function ArticleShell({
           {children}
         </article>
 
+        {/* Connected Service Practice Areas */}
+        <section
+          aria-labelledby="related-services-heading"
+          className="mx-auto mt-16 max-w-[760px] rounded-3xl border border-p-line bg-[#fbf9f4] p-8"
+        >
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <span className="text-[10px] font-black tracking-[.18em] text-p-gold uppercase">
+                Mett Global Practice Areas
+              </span>
+              <h2
+                id="related-services-heading"
+                className="mt-1 text-xl font-bold tracking-tight text-[#11110f]"
+              >
+                Connected Capabilities for U.S. & Enterprise Brands
+              </h2>
+            </div>
+            <Link
+              href="/services"
+              className="text-xs font-bold text-p-gold hover:underline"
+            >
+              All Services →
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <Link
+              href="/ecommerce-supply-chain"
+              className="group rounded-2xl border border-p-line bg-white p-5 transition-all hover:border-p-gold hover:shadow-sm"
+            >
+              <span className="text-[10px] font-bold tracking-wider text-p-gold uppercase">
+                Operations & Claims
+              </span>
+              <h3 className="mt-1 text-base font-bold text-[#11110f] group-hover:text-p-gold transition-colors">
+                Amazon FBA & Supply Chain
+              </h3>
+              <p className="mt-1.5 mb-0 text-xs leading-relaxed text-p-muted">
+                Forensic FBA & courier claims recovery, 3PL audits, and remote warehouse operations.
+              </p>
+            </Link>
+
+            <Link
+              href="/digital-marketing-growth"
+              className="group rounded-2xl border border-p-line bg-white p-5 transition-all hover:border-p-gold hover:shadow-sm"
+            >
+              <span className="text-[10px] font-bold tracking-wider text-p-gold uppercase">
+                Acquisition & SEO
+              </span>
+              <h3 className="mt-1 text-base font-bold text-[#11110f] group-hover:text-p-gold transition-colors">
+                Digital Marketing & Growth
+              </h3>
+              <p className="mt-1.5 mb-0 text-xs leading-relaxed text-p-muted">
+                Meta/Google ads, technical & local SEO funnels, and automated CRM lead routing.
+              </p>
+            </Link>
+
+            <Link
+              href="/ai-automation-content"
+              className="group rounded-2xl border border-p-line bg-white p-5 transition-all hover:border-p-gold hover:shadow-sm"
+            >
+              <span className="text-[10px] font-bold tracking-wider text-p-gold uppercase">
+                Efficiency & Workflows
+              </span>
+              <h3 className="mt-1 text-base font-bold text-[#11110f] group-hover:text-p-gold transition-colors">
+                AI Automation & Content
+              </h3>
+              <p className="mt-1.5 mb-0 text-xs leading-relaxed text-p-muted">
+                Custom workflow automation, intelligent chatbots, and document/invoice data extraction.
+              </p>
+            </Link>
+
+            <Link
+              href="/web-software-development"
+              className="group rounded-2xl border border-p-line bg-white p-5 transition-all hover:border-p-gold hover:shadow-sm"
+            >
+              <span className="text-[10px] font-bold tracking-wider text-p-gold uppercase">
+                Platforms & ERPs
+              </span>
+              <h3 className="mt-1 text-base font-bold text-[#11110f] group-hover:text-p-gold transition-colors">
+                Web & Software Development
+              </h3>
+              <p className="mt-1.5 mb-0 text-xs leading-relaxed text-p-muted">
+                High-converting websites, custom B2B portals, dealership ERPs, and mobile applications.
+              </p>
+            </Link>
+          </div>
+        </section>
+
         {/* CTA End Section */}
         <section className="max-b650:flex-col max-b650:items-start mx-auto mt-[90px] flex max-w-[760px] items-center justify-between gap-5 rounded-3xl bg-[#111] p-[35px] text-white shadow-xl border border-[#2b271f]">
           <div>

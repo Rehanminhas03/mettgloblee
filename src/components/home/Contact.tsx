@@ -6,6 +6,7 @@ import { AjaxForm } from '@/components/page/AjaxForm';
 import { ContactInput } from '@/components/page/ContactInput';
 import { PHONE } from '@/lib/navigation';
 import { ADDRESS_LINE, MAPS_URL } from '@/lib/site';
+import { TimezoneDeskBadge } from '@/components/site/TimezoneDeskBadge';
 
 const SERVICE_OPTIONS = [
   ...SERVICES.map(service => service.formLabel),
@@ -105,9 +106,12 @@ export function Contact() {
 
           {/* .us-contact */}
           <div className="border-gold2/50 mt-8 border-l-2 pl-5 text-[14px] leading-[1.7]">
-            <p className="m-0 text-[10px] font-semibold tracking-[.13em] text-[#d5c8aa] uppercase">
-              U.S. business development
-            </p>
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <p className="m-0 text-[10px] font-semibold tracking-[.13em] text-[#d5c8aa] uppercase">
+                U.S. business development
+              </p>
+              <TimezoneDeskBadge label="Direct U.S. Desk (CST/EST)" />
+            </div>
             <p className="mt-2 mb-0 text-[17px] font-semibold text-white">
               Usman Rafiq
             </p>
