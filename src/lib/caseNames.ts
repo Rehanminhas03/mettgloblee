@@ -23,7 +23,7 @@ export const CASE_NAMES: Record<string, CaseName> = {
   'claims-recovery': {
     name: 'The £50,000 Recovery',
     subtitle:
-      'Amazon FBA reimbursement & multi-channel courier claims across USA, UK, EU & Canada (>£50,000+ recovered)',
+      'Amazon FBA reimbursement & multi-channel courier claims across USA, UK, EU & Canada (>£50,000 / $65,000+ USD recovered)',
     metaTitle:
       'The £50,000+ Recovery: Amazon FBA Reimbursement & Logistics Claims (USA, UK, EU, Canada) | Mett Global',
   },

@@ -55,7 +55,7 @@ export function CaseHero({
           tone === 'dark' ? 'text-[#9f9a90]' : light ? 'text-p-muted' : ''
         }`}
       >
-        <Link href="/portfolio">Portfolio</Link>
+        <span>Case Studies</span>
         <span>/</span>
         <b className="text-p-gold">{crumb}</b>
       </div>

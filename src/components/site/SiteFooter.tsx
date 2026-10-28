@@ -256,6 +256,22 @@ export function SiteFooter() {
           >
             {PHONE.label}
           </a>
+          <span className="text-muted block text-xs font-normal mt-1">
+            U.S. Business Development:{' '}
+            <a
+              href="tel:+18328580716"
+              className="text-gold font-semibold hover:underline"
+            >
+              +1 (832) 858-0716
+            </a>{' '}
+            ·{' '}
+            <a
+              href="mailto:usman@mettglobal.com"
+              className="text-gold font-semibold hover:underline"
+            >
+              usman@mettglobal.com
+            </a>
+          </span>
         </p>
       </div>
 
@@ -341,7 +357,7 @@ export function SiteFooter() {
           <CookieSettingsButton className="hover:text-ink cursor-pointer border-0 bg-transparent p-0 tracking-[inherit] text-inherit uppercase transition-colors" />
           <MotionSettingsButton className="hover:text-ink cursor-pointer border-0 bg-transparent p-0 tracking-[inherit] text-inherit uppercase transition-colors" />
         </nav>
-        <span>ISLAMABAD · PAKISTAN · GLOBAL DELIVERY</span>
+        <span>ISLAMABAD · PAKISTAN · UNITED STATES · GLOBAL DELIVERY</span>
       </div>
     </footer>
   );

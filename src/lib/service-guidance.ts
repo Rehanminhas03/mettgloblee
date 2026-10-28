@@ -1,8 +1,19 @@
-﻿import type { ServicePath } from './services';
+import type { ServicePath } from './services';
 
-type Guidance = {
+export type GuidanceLink = {
+  href: string;
+  title: string;
+  copy: string;
+  badge?: string;
+};
+
+export type Guidance = {
   questions: { question: string; answer: string }[];
-  links: { href: string; title: string; copy: string }[];
+  links: GuidanceLink[];
+  secondarySection?: {
+    heading: string;
+    links: GuidanceLink[];
+  };
 };
 
 /** Buyer questions and relevant published work, without unsupported promises. */
@@ -29,19 +40,45 @@ export const SERVICE_GUIDANCE: Record<ServicePath, Guidance> = {
       {
         href: '/portfolio/jetour-ittehad',
         title: 'The 1,000-Lead Launch',
-        copy: 'Campaigns, lead automation and local visibility for Jetour Ittehad.',
+        copy: 'Brand launch, Meta acquisition, automated CRM lead routing, outdoor visibility, and live activations working as one system.',
+        badge: 'Enterprise Meta Ads + CRM Funnel · Scales for U.S. & Global Brands',
       },
       {
         href: '/portfolio/hyundai-islamabad',
         title: 'The Connected Showroom',
-        copy: 'Content, enquiries and showroom journeys for Hyundai Islamabad.',
+        copy: 'Content, digital journey, lead handling, outdoor visibility, and activation planning built around measurable showroom outcomes.',
+        badge: 'Omnichannel Acquisition · Adaptable to Global Retail & Automotive',
       },
       {
         href: '/portfolio/csm-ittehad',
         title: '112 Showroom Visits',
-        copy: 'EV marketing and lead handling, with client-reported showroom outcomes.',
+        copy: 'EV brand foundation, Meta acquisition, lead automation, and local visibility built around a measurable visit funnel.',
+        badge: 'EV & High-Ticket Lead Funnel · Proven Conversion Framework',
       },
     ],
+    secondarySection: {
+      heading: 'U.S. Search & Booking Funnels',
+      links: [
+        {
+          href: '/portfolio/serenada-mental-health',
+          title: 'Serenada Mental Health',
+          copy: 'Patient-first website and ongoing SEO turning Texas care searches into appointment requests.',
+          badge: 'Mental Health · Texas, USA',
+        },
+        {
+          href: '/portfolio/prospect-smile',
+          title: 'Prospect Smile',
+          copy: 'Modern dental website and local SEO converting Illinois clinic searches into booked visits.',
+          badge: 'Dental Care · Illinois, USA',
+        },
+        {
+          href: '/portfolio/luxury-ohare-limo',
+          title: "Luxury O'Hare Limo",
+          copy: 'Website and search optimization converting Chicago airport and corporate travel searches into chauffeur bookings.',
+          badge: 'Luxury Transport · Chicago, USA',
+        },
+      ],
+    },
   },
   '/web-software-development': {
     questions: [
@@ -118,6 +155,12 @@ export const SERVICE_GUIDANCE: Record<ServicePath, Guidance> = {
   '/ecommerce-supply-chain': {
     questions: [
       {
+        question:
+          'What is the 18-Month Historical Claims & Reimbursement Audit?',
+        answer:
+          'We review up to 18 months of historical inventory reports, inbound carrier manifests, warehouse damage logs, and customer returns across Amazon FBA, Walmart WFS, and 20+ couriers. The audit operates on a 100% contingency basis (no recovery = no fee): we only earn a percentage of funds successfully credited to your account. If zero funds are recovered, you pay zero.',
+      },
+      {
         question: 'Which sales channels can Mett Global support?',
         answer:
           'Published multichannel work covers Amazon, Walmart, Shopify, eBay, Magento and Wish, including eight Amazon marketplaces. The Etsy launch is a separate Mett Global in-house project.',
@@ -130,7 +173,7 @@ export const SERVICE_GUIDANCE: Record<ServicePath, Guidance> = {
       {
         question: 'Which logistics and e-commerce claims can you handle?',
         answer:
-          'We support logistics and courier claims for lost or damaged parcels, plus e-commerce channel claims such as Amazon FBA and Walmart WFS inventory reimbursements and outstanding Wish claims. We review tracking, inventory and supporting records, file eligible cases and follow up within each provider’s deadlines. The published claims case study documents more than £50,000 recovered in one year; it is a past result, not a promise of recovery.',
+          'We support logistics and courier claims for lost or damaged parcels, plus e-commerce channel claims such as Amazon FBA and Walmart WFS inventory reimbursements and outstanding Wish claims. We review tracking, inventory and supporting records, file eligible cases and follow up within each provider’s deadlines. The published claims case study documents more than £50,000 ($65,000+ USD) recovered in one year; it is a past result, not a promise of recovery.',
       },
       {
         question: 'Does the service include warehouse and supplier operations?',

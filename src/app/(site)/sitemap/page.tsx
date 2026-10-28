@@ -102,6 +102,14 @@ const GROUPS = [
         href: '/insight-digital-outdoor-marketing',
         label: 'Digital and outdoor marketing together',
       },
+      {
+        href: '/insight-dealership-lead-engine',
+        label: 'Automotive dealership lead engines',
+      },
+      {
+        href: '/insight-healthcare-clinic-local-seo',
+        label: 'Healthcare & clinic local SEO',
+      },
     ],
   },
 ];

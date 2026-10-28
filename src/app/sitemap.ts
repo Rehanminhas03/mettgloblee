@@ -146,6 +146,16 @@ const ENTRIES = [
     priority: 0.8,
   },
   {
+    path: '/insight-dealership-lead-engine',
+    lastModified: '2026-10-28',
+    priority: 0.8,
+  },
+  {
+    path: '/insight-healthcare-clinic-local-seo',
+    lastModified: '2026-10-28',
+    priority: 0.8,
+  },
+  {
     path: '/insight-ecommerce-operations',
     lastModified: '2026-09-17',
     priority: 0.7,

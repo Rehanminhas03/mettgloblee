@@ -1035,6 +1035,70 @@ export function CsmCaseStudyGraphic() {
   );
 }
 
+/* Dealership Lead Engine */
+export function DealershipLeadEngineCardGraphic() {
+  return (
+    <div className="relative w-full h-full flex flex-col justify-between overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(#dfba64_1px,transparent_1px)] [background-size:16px_16px] opacity-15 pointer-events-none" />
+      <div className="relative z-[1] flex items-center justify-between text-[10px] font-mono">
+        <span className="flex items-center gap-1.5 text-p-gold2 font-bold uppercase tracking-wider">
+          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+          SPEED-TO-LEAD &lt; 3 MIN
+        </span>
+        <span className="rounded bg-white/10 px-2 py-0.5 text-gray-300">AUTO CRM</span>
+      </div>
+      <div className="relative z-[1] my-auto py-2">
+        <div className="grid grid-cols-2 gap-2 text-center text-xs font-mono">
+          <div className="rounded-lg border border-emerald-500/30 bg-emerald-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block">METRO LEADS</span>
+            <span className="text-base font-black text-emerald-400">1,000+ Verified</span>
+          </div>
+          <div className="rounded-lg border border-amber-500/30 bg-amber-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block">SHOWROOM RATIO</span>
+            <span className="text-base font-black text-amber-400">21x Faster Connect</span>
+          </div>
+        </div>
+      </div>
+      <div className="relative z-[1] flex items-center justify-between border-t border-white/10 pt-2 text-[10px] font-mono text-[#c4beb1]">
+        <span>Meta Ads · CRM Ingestion</span>
+        <span className="font-bold text-emerald-400">Physical Footfall</span>
+      </div>
+    </div>
+  );
+}
+
+/* Healthcare & Clinic Local SEO */
+export function HealthcareLocalSeoCardGraphic() {
+  return (
+    <div className="relative w-full h-full flex flex-col justify-between overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(#dfba64_1px,transparent_1px)] [background-size:16px_16px] opacity-15 pointer-events-none" />
+      <div className="relative z-[1] flex items-center justify-between text-[10px] font-mono">
+        <span className="flex items-center gap-1.5 text-p-gold2 font-bold uppercase tracking-wider">
+          <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+          LOCAL 3-PACK RANKING
+        </span>
+        <span className="rounded bg-white/10 px-2 py-0.5 text-gray-300">HIPAA INTAKE</span>
+      </div>
+      <div className="relative z-[1] my-auto py-2">
+        <div className="grid grid-cols-2 gap-2 text-center text-xs font-mono">
+          <div className="rounded-lg border border-cyan-500/30 bg-cyan-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block">PATIENT QUERIES</span>
+            <span className="text-base font-black text-cyan-400">High-Intent Geo</span>
+          </div>
+          <div className="rounded-lg border border-emerald-500/30 bg-emerald-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block">BOOKING FUNNEL</span>
+            <span className="text-base font-black text-emerald-400">Zero-PHI Leak</span>
+          </div>
+        </div>
+      </div>
+      <div className="relative z-[1] flex items-center justify-between border-t border-white/10 pt-2 text-[10px] font-mono text-[#c4beb1]">
+        <span>TX & IL Clinic Proof</span>
+        <span className="font-bold text-emerald-400">Top 3 Google Pack</span>
+      </div>
+    </div>
+  );
+}
+
 // Aliases for BlogExplorer imports
 export const FeedDiagnosticGraphic = ProductFeedCardGraphic;
 export const CoreWebVitalsGraphic = GoogleSearchCardGraphic;
