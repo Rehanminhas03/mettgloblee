@@ -72,6 +72,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/portfolio/mowing',
+        destination: '/portfolio',
+        permanent: true,
+      },
+      {
         source: '/case-studies/10',
         destination: '/portfolio/sfykea',
         permanent: true,

@@ -4,125 +4,120 @@ import { SITE_URL } from './site';
 import { SERVICE_GUIDANCE } from './service-guidance';
 
 /**
- * Final production title/description for every route.
+ * Single source of truth for page titles and meta descriptions across the site.
+ * Keeps `<title>`, `<meta name="description">`, Open Graph, Twitter card and
+ * JSON-LD schema perfectly in sync.
  *
- * The old build resolved these in two steps: a hard-coded `seoByPath` map in
- * `vite.config.ts` won, and any page not listed there kept the `<title>` and
- * `<meta name="description">` written in its own HTML file. Both steps are
- * already resolved here, so each entry is what actually shipped.
+ * Rules (from ANTIGRAVITY_MASTER_SAFE.txt):
+ *  - Every title strictly under 60 characters, keyword first, mentioning USA & Pakistan where it fits
+ *  - Every description under 155 characters, clear, one main keyword
+ *  - No em dashes or en dashes anywhere
+ *  - Do not open any title or description with the 50,000 pound figure
  */
 export type PageSeo = { title: string; description: string };
 
 export const PAGE_SEO = {
   '/': {
-    title:
-      'Mett Global | Digital Marketing, Software, AI & E-Commerce (Islamabad & USA)',
+    title: 'Digital Marketing, Software & Ecommerce | Mett Global',
     description:
-      'Headquartered in Islamabad with U.S. business representation, Mett Global builds growth systems, custom software, AI automation & e-commerce ops for Pakistan & U.S. brands.',
+      'Mett Global helps businesses in the USA and Pakistan grow with digital marketing, custom software, AI automation and ecommerce operations.',
   },
   '/services': {
-    title:
-      'Digital Marketing, Custom Software, AI & E-Commerce Services (USA & PK) | Mett Global',
+    title: 'Marketing, Software, AI & Ecommerce Services | Mett Global',
     description:
-      'Four connected capabilities delivered from our Islamabad HQ for U.S. and Pakistani businesses: Digital Marketing, Web & ERP Software, AI Automation, and Supply Chain.',
+      'Four connected capabilities from our Islamabad HQ for US and Pakistani businesses: digital marketing, custom software, AI automation and supply chain.',
   },
   '/about': {
     title:
       'About Mett Global | Islamabad Headquarters & U.S. Business Representation',
     description:
-      'Founded in 2025 and headquartered in Islamabad, Pakistan with U.S. business development in Houston, TX. Led by Hammad Ayub, Muhammad Ahmad Aamir, and Usman Rafiq.',
+      'Headquartered in Islamabad with U.S. business representation. Mett Global is led by Hammad Ayub, Muhammad Ahmad Aamir and Usman Rafiq.',
   },
   '/blog': {
-    title:
-      'Mett Global Insights | U.S. Amazon FBA, Custom ERP, AI & Growth Guides',
+    title: 'Mett Global Blog | Amazon FBA, ERP, AI & Growth Guides',
     description:
-      '28 verified operator guides for U.S. 7–8 figure Amazon brands, 3PL operators, and enterprise teams on FBA fee recovery, custom ERPs, AI, and demand gen.',
+      'Operator guides for US 7 to 8 figure Amazon brands, 3PL operators and enterprise teams on FBA fee recovery, custom ERPs, AI and growth.',
   },
   '/contact': {
-    title: 'Contact Mett Global | Islamabad Headquarters & U.S. Business Desk',
+    title: 'Contact Mett Global | Pakistan & USA',
     description:
-      'Start a project with Mett Global. Contact our Islamabad Headquarters (+92 313 426 2282) or our U.S. Business Development Director Usman Rafiq (+1 832-858-0716).',
+      'Start a project with Mett Global. Contact our Islamabad HQ (+92 313 426 2282) or US Business Development Director Usman Rafiq (+1 832-858-0716).',
   },
   '/appointment': {
-    title: 'Book a Strategy Meeting | Mett Global',
+    title: 'Book a Strategy Call | Mett Global',
     description:
       'Schedule an online strategy call in your local time zone, or request a focused project discussion with Mett Global.',
   },
   '/portfolio': {
-    title:
-      'Mett Global Portfolio | Enterprise Pakistan & U.S. Case Studies',
+    title: 'Mett Global Portfolio | Pakistan & USA Case Studies',
     description:
-      'Explore 17 verified case studies: Jetour & Hyundai growth systems and dealership ERPs in Islamabad, plus U.S. warehouse ops, FBA claims recovery, and SEO in TX & IL.',
+      'Explore verified case studies: Jetour and Hyundai growth systems in Islamabad, US warehouse operations, FBA claims recovery, and SEO in Texas and Illinois.',
   },
   '/case-studies': {
     title: 'Mett Global Case Studies | Growth & Operations',
     description:
-      'Review Mett Global case studies across automotive marketing, lead generation, digital systems and measurable showroom outcomes.',
+      'Review verified client case studies across automotive marketing in Islamabad, US warehouse operations, Amazon FBA fee recovery, and custom software.',
   },
   '/privacy': {
     title: 'Privacy Policy & Data Use | Mett Global',
     description:
-      'Read how Mett Global handles website enquiries, analytics, communications and personal information.',
+      'Read how Mett Global handles website inquiries, analytics, communications and personal information.',
   },
   '/terms': {
     title: 'Website Terms of Use | Mett Global',
     description:
-      'Read the terms governing use of the Mett Global website, enquiries, content, links and service discussions.',
+      'Read the terms governing use of the Mett Global website, inquiries, content, links and service discussions.',
   },
   '/sitemap': {
     title: 'Mett Global Sitemap | All Website Pages',
     description:
-      'Browse the public Mett Global website, including services, case studies, insights, legal pages and contact routes.',
+      'A directory of every public page, service line, insight guide and verified case study published on Mett Global.',
   },
 
   /* ---- Service pages ---- */
   '/digital-marketing-growth': {
-    title:
-      'Digital Marketing, Meta Ads & SEO Agency (Islamabad & USA) | Mett Global',
+    title: 'Meta Ads & Digital Marketing Agency | Mett Global',
     description:
-      'Proven across 1,000+ lead launches for Hyundai & Jetour in Islamabad and SEO funnels in Texas & Illinois. Full-funnel ads, SEO, and CRM automation.',
+      'Full-funnel digital marketing, Meta and Google Ads, SEO, and CRM automation for growing businesses in the USA and Pakistan.',
   },
   '/web-software-development': {
-    title:
-      'Custom Web Apps, Dealership ERPs & B2B Portals (USA & Islamabad) | Mett Global',
+    title: 'Web Apps, ERP & Software Development | Mett Global',
     description:
-      'We build high-converting websites, custom Next.js/Laravel B2B portals, multi-showroom dealership ERPs, and mobile apps for U.S. and Pakistani enterprises.',
+      'We build high-converting websites, custom Next.js B2B portals, multi-showroom dealership ERPs, and mobile apps for US and Pakistani businesses.',
   },
   '/ai-automation-content': {
-    title:
-      'AI Workflow Automation, Chatbots & CRM Integration (USA & Islamabad) | Mett Global',
+    title: 'AI Automation, Chatbots & CRM | Mett Global',
     description:
-      'Remove repetitive manual work with custom AI workflow automation, intelligent chatbots, BOL/invoice OCR extraction, and automated CRM lead routing.',
+      'Remove repetitive manual work with custom AI workflow automation, intelligent chatbots, document extraction, and automated CRM lead routing.',
   },
   '/ecommerce-supply-chain': {
-    title:
-      'Amazon FBA Claims Recovery, 3PL & Supply Chain Services (USA, UK, EU) | Mett Global',
+    title: 'Amazon FBA Claims & Ecommerce Ops | Mett Global',
     description:
-      'End-to-end e-commerce operations for U.S. & global brands: forensic Amazon FBA & Walmart WFS claims recovery (£50k+/$65k+ recovered), 3PL audits & remote U.S. warehouse ops.',
+      'Amazon FBA and Walmart claims recovery, 3PL audits and remote US warehouse operations for ecommerce brands in the USA and worldwide.',
   },
 
   /* ---- Case studies ---- */
   '/portfolio/csm-ittehad': {
     title: CASE_NAMES['csm-ittehad'].metaTitle,
     description:
-      'Electric vehicle (EV) dealership marketing in Islamabad: Meta ad acquisition, automated CRM lead capture, and 112 showroom visits for Capital Smart Motors (CSM Ittehad).',
+      'Electric vehicle dealership marketing in Islamabad: Meta ads, automated CRM lead capture, and 112 showroom visits for Capital Smart Motors.',
   },
   '/portfolio/hyundai-islamabad': {
     title: CASE_NAMES['hyundai-islamabad'].metaTitle,
     description:
-      'Automotive dealership growth in Islamabad: 3 managed social channels, connected lead funnel, digital journeys, and showroom visits for Hyundai Islamabad.',
+      'Automotive dealership growth in Islamabad: 3 managed social channels, connected lead funnel, digital journeys, and showroom visits for Hyundai.',
   },
   '/portfolio/jetour-ittehad': {
     title: CASE_NAMES['jetour-ittehad'].metaTitle,
     description:
-      'Automotive dealership marketing in Islamabad: 1,000+ verified leads, Meta Ads campaigns, CRM lead automation, 5+ billboards, and showroom activations for Jetour Ittehad.',
+      'Automotive dealership marketing in Islamabad: 1,000+ verified leads, Meta Ads campaigns, CRM lead automation, and showroom activations for Jetour.',
   },
 
   /* ---- Current platform & policy updates ---- */
   '/update-amazon-fba-fees-2026': {
     title: 'Amazon FBA Fees 2026: Operator Brief | Mett Global',
     description:
-      'Understand Amazon’s 2026 US FBA fee changes, SKU-level margins, packaging, inbound costs and inventory actions.',
+      'Understand Amazon 2026 US FBA fee changes, SKU-level margins, packaging, inbound costs and inventory actions.',
   },
   '/update-eu-ai-act-transparency-2026': {
     title: 'EU AI Act Transparency Rules 2026 | Mett Global Blog',
@@ -145,26 +140,26 @@ export const PAGE_SEO = {
       'A current 2026 technical SEO brief based on Google Search documentation covering crawlability, indexing, security, performance and accessibility.',
   },
 
-  /* ---- Insight guides ---- */
+  /* ---- Existing Insight guides ---- */
   '/insight-amazon-fba-inbound-claims': {
-    title: 'Amazon FBA Inbound Shipment Loss & Recovery Guide | Mett Global',
+    title: 'Amazon FBA Inbound Shipment Loss Guide | Mett Global',
     description:
-      'How 7-figure Amazon brands audit and recover lost inbound shipments, warehouse carrier shortages, and dock discrepancies before Amazon category-specific dispute windows close.',
+      'How 7-figure Amazon brands audit and recover lost inbound shipments, carrier shortages, and dock discrepancies before dispute windows close.',
   },
   '/insight-amazon-fba-fee-audit': {
-    title: 'Amazon FBA Weight & Dimension Fee Audit Guide | Mett Global',
+    title: 'Amazon FBA Weight & Dimension Fee Audit | Mett Global',
     description:
-      'How to audit historical Cubiscan measurement errors, dispute misclassified size tiers, and recover compounding fee overcharges within the 90-day dispute window.',
+      'How to audit historical Cubiscan measurement errors, dispute misclassified size tiers, and recover fee overcharges within the 90-day dispute window.',
   },
   '/insight-manual-amazon-reimbursement-vs-bots': {
     title: 'Manual vs Automated Amazon Reimbursements | Mett Global',
     description:
-      'Why automated bots get claims denied and accounts throttled, and how human forensic auditing recovers maximum capital under 100% Amazon ToS compliance.',
+      'Where reimbursement software helps, where claims still need a person, and what Amazon\'s policy says about premature or high volume requests.',
   },
   '/insight-amazon-fba-lost-damaged-inventory': {
     title: 'Amazon FBA Lost & Damaged Inventory Guide | Mett Global',
     description:
-      'How 7-figure brands reconcile warehouse damage, uncredited lost items, and missing customer returns within Amazon category-specific dispute deadlines.',
+      'How to read FBA Inventory Ledger codes and file lost, damaged, and customer return claims inside Amazon\'s current windows for each case type.',
   },
   '/insight-ecommerce-operations': {
     title: 'eCommerce Operations After the Click | Mett Global Blog',
@@ -207,7 +202,7 @@ export const PAGE_SEO = {
       'A practical UTM governance system for consistent campaign naming, cleaner reporting and fewer attribution surprises.',
   },
   '/insight-product-feed-health': {
-    title: 'The Product Feed Is Part of the Storefront | Mett Global Blog',
+    title: 'Product Feed Health for Storefronts | Mett Global Blog',
     description:
       'A practical Merchant Center product-feed health check for stable IDs, accurate titles, strong images, price parity and better eligibility.',
   },
@@ -222,9 +217,9 @@ export const PAGE_SEO = {
       'How to compare 3PL and warehouse partners using service reliability, inventory control, systems, cost transparency and resilience.',
   },
   '/insight-erp-for-growing-businesses': {
-    title: 'When a Growing Business Needs Its Own ERP | Mett Global Blog',
+    title: 'When a Growing Business Needs an ERP | Mett Global Blog',
     description:
-      'A practical guide to recognising when spreadsheets stop working, how to map the customer journey, and what a custom ERP should track.',
+      'A practical guide to recognizing when spreadsheets stop working, how to map the customer journey, and what a custom ERP should track.',
   },
   '/insight-booking-app-partner-portal': {
     title: 'Booking Apps & Partner Portals Guide | Mett Global Blog',
@@ -237,39 +232,91 @@ export const PAGE_SEO = {
       'How Instagram, short video, billboards and posters can work as one system, with a clear next step and honest measurement.',
   },
   '/insight-amazon-inbound-placement-fees': {
-    title: 'Amazon Inbound Placement Fees & Lost Inventory Guide | Mett Global',
+    title: 'Amazon Inbound Placement Fees Guide | Mett Global',
     description:
-      'How US Amazon brands audit inbound placement fee economics, identify receiving dock shortages, and recover uncredited inventory within active policy dispute windows.',
+      'How US Amazon brands audit inbound placement fees, identify receiving dock shortages, and recover inventory within dispute windows.',
   },
   '/insight-custom-portals-vs-saas': {
-    title: 'Custom Portals vs. SaaS for US Logistics & Service Firms | Mett Global',
+    title: 'Custom Portals vs SaaS for Logistics | Mett Global',
     description:
       'Why growing US 3PLs and service operators hit the SaaS ceiling, and how custom portal engineering cuts operating costs, eliminates per-seat fees, and scales.',
   },
   '/insight-b2b-lead-generation-apollo-stack': {
-    title: 'B2B Lead Generation Without Ad Waste (Apollo Stack) | Mett Global',
+    title: 'B2B Lead Gen with Apollo Stack | Mett Global',
     description:
-      'How US B2B enterprises replace $90 CPC Google Ads with reverse IP visitor identification, multi-threaded Apollo enrichment, and high-deliverability outbound.',
+      'How US B2B enterprises replace high CPC ads with reverse IP visitor identification, multi-threaded Apollo enrichment, and high-deliverability outbound.',
   },
   '/insight-amazon-awd-vs-3pl': {
-    title: 'Amazon AWD vs. Private 3PL: Cost & Control Matrix | Mett Global',
+    title: 'Amazon AWD vs Private 3PL Cost Guide | Mett Global',
     description:
       'How US 7-to-8 figure brand owners balance Amazon AWD placement fee waivers against 3PL multi-channel flexibility, inventory sovereignty, and stockout defense.',
   },
   '/insight-nextjs-vs-no-code-portals': {
-    title: 'Why Next.js Beats Airtable & Softr for B2B Client Portals | Mett Global',
+    title: 'Next.js vs No-Code for B2B Portals | Mett Global',
     description:
       'Why scaling US logistics and service companies hit the no-code wall, and how custom Next.js engineering delivers sub-second speed and zero seat licensing.',
   },
   '/insight-dealership-lead-engine': {
-    title: 'Automotive Dealership Lead Engine: Meta Ads to Showroom Visits | Mett Global',
+    title: 'Auto Dealership Lead Engine Guide | Mett Global',
     description:
-      'How automotive dealerships convert Meta & Google ad spend into verified showroom visits using sub-5-minute speed-to-lead, automated CRM routing, and attribution.',
+      'How automotive dealerships convert Meta ads into verified showroom visits using fast response, automated CRM routing, and attribution.',
   },
   '/insight-healthcare-clinic-local-seo': {
-    title: 'Healthcare & Dental Clinic Local SEO: Dominating Patient Search | Mett Global',
+    title: 'Healthcare & Clinic Local SEO Guide | Mett Global',
     description:
-      'How private medical practices, dental clinics, and psychiatric centers capture high-intent patient queries and drive booked appointments through local SEO & HIPAA-compliant funnels.',
+      'How private medical practices and dental clinics capture patient search queries and drive booked appointments through local SEO and focused funnels.',
+  },
+
+  /* ---- 10 New Insight guides (Part 4A and 4B) ---- */
+  '/insight-meta-ads-agency-ecommerce': {
+    title: 'Meta Ads Agency for Ecommerce Brands | Mett Global',
+    description:
+      'What ecommerce brands should expect from a Meta ads agency, covering testing, creative structure, attribution, and scaling ad spend profitably.',
+  },
+  '/insight-amazon-fba-reimbursement-service': {
+    title: 'Amazon FBA Reimbursement Service | Mett Global',
+    description:
+      'How manual claims recovery audits lost, damaged, and fee overcharge records without risky automated scrapers.',
+  },
+  '/insight-outsourced-ecommerce-operations': {
+    title: 'Outsourced Ecommerce Operations | Mett Global',
+    description:
+      'How US marketplace sellers scale catalog management, inventory tracking, order fulfillment, and multi-channel operations.',
+  },
+  '/insight-dealership-erp-software': {
+    title: 'Custom Dealership ERP vs Software | Mett Global',
+    description:
+      'Why auto dealerships replace off-the-shelf software with custom ERPs connecting inventory, CRM leads, and multi-showroom reporting.',
+  },
+  '/insight-ai-automation-agency-small-business': {
+    title: 'AI Automation Agency for Business | Mett Global',
+    description:
+      'Practical starting points for small businesses to automate repetitive tasks: lead routing, customer support chatbots, and invoice processing.',
+  },
+  '/insight-digital-marketing-agency-islamabad': {
+    title: 'Digital Marketing Agency Islamabad | Mett Global',
+    description:
+      'How car dealerships and local businesses in Islamabad use Meta ads, outdoor media, and CRM automation to drive showroom footfall and sales.',
+  },
+  '/insight-software-development-company-pakistan': {
+    title: 'Software Development Company Pakistan | Mett Global',
+    description:
+      'How Pakistan software teams build custom ERPs, client portals, and Next.js web applications for growing companies in Pakistan and the USA.',
+  },
+  '/insight-walmart-wfs-reimbursement-claim': {
+    title: 'Walmart WFS Reimbursement: Lost Claims | Mett Global',
+    description:
+      'How to file a Walmart WFS reimbursement claim for lost inbound inventory: the 10 to 50 day window, required documents, and steps in Seller Center.',
+  },
+  '/insight-walmart-wfs-returns-reimbursement': {
+    title: 'Walmart WFS Return Dispute Guide | Mett Global',
+    description:
+      'WFS return not received or not reimbursed? Learn Walmart\'s return dispute windows, what proof to send, and what Walmart will not reimburse.',
+  },
+  '/insight-meta-lead-ads-lead-quality': {
+    title: 'Meta Lead Ads: Higher Intent Leads | Mett Global',
+    description:
+      'Getting junk leads from Meta lead ads? Use the Higher Intent form, qualifying questions, fast follow up, and CRM feedback to get leads who answer.',
   },
 
   /* ---- Utility pages ---- */
@@ -283,18 +330,14 @@ export const PAGE_SEO = {
 export type PagePath = keyof typeof PAGE_SEO;
 
 /**
- * Builds the `Metadata` for a route, mirroring the tags the Vite plugin
- * injected: canonical, Open Graph, Twitter card and the shared social image.
+ * Builds the `Metadata` for a route: canonical, Open Graph, Twitter card and the shared social image.
  */
 export function pageMetadata(path: PagePath): Metadata {
   return routeMetadata(path, PAGE_SEO[path]);
 }
 
 /**
- * Same tags as `pageMetadata`, for routes whose copy lives outside
- * `PAGE_SEO` (the portfolio and operations case-study detail pages). The
- * shared social image is kept, and the title is used as written so the brand
- * is never appended twice.
+ * Same tags as `pageMetadata`, for routes whose copy lives outside `PAGE_SEO`.
  */
 export function routeMetadata(
   path: string,
@@ -315,7 +358,8 @@ export function routeMetadata(
         path.startsWith('/insight-') || path.startsWith('/update-')
           ? 'article'
           : 'website',
-      locale: 'en_PK',
+      locale: 'en_US',
+      alternateLocale: ['en_PK'],
       images: [
         {
           url: `${SITE_URL}/social-card.png`,
@@ -335,8 +379,7 @@ export function routeMetadata(
 }
 
 /**
- * BreadcrumbList JSON-LD, injected on every page except the homepage by the
- * old build. The label is the title up to the first `|`.
+ * BreadcrumbList JSON-LD, injected on every page except the homepage.
  */
 export function breadcrumbJsonLd(path: PagePath) {
   if (path === '/') return null;
@@ -434,9 +477,7 @@ export function serviceJsonLd(path: (typeof SERVICE_PATHS)[number]) {
 }
 
 /**
- * Article + BreadcrumbList structured data for the blog guides and briefs.
- * Headline and description come from `PAGE_SEO`, so they always match the
- * page's title and meta description.
+ * Article JSON-LD for analytical guides and technical briefs.
  */
 export function articleJsonLd(path: PagePath) {
   const { title, description } = PAGE_SEO[path];
@@ -447,25 +488,15 @@ export function articleJsonLd(path: PagePath) {
     '@graph': [
       {
         '@type': 'Article',
+        '@id': `${url}#article`,
         headline,
         description,
         url,
         mainEntityOfPage: url,
         image: `${SITE_URL}/social-card.png`,
         inLanguage: 'en',
-        author: {
-          '@type': 'Organization',
-          '@id': `${SITE_URL}/#organization`,
-          name: 'Mett Global',
-          url: `${SITE_URL}/`,
-        },
-        publisher: {
-          '@type': 'Organization',
-          '@id': `${SITE_URL}/#organization`,
-          name: 'Mett Global',
-          url: `${SITE_URL}/`,
-          logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo-512.png` },
-        },
+        author: { '@id': `${SITE_URL}/#organization` },
+        publisher: { '@id': `${SITE_URL}/#organization` },
       },
       {
         '@type': 'BreadcrumbList',
@@ -489,11 +520,92 @@ export function articleJsonLd(path: PagePath) {
   };
 }
 
+/**
+ * BlogPosting structured data for authored insight articles (Part 4 and Part 5).
+ * Complies with Google and schema.org BlogPosting specification.
+ */
+export function blogPostingJsonLd(
+  path: PagePath,
+  author: { name: string; jobTitle?: string },
+  datePublished = '2026-10-30',
+  faqs?: Array<{ question: string; answer: string }>,
+) {
+  const { title, description } = PAGE_SEO[path];
+  const url = `${SITE_URL}${path}`;
+  const headline = title.split('|')[0].trim();
+  const graph: Array<Record<string, unknown>> = [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${url}#article`,
+      headline,
+      description,
+      url,
+      mainEntityOfPage: url,
+      datePublished,
+      dateModified: '2026-10-30',
+      image: `${SITE_URL}/social-card.png`,
+      inLanguage: 'en',
+      author: {
+        '@type': 'Person',
+        name: author.name,
+        ...(author.jobTitle ? { jobTitle: author.jobTitle } : {}),
+        worksFor: {
+          '@id': `${SITE_URL}/#organization`,
+        },
+      },
+      publisher: {
+        '@type': 'Organization',
+        '@id': `${SITE_URL}/#organization`,
+        name: 'Mett Global',
+        url: `${SITE_URL}/`,
+        logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo-512.png` },
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: `${SITE_URL}/`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Blog',
+          item: `${SITE_URL}/blog`,
+        },
+        { '@type': 'ListItem', position: 3, name: headline, item: url },
+      ],
+    },
+  ];
+
+  if (faqs && faqs.length > 0) {
+    graph.push({
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: faqs.map(faq => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    });
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': graph,
+  };
+}
+
 type WebPageType = 'WebPage' | 'CollectionPage' | 'ContactPage' | 'AboutPage';
 
 /**
- * Typed `WebPage` structured data tying a page to the site and the
- * organization. Title and description come from `PAGE_SEO`.
+ * Typed `WebPage` structured data tying a page to the site and the organization.
  */
 export function pageJsonLd(path: PagePath, type: WebPageType = 'WebPage') {
   const { title, description } = PAGE_SEO[path];

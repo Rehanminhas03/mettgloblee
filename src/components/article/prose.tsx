@@ -194,7 +194,8 @@ export type Block =
   | { t: 'ul'; items: React.ReactNode[] }
   | { t: 'ol'; items: React.ReactNode[] }
   | { t: 'quote'; text: string }
-  | { t: 'source'; label: string; body: React.ReactNode };
+  | { t: 'source'; label: string; body: React.ReactNode }
+  | { t: 'table'; headers: string[]; rows: (string | React.ReactNode)[][] };
 
 export function Prose({
   blocks,
@@ -237,6 +238,39 @@ export function Prose({
               <SourceBox key={index} label={block.label}>
                 {block.body}
               </SourceBox>
+            );
+          case 'table':
+            return (
+              <div
+                key={index}
+                className="my-8 overflow-x-auto rounded-xl border border-[#e8e2d5] bg-white shadow-2xs"
+              >
+                <table className="min-w-full divide-y divide-[#e8e2d5] text-left text-[15px]">
+                  <thead className="bg-[#faf8f5]">
+                    <tr>
+                      {block.headers.map((h, i) => (
+                        <th
+                          key={i}
+                          className="px-5 py-3.5 text-[14px] font-bold tracking-tight text-[#11110f]"
+                        >
+                          {h}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-[#e8e2d5] text-[#514d46]">
+                    {block.rows.map((row, rIdx) => (
+                      <tr key={rIdx} className="hover:bg-[#faf8f5]/60 transition-colors">
+                        {row.map((cell, cIdx) => (
+                          <td key={cIdx} className="px-5 py-3.5 leading-relaxed">
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             );
         }
       })}

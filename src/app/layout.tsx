@@ -39,7 +39,12 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
   },
-  openGraph: { siteName: 'Mett Global', type: 'website', locale: 'en_PK' },
+  openGraph: {
+    siteName: 'Mett Global',
+    type: 'website',
+    locale: 'en_US',
+    alternateLocale: ['en_PK'],
+  },
   twitter: { card: 'summary_large_image' },
 };
 
