@@ -1,6 +1,5 @@
 import { ArticleShell } from '@/components/article/ArticleShell';
 import { ChipGraphic } from '@/components/article/graphics';
-import { BotVsForensicWidget } from '@/components/article/interactive/BotVsForensicWidget';
 import {
   Prose,
   SourceLink,
@@ -8,7 +7,7 @@ import {
   type Block,
 } from '@/components/article/prose';
 import { JsonLd } from '@/components/JsonLd';
-import { articleJsonLd, pageMetadata } from '@/lib/seo';
+import { blogPostingJsonLd, pageMetadata } from '@/lib/seo';
 
 export const metadata = pageMetadata('/insight-manual-amazon-reimbursement-vs-bots');
 
@@ -16,15 +15,15 @@ const BLOCKS: Block[] = [
   { t: 'h2', text: 'The automated reimbursement illusion' },
   {
     t: 'p',
-    text: 'Over the last three years, the Amazon reimbursement landscape became crowded with automated SaaS apps and scrapers promising "one-click hands-free refunds." These tools connect to Amazon Seller Central via SP-API, scrape the Inventory Event Detail ledger, and programmatically blast Seller Support with bulk discrepancy tickets.',
+    text: 'Many reimbursement apps connect to Seller Central, read your inventory data, and open discrepancy cases for you.',
   },
   {
     t: 'p',
-    text: 'While automated tools performed adequately when Amazon’s reimbursement policies were more lenient, Amazon has since engineered sophisticated automated defensive filters. When automated bots spam dozens of unverified discrepancy claims simultaneously, Amazon’s internal systems flag the case velocity.',
+    text: 'Amazon now says it proactively reimburses almost all warehouse lost and damaged cases and customer return cases. The cases left for sellers to file are often the ones that need documents.',
   },
   {
     t: 'quote',
-    text: 'Amazon Seller Support does not review automated claims with human nuance. Bot submissions lacking attached carrier bills of lading and commercial invoices are met with instant automated rejection templates and risk account ticket throttling.',
+    text: "Amazon's reimbursement policy says it may decline a claim if you do not follow the process and provide all requested information.",
   },
   { t: 'h2', text: 'The 3 fatal failure modes of automated scraper bots' },
   {
@@ -37,49 +36,32 @@ const BLOCKS: Block[] = [
       <strong key="1">
         1. Inability to Procure Carrier Stamped BOLs:{' '}
         <span className="font-normal text-[#514d46]">
-          When an LTL freight carrier delivers 20 pallets and Amazon records a 400-unit receiving shortage, software cannot interface with freight dispatchers to retrieve signed, FC-stamped Bills of Lading and PRO delivery receipts. Without stamped proof of delivery, Amazon immediately closes the dispute.
+          For a freight shipment to Amazon with units missing at receiving, Amazon asks for a proof of delivery for LTL or FTL shipments that shows the box count and total weight at pickup and is stamped by Amazon. Your carrier should have a copy. Getting it usually means working with the carrier directly.
         </span>
       </strong>,
       <strong key="2">
-        2. Inability to Validate Itemized Invoices & Payment Trails:{' '}
+        2. Proof of Inventory Ownership:{' '}
         <span className="font-normal text-[#514d46]">
-          Amazon policy strictly requires itemized commercial invoices displaying manufacturer contact information, matching buyer legal entity details, unit purchase costs, and proof of transaction (cleared wire slips). Bot scrapers cannot assemble or verify supplier documentation.
+          Amazon asks for proof that you own the inventory, such as a supplier invoice, a receipt from another seller, or a signed packing slip if you are the manufacturer. It must show the date of purchase, product names matching the lost or damaged items, and quantity.
         </span>
       </strong>,
       <strong key="3">
-        3. Immediate Capitulation on Initial Denials:{' '}
+        3. Following Up on Decisions:{' '}
         <span className="font-normal text-[#514d46]">
-          When Amazon issues an automated first-line rejection ("Investigation completed: counts confirmed"), bots either abandon the claim entirely (leaving thousands of dollars behind) or repeatedly resubmit the same canned message, leading to case blacklisting and seller performance warnings.
+          After Amazon reviews a claim, you may need to respond to follow up requests or dispute the reimbursement amount through the Get Help page. That takes judgment, not just automation.
         </span>
       </strong>,
     ],
   },
-  { t: 'h2', text: 'Amazon Terms of Service & case throttling risks' },
+  { t: 'h2', text: "What Amazon's policy says about claim volume" },
   {
     t: 'p',
-    text: 'Amazon’s Seller Code of Conduct and Customer Service Policies explicitly prohibit submitting frivolous, repetitive, or unsubstantiated claims. When automated apps open hundreds of low-value claims across minor inventory fluctuations, Amazon’s internal trust-and-safety algorithms often respond with two punitive measures:',
-  },
-  {
-    t: 'ol',
-    items: [
-      <strong key="1">
-        Case Creation Throttling:{' '}
-        <span className="font-normal text-[#514d46]">
-          Amazon limits the seller’s daily case opening quota, preventing legitimate urgent operational tickets (such as listing hijacking or stranded inventory) from being addressed by Seller Support.
-        </span>
-      </strong>,
-      <strong key="2">
-        Dispute Rights Revocation:{' '}
-        <span className="font-normal text-[#514d46]">
-          Under Amazon ToS Section 3, accounts that repeatedly violate reimbursement submission guidelines face permanent revocation of FBA inventory dispute privileges or overall account suspension.
-        </span>
-      </strong>,
-    ],
+    text: "Amazon's FBA inventory reimbursement policy prohibits activity that interferes with its capacity to help other sellers. Examples it gives are submitting insufficiently researched or premature requests, or submitting a large number of requests in a short time. Sellers who repeatedly do this may receive delayed support on their cases or be subject to monitoring, investigation, and account action.",
   },
   { t: 'h2', text: 'Software scrapers vs. forensic human case management' },
   {
     t: 'p',
-    text: 'Enterprise brands operating at $1M to $20M+ annual GMV require a forensic reconciliation workflow that guarantees 100% ToS compliance while maximizing net cash recovery:',
+    text: 'A careful claims process should focus on quality over volume:',
   },
   {
     t: 'ul',
@@ -87,25 +69,19 @@ const BLOCKS: Block[] = [
       <strong key="1">
         Discrepancy Identification:{' '}
         <span className="font-normal text-[#514d46]">
-          Automated scrapers rely on surface-level inventory estimates that trigger false positives. Forensic auditing conducts 3-way reconciliation across Inventory Adjustments, Received Inventory Reports, and Financial Settlement ledgers.
+          Compare the Inventory Ledger, received inventory, and the Reimbursements report so you only file for real gaps that Amazon has not already reimbursed.
         </span>
       </strong>,
       <strong key="2">
         Evidence Dossier Assembly:{' '}
         <span className="font-normal text-[#514d46]">
-          Every claim is backed by a complete evidence package: stamped carrier BOL/POD, packing list carton breakdown, and itemized commercial invoice with payment verification.
+          Each claim includes the documents Amazon asks for, such as proof of delivery and proof of inventory ownership.
         </span>
       </strong>,
       <strong key="3">
-        Human Case Submission & Multi-Stage Appeals:{' '}
+        Clear Case Submission and Follow Up:{' '}
         <span className="font-normal text-[#514d46]">
-          Dedicated forensic case managers craft customized case arguments, cite specific FC receiving shift logs, and conduct telephone or executive escalations when initial automated rejections occur.
-        </span>
-      </strong>,
-      <strong key="4">
-        Zero Account Health Exposure:{' '}
-        <span className="font-normal text-[#514d46]">
-          Operations are conducted through secondary user permissions with read-only reporting access. No third-party automated bots are ever granted API write permissions to spam Seller Central.
+          A person writes each case, responds to Amazon's requests, and follows up when a decision needs to be disputed.
         </span>
       </strong>,
     ],
@@ -119,7 +95,7 @@ const BLOCKS: Block[] = [
           Amazon Seller Central: Selling Policies and Seller Code of Conduct
         </SourceLink>
         <SourceNote>
-          Mett Global operates on 100% manual, human-audited claims submission in full compliance with Amazon ToS. Free contingency audit—zero recovery, zero fee.
+          Mett Global files claims manually, one well researched case at a time.
         </SourceNote>
       </>
     ),
@@ -134,7 +110,7 @@ export default function ManualVsBotsGuide() {
         'Manual Forensic Auditing vs. Automated Bots: Why Software Alone Fails Amazon FBA Claims Recovery'
       }
       dek={
-        'Automated scraper apps flood Amazon Seller Support with generic tickets, resulting in automated denials, ticket throttling, and account risks. Here is why enterprise brands are shifting to human forensic reconciliation to recover maximum capital safely.'
+        "Reimbursement software is good at finding gaps. Claims that need documents still need a person. Here is how to split the work and stay within Amazon's reimbursement policy."
       }
       meta={'METT GLOBAL FIELD GUIDE · COMPLIANCE & RECOVERY · 4 MIN READ'}
       graphic={
@@ -150,10 +126,15 @@ export default function ManualVsBotsGuide() {
       }
       endHeading={'Tired of bot denials and automated rejections?'}
       endHref={'/appointment'}
-      endLabel={'Book a Complimentary, ToS-Compliant Forensic Audit with Our Team'}
+      endLabel={'Book a call with our team'}
     >
-      <JsonLd data={articleJsonLd('/insight-manual-amazon-reimbursement-vs-bots')} />
-      <BotVsForensicWidget />
+      <JsonLd
+        data={blogPostingJsonLd(
+          '/insight-manual-amazon-reimbursement-vs-bots',
+          { name: 'Ahmad Aamir', jobTitle: 'Co-Founder & COO' },
+          '2025-01-20'
+        )}
+      />
       <Prose blocks={BLOCKS} />
     </ArticleShell>
   );

@@ -1,50 +1,62 @@
 # Mett Global
 
-> Mett Global is a global digital marketing agency, custom software development consultancy, and multi-channel e-commerce supply chain management firm founded in 2025. Headquartered in Islamabad, Pakistan, Mett Global actively operates across the United States, United Kingdom, Canada, European Union, and Pakistan.
+> Mett Global is a digital marketing agency, custom software development consultancy, and ecommerce supply chain operations firm founded in 2025. Headquartered in Islamabad, Pakistan with U.S. business representation, Mett Global actively serves clients in the USA and Pakistan, as well as worldwide.
+
+Serving clients in the USA and Pakistan.
 
 ## Verified Leadership
-- **Hammad Ayub**: Founder (Commercial positioning, paid media, performance marketing)
-- **Muhammad Ahmad Aamir**: Co-Founder & Chief Operating Officer (COO) (E-commerce operations, logistics, supply chain, and business development)
-- **Usman Rafiq**: Director, U.S. Business Development (Commercial partnerships and U.S. client coordination)
+- **Hammad Ayub**: Founder
+- **Muhammad Ahmad Aamir**: Co-Founder & COO
+- **Usman Rafiq**: Director, U.S. Business Development
 
-## Core Service Pillars
+## Core Service Pillars (in operational order)
 
-### 1. Amazon FBA & Multi-Channel Supply Chain (USA, UK, EU, Canada)
-- **Amazon FBA Reimbursement & Claims Recovery**: Auditing and recovering denied and lost-parcel claims across FedEx, UPS, USPS, Amazon FBA, Walmart WFS, and Wish. Over £50,000+ recovered for international brands.
-- **Multichannel Marketplace Operations**: Inventory management, catalog syncing, and operations across 8 Amazon marketplaces (USA, UK, Canada, UAE, Germany, France, Italy, Spain) and 6 sales channels (Walmart, Shopify, eBay, Magento).
-- **Remote Warehouse & 3PL Logistics**: Managing remote US warehouse operations with >95% inventory and fulfillment accuracy, container receiving, and freight invoice auditing.
+### 1. Paid Media and Social Media (Digital Marketing & Growth)
+- **Performance Marketing**: Targeted Meta Ads and Google Ads campaigns engineered for measurable return on ad spend, qualified lead generation, and customer acquisition.
+- **Automotive and Dealership Marketing**: Full-funnel digital marketing, billboard visibility, CRM lead automation, and showroom footfall generation. Verified results include Jetour Ittehad (1,000+ verified leads and 50+ confirmed bookings) and CSM Ittehad EV launch (about 400 leads and 112 confirmed showroom visits).
+- **Search Engine Optimization**: High-authority technical SEO, Local Map Pack optimization, and Answer Engine Optimization (AEO).
 
-### 2. Digital Marketing Agency & Growth (Islamabad & Global)
-- **Performance Marketing**: Targeted Meta Ads and Google Ads campaigns engineered for measurable ROAS, lead generation, and customer acquisition.
-- **Automotive & Dealership Marketing in Islamabad**: Full-funnel digital marketing, billboard visibility, CRM lead automation, and showroom footfall generation. Verified case studies include Jetour Ittehad (1,000+ leads, 50+ bookings), Hyundai Islamabad, and Capital Smart Motors EV showroom (112 showroom visits).
-- **SEO & Search Visibility**: High-authority on-page and technical SEO, Local Map Pack optimization, and Answer Engine Optimization (AEO).
+### 2. Ecommerce and Marketplace Operations (Amazon and Walmart Claims)
+- **Marketplace Claims Recovery**: Manual forensic audits for Amazon FBA and Walmart WFS lost, damaged, and customer return discrepancies. Over £50,000 recovered in one year for a leading global brand.
+- **Multichannel Marketplace Operations**: Catalog management, inventory planning, and daily operations across Amazon, Walmart Marketplace, Shopify, and eBay.
+- **Remote Warehouse and 3PL Coordination**: Coordinating inbound shipments, pallet prep, and freight invoice reconciliation.
 
-### 3. Web & Custom Software Development
-- **Custom Dealership ERP & CRM Systems**: Multi-brand, multi-showroom automotive dealership ERP covering sales, parts, service, accounts, and role-based portals up to the CEO.
-- **On-Demand Mobile Applications**: Cross-platform Flutter iOS and Android applications, admin dashboards, and partner portals (e.g., SFYKEA door-to-door car care).
-- **High-Performance Web Platforms**: Next.js 16, TypeScript, Tailwind CSS web architectures engineered for 95+ Core Web Vitals.
+### 3. Web and Software Development
+- **Custom Dealership ERP and CRM Software**: Tailored platforms connecting vehicle inventory, speed-to-lead routing, and showroom workflows (currently in active development).
+- **High-Performance Web Platforms**: Next.js, TypeScript, and Tailwind CSS architectures engineered for sub-second load times and high Core Web Vitals.
+- **Mobile and Portal Engineering**: Cross-platform Flutter mobile applications and secure B2B client partner portals.
 
-### 4. AI Automation & Workflow Optimization
-- **Operational Automation**: Eliminating manual data entry between e-commerce storefronts, warehouses, and accounting systems.
-- **Customer & Sales Funnels**: Automated lead routing, instant WhatsApp/email notifications, and CRM hygiene workflows.
+### 4. AI Automation
+- **Workflow Automation**: Eliminating manual data entry between forms, spreadsheets, CRMs, and accounting ledgers.
+- **Speed-to-Lead and Customer Inquiries**: Instant WhatsApp/SMS notifications, automated lead routing, and customer support triage assistants with human-in-the-loop review.
 
 ## Verified Case Studies
-- [Amazon Claims Recovery](https://www.mettglobal.com/portfolio/claims-recovery): >£50,000 recovered across 20+ courier and 3PL partners in USA, UK, EU, and Canada.
-- [Multichannel E-Commerce Operations](https://www.mettglobal.com/portfolio/multichannel-ecommerce-operations): 8 Amazon marketplaces across 6 sales channels.
-- [Remote US Warehouse Management](https://www.mettglobal.com/portfolio/remote-warehouse-management): >95% inventory and fulfillment accuracy in US warehouse operations.
+- [Amazon Claims Recovery](https://www.mettglobal.com/portfolio/claims-recovery): Over £50,000 recovered in one year for a leading global brand across courier and marketplace reimbursement claims.
+- [Multichannel Ecommerce Operations](https://www.mettglobal.com/portfolio/multichannel-ecommerce-operations): 8 Amazon marketplaces across 6 sales channels.
+- [Remote US Warehouse Management](https://www.mettglobal.com/portfolio/remote-warehouse-management): Warehouse coordination and inventory accuracy.
 - [Jetour Dealership Marketing Islamabad](https://www.mettglobal.com/portfolio/jetour-ittehad): 1,000+ verified leads and 50+ confirmed vehicle bookings.
-- [Capital Smart Motors EV Showroom](https://www.mettglobal.com/portfolio/csm-ittehad): 112 showroom visits from digital acquisition.
+- [Capital Smart Motors EV Showroom](https://www.mettglobal.com/portfolio/csm-ittehad): About 400 leads and 112 confirmed showroom visits from digital acquisition.
 - [Hyundai Islamabad Connected Showroom](https://www.mettglobal.com/portfolio/hyundai-islamabad): Connected local growth funnel.
-- [Dealership ERP Platform](https://www.mettglobal.com/portfolio/dealership-erp): 3 showrooms, 6 role portals on one platform.
+- [Dealership ERP Platform](https://www.mettglobal.com/portfolio/dealership-erp): Multi-showroom operational architecture.
 - [Serenada Mental Health (Texas, USA)](https://www.mettglobal.com/portfolio/serenada-mental-health): Healthcare website design and local medical SEO.
 - [Prospect Smile Dental (Illinois, USA)](https://www.mettglobal.com/portfolio/prospect-smile): Dental practice website and local SEO in Mount Prospect.
 - [Luxury O'Hare Limo (Chicago, USA)](https://www.mettglobal.com/portfolio/luxury-ohare-limo): Chauffeured transportation website and SEO.
 
-## Authoritative Field Guides
-- [Amazon FBA Inbound Shipment Loss Guide](https://www.mettglobal.com/insight-amazon-fba-inbound-claims): Forensic audit framework for recovering lost inbound inventory, carrier shortages, and warehouse dock discrepancies before Amazon's 18-month lookback window closes.
-- [Amazon FBA Weight & Dimension Fee Audit Guide](https://www.mettglobal.com/insight-amazon-fba-fee-audit): Strategic guide on identifying automated Cubiscan laser scanner errors, preventing size tier creep, and filing retroactive fee disputes within the 90-day window.
-- [Manual vs Automated Amazon Reimbursements Guide](https://www.mettglobal.com/insight-manual-amazon-reimbursement-vs-bots): Compliance and forensic audit analysis detailing why automated scraper bots get claims denied, and how human case management secures maximum recovery under 100% Amazon ToS compliance.
-- [Amazon FBA Lost & Damaged Inventory Guide](https://www.mettglobal.com/insight-amazon-fba-lost-damaged-inventory): Warehouse ledger reconciliation framework for identifying uncredited FC damages, unreturned customer refunds, and unauthorized disposals.
+## Authoritative Field Guides and Operator Articles
+- [Walmart WFS Reimbursement: File a Lost Inventory Claim](https://www.mettglobal.com/insight-walmart-wfs-reimbursement-claim): How to file a Walmart WFS reimbursement claim for lost inbound inventory within the 10 to 50 day window in Seller Center.
+- [WFS Returns Not Received? Walmart Return Dispute Guide](https://www.mettglobal.com/insight-walmart-wfs-returns-reimbursement): Dispute windows, proof requirements, and non-reimbursable return exceptions for Walmart WFS returns.
+- [Meta Lead Ads Higher Intent: Fix Low Quality Leads](https://www.mettglobal.com/insight-meta-lead-ads-lead-quality): How Higher Intent forms, qualifying questions, fast response, and Conversions API integration stop low-quality lead generation.
+- [Meta Ads Agency for Ecommerce Brands: What to Expect](https://www.mettglobal.com/insight-meta-ads-agency-ecommerce): What direct-to-consumer and marketplace brands should expect from a dedicated Meta ads partner.
+- [Amazon FBA Reimbursement Service: How Claims Recovery Works](https://www.mettglobal.com/insight-amazon-fba-reimbursement-service): How manual claims recovery audits lost, damaged, and customer return discrepancies under current Amazon windows.
+- [Outsourced Ecommerce Operations for US Amazon and Walmart Sellers](https://www.mettglobal.com/insight-outsourced-ecommerce-operations): Streamlining multichannel catalog health, inbound replenishment, and warehouse coordination.
+- [Custom Dealership ERP vs Off the Shelf Software](https://www.mettglobal.com/insight-dealership-erp-software): Why multi-showroom automotive dealerships choose custom ERP platforms over rigid SaaS software.
+- [AI Automation Agency for Small Businesses: Where to Start](https://www.mettglobal.com/insight-ai-automation-agency-small-business): Practical AI automation starting points for speed-to-lead routing, document extraction, and support triage.
+- [Digital Marketing Agency in Islamabad: How We Grow Car Dealerships](https://www.mettglobal.com/insight-digital-marketing-agency-islamabad): How automotive dealerships in Islamabad convert digital attention into confirmed showroom footfall.
+- [Custom Software Development Company in Pakistan: ERP and Web Apps](https://www.mettglobal.com/insight-software-development-company-pakistan): Scalable Next.js web applications, dealership ERPs, and client portals built by engineering teams in Pakistan.
+- [Amazon FBA Lost and Damaged Inventory Guide](https://www.mettglobal.com/insight-amazon-fba-lost-damaged-inventory): Reading FBA Inventory Ledger codes and filing claims inside Amazon current windows for each case type.
+- [Manual vs Automated Amazon Reimbursements Guide](https://www.mettglobal.com/insight-manual-amazon-reimbursement-vs-bots): Where reimbursement software helps, where claims still need a person, and what Amazon policy says about claim volume.
+- [Amazon FBA Inbound Shipment Loss Guide](https://www.mettglobal.com/insight-amazon-fba-inbound-claims): Auditing receiving dock shortages and carrier discrepancies.
+- [Amazon FBA Weight & Dimension Fee Audit Guide](https://www.mettglobal.com/insight-amazon-fba-fee-audit): Auditing automated Cubiscan laser scanner errors and fee disputes.
 
 ## Contact & Jurisdictions
 - **Website**: https://www.mettglobal.com

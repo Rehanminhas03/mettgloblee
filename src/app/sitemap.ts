@@ -112,12 +112,12 @@ const ENTRIES = [
   },
   {
     path: '/insight-manual-amazon-reimbursement-vs-bots',
-    lastModified: '2026-10-24',
+    lastModified: '2026-10-30',
     priority: 0.8,
   },
   {
     path: '/insight-amazon-fba-lost-damaged-inventory',
-    lastModified: '2026-10-24',
+    lastModified: '2026-10-30',
     priority: 0.8,
   },
   {
@@ -153,6 +153,56 @@ const ENTRIES = [
   {
     path: '/insight-healthcare-clinic-local-seo',
     lastModified: '2026-10-28',
+    priority: 0.8,
+  },
+  {
+    path: '/insight-meta-ads-agency-ecommerce',
+    lastModified: '2026-10-30',
+    priority: 0.8,
+  },
+  {
+    path: '/insight-amazon-fba-reimbursement-service',
+    lastModified: '2026-10-30',
+    priority: 0.8,
+  },
+  {
+    path: '/insight-outsourced-ecommerce-operations',
+    lastModified: '2026-10-30',
+    priority: 0.8,
+  },
+  {
+    path: '/insight-dealership-erp-software',
+    lastModified: '2026-10-30',
+    priority: 0.8,
+  },
+  {
+    path: '/insight-ai-automation-agency-small-business',
+    lastModified: '2026-10-30',
+    priority: 0.8,
+  },
+  {
+    path: '/insight-digital-marketing-agency-islamabad',
+    lastModified: '2026-10-30',
+    priority: 0.8,
+  },
+  {
+    path: '/insight-software-development-company-pakistan',
+    lastModified: '2026-10-30',
+    priority: 0.8,
+  },
+  {
+    path: '/insight-walmart-wfs-reimbursement-claim',
+    lastModified: '2026-10-30',
+    priority: 0.8,
+  },
+  {
+    path: '/insight-walmart-wfs-returns-reimbursement',
+    lastModified: '2026-10-30',
+    priority: 0.8,
+  },
+  {
+    path: '/insight-meta-lead-ads-lead-quality',
+    lastModified: '2026-10-30',
     priority: 0.8,
   },
   {
@@ -261,10 +311,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [...ENTRIES, ...OPERATIONS_ENTRIES].map(entry => ({
     url: entry.path === '/' ? `${SITE_URL}/` : `${SITE_URL}${entry.path}`,
     lastModified: reviewedToday.has(entry.path)
-      ? '2026-10-22'
+      ? '2026-10-30'
       : UPDATED_PATHS.has(entry.path)
-        ? '2026-10-22'
-        : entry.lastModified,
+        ? '2026-10-30'
+        : entry.lastModified || '2026-10-30',
     priority: entry.priority,
   }));
 }

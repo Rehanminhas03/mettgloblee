@@ -62,13 +62,26 @@ export const ORGANIZATION_JSON_LD = {
     '@type': 'OfferCatalog',
     name: 'Mett Global Core Services',
     itemListElement: [
+      /* 1. Paid media and social media */
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Digital Marketing & Growth Agency',
+          description:
+            'Performance marketing, Meta and Google Ads, SEO, creative production, and full-funnel digital marketing for high-growth businesses and dealerships in the USA and Pakistan.',
+          serviceType: 'Digital Marketing Agency',
+          areaServed: ['United States', 'Pakistan', 'Worldwide'],
+        },
+      },
+      /* 2. Ecommerce and marketplace operations (Amazon and Walmart claims) */
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
           name: 'Amazon FBA Reimbursement & Multi-Channel Logistics Claims',
           description:
-            'Auditing and recovering lost parcel, damaged inventory, and marketplace claims across FedEx, UPS, USPS, Amazon FBA, Walmart WFS in USA, UK, EU, and Canada. Over £50,000+ recovered.',
+            'Auditing and recovering lost parcel, damaged inventory, and marketplace claims across FedEx, UPS, USPS, Amazon FBA, Walmart WFS in USA, UK, EU, and Canada. Over £50,000 recovered in one year for a leading global brand.',
           serviceType: 'Amazon FBA Reimbursement',
           areaServed: [
             'United States',
@@ -95,17 +108,31 @@ export const ORGANIZATION_JSON_LD = {
           ],
         },
       },
+      /* 3. Web and software development */
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Digital Marketing & Growth Agency (Islamabad)',
+          name: 'Web, Custom ERP & Software Development',
           description:
-            'Performance marketing, Meta and Google Ads, SEO, creative production, and full-funnel digital marketing for high-growth businesses and dealerships.',
-          serviceType: 'Digital Marketing Agency',
-          areaServed: ['Islamabad', 'Pakistan', 'Worldwide'],
+            'Modern high-speed web platforms, ecommerce stores, custom CRMs, dealership ERPs, and workflow integrations.',
+          serviceType: 'Software Development',
+          areaServed: ['United States', 'Pakistan', 'Worldwide'],
         },
       },
+      /* 4. AI automation */
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'AI Automation, Chatbots & CRM Integration',
+          description:
+            'Operational workflows, intelligent customer assistants, document data extraction, and CRM automation designed to cut repetitive manual tasks.',
+          serviceType: 'AI Automation & Integration',
+          areaServed: ['United States', 'Pakistan', 'Worldwide'],
+        },
+      },
+      /* Industry-specific solutions */
       {
         '@type': 'Offer',
         itemOffered: {
@@ -115,17 +142,6 @@ export const ORGANIZATION_JSON_LD = {
             'End-to-end digital marketing, CRM integration, footfall generation, and lead automation for automotive dealerships.',
           serviceType: 'Automotive Dealership Marketing',
           areaServed: ['Islamabad', 'Pakistan'],
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Web, Custom ERP & Software Development',
-          description:
-            'Modern high-speed web platforms, e-commerce stores, custom CRMs, dealership ERPs, and workflow integrations.',
-          serviceType: 'Software Development',
-          areaServed: ['United States', 'Pakistan', 'Worldwide'],
         },
       },
       {
