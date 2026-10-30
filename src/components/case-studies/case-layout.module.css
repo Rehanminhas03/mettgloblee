@@ -2,7 +2,7 @@
   --case-gutter: max(24px, calc((100% - 1280px) / 2));
 }
 .casePage p {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 .casePage [data-content-section] {
   padding: 56px var(--case-gutter);

@@ -20,7 +20,7 @@ const BLOCKS: Block[] = [
   },
   {
     t: 'p',
-    text: 'For high-volume US importers shipping 20 to 100 ocean containers annually, eliminating \$0.12 to \$0.34+ per unit in placement surcharges appears to offer tens of thousands of dollars in immediate margin savings. However, evaluating AWD purely on fee waivers overlooks critical operational trade-offs in replenishment velocity, multi-channel flexibility, and inventory sovereignty.',
+    text: 'For high-volume US importers shipping 20 to 100 ocean containers annually, eliminating $0.12 to $0.34+ per unit in placement surcharges appears to offer tens of thousands of dollars in immediate margin savings. However, evaluating AWD purely on fee waivers overlooks critical operational trade-offs in replenishment velocity, multi-channel flexibility, and inventory sovereignty.',
   },
   {
     t: 'quote',
@@ -37,7 +37,7 @@ const BLOCKS: Block[] = [
       <strong key="1">
         Monthly Base Storage:{' '}
         <span className="font-normal text-[#514d46]">
-          AWD charges a flat rate (approximately \$0.48 per cubic foot outside of peak Q4). Dedicated regional 3PLs typically charge between \$0.65 and \$0.95 per cubic foot (or \$18–\$24 per pallet), making AWD significantly cheaper for slow-turning bulk buffer stock.
+          AWD charges a flat rate (approximately $0.48 per cubic foot outside of peak Q4). Dedicated regional 3PLs typically charge between $0.65 and $0.95 per cubic foot (or $18–$24 per pallet), making AWD significantly cheaper for slow-turning bulk buffer stock.
         </span>
       </strong>,
       <strong key="2">
@@ -57,7 +57,7 @@ const BLOCKS: Block[] = [
   { t: 'h2', text: 'The 3 hidden risks of total AWD dependence' },
   {
     t: 'p',
-    text: 'US brand operators managing \$5M to \$30M in omnichannel revenue encounter three structural bottlenecks when centralizing 100% of their US buffer inventory within AWD:',
+    text: 'US brand operators managing $5M to $30M in omnichannel revenue encounter three structural bottlenecks when centralizing 100% of their US buffer inventory within AWD:',
   },
   {
     t: 'ol',

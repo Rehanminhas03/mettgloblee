@@ -312,7 +312,7 @@
   padding: 8px 10px;
   border-radius: 8px;
   font-size: 0.875rem;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 .channelGrid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -622,7 +622,7 @@
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1.05;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 .journeyFigure .small {
   margin-top: 6px !important;
@@ -1998,8 +1998,8 @@
 .badge {
   min-width: 0;
   max-width: 100%;
-  white-space: normal;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
+  overflow-wrap: break-word;
 }
 .catalogue {
   display: grid;

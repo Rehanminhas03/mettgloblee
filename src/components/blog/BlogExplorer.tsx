@@ -247,13 +247,13 @@ export function BlogExplorer({ items }: { items: InsightItem[] }) {
           <div className="grid grid-cols-1 lg:grid-cols-[1.25fr_.75fr]">
             <div className="flex flex-col p-8 sm:p-12 z-[1]">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="rounded-full bg-p-gold/20 border border-p-gold/40 px-3.5 py-1 text-[10px] font-black tracking-[0.16em] text-p-gold uppercase">
+                <span className="rounded-full bg-p-gold/20 border border-p-gold/40 px-3.5 py-1 text-[10px] font-black tracking-[0.16em] text-p-gold uppercase whitespace-nowrap shrink-0 [overflow-wrap:normal]">
                   ⭐ Flagship Operator Guide
                 </span>
-                <span className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-bold text-gray-300">
+                <span className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-bold text-gray-300 whitespace-nowrap shrink-0 [overflow-wrap:normal]">
                   {featuredItem.readTime}
                 </span>
-                <span className="rounded-full border border-emerald-500/40 bg-emerald-950/40 text-emerald-300 px-3 py-1 text-[10px] font-bold tracking-wider uppercase">
+                <span className="rounded-full border border-emerald-500/40 bg-emerald-950/40 text-emerald-300 px-3 py-1 text-[10px] font-bold tracking-wider uppercase whitespace-nowrap shrink-0 [overflow-wrap:normal]">
                   ✓ Verified 2026 Framework
                 </span>
               </div>
@@ -301,11 +301,11 @@ export function BlogExplorer({ items }: { items: InsightItem[] }) {
                 BLOG_ART_STYLES[featuredItem.art || 'supply']
               } border-t lg:border-t-0 lg:border-l border-[#262420] transition-transform duration-700 ease-out group-hover:scale-[1.02]`}
             >
-              <div className="z-[1] flex items-center justify-between">
+              <div className="z-[1] flex flex-wrap items-center justify-between gap-2">
                 <span className="text-[10px] font-black tracking-[0.18em] text-p-gold uppercase">
                   {featuredItem.categoryLabel}
                 </span>
-                <span className="rounded-full bg-white/10 px-3 py-1 text-[9px] font-bold tracking-wider uppercase text-gray-200">
+                <span className="rounded-full bg-white/10 px-3 py-1 text-[9px] font-bold tracking-wider uppercase text-gray-200 whitespace-nowrap shrink-0 [overflow-wrap:normal]">
                   USD LEDGER AUDIT
                 </span>
               </div>
@@ -459,7 +459,7 @@ export function BlogExplorer({ items }: { items: InsightItem[] }) {
                       <span className="font-black tracking-[0.14em] text-p-gold uppercase">
                         {item.categoryLabel}
                       </span>
-                      <span className="rounded-full bg-gray-100 px-2.5 py-0.5 font-bold text-gray-700 tracking-wider">
+                      <span className="rounded-full bg-gray-100 px-2.5 py-0.5 font-bold text-gray-700 tracking-wider whitespace-nowrap shrink-0 [overflow-wrap:normal]">
                         {item.readTime}
                       </span>
                     </div>
@@ -512,7 +512,7 @@ export function BlogExplorer({ items }: { items: InsightItem[] }) {
                     <span className="font-black tracking-[0.14em] text-p-gold uppercase">
                       {item.categoryLabel}
                     </span>
-                    <span className="rounded-full bg-gray-100 px-2.5 py-0.5 font-bold text-gray-700 tracking-wider">
+                    <span className="rounded-full bg-gray-100 px-2.5 py-0.5 font-bold text-gray-700 tracking-wider whitespace-nowrap shrink-0 [overflow-wrap:normal]">
                       {item.readTime}
                     </span>
                   </div>

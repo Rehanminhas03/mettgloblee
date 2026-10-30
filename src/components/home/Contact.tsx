@@ -127,7 +127,7 @@ export function Contact() {
               >
                 WhatsApp
               </a>
-              <a href="tel:+18328580716" className="underline">
+              <a href="tel:+18328580716" className="underline whitespace-nowrap">
                 Call +1 (832) 858-0716
               </a>
               <a href="mailto:usman@mettglobal.com" className="underline">

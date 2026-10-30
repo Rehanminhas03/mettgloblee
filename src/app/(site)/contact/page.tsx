@@ -53,10 +53,10 @@ export default function ContactPage() {
               rel="noopener"
               className={CARD_LINK}
             >
-              WhatsApp +92 304 6551553
+              WhatsApp <span className="whitespace-nowrap">+92 304 6551553</span>
             </a>
             <a href={PHONE.href} className={CARD_LINK}>
-              Call {PHONE.label}
+              Call <span className="whitespace-nowrap">{PHONE.label}</span>
             </a>
           </article>
 
@@ -74,10 +74,10 @@ export default function ContactPage() {
               rel="noopener"
               className={CARD_LINK}
             >
-              WhatsApp +1 (832) 858-0716
+              WhatsApp <span className="whitespace-nowrap">+1 (832) 858-0716</span>
             </a>
             <a href="tel:+18328580716" className={CARD_LINK}>
-              Call +1 (832) 858-0716
+              Call <span className="whitespace-nowrap">+1 (832) 858-0716</span>
             </a>
             <a href="mailto:usman@mettglobal.com" className={CARD_LINK}>
               usman@mettglobal.com

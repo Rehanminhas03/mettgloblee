@@ -178,59 +178,76 @@ export function AdminDashboardPreview() {
             </div>
           </div>
 
-          <div
-            role="region"
-            aria-label="Illustrative recent bookings table"
-            tabIndex={0}
-            className="focus-visible:outline-p-gold2 overflow-x-auto rounded-2xl border border-[#2d2a23] bg-[#151513] focus-visible:outline-2 focus-visible:outline-offset-4"
-          >
-            <table className="w-full min-w-[560px] border-collapse text-left text-[12px]">
-              <caption className="text-p-gold2 p-5 pb-3 text-left text-[10px] font-black tracking-[.14em]">
+          <div className="rounded-2xl border border-[#2d2a23] bg-[#151513]">
+            <div className="flex items-center justify-between p-5 pb-3">
+              <span className="text-p-gold2 text-[10px] font-black tracking-[.14em] uppercase">
                 RECENT BOOKINGS
-              </caption>
-              <thead>
-                <tr className="text-[10px] tracking-[.1em] text-[#8a857b] uppercase">
-                  {[
-                    'Booking',
-                    'Customer',
-                    'Area',
-                    'Slot',
-                    'Rider',
-                    'Status',
-                  ].map(heading => (
-                    <th
-                      key={heading}
-                      scope="col"
-                      className="px-5 py-2 font-bold"
-                    >
-                      {heading}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {BOOKINGS.map(booking => (
-                  <tr key={booking.id} className="border-t border-[#26231e]">
-                    <td className="px-5 py-3 font-bold">{booking.id}</td>
-                    <td className="px-5 py-3 text-[#d4cfc4]">
-                      {booking.customer}
-                    </td>
-                    <td className="px-5 py-3 text-[#d4cfc4]">{booking.area}</td>
-                    <td className="px-5 py-3 text-[#d4cfc4]">{booking.slot}</td>
-                    <td className="px-5 py-3 text-[#d4cfc4]">
-                      {booking.rider}
-                    </td>
-                    <td className="px-5 py-3">
-                      <span
-                        className={`rounded-full px-3 py-1 text-[10px] font-bold ${STATUS[booking.status]}`}
-                      >
-                        {booking.status}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+              </span>
+              <span className="text-[10px] tracking-[.05em] text-[#8a857b] sm:hidden">
+                Swipe to see more →
+              </span>
+            </div>
+            <div className="relative">
+              <div
+                role="region"
+                aria-label="Illustrative recent bookings table"
+                tabIndex={0}
+                className="focus-visible:outline-p-gold2 overflow-x-auto focus-visible:outline-2 focus-visible:outline-offset-4"
+              >
+                <table className="w-full min-w-[560px] border-collapse text-left text-[12px]">
+                  <thead>
+                    <tr className="text-[10px] tracking-[.1em] text-[#8a857b] uppercase">
+                      {[
+                        'Booking',
+                        'Customer',
+                        'Area',
+                        'Slot',
+                        'Rider',
+                        'Status',
+                      ].map((heading, i) => (
+                        <th
+                          key={heading}
+                          scope="col"
+                          className={`px-5 py-2 font-bold ${
+                            i === 0 ? 'sticky left-0 z-10 bg-[#151513]' : ''
+                          }`}
+                        >
+                          {heading}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {BOOKINGS.map(booking => (
+                      <tr key={booking.id} className="border-t border-[#26231e]">
+                        <td className="sticky left-0 z-10 bg-[#151513] px-5 py-3 font-bold whitespace-nowrap">
+                          {booking.id}
+                        </td>
+                        <td className="px-5 py-3 text-[#d4cfc4]">
+                          {booking.customer}
+                        </td>
+                        <td className="px-5 py-3 text-[#d4cfc4]">{booking.area}</td>
+                        <td className="px-5 py-3 text-[#d4cfc4]">{booking.slot}</td>
+                        <td className="px-5 py-3 text-[#d4cfc4]">
+                          {booking.rider}
+                        </td>
+                        <td className="px-5 py-3">
+                          <span
+                            className={`rounded-full px-3 py-1 text-[10px] font-bold whitespace-nowrap ${STATUS[booking.status]}`}
+                          >
+                            {booking.status}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#151513] to-transparent sm:hidden"
+              />
+            </div>
           </div>
         </div>
       </div>

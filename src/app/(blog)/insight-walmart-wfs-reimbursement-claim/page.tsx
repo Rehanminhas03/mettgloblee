@@ -69,7 +69,7 @@ const BLOCKS: Block[] = [
         <strong>Loss in transit with your own carrier.</strong> If you used a carrier that is not a Walmart Preferred Carrier, you own any loss before delivery. You file that claim with the carrier.
       </span>,
       <span key="2">
-        <strong>Damaged goods at receiving.</strong> Damaged or pilfered goods can be refused or handled under your &quot;damages at receiving&quot; setting in Seller Center. Check that setting now, before your next shipment.
+        <strong>Damaged goods at receiving.</strong> Damaged or pilfered goods can be refused or handled under your “damages at receiving” setting in Seller Center. Check that setting now, before your next shipment.
       </span>,
     ],
   },

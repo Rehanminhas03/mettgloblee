@@ -18,7 +18,7 @@ export function BotVsForensicWidget() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-[#2b271f] pb-5">
         <div>
-          <span className="rounded-full bg-p-gold/20 text-p-gold border border-p-gold/40 px-3 py-1 text-[10px] font-black tracking-[0.16em] uppercase">
+          <span className="rounded-full bg-p-gold/20 text-p-gold border border-p-gold/40 px-3 py-1 text-[10px] font-black tracking-[0.16em] uppercase whitespace-nowrap shrink-0 [overflow-wrap:normal]">
             Comparative Discrepancy Audit
           </span>
           <h3 className="mt-2 text-xl sm:text-2xl font-bold tracking-tight text-white">

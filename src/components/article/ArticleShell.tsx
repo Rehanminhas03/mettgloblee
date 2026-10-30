@@ -77,11 +77,11 @@ export function ArticleShell({
               </span>
             </div>
 
-            <div className="flex items-center gap-2">
-              <span className="rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 px-2.5 py-0.5 text-[10px] font-bold tracking-wider uppercase">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 px-2.5 py-0.5 text-[10px] font-bold tracking-wider uppercase whitespace-nowrap shrink-0 [overflow-wrap:normal]">
                 ✓ {verifiedBadge}
               </span>
-              <span className="rounded-full bg-[#f3efe6] border border-a-line px-2.5 py-0.5 text-[10px] font-bold text-[#5c574e] tracking-wider uppercase">
+              <span className="rounded-full bg-[#f3efe6] border border-a-line px-2.5 py-0.5 text-[10px] font-bold text-[#5c574e] tracking-wider uppercase whitespace-nowrap shrink-0 [overflow-wrap:normal]">
                 {meta.split('·').pop()?.trim() || '5 MIN READ'}
               </span>
             </div>
@@ -90,7 +90,7 @@ export function ArticleShell({
 
         {graphic}
 
-        <article className="mx-auto max-w-[760px] [overflow-wrap:anywhere]">
+        <article className="mx-auto max-w-[760px] [overflow-wrap:break-word]">
           {children}
         </article>
 
@@ -183,8 +183,8 @@ export function ArticleShell({
         </section>
 
         {/* CTA End Section */}
-        <section className="mx-auto mt-[90px] flex max-w-[760px] flex-col sm:flex-row sm:items-center sm:justify-between gap-6 rounded-3xl bg-[#111] p-6 sm:p-8 md:p-[35px] text-white shadow-xl border border-[#2b271f] overflow-hidden">
-          <div className="min-w-0 flex-1">
+        <section className="mx-auto mt-[90px] flex max-w-[760px] flex-col items-start gap-6 rounded-3xl bg-[#111] p-6 sm:p-8 md:p-[35px] text-white shadow-xl border border-[#2b271f] overflow-hidden">
+          <div className="w-full">
             <span className="text-[10px] font-black tracking-widest text-p-gold2 uppercase block mb-1">
               Next Operational Step
             </span>
@@ -192,7 +192,7 @@ export function ArticleShell({
           </div>
           <Link
             href={endHref}
-            className="inline-flex w-full sm:w-auto shrink-0 items-center justify-center rounded-full bg-p-gold hover:bg-[#e8cb7d] px-6 py-3.5 text-center text-xs font-black text-black leading-snug transition-transform duration-200 hover:scale-[1.02] max-w-full"
+            className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-p-gold hover:bg-[#e8cb7d] px-6 py-3.5 text-center text-xs font-black text-black leading-snug transition-transform duration-200 hover:scale-[1.02] max-w-full"
           >
             {endLabel}
           </Link>

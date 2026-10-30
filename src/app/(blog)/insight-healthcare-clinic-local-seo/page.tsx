@@ -39,7 +39,7 @@ const BLOCKS: Block[] = [
       <strong key="1">
         Primary vs. Secondary Category Architecture:{' '}
         <span className="font-normal text-[#514d46]">
-          Your primary GBP category dictates 60%+ of local ranking weight. A psychiatric clinic must carefully anchor its primary category (e.g. &quot;Psychiatrist&quot; vs &quot;Mental Health Clinic&quot;) while populating secondary categories with specific service arms (&quot;Adolescent Mental Health Center&quot;, &quot;Addiction Treatment Center&quot;). Dental practices similarly balance &quot;Dentist&quot;, &quot;Cosmetic Dentist&quot;, and &quot;Emergency Dental Service&quot;.
+          Your primary GBP category dictates 60%+ of local ranking weight. A psychiatric clinic must carefully anchor its primary category (e.g. “Psychiatrist” vs “Mental Health Clinic”) while populating secondary categories with specific service arms (“Adolescent Mental Health Center”, “Addiction Treatment Center”). Dental practices similarly balance “Dentist”, “Cosmetic Dentist”, and “Emergency Dental Service”.
         </span>
       </strong>,
       <strong key="2">
@@ -59,7 +59,7 @@ const BLOCKS: Block[] = [
   { t: 'h2', text: 'Condition-specific geo-landing pages vs. high-bounce homepages' },
   {
     t: 'p',
-    text: 'A prevalent strategic error among private practices is directing paid search and organic local visitors directly to the clinic’s general homepage. When an anxious patient searches for &quot;adult ADHD evaluation covered by Blue Cross&quot; and arrives on a generic homepage displaying generic welcoming photos, they are forced to navigate menus to discover provider credentials and accepted insurance. Most abandon within five seconds.',
+    text: 'A prevalent strategic error among private practices is directing paid search and organic local visitors directly to the clinic’s general homepage. When an anxious patient searches for “adult ADHD evaluation covered by Blue Cross” and arrives on a generic homepage displaying generic welcoming photos, they are forced to navigate menus to discover provider credentials and accepted insurance. Most abandon within five seconds.',
   },
   {
     t: 'p',
@@ -83,7 +83,7 @@ const BLOCKS: Block[] = [
       <strong key="3">
         Direct Treatment FAQs & Anxiety Mitigation:{' '}
         <span className="font-normal text-[#514d46]">
-          Concise, empathetic answers addressing patient apprehension (&quot;What happens during the initial consultation?&quot;, &quot;Is the procedure painful?&quot;, &quot;How soon can I schedule?&quot;).
+          Concise, empathetic answers addressing patient apprehension (“What happens during the initial consultation?”, “Is the procedure painful?”, “How soon can I schedule?”).
         </span>
       </strong>,
       <strong key="4">
@@ -178,13 +178,13 @@ const BLOCKS: Block[] = [
       <strong key="2">
         Strict Confidentiality in Public Responses:{' '}
         <span className="font-normal text-[#514d46]">
-          Staff must never confirm, deny, or acknowledge whether a reviewer is an actual patient. Compliant responses remain strictly generalized: &quot;Thank you for sharing your feedback. At our clinic, patient care and clinical excellence are our top priorities. Please contact our practice manager directly at (Phone) so we can discuss your experience privately.&quot;
+          Staff must never confirm, deny, or acknowledge whether a reviewer is an actual patient. Compliant responses remain strictly generalized: “Thank you for sharing your feedback. At our clinic, patient care and clinical excellence are our top priorities. Please contact our practice manager directly at (Phone) so we can discuss your experience privately.”
         </span>
       </strong>,
       <strong key="3">
         Natural Symptom & Provider Keyword Ingestion:{' '}
         <span className="font-normal text-[#514d46]">
-          When satisfied patients naturally mention specific conditions (&quot;Dr. Smith made my root canal painless&quot; or &quot;The TMS therapy team helped my anxiety&quot;), Google’s natural language processing directly links those treatments to your clinic’s local relevance score.
+          When satisfied patients naturally mention specific conditions (“Dr. Smith made my root canal painless” or “The TMS therapy team helped my anxiety”), Google’s natural language processing directly links those treatments to your clinic’s local relevance score.
         </span>
       </strong>,
     ],
