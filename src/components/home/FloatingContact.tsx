@@ -40,10 +40,10 @@ export function FloatingContact() {
         target="_blank"
         rel="noopener"
         aria-label="Chat with Mett Global on WhatsApp"
-        className="group flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(224,188,104,.34)] bg-[#0c0c0b] text-white shadow-[0_16px_45px_rgba(0,0,0,.22)] transition-all duration-300 ease-out hover:w-auto hover:px-3.5 hover:gap-2"
+        className="group flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(224,188,104,.34)] bg-[#0c0c0b] text-white shadow-[0_16px_45px_rgba(0,0,0,.22)] transition-all duration-300 ease-out [@media(hover:hover)]:hover:w-auto [@media(hover:hover)]:hover:px-3.5 [@media(hover:hover)]:hover:gap-2"
       >
         <WaIcon className="!h-7 !w-7 border-0 bg-transparent flex-shrink-0" />
-        <span className="max-w-0 overflow-hidden whitespace-nowrap text-xs font-bold opacity-0 transition-all duration-300 ease-out group-hover:max-w-[80px] group-hover:opacity-100">
+        <span className="max-w-0 overflow-hidden whitespace-nowrap text-xs font-bold opacity-0 transition-all duration-300 ease-out [@media(hover:hover)]:group-hover:max-w-[80px] [@media(hover:hover)]:group-hover:opacity-100">
           WhatsApp
         </span>
       </a>

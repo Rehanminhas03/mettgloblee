@@ -28,7 +28,8 @@ const internalStudies: InternalStudy[] = [
     summary:
       'Courier and marketplace claims handled across 20+ courier and 3PL partners, with more than £50,000 recovered in one year.',
     hero: {
-      display: '>£50,000 ($65,000+ USD)',
+      display: '>£50,000',
+      secondaryDisplay: '($65,000+ USD)',
       accessible:
         'More than fifty thousand pounds, over sixty-five thousand US dollars recovered in one year',
       label: 'Recovered in one year',

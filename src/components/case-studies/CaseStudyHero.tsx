@@ -84,6 +84,11 @@ export function CaseStudyHero({ study }: { study: CaseStudy }) {
                     ) : null}
                   </span>
                 </p>
+                {study.hero.secondaryDisplay ? (
+                  <p className={styles.statSecondary}>
+                    {study.hero.secondaryDisplay}
+                  </p>
+                ) : null}
                 <p className={styles.statLabel}>{study.hero.label}</p>
                 <p className={styles.statContext}>{study.hero.context}</p>
                 <p className={styles.statContext}>{study.hero.qualifier}</p>
