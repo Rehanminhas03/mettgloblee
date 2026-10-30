@@ -82,7 +82,7 @@ export function CaseStudyPage({ study }: { study: CaseStudy }) {
 
           {study.auditOffer ? (
             <section
-              className="my-10 rounded-3xl border border-[rgba(224,188,104,0.35)] bg-gradient-to-br from-[#1c1a16] to-[#0f0e0c] p-8 text-white shadow-xl relative overflow-hidden"
+              className="my-10 rounded-3xl border border-[rgba(224,188,104,0.35)] bg-gradient-to-br from-[#1c1a16] to-[#0f0e0c] p-6 sm:p-8 text-white shadow-xl relative overflow-hidden"
               aria-labelledby="audit-offer-heading"
             >
               <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
@@ -97,17 +97,17 @@ export function CaseStudyPage({ study }: { study: CaseStudy }) {
               </div>
               <h2
                 id="audit-offer-heading"
-                className="m-0 text-2xl font-bold tracking-tight text-white sm:text-3xl"
+                className="m-0 text-2xl font-bold tracking-tight text-white sm:text-3xl leading-snug"
               >
                 {study.auditOffer.heading}
               </h2>
               <p className="mt-4 mb-6 text-sm leading-relaxed text-[#c5beb0] sm:text-base max-w-[680px]">
                 {study.auditOffer.body}
               </p>
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                 <Link
                   href={study.auditOffer.ctaHref}
-                  className="inline-flex items-center gap-2 rounded-full bg-p-gold hover:bg-[#e8cb7d] px-6 py-3.5 text-xs font-black text-black uppercase tracking-wider transition-transform hover:scale-[1.02]"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-p-gold hover:bg-[#e8cb7d] px-6 py-3.5 text-center text-xs font-black text-black uppercase tracking-wider transition-transform hover:scale-[1.02]"
                 >
                   {study.auditOffer.ctaLabel} →
                 </Link>

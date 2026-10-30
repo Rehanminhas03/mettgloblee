@@ -175,7 +175,7 @@ export function PlacementFeeSimulator() {
             )}
           </div>
         </div>
-        <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-extrabold text-white text-center whitespace-nowrap">
+        <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-extrabold text-white text-center shrink-0">
           {isSingleBetter ? 'Single-FC Outperforms' : 'Evaluate Freight Density'}
         </span>
       </div>

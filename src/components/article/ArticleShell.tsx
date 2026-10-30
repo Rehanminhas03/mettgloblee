@@ -183,16 +183,16 @@ export function ArticleShell({
         </section>
 
         {/* CTA End Section */}
-        <section className="max-b650:flex-col max-b650:items-start mx-auto mt-[90px] flex max-w-[760px] items-center justify-between gap-5 rounded-3xl bg-[#111] p-[35px] text-white shadow-xl border border-[#2b271f]">
-          <div>
+        <section className="mx-auto mt-[90px] flex max-w-[760px] flex-col sm:flex-row sm:items-center sm:justify-between gap-6 rounded-3xl bg-[#111] p-6 sm:p-8 md:p-[35px] text-white shadow-xl border border-[#2b271f] overflow-hidden">
+          <div className="min-w-0 flex-1">
             <span className="text-[10px] font-black tracking-widest text-p-gold2 uppercase block mb-1">
               Next Operational Step
             </span>
-            <b className="text-lg sm:text-xl font-bold text-white block">{endHeading}</b>
+            <b className="text-lg sm:text-xl font-bold text-white block leading-snug">{endHeading}</b>
           </div>
           <Link
             href={endHref}
-            className="bg-p-gold hover:bg-[#e8cb7d] text-black rounded-[99px] px-[22px] py-[13px] text-xs font-black whitespace-nowrap transition-transform duration-200 hover:scale-[1.02]"
+            className="inline-flex w-full sm:w-auto shrink-0 items-center justify-center rounded-full bg-p-gold hover:bg-[#e8cb7d] px-6 py-3.5 text-center text-xs font-black text-black leading-snug transition-transform duration-200 hover:scale-[1.02] max-w-full"
           >
             {endLabel}
           </Link>

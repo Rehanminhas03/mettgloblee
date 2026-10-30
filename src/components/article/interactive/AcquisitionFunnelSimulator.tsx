@@ -129,7 +129,7 @@ export function AcquisitionFunnelSimulator() {
           <strong>Key Audit Finding:</strong> Delayed follow-up (&gt; 30 mins) increases Blended CAC by{' '}
           <strong className="text-rose-400">nearly 300%</strong> even with high-performing ads.
         </span>
-        <span className="rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-3 py-1 font-mono text-[10px] uppercase whitespace-nowrap">
+        <span className="rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-3 py-1 font-mono text-[10px] uppercase shrink-0 text-center">
           {fastFollowUp ? '✓ Optimal SLA' : '⚠ SLA Revenue Decay'}
         </span>
       </div>
