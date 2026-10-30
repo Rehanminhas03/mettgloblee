@@ -252,7 +252,7 @@ export function SiteFooter() {
           </a>
           <a
             href={PHONE.href}
-            className="hover:text-gold block transition-colors"
+            className="hover:text-gold block transition-colors whitespace-nowrap"
           >
             {PHONE.label}
           </a>
@@ -260,7 +260,7 @@ export function SiteFooter() {
             U.S. Business Development:{' '}
             <a
               href="tel:+18328580716"
-              className="text-gold font-semibold hover:underline"
+              className="text-gold font-semibold hover:underline whitespace-nowrap"
             >
               +1 (832) 858-0716
             </a>{' '}
@@ -340,7 +340,7 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="border-line text-muted max-b560:flex-col max-b560:gap-2 col-span-full flex items-center justify-between gap-6 border-t pt-6 text-[9px] tracking-[.16em]">
+      <div className="border-line text-muted max-b560:flex-col max-b560:gap-2 col-span-full flex items-center justify-between gap-6 border-t pt-6 pb-20 md:pb-16 text-[9px] tracking-[.16em]">
         <span>
           © <CurrentYear /> METT GLOBAL
         </span>

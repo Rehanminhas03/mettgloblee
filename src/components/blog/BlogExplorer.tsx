@@ -6,6 +6,8 @@ import type { BlogArt, PolicyArt } from '@/components/page/blog';
 import {
   AiVideoCardGraphic,
   AiWorkflowCardGraphic,
+  AiAutomationSmallBizCardGraphic,
+  AmazonFbaReimbursementCardGraphic,
   ApolloStackCardGraphic,
   AwdVs3plCardGraphic,
   BookingAppCardGraphic,
@@ -15,7 +17,9 @@ import {
   CoreWebVitalsGraphic,
   CubiscanCardGraphic,
   CustomPortalsCardGraphic,
+  DealershipErpSoftwareCardGraphic,
   DealershipLeadEngineCardGraphic,
+  DigitalMarketingIslamabadCardGraphic,
   DigitalOutdoorCardGraphic,
   EcommerceOpsCardGraphic,
   ErpCardGraphic,
@@ -30,10 +34,16 @@ import {
   LandedCostCardGraphic,
   LeadGenSystemCardGraphic,
   LostDamagedCardGraphic,
+  MetaAdsAgencyEcommerceCardGraphic,
+  MetaLeadAdsQualityCardGraphic,
   NextJsVsNoCodeCardGraphic,
+  OutsourcedEcommerceOpsCardGraphic,
   PlacementFeeCardGraphic,
   ScorecardCardGraphic,
+  SoftwareDevelopmentPakistanCardGraphic,
   UtmCardGraphic,
+  WalmartWfsClaimCardGraphic,
+  WalmartWfsReturnsCardGraphic,
 } from './CardGraphics';
 
 export type InsightItem = {
@@ -92,6 +102,14 @@ const BLOG_ART_STYLES: Record<string, string> = {
 function renderCardTopGraphic(item: InsightItem) {
   switch (item.id) {
     // Amazon & Supply Chain
+    case 'walmart-wfs-reimbursement-claim':
+      return <WalmartWfsClaimCardGraphic />;
+    case 'walmart-wfs-returns-reimbursement':
+      return <WalmartWfsReturnsCardGraphic />;
+    case 'amazon-fba-reimbursement-service':
+      return <AmazonFbaReimbursementCardGraphic />;
+    case 'outsourced-ecommerce-operations':
+      return <OutsourcedEcommerceOpsCardGraphic />;
     case 'amazon-inbound-placement-fees':
       return <PlacementFeeCardGraphic />;
     case 'amazon-fba-fee-audit':
@@ -114,6 +132,10 @@ function renderCardTopGraphic(item: InsightItem) {
       return <InboundClaimsCardGraphic />;
 
     // Custom Software & Portals
+    case 'dealership-erp-software':
+      return <DealershipErpSoftwareCardGraphic />;
+    case 'software-development-company-pakistan':
+      return <SoftwareDevelopmentPakistanCardGraphic />;
     case 'custom-portals-vs-saas':
       return <CustomPortalsCardGraphic />;
     case 'nextjs-vs-no-code-portals':
@@ -124,6 +146,12 @@ function renderCardTopGraphic(item: InsightItem) {
       return <BookingAppCardGraphic />;
 
     // Digital Marketing & Growth
+    case 'digital-marketing-agency-islamabad':
+      return <DigitalMarketingIslamabadCardGraphic />;
+    case 'meta-ads-agency-ecommerce':
+      return <MetaAdsAgencyEcommerceCardGraphic />;
+    case 'meta-lead-ads-lead-quality':
+      return <MetaLeadAdsQualityCardGraphic />;
     case 'growth-system':
       return <GrowthSystemCardGraphic />;
     case 'conversion-audit':
@@ -144,6 +172,8 @@ function renderCardTopGraphic(item: InsightItem) {
       return <HealthcareLocalSeoCardGraphic />;
 
     // AI Automation & Workflows
+    case 'ai-automation-agency-small-business':
+      return <AiAutomationSmallBizCardGraphic />;
     case 'ai-automation':
       return <AiWorkflowCardGraphic />;
     case 'ai-video-brief':
@@ -217,13 +247,13 @@ export function BlogExplorer({ items }: { items: InsightItem[] }) {
           <div className="grid grid-cols-1 lg:grid-cols-[1.25fr_.75fr]">
             <div className="flex flex-col p-8 sm:p-12 z-[1]">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="rounded-full bg-p-gold/20 border border-p-gold/40 px-3.5 py-1 text-[10px] font-black tracking-[0.16em] text-p-gold uppercase">
+                <span className="rounded-full bg-p-gold/20 border border-p-gold/40 px-3.5 py-1 text-[10px] font-black tracking-[0.16em] text-p-gold uppercase whitespace-nowrap shrink-0 [overflow-wrap:normal]">
                   ⭐ Flagship Operator Guide
                 </span>
-                <span className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-bold text-gray-300">
+                <span className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-bold text-gray-300 whitespace-nowrap shrink-0 [overflow-wrap:normal]">
                   {featuredItem.readTime}
                 </span>
-                <span className="rounded-full border border-emerald-500/40 bg-emerald-950/40 text-emerald-300 px-3 py-1 text-[10px] font-bold tracking-wider uppercase">
+                <span className="rounded-full border border-emerald-500/40 bg-emerald-950/40 text-emerald-300 px-3 py-1 text-[10px] font-bold tracking-wider uppercase whitespace-nowrap shrink-0 [overflow-wrap:normal]">
                   ✓ Verified 2026 Framework
                 </span>
               </div>
@@ -271,11 +301,11 @@ export function BlogExplorer({ items }: { items: InsightItem[] }) {
                 BLOG_ART_STYLES[featuredItem.art || 'supply']
               } border-t lg:border-t-0 lg:border-l border-[#262420] transition-transform duration-700 ease-out group-hover:scale-[1.02]`}
             >
-              <div className="z-[1] flex items-center justify-between">
+              <div className="z-[1] flex flex-wrap items-center justify-between gap-2">
                 <span className="text-[10px] font-black tracking-[0.18em] text-p-gold uppercase">
                   {featuredItem.categoryLabel}
                 </span>
-                <span className="rounded-full bg-white/10 px-3 py-1 text-[9px] font-bold tracking-wider uppercase text-gray-200">
+                <span className="rounded-full bg-white/10 px-3 py-1 text-[9px] font-bold tracking-wider uppercase text-gray-200 whitespace-nowrap shrink-0 [overflow-wrap:normal]">
                   USD LEDGER AUDIT
                 </span>
               </div>
@@ -429,7 +459,7 @@ export function BlogExplorer({ items }: { items: InsightItem[] }) {
                       <span className="font-black tracking-[0.14em] text-p-gold uppercase">
                         {item.categoryLabel}
                       </span>
-                      <span className="rounded-full bg-gray-100 px-2.5 py-0.5 font-bold text-gray-700 tracking-wider">
+                      <span className="rounded-full bg-gray-100 px-2.5 py-0.5 font-bold text-gray-700 tracking-wider whitespace-nowrap shrink-0 [overflow-wrap:normal]">
                         {item.readTime}
                       </span>
                     </div>
@@ -482,7 +512,7 @@ export function BlogExplorer({ items }: { items: InsightItem[] }) {
                     <span className="font-black tracking-[0.14em] text-p-gold uppercase">
                       {item.categoryLabel}
                     </span>
-                    <span className="rounded-full bg-gray-100 px-2.5 py-0.5 font-bold text-gray-700 tracking-wider">
+                    <span className="rounded-full bg-gray-100 px-2.5 py-0.5 font-bold text-gray-700 tracking-wider whitespace-nowrap shrink-0 [overflow-wrap:normal]">
                       {item.readTime}
                     </span>
                   </div>

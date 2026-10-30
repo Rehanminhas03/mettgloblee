@@ -15,7 +15,7 @@ export function CubiscanSimulator() {
     <div className="my-10 overflow-hidden rounded-[26px] border border-amber-500/40 bg-[#0e0d0b] p-6 sm:p-8 text-white shadow-2xl transition-all duration-300">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-[#2b271f] pb-5">
         <div>
-          <span className="rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 px-3 py-1 text-[10px] font-black tracking-[0.16em] uppercase">
+          <span className="rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 px-3 py-1 text-[10px] font-black tracking-[0.16em] uppercase whitespace-nowrap shrink-0 [overflow-wrap:normal]">
             Interactive Fee Reversal Model
           </span>
           <h3 className="mt-2 text-xl sm:text-2xl font-bold tracking-tight text-white">
@@ -67,7 +67,7 @@ export function CubiscanSimulator() {
                 key={tier.val}
                 type="button"
                 onClick={() => setFeeDelta(tier.val)}
-                className={`rounded-lg py-2 px-1 text-[11px] font-black transition-all cursor-pointer text-center ${
+                className={`rounded-lg py-2 px-1 text-[11px] font-black transition-all cursor-pointer text-center whitespace-nowrap [overflow-wrap:normal] ${
                   feeDelta === tier.val
                     ? 'bg-amber-500 text-black shadow-md'
                     : 'border border-[#383329] bg-[#211e18] text-[#c4beb1] hover:text-white'
@@ -104,7 +104,7 @@ export function CubiscanSimulator() {
         <span>
           <strong>Amazon 90-Day Policy Rule:</strong> Discrepancies older than 90 days are permanently locked and cannot be claimed.
         </span>
-        <span className="rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-3 py-1 font-bold text-[10px] uppercase">
+        <span className="rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-3 py-1 font-bold text-[10px] uppercase whitespace-nowrap shrink-0 [overflow-wrap:normal]">
           Zero Bot Risk · Human Verified
         </span>
       </div>

@@ -22,7 +22,7 @@ export function AcquisitionFunnelSimulator() {
     <div className="my-10 overflow-hidden rounded-[26px] border border-p-gold/50 bg-[#0e0d0b] p-6 sm:p-8 text-white shadow-2xl transition-all duration-300">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-[#2b271f] pb-5">
         <div>
-          <span className="rounded-full bg-p-gold/20 text-p-gold border border-p-gold/40 px-3 py-1 text-[10px] font-black tracking-[0.16em] uppercase">
+          <span className="rounded-full bg-p-gold/20 text-p-gold border border-p-gold/40 px-3 py-1 text-[10px] font-black tracking-[0.16em] uppercase whitespace-nowrap shrink-0 [overflow-wrap:normal]">
             Interactive Funnel Audit
           </span>
           <h3 className="mt-2 text-xl sm:text-2xl font-bold tracking-tight text-white">
@@ -129,7 +129,7 @@ export function AcquisitionFunnelSimulator() {
           <strong>Key Audit Finding:</strong> Delayed follow-up (&gt; 30 mins) increases Blended CAC by{' '}
           <strong className="text-rose-400">nearly 300%</strong> even with high-performing ads.
         </span>
-        <span className="rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-3 py-1 font-mono text-[10px] uppercase shrink-0 text-center">
+        <span className="rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-3 py-1 font-mono text-[10px] uppercase shrink-0 text-center whitespace-nowrap [overflow-wrap:normal]">
           {fastFollowUp ? '✓ Optimal SLA' : '⚠ SLA Revenue Decay'}
         </span>
       </div>

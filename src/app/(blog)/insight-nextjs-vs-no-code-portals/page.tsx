@@ -49,7 +49,7 @@ const BLOCKS: Block[] = [
       <strong key="3">
         The Compounding "Middleware Tax" of Zapier & Make:{' '}
         <span className="font-normal text-[#514d46]">
-          Connecting fragmented no-code databases requires thousands of automated webhook operations every week. As operations scale, businesses spend \$1,500 to \$4,000+ per month solely on Zapier tasks and API connector tiers to keep databases synchronized.
+          Connecting fragmented no-code databases requires thousands of automated webhook operations every week. As operations scale, businesses spend $1,500 to $4,000+ per month solely on Zapier tasks and API connector tiers to keep databases synchronized.
         </span>
       </strong>,
       <strong key="4">

@@ -52,7 +52,7 @@ export function AwdVs3plMatrixWidget() {
     <div className="my-10 overflow-hidden rounded-[26px] border border-p-gold/50 bg-[#0d0c0a] p-6 sm:p-8 text-white shadow-2xl transition-all duration-300">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-[#2b271f] pb-5">
         <div>
-          <span className="rounded-full bg-p-gold/20 px-3 py-1 text-[10px] font-black tracking-[0.16em] text-p-gold uppercase">
+          <span className="rounded-full bg-p-gold/20 px-3 py-1 text-[10px] font-black tracking-[0.16em] text-p-gold uppercase whitespace-nowrap shrink-0 [overflow-wrap:normal]">
             Interactive Decision Matrix
           </span>
           <h3 className="mt-2 text-xl sm:text-2xl font-bold tracking-tight text-white">
@@ -78,7 +78,7 @@ export function AwdVs3plMatrixWidget() {
                   : 'border-[#26231c] bg-[#14120f] hover:border-p-gold/40'
               }`}
             >
-              <span className={`inline-block rounded-full border px-2.5 py-0.5 text-[9px] font-extrabold uppercase ${m.badgeColor}`}>
+              <span className={`inline-block rounded-full border px-2.5 py-0.5 text-[9px] font-extrabold uppercase whitespace-nowrap shrink-0 [overflow-wrap:normal] ${m.badgeColor}`}>
                 {m.badge}
               </span>
               <div className="mt-2 text-sm font-extrabold text-white">{m.name}</div>
