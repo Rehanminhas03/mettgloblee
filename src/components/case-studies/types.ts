@@ -42,6 +42,8 @@ export type CaseStudy = {
     suffix: string;
     kind: 'result' | 'scope' | 'coverage';
     qualifier: string;
+    /** Optional secondary currency or conversion note (e.g. '($65,000+ USD)'). */
+    secondaryDisplay?: string;
   };
   deck: string;
   problemHeading: string;
