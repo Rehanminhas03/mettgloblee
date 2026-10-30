@@ -6,6 +6,8 @@ import type { BlogArt, PolicyArt } from '@/components/page/blog';
 import {
   AiVideoCardGraphic,
   AiWorkflowCardGraphic,
+  AiAutomationSmallBizCardGraphic,
+  AmazonFbaReimbursementCardGraphic,
   ApolloStackCardGraphic,
   AwdVs3plCardGraphic,
   BookingAppCardGraphic,
@@ -15,7 +17,9 @@ import {
   CoreWebVitalsGraphic,
   CubiscanCardGraphic,
   CustomPortalsCardGraphic,
+  DealershipErpSoftwareCardGraphic,
   DealershipLeadEngineCardGraphic,
+  DigitalMarketingIslamabadCardGraphic,
   DigitalOutdoorCardGraphic,
   EcommerceOpsCardGraphic,
   ErpCardGraphic,
@@ -30,10 +34,16 @@ import {
   LandedCostCardGraphic,
   LeadGenSystemCardGraphic,
   LostDamagedCardGraphic,
+  MetaAdsAgencyEcommerceCardGraphic,
+  MetaLeadAdsQualityCardGraphic,
   NextJsVsNoCodeCardGraphic,
+  OutsourcedEcommerceOpsCardGraphic,
   PlacementFeeCardGraphic,
   ScorecardCardGraphic,
+  SoftwareDevelopmentPakistanCardGraphic,
   UtmCardGraphic,
+  WalmartWfsClaimCardGraphic,
+  WalmartWfsReturnsCardGraphic,
 } from './CardGraphics';
 
 export type InsightItem = {
@@ -92,6 +102,14 @@ const BLOG_ART_STYLES: Record<string, string> = {
 function renderCardTopGraphic(item: InsightItem) {
   switch (item.id) {
     // Amazon & Supply Chain
+    case 'walmart-wfs-reimbursement-claim':
+      return <WalmartWfsClaimCardGraphic />;
+    case 'walmart-wfs-returns-reimbursement':
+      return <WalmartWfsReturnsCardGraphic />;
+    case 'amazon-fba-reimbursement-service':
+      return <AmazonFbaReimbursementCardGraphic />;
+    case 'outsourced-ecommerce-operations':
+      return <OutsourcedEcommerceOpsCardGraphic />;
     case 'amazon-inbound-placement-fees':
       return <PlacementFeeCardGraphic />;
     case 'amazon-fba-fee-audit':
@@ -114,6 +132,10 @@ function renderCardTopGraphic(item: InsightItem) {
       return <InboundClaimsCardGraphic />;
 
     // Custom Software & Portals
+    case 'dealership-erp-software':
+      return <DealershipErpSoftwareCardGraphic />;
+    case 'software-development-company-pakistan':
+      return <SoftwareDevelopmentPakistanCardGraphic />;
     case 'custom-portals-vs-saas':
       return <CustomPortalsCardGraphic />;
     case 'nextjs-vs-no-code-portals':
@@ -124,6 +146,12 @@ function renderCardTopGraphic(item: InsightItem) {
       return <BookingAppCardGraphic />;
 
     // Digital Marketing & Growth
+    case 'digital-marketing-agency-islamabad':
+      return <DigitalMarketingIslamabadCardGraphic />;
+    case 'meta-ads-agency-ecommerce':
+      return <MetaAdsAgencyEcommerceCardGraphic />;
+    case 'meta-lead-ads-lead-quality':
+      return <MetaLeadAdsQualityCardGraphic />;
     case 'growth-system':
       return <GrowthSystemCardGraphic />;
     case 'conversion-audit':
@@ -144,6 +172,8 @@ function renderCardTopGraphic(item: InsightItem) {
       return <HealthcareLocalSeoCardGraphic />;
 
     // AI Automation & Workflows
+    case 'ai-automation-agency-small-business':
+      return <AiAutomationSmallBizCardGraphic />;
     case 'ai-automation':
       return <AiWorkflowCardGraphic />;
     case 'ai-video-brief':

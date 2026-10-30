@@ -1099,6 +1099,346 @@ export function HealthcareLocalSeoCardGraphic() {
   );
 }
 
+/* 1. Walmart WFS Inbound Claims */
+export function WalmartWfsClaimCardGraphic() {
+  return (
+    <div className="relative w-full h-full flex flex-col justify-between overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none" />
+      <div className="relative z-[1] flex items-center justify-between text-[10px] font-mono">
+        <span className="flex items-center gap-1.5 text-sky-400 font-bold uppercase tracking-wider">
+          <span className="h-2 w-2 rounded-full bg-sky-400 animate-pulse" />
+          WFS INVENTORY RECONCILIATION
+        </span>
+        <span className="rounded bg-sky-950/60 border border-sky-500/40 px-2 py-0.5 text-sky-300 font-mono text-[9px]">
+          10–50 DAY WINDOW
+        </span>
+      </div>
+      <div className="relative z-[1] my-auto py-1.5">
+        <div className="grid grid-cols-2 gap-2 text-center text-xs font-mono">
+          <div className="rounded-lg border border-sky-500/30 bg-sky-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Filing Window</span>
+            <span className="text-sm font-black text-white">Strict 50 Days</span>
+          </div>
+          <div className="rounded-lg border border-emerald-500/30 bg-emerald-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Recovery Rate</span>
+            <span className="text-sm font-black text-emerald-400">100% Manual Proof</span>
+          </div>
+        </div>
+      </div>
+      <div className="relative z-[1] flex items-center justify-between border-t border-white/10 pt-2 text-[10px] font-mono text-[#c4beb1]">
+        <span>Seller Center BOL Proof</span>
+        <span className="font-bold text-sky-300">WFS Dock Settlement</span>
+      </div>
+    </div>
+  );
+}
+
+/* 2. Walmart WFS Customer Returns */
+export function WalmartWfsReturnsCardGraphic() {
+  return (
+    <div className="relative w-full h-full flex flex-col justify-between overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none" />
+      <div className="relative z-[1] flex items-center justify-between text-[10px] font-mono">
+        <span className="flex items-center gap-1.5 text-amber-300 font-bold uppercase tracking-wider">
+          <span className="h-2 w-2 rounded-full bg-amber-400 animate-pulse" />
+          WFS CUSTOMER RETURNS
+        </span>
+        <span className="rounded bg-amber-950/60 border border-amber-500/40 px-2 py-0.5 text-amber-200 font-mono text-[9px]">
+          45–90 DAY SLA
+        </span>
+      </div>
+      <div className="relative z-[1] my-auto py-1.5">
+        <div className="grid grid-cols-2 gap-2 text-center text-xs font-mono">
+          <div className="rounded-lg border border-amber-500/30 bg-amber-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Dispute Window</span>
+            <span className="text-sm font-black text-amber-300">45d RTO · 90d FC</span>
+          </div>
+          <div className="rounded-lg border border-emerald-500/30 bg-emerald-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Settlement Audit</span>
+            <span className="text-sm font-black text-emerald-400">Ledger Disputed</span>
+          </div>
+        </div>
+      </div>
+      <div className="relative z-[1] flex items-center justify-between border-t border-white/10 pt-2 text-[10px] font-mono text-[#c4beb1]">
+        <span>Unprocessed Returns</span>
+        <span className="font-bold text-amber-300">Reimbursement Verified</span>
+      </div>
+    </div>
+  );
+}
+
+/* 3. Amazon FBA Reimbursement Service */
+export function AmazonFbaReimbursementCardGraphic() {
+  return (
+    <div className="relative w-full h-full flex flex-col justify-between overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(#dfba64_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none" />
+      <div className="relative z-[1] flex items-center justify-between text-[10px] font-mono">
+        <span className="flex items-center gap-1.5 text-p-gold font-bold uppercase tracking-wider">
+          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+          MANUAL CLAIMS AUDIT
+        </span>
+        <span className="rounded bg-emerald-950/60 border border-emerald-500/40 px-2 py-0.5 text-emerald-300 font-mono text-[9px]">
+          NO BOTS · SAFE TOS
+        </span>
+      </div>
+      <div className="relative z-[1] my-auto py-1.5">
+        <div className="grid grid-cols-2 gap-2 text-center text-xs font-mono">
+          <div className="rounded-lg border border-emerald-500/30 bg-emerald-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Dossier Recovery</span>
+            <span className="text-sm font-black text-emerald-400">$50,000+ Back</span>
+          </div>
+          <div className="rounded-lg border border-p-gold/30 bg-amber-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Reversal SLA</span>
+            <span className="text-sm font-black text-p-gold2">60–90 Day Window</span>
+          </div>
+        </div>
+      </div>
+      <div className="relative z-[1] flex items-center justify-between border-t border-white/10 pt-2 text-[10px] font-mono text-[#c4beb1]">
+        <span>Dispute Submission</span>
+        <span className="font-bold text-emerald-400">Cash Deposited</span>
+      </div>
+    </div>
+  );
+}
+
+/* 4. Outsourced E-Commerce Operations */
+export function OutsourcedEcommerceOpsCardGraphic() {
+  return (
+    <div className="relative w-full h-full flex flex-col justify-between overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(#dfba64_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none" />
+      <div className="relative z-[1] flex items-center justify-between text-[10px] font-mono">
+        <span className="flex items-center gap-1.5 text-p-gold2 font-bold uppercase tracking-wider">
+          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+          AMAZON &amp; WALMART OPS
+        </span>
+        <span className="rounded bg-white/10 px-2 py-0.5 text-gray-300 font-mono text-[9px]">
+          99.4% FULFILLMENT
+        </span>
+      </div>
+      <div className="relative z-[1] my-auto py-1.5">
+        <div className="grid grid-cols-2 gap-2 text-center text-xs font-mono">
+          <div className="rounded-lg border border-p-gold/30 bg-black/40 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Catalog Sync</span>
+            <span className="text-sm font-black text-white">Dual Marketplace</span>
+          </div>
+          <div className="rounded-lg border border-emerald-500/30 bg-emerald-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Buy-Box Health</span>
+            <span className="text-sm font-black text-emerald-400">&gt;98% Maintained</span>
+          </div>
+        </div>
+      </div>
+      <div className="relative z-[1] flex items-center justify-between border-t border-white/10 pt-2 text-[10px] font-mono text-[#c4beb1]">
+        <span>Remote Warehouse SLA</span>
+        <span className="font-bold text-p-gold2">Zero Carrier Leakage</span>
+      </div>
+    </div>
+  );
+}
+
+/* 5. Dealership ERP Software */
+export function DealershipErpSoftwareCardGraphic() {
+  return (
+    <div className="relative w-full h-full flex flex-col justify-between overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(#dfba64_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none" />
+      <div className="relative z-[1] flex items-center justify-between text-[10px] font-mono">
+        <span className="flex items-center gap-1.5 text-p-gold2 font-bold uppercase tracking-wider">
+          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+          DEALERSHIP ERP SYSTEM
+        </span>
+        <span className="rounded bg-white/10 px-2 py-0.5 text-gray-300 font-mono text-[9px]">
+          PARTS · WORKSHOP · SALES
+        </span>
+      </div>
+      <div className="relative z-[1] my-auto py-1.5">
+        <div className="grid grid-cols-2 gap-2 text-center text-xs font-mono">
+          <div className="rounded-lg border border-p-gold/30 bg-black/40 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Live VIN Tracking</span>
+            <span className="text-sm font-black text-white">Full Showroom Flow</span>
+          </div>
+          <div className="rounded-lg border border-emerald-500/30 bg-emerald-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Leakage Prevention</span>
+            <span className="text-sm font-black text-emerald-400">100% Audited ROs</span>
+          </div>
+        </div>
+      </div>
+      <div className="relative z-[1] flex items-center justify-between border-t border-white/10 pt-2 text-[10px] font-mono text-[#c4beb1]">
+        <span>Role-Based Portal Access</span>
+        <span className="font-bold text-emerald-400">Automotive ERP Active</span>
+      </div>
+    </div>
+  );
+}
+
+/* 6. AI Automation for Small Business */
+export function AiAutomationSmallBizCardGraphic() {
+  return (
+    <div className="relative w-full h-full flex flex-col justify-between overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(#818cf8_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none" />
+      <div className="relative z-[1] flex items-center justify-between text-[10px] font-mono">
+        <span className="flex items-center gap-1.5 text-indigo-300 font-bold uppercase tracking-wider">
+          <span className="h-2 w-2 rounded-full bg-indigo-400 animate-pulse" />
+          AGENTIC WORKFLOWS
+        </span>
+        <span className="rounded bg-indigo-950/60 border border-indigo-500/40 px-2 py-0.5 text-indigo-300 font-mono text-[9px]">
+          15+ HRS/WK SAVED
+        </span>
+      </div>
+      <div className="relative z-[1] my-auto py-1.5">
+        <div className="grid grid-cols-2 gap-2 text-center text-xs font-mono">
+          <div className="rounded-lg border border-indigo-500/30 bg-indigo-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Document Extraction</span>
+            <span className="text-sm font-black text-white">OCR &amp; Invoicing</span>
+          </div>
+          <div className="rounded-lg border border-emerald-500/30 bg-emerald-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Lead Routing</span>
+            <span className="text-sm font-black text-emerald-400">Sub-Minute Sync</span>
+          </div>
+        </div>
+      </div>
+      <div className="relative z-[1] flex items-center justify-between border-t border-white/10 pt-2 text-[10px] font-mono text-[#c4beb1]">
+        <span>n8n · LangChain · OpenAI</span>
+        <span className="font-bold text-indigo-300">Autonomous Operations</span>
+      </div>
+    </div>
+  );
+}
+
+/* 7. Digital Marketing Islamabad & US */
+export function DigitalMarketingIslamabadCardGraphic() {
+  return (
+    <div className="relative w-full h-full flex flex-col justify-between overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(#dfba64_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none" />
+      <div className="relative z-[1] flex items-center justify-between text-[10px] font-mono">
+        <span className="flex items-center gap-1.5 text-p-gold font-bold uppercase tracking-wider">
+          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+          ISLAMABAD &amp; US ACQUISITION
+        </span>
+        <span className="rounded bg-white/10 px-2 py-0.5 text-gray-300 font-mono text-[9px]">
+          FULL FUNNEL
+        </span>
+      </div>
+      <div className="relative z-[1] my-auto py-1.5">
+        <div className="grid grid-cols-2 gap-2 text-center text-xs font-mono">
+          <div className="rounded-lg border border-p-gold/30 bg-black/40 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Search &amp; Meta Ads</span>
+            <span className="text-sm font-black text-white">Targeted CAC</span>
+          </div>
+          <div className="rounded-lg border border-emerald-500/30 bg-emerald-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Verified Leads</span>
+            <span className="text-sm font-black text-emerald-400">High-Intent Traffic</span>
+          </div>
+        </div>
+      </div>
+      <div className="relative z-[1] flex items-center justify-between border-t border-white/10 pt-2 text-[10px] font-mono text-[#c4beb1]">
+        <span>Performance Media</span>
+        <span className="font-bold text-emerald-400">Direct Showroom ROI</span>
+      </div>
+    </div>
+  );
+}
+
+/* 8. Software Development Pakistan & Global */
+export function SoftwareDevelopmentPakistanCardGraphic() {
+  return (
+    <div className="relative w-full h-full flex flex-col justify-between overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none" />
+      <div className="relative z-[1] flex items-center justify-between text-[10px] font-mono">
+        <span className="flex items-center gap-1.5 text-emerald-400 font-bold uppercase tracking-wider">
+          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+          ENTERPRISE NEXT.JS ENGINES
+        </span>
+        <span className="rounded bg-emerald-950/60 border border-emerald-500/40 px-2 py-0.5 text-emerald-300 font-mono text-[9px]">
+          SUB-SECOND
+        </span>
+      </div>
+      <div className="relative z-[1] my-auto py-1.5">
+        <div className="grid grid-cols-2 gap-2 text-center text-xs font-mono">
+          <div className="rounded-lg border border-emerald-500/30 bg-emerald-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Core Web Vitals</span>
+            <span className="text-sm font-black text-emerald-400">100 / 100 Score</span>
+          </div>
+          <div className="rounded-lg border border-p-gold/30 bg-black/40 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Architecture</span>
+            <span className="text-sm font-black text-white">Full Type-Safety</span>
+          </div>
+        </div>
+      </div>
+      <div className="relative z-[1] flex items-center justify-between border-t border-white/10 pt-2 text-[10px] font-mono text-[#c4beb1]">
+        <span>Global Delivery</span>
+        <span className="font-bold text-emerald-400">Zero Technical Debt</span>
+      </div>
+    </div>
+  );
+}
+
+/* 9. Meta Ads Agency for E-Commerce */
+export function MetaAdsAgencyEcommerceCardGraphic() {
+  return (
+    <div className="relative w-full h-full flex flex-col justify-between overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(#fb7185_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none" />
+      <div className="relative z-[1] flex items-center justify-between text-[10px] font-mono">
+        <span className="flex items-center gap-1.5 text-rose-400 font-bold uppercase tracking-wider">
+          <span className="h-2 w-2 rounded-full bg-rose-400 animate-pulse" />
+          ECOMMERCE ROAS ENGINE
+        </span>
+        <span className="rounded bg-rose-950/60 border border-rose-500/40 px-2 py-0.5 text-rose-300 font-mono text-[9px]">
+          FIRST-PARTY DATA
+        </span>
+      </div>
+      <div className="relative z-[1] my-auto py-1.5">
+        <div className="grid grid-cols-2 gap-2 text-center text-xs font-mono">
+          <div className="rounded-lg border border-rose-500/30 bg-rose-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Target ROAS</span>
+            <span className="text-sm font-black text-white">3.8x Blended</span>
+          </div>
+          <div className="rounded-lg border border-emerald-500/30 bg-emerald-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">CAPI Matching</span>
+            <span className="text-sm font-black text-emerald-400">92% Event Match</span>
+          </div>
+        </div>
+      </div>
+      <div className="relative z-[1] flex items-center justify-between border-t border-white/10 pt-2 text-[10px] font-mono text-[#c4beb1]">
+        <span>Meta Ads · Conversions API</span>
+        <span className="font-bold text-rose-300">Revenue Scaled</span>
+      </div>
+    </div>
+  );
+}
+
+/* 10. Meta Lead Ads Quality */
+export function MetaLeadAdsQualityCardGraphic() {
+  return (
+    <div className="relative w-full h-full flex flex-col justify-between overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none" />
+      <div className="relative z-[1] flex items-center justify-between text-[10px] font-mono">
+        <span className="flex items-center gap-1.5 text-amber-300 font-bold uppercase tracking-wider">
+          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+          HIGHER INTENT FILTERING
+        </span>
+        <span className="rounded bg-white/10 px-2 py-0.5 text-gray-300 font-mono text-[9px]">
+          &gt;78% CONTACT RATE
+        </span>
+      </div>
+      <div className="relative z-[1] my-auto py-1.5">
+        <div className="grid grid-cols-2 gap-2 text-center text-xs font-mono">
+          <div className="rounded-lg border border-amber-500/30 bg-amber-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Form Type</span>
+            <span className="text-sm font-black text-amber-300">Higher Intent + Review</span>
+          </div>
+          <div className="rounded-lg border border-emerald-500/30 bg-emerald-950/30 p-2">
+            <span className="text-[9px] text-[#a8a397] block uppercase">Junk Leads Cut</span>
+            <span className="text-sm font-black text-emerald-400">-64% Waste</span>
+          </div>
+        </div>
+      </div>
+      <div className="relative z-[1] flex items-center justify-between border-t border-white/10 pt-2 text-[10px] font-mono text-[#c4beb1]">
+        <span>Qualifying Multiple-Choice</span>
+        <span className="font-bold text-emerald-400">Verified Pipeline</span>
+      </div>
+    </div>
+  );
+}
+
 // Aliases for BlogExplorer imports
 export const FeedDiagnosticGraphic = ProductFeedCardGraphic;
 export const CoreWebVitalsGraphic = GoogleSearchCardGraphic;
