@@ -1,4 +1,4 @@
-﻿.scheduler {
+.scheduler {
   width: calc(100% - 12vw);
   max-width: 1280px;
   margin: 0 auto;
@@ -143,7 +143,7 @@
   color: #f1eee5;
   font-size: 13px;
   font-weight: 550;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 .bookingArea {
   display: grid;
@@ -731,5 +731,5 @@
   color: #756951;
   font-size: 11px;
   line-height: 1.7;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }

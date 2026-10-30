@@ -204,20 +204,29 @@ export function LandedGraphic({
           <div
             key={part.key}
             style={{ flexGrow: Number(part.grow), flexBasis: 0 }}
-            className={`max-b700:px-[7px] max-b700:py-3 flex min-w-0 flex-col justify-between px-[10px] py-[15px] ${part.bg} ${
+            className={`max-b700:px-[5px] max-b700:py-3 flex min-w-0 flex-col justify-between px-[10px] py-[15px] ${part.bg} ${
               part.text ?? 'text-[#11110f]'
             }`}
           >
-            <strong className="max-b480:text-[18px] text-[clamp(18px,3vw,29px)] tracking-[-.05em]">
+            <strong className="max-b480:text-[14px] text-[clamp(16px,3vw,29px)] tracking-[-.05em] truncate">
               {part.amount}
             </strong>
             <small
               className={`max-b700:text-[8px] text-[9px] leading-[1.2] font-black ${
-                part.text ? 'text-white' : 'text-[#11110f]'
-              }`}
+                Number(part.grow) < 4 ? 'hidden sm:block' : ''
+              } ${part.text ? 'text-white' : 'text-[#11110f]'}`}
             >
               {part.label}
             </small>
+          </div>
+        ))}
+      </div>
+      <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-[10px] text-[#aaa69d] sm:hidden">
+        {parts.map(part => (
+          <div key={part.key} className="flex items-center gap-1.5">
+            <span className={`inline-block h-2 w-2 rounded-full ${part.bg}`} />
+            <span className="font-bold text-white/90">{part.amount}</span>
+            <span>{part.label}</span>
           </div>
         ))}
       </div>

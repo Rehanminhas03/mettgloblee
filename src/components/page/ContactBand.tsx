@@ -24,7 +24,7 @@ export function ContactBand({
           aria-hidden="true"
           className="pointer-events-none absolute -top-[110px] -right-[120px] h-[300px] w-[300px] rounded-full border border-[rgba(184,137,45,.24)] shadow-[0_0_0_48px_rgba(184,137,45,.035)]"
         />
-        <h2 className="relative mt-0 mb-5 max-w-[900px] text-[clamp(32px,4vw,56px)] leading-[1.04] tracking-[-.045em]">
+        <h2 className="relative mt-0 mb-5 max-w-[900px] text-[clamp(32px,4vw,56px)] leading-[1.04] tracking-[-.045em] [text-wrap:balance]">
           {heading}
         </h2>
         <p className="relative my-[1em] max-w-[700px] leading-[1.7] text-[#b9b4aa]">

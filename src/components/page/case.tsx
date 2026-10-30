@@ -75,7 +75,7 @@ export function CaseHero({
           </div>
         ) : null}
         <div>
-          <span className="text-p-gold text-[10px] font-black tracking-[.2em]">
+          <span className="text-p-gold text-[10px] font-black tracking-[.2em] block [text-wrap:balance]">
             {kicker}
           </span>
           <h1 className="mt-[10px] mb-[22px] text-[clamp(40px,5.2vw,72px)] leading-[1.02] tracking-[-.045em]">
@@ -338,12 +338,12 @@ export function Workflow({
 }) {
   return (
     <div
-      className={`max-b1000:grid-cols-1 grid ${steps.length === 5 ? 'grid-cols-5' : 'grid-cols-4'} items-center gap-3`}
+      className={`max-b1000:grid-cols-1 grid ${steps.length === 5 ? 'grid-cols-5' : 'grid-cols-4'} items-stretch gap-3`}
     >
       {steps.map(step => (
         <div
           key={step.num}
-          className={`flex min-h-[130px] flex-col justify-between rounded-[20px] border p-5 ${
+          className={`flex h-full min-h-[130px] flex-col justify-between rounded-[20px] border p-5 ${
             dark
               ? 'dark-surface border-[#363229] bg-[#171715] text-white'
               : 'border-p-line bg-white'

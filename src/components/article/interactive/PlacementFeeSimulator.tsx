@@ -32,7 +32,7 @@ export function PlacementFeeSimulator() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-[#2b271f] pb-5">
         <div>
-          <span className="rounded-full bg-p-gold/20 px-3 py-1 text-[10px] font-black tracking-[0.16em] text-p-gold uppercase">
+          <span className="rounded-full bg-p-gold/20 px-3 py-1 text-[10px] font-black tracking-[0.16em] text-p-gold uppercase whitespace-nowrap shrink-0 [overflow-wrap:normal]">
             Interactive Financial Model
           </span>
           <h3 className="mt-2 text-xl sm:text-2xl font-bold tracking-tight text-white">
@@ -175,7 +175,7 @@ export function PlacementFeeSimulator() {
             )}
           </div>
         </div>
-        <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-extrabold text-white text-center shrink-0">
+        <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-extrabold text-white text-center shrink-0 whitespace-nowrap [overflow-wrap:normal]">
           {isSingleBetter ? 'Single-FC Outperforms' : 'Evaluate Freight Density'}
         </span>
       </div>

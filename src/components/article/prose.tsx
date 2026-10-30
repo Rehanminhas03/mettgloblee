@@ -155,7 +155,7 @@ export function ReadersGuide({
             Reader&apos;s Guide &amp; Key Sections
           </span>
         </div>
-        <span className="text-[10px] font-bold text-[#8a857b] uppercase tracking-wider bg-white/80 border border-[#e8e2d5] px-2 py-0.5 rounded-full">
+        <span className="text-[10px] font-bold text-[#8a857b] uppercase tracking-wider bg-white/80 border border-[#e8e2d5] px-2 py-0.5 rounded-full whitespace-nowrap shrink-0 [overflow-wrap:normal]">
           {headings.length} Topics
         </span>
       </div>
@@ -169,7 +169,7 @@ export function ReadersGuide({
               href={`#${h.id}`}
               className="group flex items-start gap-2.5 rounded-lg p-2 text-[13px] font-medium text-[#2d2a26] transition-all hover:bg-white hover:text-p-gold hover:shadow-2xs"
             >
-              <span className="font-mono text-xs font-bold text-p-gold group-hover:text-[#11110f] transition-colors">
+              <span className="font-mono text-xs font-bold text-p-gold group-hover:text-[#11110f] transition-colors whitespace-nowrap shrink-0">
                 {String(i + 1).padStart(2, '0')}.
               </span>
               <span className="leading-snug underline decoration-[#e0d9ca] underline-offset-3 group-hover:decoration-p-gold">
@@ -251,7 +251,7 @@ export function Prose({
                       {block.headers.map((h, i) => (
                         <th
                           key={i}
-                          className="px-5 py-3.5 text-[14px] font-bold tracking-tight text-[#11110f]"
+                          className="px-5 py-3.5 text-[14px] font-bold tracking-tight text-[#11110f] whitespace-nowrap [overflow-wrap:normal]"
                         >
                           {h}
                         </th>
@@ -262,7 +262,7 @@ export function Prose({
                     {block.rows.map((row, rIdx) => (
                       <tr key={rIdx} className="hover:bg-[#faf8f5]/60 transition-colors">
                         {row.map((cell, cIdx) => (
-                          <td key={cIdx} className="px-5 py-3.5 leading-relaxed">
+                          <td key={cIdx} className="px-5 py-3.5 leading-relaxed [overflow-wrap:normal]">
                             {cell}
                           </td>
                         ))}

@@ -394,8 +394,8 @@ export default async function ProjectPage({
       <ContactBand
         heading={
           <>
-            Have something similar
-            <br />
+            Have something similar{' '}
+            <br className="hidden sm:inline" />
             in mind?
           </>
         }

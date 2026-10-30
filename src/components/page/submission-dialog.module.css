@@ -54,7 +54,7 @@
   color: #686054;
   font-size: 11px;
   line-height: 1.6;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 .reference span {
   font-family: monospace;
